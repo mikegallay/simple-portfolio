@@ -1,0 +1,52 @@
+@import 'compass/utilities';
+@import 'compass/css3';
+
+@mixin bgsizeFixMS {
+	-ms-behavior: url(backgroundsize.min.htc);
+}
+
+@mixin placeholder-color($color) {
+	::-webkit-input-placeholder { /* WebKit browsers */
+		color: $color;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color: $color;
+	   opacity:  1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color: $color;
+	   opacity:  1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+	   color: $color;
+	}
+}
+
+/*
+// This is my 100% grid system.
+// @include col(x cols, out of y cols, margin-right value)
+// NOTE: margin-right must be percentage ex. 0%
+@mixin col($numerator: 1, $denominator: 1, $margin-right: 5%) {
+	float: left;
+	clear: right;
+	@include span($numerator, $denominator, $margin-right);
+}
+
+@mixin span($numerator, $denominator, $margin-right) {
+	width: (calc-one-col-width($denominator, $margin-right) * $numerator) + ($margin-right * ($numerator - 1));
+	margin-right: $margin-right;
+}
+
+@function calc-one-col-width($denominator, $margin-right) {
+	@return (100 / $denominator) - ($margin-right * ($denominator - 1) / $denominator);
+}
+
+*/
+
+
+// This is for the last column
+@mixin last() {
+	margin-right: 0;
+}
+
+
