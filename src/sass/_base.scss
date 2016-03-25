@@ -49,4 +49,20 @@
 	margin-right: 0;
 }
 
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
 
+.button {
+	border: 1px solid #46ccc5;
+	background-color: #46ccc5;
+	color: #ffffff;
+	padding: 0.8em;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: transparent;
+	color: #46ccc5;
+};

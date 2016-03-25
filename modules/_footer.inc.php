@@ -1,5 +1,5 @@
 <footer>
-	<div class="wrapper">
+	<div class="container">
 		<div class="legal">
 			<p>
 				&copy; 2016 All rights reserved.

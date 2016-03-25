@@ -395,18 +395,20 @@ th {
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 html {
-  color: #222;
+  color: #00000;
   font-size: 1em;
   line-height: 1.4;
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #ffc65d;
+  color: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #ffc65d;
+  color: #ffffff;
   text-shadow: none;
 }
 
@@ -448,6 +450,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.headerOutline {
+  outline: width solid red;
+}
+
 /*
 // This is my 100% grid system.
 // @include col(x cols, out of y cols, margin-right value)
@@ -468,6 +474,24 @@ textarea {
 }
 
 */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button {
+  border: 1px solid #46ccc5;
+  background-color: #46ccc5;
+  color: #ffffff;
+  padding: 0.8em;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #46ccc5;
+}
+
 .icon {
   display: inline-block;
 }
@@ -490,6 +514,36 @@ textarea {
 
 picture img {
   width: 100%;
+}
+
+header {
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+}
+.navigation ul li {
+  display: inline-block;
+}
+.navigation ul li a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #58595b;
+  color: #46ccc5;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+#JoinTeam {
+  text-align: center;
 }
 
 /* ==========================================================================

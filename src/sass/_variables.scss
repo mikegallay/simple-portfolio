@@ -1,0 +1,9 @@
+
+@mixin sectionOutline($width, $style, $color) {
+	outline: width $style $color;
+}
+
+.headerOutline {
+	@include sectionOutline(1px, solid, red);
+}
+

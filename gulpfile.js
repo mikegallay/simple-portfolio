@@ -3,6 +3,7 @@
 // in terminal cd to the current directory
 // $ sudo npm install gulp
 // $ sudo npm install gulp-uglify gulp-concat gulp-compass gulp-cssnano gulp-concat-css gulp-cache gulp-notify gulp-livereload gulp-rename gulp-autoprefixer gulp-imagemin gulp-jshint del gulp-util path gulp-svg-sprite gulp-svg2png gulp-responsive --save-dev
+// npm install to install packages below
 
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // minify .js files
@@ -21,7 +22,7 @@ var gulp = require('gulp'),
 	path = require('path'),
 	svgSprite = require('gulp-svg-sprite'),
 	svg2png = require('gulp-svg2png'),
-plumber = require('gulp-plumber');
+	plumber = require('gulp-plumber');
 	//responsive = require('gulp-responsive');
 
 

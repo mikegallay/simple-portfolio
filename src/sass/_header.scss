@@ -1,0 +1,19 @@
+
+header {
+	min-height: 600px;
+	width: 100%;
+	position: relative;
+}
+
+.navigation {
+	display: flex;
+	height: 40px;
+	
+	ul li {
+		display: inline-block;
+	
+		a {
+			text-decoration: none;
+		}
+	}
+}
