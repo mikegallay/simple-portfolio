@@ -1,0 +1,31 @@
+
+@font-face {
+	font-family: 'Din-Regular';
+	src: url('../fonts/din-regular.eot');
+	src: url('../fonts/din-regular.woff') format('woff'),
+		 url('../fonts/din-regular.ttf') format('truetype');
+	letter-spacing: 0.0125em;
+}
+
+@font-face {
+	font-family: 'Din-Bold';
+	src: url('../fonts/din-bold.eot');
+	src: url('../fonts/din-bold.woff') format('woff'),
+		 url('../fonts/din-bold.ttf') format('truetype');
+	letter-spacing: 0.0125em;
+}
+
+@font-face {
+	font-family: 'Din-Light';
+	src: url('../fonts/din-light.eot');
+	src: url('../fonts/din-light.woff') format('woff'),
+		 url('../fonts/din-light.ttf') format('truetype');
+	letter-spacing: 0.0125em;
+}
+
+@font-face {
+	font-family: 'Gotham-Light';
+	src: url('../fonts/gotham-light.eot');
+	src: url('../fonts/gotham-light.woff') format('woff'),
+		 url('../fonts/gotham-light.ttf') format('truetype');
+}

@@ -1,1 +1,55 @@
 picture img{width:100%;}  
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Gotham-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	width: 100%;
+	font-size: 16px;
+	line-height: 1.4;
+	height: 100%;
+}
+
+.noPadding {
+	padding: 0 !important;
+}
+
+a {
+	font-size: 1.0625em;
+	
+	&:link {
+		color: #ffffff;
+	}
+
+	&:visited {
+		color: #ffffff;
+	}
+
+	&:hover {
+		color: #ffffff;
+	}
+
+	&:active {
+		color: #ffffff;
+	}
+}
+
+.container {
+	width: 1370px; 
+	margin: 1.5625em auto;
+	padding: 0;
+}
+
+
+.button {
+	background-color: #46ccc5;
+	padding: 0.6em;
+	text-decoration: none;
+	
+	&:hover {
+		background-color: #4ee5dd;
+	}	
+}

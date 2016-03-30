@@ -2,12 +2,6 @@
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
-html {
-    color: #00000;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
 ::-moz-selection {
     background: #ffc65d;
     color: #ffffff;
@@ -60,24 +54,37 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@import 'normalize';
 @import 'variables';
-@import 'base';
+@import 'global';
+//@import 'bootstrap';
 @import 'fonts';
 @import 'icons';
-@import 'global';
+@import 'base';
 @import 'header';
 @import 'footer';
 @import 'ie';
 
 
-//import plugin stylesheets
-//@import 'slick';
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+
+@media screen and (max-width: 1300px) {
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}
+
 
 @media only screen and (min-width: 35em) {
 

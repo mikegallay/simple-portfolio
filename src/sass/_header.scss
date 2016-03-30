@@ -1,19 +1,70 @@
 
-header {
-	min-height: 600px;
+#TopSection {
+	height: 100%;
 	width: 100%;
+	padding: 1.2em 0em;
 	position: relative;
+	overflow: hidden;
+	display: table;
+	
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+    background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+	background-repeat: repeat, no-repeat;
+	-webkit-background-size: 3px 3px, cover;
+	-moz-background-size: 3px 3px, cover;
+	background-size: 3px 3px, cover;
 }
 
-.navigation {
-	display: flex;
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 1.5625em;
+	width: 100%;
+	z-index: 99999;
+}
+
+ul.navigation {
 	height: 40px;
+	padding: 0px;
+	font-size: 0.9em;
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
 	
-	ul li {
-		display: inline-block;
-	
+	li {
+		margin: 0em 1.3em;
+		
+		&.logo {
+			margin-right: auto;
+		}
+			
 		a {
 			text-decoration: none;
+			
+			&:hover {
+				color: #46ccc5;
+			}
 		}
+	}
+}
+
+.mainHeadline {
+	font-family: 'Din-Bold', Helvetica, Arial, san-serif;
+	font-size: 1.75em;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: center;
+	
+	p {
+		font-family: 'Din-Light', Helvetica, Arial, san-serif;
+		font-size: 0.975em;
+		font-weight: lighter;
 	}
 }
