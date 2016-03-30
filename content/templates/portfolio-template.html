@@ -1,0 +1,28 @@
+{{#each objects}}
+	<div class="projectTile">
+		<a href="#">
+			<picture>
+			<!--[if IE 9]>
+				<video style="display: none;"><![endif]-->
+					<source srcset="{{{imgSrcLarge}}}, {{{imgSrcLarge2x}}} 2x" media="(min-width: 1200px)">
+					<source srcset="{{{imgSrc}}}, {{{imgSrc2x}}} 2x">
+			<!--[if IE 9]>
+				</video>
+			<![endif]-->
+			<!--[if !lte IE 9]> -->
+				<img srcset='{{{imgSrc}}}' src="img/common/blank.png" alt="{{{altText}}}">
+			<!-- <![endif]-->
+			<!--[if lte IE 9 ]>
+				<img src='{{{imgSrcLarge}}}, {{{imgSrcLarge2x}}} 2x' alt="{{{altText}}}"
+			<![endif]-->
+			</picture>
+			
+			<div class="prjDescription">
+				<div>
+					<h1>{{{header}}}</h1>
+					<p>{{{description}}}</p>
+				</div>
+			</div>
+		</a>
+	</div>
+{{/each}}
