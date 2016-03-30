@@ -188,6 +188,10 @@ gulp.task('copyLibJS', function() {
 	.pipe(gulp.dest('assets/js/lib'));
 });
 
+gulp.task('clear', function(done){
+	return cache.clearAll(done);	
+});
+
 // Watch
 gulp.task('watch', function() {
 	

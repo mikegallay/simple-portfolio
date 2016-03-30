@@ -19,27 +19,40 @@
     <?php include 'modules/_header.inc.php'; ?>
 	
 	<!-- MAIN CONTENT GOES HERE -->
-
-	<section id="OurWork">
-	
-	</section>
-	
-	<section id="OurPeople">
-	
-	</section>
-	
-	<section id="OurOffices">
-	
-	</section>
-
-	<section id="JoinTeam">
-		<div class="container">
-			<h1>INTERESTED IN <br>
-				JOING THE TEAM?</h1>
+	<div class="container">
+		
+		<a name="work">
+		<section id="OurWork" class="row" name="work">	
+			<h1 class="sectionHeading">OUR WORK</h1>
+			<a class="button" href="#" alt="">OUR CLIENTS</a>
 			
-			<a class="button" href="" alt="">TAKE A GANDER AT OUR JOB LISTINGS</a>
-		</div>
-	</section>
+			<div class="portfolioContent">
+				<?php
+					$htmlFromTemplate = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "content/data/portfolio-data.json");
+					echo $htmlFromTemplate; 
+				?>
+			</div>
+		</section>
+	
+		<a name="people">
+		<section id="OurPeople" class="row">
+			<h1 class="sectionHeading">OUR CULTURE</h1>
+		</section>
+		
+		<a name="offices">
+		<section id="OurOffices" class="row">
+			<h1 class="sectionHeading">OUR OFFICES</h1>
+		</section>
+
+		<a name="careers">
+		<section id="JoinTeam" class="row" name="careers">
+			<h1 class="sectionHeading">INTERESTED IN <br>
+				JOING THE TEAM?</h1>
+		
+			<a class="button" href="#" alt="">TAKE A GANDER AT OUR JOB LISTINGS</a>
+		</section>
+		
+	</div>
 <!-- 	
 	<div class="pfill-test">
 		<div class="pfill-wrapper">
