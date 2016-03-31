@@ -1,14 +1,57 @@
 [
 	{
-		"name" : "John Doe",
+		"name" : "Matthew Bull",
 		"title": "My Title",
-		"imgSrc": "assets/img/placeholder",
+		"imgSrc": "assets/img/our_culture/bull_bio",
+		"info": "This is some information"
+	},
+	{
+		"name" : "Crayola",
+		"title": "",
+		"imgSrc": "assets/img/our_culture/crayola",
 		"info": ""
 	},
 	{
-		"name" : "John Doe",
+		"name" : "JZ",
 		"title": "My Title",
-		"imgSrc": "assets/img/placeholder",
+		"imgSrc": "assets/img/our_culture/jz_bio",
 		"info": "This is my information"
+	},
+	{
+		"name" : "Chelsea",
+		"title": "",
+		"imgSrc": "assets/img/our_culture/chelsea",
+		"info": ""
+	},
+	{
+		"name" : "Jumping",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/jumping",
+		"info": ""
+	},
+	{
+		"name" : "Bran",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/bran_bio",
+		"info": "This is my information"
+	},
+	{
+		"name" : "Chelsea 2",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/chelsea1",
+		"info": ""
+	},
+	{
+		"name" : "Kids",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/kids",
+		"info": ""
+	},
+	{
+		"name" : "Water Tower",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/2x1_chelsea_watertower",
+		"info": "",
+		"isDouble": "true"
 	}
 ]
