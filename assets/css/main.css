@@ -991,7 +991,7 @@ h1.sectionHeading {
 .projectTile {
   position: relative;
   width: 24%;
-  max-height: 330px;
+  max-height: 328px;
   height: auto;
   margin: 0.375em;
   overflow: hidden;
@@ -999,6 +999,13 @@ h1.sectionHeading {
 .projectTile a {
   display: block;
   cursor: pointer;
+}
+.projectTile a picture {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: top .3s .2s, left .3s .2s;
+          transition: top .3s .2s, left .3s .2s;
 }
 .projectTile a .prjDescription {
   -js-display: -webkit-box;
@@ -1016,27 +1023,55 @@ h1.sectionHeading {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #46ccc5;
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: center;
   top: 0;
   left: 0;
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-          transition: opacity 500ms;
 }
-.projectTile a .prjDescription h1 {
+.projectTile a .prjDescription::before {
+  content: " ";
+  background-color: #46ccc5;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 100%;
+  left: 100%;
+  -webkit-transform: scale(1) rotateZ(45deg);
+          transform: scale(1) rotateZ(45deg);
+  -webkit-transition: -webkit-transform 1s, top 1s cubic-bezier(0.215, 0.61, 0.355, 1), left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: transform 1s, top 1s cubic-bezier(0.215, 0.61, 0.355, 1), left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  z-index: 0;
+}
+.projectTile a .prjDescription .prjDscrWrap {
+  z-index: 1;
+  opacity: 0;
+  top: 10%;
+  position: relative;
+  -webkit-transition: top 0.3s 200ms, opacity 0.3s 200ms;
+          transition: top 0.3s 200ms, opacity 0.3s 200ms;
+}
+.projectTile a .prjDescription .prjDscrWrap h1 {
   font-family: 'Din-Bold', san-serif;
   text-transform: uppercase;
 }
-.projectTile a .prjDescription p {
+.projectTile a .prjDescription .prjDscrWrap p {
   margin-top: 0.3em;
   margin-bottom: 0;
 }
-.projectTile a:hover .prjDescription {
+.projectTile a:hover picture {
+  top: -15px;
+}
+.projectTile a:hover .prjDescription .prjDscrWrap {
+  top: 0;
   opacity: 1;
+}
+.projectTile a:hover .prjDescription::before {
+  top: 75%;
+  left: 0;
+  -webkit-transform: scale(3.5) rotateZ(25deg);
+          transform: scale(3.5) rotateZ(25deg);
 }
 
 .col-2-by-1 {
@@ -1074,8 +1109,19 @@ h1.sectionHeading {
 .cultureTile {
   position: relative;
   width: 23.99999%;
-  height: auto;
+  max-height: 328px;
   margin: 0.375em;
+  overflow: hidden;
+  -webkit-transition: -webkit-flex-basis 500ms;
+  -webkit-transition: -webkit-flex-basis 500ms;
+          transition: -webkit-flex-basis 500ms;
+          transition: -ms-flex-preferred-size 500ms;
+          transition: flex-basis 500ms;
+}
+.cultureTile.growBasis {
+  -webkit-flex-basis: 49.1%;
+      -ms-flex-preferred-size: 49.1%;
+          flex-basis: 49.1%;
 }
 .cultureTile a {
   display: block;
@@ -1096,7 +1142,7 @@ h1.sectionHeading {
   -webkit-transition: border-top 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
           transition: border-top 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.cultureTile a:hover > .arrow {
+.cultureTile a:hover .arrow {
   border-top: 75px solid transparent;
   border-right: 75px solid #46ccc5;
 }

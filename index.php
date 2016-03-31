@@ -51,6 +51,10 @@
 		<section id="OurPeople">
 			<h1 class="sectionHeading">OUR CULTURE</h1>
 			
+			<div class="row alignRight">
+				<a id="officeToggle" class="button" alt="">OUR OFFICES</a>
+			</div>
+			
 			<div class="cultureContent">
 				<?php
 					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "content/data/culture-data.json");
