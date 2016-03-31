@@ -21,35 +21,55 @@
 	<!-- MAIN CONTENT GOES HERE -->
 	<div class="container">
 		
-		<a name="work">
-		<section id="OurWork" class="row" name="work">	
+		<a name="work"></a>
+		<section id="OurWork">	
 			<h1 class="sectionHeading">OUR WORK</h1>
-			<a class="button" href="#" alt="">OUR CLIENTS</a>
+			
+			<div class="row alignRight">
+				<a id="clientToggle" class="button" alt="">OUR CLIENTS</a>
+			</div>
+			
+			<div id="clientList" class="row">
+				<ul>
+				<?php
+					$clientListData = HTMLfromTemplateAndJSON("content/templates/clientList-template.html", "content/data/clientList-data.json");
+					
+					echo $clientListData;
+				?>
+				</ul>
+			</div>
 			
 			<div class="portfolioContent">
 				<?php
-					$htmlFromTemplate = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "content/data/portfolio-data.json");
-					echo $htmlFromTemplate; 
+					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "content/data/portfolio-data.json");
+					echo $portfolioData; 
 				?>
 			</div>
 		</section>
 	
-		<a name="people">
-		<section id="OurPeople" class="row">
+		<a name="people"></a>
+		<section id="OurPeople">
 			<h1 class="sectionHeading">OUR CULTURE</h1>
+			
+			<div class="cultureContent">
+				<?php
+					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "content/data/culture-data.json");
+					echo $cultureData; 
+				?>
+			</div>
 		</section>
 		
-		<a name="offices">
-		<section id="OurOffices" class="row">
+		<a name="offices"></a>
+		<section id="OurOffices">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
 		</section>
 
-		<a name="careers">
-		<section id="JoinTeam" class="row" name="careers">
+		<a name="careers"></a>
+		<section id="JoinTeam">
 			<h1 class="sectionHeading">INTERESTED IN <br>
 				JOING THE TEAM?</h1>
 		
-			<a class="button" href="#" alt="">TAKE A GANDER AT OUR JOB LISTINGS</a>
+			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</section>
 		
 	</div>

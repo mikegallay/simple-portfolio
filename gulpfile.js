@@ -30,8 +30,9 @@ var gulp = require('gulp'),
 // append other files to the end of the list 
 var concatScripts = [
 	'src/js/plugins/plugin.base.js',
-	'src/js/plugins/masonry.pkgd.min.js',
+	//'src/js/plugins/masonry.pkgd.min.js',
 	'src/js/plugins/imagesLoaded.min.js',
+	'src/js/plugins/flexibility.js',
 	// 'src/js/plugins/slick.min.js',
 	'src/js/main.js'
 ];

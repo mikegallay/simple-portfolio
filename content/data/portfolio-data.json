@@ -1,73 +1,45 @@
 [
 	{	
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
-		"header": "This is a header",
-		"description": "Very useful information",
-		"altText": "This is alt text"
+		"imgSrc": "assets/img/our_work/Apophis",
+		"header": "Verizon",
+		"description": "Apophis",
+		"altText": "This is alt text",
+		"isDouble": "true"
 	},	
 	{
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
+		"imgSrc": "assets/img/our_work/Aussie_SGS1",
 		"header": "This is an extra long header",
 		"description": "Very useful information",
 		"altText": "This is alt text"
 	},
 	{
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
+		"imgSrc": "assets/img/our_work/IntelExperienceApp",
 		"header": "This is a header",
 		"description": "Very useful information",
 		"altText": "This is alt text"
 	},
 	{
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
-		"header": "This is a header",
-		"description": "Very useful information",
-		"altText": "This is alt text"
+		"imgSrc": "assets/img/our_work/Mariott_Insitu",
+		"header": "Marriott <br> International",
+		"description": "Mr. Guaran-T",
+		"altText": "Mr. Guaran-T"
 	},
 	{	
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
-		"header": "This is a header",
-		"description": "Very useful information",
-		"altText": "This is alt text"
+		"imgSrc": "assets/img/our_work/Mariott_MrGuaran-T",
+		"header": "Marriott <br> International",
+		"description": "Mr. Guaran-T",
+		"altText": "Mr. Guaran-T",
+		"isDouble": "true"
 	},	
 	{
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
-		"header": "This is an extra long header",
+		"imgSrc": "assets/img/our_work/United_BMB1",
+		"header": "United <br> Airlines",
 		"description": "Very useful information",
 		"altText": "This is alt text"
 	},
 	{
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
-		"header": "This is a header",
-		"description": "Very useful information",
-		"altText": "This is alt text"
-	},
-	{
-		"imgSrc": "assets/img/placeholder.png",
-		"imgSrc2x": "assets/img/placeholder.png",
-		"imgSrcLarge": "assets/img/placeholder.png",
-		"imgSrcLarge2x": "assets/img/placeholder.png",
-		"header": "This is a header",
+		"imgSrc": "assets/img/our_work/Verizon_SocialImprint3",
+		"header": "Verizon",
 		"description": "Very useful information",
 		"altText": "This is alt text"
 	}

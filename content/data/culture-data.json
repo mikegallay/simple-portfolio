@@ -1,0 +1,14 @@
+[
+	{
+		"name" : "John Doe",
+		"title": "My Title",
+		"imgSrc": "assets/img/placeholder",
+		"info": ""
+	},
+	{
+		"name" : "John Doe",
+		"title": "My Title",
+		"imgSrc": "assets/img/placeholder",
+		"info": "This is my information"
+	}
+]
