@@ -43,8 +43,14 @@ a {
 	padding: 0;
 }
 
+.row {
+	display: block;
+	padding-left: 0.50em;
+	padding-right: 0.50em;
+}
 
 .button {
+	cursor: pointer;
 	background-color: #46ccc5;
 	padding: 0.6em;
 	text-decoration: none;
