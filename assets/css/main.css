@@ -1112,13 +1112,13 @@ h1.sectionHeading {
   max-height: 328px;
   margin: 0.375em;
   overflow: hidden;
-  -webkit-transition: margin 300ms, width 500ms;
-          transition: margin 300ms, width 500ms;
+  -webkit-transition: margin 300ms, width 300ms;
+          transition: margin 300ms, width 300ms;
 }
 .cultureTile picture {
   margin-left: 0;
-  -webkit-transition: margin 500ms;
-          transition: margin 500ms;
+  -webkit-transition: margin 300ms;
+          transition: margin 300ms;
 }
 .cultureTile.stretchOut {
   width: 48.9%;
@@ -1183,8 +1183,8 @@ h1.sectionHeading {
   border-right: 50px solid #46ccc5;
   border-bottom: 0 solid transparent;
   z-index: 2;
-  -webkit-transition: width 500ms, height 500ms, border-top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          transition: width 500ms, height 500ms, border-top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .cultureTile a:hover .arrow {
   border-top: 75px solid transparent;
