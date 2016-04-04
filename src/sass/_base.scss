@@ -185,10 +185,17 @@ h1 {
 	max-height: 328px;
 	margin: 0.375em;
 	overflow: hidden;
-	transition: flex-basis 500ms;
+	transform: scaleX(1);
+	transition: margin 500ms, width 500ms, transform 500ms;
 	
-	&.growBasis {
-		flex-basis: 49.1%;
+	&.stretchOut {
+		width: 48.9%;
+	}
+	
+	&.shrinkMe {
+		width: 0%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	
 	a {
