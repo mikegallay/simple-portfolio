@@ -1568,7 +1568,10 @@ $(function() {
   
   
 	$(".cultureTile").on('click', function(){
-
+		if(!$(this).hasClass("stretchOut")){
+			$(this).siblings().removeClass("shrinkMe stretchOut");	
+		}
+		 
 		 if($(this).hasClass('pushRight')){
 			 var nextTile = $(this).next();
 			 var picHolder = nextTile.find('.picHolder');
@@ -1582,7 +1585,6 @@ $(function() {
 
 			 nextTile.toggleClass("shrinkMe");
 			 $(this).toggleClass('stretchOut');
-			 
 		} else if($(this).hasClass('pushLeft')){
 			
 			 var prevTile = $(this).prev();
@@ -1596,8 +1598,8 @@ $(function() {
 			 }
 
 			 prevTile.toggleClass("shrinkMe");
-			 $(this).toggleClass('stretchOut');			
-			}
+			 $(this).toggleClass('stretchOut');		
+		}
 	});
   
 });

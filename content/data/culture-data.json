@@ -6,16 +6,16 @@
 		"info": "This is some information"
 	},
 	{
-		"name" : "Crayola",
-		"title": "",
-		"imgSrc": "assets/img/our_culture/crayola",
-		"info": ""
-	},
-	{
 		"name" : "JZ",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/jz_bio",
 		"info": "This is my information"
+	},
+	{
+		"name" : "Crayola",
+		"title": "",
+		"imgSrc": "assets/img/our_culture/crayola",
+		"info": ""
 	},
 	{
 		"name" : "Chelsea",
