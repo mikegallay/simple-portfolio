@@ -15,11 +15,22 @@ $(function() {
   });
   
   
-  $(".cultureTile").on('click', function(){
-   	  if($(this).hasClass('pushRight')){
-		  $(this).next().toggleClass("shrinkMe");
-   		  $(this).toggleClass('stretchOut');
-   	  }
-   });
+	$(".cultureTile").on('click', function(){
+
+		 if($(this).hasClass('pushRight')){
+			 var nextTile = $(this).next();
+			 var picHolder = nextTile.find('.picHolder');
+
+			 var colW = picHolder.width(); //move this to a global var on resize???
+
+			 //can we remove this?
+			 if (!$(this).hasClass('stretchOut')){
+				 picHolder.css('min-width',colW+'px');
+			 }
+
+			 nextTile.toggleClass("shrinkMe");
+			 $(this).toggleClass('stretchOut');
+		}
+	});
   
 });
