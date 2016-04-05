@@ -1608,17 +1608,13 @@ $(function() {
 
 
 
-	$(".officeTile").on("click", function(){
-		var content = $(this).children("span").html();
-		
-		$("#officeDetails").hide().html("");
-		$("#officeDetails").html(content).delay(1000).show();
-	});
+	// $(".officeTile").on("click", function(){
+	// 	var content = $(this).children("span").html();
+	//
+	// 	$("#officeDetails").hide().html("");
+	// 	$("#officeDetails").html(content).delay(1000).show();
+	// });
 
-	$("span.closeMe").on("click", function(){
-		$(this).parent().parent().hide();
-	});
-  
   	setInterval(function(){
 		$(".officeTile").each(function(index){
 			var timeOffset = parseInt($(this).data("timeOffset"));

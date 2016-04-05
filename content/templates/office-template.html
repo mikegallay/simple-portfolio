@@ -1,0 +1,79 @@
+{{#each objects}}
+	<div class="officeTile" data-time-offset='{{{timeDiff}}}'>
+		<a>
+			<div class="bgOverlay"></div>
+			<picture>
+			<!--[if IE 9]>
+				<video style="display: none;"><![endif]-->
+					<source srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+			<!--[if IE 9]>
+				</video>
+			<![endif]-->
+			<!--[if !lte IE 9]> -->
+				<img srcset='{{{imgSrc}}}.jpg' src="img/common/blank.png" alt="{{{altText}}}">
+			<!-- <![endif]-->
+			<!--[if lte IE 9 ]>
+				<img src='{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x' alt="{{{altText}}}"
+			<![endif]-->
+			</picture>
+			
+			<div class="officeInfo">
+				
+				<div class="clock">
+					
+				</div>
+				
+				<p>
+					{{{city}}} <br>
+					<time datetime="{{{timeDiff}}}"></time>
+				</p>
+			</div>
+		</a>
+		
+		<span hidden>
+			<div class="leftSide">
+				<span class="closeMe">CLOSE ME</span>
+				
+				<h2>mcgarrybowen</h2>
+				<h1>{{{city}}}</h1>
+			
+				<br>
+				<strong>CONTACT INFORMATION</strong>
+				<br>
+				{{{address}}}
+				<br>
+				{{{telephone}}}
+			
+				<br><br>
+			
+				{{{mainContact}}}
+				<br>
+				{{{contactTitle}}}
+			
+				<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
+				<br>
+				<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
+				<br>
+			
+				<strong>PRESS AND PR INQUIRIES</strong>
+				<a href="{{{prEmail}}}">{{{prEmail}}}</a>
+			</div>
+			<div class="rightSide">
+				<picture>
+				<!--[if IE 9]>
+					<video style="display: none;"><![endif]-->
+						<source srcset="{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x">
+				<!--[if IE 9]>
+					</video>
+				<![endif]-->
+				<!--[if !lte IE 9]> -->
+					<img srcset='{{{heroImage}}}.jpg' src="img/common/blank.png" alt="{{{altText}}}">
+				<!-- <![endif]-->
+				<!--[if lte IE 9 ]>
+					<img src='{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x' alt="{{{altText}}}"
+				<![endif]-->
+				</picture>				
+			</div>
+		</span>
+	</div>
+{{/each}}
