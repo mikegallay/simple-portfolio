@@ -1086,13 +1086,13 @@ h1.sectionHeading {
   max-height: 328px;
   margin: 0.375em;
   overflow: hidden;
-  -webkit-transition: margin 300ms, width 300ms;
-          transition: margin 300ms, width 300ms;
+  -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
+          transition: margin 300ms 300ms, width 300ms 300ms;
 }
 .cultureTile picture {
   margin-left: 0;
-  -webkit-transition: margin 300ms;
-          transition: margin 300ms;
+  -webkit-transition: margin 300ms 300ms;
+          transition: margin 300ms 300ms;
 }
 .cultureTile.stretchOut {
   width: 48.9%;

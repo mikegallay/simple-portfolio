@@ -175,11 +175,11 @@ h1 {
 	max-height: 328px;
 	margin: 0.375em;
 	overflow: hidden;
-	transition: margin 300ms, width 300ms;
+	transition: margin 300ms 300ms, width 300ms 300ms;
 	
 	picture{
 		margin-left:0;
-		transition: margin 300ms;
+		transition: margin 300ms 300ms;
 	}
 	
 	&.stretchOut {
