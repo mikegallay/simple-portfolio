@@ -308,6 +308,31 @@ h1 {
 		top: 0;
 		left: 0;
 		z-index: 9999;
+		
+		.clock {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			
+			svg {
+				position: relative;
+				top: 0;
+				left: 10%;
+				transform: translateX(-50%);
+				pointer-events: none;
+				
+				path {
+					opacity: 1;
+					fill: none;
+					transition: stroke-dashoffset 10s;
+				}
+				
+				&.progress-circle path {
+					stroke: white;
+					stroke-width: 2;
+				}
+			}
+		}
 	}		
 }
 

@@ -68,7 +68,9 @@ $(function() {
 		$("#officeDetails").html(content).delay(1000).show();
 	});
 
-
+	$("span.closeMe").on("click", function(){
+		$(this).parent().parent().hide();
+	});
   
   	setInterval(function(){
 		$(".officeTile").each(function(index){

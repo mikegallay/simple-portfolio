@@ -1233,6 +1233,29 @@ h1.sectionHeading {
   left: 0;
   z-index: 9999;
 }
+.officeTile .officeInfo .clock {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.officeTile .officeInfo .clock svg {
+  position: relative;
+  top: 0;
+  left: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  pointer-events: none;
+}
+.officeTile .officeInfo .clock svg path {
+  opacity: 1;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 10s;
+          transition: stroke-dashoffset 10s;
+}
+.officeTile .officeInfo .clock svg.progress-circle path {
+  stroke: white;
+  stroke-width: 2;
+}
 
 #clientList {
   display: none;
