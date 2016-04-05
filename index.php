@@ -66,6 +66,15 @@
 		<a name="offices"></a>
 		<section id="OurOffices">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
+			
+			<article id="officeDetails" class="row"></article>
+			
+			<div class="officeContent">
+				<?php
+					$officeData = HTMLfromTemplateAndJSON("content/templates/office-template.html", "content/data/office-data.json");
+					echo $officeData; 
+				?>
+			</div>
 		</section>
 
 		<a name="careers"></a>

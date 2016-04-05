@@ -12,7 +12,8 @@ function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
 	
 	$wrapper = '{ "objects": ' . $str . ' }';
 	$objects = json_decode($wrapper, true); 
-
+	
+	
 	//add mediapath to slide-img	
 	/*for($lcv=0; $lcv < count($objects["objects"]); $lcv++) {
 	    $objects["objects"][$lcv]['slide-img'] = MEDIAPATH . $objects["objects"][$lcv]['slide-img'];
