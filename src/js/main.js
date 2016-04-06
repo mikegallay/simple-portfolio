@@ -114,8 +114,8 @@ $(function() {
 				ndHours -= 12;
 			}
 			
-			var clockHours = ((ndHours/12) * 100) + "%";
-			var clockMinutes = (100 * (nd.getMinutes()/60))+"%";
+			var clockHours = Math.floor((ndHours/12) * 100) + "%";
+			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
 			
 			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
   		  	
@@ -143,8 +143,8 @@ $(function() {
 				ndHours -= 12;
 			}
 			
-			var clockHours = ((ndHours/12) * 100) + "%";
-			var clockMinutes = (100 * (nd.getMinutes()/60))+"%";
+			var clockHours = Math.floor((ndHours/12) * 100) + "%";
+			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
 			
 			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
   		  	
