@@ -37,6 +37,8 @@ ul.navigation {
 	justify-content: flex-end;
 	align-items: center;
 	list-style: none;
+	width: 50%;
+    float: right;
 	
 	li {
 		margin: 0em 1.3em;
@@ -54,6 +56,69 @@ ul.navigation {
 		}
 	}
 }
+
+/* MB LOGO */
+
+#mbLogo {
+    overflow: hidden;
+    width: 260px;
+    height: 70px;
+    display: inline-block;
+	margin-left:25px;
+	#mcgarryTXT{
+		top:36px;
+		left:33px;
+		position:absolute;
+		#m{
+			width:31px;
+			height:26px;
+			overflow:hidden;
+			position:absolute;
+		}
+		#cgarryContainer{
+			width:0px;
+			height:26px;
+			left:30px;
+			overflow:hidden;
+			position:absolute;
+			#cgarry{
+				width:102px;
+				height:26px;
+				left:0px;
+				overflow:hidden;
+				position:absolute;
+			}
+		}
+	}
+
+	#bowenTXT{
+		position:absolute;
+		top:28px;
+		left:66px; /*152px*/
+		#b{
+			width:17px;
+			height:26px;
+			overflow:hidden;
+			position:absolute;
+		}
+		#owenContainer{
+			width:0px;
+			height:26px;
+			left:18px;
+			overflow:hidden;
+			position:absolute;
+			#owen{
+				width:79px;
+				height:26px;
+				left:0px;
+				overflow:hidden;
+				position:absolute;
+			}
+		}
+	}
+}
+
+/* end MB LOGO */
 
 .mainHeadline {
 	font-family: 'Din-Bold', Helvetica, Arial, san-serif;

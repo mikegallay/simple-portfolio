@@ -913,22 +913,37 @@ a:active {
 }
 .icon {
   display: inline-block;
+  position: relative;
 }
 
-.music-inline {
-  width: 15px;
-  height: 15px;
-  fill: blue;
-  position: relative;
-  top: 2px;
+.logo-b-inline {
+  width: 17px;
+  height: 26px;
+  fill: white;
+}
+
+.logo-owen-inline {
+  width: 79px;
+  height: 26px;
+  fill: white;
+}
+
+.logo-m-inline {
+  width: 31px;
+  height: 26px;
+  fill: white;
+}
+
+.logo-cgarry-inline {
+  width: 102px;
+  height: 26px;
+  fill: white;
 }
 
 .heart-inline {
-  width: 15px;
-  height: 15px;
-  fill: red;
-  position: relative;
-  top: 2px;
+  width: 31px;
+  height: 26px;
+  fill: white;
 }
 
 .alignRight {
@@ -1320,6 +1335,8 @@ ul.navigation {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  width: 50%;
+  float: right;
 }
 ul.navigation li {
   margin: 0em 1.3em;
@@ -1334,6 +1351,67 @@ ul.navigation li a:hover {
   color: #46ccc5;
 }
 
+/* MB LOGO */
+#mbLogo {
+  overflow: hidden;
+  width: 260px;
+  height: 70px;
+  display: inline-block;
+  margin-left: 25px;
+}
+#mbLogo #mcgarryTXT {
+  top: 36px;
+  left: 33px;
+  position: absolute;
+}
+#mbLogo #mcgarryTXT #m {
+  width: 31px;
+  height: 26px;
+  overflow: hidden;
+  position: absolute;
+}
+#mbLogo #mcgarryTXT #cgarryContainer {
+  width: 0px;
+  height: 26px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+}
+#mbLogo #mcgarryTXT #cgarryContainer #cgarry {
+  width: 102px;
+  height: 26px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+#mbLogo #bowenTXT {
+  position: absolute;
+  top: 28px;
+  left: 66px;
+  /*152px*/
+}
+#mbLogo #bowenTXT #b {
+  width: 17px;
+  height: 26px;
+  overflow: hidden;
+  position: absolute;
+}
+#mbLogo #bowenTXT #owenContainer {
+  width: 0px;
+  height: 26px;
+  left: 18px;
+  overflow: hidden;
+  position: absolute;
+}
+#mbLogo #bowenTXT #owenContainer #owen {
+  width: 79px;
+  height: 26px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* end MB LOGO */
 .mainHeadline {
   font-family: 'Din-Bold', Helvetica, Arial, san-serif;
   font-size: 1.75em;

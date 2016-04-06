@@ -48,3 +48,4 @@ function pictureFillImage($path,$alt) {
 }
 
 ?>
+<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?></span>
