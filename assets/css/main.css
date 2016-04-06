@@ -1179,13 +1179,6 @@ h1.sectionHeading {
           flex-flow: row;
   width: 100%;
 }
-#officeDetails .leftSide, #officeDetails .rightSide {
-  width: 46.9%;
-}
-#officeDetails .leftSide {
-  padding: 1em;
-  background-color: #46ccc5;
-}
 
 .officeTile {
   position: relative;
@@ -1233,28 +1226,15 @@ h1.sectionHeading {
   left: 0;
   z-index: 9999;
 }
-.officeTile .officeInfo .clock {
-  position: relative;
-  display: inline-block;
-  text-align: center;
+.officeTile .officeInfo svg {
+  display: block;
+  margin: 50px auto;
 }
-.officeTile .officeInfo .clock svg {
-  position: relative;
-  top: 0;
-  left: 10%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  pointer-events: none;
-}
-.officeTile .officeInfo .clock svg path {
-  opacity: 1;
+.officeTile .officeInfo svg .loader {
   fill: none;
-  -webkit-transition: stroke-dashoffset 10s;
-          transition: stroke-dashoffset 10s;
 }
-.officeTile .officeInfo .clock svg.progress-circle path {
-  stroke: white;
-  stroke-width: 2;
+.officeTile .officeInfo svg .border {
+  fill: none;
 }
 
 #clientList {
@@ -1311,7 +1291,7 @@ h1.sectionHeading {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   margin-top: 1.5625em;

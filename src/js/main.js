@@ -84,4 +84,33 @@ $(function() {
 		});  		
   	}, 1000);
 
+
+	var loader = document.getElementsByClassName('loader')
+	, border = document.getElementsByClassName('border')
+	, α = 0
+	, π = Math.PI
+	, t = 30;
+
+	(function draw() {
+		α++;
+		α %= 360;
+		var r = ( α * π / 180 )
+		  , x = Math.sin( r ) * 150
+		  , y = Math.cos( r ) * - 150
+		  , mid = ( α > 180 ) ? 1 : 0
+		  , anim = 'M 0 -150 A 150 150 1 ' 
+		         + mid + ' 1 ' 
+		         +  x  + ' ' 
+		         +  y;//  + ' z';
+		//[x,y].forEach(function( d ){
+		//  d = Math.round( d * 1e3 ) / 1e3;
+		//});
+		
+		for(var i = 0; i < loader.length; i++) {
+			loader[i].setAttribute( 'd', anim );
+			border[i].setAttribute( 'd', anim );
+		}
+
+		setTimeout(draw, t); // Redraw
+		})();
 });

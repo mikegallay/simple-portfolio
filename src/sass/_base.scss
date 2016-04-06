@@ -258,14 +258,14 @@ h1 {
 	flex-flow: row;
 	width: 100%;
 	
-	.leftSide, .rightSide {
-		width: 46.9%;
-	}
-	
-	.leftSide {
-		padding: 1em;
-		background-color: #46ccc5;
-	}
+//	.leftSide, .rightSide {
+//		width: 46.9%;
+//	}
+//
+//	.leftSide {
+//		padding: 1em;
+//		background-color: #46ccc5;
+//	}
 }
 
 .officeTile {
@@ -309,30 +309,22 @@ h1 {
 		left: 0;
 		z-index: 9999;
 		
-		.clock {
-			position: relative;
-			display: inline-block;
-			text-align: center;
+//		.clock {
+//			position: relative;
+//			display: inline-block;
+//			text-align: center;
 			
 			svg {
-				position: relative;
-				top: 0;
-				left: 10%;
-				transform: translateX(-50%);
-				pointer-events: none;
+				display: block;
+				margin: 50px auto;
 				
-				path {
-					opacity: 1;
-					fill: none;
-					transition: stroke-dashoffset 10s;
-				}
-				
-				&.progress-circle path {
-					stroke: white;
-					stroke-width: 2;
-				}
+				.loader 
+				{ fill: none }
+
+				.border 
+				{ fill: none }
 			}
-		}
+//		}
 	}		
 }
 
