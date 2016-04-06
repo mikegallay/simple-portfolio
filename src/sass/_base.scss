@@ -308,23 +308,14 @@ h1 {
 		top: 0;
 		left: 0;
 		z-index: 9999;
-		
-//		.clock {
-//			position: relative;
-//			display: inline-block;
-//			text-align: center;
+					
+		svg {
+			display: block;
+			margin: 0 auto;
+			overflow: visible;
 			
-			svg {
-				display: block;
-				margin: 50px auto;
-				
-				.loader 
-				{ fill: none }
-
-				.border 
-				{ fill: none }
-			}
-//		}
+			.clockHours, .clockMinutes { }
+		}
 	}		
 }
 

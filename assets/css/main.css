@@ -1243,13 +1243,8 @@ h1.sectionHeading {
 }
 .officeTile .officeInfo svg {
   display: block;
-  margin: 50px auto;
-}
-.officeTile .officeInfo svg .loader {
-  fill: none;
-}
-.officeTile .officeInfo svg .border {
-  fill: none;
+  margin: 0 auto;
+  overflow: visible;
 }
 
 #clientList {

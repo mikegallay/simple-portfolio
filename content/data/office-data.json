@@ -13,7 +13,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_amsterdam"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_chicago",
@@ -29,7 +30,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_chicago"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_hongkong",
@@ -45,7 +47,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_hongkong"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_london",
@@ -61,7 +64,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_london"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_newyork",
@@ -77,7 +81,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_newyork"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_paris",
@@ -93,7 +98,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_paris"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_sanfrancisco",
@@ -109,7 +115,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_sanfransisco"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_saupaulo",
@@ -125,7 +132,8 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_saopaulo"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_shanghai",
@@ -141,6 +149,7 @@
 		"contactNumber": "",
 		"mainEmail": "",
 		"prEmail": "",
-		"heroImage": ""
+		"heroImage": "",
+		"clockImage": "clock_icons_shanghai"
 	}
 ]
