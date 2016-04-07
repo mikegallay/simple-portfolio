@@ -1,46 +1,64 @@
 [
 	{	
-		"imgSrc": "assets/img/our_work/Apophis",
-		"header": "Verizon",
-		"description": "Apophis",
+		"imgSrc": "assets/img/our_work/2x1_Intel_JimParsons_Campaign1",
+		"header": "Intel",
+		"description": "Description goes here",
 		"altText": "This is alt text",
 		"isDouble": "true"
-	},	
-	{
-		"imgSrc": "assets/img/our_work/Aussie_SGS1",
-		"header": "This is an extra long header",
-		"description": "Very useful information",
-		"altText": "This is alt text"
-	},
-	{
-		"imgSrc": "assets/img/our_work/IntelExperienceApp",
-		"header": "This is a header",
-		"description": "Very useful information",
-		"altText": "This is alt text"
-	},
-	{
-		"imgSrc": "assets/img/our_work/Mariott_Insitu",
-		"header": "Marriott <br> International",
-		"description": "Mr. Guaran-T",
-		"altText": "Mr. Guaran-T"
 	},
 	{	
-		"imgSrc": "assets/img/our_work/Mariott_MrGuaran-T",
-		"header": "Marriott <br> International",
-		"description": "Mr. Guaran-T",
-		"altText": "Mr. Guaran-T",
+		"imgSrc": "assets/img/our_work/2x1_Intel_Inside",
+		"header": "Intel",
+		"description": "Description goes here",
+		"altText": "Description goes here",
 		"isDouble": "true"
 	},	
 	{
-		"imgSrc": "assets/img/our_work/United_BMB1",
-		"header": "United <br> Airlines",
-		"description": "Very useful information",
+		"imgSrc": "assets/img/our_work/1x1_Mariott_Insitu",
+		"header": "Mariott",
+		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{
-		"imgSrc": "assets/img/our_work/Verizon_SocialImprint3",
+		"imgSrc": "assets/img/our_work/1x1_OscarMayer",
+		"header": "Oscar Meyer",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"imgSrc": "assets/img/our_work/1x1_IntelExperienceApp",
+		"header": "Intel",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{	
+		"imgSrc": "assets/img/our_work/1x1_Aussie_SGS1",
+		"header": "Aussie",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},	
+	{
+		"imgSrc": "assets/img/our_work/1x1_Mariott_MrGuaran-T",
+		"header": "Marriot",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"imgSrc": "assets/img/our_work/1x1_Verizon_SocialImprint3",
 		"header": "Verizon",
-		"description": "Very useful information",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"imgSrc": "assets/img/our_work/1x1_United_BMB1",
+		"header": "United <br> Airlines",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"imgSrc": "assets/img/our_work/1x1_Apophis",
+		"header": "Verizon",
+		"description": "Description goes here",
 		"altText": "This is alt text"
 	}
 ]

@@ -5,7 +5,7 @@
 			<picture>
 			<!--[if IE 9]>
 				<video style="display: none;"><![endif]-->
-					<source srcset="{{{imgSrc}}}@2x.jpg">
+					<source srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
 			<!--[if IE 9]>
 				</video>
 			<![endif]-->
@@ -13,7 +13,7 @@
 				<img srcset='{{{imgSrc}}}@2x.jpg' src="img/common/blank.png" alt="{{{altText}}}">
 			<!-- <![endif]-->
 			<!--[if lte IE 9 ]>
-				<img src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}"
+				<img src='{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x' alt="{{{altText}}}">
 			<![endif]-->
 			</picture>
 			
@@ -31,7 +31,14 @@
 			   <use xlink:href="#{{{clockImage}}}"></use>
 			   <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/{{clockImage}}}.png" alt="{{{clockImage}}} icon"> <!--<![endif]-->
 			 </svg>
-		
+			 
+				<!-- <div class="clock"> -->
+					<!-- <svg width="300" height="300" viewbox="0 0 310 310">
+					  <path class="border" transform="translate(150, 150)" stroke-lincap="round" stroke-width="4.5" stroke="white" fill="none" />
+					  <path class="loader" transform="translate(150, 150)" stroke-opacity="0.0" fill="none" />
+					</svg> -->
+				<!-- </div> -->
+				
 				<p>
 					{{{city}}} <br>
 					<time datetime="{{{timeDiff}}}"></time>
