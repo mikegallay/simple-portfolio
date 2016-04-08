@@ -46,7 +46,14 @@
 			</video>
 		</div>
 			
-	
+		<div class="video-overlay">
+			<div class="largeTag"> HELLO </div>
+			<a href> <?php addIcon('playbutton') ?> </a>
+		</div>
+		
+		<div id="downArrow">
+			<a href> <?php addIcon('marquee_down_arrow')?> </a>
+		</div>
 
 	</div>
 	

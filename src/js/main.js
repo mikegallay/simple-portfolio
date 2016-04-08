@@ -40,34 +40,38 @@ $(function() {
 	function resize() {
 		var colW;
 		
+		//use video height to set the video size
 		videoHeight = lastWindowHeight;
 		videoWidth = (videoHeight * aspectRatio);
-		var minVideoHeight = 500;
 		
 		var screenAR = lastWindowWidth/ lastWindowHeight;
 		
+		//reset all inline styles
+		$('.video-overlay').css('margin-top',0);
 		$('.responsive-video').css('margin-top',0);
 		$('.responsive-video').css('margin-left',0);
 		$('#welcomeVideo').css('height','100%');
 		
-		if (screenAR > aspectRatio){ //if screen is wider than 16:9
+		if (screenAR > aspectRatio){ //if screen is wider than 16:9 use video width to set the video size
 			
 			videoWidth = lastWindowWidth;
 			videoHeight = (videoWidth * (1/aspectRatio));
-			var mt = (lastWindowHeight-videoHeight)/2
+			var mt = (lastWindowHeight-videoHeight)/2; //calculate the margin-top offset
 			$('.responsive-video').css('margin-top',mt+"px");
+			$('.video-overlay').css('margin-top',mt+"px"); //offset video overlay so content stays centered vertically
 			$('#welcomeVideo').css('height',lastWindowHeight+'px');
 			
-		} else { //if screen is skinnier than 16:9
+		} else { //if screen is skinnier than 16:9 use video height (set above line 43) to set the video size
 			
-			var ml = (lastWindowWidth-videoWidth)/2
+			var ml = (lastWindowWidth-videoWidth)/2; //calculate the margin-left offset
 			$('.responsive-video').css('margin-left',ml+"px");
 			
 		}
 		
 		$(".responsive-video").css('width', videoWidth + 'px');
 		$(".responsive-video").css('height', videoHeight+'px');
-		
+		$('.video-overlay').css('height',videoHeight + 'px');
+				
 		$(".cultureTile").each(function(){
 			
 			if($(this).hasClass("pushRight"))
@@ -167,20 +171,30 @@ $(function() {
 		}
 	});
 	
+	
+	
 
 	/* animate header logo */
 	
    	var tt = TweenMax.to;
  	var ts = TweenMax.set;
 	ts(rect,{rotation:-90,transformOrigin:"50% 50%"})
+	
+	/* animate downarrow pulse*/
+	function downArrowPulse(){
+		tt(downArrow,1.5,{y:"-8", delay:0,ease:Back.easeInOut});
+		tt(downArrow,1,{y:"0", delay:1.5,ease:Bounce.easeOut,overright:false,onComplete:downArrowPulse});
+		
+	}
+	downArrowPulse();
 
 	var l = document.getElementById('mbLogo')
 	l.addEventListener('mouseover',function(){
-		showLogo()
+		showLogo();
 	})
 
 	l.addEventListener('mouseout',function(){
-		hideLogo()
+		hideLogo();
 	})
 
 	function showLogo(){

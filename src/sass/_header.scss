@@ -155,35 +155,46 @@ ul.navigation {
 			height: auto;
 		}	
 	}
-}
-
-
-.video-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-width: 100%;
 	
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
-	background-repeat: repeat;
-	-webkit-background-size: 3px 3px;
-	-moz-background-size: 3px 3px;
-	background-size: 3px 3px;
-	background-position: center;	
-	z-index: 10;
+	.video-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-width: 100%;
+	
+	    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+	    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+	    background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+	    background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+		background-repeat: repeat;
+		-webkit-background-size: 3px 3px;
+		-moz-background-size: 3px 3px;
+		background-size: 3px 3px;
+		background-position: center;	
+	    text-align: center;
+	    display: flex;
+	    flex-flow: column wrap;
+	    justify-content: center;
 
+		.largeTag {
+			position: relative;
+			font-size: 6.5em;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 1em;
+		}
 
-	.largeTag {
-		position: relative;
-		font-size: 6.5em;
-		font-weight: bold;
-		text-transform: uppercase;
-		line-height: 1em;
 	}
-
+	
+	#downArrow {
+	    position: absolute;
+	    bottom: 1%;
+	    left: 50%;
+		margin-left:-.75em;
+	}
+	
 }
+
+
 
