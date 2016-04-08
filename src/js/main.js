@@ -1,5 +1,112 @@
 $(function() {
   
+	var lastWindowHeight = $(window).height();
+	var lastWindowWidth = $(window).width();
+	var videoHeight;
+	var aspectRatio = 16/9;
+	var videoWidth = $(window).width();
+	
+	window.onresize = resizeChecker;
+	
+	setTimeout(function(){ resize(); }, 500);
+	
+	function resizeChecker() {
+
+	    //confirm window was actually resized
+	    if ($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
+			
+			
+			//this is a hack that isn't working just yet... 
+			//animation delay on cultureTile for width and margin 
+			//causes the resize function to not work properly
+			//needs fixing.
+			/*
+			var magicNumber = 768;
+			if (lastWindowWidth < magicNumber && $(window).width() > magicNumber){
+				console.log('magicnumber')
+				setTimeout(function(){resize();},500)
+			}
+			*/
+			
+	        //set this windows size
+	        lastWindowHeight = $(window).height();
+	        lastWindowWidth = $(window).width();
+			
+			//call resize function
+	        resize();
+	    }
+	}
+
+	function resize() {
+		var colW;
+		
+		videoHeight = lastWindowHeight;
+		videoWidth = (videoHeight * aspectRatio);
+		var minVideoHeight = 500;
+		
+		var screenAR = lastWindowWidth/ lastWindowHeight;
+		
+		$('.responsive-video').css('margin-top',0);
+		$('.responsive-video').css('margin-left',0);
+		$('#welcomeVideo').css('height','100%');
+		
+		if (screenAR > aspectRatio){ //if screen is wider than 16:9
+			
+			videoWidth = lastWindowWidth;
+			videoHeight = (videoWidth * (1/aspectRatio));
+			var mt = (lastWindowHeight-videoHeight)/2
+			$('.responsive-video').css('margin-top',mt+"px");
+			$('#welcomeVideo').css('height',lastWindowHeight+'px');
+			
+		} else { //if screen is skinnier than 16:9
+			
+			var ml = (lastWindowWidth-videoWidth)/2
+			$('.responsive-video').css('margin-left',ml+"px");
+			
+		}
+		
+		$(".responsive-video").css('width', videoWidth + 'px');
+		$(".responsive-video").css('height', videoHeight+'px');
+		
+		$(".cultureTile").each(function(){
+			
+			if($(this).hasClass("pushRight"))
+			{
+				 var nextTile = $(this).next();
+				 var picHolder = nextTile.find('.picHolder');
+
+				 colW = picHolder.width(); //move this to a global var on resize???
+				 
+				 /*
+				 if (!$(this).hasClass('stretchOut')){
+					setTimeout(function(){
+						picHolder.removeAttr("style");
+					}, 300); 
+				 }*/
+
+			} else if($(this).hasClass('pushLeft')) {
+				 var prevTile = $(this).prev();
+				 var picHolder = prevTile.find('.picHolder');
+
+				 colW = picHolder.width(); //move this to a global var on resize???
+
+				 /*
+				 if (!$(this).hasClass('stretchOut')){
+ 					setTimeout(function(){
+ 						//picHolder.removeAttr("style");
+ 					}, 300); 
+				 }*/
+			}
+		});
+		
+		$(".cultureTile").removeClass("stretchOut shrinkMe");
+		$(".cultureTile").css('max-height', colW+'px');
+		
+	}
+  
+  
+  
+  
   (function(){
 	  $(".cultureTile").each(function(index){
 		  if(index%2 == 0) {
@@ -38,7 +145,7 @@ $(function() {
 
 			 //can we remove this?
 			 if (!$(this).hasClass('stretchOut')){
-				 picHolder.css('min-width',colW+'px');
+			 	picHolder.css('min-width',colW+'px');
 			 }
 
 			 nextTile.toggleClass("shrinkMe");
@@ -52,7 +159,7 @@ $(function() {
 
 			 //can we remove this?
 			 if (!$(this).hasClass('stretchOut')){
-				 picHolder.css('min-width',colW+'px');
+			 	picHolder.css('min-width',colW+'px');
 			 }
 
 			 prevTile.toggleClass("shrinkMe");
@@ -97,8 +204,10 @@ $(function() {
 	/* calculate correct times for each clock */
 	
 	/* animate time dials*/
-	ts(".clockHours", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	ts(".clockMinutes", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
+	// ts(".clockHours", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
+	// ts(".clockMinutes", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
+	// ts('.clockLineGroup', {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
+	
 	
 		
 	// Initialize clocks

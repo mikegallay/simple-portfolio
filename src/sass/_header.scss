@@ -1,12 +1,12 @@
 
 #TopSection {
-	height: 100%;
+	height: auto;
 	width: 100%;
-	padding: 1.2em 0em;
 	position: relative;
 	overflow: hidden;
-	display: table;
+	display: block;
 	
+	/*
     background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
     background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
     background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
@@ -15,8 +15,9 @@
 	-webkit-background-size: 3px 3px, cover;
 	-moz-background-size: 3px 3px, cover;
 	background-size: 3px 3px, cover;
-	background-position: center, center;
+	background-position: center, center; */
 }
+
 
 nav {
 	position: absolute;
@@ -65,22 +66,26 @@ ul.navigation {
     height: 70px;
     display: inline-block;
 	margin-left:25px;
+	
 	#mcgarryTXT{
 		top:36px;
 		left:33px;
 		position:absolute;
+		
 		#m{
 			width:31px;
 			height:26px;
 			overflow:hidden;
 			position:absolute;
 		}
+		
 		#cgarryContainer{
 			width:0px;
 			height:26px;
 			left:30px;
 			overflow:hidden;
 			position:absolute;
+			
 			#cgarry{
 				width:102px;
 				height:26px;
@@ -95,12 +100,14 @@ ul.navigation {
 		position:absolute;
 		top:28px;
 		left:66px; /*152px*/
+		
 		#b{
 			width:17px;
 			height:26px;
 			overflow:hidden;
 			position:absolute;
 		}
+		
 		#owenContainer{
 			width:0px;
 			height:26px;
@@ -120,17 +127,63 @@ ul.navigation {
 
 /* end MB LOGO */
 
-.mainHeadline {
+.videoHeader {
 	font-family: 'Din-Bold', Helvetica, Arial, san-serif;
 	font-size: 1.75em;
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0 auto;
-	text-align: center;
 	
-	p {
-		font-family: 'Din-Light', Helvetica, Arial, san-serif;
-		font-size: 0.975em;
-		font-weight: lighter;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: auto;
+	position: relative;
+	
+
+	#welcomeVideo {
+		position: relative;
+		width: 100%;
+		height: 100%;	
+		overflow:hidden;
+		.responsive-video {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+		}	
 	}
 }
+
+
+.video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 100%;
+	
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+	background-repeat: repeat;
+	-webkit-background-size: 3px 3px;
+	-moz-background-size: 3px 3px;
+	background-size: 3px 3px;
+	background-position: center;	
+	z-index: 10;
+
+
+	.largeTag {
+		position: relative;
+		font-size: 6.5em;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1em;
+	}
+
+}
+

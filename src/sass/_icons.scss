@@ -29,3 +29,21 @@
 	height:26px;
 	fill:white;
 }
+
+
+.playbutton-inline {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+#downArrow {
+    position: relative;
+    bottom: 0;
+    left: 49%;
+	
+	.marquee_down_arrow-inline {
+		width: 1.5em;
+		height: auto;
+	}
+}
+

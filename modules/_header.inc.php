@@ -20,29 +20,7 @@
 				</div>
 			</div>
 		</div>
-		<ul class="navigation">
-			<!--
-			<li class="logo">
-							<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-							     x="0px" y="0px" width="66" height="66" xml:space="preserve">
-							<rect x="2" y="2" fill="none" stroke="#46ccc5" stroke-linecap="square" stroke-width="3" width="62" height="62" id="rect" />
-							</svg>
-			
-							<span id="mcgarryTXT">
-								<span id="m"></span>
-								<span id="cgarryContainer">
-									<span id="cgarry"></span>
-								</span>
-							</span>
-			
-							<span id="bowenTXT">
-								<span id="b"></span>
-								<span id="owenContainer">
-									<span id="owen"></span>
-								</span>
-							</span>
-						</li>-->
-			
+		<ul class="navigation">			
 			<li>
 				<a href="#work" aria-label="">WORK</a>
 			</li>
@@ -58,16 +36,18 @@
 		</ul>
 	</nav>
 	
-	<div class="mainHeadline">
-		<div class="container">
-			<h1>
-				CURABITUR AT ELIT PORTTITOR.
-			</h1>
-			<p>
-				Aenean maximus pellentesque erat, lacinia veneatis dolor<br>
-				vestibulum a. Aliquam rhoncus iaculis egastas. Cras vel<br>
-				efficitur nunc. Inteter nec convallis dolor.
-			</p>
+	<div class="videoHeader">
+		
+		<div id="welcomeVideo">
+			
+			<video class="responsive-video"  >
+				<source src="assets/img/Main_Sequence_opt.mp4" type="video/mp4">
+				<source src="assets/img/Main_Sequence_opt.webm" type="video/webm">
+			</video>
 		</div>
+			
+	
+
 	</div>
+	
 </header> 

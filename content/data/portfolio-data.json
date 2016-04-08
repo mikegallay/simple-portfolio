@@ -17,7 +17,8 @@
 		"imgSrc": "assets/img/our_work/1x1_Mariott_Insitu",
 		"header": "Mariott",
 		"description": "Description goes here",
-		"altText": "This is alt text"
+		"altText": "This is alt text",
+		"isShowcase": "true"
 	},
 	{
 		"imgSrc": "assets/img/our_work/1x1_OscarMayer",

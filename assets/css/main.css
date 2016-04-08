@@ -946,358 +946,41 @@ a:active {
   fill: white;
 }
 
+.playbutton-inline {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#downArrow {
+  position: relative;
+  bottom: 0;
+  left: 49%;
+}
+#downArrow .marquee_down_arrow-inline {
+  width: 1.5em;
+  height: auto;
+}
+
 .alignRight {
   text-align: right;
 }
 
-#OurWork {
-  min-height: 500px;
-}
-
-#OurPeople {
-  min-height: 500px;
-}
-
-#OurOffices {
-  min-height: 500px;
-}
-
-#JoinTeam {
-  min-height: 200px;
-}
-
-h1 {
-  margin: 0;
-}
-h1.sectionHeading {
-  font-family: 'Din-Regular', san-serif;
-  font-size: 3.125em;
-  font-weight: lighter;
-  color: #58595b;
-  margin-top: 1.5em;
-}
-
-.portfolioContent, .cultureContent, .officeContent {
-  margin-top: 1.2em;
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-align-content: space-around;
-      -ms-flex-line-pack: distribute;
-          align-content: space-around;
-}
-
-.projectTile {
-  position: relative;
-  width: 24%;
-  max-height: 328px;
-  height: auto;
-  margin: 0.5%;
-  overflow: hidden;
-}
-.projectTile a {
-  display: block;
-  cursor: pointer;
-}
-.projectTile a picture {
-  position: relative;
-  top: 0;
-  left: 0;
-  -webkit-transition: top .3s .2s, left .3s .2s;
-          transition: top .3s .2s, left .3s .2s;
-}
-.projectTile a .prjDescription {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-}
-.projectTile a .prjDescription::before {
-  content: " ";
-  background-color: #46ccc5;
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: 100%;
-  left: 100%;
-  -webkit-transform: scale(1) rotateZ(45deg);
-          transform: scale(1) rotateZ(45deg);
-  -webkit-transition: -webkit-transform 1s, top 1s cubic-bezier(0.215, 0.61, 0.355, 1), left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition: transform 1s, top 1s cubic-bezier(0.215, 0.61, 0.355, 1), left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  z-index: 0;
-}
-.projectTile a .prjDescription .prjDscrWrap {
-  z-index: 1;
-  opacity: 0;
-  top: 10%;
-  position: relative;
-  -webkit-transition: top 0.3s 200ms, opacity 0.3s 200ms;
-          transition: top 0.3s 200ms, opacity 0.3s 200ms;
-}
-.projectTile a .prjDescription .prjDscrWrap h1 {
-  font-family: 'Din-Bold', san-serif;
-  text-transform: uppercase;
-}
-.projectTile a .prjDescription .prjDscrWrap p {
-  margin-top: 0.3em;
-  margin-bottom: 0;
-}
-.projectTile a:hover picture {
-  top: -15px;
-}
-.projectTile a:hover .prjDescription .prjDscrWrap {
-  top: 0;
-  opacity: 1;
-}
-.projectTile a:hover .prjDescription::before {
-  top: 75%;
-  left: 0;
-  -webkit-transform: scale(3.5) rotateZ(25deg);
-          transform: scale(3.5) rotateZ(25deg);
-}
-
-.col-2-by-1 {
-  -webkit-flex-basis: 49%;
-      -ms-flex-preferred-size: 49%;
-          flex-basis: 49%;
-}
-
-.cultureTile {
-  position: relative;
-  width: 24%;
-  max-height: 313px;
-  margin: 0.5%;
-  overflow: hidden;
-  -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
-          transition: margin 300ms 300ms, width 300ms 300ms;
-}
-.cultureTile picture {
-  margin-left: 0;
-  -webkit-transition: margin 300ms 300ms;
-          transition: margin 300ms 300ms;
-}
-.cultureTile.stretchOut {
-  width: 48.9%;
-}
-.cultureTile.stretchOut .bio {
-  opacity: 1;
-  top: 0%;
-  visibility: visible;
-}
-.cultureTile.stretchOut .arrow {
-  border-top: 1000px solid transparent !important;
-  border-right: 1000px solid #46ccc5 !important;
-}
-.cultureTile.shrinkMe {
-  width: 0%;
-  margin-left: 0;
-  margin-right: 0;
-}
-.cultureTile.shrinkMe picture {
-  margin-left: -50%;
-}
-.cultureTile a {
-  display: block;
-  cursor: pointer;
-}
-.cultureTile a .bio {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 10%;
-  left: 0;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 500ms 300ms, top 500ms 300ms;
-          transition: opacity 500ms 300ms, top 500ms 300ms;
-}
-.cultureTile a .arrow {
-  position: absolute;
-  width: 0%;
-  height: 0%;
-  bottom: 0;
-  right: 0;
-  border-left: 0 solid transparent;
-  border-top: 50px solid transparent;
-  border-right: 50px solid #46ccc5;
-  border-bottom: 0 solid transparent;
-  z-index: 2;
-  -webkit-transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.cultureTile a:hover .arrow {
-  border-top: 75px solid transparent;
-  border-right: 75px solid #46ccc5;
-}
-
-#officeDetails {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  width: 100%;
-}
-
-.officeTile {
-  position: relative;
-  width: 23.99999%;
-  max-height: 328px;
-  margin: 0.375em;
-  overflow: hidden;
-}
-.officeTile a {
-  cursor: pointer;
-  display: block;
-}
-.officeTile .bgOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
-  background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
-  background-repeat: repeat;
-  background-size: 3px 3px;
-}
-.officeTile .officeInfo {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-}
-.officeTile .officeInfo svg {
-  display: block;
-  margin: 0 auto;
-  overflow: visible;
-}
-
-#clientList {
-  display: none;
-  cursor: crosshair;
-}
-#clientList ul {
-  margin-top: 2em;
-  font-size: 0.9em;
-  color: #000;
-  list-style: none;
-  text-align: left;
-  padding: 0;
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-#clientList ul li {
-  width: 23%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  -webkit-flex-shrink: 2;
-      -ms-flex-negative: 2;
-          flex-shrink: 2;
-}
-
 #TopSection {
-  height: 100%;
+  height: auto;
   width: 100%;
-  padding: 1.2em 0em;
   position: relative;
   overflow: hidden;
-  display: table;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%), url(../img/starrett_leehigh.jpg);
-  background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%), url(../img/starrett_leehigh.jpg);
-  background-repeat: repeat, no-repeat;
-  background-size: 3px 3px, cover;
-  background-position: center, center;
+  display: block;
+  	/*
+      background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+      background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+      background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+      background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
+  	background-repeat: repeat, no-repeat;
+  	-webkit-background-size: 3px 3px, cover;
+  	-moz-background-size: 3px 3px, cover;
+  	background-size: 3px 3px, cover;
+  	background-position: center, center; */
 }
 
 nav {
@@ -1407,20 +1090,510 @@ ul.navigation li a:hover {
 }
 
 /* end MB LOGO */
-.mainHeadline {
+.videoHeader {
   font-family: 'Din-Bold', Helvetica, Arial, san-serif;
   font-size: 1.75em;
-  display: table-cell;
-  vertical-align: middle;
-  margin: 0 auto;
-  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
-.mainHeadline p {
-  font-family: 'Din-Light', Helvetica, Arial, san-serif;
-  font-size: 0.975em;
-  font-weight: lighter;
+.videoHeader #welcomeVideo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.videoHeader #welcomeVideo .responsive-video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
+  background-repeat: repeat;
+  background-size: 3px 3px;
+  background-position: center;
+  z-index: 10;
+}
+.video-overlay .largeTag {
+  position: relative;
+  font-size: 6.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+#OurWork {
+  min-height: 500px;
+}
+
+#OurPeople {
+  min-height: 500px;
+}
+
+#OurOffices {
+  min-height: 500px;
+}
+
+#JoinTeam {
+  min-height: 200px;
+}
+
+.portfolioContent, .cultureContent, .officeContent {
+  margin-top: 1.2em;
+  -js-display: -webkit-box;
+  -js-display: -webkit-flex;
+  -js-display: -ms-flexbox;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around;
+}
+
+.col-2-by-1 {
+  -webkit-flex-basis: 49%;
+      -ms-flex-preferred-size: 49%;
+          flex-basis: 49%;
+}
+
+h1 {
+  margin: 0;
+}
+h1.sectionHeading {
+  font-family: 'Din-Regular', san-serif;
+  font-size: 3.125em;
+  font-weight: lighter;
+  color: #58595b;
+  margin-top: 1.5em;
+}
+
+.projectTile {
+  position: relative;
+  width: 99%;
+  max-height: 25em;
+  height: auto;
+  margin: 0.5%;
+  overflow: hidden;
+}
+.projectTile a {
+  display: block;
+  cursor: pointer;
+}
+.projectTile a picture {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: top .3s .2s, left .3s .2s;
+          transition: top .3s .2s, left .3s .2s;
+}
+.projectTile a .prjDescription {
+  -js-display: -webkit-box;
+  -js-display: -webkit-flex;
+  -js-display: -ms-flexbox;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+.projectTile a .prjDescription::before {
+  content: " ";
+  background-color: #46ccc5;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 100%;
+  left: 100%;
+  -webkit-transform: scale(1) rotateZ(45deg);
+          transform: scale(1) rotateZ(45deg);
+  -webkit-transition: -webkit-transform 1s, top 1s cubic-bezier(0.215, 0.61, 0.355, 1), left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: transform 1s, top 1s cubic-bezier(0.215, 0.61, 0.355, 1), left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  z-index: 0;
+}
+.projectTile a .prjDescription .prjDscrWrap {
+  z-index: 1;
+  opacity: 0;
+  top: 10%;
+  position: relative;
+  -webkit-transition: top 0.3s 200ms, opacity 0.3s 200ms;
+          transition: top 0.3s 200ms, opacity 0.3s 200ms;
+}
+.projectTile a .prjDescription .prjDscrWrap h2 {
+  font-family: 'Din-Bold', san-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+.projectTile a .prjDescription .prjDscrWrap p {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}
+.projectTile a:hover picture {
+  top: -15px;
+}
+.projectTile a:hover .prjDescription .prjDscrWrap {
+  top: 0;
+  opacity: 1;
+}
+.projectTile a:hover .prjDescription::before {
+  top: 75%;
+  left: 0;
+  -webkit-transform: scale(3.5) rotateZ(25deg);
+          transform: scale(3.5) rotateZ(25deg);
+}
+
+.cultureTile {
+  position: relative;
+  width: 99%;
+  max-height: 25em;
+  margin: 0.5%;
+  overflow: hidden;
+  -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
+          transition: margin 300ms 300ms, width 300ms 300ms;
+}
+.cultureTile picture {
+  margin-left: 0;
+  -webkit-transition: margin 300ms 300ms;
+          transition: margin 300ms 300ms;
+}
+.cultureTile.stretchOut {
+  width: 48.9%;
+}
+.cultureTile.stretchOut .bio {
+  opacity: 1;
+  top: 0%;
+  visibility: visible;
+}
+.cultureTile.stretchOut .arrow {
+  border-top: 1000px solid transparent !important;
+  border-right: 1000px solid #46ccc5 !important;
+}
+.cultureTile.shrinkMe {
+  width: 0%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cultureTile.shrinkMe picture {
+  margin-left: -50%;
+}
+.cultureTile a {
+  display: block;
+  cursor: pointer;
+}
+.cultureTile a .bio {
+  -js-display: -webkit-box;
+  -js-display: -webkit-flex;
+  -js-display: -ms-flexbox;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 10%;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 500ms 300ms, top 500ms 300ms;
+          transition: opacity 500ms 300ms, top 500ms 300ms;
+}
+.cultureTile a .arrow {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  bottom: 0;
+  right: 0;
+  border-left: 0 solid transparent;
+  border-top: 50px solid transparent;
+  border-right: 50px solid #46ccc5;
+  border-bottom: 0 solid transparent;
+  z-index: 2;
+  -webkit-transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.cultureTile a:hover .arrow {
+  border-top: 75px solid transparent;
+  border-right: 75px solid #46ccc5;
+}
+
+#officeDetails {
+  -js-display: -webkit-box;
+  -js-display: -webkit-flex;
+  -js-display: -ms-flexbox;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  width: 100%;
+}
+
+.officeTile {
+  position: relative;
+  width: 98.5%;
+  max-height: 30em;
+  margin: 0.375em;
+  overflow: hidden;
+}
+.officeTile a {
+  cursor: pointer;
+  display: block;
+}
+.officeTile .bgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
+  background-repeat: repeat;
+  background-size: 3px 3px;
+}
+.officeTile .officeInfo {
+  -js-display: -webkit-box;
+  -js-display: -webkit-flex;
+  -js-display: -ms-flexbox;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.officeTile .officeInfo svg {
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+.officeTile .officeInfo svg.clockGraphic {
+  width: 150px;
+}
+
+#clientList {
+  display: none;
+  cursor: crosshair;
+}
+#clientList ul {
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #000;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  -js-display: -webkit-box;
+  -js-display: -webkit-flex;
+  -js-display: -ms-flexbox;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#clientList ul li {
+  width: 23%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  -webkit-flex-shrink: 2;
+      -ms-flex-negative: 2;
+          flex-shrink: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .projectTile {
+    width: 49%;
+    max-height: 19em;
+    margin: 0.5%;
+  }
+  .projectTile a .prjDescription .prjDscrWrap h2 {
+    font-size: 2em;
+  }
+
+  .cultureTile {
+    width: 49%;
+    max-height: 22em;
+    margin: 0.5%;
+  }
+  .cultureTile.stretchOut {
+    width: 98.9%;
+  }
+  .cultureTile.stretchOut .arrow {
+    border-top: 2000px solid transparent !important;
+    border-right: 2000px solid #46ccc5 !important;
+  }
+
+  .officeTile {
+    width: 49%;
+    max-height: 20.5em;
+    margin: 0.5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projectTile {
+    width: 24%;
+    max-height: 20em;
+    margin: 0.5%;
+  }
+  .projectTile a .prjDescription .prjDscrWrap h2 {
+    font-size: 2em;
+  }
+
+  .cultureTile {
+    width: 24%;
+    max-height: 20em;
+    margin: 0.5%;
+  }
+  .cultureTile.stretchOut {
+    width: 48.9%;
+  }
+
+  .officeTile {
+    width: 24%;
+    max-height: 20.5em;
+    margin: 0.5%;
+  }
+  .officeTile .officeInfo svg.clockGraphic {
+    margin-top: 1.5em;
+  }
+}
+@media screen and (min-width: 1900px) {
+  nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 1.5625em;
+    width: 90%;
+    z-index: 99999;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-2-by-1 {
+    -webkit-flex-basis: 32.3333%;
+        -ms-flex-preferred-size: 32.3333%;
+            flex-basis: 32.3333%;
+  }
+
+  .projectTile {
+    width: 15.6666666%;
+    max-height: 39em;
+    margin: 0.5%;
+  }
+  .projectTile a .prjDescription .prjDscrWrap h2 {
+    font-size: 2em;
+  }
+
+  .cultureTile {
+    width: 15.6666666%;
+    max-height: 20em;
+    margin: 0.5%;
+  }
+  .cultureTile.stretchOut {
+    width: 32.33333%;
+  }
+
+  .officeTile {
+    width: 19%;
+    max-height: 39em;
+    margin: 0.5%;
+  }
+  .officeTile .officeInfo svg.clockGraphic {
+    margin-top: 1.5em;
+  }
+}
 footer {
   background-color: #58595b;
   color: #46ccc5;
@@ -1435,133 +1608,11 @@ footer {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1900px) {
   .container {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 1.5625em auto;
     padding: 0;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  #TopSection {
-    max-height: 37.5em;
-    width: 100%;
-  }
-
-  .portfolioContent, .cultureContent, .officeContent {
-    margin-top: 1.2em;
-    -js-display: -webkit-box;
-    -js-display: -webkit-flex;
-    -js-display: -ms-flexbox;
-    -js-display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-align-content: flex-end;
-        -ms-flex-line-pack: end;
-            align-content: flex-end;
-  }
-
-  .projectTile, .cultureTile {
-    position: relative;
-    width: 49%;
-    max-height: 30.875em;
-    height: auto;
-    margin: 0.3%;
-    overflow: hidden;
-  }
-
-  .cultureTile {
-    -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
-            transition: margin 300ms 300ms, width 300ms 300ms;
-  }
-  .cultureTile picture {
-    margin-left: 0;
-    -webkit-transition: margin 300ms 300ms;
-            transition: margin 300ms 300ms;
-  }
-  .cultureTile.stretchOut {
-    width: 98.5%;
-  }
-  .cultureTile.stretchOut .bio {
-    opacity: 1;
-    top: 0%;
-    visibility: visible;
-  }
-  .cultureTile.stretchOut .arrow {
-    border-top: 2000px solid transparent !important;
-    border-right: 2000px solid #46ccc5 !important;
-  }
-  .cultureTile.shrinkMe {
-    width: 0%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .cultureTile.shrinkMe picture {
-    margin-left: -50%;
-  }
-  .cultureTile a {
-    display: block;
-    cursor: pointer;
-  }
-  .cultureTile a .bio {
-    -js-display: -webkit-box;
-    -js-display: -webkit-flex;
-    -js-display: -ms-flexbox;
-    -js-display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    top: 10%;
-    left: 0;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 500ms 300ms, top 500ms 300ms;
-            transition: opacity 500ms 300ms, top 500ms 300ms;
-  }
-  .cultureTile a .arrow {
-    position: absolute;
-    width: 0%;
-    height: 0%;
-    bottom: 0;
-    right: 0;
-    border-left: 0 solid transparent;
-    border-top: 100px solid transparent;
-    border-right: 100px solid #46ccc5;
-    border-bottom: 0 solid transparent;
-    z-index: 2;
-    -webkit-transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .cultureTile a:hover .arrow {
-    border-top: 120px solid transparent;
-    border-right: 120px solid #46ccc5;
   }
 }
 /* ==========================================================================

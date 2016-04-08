@@ -57,11 +57,11 @@ textarea {
 @import 'normalize';
 @import 'variables';
 @import 'global';
-//@import 'bootstrap';
 @import 'fonts';
 @import 'icons';
 @import 'base';
 @import 'header';
+@import 'sections';
 @import 'footer';
 @import 'ie';
 
@@ -70,25 +70,16 @@ textarea {
    Media Queries
    ========================================================================== */
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1900px) {
+	
 	.container {
-		width: 100%;
-		margin: 0 auto;
+		max-width: 100%; 
+		margin: 1.5625em auto;
 		padding: 0;
 	}
+	
 }
 
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
-}
-
-
-@media only screen and (min-width: 35em) {
-
-}
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
