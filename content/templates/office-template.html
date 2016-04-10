@@ -28,7 +28,7 @@
 						 <g>
 		   			 		 <circle class="clockMinutes" cx="150" cy="75" r="70" fill="white" fill-opacity="0.0" stroke="#ffffff" stroke-width="2" />
 		   		 		 </g>
-			   </g>
+			   	  	</g>
 					     <use xlink:href="#{{{clockImage}}}"></use>			   
 			   		
 				   <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/{{clockImage}}}.png" alt="{{{clockImage}}} icon"> <!--<![endif]-->
@@ -42,8 +42,8 @@
 				<!-- </div> -->
 				
 				<p>
-					{{{city}}} <br>
-					<time datetime="{{{timeDiff}}}"></time>
+					<span class="cityName">{{{city}}}</span> <br>
+					<span class="cityTime"><time datetime="{{{timeDiff}}}"></time></span>
 				</p>
 			</div>
 		</a>

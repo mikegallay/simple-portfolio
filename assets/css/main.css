@@ -947,6 +947,7 @@ a:active {
 }
 
 .playbutton-inline {
+  cursor: pointer;
   width: 2.5em;
   height: 2.5em;
 }
@@ -988,9 +989,10 @@ nav {
 }
 
 ul.navigation {
+  font-family: 'Din-Regular', san-serif;
   height: 40px;
   padding: 0px;
-  font-size: 0.9em;
+  font-size: 0.875em;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1150,6 +1152,7 @@ ul.navigation li a:hover {
           justify-content: center;
 }
 .videoHeader .video-overlay .largeTag {
+  font-family: 'Din-Bold', san-serif;
   position: relative;
   font-size: 6.5em;
   font-weight: bold;
@@ -1216,10 +1219,12 @@ h1 {
 }
 h1.sectionHeading {
   font-family: 'Din-Regular', san-serif;
-  font-size: 3.125em;
+  font-size: 2.125em;
   font-weight: lighter;
   color: #58595b;
   margin-top: 1.5em;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 
 .projectTile {
@@ -1512,6 +1517,19 @@ h1.sectionHeading {
 }
 
 @media screen and (min-width: 768px) {
+  h1 {
+    margin: 0;
+  }
+  h1.sectionHeading {
+    font-family: 'Din-Regular', san-serif;
+    font-size: 3.125em;
+    font-weight: lighter;
+    color: #58595b;
+    margin-top: 1.5em;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
   .projectTile {
     width: 49%;
     max-height: 19em;
@@ -1525,6 +1543,10 @@ h1.sectionHeading {
     width: 49%;
     max-height: 22em;
     margin: 0.5%;
+  }
+  .cultureTile .bio {
+    font-family: 'Gotham-Light', san-serif;
+    font-size: 0.9em;
   }
   .cultureTile.stretchOut {
     width: 98.9%;
@@ -1541,6 +1563,19 @@ h1.sectionHeading {
   }
 }
 @media screen and (min-width: 1024px) {
+  h1 {
+    margin: 0;
+  }
+  h1.sectionHeading {
+    font-family: 'Din-Regular', san-serif;
+    font-size: 3.125em;
+    font-weight: lighter;
+    color: #58595b;
+    margin-top: 1.5em;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
   .projectTile {
     width: 24%;
     max-height: 20em;
@@ -1555,6 +1590,10 @@ h1.sectionHeading {
     max-height: 20em;
     margin: 0.5%;
   }
+  .cultureTile .bio {
+    font-family: 'Gotham-Light', san-serif;
+    font-size: 1em;
+  }
   .cultureTile.stretchOut {
     width: 48.9%;
   }
@@ -1563,6 +1602,15 @@ h1.sectionHeading {
     width: 24%;
     max-height: 20.5em;
     margin: 0.5%;
+  }
+  .officeTile .officeInfo .cityName {
+    text-transform: uppercase;
+    font-family: 'Din-Regular', san-serif;
+    font-size: 1.25em;
+  }
+  .officeTile .officeInfo .cityTime {
+    font-family: 'Din-Regular', san-serif;
+    font-size: 1.0625em;
   }
   .officeTile .officeInfo svg.clockGraphic {
     margin-top: 1.5em;

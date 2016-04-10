@@ -29,9 +29,10 @@ nav {
 }
 
 ul.navigation {
+	font-family: 'Din-Regular', san-serif;
 	height: 40px;
 	padding: 0px;
-	font-size: 0.9em;
+	font-size: 0.875em;
 	text-align: center;
 	display: flex;
 	flex-flow: row wrap;
@@ -178,6 +179,8 @@ ul.navigation {
 	    justify-content: center;
 
 		.largeTag {
+			
+			font-family: 'Din-Bold', san-serif;
 			position: relative;
 			font-size: 6.5em;
 			font-weight: bold;

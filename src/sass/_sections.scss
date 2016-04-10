@@ -35,10 +35,12 @@ h1 {
 	
 	&.sectionHeading {
 		font-family: 'Din-Regular', san-serif;
-		font-size: 3.125em;
+		font-size: 2.125em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
 		margin-top: 1.5em;
+		letter-spacing: 0.04em;
+		text-align: center;
 	}
 }
 
@@ -313,6 +315,20 @@ h1 {
 
 @media screen and (min-width: 768px) {
 
+	h1 {
+		margin: 0;
+	
+		&.sectionHeading {
+			font-family: 'Din-Regular', san-serif;
+			font-size: 3.125em;
+			font-weight: lighter;
+			color: $sectionHeadingColor;
+			margin-top: 1.5em;
+			letter-spacing: 0.04em;
+			text-align: left;
+		}
+	}
+
 	.projectTile {
 		width: 49%;
 		max-height: 19em;
@@ -338,6 +354,11 @@ h1 {
 		max-height: 22em;
 		margin: 0.5%;
 	
+		.bio {
+			font-family: 'Gotham-Light', san-serif;
+			font-size: 0.9em;
+		}
+	
 
 		&.stretchOut {
 			width: 98.9%;
@@ -361,7 +382,21 @@ h1 {
 }
 
 @media screen and (min-width: 1024px) {
+
+	h1 {
+		margin: 0;
 	
+		&.sectionHeading {
+			font-family: 'Din-Regular', san-serif;
+			font-size: 3.125em;
+			font-weight: lighter;
+			color: $sectionHeadingColor;
+			margin-top: 1.5em;
+			letter-spacing: 0.04em;
+			text-align: left;
+		}
+	}
+
 	.projectTile {
 		width: 24%;
 		max-height: 20em;
@@ -385,6 +420,11 @@ h1 {
 		max-height: 20em;
 		margin: 0.5%;
 
+		.bio {
+			font-family: 'Gotham-Light', san-serif;
+			font-size: 1em;
+		}
+
 		&.stretchOut {
 			width: 48.9%;
 		}
@@ -396,6 +436,18 @@ h1 {
 		margin: 0.5%;		
 
 		.officeInfo {
+			
+			.cityName {
+				text-transform: uppercase;
+				font-family: 'Din-Regular', san-serif;
+				font-size: 1.25em;
+			}
+			
+			.cityTime {
+				font-family: 'Din-Regular', san-serif;
+				font-size: 1.0625em;
+			}
+			
 			svg {
 				&.clockGraphic {
 					margin-top: 1.5em;

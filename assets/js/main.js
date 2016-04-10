@@ -1793,11 +1793,11 @@ $(function() {
 	var l = document.getElementById('mbLogo')
 	l.addEventListener('mouseover',function(){
 		showLogo();
-	})
+	});
 
 	l.addEventListener('mouseout',function(){
 		hideLogo();
-	})
+	});
 
 	function showLogo(){
 		tt(rect,.4,{transformOrigin:"50% 50%", drawSVG:"0%",overwrite:true});

@@ -40,7 +40,7 @@
 		
 		<div id="welcomeVideo">
 			
-			<video class="responsive-video"  >
+			<video class="responsive-video"  autoplay loop preload="auto">
 				<source src="assets/img/Main_Sequence_opt.mp4" type="video/mp4">
 				<source src="assets/img/Main_Sequence_opt.webm" type="video/webm">
 			</video>
@@ -48,7 +48,7 @@
 			
 		<div class="video-overlay">
 			<div class="largeTag"> HELLO </div>
-			<a href> <?php addIcon('playbutton') ?> </a>
+			<a> <?php addIcon('playbutton') ?> </a>
 		</div>
 		
 		<div id="downArrow">
