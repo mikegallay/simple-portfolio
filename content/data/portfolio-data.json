@@ -18,7 +18,7 @@
 		"header": "Mariott",
 		"description": "Description goes here",
 		"altText": "This is alt text",
-		"isShowcase": "true"
+		"isShowcase": ""
 	},
 	{
 		"imgSrc": "assets/img/our_work/1x1_OscarMayer",
