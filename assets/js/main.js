@@ -1784,8 +1784,8 @@ $(function() {
 	
 	/* animate downarrow pulse*/
 	function downArrowPulse(){
-		tt(downArrow,1.5,{y:"-8", delay:0,ease:Back.easeInOut});
-		tt(downArrow,1,{y:"0", delay:1.5,ease:Bounce.easeOut,overright:false,onComplete:downArrowPulse});
+		tt(downArrow,1.5,{y:"-20", delay:0,ease:Back.easeInOut});
+		tt(downArrow,1,{y:"0", delay:0.75,ease:Bounce.easeOut,overwrite:false,onComplete:downArrowPulse});
 		
 	}
 	downArrowPulse();

@@ -1,9 +1,10 @@
 {{#each objects}}
-	<div class="projectTile {{#if isDouble}}col-2-by-1{{/if}} {{#if isShowcase }}col-2-by-1{{/if}}">
+	<div class="projectTile {{#if isShowcase }}isShowcase{{/if}}{{#if isDouble}}col-2-by-1{{/if}}">
 		<a>
 			<picture>
 			<!--[if IE 9]>
 				<video style="display: none;"><![endif]-->
+					{{#if isShowcase }} <source srcset="{{{imgSrc}}}-showcase.jpg, {{{imgSrc}}}-showcase@2x.jpg 2x" media="(min-width: 1900px)">{{/if}}
 					<source srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
 			<!--[if IE 9]>
 				</video>

@@ -970,6 +970,7 @@ a:active {
 .menu_dropdown_arrow-inline {
   width: 0.7em;
   height: 0.7em;
+  vertical-align: initial;
 }
 
 .alignRight {
@@ -1695,6 +1696,12 @@ h1.joinTeamCTA {
     z-index: 99999;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .isShowcase {
+    -webkit-flex-basis: 32.3333%;
+        -ms-flex-preferred-size: 32.3333%;
+            flex-basis: 32.3333%;
   }
 
   .col-2-by-1 {
