@@ -1582,7 +1582,14 @@ h1.sectionHeading {
     margin: 0.5%;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
-    font-size: 2em;
+    font-family: 'Din-Bold', san-serif;
+    font-size: 1.875em;
+    margin-bottom: 0;
+  }
+  .projectTile a .prjDescription .prjDscrWrap p {
+    font-family: 'Gotham-Light', san-serif;
+    font-size: 1em;
+    margin-top: 0;
   }
 
   .cultureTile {
