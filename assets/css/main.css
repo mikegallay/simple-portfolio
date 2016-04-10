@@ -881,8 +881,13 @@ a:active {
 .button {
   cursor: pointer;
   background-color: #46ccc5;
-  padding: 0.6em;
+  padding-top: 1.5em;
+  padding-bottom: 0.8em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
   text-decoration: none;
+  font-family: 'Din-Regular', san-serif;
+  font-size: 1.0625em;
 }
 .button:hover {
   background-color: #4ee5dd;
@@ -957,8 +962,25 @@ a:active {
   height: 1.5em;
 }
 
+.more_button-inline {
+  width: 2em;
+  height: 2em;
+}
+
+.menu_dropdown_arrow-inline {
+  width: 0.7em;
+  height: 0.7em;
+}
+
 .alignRight {
   text-align: right;
+}
+
+.moreButton {
+  position: relative;
+  text-align: center;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 #TopSection {
@@ -1222,8 +1244,11 @@ h1.sectionHeading {
   font-size: 2.125em;
   font-weight: lighter;
   color: #58595b;
-  margin-top: 1.5em;
+  margin-top: 1em;
   letter-spacing: 0.04em;
+  text-align: center;
+}
+h1.joinTeamCTA {
   text-align: center;
 }
 
@@ -1525,9 +1550,12 @@ h1.sectionHeading {
     font-size: 3.125em;
     font-weight: lighter;
     color: #58595b;
-    margin-top: 1.5em;
+    margin-top: 1em;
     letter-spacing: 0.04em;
     text-align: left;
+  }
+  h1.joinTeamCTA {
+    text-align: center;
   }
 
   .projectTile {
@@ -1571,9 +1599,12 @@ h1.sectionHeading {
     font-size: 3.125em;
     font-weight: lighter;
     color: #58595b;
-    margin-top: 1.5em;
+    margin-top: 1em;
     letter-spacing: 0.04em;
     text-align: left;
+  }
+  h1.joinTeamCTA {
+    text-align: center;
   }
 
   .projectTile {
@@ -1624,6 +1655,22 @@ h1.sectionHeading {
   }
 }
 @media screen and (min-width: 1900px) {
+  h1 {
+    margin: 0;
+  }
+  h1.sectionHeading {
+    font-family: 'Din-Regular', san-serif;
+    font-size: 3.125em;
+    font-weight: lighter;
+    color: #58595b;
+    margin-top: 1em;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+  h1.joinTeamCTA {
+    text-align: center;
+  }
+
   nav {
     position: relative;
     top: 0;

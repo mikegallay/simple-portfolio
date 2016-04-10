@@ -38,8 +38,12 @@ h1 {
 		font-size: 2.125em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
-		margin-top: 1.5em;
+		margin-top: 1em;
 		letter-spacing: 0.04em;
+		text-align: center;
+	}
+	
+	&.joinTeamCTA {
 		text-align: center;
 	}
 }
@@ -323,9 +327,13 @@ h1 {
 			font-size: 3.125em;
 			font-weight: lighter;
 			color: $sectionHeadingColor;
-			margin-top: 1.5em;
+			margin-top: 1em;
 			letter-spacing: 0.04em;
 			text-align: left;
+		}
+	
+		&.joinTeamCTA {
+			text-align: center;
 		}
 	}
 
@@ -391,9 +399,13 @@ h1 {
 			font-size: 3.125em;
 			font-weight: lighter;
 			color: $sectionHeadingColor;
-			margin-top: 1.5em;
+			margin-top: 1em;
 			letter-spacing: 0.04em;
 			text-align: left;
+		}
+		
+		&.joinTeamCTA {
+			text-align: center;
 		}
 	}
 
@@ -470,6 +482,24 @@ h1 {
 
 @media screen and (min-width: 1900px) {
 
+	h1 {
+		margin: 0;
+	
+		&.sectionHeading {
+			font-family: 'Din-Regular', san-serif;
+			font-size: 3.125em;
+			font-weight: lighter;
+			color: $sectionHeadingColor;
+			margin-top: 1em;
+			letter-spacing: 0.04em;
+			text-align: left;
+		}
+		
+		&.joinTeamCTA {
+			text-align: center;
+		}
+	}
+	
 	nav {
 	    position: relative;
 	    top: 0;

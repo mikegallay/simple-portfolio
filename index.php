@@ -26,7 +26,7 @@
 			<h1 class="sectionHeading">OUR WORK</h1>
 			
 			<div class="row alignRight">
-				<a id="clientToggle" class="button" alt="">OUR CLIENTS</a>
+				<a id="clientToggle" class="button" alt="">OUR CLIENTS <?php addIcon('menu_dropdown_arrow'); ?></a>
 			</div>
 			
 			<div id="clientList" class="row">
@@ -45,6 +45,9 @@
 					echo $portfolioData; 
 				?>
 			</div>
+			<div class="moreButton">
+				<a id="addFolioContent" href=""><?php addIcon('more_button'); ?></a>
+			</div>
 		</section>
 	
 		<a name="people"></a>
@@ -52,7 +55,7 @@
 			<h1 class="sectionHeading">OUR CULTURE</h1>
 			
 			<div class="row alignRight">
-				<a id="officeToggle" class="button" alt="">OUR OFFICES</a>
+				<a id="officeToggle" class="button" alt="">OUR OFFICES  <?php addIcon('menu_dropdown_arrow'); ?></a>
 			</div>
 			
 			<div class="cultureContent">
@@ -60,6 +63,9 @@
 					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "content/data/culture-data.json");
 					echo $cultureData; 
 				?>
+			</div>
+			<div class="moreButton">
+				<a id="addCultureContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
 		</section>
 		
@@ -79,7 +85,7 @@
 
 		<a name="careers"></a>
 		<section id="JoinTeam">
-			<h1 class="sectionHeading">INTERESTED IN <br>
+			<h1 class="sectionHeading joinTeamCTA">INTERESTED IN <br>
 				JOING THE TEAM?</h1>
 		
 			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>

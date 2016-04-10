@@ -52,8 +52,13 @@ a {
 .button {
 	cursor: pointer;
 	background-color: #46ccc5;
-	padding: 0.6em;
+    padding-top: 1.5em;
+    padding-bottom: 0.8em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 	text-decoration: none;
+	font-family: 'Din-Regular', san-serif;
+	font-size: 1.0625em;
 	
 	&:hover {
 		background-color: #4ee5dd;
