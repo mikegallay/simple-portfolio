@@ -234,10 +234,24 @@ h1 {
 	max-height: 30em;
 	margin: 0.375em;
 	overflow: hidden;
+	background-color: #46ccc5;
 	
 	a {
 		cursor: pointer;
 		display: block;
+		
+		&:hover {
+			
+			.bgOverlay, picture {
+				opacity: 0;
+			}
+			
+			svg {
+				circle.clockHours {
+					stroke: #DEE2EA;
+				}
+			}
+		}
 	}
 	
 	.bgOverlay {
@@ -253,7 +267,14 @@ h1 {
 		background-repeat: repeat;
 		-webkit-background-size: 3px 3px;
 		-moz-background-size: 3px 3px;
-		background-size: 3px 3px;		
+		background-size: 3px 3px;	
+		opacity: 1;
+		transition: opacity 300ms;
+	}
+	
+	picture {
+		opacity: 1;
+		transition: opacity 300ms;
 	}
 	
 	.officeInfo {

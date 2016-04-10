@@ -1453,10 +1453,17 @@ h1.joinTeamCTA {
   max-height: 30em;
   margin: 0.375em;
   overflow: hidden;
+  background-color: #46ccc5;
 }
 .officeTile a {
   cursor: pointer;
   display: block;
+}
+.officeTile a:hover .bgOverlay, .officeTile a:hover picture {
+  opacity: 0;
+}
+.officeTile a:hover svg circle.clockHours {
+  stroke: #DEE2EA;
 }
 .officeTile .bgOverlay {
   position: absolute;
@@ -1468,6 +1475,14 @@ h1.joinTeamCTA {
   background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
   background-repeat: repeat;
   background-size: 3px 3px;
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+          transition: opacity 300ms;
+}
+.officeTile picture {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+          transition: opacity 300ms;
 }
 .officeTile .officeInfo {
   -js-display: -webkit-box;
