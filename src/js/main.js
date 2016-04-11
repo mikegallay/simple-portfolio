@@ -40,6 +40,9 @@ $(function() {
 	function resize() {
 		var colW;
 		
+		
+		// Begin top video section
+		
 		//use video height to set the video size
 		videoHeight = lastWindowHeight;
 		videoWidth = (videoHeight * aspectRatio);
@@ -52,10 +55,13 @@ $(function() {
 		$('.responsive-video').css('margin-left',0);
 		$('#welcomeVideo').css('height','100%');
 		
+		console.log(screenAR + " : " + aspectRatio);
+		
 		if (screenAR > aspectRatio){ //if screen is wider than 16:9 use video width to set the video size
 			
 			videoWidth = lastWindowWidth;
 			videoHeight = (videoWidth * (1/aspectRatio));
+		
 			var mt = (lastWindowHeight-videoHeight)/2; //calculate the margin-top offset
 			$('.responsive-video').css('margin-top',mt+"px");
 			$('.video-overlay').css('margin-top',mt+"px"); //offset video overlay so content stays centered vertically
@@ -64,18 +70,19 @@ $(function() {
 		} else { //if screen is skinnier than 16:9 use video height (set above line 43) to set the video size
 			
 			var ml = (lastWindowWidth-videoWidth)/2; //calculate the margin-left offset
-			$('.responsive-video').css('margin-left',ml+"px");
-			
+			$('.responsive-video').css('margin-left',ml+"px");	
 		}
 		
 		$(".responsive-video").css('width', videoWidth + 'px');
 		$(".responsive-video").css('height', videoHeight+'px');
 		$('.video-overlay').css('height',videoHeight + 'px');
 				
+		// End top video section		
+				
+				
 		$(".cultureTile").each(function(){
 			
-			if($(this).hasClass("pushRight"))
-			{
+			if($(this).hasClass("pushRight")) {
 				 var nextTile = $(this).next();
 				 var picHolder = nextTile.find('.picHolder');
 
