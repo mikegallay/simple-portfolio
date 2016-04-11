@@ -1179,10 +1179,20 @@ ul.navigation li a:hover {
 .videoHeader .video-overlay .largeTag {
   font-family: 'Din-Bold', san-serif;
   position: relative;
-  font-size: 6.5em;
+  font-size: 3.5em;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1em;
+}
+@media screen and (min-width: 768px) {
+  .videoHeader .video-overlay .largeTag {
+    font-family: 'Din-Bold', san-serif;
+    position: relative;
+    font-size: 6.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1em;
+  }
 }
 .videoHeader #downArrow {
   position: absolute;
@@ -1542,10 +1552,10 @@ h1.joinTeamCTA {
 }
 #clientList ul {
   margin-top: 2em;
-  font-size: 0.9em;
+  font-size: 0.7em;
   color: #000;
   list-style: none;
-  text-align: left;
+  text-align: center;
   padding: 0;
   -js-display: -webkit-box;
   -js-display: -webkit-flex;
@@ -1576,6 +1586,15 @@ h1.joinTeamCTA {
 }
 
 @media screen and (min-width: 768px) {
+  .largeTag {
+    font-family: 'Din-Bold', san-serif;
+    position: relative;
+    font-size: 6.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1em;
+  }
+
   h1 {
     margin: 0;
   }
@@ -1590,6 +1609,45 @@ h1.joinTeamCTA {
   }
   h1.joinTeamCTA {
     text-align: center;
+  }
+
+  #clientList {
+    display: none;
+    cursor: crosshair;
+  }
+  #clientList ul {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #000;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    -js-display: -webkit-box;
+    -js-display: -webkit-flex;
+    -js-display: -ms-flexbox;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #clientList ul li {
+    width: 23%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    -webkit-flex-shrink: 2;
+        -ms-flex-negative: 2;
+            flex-shrink: 2;
   }
 
   .projectTile {
@@ -1780,6 +1838,7 @@ footer .legal p.copyright a {
 
 #JoinTeam {
   text-align: center;
+  line-height: 1.1em;
 }
 
 /* ==========================================================================
