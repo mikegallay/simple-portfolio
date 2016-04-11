@@ -3,6 +3,22 @@ footer {
 	color: #46ccc5;
 	font-size: 0.8em;
 	padding: 0.2em 1em;
+	
+	.legal {
+		p {
+			&.copyright {
+				color: #ffffff;
+				font-family: 'Din-Regular', san-serif;
+				font-size: 0.75em;
+				text-align: right;
+				
+				a {
+					color: #46ccc5;
+					text-decoration: none;
+				}
+			}
+		}
+	}
 }
 
 #JoinTeam {

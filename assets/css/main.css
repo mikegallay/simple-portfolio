@@ -1767,6 +1767,16 @@ footer {
   font-size: 0.8em;
   padding: 0.2em 1em;
 }
+footer .legal p.copyright {
+  color: #ffffff;
+  font-family: 'Din-Regular', san-serif;
+  font-size: 0.75em;
+  text-align: right;
+}
+footer .legal p.copyright a {
+  color: #46ccc5;
+  text-decoration: none;
+}
 
 #JoinTeam {
   text-align: center;
