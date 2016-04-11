@@ -1267,7 +1267,7 @@ h1.joinTeamCTA {
 
 .projectTile {
   position: relative;
-  width: 99%;
+  width: 49%;
   max-height: 25em;
   height: auto;
   margin: 0.5%;
@@ -1337,6 +1337,7 @@ h1.joinTeamCTA {
 .projectTile a .prjDescription .prjDscrWrap p {
   margin-top: 0.3em;
   margin-bottom: 0;
+  display: none;
 }
 .projectTile a:hover picture {
   top: -15px;
@@ -1354,7 +1355,7 @@ h1.joinTeamCTA {
 
 .cultureTile {
   position: relative;
-  width: 99%;
+  width: 49%;
   max-height: 25em;
   margin: 0.5%;
   overflow: hidden;
@@ -1367,7 +1368,7 @@ h1.joinTeamCTA {
           transition: margin 300ms;
 }
 .cultureTile.stretchOut {
-  width: 48.9%;
+  width: 99%;
   -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
           transition: margin 300ms 300ms, width 300ms 300ms;
 }
@@ -1658,6 +1659,9 @@ h1.joinTeamCTA {
   .projectTile a .prjDescription .prjDscrWrap h2 {
     font-size: 2em;
   }
+  .projectTile a .prjDescription .prjDscrWrap p {
+    display: block;
+  }
 
   .cultureTile {
     width: 49%;
@@ -1779,7 +1783,7 @@ h1.joinTeamCTA {
     margin: 1% 4%;
   }
 
-  .isShowcase {
+  .isShowcaseFinal {
     -webkit-flex-basis: 32.3333%;
         -ms-flex-preferred-size: 32.3333%;
             flex-basis: 32.3333%;

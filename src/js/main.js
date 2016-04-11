@@ -39,15 +39,21 @@ $(function() {
 
 	function resize() {
 		var colW;
-		
+		var maxVideoHeight = 650;
 		
 		// Begin top video section
 		
 		//use video height to set the video size
 		videoHeight = lastWindowHeight;
+		if (videoHeight > maxVideoHeight) videoHeight = maxVideoHeight;
+		
+		var videoHolderHeight = videoHeight;
+		
+		$('.videoHeader').css('height',videoHolderHeight+'px');
+		
 		videoWidth = (videoHeight * aspectRatio);
 		
-		var screenAR = lastWindowWidth/ lastWindowHeight;
+		var screenAR = lastWindowWidth/ videoHeight;
 		
 		//reset all inline styles
 		$('.video-overlay').css('margin-top',0);
@@ -59,8 +65,15 @@ $(function() {
 			
 			videoWidth = lastWindowWidth;
 			videoHeight = (videoWidth * (1/aspectRatio));
+			
+			var videoDiff = (videoHeight - videoHolderHeight)/2;
+			
+			console.log(videoDiff)
 		
-			var mt = (lastWindowHeight-videoHeight)/2; //calculate the margin-top offset
+			var mt = (lastWindowHeight - videoHeight + videoDiff)/2; //calculate the margin-top offset
+			
+			
+			
 			$('.responsive-video').css('margin-top',mt+"px");
 			$('.video-overlay').css('margin-top',mt+"px"); //offset video overlay so content stays centered vertically
 			$('#welcomeVideo').css('height',lastWindowHeight+'px');
@@ -191,7 +204,7 @@ $(function() {
 		tt(downArrow,1,{y:"0", delay:0.75,ease:Bounce.easeOut,overwrite:false,onComplete:downArrowPulse});
 		
 	}
-	downArrowPulse();
+	// downArrowPulse();
 
 	var l = document.getElementById('mbLogo')
 	l.addEventListener('mouseover',function(){

@@ -1,6 +1,6 @@
 [
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_amsterdam",
+		"imgSrc": "assets/img/our_offices/office_amsterdam",
 		"city": "AMSTERDAM",
 		"timeDiff": "+2",
 		"address": "",
@@ -17,7 +17,7 @@
 		"clockImage": "clock_icons_amsterdam"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_chicago",
+		"imgSrc": "assets/img/our_offices/office_chicago",
 		"city": "CHICAGO",
 		"timeDiff": "-5",
 		"address": "",
@@ -34,7 +34,7 @@
 		"clockImage": "clock_icons_chicago"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_hongkong",
+		"imgSrc": "assets/img/our_offices/office_hongkong",
 		"city": "HONG KONG",
 		"timeDiff": "+8",
 		"address": "",
@@ -51,7 +51,7 @@
 		"clockImage": "clock_icons_hongkong"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_london",
+		"imgSrc": "assets/img/our_offices/office_london",
 		"city": "LONDON",
 		"timeDiff": "+1",
 		"address": "",
@@ -68,7 +68,7 @@
 		"clockImage": "clock_icons_london"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_newyork",
+		"imgSrc": "assets/img/our_offices/office_newyork",
 		"city": "NEW YORK",
 		"timeDiff": "-4",
 		"address": "",
@@ -85,7 +85,7 @@
 		"clockImage": "clock_icons_newyork"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_paris",
+		"imgSrc": "assets/img/our_offices/office_paris",
 		"city": "PARIS",
 		"timeDiff": "+2",
 		"address": "",
@@ -102,7 +102,7 @@
 		"clockImage": "clock_icons_paris"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_sanfransisco",
+		"imgSrc": "assets/img/our_offices/office_sanfransisco",
 		"city": "SAN FRANCISCO",
 		"timeDiff": "-7",
 		"address": "",
@@ -119,7 +119,7 @@
 		"clockImage": "clock_icons_sanfransisco"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_saupaulo",
+		"imgSrc": "assets/img/our_offices/office_saupaulo",
 		"city": "SAU PAULO",
 		"timeDiff": "-3",
 		"address": "",
@@ -136,7 +136,7 @@
 		"clockImage": "clock_icons_saopaulo"
 	},
 	{	
-		"imgSrc": "assets/img/our_offices/1x1_office_shanghai",
+		"imgSrc": "assets/img/our_offices/office_shanghai",
 		"city": "SHANGHAI",
 		"timeDiff": "+8",
 		"address": "",

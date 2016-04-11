@@ -51,7 +51,7 @@ h1 {
 
 .projectTile {
 	position: relative;
-	width: 99%;
+	width: 49%;//99%;
 	max-height: 25em;
 	height:	auto;
 	margin: 0.5%;
@@ -109,6 +109,7 @@ h1 {
 				p {
 					margin-top: 0.3em;
 					margin-bottom: 0;
+					display:none;
 				}
 			}	
 		}
@@ -137,7 +138,7 @@ h1 {
 
 .cultureTile {
 	position: relative;
-	width: 99%;
+	width: 49%;//99%;
 	max-height: 25em;
 	margin: 0.5%;
 	overflow: hidden;
@@ -149,7 +150,7 @@ h1 {
 	}
 	
 	&.stretchOut {
-		width: 48.9%;
+		width: 99%;//48.9%;
 		transition: margin 300ms 300ms, width 300ms 300ms;
 		.bio {
 			opacity: 1;
@@ -427,6 +428,9 @@ h1 {
 					h2 {				
 						font-size: 2em;
 					}
+					p{
+						display:block;
+					}
 				}	
 			}
 		}
@@ -593,7 +597,7 @@ h1 {
 	    margin: 1% 4%;
 	}
 	
-	.isShowcase {
+	.isShowcaseFinal {
 		flex-basis: 32.3333%;
 	}
 	
