@@ -61,29 +61,5 @@
 		"header": "Verizon",
 		"description": "Description goes here",
 		"altText": "This is alt text"
-	},
-	{	
-		"imgSrc": "assets/img/our_work/1x1_Aussie_SGS1",
-		"header": "Aussie",
-		"description": "Description goes here",
-		"altText": "This is alt text"
-	},	
-	{
-		"imgSrc": "assets/img/our_work/1x1_Mariott_MrGuaran-T",
-		"header": "Marriot",
-		"description": "Description goes here",
-		"altText": "This is alt text"
-	},
-	{
-		"imgSrc": "assets/img/our_work/1x1_Verizon_SocialImprint3",
-		"header": "Verizon",
-		"description": "Description goes here",
-		"altText": "This is alt text"
-	},
-	{
-		"imgSrc": "assets/img/our_work/1x1_United_BMB1",
-		"header": "United <br> Airlines",
-		"description": "Description goes here",
-		"altText": "This is alt text"
 	}
 ]

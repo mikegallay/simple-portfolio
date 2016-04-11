@@ -55,8 +55,6 @@ $(function() {
 		$('.responsive-video').css('margin-left',0);
 		$('#welcomeVideo').css('height','100%');
 		
-		console.log(screenAR + " : " + aspectRatio);
-		
 		if (screenAR > aspectRatio){ //if screen is wider than 16:9 use video width to set the video size
 			
 			videoWidth = lastWindowWidth;

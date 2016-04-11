@@ -584,14 +584,13 @@ h1 {
 	}
 	
 	nav {
-	    position: relative;
+	    position: absolute;
 	    top: 0;
 	    left: 0;
 	    margin-top: 1.5625em;
 	    width: 90%;
 	    z-index: 99999;
-	    margin-left: auto;
-	    margin-right: auto;
+	    margin: 1% 4%;
 	}
 	
 	.isShowcase {
