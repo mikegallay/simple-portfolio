@@ -1641,7 +1641,7 @@ $(function() {
 
 	function resize() {
 		var colW;
-		var maxVideoHeight = 650;
+		var maxVideoHeight = 700;
 		
 		// Begin top video section
 		
@@ -1669,10 +1669,8 @@ $(function() {
 			videoHeight = (videoWidth * (1/aspectRatio));
 			
 			var videoDiff = (videoHeight - videoHolderHeight)/2;
-			
-			console.log(videoDiff)
 		
-			var mt = (lastWindowHeight - videoHeight + videoDiff)/2; //calculate the margin-top offset
+			var mt = -videoDiff;//(lastWindowHeight - videoHeight)/2; //calculate the margin-top offset
 			
 			
 			
