@@ -85,11 +85,5 @@
 		"header": "United <br> Airlines",
 		"description": "Description goes here",
 		"altText": "This is alt text"
-	},
-	{
-		"imgSrc": "assets/img/our_work/1x1_Apophis",
-		"header": "Verizon",
-		"description": "Description goes here",
-		"altText": "This is alt text"
 	}
 ]
