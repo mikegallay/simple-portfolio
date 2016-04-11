@@ -58,25 +58,7 @@
 		"title" : "My Title",
 		"imgSrc" : "assets/img/our_culture/1x1_bio_brandon",
 		"info" : "This is some information"
-	},
-	{
-		"name" : "Chelsea",
-		"title": "",
-		"imgSrc": "assets/img/our_culture/1x1_chelsea",
-		"info": ""
-	},
-	{
-		"name" : "Jumping",
-		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/1x1_jumping",
-		"info": ""
-	},
-	{
-		"name" : "Chelsea 2",
-		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/1x1_chelsea1",
-		"info": ""
-	},
+	}
 	{
 		"name" : "Water Tower",
 		"title": "My Title",
