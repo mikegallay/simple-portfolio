@@ -20,24 +20,27 @@
 
 
 nav {
-	position: absolute;
+	background-color: '';
+	position: fixed;
 	top: 0;
 	left: 0;
 	margin-top: 1.5625em;
 	width: 100%;
 	z-index: 99999;
+	height: 4.25em;
+	transition: background-color 300ms, margin-top 300ms;
 }
 
 ul.navigation {
 	font-family: 'Din-Regular', san-serif;
-	height: 40px;
+	height: 2.5em;
 	padding: 0px;
 	font-size: 0.875em;
 	text-align: center;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-end;
-	align-items: center;
+	align-items: flex-end;
 	list-style: none;
 	width: 50%;
     float: right;

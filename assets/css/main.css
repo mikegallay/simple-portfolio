@@ -1004,17 +1004,21 @@ a:active {
 }
 
 nav {
-  position: absolute;
+  background-color: '';
+  position: fixed;
   top: 0;
   left: 0;
   margin-top: 1.5625em;
   width: 100%;
   z-index: 99999;
+  height: 4.25em;
+  -webkit-transition: background-color 300ms, margin-top 300ms;
+          transition: background-color 300ms, margin-top 300ms;
 }
 
 ul.navigation {
   font-family: 'Din-Regular', san-serif;
-  height: 40px;
+  height: 2.5em;
   padding: 0px;
   font-size: 0.875em;
   text-align: center;
@@ -1029,10 +1033,10 @@ ul.navigation {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   list-style: none;
   width: 50%;
   float: right;
@@ -1693,6 +1697,26 @@ h1.joinTeamCTA {
   }
 }
 @media screen and (min-width: 1024px) {
+  #OurWork {
+    min-height: 500px;
+    padding-top: 2.5em;
+  }
+
+  #OurPeople {
+    min-height: 500px;
+    padding-top: 2.5em;
+  }
+
+  #OurOffices {
+    min-height: 500px;
+    padding-top: 2.5em;
+  }
+
+  #JoinTeam {
+    min-height: 200px;
+    padding-top: 2.5em;
+  }
+
   h1 {
     margin: 0;
   }
@@ -1701,7 +1725,6 @@ h1.joinTeamCTA {
     font-size: 3.125em;
     font-weight: lighter;
     color: #58595b;
-    margin-top: 1em;
     letter-spacing: 0.04em;
     text-align: left;
   }
@@ -1757,6 +1780,10 @@ h1.joinTeamCTA {
   }
 }
 @media screen and (min-width: 1900px) {
+  .container {
+    max-width: 90%;
+  }
+
   h1 {
     margin: 0;
   }
@@ -1771,16 +1798,6 @@ h1.joinTeamCTA {
   }
   h1.joinTeamCTA {
     text-align: center;
-  }
-
-  nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 1.5625em;
-    width: 90%;
-    z-index: 99999;
-    margin: 1% 4%;
   }
 
   .isShowcaseFinal {
@@ -1857,13 +1874,6 @@ footer .legal p.copyright a {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media screen and (min-width: 1900px) {
-  .container {
-    max-width: 100%;
-    margin: 1.5625em auto;
-    padding: 0;
-  }
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

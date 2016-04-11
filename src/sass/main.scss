@@ -70,17 +70,6 @@ textarea {
    Media Queries
    ========================================================================== */
 
-@media screen and (min-width: 1900px) {
-	
-	.container {
-		max-width: 100%; 
-		margin: 1.5625em auto;
-		padding: 0;
-	}
-	
-}
-
-
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),

@@ -37,6 +37,7 @@ var concatScripts = [
 	'src/js/lib/DrawSVGPlugin.min.js',
 	'src/js/plugins/imagesLoaded.min.js',
 	'src/js/plugins/flexibility.js',
+	'src/js/plugins/force.js',
 	// 'src/js/plugins/slick.min.js',
 	'src/js/main.js'
 ];

@@ -21,22 +21,11 @@
 	<!-- MAIN CONTENT GOES HERE -->
 	<div class="container">
 		
-		<a name="work"></a>
 		<section id="OurWork">	
 			<h1 class="sectionHeading">OUR WORK</h1>
 			
 			<div class="row alignRight">
 				<a id="clientToggle" class="button" alt="">OUR CLIENTS <?php addIcon('menu_dropdown_arrow'); ?></a>
-			</div>
-			
-			<div id="clientList" class="row">
-				<ul>
-				<?php
-					$clientListData = HTMLfromTemplateAndJSON("content/templates/clientList-template.html", "content/data/clientList-data.json");
-					
-					echo $clientListData;
-				?>
-				</ul>
 			</div>
 			
 			<div class="portfolioContent">
@@ -49,8 +38,7 @@
 				<a id="addFolioContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
 		</section>
-	
-		<a name="people"></a>
+
 		<section id="OurPeople">
 			<h1 class="sectionHeading">OUR CULTURE</h1>
 			
@@ -69,7 +57,6 @@
 			</div>
 		</section>
 		
-		<a name="offices"></a>
 		<section id="OurOffices">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
 			
@@ -83,7 +70,6 @@
 			</div>
 		</section>
 
-		<a name="careers"></a>
 		<section id="JoinTeam">
 			<h1 class="sectionHeading joinTeamCTA">INTERESTED IN <br>
 				JOING THE TEAM?</h1>

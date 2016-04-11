@@ -1600,15 +1600,558 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 
 (function(){function e(){}function t(e,t){for(var n=e.length;n--;)if(e[n].listener===t)return n;return-1}function n(e){return function(){return this[e].apply(this,arguments)}}var i=e.prototype,r=this,o=r.EventEmitter;i.getListeners=function(e){var t,n,i=this._getEvents();if("object"==typeof e){t={};for(n in i)i.hasOwnProperty(n)&&e.test(n)&&(t[n]=i[n])}else t=i[e]||(i[e]=[]);return t},i.flattenListeners=function(e){var t,n=[];for(t=0;e.length>t;t+=1)n.push(e[t].listener);return n},i.getListenersAsObject=function(e){var t,n=this.getListeners(e);return n instanceof Array&&(t={},t[e]=n),t||n},i.addListener=function(e,n){var i,r=this.getListenersAsObject(e),o="object"==typeof n;for(i in r)r.hasOwnProperty(i)&&-1===t(r[i],n)&&r[i].push(o?n:{listener:n,once:!1});return this},i.on=n("addListener"),i.addOnceListener=function(e,t){return this.addListener(e,{listener:t,once:!0})},i.once=n("addOnceListener"),i.defineEvent=function(e){return this.getListeners(e),this},i.defineEvents=function(e){for(var t=0;e.length>t;t+=1)this.defineEvent(e[t]);return this},i.removeListener=function(e,n){var i,r,o=this.getListenersAsObject(e);for(r in o)o.hasOwnProperty(r)&&(i=t(o[r],n),-1!==i&&o[r].splice(i,1));return this},i.off=n("removeListener"),i.addListeners=function(e,t){return this.manipulateListeners(!1,e,t)},i.removeListeners=function(e,t){return this.manipulateListeners(!0,e,t)},i.manipulateListeners=function(e,t,n){var i,r,o=e?this.removeListener:this.addListener,s=e?this.removeListeners:this.addListeners;if("object"!=typeof t||t instanceof RegExp)for(i=n.length;i--;)o.call(this,t,n[i]);else for(i in t)t.hasOwnProperty(i)&&(r=t[i])&&("function"==typeof r?o.call(this,i,r):s.call(this,i,r));return this},i.removeEvent=function(e){var t,n=typeof e,i=this._getEvents();if("string"===n)delete i[e];else if("object"===n)for(t in i)i.hasOwnProperty(t)&&e.test(t)&&delete i[t];else delete this._events;return this},i.removeAllListeners=n("removeEvent"),i.emitEvent=function(e,t){var n,i,r,o,s=this.getListenersAsObject(e);for(r in s)if(s.hasOwnProperty(r))for(i=s[r].length;i--;)n=s[r][i],n.once===!0&&this.removeListener(e,n.listener),o=n.listener.apply(this,t||[]),o===this._getOnceReturnValue()&&this.removeListener(e,n.listener);return this},i.trigger=n("emitEvent"),i.emit=function(e){var t=Array.prototype.slice.call(arguments,1);return this.emitEvent(e,t)},i.setOnceReturnValue=function(e){return this._onceReturnValue=e,this},i._getOnceReturnValue=function(){return this.hasOwnProperty("_onceReturnValue")?this._onceReturnValue:!0},i._getEvents=function(){return this._events||(this._events={})},e.noConflict=function(){return r.EventEmitter=o,e},"function"==typeof define&&define.amd?define("eventEmitter/EventEmitter",[],function(){return e}):"object"==typeof module&&module.exports?module.exports=e:this.EventEmitter=e}).call(this),function(e){function t(t){var n=e.event;return n.target=n.target||n.srcElement||t,n}var n=document.documentElement,i=function(){};n.addEventListener?i=function(e,t,n){e.addEventListener(t,n,!1)}:n.attachEvent&&(i=function(e,n,i){e[n+i]=i.handleEvent?function(){var n=t(e);i.handleEvent.call(i,n)}:function(){var n=t(e);i.call(e,n)},e.attachEvent("on"+n,e[n+i])});var r=function(){};n.removeEventListener?r=function(e,t,n){e.removeEventListener(t,n,!1)}:n.detachEvent&&(r=function(e,t,n){e.detachEvent("on"+t,e[t+n]);try{delete e[t+n]}catch(i){e[t+n]=void 0}});var o={bind:i,unbind:r};"function"==typeof define&&define.amd?define("eventie/eventie",o):e.eventie=o}(this),function(e,t){"function"==typeof define&&define.amd?define(["eventEmitter/EventEmitter","eventie/eventie"],function(n,i){return t(e,n,i)}):"object"==typeof exports?module.exports=t(e,require("wolfy87-eventemitter"),require("eventie")):e.imagesLoaded=t(e,e.EventEmitter,e.eventie)}(window,function(e,t,n){function i(e,t){for(var n in t)e[n]=t[n];return e}function r(e){return"[object Array]"===d.call(e)}function o(e){var t=[];if(r(e))t=e;else if("number"==typeof e.length)for(var n=0,i=e.length;i>n;n++)t.push(e[n]);else t.push(e);return t}function s(e,t,n){if(!(this instanceof s))return new s(e,t);"string"==typeof e&&(e=document.querySelectorAll(e)),this.elements=o(e),this.options=i({},this.options),"function"==typeof t?n=t:i(this.options,t),n&&this.on("always",n),this.getImages(),a&&(this.jqDeferred=new a.Deferred);var r=this;setTimeout(function(){r.check()})}function f(e){this.img=e}function c(e){this.src=e,v[e]=this}var a=e.jQuery,u=e.console,h=u!==void 0,d=Object.prototype.toString;s.prototype=new t,s.prototype.options={},s.prototype.getImages=function(){this.images=[];for(var e=0,t=this.elements.length;t>e;e++){var n=this.elements[e];"IMG"===n.nodeName&&this.addImage(n);var i=n.nodeType;if(i&&(1===i||9===i||11===i))for(var r=n.querySelectorAll("img"),o=0,s=r.length;s>o;o++){var f=r[o];this.addImage(f)}}},s.prototype.addImage=function(e){var t=new f(e);this.images.push(t)},s.prototype.check=function(){function e(e,r){return t.options.debug&&h&&u.log("confirm",e,r),t.progress(e),n++,n===i&&t.complete(),!0}var t=this,n=0,i=this.images.length;if(this.hasAnyBroken=!1,!i)return this.complete(),void 0;for(var r=0;i>r;r++){var o=this.images[r];o.on("confirm",e),o.check()}},s.prototype.progress=function(e){this.hasAnyBroken=this.hasAnyBroken||!e.isLoaded;var t=this;setTimeout(function(){t.emit("progress",t,e),t.jqDeferred&&t.jqDeferred.notify&&t.jqDeferred.notify(t,e)})},s.prototype.complete=function(){var e=this.hasAnyBroken?"fail":"done";this.isComplete=!0;var t=this;setTimeout(function(){if(t.emit(e,t),t.emit("always",t),t.jqDeferred){var n=t.hasAnyBroken?"reject":"resolve";t.jqDeferred[n](t)}})},a&&(a.fn.imagesLoaded=function(e,t){var n=new s(this,e,t);return n.jqDeferred.promise(a(this))}),f.prototype=new t,f.prototype.check=function(){var e=v[this.img.src]||new c(this.img.src);if(e.isConfirmed)return this.confirm(e.isLoaded,"cached was confirmed"),void 0;if(this.img.complete&&void 0!==this.img.naturalWidth)return this.confirm(0!==this.img.naturalWidth,"naturalWidth"),void 0;var t=this;e.on("confirm",function(e,n){return t.confirm(e.isLoaded,n),!0}),e.check()},f.prototype.confirm=function(e,t){this.isLoaded=e,this.emit("confirm",this,t)};var v={};return c.prototype=new t,c.prototype.check=function(){if(!this.isChecked){var e=new Image;n.bind(e,"load",this),n.bind(e,"error",this),e.src=this.src,this.isChecked=!0}},c.prototype.handleEvent=function(e){var t="on"+e.type;this[t]&&this[t](e)},c.prototype.onload=function(e){this.confirm(!0,"onload"),this.unbindProxyEvents(e)},c.prototype.onerror=function(e){this.confirm(!1,"onerror"),this.unbindProxyEvents(e)},c.prototype.confirm=function(e,t){this.isConfirmed=!0,this.isLoaded=e,this.emit("confirm",this,t)},c.prototype.unbindProxyEvents=function(e){n.unbind(e.target,"load",this),n.unbind(e.target,"error",this)},s});
 !function(){window.flexibility={},Array.prototype.forEach||(Array.prototype.forEach=function(t){if(void 0===this||null===this)throw new TypeError(this+"is not an object");if(!(t instanceof Function))throw new TypeError(t+" is not a function");for(var e=Object(this),i=arguments[1],n=e instanceof String?e.split(""):e,r=Math.max(Math.min(n.length,9007199254740991),0)||0,o=-1;++o<r;)o in n&&t.call(i,n[o],o,e)}),function(t,e){"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?module.exports=e():t.computeLayout=e()}(flexibility,function(){var t=function(){function t(e){if((!e.layout||e.isDirty)&&(e.layout={width:void 0,height:void 0,top:0,left:0,right:0,bottom:0}),e.style||(e.style={}),e.children||(e.children=[]),e.style.measure&&e.children&&e.children.length)throw new Error("Using custom measure function is supported only for leaf nodes.");return e.children.forEach(t),e}function e(t){return void 0===t}function i(t){return t===q||t===G}function n(t){return t===U||t===Z}function r(t,e){if(void 0!==t.style.marginStart&&i(e))return t.style.marginStart;var n=null;switch(e){case"row":n=t.style.marginLeft;break;case"row-reverse":n=t.style.marginRight;break;case"column":n=t.style.marginTop;break;case"column-reverse":n=t.style.marginBottom}return void 0!==n?n:void 0!==t.style.margin?t.style.margin:0}function o(t,e){if(void 0!==t.style.marginEnd&&i(e))return t.style.marginEnd;var n=null;switch(e){case"row":n=t.style.marginRight;break;case"row-reverse":n=t.style.marginLeft;break;case"column":n=t.style.marginBottom;break;case"column-reverse":n=t.style.marginTop}return null!=n?n:void 0!==t.style.margin?t.style.margin:0}function l(t,e){if(void 0!==t.style.paddingStart&&t.style.paddingStart>=0&&i(e))return t.style.paddingStart;var n=null;switch(e){case"row":n=t.style.paddingLeft;break;case"row-reverse":n=t.style.paddingRight;break;case"column":n=t.style.paddingTop;break;case"column-reverse":n=t.style.paddingBottom}return null!=n&&n>=0?n:void 0!==t.style.padding&&t.style.padding>=0?t.style.padding:0}function a(t,e){if(void 0!==t.style.paddingEnd&&t.style.paddingEnd>=0&&i(e))return t.style.paddingEnd;var n=null;switch(e){case"row":n=t.style.paddingRight;break;case"row-reverse":n=t.style.paddingLeft;break;case"column":n=t.style.paddingBottom;break;case"column-reverse":n=t.style.paddingTop}return null!=n&&n>=0?n:void 0!==t.style.padding&&t.style.padding>=0?t.style.padding:0}function d(t,e){if(void 0!==t.style.borderStartWidth&&t.style.borderStartWidth>=0&&i(e))return t.style.borderStartWidth;var n=null;switch(e){case"row":n=t.style.borderLeftWidth;break;case"row-reverse":n=t.style.borderRightWidth;break;case"column":n=t.style.borderTopWidth;break;case"column-reverse":n=t.style.borderBottomWidth}return null!=n&&n>=0?n:void 0!==t.style.borderWidth&&t.style.borderWidth>=0?t.style.borderWidth:0}function s(t,e){if(void 0!==t.style.borderEndWidth&&t.style.borderEndWidth>=0&&i(e))return t.style.borderEndWidth;var n=null;switch(e){case"row":n=t.style.borderRightWidth;break;case"row-reverse":n=t.style.borderLeftWidth;break;case"column":n=t.style.borderBottomWidth;break;case"column-reverse":n=t.style.borderTopWidth}return null!=n&&n>=0?n:void 0!==t.style.borderWidth&&t.style.borderWidth>=0?t.style.borderWidth:0}function u(t,e){return l(t,e)+d(t,e)}function y(t,e){return a(t,e)+s(t,e)}function c(t,e){return d(t,e)+s(t,e)}function f(t,e){return r(t,e)+o(t,e)}function h(t,e){return u(t,e)+y(t,e)}function m(t){return t.style.justifyContent?t.style.justifyContent:"flex-start"}function v(t){return t.style.alignContent?t.style.alignContent:"flex-start"}function p(t,e){return e.style.alignSelf?e.style.alignSelf:t.style.alignItems?t.style.alignItems:"stretch"}function x(t,e){if(e===N){if(t===q)return G;if(t===G)return q}return t}function g(t,e){var i;return i=t.style.direction?t.style.direction:M,i===M&&(i=void 0===e?A:e),i}function b(t){return t.style.flexDirection?t.style.flexDirection:U}function w(t,e){return n(t)?x(q,e):U}function W(t){return t.style.position?t.style.position:"relative"}function L(t){return W(t)===tt&&t.style.flex>0}function E(t){return"wrap"===t.style.flexWrap}function S(t,e){return t.layout[ot[e]]+f(t,e)}function k(t,e){return void 0!==t.style[ot[e]]&&t.style[ot[e]]>=0}function C(t,e){return void 0!==t.style[e]}function T(t){return void 0!==t.style.measure}function $(t,e){return void 0!==t.style[e]?t.style[e]:0}function H(t,e,i){var n={row:t.style.minWidth,"row-reverse":t.style.minWidth,column:t.style.minHeight,"column-reverse":t.style.minHeight}[e],r={row:t.style.maxWidth,"row-reverse":t.style.maxWidth,column:t.style.maxHeight,"column-reverse":t.style.maxHeight}[e],o=i;return void 0!==r&&r>=0&&o>r&&(o=r),void 0!==n&&n>=0&&n>o&&(o=n),o}function z(t,e){return t>e?t:e}function B(t,e){void 0===t.layout[ot[e]]&&k(t,e)&&(t.layout[ot[e]]=z(H(t,e,t.style[ot[e]]),h(t,e)))}function D(t,e,i){e.layout[nt[i]]=t.layout[ot[i]]-e.layout[ot[i]]-e.layout[rt[i]]}function I(t,e){return void 0!==t.style[it[e]]?$(t,it[e]):-$(t,nt[e])}function R(t,n,l,a){var s=g(t,a),R=x(b(t),s),M=w(R,s),A=x(q,s);B(t,R),B(t,M),t.layout.direction=s,t.layout[it[R]]+=r(t,R)+I(t,R),t.layout[nt[R]]+=o(t,R)+I(t,R),t.layout[it[M]]+=r(t,M)+I(t,M),t.layout[nt[M]]+=o(t,M)+I(t,M);var N=t.children.length,lt=h(t,A),at=h(t,U);if(T(t)){var dt=!e(t.layout[ot[A]]),st=F;st=k(t,A)?t.style.width:dt?t.layout[ot[A]]:n-f(t,A),st-=lt;var ut=F;ut=k(t,U)?t.style.height:e(t.layout[ot[U]])?l-f(t,A):t.layout[ot[U]],ut-=h(t,U);var yt=!k(t,A)&&!dt,ct=!k(t,U)&&e(t.layout[ot[U]]);if(yt||ct){var ft=t.style.measure(st,ut);yt&&(t.layout.width=ft.width+lt),ct&&(t.layout.height=ft.height+at)}if(0===N)return}var ht,mt,vt,pt,xt=E(t),gt=m(t),bt=u(t,R),wt=u(t,M),Wt=h(t,R),Lt=h(t,M),Et=!e(t.layout[ot[R]]),St=!e(t.layout[ot[M]]),kt=i(R),Ct=null,Tt=null,$t=F;Et&&($t=t.layout[ot[R]]-Wt);for(var Ht=0,zt=0,Bt=0,Dt=0,It=0,Rt=0;N>zt;){var jt,Ft,Mt=0,At=0,Nt=0,qt=0,Gt=Et&&gt===O||!Et&&gt!==_,Ut=Gt?N:Ht,Zt=!0,Ot=N,_t=null,Jt=null,Kt=bt,Pt=0;for(ht=Ht;N>ht;++ht){vt=t.children[ht],vt.lineIndex=Rt,vt.nextAbsoluteChild=null,vt.nextFlexChild=null;var Qt=p(t,vt);if(Qt===Y&&W(vt)===tt&&St&&!k(vt,M))vt.layout[ot[M]]=z(H(vt,M,t.layout[ot[M]]-Lt-f(vt,M)),h(vt,M));else if(W(vt)===et)for(null===Ct&&(Ct=vt),null!==Tt&&(Tt.nextAbsoluteChild=vt),Tt=vt,mt=0;2>mt;mt++)pt=0!==mt?q:U,!e(t.layout[ot[pt]])&&!k(vt,pt)&&C(vt,it[pt])&&C(vt,nt[pt])&&(vt.layout[ot[pt]]=z(H(vt,pt,t.layout[ot[pt]]-h(t,pt)-f(vt,pt)-$(vt,it[pt])-$(vt,nt[pt])),h(vt,pt)));var Vt=0;if(Et&&L(vt)?(At++,Nt+=vt.style.flex,null===_t&&(_t=vt),null!==Jt&&(Jt.nextFlexChild=vt),Jt=vt,Vt=h(vt,R)+f(vt,R)):(jt=F,Ft=F,kt?Ft=k(t,U)?t.layout[ot[U]]-at:l-f(t,U)-at:jt=k(t,A)?t.layout[ot[A]]-lt:n-f(t,A)-lt,0===Bt&&j(vt,jt,Ft,s),W(vt)===tt&&(qt++,Vt=S(vt,R))),xt&&Et&&Mt+Vt>$t&&ht!==Ht){qt--,Bt=1;break}Gt&&(W(vt)!==tt||L(vt))&&(Gt=!1,Ut=ht),Zt&&(W(vt)!==tt||Qt!==Y&&Qt!==Q||e(vt.layout[ot[M]]))&&(Zt=!1,Ot=ht),Gt&&(vt.layout[rt[R]]+=Kt,Et&&D(t,vt,R),Kt+=S(vt,R),Pt=z(Pt,H(vt,M,S(vt,M)))),Zt&&(vt.layout[rt[M]]+=Dt+wt,St&&D(t,vt,M)),Bt=0,Mt+=Vt,zt=ht+1}var Xt=0,Yt=0,te=0;if(te=Et?$t-Mt:z(Mt,0)-Mt,0!==At){var ee,ie,ne=te/Nt;for(Jt=_t;null!==Jt;)ee=ne*Jt.style.flex+h(Jt,R),ie=H(Jt,R,ee),ee!==ie&&(te-=ie,Nt-=Jt.style.flex),Jt=Jt.nextFlexChild;for(ne=te/Nt,0>ne&&(ne=0),Jt=_t;null!==Jt;)Jt.layout[ot[R]]=H(Jt,R,ne*Jt.style.flex+h(Jt,R)),jt=F,k(t,A)?jt=t.layout[ot[A]]-lt:kt||(jt=n-f(t,A)-lt),Ft=F,k(t,U)?Ft=t.layout[ot[U]]-at:kt&&(Ft=l-f(t,U)-at),j(Jt,jt,Ft,s),vt=Jt,Jt=Jt.nextFlexChild,vt.nextFlexChild=null}else gt!==O&&(gt===_?Xt=te/2:gt===J?Xt=te:gt===K?(te=z(te,0),Yt=At+qt-1!==0?te/(At+qt-1):0):gt===P&&(Yt=te/(At+qt),Xt=Yt/2));for(Kt+=Xt,ht=Ut;zt>ht;++ht)vt=t.children[ht],W(vt)===et&&C(vt,it[R])?vt.layout[rt[R]]=$(vt,it[R])+d(t,R)+r(vt,R):(vt.layout[rt[R]]+=Kt,Et&&D(t,vt,R),W(vt)===tt&&(Kt+=Yt+S(vt,R),Pt=z(Pt,H(vt,M,S(vt,M)))));var re=t.layout[ot[M]];for(St||(re=z(H(t,M,Pt+Lt),Lt)),ht=Ot;zt>ht;++ht)if(vt=t.children[ht],W(vt)===et&&C(vt,it[M]))vt.layout[rt[M]]=$(vt,it[M])+d(t,M)+r(vt,M);else{var oe=wt;if(W(vt)===tt){var Qt=p(t,vt);if(Qt===Y)e(vt.layout[ot[M]])&&(vt.layout[ot[M]]=z(H(vt,M,re-Lt-f(vt,M)),h(vt,M)));else if(Qt!==Q){var le=re-Lt-S(vt,M);oe+=Qt===V?le/2:le}}vt.layout[rt[M]]+=Dt+oe,St&&D(t,vt,M)}Dt+=Pt,It=z(It,Kt),Rt+=1,Ht=zt}if(Rt>1&&St){var ae=t.layout[ot[M]]-Lt,de=ae-Dt,se=0,ue=wt,ye=v(t);ye===X?ue+=de:ye===V?ue+=de/2:ye===Y&&ae>Dt&&(se=de/Rt);var ce=0;for(ht=0;Rt>ht;++ht){var fe=ce,he=0;for(mt=fe;N>mt;++mt)if(vt=t.children[mt],W(vt)===tt){if(vt.lineIndex!==ht)break;e(vt.layout[ot[M]])||(he=z(he,vt.layout[ot[M]]+f(vt,M)))}for(ce=mt,he+=se,mt=fe;ce>mt;++mt)if(vt=t.children[mt],W(vt)===tt){var me=p(t,vt);if(me===Q)vt.layout[rt[M]]=ue+r(vt,M);else if(me===X)vt.layout[rt[M]]=ue+he-o(vt,M)-vt.layout[ot[M]];else if(me===V){var ve=vt.layout[ot[M]];vt.layout[rt[M]]=ue+(he-ve)/2}else me===Y&&(vt.layout[rt[M]]=ue+r(vt,M))}ue+=he}}var pe=!1,xe=!1;if(Et||(t.layout[ot[R]]=z(H(t,R,It+y(t,R)),Wt),(R===G||R===Z)&&(pe=!0)),St||(t.layout[ot[M]]=z(H(t,M,Dt+Lt),Lt),(M===G||M===Z)&&(xe=!0)),pe||xe)for(ht=0;N>ht;++ht)vt=t.children[ht],pe&&D(t,vt,R),xe&&D(t,vt,M);for(Tt=Ct;null!==Tt;){for(mt=0;2>mt;mt++)pt=0!==mt?q:U,!e(t.layout[ot[pt]])&&!k(Tt,pt)&&C(Tt,it[pt])&&C(Tt,nt[pt])&&(Tt.layout[ot[pt]]=z(H(Tt,pt,t.layout[ot[pt]]-c(t,pt)-f(Tt,pt)-$(Tt,it[pt])-$(Tt,nt[pt])),h(Tt,pt))),C(Tt,nt[pt])&&!C(Tt,it[pt])&&(Tt.layout[it[pt]]=t.layout[ot[pt]]-Tt.layout[ot[pt]]-$(Tt,nt[pt]));vt=Tt,Tt=Tt.nextAbsoluteChild,vt.nextAbsoluteChild=null}}function j(t,e,i,n){t.shouldUpdate=!0;var r=t.style.direction||A,o=!t.isDirty&&t.lastLayout&&t.lastLayout.requestedHeight===t.layout.height&&t.lastLayout.requestedWidth===t.layout.width&&t.lastLayout.parentMaxWidth===e&&t.lastLayout.parentMaxHeight===i&&t.lastLayout.direction===r;o?(t.layout.width=t.lastLayout.width,t.layout.height=t.lastLayout.height,t.layout.top=t.lastLayout.top,t.layout.left=t.lastLayout.left):(t.lastLayout||(t.lastLayout={}),t.lastLayout.requestedWidth=t.layout.width,t.lastLayout.requestedHeight=t.layout.height,t.lastLayout.parentMaxWidth=e,t.lastLayout.parentMaxHeight=i,t.lastLayout.direction=r,t.children.forEach(function(t){t.layout.width=void 0,t.layout.height=void 0,t.layout.top=0,t.layout.left=0}),R(t,e,i,n),t.lastLayout.width=t.layout.width,t.lastLayout.height=t.layout.height,t.lastLayout.top=t.layout.top,t.lastLayout.left=t.layout.left)}var F,M="inherit",A="ltr",N="rtl",q="row",G="row-reverse",U="column",Z="column-reverse",O="flex-start",_="center",J="flex-end",K="space-between",P="space-around",Q="flex-start",V="center",X="flex-end",Y="stretch",tt="relative",et="absolute",it={row:"left","row-reverse":"right",column:"top","column-reverse":"bottom"},nt={row:"right","row-reverse":"left",column:"bottom","column-reverse":"top"},rt={row:"left","row-reverse":"right",column:"top","column-reverse":"bottom"},ot={row:"width","row-reverse":"width",column:"height","column-reverse":"height"};return{layoutNodeImpl:R,computeLayout:j,fillNodes:t}}();return"object"==typeof exports&&(module.exports=t),function(e){t.fillNodes(e),t.computeLayout(e)}}),!window.addEventListener&&window.attachEvent&&function(){Window.prototype.addEventListener=HTMLDocument.prototype.addEventListener=Element.prototype.addEventListener=function(t,e){this.attachEvent("on"+t,e)},Window.prototype.removeEventListener=HTMLDocument.prototype.removeEventListener=Element.prototype.removeEventListener=function(t,e){this.detachEvent("on"+t,e)}}(),flexibility.detect=function(){var t=document.createElement("p");try{return t.style.display="flex","flex"===t.style.display}catch(e){return!1}},!flexibility.detect()&&document.attachEvent&&document.documentElement.currentStyle&&document.attachEvent("onreadystatechange",function(){flexibility.onresize({target:document.documentElement})}),flexibility.init=function(t){var e=t.onlayoutcomplete;return e||(e=t.onlayoutcomplete={node:t,style:{},children:[]}),e.style.display=t.currentStyle["-js-display"]||t.currentStyle.display,e};var t,e=1e3,i=15,n=document.documentElement,r=0,o=0;flexibility.onresize=function(l){if(n.clientWidth!==r||n.clientHeight!==o){r=n.clientWidth,o=n.clientHeight,clearTimeout(t),window.removeEventListener("resize",flexibility.onresize);var a=l.target&&1===l.target.nodeType?l.target:document.documentElement;flexibility.walk(a),t=setTimeout(function(){window.addEventListener("resize",flexibility.onresize)},e/i)}};var l={alignContent:{initial:"stretch",valid:/^(flex-start|flex-end|center|space-between|space-around|stretch)/},alignItems:{initial:"stretch",valid:/^(flex-start|flex-end|center|baseline|stretch)$/},boxSizing:{initial:"content-box",valid:/^(border-box|content-box)$/},flexDirection:{initial:"row",valid:/^(row|row-reverse|column|column-reverse)$/},flexWrap:{initial:"nowrap",valid:/^(nowrap|wrap|wrap-reverse)$/},justifyContent:{initial:"flex-start",valid:/^(flex-start|flex-end|center|space-between|space-around)$/}};flexibility.updateFlexContainerCache=function(t){var e=t.style,i=t.node.currentStyle,n=t.node.style,r={};(i["flex-flow"]||n["flex-flow"]||"").replace(/^(row|row-reverse|column|column-reverse)\s+(nowrap|wrap|wrap-reverse)$/i,function(t,e,i){r.flexDirection=e,r.flexWrap=i});for(var o in l){var a=o.replace(/[A-Z]/g,"-$&").toLowerCase(),d=l[o],s=i[a]||n[a];e[o]=d.valid.test(s)?s:r[o]||d.initial}};var a={alignSelf:{initial:"auto",valid:/^(auto|flex-start|flex-end|center|baseline|stretch)$/},boxSizing:{initial:"content-box",valid:/^(border-box|content-box)$/},flexBasis:{initial:"auto",valid:/^((?:[-+]?0|[-+]?[0-9]*\.?[0-9]+(?:%|ch|cm|em|ex|in|mm|pc|pt|px|rem|vh|vmax|vmin|vw))|auto|fill|max-content|min-content|fit-content|content)$/},flexGrow:{initial:0,valid:/^\+?(0|[1-9][0-9]*)$/},flexShrink:{initial:0,valid:/^\+?(0|[1-9][0-9]*)$/},order:{initial:0,valid:/^([-+]?[0-9]+)$/}};flexibility.updateFlexItemCache=function(t){var e=t.style,i=t.node.currentStyle,n=t.node.style,r={};(i.flex||n.flex||"").replace(/^\+?(0|[1-9][0-9]*)/,function(t){r.flexGrow=t});for(var o in a){var l=o.replace(/[A-Z]/g,"-$&").toLowerCase(),d=a[o],s=i[l]||n[l];e[o]=d.valid.test(s)?s:r[o]||d.initial,"number"==typeof d.initial&&(e[o]=parseFloat(e[o]))}};var d="border:0 solid;clip:rect(0 0 0 0);display:inline-block;font:0/0 serif;margin:0;max-height:none;max-width:none;min-height:0;min-width:0;overflow:hidden;padding:0;position:absolute;width:1em;",s={medium:4,none:0,thick:6,thin:2},u={borderBottomWidth:0,borderLeftWidth:0,borderRightWidth:0,borderTopWidth:0,height:0,paddingBottom:0,paddingLeft:0,paddingRight:0,paddingTop:0,marginBottom:0,marginLeft:0,marginRight:0,marginTop:0,maxHeight:0,maxWidth:0,minHeight:0,minWidth:0,width:0},y=/^([-+]?0|[-+]?[0-9]*\.?[0-9]+)/,c=100;flexibility.updateLengthCache=function(t){var e,i,n,r=t.node,o=t.style,l=r.parentNode,a=document.createElement("_"),f=a.runtimeStyle,h=r.currentStyle;f.cssText=d+"font-size:"+h.fontSize,l.insertBefore(a,r.nextSibling),o.fontSize=a.offsetWidth,f.fontSize=o.fontSize+"px";for(var m in u){var v=h[m];y.test(v)||"auto"===v&&!/(width|height)/i.test(m)?/%$/.test(v)?(/^(bottom|height|top)$/.test(m)?(i||(i=l.offsetHeight),n=i):(e||(e=l.offsetWidth),n=e),o[m]=parseFloat(v)*n/c):(f.width=v,o[m]=a.offsetWidth):/^border/.test(m)&&v in s?o[m]=s[v]:delete o[m]}l.removeChild(a),"none"===h.borderTopStyle&&(o.borderTopWidth=0),"none"===h.borderRightStyle&&(o.borderRightWidth=0),"none"===h.borderBottomStyle&&(o.borderBottomWidth=0),"none"===h.borderLeftStyle&&(o.borderLeftWidth=0),o.width||o.minWidth||(/flex/.test(o.display)?o.width=r.offsetWidth:o.minWidth=r.offsetWidth),o.height||o.minHeight||/flex/.test(o.display)||(o.minHeight=r.offsetHeight)},flexibility.walk=function(t){var e=flexibility.init(t),i=e.style,n=i.display;if("none"===n)return{};var r=n.match(/^(inline)?flex$/);if(r&&(flexibility.updateFlexContainerCache(e),t.runtimeStyle.cssText="display:"+(r[1]?"inline-block":"block"),e.children=[]),Array.prototype.forEach.call(t.childNodes,function(t,n){if(1===t.nodeType){var o=flexibility.walk(t),l=o.style;o.index=n,r&&(flexibility.updateFlexItemCache(o),"auto"===l.alignSelf&&(l.alignSelf=i.alignItems),l.flex=l.flexGrow,t.runtimeStyle.cssText="display:inline-block",e.children.push(o))}}),r){e.children.forEach(function(t){flexibility.updateLengthCache(t)}),e.children.sort(function(t,e){return t.style.order-e.style.order||t.index-e.index}),/-reverse$/.test(i.flexDirection)&&(e.children.reverse(),i.flexDirection=i.flexDirection.replace(/-reverse$/,""),"flex-start"===i.justifyContent?i.justifyContent="flex-end":"flex-end"===i.justifyContent&&(i.justifyContent="flex-start")),flexibility.updateLengthCache(e),delete e.lastLayout,delete e.layout;var o=i.borderTopWidth,l=i.borderBottomWidth;i.borderTopWidth=0,i.borderBottomWidth=0,i.borderLeftWidth=0,"column"===i.flexDirection&&(i.width-=i.borderRightWidth),flexibility.computeLayout(e),t.runtimeStyle.cssText="box-sizing:border-box;display:block;position:relative;width:"+(e.layout.width+i.borderRightWidth)+"px;height:"+(e.layout.height+o+l)+"px";var a=[],d=1,s="column"===i.flexDirection?"width":"height";e.children.forEach(function(t){a[t.lineIndex]=Math.max(a[t.lineIndex]||0,t.layout[s]),d=Math.max(d,t.lineIndex+1)}),e.children.forEach(function(t){var e=t.layout;"stretch"===t.style.alignSelf&&(e[s]=a[t.lineIndex]),t.node.runtimeStyle.cssText="box-sizing:border-box;display:block;position:absolute;margin:0;width:"+e.width+"px;height:"+e.height+"px;top:"+e.top+"px;left:"+e.left+"px"})}return e}}();
-$(function() {
+/*
+    The MIT License (MIT)
+
+    Copyright (c) 2015-2016 Rene Tanczos <gravmatt@gmail.com>
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+*/
+
+/*! Copyright (c) 2015-2016 Rene Tanczos <gravmatt@gmail.com> - The MIT License (MIT) */
+(function(window, document, undefined) {
+var force = function() {
+    'use strict';
+
+    var scrollCache = [],
+        isAnimating = false,
+        animationCache = [],
+        isScrolling = false,
+        currentJumpLoop,
+        transitionTimeout,
+        hashLinkElements,
+        jsEasing = {
+        	swing: function (t, b, c, d) {
+                // default
+        		return this.easeOutQuad(t, b, c, d);
+        	},
+        	easeInQuad: function (t, b, c, d) {
+        		return c*(t/=d)*t + b;
+        	},
+        	easeOutQuad: function (t, b, c, d) {
+        		return -c *(t/=d)*(t-2) + b;
+        	},
+        	easeInOutQuad: function (t, b, c, d) {
+        		if ((t/=d/2) < 1) return c/2*t*t + b;
+        		return -c/2 * ((--t)*(t-2) - 1) + b;
+        	},
+        	easeInCubic: function (t, b, c, d) {
+        		return c*(t/=d)*t*t + b;
+        	},
+        	easeOutCubic: function (t, b, c, d) {
+        		return c*((t=t/d-1)*t*t + 1) + b;
+        	},
+        	easeInOutCubic: function (t, b, c, d) {
+        		if ((t/=d/2) < 1) return c/2*t*t*t + b;
+        		return c/2*((t-=2)*t*t + 2) + b;
+        	},
+        	easeInQuart: function (t, b, c, d) {
+        		return c*(t/=d)*t*t*t + b;
+        	},
+        	easeOutQuart: function (t, b, c, d) {
+        		return -c * ((t=t/d-1)*t*t*t - 1) + b;
+        	},
+        	easeInOutQuart: function (t, b, c, d) {
+        		if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
+        		return -c/2 * ((t-=2)*t*t*t - 2) + b;
+        	},
+        	easeInQuint: function (t, b, c, d) {
+        		return c*(t/=d)*t*t*t*t + b;
+        	},
+        	easeOutQuint: function (t, b, c, d) {
+        		return c*((t=t/d-1)*t*t*t*t + 1) + b;
+        	},
+        	easeInOutQuint: function (t, b, c, d) {
+        		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+        		return c/2*((t-=2)*t*t*t*t + 2) + b;
+        	},
+        	easeInSine: function (t, b, c, d) {
+        		return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+        	},
+        	easeOutSine: function (t, b, c, d) {
+        		return c * Math.sin(t/d * (Math.PI/2)) + b;
+        	},
+        	easeInOutSine: function (t, b, c, d) {
+        		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+        	},
+        	easeInExpo: function (t, b, c, d) {
+        		return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+        	},
+        	easeOutExpo: function (t, b, c, d) {
+        		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+        	},
+        	easeInOutExpo: function (t, b, c, d) {
+        		if (t==0) return b;
+        		if (t==d) return b+c;
+        		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+        		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+        	},
+        	easeInCirc: function (t, b, c, d) {
+        		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+        	},
+        	easeOutCirc: function (t, b, c, d) {
+        		return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
+        	},
+        	easeInOutCirc: function (t, b, c, d) {
+        		if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+        		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
+        	},
+        	easeInElastic: function (t, b, c, d) {
+        		var s=1.70158;var p=0;var a=c;
+        		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+        		if (a < Math.abs(c)) { a=c; var s=p/4; }
+        		else var s = p/(2*Math.PI) * Math.asin (c/a);
+        		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+        	},
+        	easeOutElastic: function (t, b, c, d) {
+        		var s=1.70158;var p=0;var a=c;
+        		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+        		if (a < Math.abs(c)) { a=c; var s=p/4; }
+        		else var s = p/(2*Math.PI) * Math.asin (c/a);
+        		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+        	},
+        	easeInOutElastic: function (t, b, c, d) {
+        		var s=1.70158;var p=0;var a=c;
+        		if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
+        		if (a < Math.abs(c)) { a=c; var s=p/4; }
+        		else var s = p/(2*Math.PI) * Math.asin (c/a);
+        		if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+        		return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
+        	},
+        	easeInBack: function (t, b, c, d, s) {
+        		if (s == undefined) s = 1.70158;
+        		return c*(t/=d)*t*((s+1)*t - s) + b;
+        	},
+        	easeOutBack: function (t, b, c, d, s) {
+        		if (s == undefined) s = 1.70158;
+        		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+        	},
+        	easeInOutBack: function (t, b, c, d, s) {
+        		if (s == undefined) s = 1.70158;
+        		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+        		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+        	},
+        	easeInBounce: function (t, b, c, d) {
+        		return c - this.easeOutBounce (d-t, 0, c, d) + b;
+        	},
+        	easeOutBounce: function (t, b, c, d) {
+        		if ((t/=d) < (1/2.75)) {
+        			return c*(7.5625*t*t) + b;
+        		} else if (t < (2/2.75)) {
+        			return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+        		} else if (t < (2.5/2.75)) {
+        			return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+        		} else {
+        			return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+        		}
+        	},
+        	easeInOutBounce: function (t, b, c, d) {
+        		if (t < d/2) return this.easeInBounce (t*2, 0, c, d) * .5 + b;
+        		return this.easeOutBounce (t*2-d, 0, c, d) * .5 + c*.5 + b;
+        	}
+        },
+
+        cssEasing = {
+        	swing: function () {
+            // default
+        		return this.easeOutQuad();
+        	},
+        	easeInQuad: function () {
+        		return '0.55, 0.085, 0.68, 0.53';
+        	},
+        	easeOutQuad: function () {
+        		return '0.25, 0.46, 0.45, 0.94';
+        	},
+        	easeInOutQuad: function () {
+        		return '0.455, 0.03, 0.515, 0.955';
+        	},
+        	easeInCubic: function () {
+        		return '0.55, 0.055, 0.675, 0.19';
+        	},
+        	easeOutCubic: function () {
+        		return '0.215, 0.61, 0.355, 1';
+        	},
+        	easeInOutCubic: function () {
+        		return '0.645, 0.045, 0.355, 1';
+        	},
+        	easeInQuart: function () {
+        		return '0.895, 0.03, 0.685, 0.22';
+        	},
+        	easeOutQuart: function () {
+        		return '0.165, 0.84, 0.44, 1';
+        	},
+        	easeInOutQuart: function () {
+        		return '0.77, 0, 0.175, 1';
+        	},
+        	easeInQuint: function () {
+        		return '0.755, 0.05, 0.855, 0.06';
+        	},
+        	easeOutQuint: function () {
+        		return '0.23, 1, 0.32, 1';
+        	},
+        	easeInOutQuint: function () {
+        		return '0.86, 0, 0.07, 1';
+        	},
+        	easeInSine: function () {
+        		return '0.47, 0, 0.745, 0.715';
+        	},
+        	easeOutSine: function () {
+        		return '0.39, 0.575, 0.565, 1';
+        	},
+        	easeInOutSine: function () {
+        		return '0.445, 0.05, 0.55, 0.95';
+        	},
+        	easeInExpo: function () {
+        		return '0.95, 0.05, 0.795, 0.035';
+        	},
+        	easeOutExpo: function () {
+        		return '0.19, 1, 0.22, 1';
+        	},
+        	easeInOutExpo: function () {
+        		return '1, 0, 0, 1';
+        	},
+        	easeInCirc: function () {
+        		return '0.6, 0.04, 0.98, 0.335';
+        	},
+        	easeOutCirc: function () {
+        		return '0.075, 0.82, 0.165, 1';
+        	},
+        	easeInOutCirc: function () {
+        		return '0.785, 0.135, 0.15, 0.86';
+        	}
+        },
+
+
+        opt = {
+            hashLinkPattern: 'a[href*="#"]:not([href="#"])',
+            frames: 60,
+            valueUnitRegEx: /^([\-]{0,1}[0-9\.]+)([a-z%]{0,3})$/,
+            moveDuration: 1000,
+            moveEasing: 'swing',
+            jumpDuration: 1000,
+            scrollEasing: 'swing',
+            cacheJumps: true,
+            cssTransitions: true
+        },
+
+        config = function(options) {
+            options && Object.keys(options).forEach(function(key) {
+                opt[key] = options[key];
+            });
+        },
+
+        hasTransitionSupport = function() {
+            var s = document.documentElement.style;
+            return (
+                s.webkitTransition !== undefined ||
+                s.MozTransition !== undefined ||
+                s.OTransition !== undefined ||
+                s.MsTransition !== undefined ||
+                s.transition !== undefined
+            );
+        },
+
+        setTransition = function(element, trans) {
+            element.style.webkitTransition !== undefined && (element.style.webkitTransition = trans);
+            element.style.MozTransition !== undefined && (element.style.MozTransition = trans);
+            element.style.OTransition !== undefined && (element.style.OTransition = trans);
+            element.style.MsTransition !== undefined && (element.style.MsTransition = trans);
+            element.style.transition !== undefined && (element.style.transition = trans);
+        },
+
+        isStyleProperty = function(propName) {
+            return propName in document.documentElement.style;
+        },
+
+        /*
+            Converts the CSS property name into a JS style name.
+
+            Example:
+                from CSS:   font-family
+                to JS:      fontFamily
+        */
+        toJsStyle = function(value) {
+            return value.replace(/(\-[a-z]{1})/g, function(match) {return match.slice(-1).toUpperCase()})
+        },
+
+        /*
+            @target string/object
+                can be a selector/id or object
+
+            @options object
+                if duration or done is undefined, options contains informations about the animation
+                but if duration and done is set, options are the style properties (target properties)
+                to be animated.
+
+            @duration number
+                Duration of the animation.
+
+            @done function
+                will be executed after the animation finished.
+        */
+        move = function(target, options, duration, done) {
+
+            var callback; // executes when the animation is done
+
+            if(options.isJump) {
+                // abort the current scroll animations if caching is false and a new scroll event was started
+                (!opt.cacheJumps && isScrolling) && (clearInterval(currentJumpLoop));
+                // cache the target if scrolling is active and a scrolling animation is currently running
+                if(opt.cacheJumps && isScrolling) {
+                    scrollCache.push({target: target});
+                    return;
+                }
+                isScrolling = true;
+
+                callback = function() {
+                    isScrolling = false;
+                    if(opt.cacheJumps && scrollCache.length > 0) {
+                        var nextEvent = scrollCache.shift();
+                        jump(nextEvent.target);
+                    }
+                };
+            }
+            else {
+                // executed when its not a jump
+                if(isAnimating) {
+                    animationCache.push({target: target, options: options, duration: duration, done: done});
+                    return;
+                }
+                isAnimating = true;
+
+                callback = function() {
+                    isAnimating = false;
+                    var next = animationCache.shift();
+                    next && move(next.target, next.options, next.duration, next.done);
+                };
+            }
+
+            var el = (typeof target === 'string') ? document.querySelector(target) : target;
+            var o = {};
+            o.properties = options.properties || options;
+            o.duration = duration || options.duration || (options.isJump ? opt.jumpDuration : opt.moveDuration);
+            o.done = done || options.done;
+            o.easing = options.easing || (options.isJump ? opt.scrollEasing : opt.moveEasing);
+            o.isJump = options.isJump;
+
+            // dont care about the target property. has something to do with the jump function
+            (typeof options.target === 'string') ? (options.target = document.querySelector(options.target)) : (o.target = options.target);
+
+            var isStyle = true;
+            Object.keys(o.properties).forEach(function(key) {
+                isStyle = isStyleProperty(key);
+            });
+
+            // CSS transition check
+            if(opt.cssTransitions && isStyle && hasTransitionSupport() && o.easing in cssEasing) {
+                //console.log('css transitions supported');
+
+                Object.keys(o.properties).forEach(function(key) {
+                    var trans = 'all ' + o.duration + 'ms cubic-bezier(' + cssEasing[o.easing]() + ')';
+
+                    setTransition(el, trans);
+
+                    var stylename = toJsStyle(key);
+
+                    el.style[toJsStyle(key)] = o.properties[key];
+
+                    // kill the previous transition when its not finished
+                    clearTimeout(transitionTimeout);
+
+                    // should remove the transition after its finished
+                    transitionTimeout = setTimeout(function() {
+                        setTransition(el, '');
+                        callback();
+                        o.done && o.done();
+                    }, o.duration);
+                });
+
+                return;
+            }
+
+            var anims = [],
+                finished = 0;
+
+            Object.keys(o.properties).forEach(function(key) {
+                var val = o.properties[key].match(opt.valueUnitRegEx);
+                anims.push({
+                    style: toJsStyle(key),
+                    value: parseInt(val[1]),
+                    suffix: val[2] || '',
+                    duration: o.duration,
+                    rawValue:  o.properties[key]
+                });
+            });
+
+            anims.forEach(function(anim) {
+                var currentFrame = 0,
+                    valueObj;
+
+                if(isStyle)
+                    valueObj = el.style[anim.style].match(opt.valueUnitRegEx);
+                else
+                    valueObj = (el[anim.style] + '').match(opt.valueUnitRegEx);
+
+                // in case no value is set
+                if(!valueObj) valueObj = ['0', '0', ''];
+
+                var initValue = isStyle ? (parseInt(valueObj[1]) || 0) : window.scrollY,
+                    change = anim.value - (initValue || 0),
+                    currentTime = 0,
+                    timeSteps = Math.ceil(anim.duration / opt.frames),
+                    loopId;
+
+                loopId = setInterval(function() {
+                    if(currentFrame < opt.frames) {
+                        var v = jsEasing[o.easing](currentTime, initValue, change, anim.duration);
+
+                        if(isStyle)
+                            el.style[anim.style] = v + anim.suffix;
+                        else if(anim.style in el) {
+                            if(o.target)
+                                if(anim.style == 'scrollTop') {
+                                  window.scrollTo(0, v)
+                                }
+                                else {
+                                  o.target[anim.style] = v + anim.suffix;
+                                }
+                            else
+                                el[anim.style] = v + anim.suffix;
+                        }
+                        else
+                            // break loop (nothing to animate)
+                            currentTime = opt.frames;
+                    }
+                    else {
+                        clearInterval(loopId);
+                        finished++;
+                        callback();
+                        (finished === anims.length && o.done) && o.done();
+                    }
+                    currentTime += timeSteps;
+                    currentFrame++;
+                }, timeSteps);
+
+                o.isJump && (currentJumpLoop = loopId);
+            });
+        },
+
+        jump = function(target, options) {
+          var el = (typeof target === 'string') ? document.querySelector(target) : target;
+          var o = options || {};
+
+          move(el, {
+              properties: {
+                scrollTop: el.offsetTop + ''
+              },
+              duration: o.duration || opt.jumpDuration,
+              easing: o.easing || opt.scrollEasing,
+              done: o.setHash ? function() {
+                  window.location.hash = el.id;
+                  o.done && o.done();
+                } : o.done,
+              target: document.body,
+              isJump: true
+          });
+        },
+
+        // Bind all  subscribe all hash link clicks on the page and animates the jump to this position
+        bindHashes = function() {
+            hashLinkElements = document.querySelectorAll(opt.hashLinkPattern);
+
+            [].forEach.call(hashLinkElements, function(el) {
+        		el.addEventListener('click', function(ev) {
+        			if (window.location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && window.location.hostname == this.hostname) {
+        		        var target = document.querySelector(this.hash);
+                    target && jump(target);
+                    ev.preventDefault();
+        		    }
+        		}, false)
+        	});
+        },
+
+        // unbind all hash links
+        unbindHashes = function() {
+            [].forEach.call(hashLinkElements, function(el) {
+                el.removeEventListener('click');
+            });
+            hashLinkElements = null;
+        };
+
+        return {
+            opt: opt,
+            config: config,
+            hasTransitionSupport: hasTransitionSupport,
+            toJsStyle: toJsStyle,
+            move: move,
+            jump: jump,
+            bindHashes: bindHashes,
+            unbindHashes: unbindHashes,
+            setTransition: setTransition
+        };
+    }();
+
+    // extend the jquery object
+    var jq = window.$ || window.jQuery;
+    jq && (jq.fn.extend({
+        move: function (options, duration, done) {
+          return this.each(function() {
+              force.move(this, options, duration, done);
+          });
+        },
+        jump: function(options) {
+          return this.each(function() {
+            force.jump(this, options);
+          });
+        }
+    }));
+
+    if ( typeof module === "object" && module && typeof module.exports === "object" ) {
+    	// Expose force as module.exports in loaders that implement the Node
+    	// module pattern (including browserify). Do not create the global, since
+    	// the user will be storing it themselves locally, and globals are frowned
+    	// upon in the Node module world.
+    	module.exports = force;
+    } else {
+    	// Eexpose force to the global object as usual
+    	window.force = force;
+
+    	// Register as a named AMD module
+    	if ( typeof define === "function" && define.amd ) {
+    		define( "force", [], function () { return force; } );
+    	}
+    }
+})(window, document);
+
+(function() {
   
 	var lastWindowHeight = $(window).height();
 	var lastWindowWidth = $(window).width();
 	var videoHeight;
 	var aspectRatio = 16/9;
 	var videoWidth = $(window).width();
+	var navHeight = $("nav").height();
+	
 	
 	window.onresize = resizeChecker;
+	window.onscroll = updateNav;
+
 	
 	setTimeout(function(){ resize(); }, 500);
 	
@@ -1643,8 +2186,9 @@ $(function() {
 		var colW;
 		var maxVideoHeight = 700;
 		
-		// Begin top video section
-		
+	
+		navHeight = $("nav").height();
+	
 		//use video height to set the video size
 		videoHeight = lastWindowHeight;
 		if (videoHeight > maxVideoHeight) videoHeight = maxVideoHeight;
@@ -1670,9 +2214,7 @@ $(function() {
 			
 			var videoDiff = (videoHeight - videoHolderHeight)/2;
 		
-			var mt = -videoDiff;//(lastWindowHeight - videoHeight)/2; //calculate the margin-top offset
-			
-			
+			var mt = -videoDiff; //(lastWindowHeight - videoHeight)/2; //calculate the margin-top offset
 			
 			$('.responsive-video').css('margin-top',mt+"px");
 			$('.video-overlay').css('margin-top',mt+"px"); //offset video overlay so content stays centered vertically
@@ -1689,8 +2231,7 @@ $(function() {
 		$('.video-overlay').css('height',videoHeight + 'px');
 				
 		// End top video section		
-				
-				
+							
 		$(".cultureTile").each(function(){
 			
 			if($(this).hasClass("pushRight")) {
@@ -1726,10 +2267,39 @@ $(function() {
 		
 	}
   
+  	
+	// Update navigation based on user scrolling
+	function updateNav() {
+
+		var currScroll = $(window).attr('scrollY');
+		
+		if(currScroll > navHeight) {
+			if(!$("nav").hasClass("sticky")) {
+				$("nav").addClass("sticky");
+				$("nav").css({'background-color': "rgba(107, 109, 111, 1.0)", 'margin-top': '0'});
+			
+				$("#mbLogo").off('mouseout');
+			
+				showLogo();
+			}
+		} else {
+			$("nav").removeClass("sticky");
+			$("nav").css({'background-color': 'rgba(107, 109, 111, 0.0)', 'margin-top': '1.5625em'});
+			
+			hideLogo();
+			
+			$('#mbLogo').on('mouseover',function(){
+				showLogo();
+			});
+
+			$('#mbLogo').on('mouseout',function(){
+				hideLogo();
+			});
+		}
+	}
   
   
-  
-  (function(){
+	(function(){
 	  $(".cultureTile").each(function(index){
 		  if(index%2 == 0) {
 			if($(this).children("a").length > 0){
@@ -1791,9 +2361,7 @@ $(function() {
 	
 	
 	
-
 	/* animate header logo */
-	
    	var tt = TweenMax.to;
  	var ts = TweenMax.set;
 	ts(rect,{rotation:-90,transformOrigin:"50% 50%"})
@@ -1804,14 +2372,15 @@ $(function() {
 		tt(downArrow,1,{y:"0", delay:0.75,ease:Bounce.easeOut,overwrite:false,onComplete:downArrowPulse});
 		
 	}
-	// downArrowPulse();
+	
+	downArrowPulse();
+	
 
-	var l = document.getElementById('mbLogo')
-	l.addEventListener('mouseover',function(){
+	$('#mbLogo').on('mouseover',function(){
 		showLogo();
 	});
 
-	l.addEventListener('mouseout',function(){
+	$('#mbLogo').on('mouseout',function(){
 		hideLogo();
 	});
 
@@ -1828,18 +2397,11 @@ $(function() {
 		tt(cgarryContainer,.3,{width:0, ease:Quad.easeIn, delay:0, overwrite:true});
 		tt(owenContainer,.3,{width:0, ease:Quad.easeOut, delay:0, overwrite:true});
 	}
-	
-	
 
-	
 
-	/* calculate correct times for each clock */
-	
-	/* animate time dials*/
-	// ts(".clockHours", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	// ts(".clockMinutes", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	// ts('.clockLineGroup', {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	
+	force.opt.moveEasing = 'easeInCubic';
+	force.opt.setHash = true;
+	force.bindHashes(); // use force.js to enable hash linking automatically
 	
 		
 	// Initialize clocks
@@ -1868,34 +2430,35 @@ $(function() {
 			tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
 			tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
 		});  
-	})();
-	
-	// Update clocks
-	
-	setInterval(function(){
-		$(".officeTile").each(function(index){
-			var timeOffset = parseInt($(this).data("timeOffset")),
-		  	d = new Date(),
-			utc = d.getTime() + (d.getTimezoneOffset() * 60000),
-			nd = new Date(utc + (3600000*timeOffset));
 
-			var ndHours = nd.getHours();
-			if(ndHours > 12) {
-				ndHours -= 12;
-			}
+
+		// Update clocks	
+		setInterval(function(){
+			$(".officeTile").each(function(index){
+				var timeOffset = parseInt($(this).data("timeOffset")),
+			  	d = new Date(),
+				utc = d.getTime() + (d.getTimezoneOffset() * 60000),
+				nd = new Date(utc + (3600000*timeOffset));
+
+				var ndHours = nd.getHours();
+				if(ndHours > 12) {
+					ndHours -= 12;
+				}
 			
-			var clockHours = Math.floor((ndHours/12) * 100) + "%";
-			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
+				var clockHours = Math.floor((ndHours/12) * 100) + "%";
+				var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
 			
-			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
+				nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
   		  	
-			$(this).children("a").find("time").text(nd);
+				$(this).children("a").find("time").text(nd);
 			
-			var hrEle = $(this).find(".clockHours");
-			var minEle = $(this).find(".clockMinutes");
+				var hrEle = $(this).find(".clockHours");
+				var minEle = $(this).find(".clockMinutes");
 			
-			tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
-			tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
-		});
-	}, 60000);	
-});
+				tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
+				tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
+			});
+		}, 60000);
+	})();
+		
+})();

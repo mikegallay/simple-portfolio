@@ -1,12 +1,16 @@
-$(function() {
+(function() {
   
 	var lastWindowHeight = $(window).height();
 	var lastWindowWidth = $(window).width();
 	var videoHeight;
 	var aspectRatio = 16/9;
 	var videoWidth = $(window).width();
+	var navHeight = $("nav").height();
+	
 	
 	window.onresize = resizeChecker;
+	window.onscroll = updateNav;
+
 	
 	setTimeout(function(){ resize(); }, 500);
 	
@@ -41,8 +45,9 @@ $(function() {
 		var colW;
 		var maxVideoHeight = 700;
 		
-		// Begin top video section
-		
+	
+		navHeight = $("nav").height();
+	
 		//use video height to set the video size
 		videoHeight = lastWindowHeight;
 		if (videoHeight > maxVideoHeight) videoHeight = maxVideoHeight;
@@ -68,9 +73,7 @@ $(function() {
 			
 			var videoDiff = (videoHeight - videoHolderHeight)/2;
 		
-			var mt = -videoDiff;//(lastWindowHeight - videoHeight)/2; //calculate the margin-top offset
-			
-			
+			var mt = -videoDiff; //(lastWindowHeight - videoHeight)/2; //calculate the margin-top offset
 			
 			$('.responsive-video').css('margin-top',mt+"px");
 			$('.video-overlay').css('margin-top',mt+"px"); //offset video overlay so content stays centered vertically
@@ -87,8 +90,7 @@ $(function() {
 		$('.video-overlay').css('height',videoHeight + 'px');
 				
 		// End top video section		
-				
-				
+							
 		$(".cultureTile").each(function(){
 			
 			if($(this).hasClass("pushRight")) {
@@ -124,10 +126,39 @@ $(function() {
 		
 	}
   
+  	
+	// Update navigation based on user scrolling
+	function updateNav() {
+
+		var currScroll = $(window).attr('scrollY');
+		
+		if(currScroll > navHeight) {
+			if(!$("nav").hasClass("sticky")) {
+				$("nav").addClass("sticky");
+				$("nav").css({'background-color': "rgba(107, 109, 111, 1.0)", 'margin-top': '0'});
+			
+				$("#mbLogo").off('mouseout');
+			
+				showLogo();
+			}
+		} else {
+			$("nav").removeClass("sticky");
+			$("nav").css({'background-color': 'rgba(107, 109, 111, 0.0)', 'margin-top': '1.5625em'});
+			
+			hideLogo();
+			
+			$('#mbLogo').on('mouseover',function(){
+				showLogo();
+			});
+
+			$('#mbLogo').on('mouseout',function(){
+				hideLogo();
+			});
+		}
+	}
   
   
-  
-  (function(){
+	(function(){
 	  $(".cultureTile").each(function(index){
 		  if(index%2 == 0) {
 			if($(this).children("a").length > 0){
@@ -189,9 +220,7 @@ $(function() {
 	
 	
 	
-
 	/* animate header logo */
-	
    	var tt = TweenMax.to;
  	var ts = TweenMax.set;
 	ts(rect,{rotation:-90,transformOrigin:"50% 50%"})
@@ -202,14 +231,15 @@ $(function() {
 		tt(downArrow,1,{y:"0", delay:0.75,ease:Bounce.easeOut,overwrite:false,onComplete:downArrowPulse});
 		
 	}
-	// downArrowPulse();
+	
+	downArrowPulse();
+	
 
-	var l = document.getElementById('mbLogo')
-	l.addEventListener('mouseover',function(){
+	$('#mbLogo').on('mouseover',function(){
 		showLogo();
 	});
 
-	l.addEventListener('mouseout',function(){
+	$('#mbLogo').on('mouseout',function(){
 		hideLogo();
 	});
 
@@ -226,18 +256,11 @@ $(function() {
 		tt(cgarryContainer,.3,{width:0, ease:Quad.easeIn, delay:0, overwrite:true});
 		tt(owenContainer,.3,{width:0, ease:Quad.easeOut, delay:0, overwrite:true});
 	}
-	
-	
 
-	
 
-	/* calculate correct times for each clock */
-	
-	/* animate time dials*/
-	// ts(".clockHours", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	// ts(".clockMinutes", {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	// ts('.clockLineGroup', {rotation: -90, transformOrigin:"50% 50%", drawSVG: "0%", overwrite:true});
-	
+	force.opt.moveEasing = 'easeInCubic';
+	force.opt.setHash = true;
+	force.bindHashes(); // use force.js to enable hash linking automatically
 	
 		
 	// Initialize clocks
@@ -266,34 +289,35 @@ $(function() {
 			tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
 			tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
 		});  
-	})();
-	
-	// Update clocks
-	
-	setInterval(function(){
-		$(".officeTile").each(function(index){
-			var timeOffset = parseInt($(this).data("timeOffset")),
-		  	d = new Date(),
-			utc = d.getTime() + (d.getTimezoneOffset() * 60000),
-			nd = new Date(utc + (3600000*timeOffset));
 
-			var ndHours = nd.getHours();
-			if(ndHours > 12) {
-				ndHours -= 12;
-			}
+
+		// Update clocks	
+		setInterval(function(){
+			$(".officeTile").each(function(index){
+				var timeOffset = parseInt($(this).data("timeOffset")),
+			  	d = new Date(),
+				utc = d.getTime() + (d.getTimezoneOffset() * 60000),
+				nd = new Date(utc + (3600000*timeOffset));
+
+				var ndHours = nd.getHours();
+				if(ndHours > 12) {
+					ndHours -= 12;
+				}
 			
-			var clockHours = Math.floor((ndHours/12) * 100) + "%";
-			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
+				var clockHours = Math.floor((ndHours/12) * 100) + "%";
+				var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
 			
-			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
+				nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
   		  	
-			$(this).children("a").find("time").text(nd);
+				$(this).children("a").find("time").text(nd);
 			
-			var hrEle = $(this).find(".clockHours");
-			var minEle = $(this).find(".clockMinutes");
+				var hrEle = $(this).find(".clockHours");
+				var minEle = $(this).find(".clockMinutes");
 			
-			tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
-			tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
-		});
-	}, 60000);	
-});
+				tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
+				tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
+			});
+		}, 60000);
+	})();
+		
+})();
