@@ -24,10 +24,6 @@
 		<section id="OurWork">	
 			<h1 class="sectionHeading">OUR WORK</h1>
 			
-			<div class="row alignRight">
-				<a id="clientToggle" class="button" alt="">OUR CLIENTS <?php addIcon('menu_dropdown_arrow'); ?></a>
-			</div>
-			
 			<div class="portfolioContent">
 				<?php
 					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "content/data/portfolio-data.json");
@@ -38,7 +34,7 @@
 				<a id="addFolioContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
 		</section>
-
+		
 		<section id="OurPeople">
 			<h1 class="sectionHeading">OUR CULTURE</h1>
 			
@@ -57,6 +53,7 @@
 			</div>
 		</section>
 		
+
 		<section id="OurOffices">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
 			
@@ -69,7 +66,7 @@
 				?>
 			</div>
 		</section>
-
+		
 		<section id="JoinTeam">
 			<h1 class="sectionHeading joinTeamCTA">INTERESTED IN <br>
 				JOING THE TEAM?</h1>

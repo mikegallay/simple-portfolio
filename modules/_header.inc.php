@@ -1,6 +1,6 @@
-<header id="TopSection">
+<header id="Home">
 	<nav>
-		<a href="#TopSection">
+		<a href="#Home">
 			<div id="mbLogo">
 				<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				     x="0px" y="0px"  xml:space="preserve">
@@ -54,7 +54,7 @@
 		</div>
 		
 		<div id="downArrow">
-			<a href> <?php addIcon('marquee_down_arrow')?> </a>
+			<?php addIcon('marquee_down_arrow')?>
 		</div>
 
 	</div>

@@ -2385,10 +2385,10 @@ var force = function() {
 	});
 
 	function showLogo(){
-		tt(rect,.4,{transformOrigin:"50% 50%", drawSVG:"0%",overwrite:true});
-		tt(bowenTXT,.4,{x:102, ease:Quad.easeIn, delay:0, overwrite:true});
-		tt(cgarryContainer,.4,{width:102, ease:Quad.easeIn, delay:0, overwrite:true});
-		tt(owenContainer,.4,{width:79, ease:Quad.easeOut, delay:.35, overwrite:true});
+		tt(rect,.3,{transformOrigin:"50% 50%", drawSVG:"0%",overwrite:true});
+		tt(bowenTXT,.3,{x:102, ease:Quad.easeIn, delay:0, overwrite:true});
+		tt(cgarryContainer,.3,{width:102, ease:Quad.easeIn, delay:0, overwrite:true});
+		tt(owenContainer,.3,{width:79, ease:Quad.easeOut, delay:.35, overwrite:true});
 	}
 
 	function hideLogo(){
@@ -2397,11 +2397,6 @@ var force = function() {
 		tt(cgarryContainer,.3,{width:0, ease:Quad.easeIn, delay:0, overwrite:true});
 		tt(owenContainer,.3,{width:0, ease:Quad.easeOut, delay:0, overwrite:true});
 	}
-
-
-	force.opt.moveEasing = 'easeInCubic';
-	force.opt.setHash = true;
-	force.bindHashes(); // use force.js to enable hash linking automatically
 	
 		
 	// Initialize clocks
@@ -2460,5 +2455,18 @@ var force = function() {
 			});
 		}, 60000);
 	})();
+	
+
+	force.opt.moveEasing = 'easeInCubic';	
+	
+	$('nav a').on('click', function(){
+		$('nav a').removeClass('active');
+		$(this).addClass('active');
 		
+		var hashValue = $(this).attr('href');
+		
+		force.jump(hashValue);
+	});
+	
+			
 })();
