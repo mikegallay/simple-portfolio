@@ -985,6 +985,17 @@ a:active {
   margin-bottom: 0.75em;
 }
 
+/* fade image in after load 
+.lazyload,
+.lazyloading {
+    opacity: 0;
+	transform:scale(1.25);
+}
+.lazyloaded {
+    opacity: 1;
+	transform:scale(1);
+    transition: opacity 1s 2s, transform 1s 2s;
+}*/
 /* fade image in after load */
 .lazyload,
 .lazyloading {
@@ -994,11 +1005,9 @@ a:active {
 }
 
 .lazyloaded {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: opacity 2s 2s, -webkit-transform 2s 2s;
-          transition: opacity 2s 2s, transform 2s 2s;
+  opacity: 0;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 #Home {
@@ -1007,6 +1016,7 @@ a:active {
   position: relative;
   overflow: hidden;
   display: block;
+  min-height: 500px;
   	/*
       background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
       background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
@@ -1264,6 +1274,13 @@ ul.navigation li a.active {
   -webkit-align-content: space-around;
       -ms-flex-line-pack: distribute;
           align-content: space-around;
+}
+.portfolioContent .in-view, .cultureContent .in-view, .officeContent .in-view {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 1s .25s, -webkit-transform 1s .25s;
+          transition: opacity 1s .25s, transform 1s .25s;
 }
 
 .col-2-by-1 {

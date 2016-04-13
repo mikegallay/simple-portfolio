@@ -25,6 +25,7 @@
 			<h1 class="sectionHeading">IT'S NOT CREATIVE UNLESS IT WORKS</h1>
 			
 			<div class="portfolioContent">
+				
 				<?php
 					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "content/data/portfolio-data.json");
 					echo $portfolioData; 

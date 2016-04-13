@@ -24,6 +24,11 @@
 	justify-content: flex-start;
 	align-items: stretch;
 	align-content: space-around;
+	.in-view{
+	    opacity: 1;
+		transform:scale(1);
+	    transition: opacity 1s .25s, transform 1s .25s;
+	}
 }
 
 .col-2-by-1 {
