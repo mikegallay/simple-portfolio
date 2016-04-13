@@ -6,20 +6,17 @@
 				<video style="display: none;"><![endif]-->
 				
 					
-					{{#if isShowcaseFinal }} <source srcset="{{{imgSrc}}}_large.jpg, {{{imgSrc}}})_large@2x.jpg 2x" media="(min-width: 1900px)">{{/if}}
-					{{#if isShowcase }} <source srcset="{{{imgSrc}}}_large.jpg, {{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 1024px)">{{/if}}
+					{{#if isShowcaseFinal }} <source data-srcset="{{{imgSrc}}}_large.jpg, {{{imgSrc}}})_large@2x.jpg 2x" media="(min-width: 1900px)">{{/if}}
+					{{#if isShowcase }} <source data-srcset="{{{imgSrc}}}_large.jpg, {{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 1024px)">{{/if}}
 					
-					<source srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+					<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
 					
 			<!--[if IE 9]>
 				</video>
 			<![endif]-->
 			<!--[if !lte IE 9]> -->
-				<img srcset='{{{imgSrc}}}@2x.jpg' src="img/common/blank.png" alt="{{{altText}}}">
+				<img data-srcset='{{{imgSrc}}}@2x.jpg' src="img/common/blank.png" alt="{{{altText}}}" class="lazyload">
 			<!-- <![endif]-->
-			<!--[if lte IE 9 ]>
-				<img src='{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x' alt="{{{altText}}}">
-			<![endif]-->
 			</picture>
 			
 			<div class="prjDescription">

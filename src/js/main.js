@@ -223,7 +223,15 @@
 	/* animate header logo */
    	var tt = TweenMax.to;
  	var ts = TweenMax.set;
-	ts(rect,{rotation:-90,transformOrigin:"50% 50%"})
+	var animation = new TimelineMax();
+	ts(rect,{rotation:-90,transformOrigin:"50% 50%"});
+	
+	animation.to(rect,.3,{transformOrigin:"50% 50%", drawSVG:"0%"}).
+	to(bowenTXT,.2,{x:102, ease:Quad.easeIn}, .2).
+	to(cgarryContainer,.2,{width:102, ease:Quad.easeIn}, .2).
+	to(owenContainer,.2,{width:79, ease:Quad.easeOut}, .4);
+	
+	animation.stop();
 	
 	/* animate downarrow pulse*/
 	function downArrowPulse(){
@@ -244,17 +252,11 @@
 	});
 
 	function showLogo(){
-		tt(rect,.3,{transformOrigin:"50% 50%", drawSVG:"0%",overwrite:true});
-		tt(bowenTXT,.3,{x:102, ease:Quad.easeIn, delay:0, overwrite:true});
-		tt(cgarryContainer,.3,{width:102, ease:Quad.easeIn, delay:0, overwrite:true});
-		tt(owenContainer,.3,{width:79, ease:Quad.easeOut, delay:.35, overwrite:true});
+		animation.play();
 	}
 
 	function hideLogo(){
-		tt(rect,.3,{transformOrigin:"50% 50%", delay:.2, drawSVG:"100%",overwrite:true});
-		tt(bowenTXT,.3,{x:0, ease:Quad.easeIn, delay:0, overwrite:true});
-		tt(cgarryContainer,.3,{width:0, ease:Quad.easeIn, delay:0, overwrite:true});
-		tt(owenContainer,.3,{width:0, ease:Quad.easeOut, delay:0, overwrite:true});
+		animation.pause().reverse();
 	}
 	
 		

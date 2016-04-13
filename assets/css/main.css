@@ -985,6 +985,18 @@ a:active {
   margin-bottom: 0.75em;
 }
 
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  -webkit-transition: opacity 1s 2s;
+          transition: opacity 1s 2s;
+}
+
 #Home {
   height: auto;
   width: 100%;
@@ -1260,7 +1272,7 @@ h1 {
   margin: 0;
 }
 h1.sectionHeading {
-  font-family: 'Din-Regular', san-serif;
+  font-family: 'Din-Bold', san-serif;
   font-size: 2.125em;
   font-weight: lighter;
   color: #58595b;
@@ -1613,12 +1625,11 @@ h1.joinTeamCTA {
     margin: 0;
   }
   h1.sectionHeading {
-    font-family: 'Din-Regular', san-serif;
+    font-family: 'Din-Bold', san-serif;
     font-size: 3.125em;
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
-    text-align: left;
   }
   h1.joinTeamCTA {
     text-align: center;
@@ -1729,12 +1740,11 @@ h1.joinTeamCTA {
     margin: 0;
   }
   h1.sectionHeading {
-    font-family: 'Din-Regular', san-serif;
+    font-family: 'Din-Bold', san-serif;
     font-size: 3.125em;
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
-    text-align: left;
   }
   h1.joinTeamCTA {
     text-align: center;
@@ -1796,12 +1806,11 @@ h1.joinTeamCTA {
     margin: 0;
   }
   h1.sectionHeading {
-    font-family: 'Din-Regular', san-serif;
+    font-family: 'Din-Bold', san-serif;
     font-size: 3.125em;
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
-    text-align: left;
   }
   h1.joinTeamCTA {
     text-align: center;

@@ -22,7 +22,7 @@
 	<div class="container">
 		
 		<section id="OurWork">	
-			<h1 class="sectionHeading">OUR WORK</h1>
+			<h1 class="sectionHeading">IT'S NOT CREATIVE UNLESS IT WORKS</h1>
 			
 			<div class="portfolioContent">
 				<?php
@@ -36,7 +36,7 @@
 		</section>
 		
 		<section id="OurPeople">
-			<h1 class="sectionHeading">OUR CULTURE</h1>
+			<h1 class="sectionHeading">WHO SAYS WE CAN'T</h1>
 			
 			<div class="row alignRight">
 				<a id="officeToggle" class="button" alt="">OUR OFFICES  <?php addIcon('menu_dropdown_arrow'); ?></a>

@@ -42,7 +42,7 @@
 		
 		<div id="welcomeVideo">
 			
-			<video class="responsive-video" autoplay loop preload="auto">
+			<video class="responsive-video" xxautoplay xxloop preload="auto">
 				<source src="assets/img/Main_Sequence_opt.mp4" type="video/mp4">
 				<source src="assets/img/Main_Sequence_opt.webm" type="video/webm">
 			</video>
