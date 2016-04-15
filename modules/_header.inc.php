@@ -60,3 +60,8 @@
 	</div>
 	
 </header> 
+<!-- <div class="lltest" style="margin-top:500px;position:relative;"><span style="color:black;">TEST IMAGE</span><br/><img
+	alt="100%x200"
+	src="assets/img/our_work/Intel_Inside.jpg"
+	data-src="assets/img/our_work/Intel_Inside@2x.jpg"
+	class="lazyload ll" width="300" height="300" /></div> -->

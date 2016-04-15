@@ -31,14 +31,12 @@ var gulp = require('gulp'),
 var concatScripts = [
 	'src/js/plugins/plugin.base.js',
 	'src/js/plugins/lazysizes.min.js',
-	//'src/js/plugins/masonry.pkgd.min.js',
 	'src/js/lib/TweenMax.min.js',
-	'src/js/lib/EasePack.min.js',
-	'src/js/lib/CSSPlugin.min.js',
-	'src/js/lib/DrawSVGPlugin.min.js',
+	// 'src/js/lib/EasePack.min.js',
+	// 'src/js/lib/CSSPlugin.min.js',
+	// 'src/js/lib/DrawSVGPlugin.min.js',
 	'src/js/plugins/flexibility.js',
 	'src/js/plugins/force.js',
-	// 'src/js/plugins/slick.min.js',
 	'src/js/main.js'
 ];
 

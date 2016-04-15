@@ -7,15 +7,6 @@
 				{{ info }}
 				</p>
 			</div>
-			
-			<div class="arrow">
-				<div class="moreArrow">
-					<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
-					  <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/menu_dropdown_arrow.png" alt="menu_dropdown_arrow icon"> <!--<![endif]-->
-					</svg>
-				</div>	
-			</div>
 		{{/if}}
 			<div class="picHolder">
 				<picture>
@@ -29,7 +20,18 @@
 					<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll">
 				<!-- <![endif]-->
 				</picture>
+			
+				{{#if info}}
+				<div class="arrow">
+					<div class="moreArrow">
+						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+						</svg>
+					</div>	
+				</div>
+				{{/if}}
 			</div>
+
 		{{#if info}}
 		</a>
 		{{/if}}

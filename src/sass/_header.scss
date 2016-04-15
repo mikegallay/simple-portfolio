@@ -1,41 +1,32 @@
-
 #Home {
 	height: auto;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-	display: block;
-	min-height:500px;
-	
-	/*
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-    background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-	background-repeat: repeat, no-repeat;
-	-webkit-background-size: 3px 3px, cover;
-	-moz-background-size: 3px 3px, cover;
-	background-size: 3px 3px, cover;
-	background-position: center, center; */
+	display: block; 
 }
 
 
 nav {
 	background-color: '';
 	position: fixed;
-	top: 0;
+	top: -100px;
 	left: 0;
 	margin-top: 1.5625em;
 	width: 100%;
 	z-index: 99999;
 	height: 4.25em;
-	transition: background-color 300ms, margin-top 300ms;
+	transition: background-color 300ms, margin-top 300ms, top 1s 1s;
+
+	&.settle{
+		top:0;
+	}
 }
 
 ul.navigation {
 	font-family: 'Din-Regular', san-serif;
 	height: 2.5em;
-	padding: 0px;
+	padding-right: 1.5625em;
 	font-size: 0.875em;
 	text-align: center;
 	display: flex;
@@ -76,6 +67,7 @@ ul.navigation {
     height: 70px;
     display: inline-block;
 	margin-left:25px;
+	transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	
 	#mcgarryTXT{
 		top:36px;
@@ -148,8 +140,14 @@ ul.navigation {
 	align-items: center;
 	
 	width: 100%;
-	height: auto;
+	height: 0px;
 	position: relative;
+	
+	transition:height 1s .5s;
+	
+	&.settle{
+		transition:height 0s;
+	}
 	
 
 	#welcomeVideo {
@@ -169,10 +167,11 @@ ul.navigation {
 	
 	.video-overlay {
 		position: absolute;
-		top: 0;
+		top:-100px;
 		left: 0;
 		width: 100%;
 		min-width: 100%;
+		height: 700px;
 	
 	    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
 	    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
@@ -187,6 +186,12 @@ ul.navigation {
 	    display: flex;
 	    flex-flow: column wrap;
 	    justify-content: center;
+		
+		transition:top 1s .5s;
+		
+		&.settle{
+			top:0;
+		}
 
 		.largeTag {
 			

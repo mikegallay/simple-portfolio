@@ -1,24 +1,22 @@
 {{#each objects}}
 	<div class="officeTile" data-time-offset='{{{timeDiff}}}'>
 		<a>
-			<div class="bgOverlay"></div>
 			<picture>
 			<!--[if IE 9]>
 				<video style="display: none;"><![endif]-->
-					<source srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+					<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
 			<!--[if IE 9]>
 				</video>
 			<![endif]-->
 			<!--[if !lte IE 9]> -->
-				<img srcset='{{{imgSrc}}}@2x.jpg' src="img/common/blank.png" alt="{{{altText}}}">
+				<img data-src='{{{imgSrc}}}@2x.jpg' src="assets/img/common/blank.png" alt="{{{altText}}}" class="lazyload ll">
 			<!-- <![endif]-->
-			<!--[if lte IE 9 ]>
-				<img src='{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x' alt="{{{altText}}}">
-			<![endif]-->
 			</picture>
 			
+			
 			<div class="officeInfo">
-				
+				<div class="bgOverlay"></div>
+					
 				 <svg class="icon {{{clockImage}}}-inline clockGraphic" role="img" aria-labelledby="title" >
 					 <g class="clockLineGroup" transform="translate(0,225) rotate(-90)">
 		   				 <g>
@@ -29,18 +27,9 @@
 		   			 		 <circle class="clockMinutes" cx="150" cy="75" r="70" fill="white" fill-opacity="0.0" stroke="#ffffff" stroke-width="2" />
 		   		 		 </g>
 			   	  	</g>
-					     <use xlink:href="#{{{clockImage}}}"></use>			   
-			   		
-				   <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/{{clockImage}}}.png" alt="{{{clockImage}}} icon"> <!--<![endif]-->
+					     <use xlink:href="#{{{clockImage}}}"></use>			   	
 				 </svg>
-			 	
-				<!-- <div class="clock"> -->
-					<!-- <svg width="300" height="300" viewbox="0 0 310 310">
-					  <path class="border" transform="translate(150, 150)" stroke-lincap="round" stroke-width="4.5" stroke="white" fill="none" />
-					  <path class="loader" transform="translate(150, 150)" stroke-opacity="0.0" fill="none" />
-					</svg> -->
-				<!-- </div> -->
-				
+			
 				<p>
 					<span class="cityName">{{{city}}}</span> <br>
 					<span class="cityTime"><time datetime="{{{timeDiff}}}"></time></span>
@@ -85,7 +74,7 @@
 					</video>
 				<![endif]-->
 				<!--[if !lte IE 9]> -->
-					<img srcset='{{{heroImage}}}.jpg' src="img/common/blank.png" alt="{{{altText}}}">
+					<img srcset='{{{heroImage}}}.jpg' src="assets/img/common/blank.png" alt="{{{altText}}}">
 				<!-- <![endif]-->
 				<!--[if lte IE 9 ]>
 					<img src='{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x' alt="{{{altText}}}"

@@ -867,9 +867,15 @@ a:active {
 }
 
 .container {
-  max-width: 1370px;
+  max-width: 85.625em;
   margin: 1.5625em auto;
   padding: 0;
+  margin-top: 100%;
+  -webkit-transition: margin 1s .5s;
+          transition: margin 1s .5s;
+}
+.container.settle {
+  margin-top: 1.5625em;
 }
 
 .row {
@@ -985,17 +991,6 @@ a:active {
   margin-bottom: 0.75em;
 }
 
-/* fade image in after load 
-.lazyload,
-.lazyloading {
-    opacity: 0;
-	transform:scale(1.25);
-}
-.lazyloaded {
-    opacity: 1;
-	transform:scale(1);
-    transition: opacity 1s 2s, transform 1s 2s;
-}*/
 /* fade image in after load */
 .lazyload,
 .lazyloading {
@@ -1016,36 +1011,28 @@ a:active {
   position: relative;
   overflow: hidden;
   display: block;
-  min-height: 500px;
-  	/*
-      background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-      background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-      background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-      background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%), url(../img/starrett_leehigh.jpg);
-  	background-repeat: repeat, no-repeat;
-  	-webkit-background-size: 3px 3px, cover;
-  	-moz-background-size: 3px 3px, cover;
-  	background-size: 3px 3px, cover;
-  	background-position: center, center; */
 }
 
 nav {
   background-color: '';
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
   margin-top: 1.5625em;
   width: 100%;
   z-index: 99999;
   height: 4.25em;
-  -webkit-transition: background-color 300ms, margin-top 300ms;
-          transition: background-color 300ms, margin-top 300ms;
+  -webkit-transition: background-color 300ms, margin-top 300ms, top 1s 1s;
+          transition: background-color 300ms, margin-top 300ms, top 1s 1s;
+}
+nav.settle {
+  top: 0;
 }
 
 ul.navigation {
   font-family: 'Din-Regular', san-serif;
   height: 2.5em;
-  padding: 0px;
+  padding-right: 1.5625em;
   font-size: 0.875em;
   text-align: center;
   display: -webkit-box;
@@ -1091,6 +1078,8 @@ ul.navigation li a.active {
   height: 70px;
   display: inline-block;
   margin-left: 25px;
+  -webkit-transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 #mbLogo #mcgarryTXT {
   top: 36px;
@@ -1169,8 +1158,14 @@ ul.navigation li a.active {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: auto;
+  height: 0px;
   position: relative;
+  -webkit-transition: height 1s .5s;
+          transition: height 1s .5s;
+}
+.videoHeader.settle {
+  -webkit-transition: height 0s;
+          transition: height 0s;
 }
 .videoHeader #welcomeVideo {
   position: relative;
@@ -1187,10 +1182,11 @@ ul.navigation li a.active {
 }
 .videoHeader .video-overlay {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   width: 100%;
   min-width: 100%;
+  height: 700px;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
   background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
   background-repeat: repeat;
@@ -1208,6 +1204,11 @@ ul.navigation li a.active {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: top 1s .5s;
+          transition: top 1s .5s;
+}
+.videoHeader .video-overlay.settle {
+  top: 0;
 }
 .videoHeader .video-overlay .largeTag {
   font-family: 'Din-Bold', san-serif;
@@ -1282,6 +1283,12 @@ ul.navigation li a.active {
   -webkit-transition: opacity 1s .25s, -webkit-transform 1s .25s;
           transition: opacity 1s .25s, transform 1s .25s;
 }
+.portfolioContent .in-view + .arrow, .cultureContent .in-view + .arrow, .officeContent .in-view + .arrow {
+  opacity: 1;
+}
+.portfolioContent .in-view + .bgOverlay, .cultureContent .in-view + .bgOverlay, .officeContent .in-view + .bgOverlay {
+  opacity: 1;
+}
 
 .col-2-by-1 {
   -webkit-flex-basis: 49%;
@@ -1313,6 +1320,7 @@ h1.joinTeamCTA {
   height: auto;
   margin: 0.5%;
   overflow: hidden;
+  min-height: 150px;
 }
 .projectTile a {
   display: block;
@@ -1385,13 +1393,14 @@ h1.joinTeamCTA {
   border-right: 1000px solid #46ccc5;
 }
 .projectTile a:hover .prjDescription .prjDscrWrap {
-  top: 0;
+  top: -5%;
   opacity: 1;
   -webkit-transition: top 300ms 200ms, opacity 300ms 200ms;
           transition: top 300ms 200ms, opacity 300ms 200ms;
 }
 
 .cultureTile {
+  background-color: #f7f7f7;
   position: relative;
   width: 49%;
   max-height: 25em;
@@ -1399,6 +1408,7 @@ h1.joinTeamCTA {
   overflow: hidden;
   -webkit-transition: margin 300ms, width 300ms;
           transition: margin 300ms, width 300ms;
+  min-height: 150px;
 }
 .cultureTile picture {
   margin-left: 0;
@@ -1486,9 +1496,10 @@ h1.joinTeamCTA {
   border-top: 50px solid transparent;
   border-right: 50px solid #46ccc5;
   border-bottom: 0 solid transparent;
+  opacity: 0;
   z-index: 2;
-  -webkit-transition: width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          transition: width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .cultureTile a .arrow .moreArrow {
   position: absolute;
@@ -1524,16 +1535,22 @@ h1.joinTeamCTA {
 }
 
 .officeTile {
+  background-color: #f7f7f7;
   position: relative;
   width: 98.5%;
   max-height: 30em;
   margin: 0.375em;
   overflow: hidden;
-  background-color: #46ccc5;
+  background-color: #ffffff;
 }
 .officeTile a {
   cursor: pointer;
   display: block;
+}
+.officeTile a:hover {
+  background-color: #46ccc5;
+  -webkit-transition: opacity 300ms;
+          transition: opacity 300ms;
 }
 .officeTile a:hover .bgOverlay, .officeTile a:hover picture {
   opacity: 0;
@@ -1551,9 +1568,7 @@ h1.joinTeamCTA {
   background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
   background-repeat: repeat;
   background-size: 3px 3px;
-  opacity: 1;
-  -webkit-transition: opacity 300ms;
-          transition: opacity 300ms;
+  z-index: 0;
 }
 .officeTile picture {
   opacity: 1;
@@ -1582,7 +1597,10 @@ h1.joinTeamCTA {
   text-align: center;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 9999;
+  -webkit-transition: opacity 300ms;
+          transition: opacity 300ms;
 }
 .officeTile .officeInfo svg {
   display: block;
@@ -1699,6 +1717,7 @@ h1.joinTeamCTA {
     width: 49%;
     max-height: 19em;
     margin: 0.5%;
+    min-height: 300px;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
     font-size: 2em;
@@ -1711,6 +1730,7 @@ h1.joinTeamCTA {
     width: 49%;
     max-height: 22em;
     margin: 0.5%;
+    min-height: 300px;
   }
   .cultureTile .bio {
     font-family: 'Gotham-Light', san-serif;
@@ -1775,6 +1795,7 @@ h1.joinTeamCTA {
     width: 24%;
     max-height: 20em;
     margin: 0.5%;
+    min-height: 240px;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
     font-family: 'Din-Bold', san-serif;
@@ -1791,6 +1812,7 @@ h1.joinTeamCTA {
     width: 24%;
     max-height: 20em;
     margin: 0.5%;
+    min-height: 240px;
   }
   .cultureTile .bio {
     font-family: 'Gotham-Light', san-serif;

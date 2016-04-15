@@ -49,18 +49,6 @@
 }
 
 
-/* fade image in after load 
-.lazyload,
-.lazyloading {
-    opacity: 0;
-	transform:scale(1.25);
-}
-.lazyloaded {
-    opacity: 1;
-	transform:scale(1);
-    transition: opacity 1s 2s, transform 1s 2s;
-}*/
-
 /* fade image in after load */
 .lazyload,
 .lazyloading {
@@ -70,6 +58,5 @@
 .lazyloaded {
     opacity: 0;
 	transform:scale(1.25);
-    //transition: opacity 1s 2s, transform 1s 2s;
 }
 	
