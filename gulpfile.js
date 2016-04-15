@@ -129,7 +129,7 @@ gulp.task('processImages', function() {
 	
 	return gulp.src(['src/img/**'])
 		.pipe(plumber())
-		.pipe(cache(imagemin({ optimazationLevel: 3, progressive: true, interlaced: true })))
+		//.pipe(cache(imagemin({ optimazationLevel: 3, progressive: true, interlaced: true })))
 		.pipe(gulp.dest('assets/img/'))
 		.pipe(notify({ message: '**** Image processing complete! ****' }));
 });
