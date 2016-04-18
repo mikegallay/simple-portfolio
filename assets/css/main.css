@@ -1025,6 +1025,11 @@ nav {
   -webkit-transition: background-color 300ms, margin-top 300ms, top 1s 1s;
           transition: background-color 300ms, margin-top 300ms, top 1s 1s;
 }
+nav a[href='#Home'] {
+  display: inline-block;
+  position: absolute;
+  top: -11px;
+}
 nav.settle {
   top: 0;
 }
@@ -1318,7 +1323,7 @@ h1.joinTeamCTA {
   width: 49%;
   max-height: 25em;
   height: auto;
-  margin: 0.5%;
+  margin: 0.4222222em;
   overflow: hidden;
   min-height: 150px;
 }
@@ -1404,7 +1409,7 @@ h1.joinTeamCTA {
   position: relative;
   width: 49%;
   max-height: 25em;
-  margin: 0.5%;
+  margin: 0.4222222em;
   overflow: hidden;
   -webkit-transition: margin 300ms, width 300ms;
           transition: margin 300ms, width 300ms;
@@ -1416,6 +1421,7 @@ h1.joinTeamCTA {
           transition: margin 300ms;
 }
 .cultureTile.stretchOut {
+  will-change: width, margin;
   width: 99%;
   -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
           transition: margin 300ms 300ms, width 300ms 300ms;
@@ -1440,6 +1446,7 @@ h1.joinTeamCTA {
   display: none;
 }
 .cultureTile.shrinkMe {
+  will-change: width, margin;
   width: 0%;
   margin-left: 0;
   margin-right: 0;
@@ -1539,7 +1546,7 @@ h1.joinTeamCTA {
   position: relative;
   width: 98.5%;
   max-height: 30em;
-  margin: 0.375em;
+  margin: 0.4222222em;
   overflow: hidden;
   background-color: #ffffff;
 }
@@ -1716,7 +1723,6 @@ h1.joinTeamCTA {
   .projectTile {
     width: 49%;
     max-height: 19em;
-    margin: 0.5%;
     min-height: 300px;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
@@ -1729,7 +1735,6 @@ h1.joinTeamCTA {
   .cultureTile {
     width: 49%;
     max-height: 22em;
-    margin: 0.5%;
     min-height: 300px;
   }
   .cultureTile .bio {
@@ -1753,7 +1758,7 @@ h1.joinTeamCTA {
   .officeTile {
     width: 49%;
     max-height: 20.5em;
-    margin: 0.5%;
+    margin: 0.4222222em;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1794,7 +1799,6 @@ h1.joinTeamCTA {
   .projectTile {
     width: 24%;
     max-height: 20em;
-    margin: 0.5%;
     min-height: 240px;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
@@ -1811,7 +1815,6 @@ h1.joinTeamCTA {
   .cultureTile {
     width: 24%;
     max-height: 20em;
-    margin: 0.5%;
     min-height: 240px;
   }
   .cultureTile .bio {
@@ -1825,7 +1828,6 @@ h1.joinTeamCTA {
   .officeTile {
     width: 24%;
     max-height: 20.5em;
-    margin: 0.5%;
   }
   .officeTile .officeInfo .cityName {
     text-transform: uppercase;
@@ -1874,7 +1876,6 @@ h1.joinTeamCTA {
   .projectTile {
     width: 15.6666666%;
     max-height: 39em;
-    margin: 0.5%;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
     font-size: 2em;
@@ -1892,7 +1893,6 @@ h1.joinTeamCTA {
   .officeTile {
     width: 19%;
     max-height: 39em;
-    margin: 0.5%;
   }
   .officeTile .officeInfo svg.clockGraphic {
     margin-top: 1.5em;

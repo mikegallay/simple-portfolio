@@ -69,7 +69,7 @@ h1 {
 	width: 49%;//99%;
 	max-height: 25em;
 	height:	auto;
-	margin: 0.5%;
+	margin: 0.4222222em;
 	overflow: hidden;
 	min-height: 150px;
 	
@@ -157,7 +157,7 @@ h1 {
 	position: relative;
 	width: 49%;
 	max-height: 25em;
-	margin: 0.5%;
+	margin: 0.4222222em;
 	overflow: hidden;
 	transition: margin 300ms, width 300ms;
 	min-height: 150px;
@@ -168,7 +168,7 @@ h1 {
 	}
 	
 	&.stretchOut {
-				
+		will-change: width, margin;		
 		width: 99%;
 		transition: margin 300ms 300ms, width 300ms 300ms;
 		
@@ -194,6 +194,7 @@ h1 {
 	}
 	
 	&.shrinkMe {
+		will-change: width, margin;
 		width: 0%;
 		margin-left: 0;
 		margin-right: 0;
@@ -281,7 +282,7 @@ h1 {
 	position: relative;
 	width: 98.5%;
 	max-height: 30em;
-	margin: 0.375em;
+	margin: 0.4222222em;
 	overflow: hidden;
 	background-color: #ffffff;
 	
@@ -447,7 +448,6 @@ h1 {
 	.projectTile {
 		width: 49%;
 		max-height: 19em;
-		margin: 0.5%;
 		min-height: 300px;
 		a {
 		
@@ -470,7 +470,6 @@ h1 {
 	.cultureTile {
 		width: 49%;
 		max-height: 22em;
-		margin: 0.5%;
 		min-height: 300px;
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
@@ -499,7 +498,7 @@ h1 {
 	.officeTile {
 		width: 49%;
 		max-height: 20.5em;
-		margin: 0.5%;		
+		margin: 0.4222222em;		
 	}
 
 	
@@ -547,7 +546,6 @@ h1 {
 	.projectTile {
 		width: 24%;
 		max-height: 20em;
-		margin: 0.5%;
 		min-height: 240px;
 		a {
 			.prjDescription {
@@ -573,7 +571,6 @@ h1 {
 	.cultureTile {
 		width: 24%;
 		max-height: 20em;
-		margin: 0.5%;
 		min-height: 240px;
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
@@ -587,8 +584,7 @@ h1 {
 	
 	.officeTile {
 		width: 24%;
-		max-height: 20.5em;
-		margin: 0.5%;		
+		max-height: 20.5em;	
 
 		.officeInfo {
 			
@@ -650,7 +646,6 @@ h1 {
 	.projectTile {
 		width: 15.6666666%;
 		max-height: 39em;
-		margin: 0.5%;
 	
 		a {
 			.prjDescription {
@@ -677,8 +672,7 @@ h1 {
 	
 	.officeTile {
 		width: 19%;
-		max-height: 39em;
-		margin: 0.5%;		
+		max-height: 39em;	
 
 		.officeInfo {
 			svg {

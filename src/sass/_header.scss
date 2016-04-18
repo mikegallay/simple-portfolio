@@ -17,7 +17,13 @@ nav {
 	z-index: 99999;
 	height: 4.25em;
 	transition: background-color 300ms, margin-top 300ms, top 1s 1s;
-
+	
+	a[href='#Home'] {
+		display: inline-block;
+		position: absolute;
+		top: -11px;
+	}
+	
 	&.settle{
 		top:0;
 	}
