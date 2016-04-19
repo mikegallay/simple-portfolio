@@ -141,7 +141,7 @@
 			this.initCultureCnt();
 			this.initClockCnt();
 			
-			force.opt.moveEasing = 'easeInCubic';
+			force.opt.moveEasing = 'easeInOutQuint';
 		},
 		
 		initPortfolioCnt : function(){
@@ -238,13 +238,13 @@
 					 var nextTile = $(this).next();
 					 var picHolder = nextTile.find('.picHolder');
 
-					 colW = picHolder.width(); //move this to a global var on resize???
+					 colW = picHolder.width(); 
 
 				} else if($(this).hasClass('pushLeft')) {
 					 var prevTile = $(this).prev();
 					 var picHolder = prevTile.find('.picHolder');
 
-					 colW = picHolder.width(); //move this to a global var on resize???
+					 colW = picHolder.width(); 
 				}
 			});
 
@@ -258,14 +258,15 @@
 	var mgbMainSys = {
 
 		init : function() {
-
 			$('nav a').on('click', function(){
 				$('nav a').removeClass('active');
 				$(this).addClass('active');
 
 				var hashValue = $(this).attr('href');
 
-				force.jump(hashValue); // force is a plugin for link scrolling
+				force.jump(hashValue, {
+					setHash : false,
+				});
 
 				$('.ll').each(function () {
 				  if (mgbUtils.isScrolledIntoView(this) === true) {
@@ -274,12 +275,21 @@
 				  }
 				});
 			});
+			
+			$('#mbLogo').on('mouseover',function(){
+				mgbUtils.showLogo();
+			});
+
+			$('#mbLogo').on('mouseout',function(){
+				mgbUtils.hideLogo();
+			});
 		},
 
 		resize : function() {},
 		
 		handleScrolling : function(){
 			var currScroll = $(window).attr('scrollY');
+			var scrollBottom = $(document).height() - $("body").height();
 		
 			if(currScroll > 60) {
 				if(!$("nav").hasClass("sticky")) {
@@ -291,12 +301,13 @@
 					mgbUtils.showLogo();
 				}
 			} else {
+				$('nav a').removeClass('active');
 				$("nav").removeClass("sticky");
 				$("nav").css({'background-color': 'rgba(107, 109, 111, 0.0)', 'margin-top': '1.5625em'});
 				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
 			
 				mgbUtils.hideLogo();
-			
+				
 				$('#mbLogo').on('mouseover',function(){
 					mgbUtils.showLogo();
 				});
@@ -304,8 +315,31 @@
 				$('#mbLogo').on('mouseout',function(){
 					mgbUtils.hideLogo();
 				});
+				
+				location.hash = '';
 			}
-		
+			
+			setTimeout(function(){
+				$('section').each(function(){
+				
+					var diff = Math.abs($(this).offset().top - $(window).scrollTop());
+					var hashName = $(this).attr('id');
+					
+					if(diff > -60 && diff < 60) {			
+						$('nav a').removeClass('active');
+						$('nav a[href="#'+hashName+'"]').addClass('active');
+						location.hash = hashName;
+					}
+				
+					if($(window).scrollTop() === scrollBottom) {
+						$('nav a').removeClass('active');
+						$('.navigation li:last-child a').addClass('active');
+						location.hash = $('.navigation li:last-child a').attr('href');
+					} 
+				});				
+			}, 100);
+			
+			
 	 	   $('.ll').each(function () {
 	 	      if (mgbUtils.isScrolledIntoView(this) === true) {
 	 	          $(this).addClass('in-view');
@@ -323,8 +357,12 @@
 	window.onscroll = mgbMainSys.handleScrolling;
 	window.onresize = resizeChecker;
 	
-	setTimeout(function(){ resize(); }, 500);
-	
+
+		setTimeout(function(){ 
+			resize(); 
+		}, 500);	
+
+
     var lastWindowHeight = $(window).height();
    	var lastWindowWidth = $(window).width();
 		

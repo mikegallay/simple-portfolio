@@ -22,7 +22,8 @@
 	<div class="container">
 		
 		<section id="OurWork">	
-			<h1 class="sectionHeading">IT'S NOT CREATIVE UNLESS IT WORKS</h1>
+			<h1 class="sectionHeading">IT'S NOT <span class="blueFont">CREATIVE</span> <br> UNLESS IT <span class="blueFont
+				">WORKS.</span></h1>
 			
 			<div class="portfolioContent">
 				
@@ -37,7 +38,7 @@
 		</section>
 		
 		<section id="OurPeople">
-			<h1 class="sectionHeading">WHO SAYS WE CAN'T</h1>
+			<h1 class="sectionHeading">WHO SAYS <span class="blueFont">WE</span> CAN'T?</h1>
 			
 			<div class="row alignRight">
 				<a id="officeToggle" class="button" alt="">OUR OFFICES  <?php addIcon('menu_dropdown_arrow'); ?></a>
