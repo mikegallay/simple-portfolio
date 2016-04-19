@@ -6,24 +6,20 @@ Handlebars\Autoloader::register();
 use Handlebars\Handlebars;
 
 
+
 function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
 	$templateStr = file_get_contents($tempname);
 	$str = file_get_contents($jsonfile);
 	
 	$wrapper = '{ "objects": ' . $str . ' }';
 	$objects = json_decode($wrapper, true); 
-	
-	
-	//add mediapath to slide-img	
-	/*for($lcv=0; $lcv < count($objects["objects"]); $lcv++) {
-	    $objects["objects"][$lcv]['slide-img'] = MEDIAPATH . $objects["objects"][$lcv]['slide-img'];
-	}*/
-		
+			
 	$engine = new Handlebars();
 
 	$renderedHTML = $engine->render($templateStr, $objects);
 	return $renderedHTML;
 }
+
 
 
 function addIcon($str) {

@@ -358,9 +358,9 @@
 	window.onresize = resizeChecker;
 	
 
-		setTimeout(function(){ 
-			resize(); 
-		}, 500);	
+	setTimeout(function(){ 
+		resize(); 
+	}, 500);	
 
 
     var lastWindowHeight = $(window).height();
