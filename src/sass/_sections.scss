@@ -18,12 +18,14 @@
 
 .portfolioContent, .cultureContent, .officeContent {
 	margin-top: 1.2em;
-	-js-display: flex;
+	/*-js-display: flex;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: stretch;
-	align-content: space-around;
+	align-content: space-around;*/
+	display:inline-block;
+	
 	
 	.in-view {
 	    opacity: 1;
@@ -38,11 +40,13 @@
 	.in-view + .bgOverlay {
 		opacity: 1;
 	}
+	&.col-2-by-1 {
+		//flex-basis: 49%;
+		width:49%;
+	}
 }
 
-.col-2-by-1 {
-	flex-basis: 49%;
-}
+
 
 h1 {
 	margin: 0;
@@ -69,9 +73,10 @@ h1 {
 	width: 49%;//99%;
 	max-height: 25em;
 	height:	auto;
-	margin: 0.4222222em;
+	margin: .5%;//0.4222222em;
 	overflow: hidden;
 	min-height: 150px;
+	float:left;
 	
 	a {
 		display: block;
@@ -161,7 +166,7 @@ h1 {
 	overflow: hidden;
 	transition: margin 300ms, width 300ms;
 	min-height: 150px;
-	
+	float:left;
 	picture{
 		margin-left:0;
 		transition: margin 300ms;
@@ -285,7 +290,7 @@ h1 {
 	margin: 0.4222222em;
 	overflow: hidden;
 	background-color: #ffffff;
-	
+	float:left;
 	a {
 		cursor: pointer;
 		display: block;
@@ -566,6 +571,9 @@ h1 {
 				}	
 			}
 		}
+		&.col-2-by-1 {
+			width:49%;
+		}
 	}
 	
 	.cultureTile {
@@ -635,13 +643,7 @@ h1 {
 	}
 	
 	
-	.isShowcaseFinal {
-		flex-basis: 32.3333%;
-	}
 	
-	.col-2-by-1 {
-		flex-basis: 32.3333%;
-	}
 	
 	.projectTile {
 		width: 15.6666666%;
@@ -657,6 +659,12 @@ h1 {
 					}
 				}	
 			}
+		}
+		&.col-2-by-1 {
+			width:32%;
+		}
+		&.isShowcaseFinal {
+			width:32%;
 		}
 	}
 	

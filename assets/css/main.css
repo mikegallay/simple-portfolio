@@ -1258,28 +1258,13 @@ ul.navigation li a.active {
 
 .portfolioContent, .cultureContent, .officeContent {
   margin-top: 1.2em;
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  /*-js-display: flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-align-content: space-around;
-      -ms-flex-line-pack: distribute;
-          align-content: space-around;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: space-around;*/
+  display: inline-block;
 }
 .portfolioContent .in-view, .cultureContent .in-view, .officeContent .in-view {
   opacity: 1;
@@ -1294,11 +1279,8 @@ ul.navigation li a.active {
 .portfolioContent .in-view + .bgOverlay, .cultureContent .in-view + .bgOverlay, .officeContent .in-view + .bgOverlay {
   opacity: 1;
 }
-
-.col-2-by-1 {
-  -webkit-flex-basis: 49%;
-      -ms-flex-preferred-size: 49%;
-          flex-basis: 49%;
+.portfolioContent.col-2-by-1, .cultureContent.col-2-by-1, .officeContent.col-2-by-1 {
+  width: 49%;
 }
 
 h1 {
@@ -1323,9 +1305,10 @@ h1.joinTeamCTA {
   width: 49%;
   max-height: 25em;
   height: auto;
-  margin: 0.4222222em;
+  margin: .5%;
   overflow: hidden;
   min-height: 150px;
+  float: left;
 }
 .projectTile a {
   display: block;
@@ -1414,6 +1397,7 @@ h1.joinTeamCTA {
   -webkit-transition: margin 300ms, width 300ms;
           transition: margin 300ms, width 300ms;
   min-height: 150px;
+  float: left;
 }
 .cultureTile picture {
   margin-left: 0;
@@ -1549,6 +1533,7 @@ h1.joinTeamCTA {
   margin: 0.4222222em;
   overflow: hidden;
   background-color: #ffffff;
+  float: left;
 }
 .officeTile a {
   cursor: pointer;
@@ -1811,6 +1796,9 @@ h1.joinTeamCTA {
     font-size: 1em;
     margin-top: 0;
   }
+  .projectTile.col-2-by-1 {
+    width: 49%;
+  }
 
   .cultureTile {
     width: 24%;
@@ -1861,24 +1849,18 @@ h1.joinTeamCTA {
     text-align: center;
   }
 
-  .isShowcaseFinal {
-    -webkit-flex-basis: 32.3333%;
-        -ms-flex-preferred-size: 32.3333%;
-            flex-basis: 32.3333%;
-  }
-
-  .col-2-by-1 {
-    -webkit-flex-basis: 32.3333%;
-        -ms-flex-preferred-size: 32.3333%;
-            flex-basis: 32.3333%;
-  }
-
   .projectTile {
     width: 15.6666666%;
     max-height: 39em;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
     font-size: 2em;
+  }
+  .projectTile.col-2-by-1 {
+    width: 32%;
+  }
+  .projectTile.isShowcaseFinal {
+    width: 32%;
   }
 
   .cultureTile {
