@@ -2341,6 +2341,13 @@ var force = function() {
 
 				mgbUtils.tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
 				mgbUtils.tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
+				
+				$(this).on('click', function() {
+					var officeDataText = $(this).children('span').html();
+				
+					$("#officeDetails").html('');
+					$("#officeDetails").html(officeDataText);
+				});		
 			});
 		},
 		
@@ -2469,7 +2476,7 @@ var force = function() {
 	mgbHeader.init();
 	mgbContent.init();
 	mgbMainSys.init();
-		
+	
 	window.onscroll = mgbMainSys.handleScrolling;
 	window.onresize = resizeChecker;
 	

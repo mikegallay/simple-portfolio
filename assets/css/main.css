@@ -866,6 +866,12 @@ a:active {
   color: #ffffff;
 }
 
+.fullBleed {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
 .container {
   max-width: 85.625em;
   margin: 1.5625em auto;
@@ -876,12 +882,6 @@ a:active {
 }
 .container.settle {
   margin-top: 1.5625em;
-}
-
-.row {
-  display: block;
-  padding-left: 0.50em;
-  padding-right: 0.50em;
 }
 
 .button {
@@ -1244,20 +1244,16 @@ ul.navigation li a.active {
   margin-left: -.75em;
 }
 
-#OurWork {
+#OurWork, #OurPeople, #OurOffices {
   min-height: 500px;
-}
-
-#OurPeople {
-  min-height: 500px;
-}
-
-#OurOffices {
-  min-height: 500px;
+  width: 100%;
+  overflow: hidden;
 }
 
 #JoinTeam {
   min-height: 200px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .portfolioContent, .cultureContent, .officeContent {
@@ -1393,7 +1389,7 @@ h1.joinTeamCTA {
   overflow: hidden;
   -webkit-transition: margin 300ms, width 300ms;
           transition: margin 300ms, width 300ms;
-  min-height: 150px;
+  min-height: 13.5625em;
   float: left;
 }
 .cultureTile picture {
@@ -1508,18 +1504,50 @@ h1.joinTeamCTA {
 }
 
 #officeDetails {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  display: inline-block;
   width: 100%;
+}
+#officeDetails .leftSide {
+  float: left;
+  width: 49%;
+  display: inline-block;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  max-height: 28.125em;
+}
+#officeDetails .rightSide {
+  float: left;
+  width: 49%;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  padding-top: 0.5%;
+  display: inline-block;
+}
+#officeDetails h1 {
+  color: #46ccc5;
+  font-family: 'Din-Bold', san-serif;
+  font-size: 4em;
+  line-height: 0.6em;
+}
+#officeDetails .ribbon {
+  background-color: #46ccc5;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+}
+#officeDetails .ribbon::after, #officeDetails .ribbon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 1000%;
+  height: 100%;
+  background-color: inherit;
+  z-index: -1;
+}
+#officeDetails .ribbon::before {
+  left: -200%;
+  min-width: 200%;
 }
 
 .officeTile {
@@ -1718,7 +1746,7 @@ h1.joinTeamCTA {
   .cultureTile {
     width: 49%;
     max-height: 31em;
-    min-height: 300px;
+    min-height: 31em;
   }
   .cultureTile .bio {
     font-family: 'Gotham-Light', san-serif;
@@ -1802,7 +1830,7 @@ h1.joinTeamCTA {
   .cultureTile {
     width: 24%;
     max-height: 20em;
-    min-height: 240px;
+    min-height: 20em;
   }
   .cultureTile .bio {
     font-family: 'Gotham-Light', san-serif;
@@ -1868,6 +1896,7 @@ h1.joinTeamCTA {
   .cultureTile {
     width: 15.6666666%;
     max-height: 20em;
+    min-height: 20em;
     margin: 0.5%;
   }
   .cultureTile.stretchOut {

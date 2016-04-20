@@ -19,14 +19,13 @@
     <?php include 'modules/_header.inc.php'; ?>
 	
 	<!-- MAIN CONTENT GOES HERE -->
-	<div class="container">
-		
-		<section id="OurWork">	
+	<section id="OurWork" class="fullBleeg">
+		<div class="container">		
 			<h1 class="sectionHeading">IT'S NOT <span class="blueFont">CREATIVE</span> <br> UNLESS IT <span class="blueFont
 				">WORKS.</span></h1>
-			
+		
 			<div class="portfolioContent">
-				
+			
 				<?php
 					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "content/data/portfolio-data.json");
 					echo $portfolioData; 
@@ -35,15 +34,17 @@
 			<div class="moreButton">
 				<a id="addFolioContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
-		</section>
-		
-		<section id="OurPeople">
+		</div>
+	<section>
+	
+	<section id="OurPeople" class="fullBleed">
+		<div class="container">
 			<h1 class="sectionHeading">WHO SAYS <span class="blueFont">WE</span> CAN'T?</h1>
-			
+		
 			<div class="row alignRight">
 				<a id="officeToggle" class="button" alt="">OUR OFFICES  <?php addIcon('menu_dropdown_arrow'); ?></a>
 			</div>
-			
+		
 			<div class="cultureContent">
 				<?php
 					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "content/data/culture-data.json");
@@ -53,13 +54,14 @@
 			<div class="moreButton">
 				<a id="addCultureContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
-		</section>
-		
-
-		<section id="OurOffices">
+		</div>	
+	<section>
+	
+	<section id="OurOffices" class="fullBleed">
+		<div class="container">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
 			
-			<article id="officeDetails" class="row"></article>
+			<article id="officeDetails"></article>
 			
 			<div class="officeContent">
 				<?php
@@ -67,15 +69,16 @@
 					echo $officeData; 
 				?>
 			</div>
-		</section>
-		
-		<section id="JoinTeam">
+		</div>
+	</section>
+	
+	<section id="JoinTeam" class="fullBleed">	
+		<div class="container">
 			<h1 class="sectionHeading joinTeamCTA">INTERESTED IN <br>
 				JOING THE TEAM?</h1>
 		
 			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
-		</section>
-		
+		</div>	
 	</div>
 <!-- 	
 	<div class="pfill-test">

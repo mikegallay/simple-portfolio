@@ -1,18 +1,14 @@
 
-#OurWork {
+#OurWork, #OurPeople, #OurOffices {
 	min-height: 500px;
-}
-
-#OurPeople {
-	min-height: 500px;
-}
-
-#OurOffices {
-	min-height: 500px;
+	width: 100%;
+	overflow: hidden;
 }
 
 #JoinTeam {
 	min-height: 200px;
+	width: 100%;
+	overflow: hidden;
 }
 
 
@@ -157,7 +153,7 @@ h1 {
 	margin: 0.5%;
 	overflow: hidden;
 	transition: margin 300ms, width 300ms;
-	min-height: 150px;
+	min-height: 13.5625em;
 	float:left;
 	
 	picture{
@@ -269,10 +265,56 @@ h1 {
 
 
 #officeDetails {
-	-js-display: flex;
-	display: flex;
-	flex-flow: row;
+	display:inline-block;
 	width: 100%;
+	
+	.leftSide {
+		float: left;
+		width: 49%;
+		display: inline-block;
+		padding-right: 0.5%;
+		padding-left: 0.5%;
+		max-height: 28.125em;
+	}
+	
+	.rightSide {
+		float: left;
+		width: 49%;
+		padding-right: 0.5%;
+		padding-left: 0.5%;
+		padding-top: 0.5%;
+		display: inline-block;
+	}
+	
+	h1 {
+		color: $skyblueColor;
+		font-family: 'Din-Bold', san-serif;
+		font-size: 4em;
+		line-height: 0.6em;
+	}
+	
+	.ribbon {
+		background-color: $skyblueColor;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		position: relative;
+		
+		&::after,&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 100%;
+			min-width: 1000%;
+			height: 100%;
+			background-color: inherit;
+			z-index: -1;
+		}
+		
+		&::before {
+			left: -200%;
+		    min-width: 200%;
+		}
+	}
 }
 
 .officeTile {
@@ -465,7 +507,8 @@ h1 {
 	.cultureTile {
 		width: 49%;
 		max-height: 31em;
-		min-height: 300px;
+		min-height: 31em;
+		
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
 			font-size: 0.9em;
@@ -571,7 +614,8 @@ h1 {
 	.cultureTile {
 		width: 24%;
 		max-height: 20em;
-		min-height: 240px;
+		min-height: 20em;
+
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
 			font-size: 1em;
@@ -669,6 +713,7 @@ h1 {
 	.cultureTile {
 		width: 15.6666666%;
 		max-height: 20em;
+		min-height: 20em;
 		margin: 0.5%;
 
 		&.stretchOut {

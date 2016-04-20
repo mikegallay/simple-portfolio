@@ -37,21 +37,22 @@ a {
 	}
 }
 
+.fullBleed {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
 .container {
 	max-width: 85.625em;  // 1370px / 16px
 	margin: 1.5625em auto;
 	padding: 0;
 	margin-top: 100%;
 	transition:margin 1s .5s;
+	
 	&.settle{
 		margin-top:1.5625em;
 	}
-}
-
-.row {
-	display: block;
-	padding-left: 0.50em;
-	padding-right: 0.50em;
 }
 
 .button {

@@ -19,15 +19,15 @@
 					
 				 <svg class="icon {{{clockImage}}}-inline clockGraphic" role="img" aria-labelledby="title" >
 					 <g class="clockLineGroup" transform="translate(0,225) rotate(-90)">
-		   				 <g>
+		   				<g>
 		   			 		 <circle class="clockHours" cx="150" cy="75" r="75" fill="white" fill-opacity="0.0" stroke="#46ccc5" stroke-width="3" />
-		   		 		 </g>
+		   		 		</g>
 				 
-						 <g>
-		   			 		 <circle class="clockMinutes" cx="150" cy="75" r="70" fill="white" fill-opacity="0.0" stroke="#ffffff" stroke-width="2" />
-		   		 		 </g>
+						<g>
+		   			 		<circle class="clockMinutes" cx="150" cy="75" r="70" fill="white" fill-opacity="0.0" stroke="#ffffff" stroke-width="2" />
+		   		 		</g>
 			   	  	</g>
-					     <use xlink:href="#{{{clockImage}}}"></use>			   	
+					<use xlink:href="#{{{clockImage}}}"></use>			   	
 				 </svg>
 			
 				<p>
@@ -39,33 +39,6 @@
 		
 		<span hidden>
 			<div class="leftSide">
-				<span class="closeMe">CLOSE ME</span>
-				
-				<h2>mcgarrybowen</h2>
-				<h1>{{{city}}}</h1>
-			
-				<br>
-				<strong>CONTACT INFORMATION</strong>
-				<br>
-				{{{address}}}
-				<br>
-				{{{telephone}}}
-			
-				<br><br>
-			
-				{{{mainContact}}}
-				<br>
-				{{{contactTitle}}}
-			
-				<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
-				<br>
-				<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
-				<br>
-			
-				<strong>PRESS AND PR INQUIRIES</strong>
-				<a href="{{{prEmail}}}">{{{prEmail}}}</a>
-			</div>
-			<div class="rightSide">
 				<picture>
 				<!--[if IE 9]>
 					<video style="display: none;"><![endif]-->
@@ -74,12 +47,37 @@
 					</video>
 				<![endif]-->
 				<!--[if !lte IE 9]> -->
-					<img srcset='{{{heroImage}}}.jpg' src="assets/img/common/blank.png" alt="{{{altText}}}">
+					<img srcset='{{{heroImage}}}@2x.jpg' src="assets/img/common/blank.png" alt="{{{altText}}}">
 				<!-- <![endif]-->
-				<!--[if lte IE 9 ]>
-					<img src='{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x' alt="{{{altText}}}"
-				<![endif]-->
-				</picture>				
+				</picture>
+			</div>
+				
+			<div class="rightSide">
+		
+				<h1>{{{city}}}</h1>
+	
+				<div class="ribbon">
+					{{{address}}}
+					<br><br>
+					{{{telephone}}}
+	
+					<br><br>
+	
+					{{{mainEmail}}}
+				
+					<br><br>
+				
+					<strong>NEW BUSINESS</strong>
+					<br>
+					<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
+					<br>
+					<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
+					<br>
+	
+					<strong>PUBLIC RELATIONS</strong>
+					<br>
+					<a href="{{{prEmail}}}">{{{prEmail}}}</a>
+				</div>	
 			</div>
 		</span>
 	</div>
