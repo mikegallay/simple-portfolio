@@ -1,6 +1,6 @@
 {{#each objects}}
 	<div class="officeTile" data-time-offset='{{{timeDiff}}}'>
-		<a>
+		<a href="officeDetails">
 			<picture>
 			<!--[if IE 9]>
 				<video style="display: none;"><![endif]-->
@@ -58,26 +58,37 @@
 	
 				<div class="ribbon">
 					{{{address}}}
-					<br><br>
+					<br>
+					<br>
 					{{{telephone}}}
 	
-					<br><br>
+					<br>
+					<br>
 	
 					{{{mainEmail}}}
 				
-					<br><br>
-				
+					<br>
+					<br>
+					<br>
+					
 					<strong>NEW BUSINESS</strong>
+					<br>
 					<br>
 					<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
 					<br>
+					<br>
 					<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
 					<br>
-	
+					<br>
+					<br>
 					<strong>PUBLIC RELATIONS</strong>
 					<br>
 					<a href="{{{prEmail}}}">{{{prEmail}}}</a>
-				</div>	
+				</div>
+				
+				<div class="officeStats">
+					<div class="tempSpace" style="height: 5.5em; background-color: #c6c6c6;"></div>
+				</div>
 			</div>
 		</span>
 	</div>

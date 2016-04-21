@@ -279,9 +279,9 @@ h1 {
 	
 	.rightSide {
 		float: left;
-		width: 49%;
+		width: 45%;
 		padding-right: 0.5%;
-		padding-left: 0.5%;
+		padding-left: 4%;
 		padding-top: 0.5%;
 		display: inline-block;
 	}
@@ -289,14 +289,14 @@ h1 {
 	h1 {
 		color: $skyblueColor;
 		font-family: 'Din-Bold', san-serif;
-		font-size: 4em;
+		font-size: 6em;
 		line-height: 0.6em;
 	}
 	
 	.ribbon {
 		background-color: $skyblueColor;
-		padding-top: 1em;
-		padding-bottom: 1em;
+		padding-top: 2em;
+		padding-bottom: 2em;
 		position: relative;
 		
 		&::after,&::before {
@@ -314,6 +314,11 @@ h1 {
 			left: -200%;
 		    min-width: 200%;
 		}
+	}
+	
+	.officeStats {
+		padding-top: 2em;
+		padding-bottom: 2em;
 	}
 }
 

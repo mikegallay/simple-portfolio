@@ -2257,7 +2257,7 @@ var force = function() {
 			this.initCultureCnt();
 			this.initClockCnt();
 			
-			force.opt.moveEasing = 'easeInOutQuint';
+			force.opt.moveEasing = 'easeInOutBack';
 		},
 		
 		initPortfolioCnt : function(){
@@ -2342,7 +2342,9 @@ var force = function() {
 				mgbUtils.tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
 				mgbUtils.tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
 				
-				$(this).on('click', function() {
+				$(this).on('click', function(e) {
+					e.preventDefault();
+					
 					var officeDataText = $(this).children('span').html();
 				
 					$("#officeDetails").html('');

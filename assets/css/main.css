@@ -1517,22 +1517,22 @@ h1.joinTeamCTA {
 }
 #officeDetails .rightSide {
   float: left;
-  width: 49%;
+  width: 45%;
   padding-right: 0.5%;
-  padding-left: 0.5%;
+  padding-left: 4%;
   padding-top: 0.5%;
   display: inline-block;
 }
 #officeDetails h1 {
   color: #46ccc5;
   font-family: 'Din-Bold', san-serif;
-  font-size: 4em;
+  font-size: 6em;
   line-height: 0.6em;
 }
 #officeDetails .ribbon {
   background-color: #46ccc5;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   position: relative;
 }
 #officeDetails .ribbon::after, #officeDetails .ribbon::before {
@@ -1548,6 +1548,10 @@ h1.joinTeamCTA {
 #officeDetails .ribbon::before {
   left: -200%;
   min-width: 200%;
+}
+#officeDetails .officeStats {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .officeTile {

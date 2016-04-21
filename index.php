@@ -35,7 +35,7 @@
 				<a id="addFolioContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>
-	<section>
+	</section>
 	
 	<section id="OurPeople" class="fullBleed">
 		<div class="container">
@@ -55,7 +55,7 @@
 				<a id="addCultureContent" href=""><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>	
-	<section>
+	</section>
 	
 	<section id="OurOffices" class="fullBleed">
 		<div class="container">
@@ -79,7 +79,7 @@
 		
 			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</div>	
-	</div>
+	</section>
 <!-- 	
 	<div class="pfill-test">
 		<div class="pfill-wrapper">
