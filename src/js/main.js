@@ -227,7 +227,7 @@
 				mgbUtils.tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
 				
 				$(this).on('click', function(e) {
-					e.preventDefault();
+					//e.preventDefault();
 					
 					var officeDataText = $(this).children('span').html();
 				
