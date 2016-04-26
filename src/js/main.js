@@ -368,8 +368,8 @@
 					$('.navigation li:last-child a').addClass('active');
 				} 
 				
-				if(mgbUtils.isScrolledIntoView( $('#'+hashName).find("span[data-forward]") )) {
-					$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');
+				if(mgbUtils.isScrolledIntoView( $(this).find("h1") )) {
+				 	$(this).find("span[data-forward]").addClass('forwardVisible');
 				}
 			});				
 			
