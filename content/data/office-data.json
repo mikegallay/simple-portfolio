@@ -104,6 +104,7 @@
 	{	
 		"imgSrc": "assets/img/our_offices/office_sanfransisco",
 		"city": "SAN FRANCISCO",
+		"shortName": "SAN FRAN",
 		"timeDiff": "-7",
 		"address": "",
 		"telephone": "",

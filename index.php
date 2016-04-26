@@ -19,10 +19,9 @@
     <?php include 'modules/_header.inc.php'; ?>
 	
 	<!-- MAIN CONTENT GOES HERE -->
-	<section id="OurWork" class="fullBleeg">
+	<section id="OurWork" class="fullBleed">
 		<div class="container">		
-			<h1 class="sectionHeading">IT'S NOT <span class="blueFont">CREATIVE</span> <br> UNLESS IT <span class="blueFont
-				">WORKS.</span></h1>
+			<h1 class="sectionHeading"><span data-forward>IT'S NOT</span> <span data-forward class="blueFont">CREATIVE</span> <br> <span data-forward="sectionForward">UNLESS IT</span> <span data-forward class="blueFont">WORKS.</span></h1>
 		
 			<div class="portfolioContent">
 			
@@ -39,7 +38,7 @@
 	
 	<section id="OurPeople" class="fullBleed">
 		<div class="container">
-			<h1 class="sectionHeading">WHO SAYS <span class="blueFont">WE</span> CAN'T?</h1>
+			<h1 class="sectionHeading"><span data-forward>WHO SAYS</span> <span data-forward class="blueFont">WE</span> <span data-forward>CAN'T?</span></h1>
 		
 			<div class="row alignRight">
 				<a id="officeToggle" class="button" alt="">OUR OFFICES  <?php addIcon('menu_dropdown_arrow'); ?></a>

@@ -990,6 +990,21 @@ a:active {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
+.moreButton svg {
+  fill: #46ccc5;
+}
+
+.closeMe {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  cursor: pointer;
+}
+.closeMe svg {
+  fill: white;
+}
 
 /* fade image in after load */
 .lazyload,
@@ -1290,6 +1305,86 @@ h1.sectionHeading {
   letter-spacing: 0.04em;
   text-align: center;
 }
+h1.sectionHeading span[data-forward]:nth-child(1) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 300ms;
+          transition: opacity 1s 300ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(1).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(2) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 600ms;
+          transition: opacity 1s 600ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(2).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(3) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 900ms;
+          transition: opacity 1s 900ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(3).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(4) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 1200ms;
+          transition: opacity 1s 1200ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(4).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(5) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 1500ms;
+          transition: opacity 1s 1500ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(5).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(6) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 1800ms;
+          transition: opacity 1s 1800ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(6).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(7) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 2100ms;
+          transition: opacity 1s 2100ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(7).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(8) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 2400ms;
+          transition: opacity 1s 2400ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(8).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(9) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 2700ms;
+          transition: opacity 1s 2700ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(9).forwardVisible {
+  opacity: 1;
+}
+h1.sectionHeading span[data-forward]:nth-child(10) {
+  opacity: 0;
+  -webkit-transition: opacity 1s 3000ms;
+          transition: opacity 1s 3000ms;
+}
+h1.sectionHeading span[data-forward]:nth-child(10).forwardVisible {
+  opacity: 1;
+}
 h1.joinTeamCTA {
   text-align: center;
 }
@@ -1506,6 +1601,10 @@ h1.joinTeamCTA {
 #officeDetails {
   display: inline-block;
   width: 100%;
+  height: 0em;
+  clear: left;
+  -webkit-transition: height 400ms 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          transition: height 400ms 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 #officeDetails .leftSide {
   float: left;
@@ -1514,6 +1613,11 @@ h1.joinTeamCTA {
   padding-right: 0.5%;
   padding-left: 0.5%;
   max-height: 28.125em;
+}
+#officeDetails .leftSide picture {
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+          transition: opacity 500ms;
 }
 #officeDetails .rightSide {
   float: left;
@@ -1528,21 +1632,33 @@ h1.joinTeamCTA {
   font-family: 'Din-Bold', san-serif;
   font-size: 6em;
   line-height: 0.6em;
+  position: relative;
+  top: 2em;
+  opacity: 0;
+  -webkit-transition: top 1s, opacity 10ms;
+          transition: top 1s, opacity 10ms;
 }
 #officeDetails .ribbon {
-  background-color: #46ccc5;
   padding-top: 2em;
   padding-bottom: 2em;
   position: relative;
+  height: 0%;
+  -webkit-transition: height 500ms;
+          transition: height 500ms;
+}
+#officeDetails .ribbon .info {
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+          transition: opacity 500ms;
 }
 #officeDetails .ribbon::after, #officeDetails .ribbon::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0%;
   min-width: 1000%;
-  height: 100%;
-  background-color: inherit;
+  height: inherit;
+  background-color: #46ccc5;
   z-index: -1;
 }
 #officeDetails .ribbon::before {
@@ -1552,6 +1668,40 @@ h1.joinTeamCTA {
 #officeDetails .officeStats {
   padding-top: 2em;
   padding-bottom: 2em;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+          transition: opacity 500ms;
+}
+#officeDetails.showDetails {
+  height: 41em;
+  -webkit-transition: height 500ms;
+          transition: height 500ms;
+}
+#officeDetails.showDetails h1 {
+  opacity: 1;
+  top: 0em;
+  -webkit-transition: top 1s 500ms, opacity 1ms 700ms;
+          transition: top 1s 500ms, opacity 1ms 700ms;
+}
+#officeDetails.showDetails .ribbon {
+  height: 100%;
+  -webkit-transition: height 300ms 300ms;
+          transition: height 300ms 300ms;
+}
+#officeDetails.showDetails .ribbon .info {
+  opacity: 1;
+  -webkit-transition: opacity 500ms 800ms;
+          transition: opacity 500ms 800ms;
+}
+#officeDetails.showDetails .officeStats {
+  opacity: 1;
+  -webkit-transition: opacity 500ms 500ms;
+          transition: opacity 500ms 500ms;
+}
+#officeDetails.showDetails .leftSide picture {
+  opacity: 1;
+  -webkit-transition: opacity 500ms 500ms;
+          transition: opacity 500ms 500ms;
 }
 
 .officeTile {
@@ -1577,6 +1727,17 @@ h1.joinTeamCTA {
   opacity: 0;
 }
 .officeTile a:hover svg circle.clockHours {
+  stroke: #DEE2EA;
+}
+.officeTile a.active {
+  background-color: #46ccc5;
+  -webkit-transition: opacity 300ms;
+          transition: opacity 300ms;
+}
+.officeTile a.active .bgOverlay, .officeTile a.active picture {
+  opacity: 0;
+}
+.officeTile a.active svg circle.clockHours {
   stroke: #DEE2EA;
 }
 .officeTile .bgOverlay {
@@ -1802,11 +1963,12 @@ h1.joinTeamCTA {
   }
   h1.sectionHeading {
     font-family: 'Din-Bold', san-serif;
-    font-size: 5em;
+    font-size: 7em;
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
     line-height: 1em;
+    margin-top: 1em;
   }
   h1.joinTeamCTA {
     text-align: center;

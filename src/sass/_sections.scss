@@ -49,6 +49,17 @@ h1 {
 		margin-bottom: 1em;
 		letter-spacing: 0.04em;
 		text-align: center;
+		
+		@for $i from 1 through 10 {
+			span[data-forward]:nth-child(#{$i}) {
+				opacity: 0;
+				transition: opacity 1s #{$i * 300}ms;
+			
+				&.forwardVisible {
+					opacity: 1;
+				}
+			}	
+		}
 	}
 	
 	&.joinTeamCTA {
@@ -267,6 +278,9 @@ h1 {
 #officeDetails {
 	display:inline-block;
 	width: 100%;
+	height: 0em;
+	clear: left;
+	transition: height 400ms 300ms  cubic-bezier(0.6, -0.28, 0.735, 0.045);
 	
 	.leftSide {
 		float: left;
@@ -275,6 +289,11 @@ h1 {
 		padding-right: 0.5%;
 		padding-left: 0.5%;
 		max-height: 28.125em;
+		
+		picture {
+			opacity: 0;
+			transition: opacity 500ms;
+		}
 	}
 	
 	.rightSide {
@@ -291,22 +310,32 @@ h1 {
 		font-family: 'Din-Bold', san-serif;
 		font-size: 6em;
 		line-height: 0.6em;
+		position: relative;
+		top: 2em;
+		opacity: 0;
+		transition: top 1s, opacity 10ms;
 	}
 	
 	.ribbon {
-		background-color: $skyblueColor;
 		padding-top: 2em;
 		padding-bottom: 2em;
 		position: relative;
+		height: 0%;
+		transition: height 500ms;
+		
+		.info {
+			opacity: 0;
+			transition: opacity 500ms;
+		}
 		
 		&::after,&::before {
 			content: '';
 			position: absolute;
 			top: 0;
-			left: 100%;
+			left: 0%;
 			min-width: 1000%;
-			height: 100%;
-			background-color: inherit;
+			height: inherit;
+			background-color: $skyblueColor;
 			z-index: -1;
 		}
 		
@@ -319,6 +348,42 @@ h1 {
 	.officeStats {
 		padding-top: 2em;
 		padding-bottom: 2em;
+		opacity: 0;
+		transition: opacity 500ms;
+	}
+	
+	
+	&.showDetails {
+		height: 41em;
+		transition: height 500ms;
+		
+		h1 {
+			opacity: 1;
+			top: 0em;
+			transition: top 1s 500ms, opacity 1ms 700ms;
+		}
+		
+		.ribbon {
+			height: 100%;
+			transition: height 300ms 300ms;
+			
+			.info {
+				opacity: 1;
+				transition: opacity 500ms 800ms;
+			}
+		}
+		
+		.officeStats {
+			opacity: 1;
+			transition: opacity 500ms 500ms;
+		}
+		
+		.leftSide {
+			picture {
+				opacity: 1;
+				transition: opacity 500ms 500ms;
+			}
+		}
 	}
 }
 
@@ -338,6 +403,21 @@ h1 {
 		
 		&:hover {
 			
+			background-color: #46ccc5;
+			transition: opacity 300ms;
+			
+			.bgOverlay, picture {
+				opacity: 0;
+			}
+			
+			svg {
+				circle.clockHours {
+					stroke: #DEE2EA;
+				}
+			}
+		}
+		
+		&.active {
 			background-color: #46ccc5;
 			transition: opacity 300ms;
 			
@@ -575,11 +655,12 @@ h1 {
 	
 		&.sectionHeading {
 			font-family: 'Din-Bold', san-serif;
-			font-size: 5em;
+			font-size: 7em;
 			font-weight: lighter;
 			color: $sectionHeadingColor;
 			letter-spacing: 0.04em;
 			line-height: 1em;
+			margin-top: 1em;
 		}
 		
 		&.joinTeamCTA {

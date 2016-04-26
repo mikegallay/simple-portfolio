@@ -6,64 +6,65 @@
 		"info": "This is some information"
 	},
 	{
-		"name" : "Empire",
+		"name" : "Pantone",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/empire",
+		"imgSrc": "assets/img/our_culture/pantone",
 		"info": ""
 	},
 	{
-		"name" : "Crayola",
+		"name" : "Biking",
 		"title": "",
-		"imgSrc": "assets/img/our_culture/crayola",
+		"imgSrc": "assets/img/our_culture/biking",
 		"info": ""
 	},
 	{
-		"name" : "Philip",
+		"name" : "Bio Colors",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/bio_philip",
+		"imgSrc": "assets/img/our_culture/bio_colors",
 		"info": "This is my information"
 	},
 	{
 		"name" : "Chelsea",
 		"title": "",
-		"imgSrc": "assets/img/our_culture/chelsea",
+		"imgSrc": "assets/img/our_culture/art",
 		"info": ""
 	},
 	{
-		"name" : "Jumping",
+		"name" : "Strokes",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/jumping",
+		"imgSrc": "assets/img/our_culture/strokes",
 		"info": ""
 	},
 	{
-		"name" : "JZ",
+		"name" : "Elizabeth",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/bio_jz",
+		"imgSrc": "assets/img/our_culture/bio_elizabeth",
 		"info": "This is my information"
 	},
 	{
-		"name" : "Chelsea 2",
+		"name" : "Dog",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/chelsea1",
+		"imgSrc": "assets/img/our_culture/dog",
 		"info": ""
 	},
 	{
-		"name" : "Kids",
+		"name" : "Tattoos",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/kids",
+		"imgSrc": "assets/img/our_culture/tatoos",
 		"info": ""
-	},	
-	{
-		"name" : "Brandon",
-		"title" : "My Title",
-		"imgSrc" : "assets/img/our_culture/bio_brandon",
-		"info" : "This is some information"
 	},
 	{
-		"name" : "Water Tower",
+		"name" : "Skater",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/chelsea_watertower",
+		"imgSrc": "assets/img/our_culture/bio_skater",
+		"info": "This is my information",
+		"isDouble": ""
+	},
+	{
+		"name" : "Chicago",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
 		"info": "",
-		"isDouble": "true"
+		"isDouble": "train"
 	}
 ]

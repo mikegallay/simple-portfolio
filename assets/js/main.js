@@ -2114,7 +2114,6 @@ var force = function() {
     }
 })(window, document);
 
-(function() {
 
 	var mgbUtils = {
 	   	tt : TweenMax.to,
@@ -2271,7 +2270,9 @@ var force = function() {
 	  			if($(this).children("a").length > 0) {
 	  			   $(this).addClass('pushRight');
 				   
-				   $(this).on('click', function (){	
+				   $(this).on('click', function (e){
+					   e.preventDefault();
+					   	
 				   		if(!$(this).hasClass("stretchOut")){
 				   			$(this).siblings().removeClass("shrinkMe stretchOut");	
 				   		}
@@ -2294,7 +2295,9 @@ var force = function() {
     			if($(this).children("a").length > 0) {
   					$(this).addClass('pushLeft');
     		  		
-					$(this).on('click', function() {	
+					$(this).on('click', function(e) {
+						e.preventDefault();
+						
 						 if(!$(this).hasClass("stretchOut")){
 							$(this).siblings().removeClass("shrinkMe stretchOut");	
 						 }
@@ -2342,14 +2345,27 @@ var force = function() {
 				mgbUtils.tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
 				mgbUtils.tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
 				
-				$(this).on('click', function(e) {
-					//e.preventDefault();
+				$(this).on('click', function() {
+					var currThis = $(this);
+					$(this).siblings().children("a").removeClass("active");
+					$(this).children("a").addClass("active");
 					
 					var officeDataText = $(this).children('span').html();
-				
+					
+					$("#officeDetails").removeClass('showDetails');
 					$("#officeDetails").html('');
 					$("#officeDetails").html(officeDataText);
-				});		
+					
+					setTimeout(function(){
+						$("#officeDetails").addClass('showDetails');
+						
+						$('.closeMe').on('click', function(){
+							$("#officeDetails").removeClass('showDetails');
+							$(currThis).children("a").removeClass("active");
+							//$("#officeDetails").children().fadeOut();
+						});
+					}, 300);
+				});
 			});
 		},
 		
@@ -2383,21 +2399,28 @@ var force = function() {
 	var mgbMainSys = {
 
 		init : function() {
-			$('nav a').on('click', function(){
+			$('nav a').on('click', function(e){
+				e.preventDefault();
+				
 				$('nav a').removeClass('active');
-				$(this).addClass('active');
+				var currLink = $(this);
 
 				var hashValue = $(this).attr('href');
-
+				
 				force.jump(hashValue, {
-					setHash : false,
-				});
-
-				$('.ll').each(function () {
-				  if (mgbUtils.isScrolledIntoView(this) === true) {
-				      $(this).addClass('in-view');
-					  $(this).parent().next().css('opacity', '1');
-				  }
+					setHash : true,
+					done: function(){
+						$(hashValue).find("span[data-forward]").addClass('forwardVisible');
+						
+						$(hashValue).children('.ll').each(function () {
+						  if (mgbUtils.isScrolledIntoView(this) === true) {
+						      $(this).addClass('in-view');
+							  $(this).parent().next().css('opacity', '1');
+						  }
+						});
+						
+						currLink.addClass('active');
+					}
 				});
 			});
 			
@@ -2443,26 +2466,23 @@ var force = function() {
 				
 				location.hash = '';
 			}
+
 			
-			setTimeout(function(){
-				$('section').each(function(){
+			$('section').each(function(){
+			
+				var diff = Math.abs($(this).offset().top - $(window).scrollTop());
+				var hashName = $(this).attr('id');
 				
-					var diff = Math.abs($(this).offset().top - $(window).scrollTop());
-					var hashName = $(this).attr('id');
-					
-					if(diff > -60 && diff < 60) {			
-						$('nav a').removeClass('active');
-						$('nav a[href="#'+hashName+'"]').addClass('active');
-						location.hash = hashName;
-					}
-				
-					if($(window).scrollTop() === scrollBottom) {
-						$('nav a').removeClass('active');
-						$('.navigation li:last-child a').addClass('active');
-						location.hash = $('.navigation li:last-child a').attr('href');
-					} 
-				});				
-			}, 100);
+				if(diff <= 60) {			
+					$('nav a').removeClass('active');
+					$('nav a[href="#'+hashName+'"]').addClass('active');
+				}
+			
+				if($(window).scrollTop() === scrollBottom) {
+					$('nav a').removeClass('active');
+					$('.navigation li:last-child a').addClass('active');
+				} 
+			});				
 			
 			
 	 	   $('.ll').each(function () {
@@ -2478,6 +2498,7 @@ var force = function() {
 	mgbHeader.init();
 	mgbContent.init();
 	mgbMainSys.init();
+		
 	
 	window.onscroll = mgbMainSys.handleScrolling;
 	window.onresize = resizeChecker;
@@ -2486,7 +2507,6 @@ var force = function() {
 	setTimeout(function(){ 
 		resize(); 
 	}, 500);	
-
 
     var lastWindowHeight = $(window).height();
    	var lastWindowWidth = $(window).width();
@@ -2536,5 +2556,3 @@ var force = function() {
 		});
 	}, 60000);
 
-
-})();
