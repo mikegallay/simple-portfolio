@@ -2260,7 +2260,13 @@ var force = function() {
 		},
 		
 		initPortfolioCnt : function(){
-			
+			this.portfolioContent.each(function(){
+				$(this).children("a").on('click', function() {
+					$("nav").toggleClass("videoActive");
+					
+					$(this).addClass("active");
+				});
+			});
 		},
 		
 				
@@ -2399,6 +2405,18 @@ var force = function() {
 	var mgbMainSys = {
 
 		init : function() {
+			$('nav').on('click', function(){
+				if($(this).hasClass("videoActive")){
+					$(this).removeClass("videoActive");
+					
+					mgbContent.portfolioContent.each(function(){
+						if($(this).children("a").hasClass("active")) {
+							$(this).children("a").removeClass("active");
+						}
+					});
+				}
+			});
+			
 			$('nav a').on('click', function(e){
 				e.preventDefault();
 				

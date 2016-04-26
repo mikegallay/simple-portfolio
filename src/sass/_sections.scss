@@ -153,6 +153,23 @@ h1 {
 				}
 			}
 		}
+		
+		&.active {
+			.prjDescription {
+				
+				.cultureArrow {
+				    border-top: 1000px solid transparent;
+				    border-right: 1000px solid #46ccc5;
+				}
+				
+					
+				.prjDscrWrap {
+					top: -5%;
+					opacity: 1;
+					transition: top 300ms 200ms, opacity 300ms 200ms;
+				}
+			}
+		}
 	}
 }
 
@@ -572,7 +589,6 @@ h1 {
 		width: 49%;
 		min-height: 300px;
 		a {
-		
 			.prjDescription {
 	
 				.prjDscrWrap {

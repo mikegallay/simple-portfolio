@@ -1034,6 +1034,8 @@ a:active {
 
 nav {
   background-color: '';
+  background-image: '';
+  background-size: 0px 0px;
   position: fixed;
   top: -100px;
   left: 0;
@@ -1041,8 +1043,9 @@ nav {
   width: 100%;
   z-index: 99999;
   height: 4.25em;
-  -webkit-transition: background-color 300ms, margin-top 300ms, top 1s 1s;
-          transition: background-color 300ms, margin-top 300ms, top 1s 1s;
+  opacity: 0.98;
+  -webkit-transition: background-color 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+          transition: background-color 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 nav a[href='#Home'] {
   display: inline-block;
@@ -1051,6 +1054,16 @@ nav a[href='#Home'] {
 }
 nav.settle {
   top: 0;
+}
+nav.videoActive {
+  height: 100%;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0, 0, 0, 0.2) 1px, transparent 100%);
+  background-repeat: repeat;
+  background-size: 3px 3px;
+  height: 100%;
+  background-color: rgba(107, 109, 111, 0.98);
+  -webkit-transition: height 400ms;
+          transition: height 400ms;
 }
 
 ul.navigation {
@@ -1470,6 +1483,16 @@ h1.joinTeamCTA {
   border-right: 1000px solid #46ccc5;
 }
 .projectTile a:hover .prjDescription .prjDscrWrap {
+  top: -5%;
+  opacity: 1;
+  -webkit-transition: top 300ms 200ms, opacity 300ms 200ms;
+          transition: top 300ms 200ms, opacity 300ms 200ms;
+}
+.projectTile a.active .prjDescription .cultureArrow {
+  border-top: 1000px solid transparent;
+  border-right: 1000px solid #46ccc5;
+}
+.projectTile a.active .prjDescription .prjDscrWrap {
   top: -5%;
   opacity: 1;
   -webkit-transition: top 300ms 200ms, opacity 300ms 200ms;
