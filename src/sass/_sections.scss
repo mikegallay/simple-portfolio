@@ -756,11 +756,11 @@ h1 {
 	
 		&.sectionHeading {
 			font-family: 'Din-Bold', san-serif;
-			font-size: 3.125em;
+			font-size: 7em;
 			font-weight: lighter;
 			color: $sectionHeadingColor;
 			letter-spacing: 0.04em;
-
+			margin-top: 1em;
 		}
 		
 		&.joinTeamCTA {
