@@ -2483,7 +2483,12 @@ var force = function() {
 					$('nav a').removeClass('active');
 					$('.navigation li:last-child a').addClass('active');
 				} 
+				
+				if(mgbUtils.isScrolledIntoView( $('#'+hashName).find("span[data-forward]") )) {
+					$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');
+				}
 			});				
+			
 			
 			
 	 	   $('.ll').each(function () {
