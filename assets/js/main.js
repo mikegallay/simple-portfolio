@@ -2476,6 +2476,7 @@ var force = function() {
 				if(diff <= 60) {			
 					$('nav a').removeClass('active');
 					$('nav a[href="#'+hashName+'"]').addClass('active');
+					$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');
 				}
 			
 				if($(window).scrollTop() === scrollBottom) {
