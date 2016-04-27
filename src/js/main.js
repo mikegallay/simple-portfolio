@@ -293,6 +293,21 @@
 				if($(this).hasClass("videoActive")){
 					$(this).removeClass("videoActive");
 					
+					if($(window).attr('scrollY') < 60){
+						$(this).removeClass("sticky");
+						$(this).children("#mbLogo").css({'position': '', 'margin-top' : '' });
+			
+						mgbUtils.hideLogo();
+				
+						$('#mbLogo').on('mouseover',function(){
+							mgbUtils.showLogo();
+						});
+
+						$('#mbLogo').on('mouseout',function(){
+							mgbUtils.hideLogo();
+						});
+					}
+					
 					mgbContent.portfolioContent.each(function(){
 						if($(this).children("a").hasClass("active")) {
 							$(this).children("a").removeClass("active");
@@ -344,7 +359,6 @@
 			if(currScroll > 60) {
 				if(!$("nav").hasClass("sticky")) {
 					$("nav").addClass("sticky");
-					$("nav").css({'background-color': "rgba(107, 109, 111, 1.0)", 'margin-top': '0'});
 			
 					$("#mbLogo").off('mouseout');
 			
@@ -354,7 +368,6 @@
 				if(!$("nav").hasClass("videoActive")) {
 					$('nav a').removeClass('active');
 					$("nav").removeClass("sticky");
-					$("nav").css({'background-color': 'rgba(107, 109, 111, 0.0)', 'margin-top': '1.5625em'});
 					$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
 			
 					mgbUtils.hideLogo();

@@ -1033,7 +1033,7 @@ a:active {
 }
 
 nav {
-  background-color: '';
+  background-color: rgba(107, 109, 111, 0);
   background-image: '';
   background-size: 0px 0px;
   position: fixed;
@@ -1054,6 +1054,10 @@ nav a[href='#Home'] {
 }
 nav.settle {
   top: 0;
+}
+nav.sticky {
+  background-color: #6b6d6f;
+  margin-top: 0;
 }
 nav.videoActive {
   height: 100%;
