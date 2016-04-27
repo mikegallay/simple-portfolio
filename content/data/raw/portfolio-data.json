@@ -1,6 +1,7 @@
 [
 	{	
 		"imgSrc": "assets/img/our_work/Intel_JimParsons_Campaign1",
+		"vimeoURL": "https://player.vimeo.com/video/144913605",
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text",
@@ -8,6 +9,7 @@
 	},
 	{	
 		"imgSrc": "assets/img/our_work/Intel_Inside",
+		"vimeoURL": "",
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "Description goes here",
@@ -15,6 +17,7 @@
 	},	
 	{
 		"imgSrc": "assets/img/our_work/Mariott_Insitu",
+		"vimeoURL": "http://player.vimeo.com/video/124646110?api=1",
 		"header": "Mariott",
 		"description": "Description goes here",
 		"altText": "This is alt text",
@@ -22,42 +25,49 @@
 	},
 	{
 		"imgSrc": "assets/img/our_work/OscarMayer",
+		"vimeoURL": "http://player.vimeo.com/video/119997282",
 		"header": "Oscar Meyer",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{
 		"imgSrc": "assets/img/our_work/IntelExperienceApp",
+		"vimeoURL": "",
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{	
 		"imgSrc": "assets/img/our_work/Aussie_SGS1",
+		"vimeoURL": "",
 		"header": "Aussie",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},	
 	{
 		"imgSrc": "assets/img/our_work/Mariott_MrGuaran-T",
+		"vimeoURL": "",
 		"header": "Marriot",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{
 		"imgSrc": "assets/img/our_work/Verizon_SocialImprint3",
+		"vimeoURL": "",
 		"header": "Verizon",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{
 		"imgSrc": "assets/img/our_work/United_BMB1",
+		"vimeoURL": "",
 		"header": "United <br> Airlines",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{
 		"imgSrc": "assets/img/our_work/Apophis",
+		"vimeoURL": "",
 		"header": "Verizon",
 		"description": "Description goes here",
 		"altText": "This is alt text"

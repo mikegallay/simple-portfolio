@@ -2262,9 +2262,17 @@ var force = function() {
 		initPortfolioCnt : function(){
 			this.portfolioContent.each(function(){
 				$(this).children("a").on('click', function() {
-					$("nav").toggleClass("videoActive");
+					var url = $(this).attr("data-url");
 					
-					$(this).addClass("active");
+					if(url !== "") {
+						$("nav").toggleClass("videoActive");
+						$(".vimeoContainer").addClass("active");
+						$(this).addClass("active");
+					
+						 var iframe = $('#vimeoPlayer')[0];
+						 url += "?api=1";
+						 $(iframe).attr('src', url);
+					 }
 				});
 			});
 		},
@@ -2407,7 +2415,11 @@ var force = function() {
 		init : function() {
 			$('nav').on('click', function(){
 				if($(this).hasClass("videoActive")){
+					var iframe = $('#vimeoPlayer')[0];
+					$(iframe).attr('src', '');
+				 
 					$(this).removeClass("videoActive");
+					$(".vimeoContainer").removeClass("active");
 					
 					if($(window).attr('scrollY') < 60){
 						$(this).removeClass("sticky");

@@ -6,6 +6,16 @@
 	display: block;
 }
 
+.vimeoContainer {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	display: none;
+	
+	&.active {
+		display: block;
+	}
+}
 
 nav {
 	background-color: rgba(107, 109, 111, 0.0);
