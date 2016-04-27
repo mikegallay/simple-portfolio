@@ -5,11 +5,26 @@ require_once './lib/Handlebars/Autoloader.php';
 Handlebars\Autoloader::register();
 use Handlebars\Handlebars;
 
+$tempData;
+$fullData;
+$siteData = './content/data/merged.json';
 
+function preloadData(){
+	global $fullData, $siteData;
+	$tempData = file_get_contents($siteData);
+	$fullData = json_decode($tempData, true); 
+}
 
-function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
+preloadData();
+
+function HTMLfromTemplateAndJSON($tempname, $jsonfile,$shuffle) {
+	global $fullData;
 	$templateStr = file_get_contents($tempname);
-	$str = file_get_contents($jsonfile);
+	//$fullData = file_get_contents('./content/data/merged.json');
+	
+	$dataArray = $fullData[$jsonfile];
+	if ($shuffle) shuffle($dataArray);
+	$str = json_encode($dataArray);
 	
 	$wrapper = '{ "objects": ' . $str . ' }';
 	$objects = json_decode($wrapper, true); 

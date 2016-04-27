@@ -59,12 +59,5 @@
 		"imgSrc": "assets/img/our_culture/bio_skater",
 		"info": "This is my information",
 		"isDouble": ""
-	},
-	{
-		"name" : "Chicago",
-		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/train",
-		"info": "",
-		"isDouble": "train"
 	}
 ]

@@ -23,6 +23,7 @@ var gulp = require('gulp'),
 	svgSprite = require('gulp-svg-sprite'),
 	svg2png = require('gulp-svg2png'),
 	plumber = require('gulp-plumber');
+	jsoncombine = require("gulp-jsoncombine");
 	//responsive = require('gulp-responsive');
 
 
@@ -197,6 +198,12 @@ gulp.task('clear', function(done){
 	return cache.clearAll(done);	
 });
 
+gulp.task('processData', function() {
+	gulp.src("content/data/raw/*.json")
+	.pipe(jsoncombine("merged.json",function(data){return new Buffer(JSON.stringify(data));}))
+	.pipe(gulp.dest("content/data"));
+});
+
 // Watch
 gulp.task('watch', function() {
 	
@@ -211,6 +218,9 @@ gulp.task('watch', function() {
 
 	// Watch image files
 	gulp.watch('src/img/**', ['processImages']);
+	
+	// Watch data files
+	gulp.watch('content/data/raw/*.json', ['processData']);
 
 	// Create LiveReload server
 	livereload.listen();
