@@ -351,22 +351,24 @@
 					mgbUtils.showLogo();
 				}
 			} else {
-				$('nav a').removeClass('active');
-				$("nav").removeClass("sticky");
-				$("nav").css({'background-color': 'rgba(107, 109, 111, 0.0)', 'margin-top': '1.5625em'});
-				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
+				if(!$("nav").hasClass("videoActive")) {
+					$('nav a').removeClass('active');
+					$("nav").removeClass("sticky");
+					$("nav").css({'background-color': 'rgba(107, 109, 111, 0.0)', 'margin-top': '1.5625em'});
+					$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
 			
-				mgbUtils.hideLogo();
-				
-				$('#mbLogo').on('mouseover',function(){
-					mgbUtils.showLogo();
-				});
-
-				$('#mbLogo').on('mouseout',function(){
 					mgbUtils.hideLogo();
-				});
 				
-				location.hash = '';
+					$('#mbLogo').on('mouseover',function(){
+						mgbUtils.showLogo();
+					});
+
+					$('#mbLogo').on('mouseout',function(){
+						mgbUtils.hideLogo();
+					});
+				
+					location.hash = '';
+				}
 			}
 
 			
