@@ -57,7 +57,70 @@
 		"name" : "Skater",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_skater",
-		"info": "This is my information",
-		"isDouble": ""
+		"info": "This is my information"
+	},
+	{
+		"name" : "Train",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
+		"info": "",
+		"isDouble": "true"
+	},
+	{
+		"name" : "Train",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
+		"info": "",
+		"isDouble": "true"
+	},
+	{
+		"name" : "Train",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
+		"info": "",
+		"isDouble": "true"
+	},
+	{
+		"name" : "Strokes",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/strokes",
+		"info": ""
+	},
+	{
+		"name" : "Elizabeth",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/bio_elizabeth",
+		"info": "This is my information"
+	},
+	{
+		"name" : "Dog",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/dog",
+		"info": ""
+	},
+	{
+		"name" : "Tattoos",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/tatoos",
+		"info": ""
+	},
+	{
+		"name" : "Skater",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/bio_skater",
+		"info": "This is my information"
+	},
+	{
+		"name" : "Skater",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/bio_skater",
+		"info": "This is my information"
+	},
+	{
+		"name" : "Train",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
+		"info": "",
+		"isDouble": "true"
 	}
 ]

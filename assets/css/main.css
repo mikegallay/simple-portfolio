@@ -1562,6 +1562,10 @@ h1.joinTeamCTA {
   -webkit-transition: margin 300ms 300ms, width 300ms 300ms;
           transition: margin 300ms 300ms, width 300ms 300ms;
 }
+.cultureTile.shrinkMe.col-2-by-1 {
+  width: 24%;
+  margin: 0.5%;
+}
 .cultureTile.shrinkMe picture {
   margin-left: -50%;
   -webkit-transition: margin 300ms 300ms;

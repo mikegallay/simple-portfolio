@@ -2243,169 +2243,227 @@ var mgbHeader = {
 
 // Module to handle site content
 var mgbContent = {
-	portfolioContent : null,
-	cultureContent : null,
-	officeClocks : null,
-	
-	init : function() {
-		this.portfolioContent = $('.projectTile');
-		this.cultureContent = $('.cultureTile');
-		this.officeClocks = $('.officeTile');
-	
-		this.initPortfolioCnt();
-		this.initCultureCnt();
-		this.initClockCnt();
-		
-		force.opt.moveEasing = 'easeInOutBack';
-	},
-	
-	initPortfolioCnt : function(){
-		this.portfolioContent.each(function(){
-			$(this).children("a").on('click', function() {
-				var url = $(this).attr("data-url");
-				
-				if(url !== "") {
-					$("nav").toggleClass("videoActive");
-					$(".vimeoContainer").addClass("active");
-					$(this).addClass("active");
-				
-					 var iframe = $('#vimeoPlayer')[0];
-					 url += "?api=1";
-					 $(iframe).attr('src', url);
-				 }
-			});
-		});
-	},
-	
-			
-	initCultureCnt : function() {
-  	  this.cultureContent.each(function(index) {
-  		  if(index%2 == 0) {
-  			if($(this).children("a").length > 0) {
-  			   $(this).addClass('pushRight');
-			   
-			   $(this).on('click', function (e){
-				   e.preventDefault();
-				   	
-			   		if(!$(this).hasClass("stretchOut")){
-			   			$(this).siblings().removeClass("shrinkMe stretchOut");	
-			   		}
+    portfolioContent: null ,
+    cultureContent: null ,
+    officeClocks: null ,
+    
+    init: function() {
+        this.portfolioContent = $('.projectTile');
+        this.cultureContent = $('.cultureTile');
+        this.officeClocks = $('.officeTile');
+        
+        this.initPortfolioCnt();
+        this.initCultureCnt();
+        this.initClockCnt();
+        
+        force.opt.moveEasing = 'easeInOutBack';
+    },
+    
+    initPortfolioCnt: function() {
+        this.portfolioContent.each(function() {
+            $(this).children("a").on('click', function() {
+                var url = $(this).attr("data-url");
+                
+                if (url !== "") {
+                    $("nav").toggleClass("videoActive");
+                    $(".vimeoContainer").addClass("active");
+                    $(this).addClass("active");
+                    
+                    var iframe = $('#vimeoPlayer')[0];
+                    url += "?api=1";
+                    $(iframe).attr('src', url);
+                }
+            });
+        });
+    },
+    
+    
+    initCultureCnt: function() {
+        
+        $('.pushRight').on('click', function(e) {
+            e.preventDefault();
+            
+            if (!$(this).hasClass("stretchOut")) {
+                $(this).siblings().removeClass("shrinkMe stretchOut");
+            }
+            
+            var nextTile = $(this).next();
+            var picHolder = nextTile.find('.picHolder');
+            
+            var colW = picHolder.width();
+            //move this to a global var on resize???
+            
+            //can we remove this?
+            if (!$(this).hasClass('stretchOut')) {
+                picHolder.css('min-width', colW + 'px');
+            }
+            
+            nextTile.toggleClass("shrinkMe");
+            $(this).toggleClass('stretchOut');
+        });
+        
+        $('.pushLeft').on('click', function(e) {
+            e.preventDefault();
+            
+            if (!$(this).hasClass("stretchOut")) {
+                $(this).siblings().removeClass("shrinkMe stretchOut");
+            }
+            
+            var prevTile = $(this).prev();
+            var picHolder = prevTile.find('.picHolder');
+            
+            var colW = picHolder.width();
+            //move this to a global var on resize???
+            
+            //can we remove this?
+            if (!$(this).hasClass('stretchOut')) {
+                picHolder.css('min-width', colW + 'px');
+            }
+            
+            prevTile.toggleClass("shrinkMe");
+            $(this).toggleClass('stretchOut');
+        });
+        /*this.cultureContent.each(function(index) {
+	  		  if(index%2 == 0) {
+	  			if($(this).children("a").length > 0) {
+	  			   // $(this).addClass('pushRight');
 				   
-					var nextTile = $(this).next();
-					var picHolder = nextTile.find('.picHolder');
+				   $(this).on('click', function (e){
+					   e.preventDefault();
+					   	
+				   		if(!$(this).hasClass("stretchOut")){
+				   			$(this).siblings().removeClass("shrinkMe stretchOut");	
+				   		}
+					   
+						var nextTile = $(this).next();
+						var picHolder = nextTile.find('.picHolder');
 
-					var colW = picHolder.width(); //move this to a global var on resize???
+						var colW = picHolder.width(); //move this to a global var on resize???
 
-					//can we remove this?
-					if (!$(this).hasClass('stretchOut')) {
-						picHolder.css('min-width',colW+'px');
-					}
+						//can we remove this?
+						if (!$(this).hasClass('stretchOut')) {
+							picHolder.css('min-width',colW+'px');
+						}
 
-					nextTile.toggleClass("shrinkMe");
-					$(this).toggleClass('stretchOut');
-			   });   
-  		  	}
-  		  } else {
-			if($(this).children("a").length > 0) {
-				$(this).addClass('pushLeft');
-		  		
-				$(this).on('click', function(e) {
-					e.preventDefault();
+						nextTile.toggleClass("shrinkMe");
+						$(this).toggleClass('stretchOut');
+				   });   
+	  		  	}
+	  		  } else {
+    			if($(this).children("a").length > 0) {
+  					// $(this).addClass('pushLeft');
+    		  		
+					$(this).on('click', function(e) {
+						e.preventDefault();
+						
+						 if(!$(this).hasClass("stretchOut")){
+							$(this).siblings().removeClass("shrinkMe stretchOut");	
+						 }
 					
-					 if(!$(this).hasClass("stretchOut")){
-						$(this).siblings().removeClass("shrinkMe stretchOut");	
-					 }
-				
-		   			 var prevTile = $(this).prev();
-		   			 var picHolder = prevTile.find('.picHolder');
+			   			 var prevTile = $(this).prev();
+			   			 var picHolder = prevTile.find('.picHolder');
 
-		   			 var colW = picHolder.width(); //move this to a global var on resize???
+			   			 var colW = picHolder.width(); //move this to a global var on resize???
 
-		   			 //can we remove this?
-		   			 if (!$(this).hasClass('stretchOut')){
-		   			 	picHolder.css('min-width',colW+'px');
-		   			 }
+			   			 //can we remove this?
+			   			 if (!$(this).hasClass('stretchOut')){
+			   			 	picHolder.css('min-width',colW+'px');
+			   			 }
 
-		   			 prevTile.toggleClass("shrinkMe");
-		   			 $(this).toggleClass('stretchOut');	
-				});
-			}
-  		  }
-    	});
-	},
-	
-	initClockCnt : function() {
-		$(".officeTile").each(function(index){
-			var timeOffset = parseInt($(this).data("timeOffset")),
-		  	d = new Date(),
-			utc = d.getTime() + (d.getTimezoneOffset() * 60000),
-			nd = new Date(utc + (3600000*timeOffset));
-
-			var ndHours = nd.getHours();
-			if(ndHours > 12) {
-				ndHours -= 12;
-			}
-
-			var clockHours = Math.floor((ndHours/12) * 100) + "%";
-			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
-
-			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
-
-			$(this).children("a").find("time").text(nd);
-
-			var hrEle = $(this).find(".clockHours");
-			var minEle = $(this).find(".clockMinutes");
-
-			mgbUtils.tt(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
-			mgbUtils.tt(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
-			
-			$(this).on('click', function() {
-				var currThis = $(this);
-				$(this).siblings().children("a").removeClass("active");
-				$(this).children("a").addClass("active");
-				
-				var officeDataText = $(this).children('span').html();
-				
-				$("#officeDetails").removeClass('showDetails');
-				$("#officeDetails").html('');
-				$("#officeDetails").html(officeDataText);
-				
-				setTimeout(function(){
-					$("#officeDetails").addClass('showDetails');
-					
-					$('.closeMe').on('click', function(){
-						$("#officeDetails").removeClass('showDetails');
-						$(currThis).children("a").removeClass("active");
-						//$("#officeDetails").children().fadeOut();
+			   			 prevTile.toggleClass("shrinkMe");
+			   			 $(this).toggleClass('stretchOut');	
 					});
-				}, 300);
-			});
-		});
-	},
-	
-	resize : function() {
-
-		var colW;
-
-		this.cultureContent.each(function(){
-
-			if($(this).hasClass("pushRight")) {
-				 var nextTile = $(this).next();
-				 var picHolder = nextTile.find('.picHolder');
-
-				 colW = picHolder.width(); 
-
-			} else if($(this).hasClass('pushLeft')) {
-				 var prevTile = $(this).prev();
-				 var picHolder = prevTile.find('.picHolder');
-
-				 colW = picHolder.width(); 
-			}
-		});
-
-		this.cultureContent.removeClass("stretchOut shrinkMe");
-		this.cultureContent.css('max-height', colW+'px');
-	},
+				}
+	  		  }
+	    	});*/
+    },
+    
+    initClockCnt: function() {
+        $(".officeTile").each(function(index) {
+            var timeOffset = parseInt($(this).data("timeOffset"))
+              , 
+            d = new Date()
+              , 
+            utc = d.getTime() + (d.getTimezoneOffset() * 60000)
+              , 
+            nd = new Date(utc + (3600000 * timeOffset));
+            
+            var ndHours = nd.getHours();
+            if (ndHours > 12) {
+                ndHours -= 12;
+            }
+            
+            var clockHours = Math.floor((ndHours / 12) * 100) + "%";
+            var clockMinutes = Math.floor(100 * (nd.getMinutes() / 60)) + "%";
+            
+            nd = nd.toLocaleString({
+                hour: 'numeric',
+                minute: 'numeric'
+            }).replace(/:\d{2}\s/, ' ').split(",")[1];
+            
+            $(this).children("a").find("time").text(nd);
+            
+            var hrEle = $(this).find(".clockHours");
+            var minEle = $(this).find(".clockMinutes");
+            
+            mgbUtils.tt(hrEle, 1, {
+                transformOrigin: "50% 50%",
+                drawSVG: clockHours,
+                overwrite: true
+            });
+            mgbUtils.tt(minEle, 1, {
+                transformOrigin: "50% 50%",
+                drawSVG: clockMinutes,
+                overwrite: false
+            });
+            
+            $(this).on('click', function() {
+                var currThis = $(this);
+                $(this).siblings().children("a").removeClass("active");
+                $(this).children("a").addClass("active");
+                
+                var officeDataText = $(this).children('span').html();
+                
+                $("#officeDetails").removeClass('showDetails');
+                $("#officeDetails").html('');
+                $("#officeDetails").html(officeDataText);
+                
+                setTimeout(function() {
+                    $("#officeDetails").addClass('showDetails');
+                    
+                    $('.closeMe').on('click', function() {
+                        $("#officeDetails").removeClass('showDetails');
+                        $(currThis).children("a").removeClass("active");
+                        //$("#officeDetails").children().fadeOut();
+                    });
+                }, 300);
+            });
+        });
+    },
+    
+    resize: function() {
+        
+        var colW;
+        
+        this.cultureContent.each(function() {
+            
+            if ($(this).hasClass("pushRight")) {
+                var nextTile = $(this).next();
+                var picHolder = nextTile.find('.picHolder');
+                
+                colW = picHolder.width();
+            
+            } else if ($(this).hasClass('pushLeft')) {
+                var prevTile = $(this).prev();
+                var picHolder = prevTile.find('.picHolder');
+                
+                colW = picHolder.width();
+            }
+        });
+        
+        this.cultureContent.removeClass("stretchOut shrinkMe");
+        this.cultureContent.css('max-height', colW + 'px');
+    },
 };
 
 
