@@ -36,6 +36,11 @@
 				<a href="#JoinTeam" aria-label="">CAREERS</a>
 			</li>	
 		</ul>
+		
+		<div class="vimeoContainer">
+			<iframe id="vimeoPlayer" src="" width="630" height="354" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		
 	</nav>
 	
 	<div class="videoHeader">
@@ -58,7 +63,6 @@
 		</div>
 
 	</div>
-	
 </header> 
 <!-- <div class="lltest" style="margin-top:500px;position:relative;"><span style="color:black;">TEST IMAGE</span><br/><img
 	alt="100%x200"
