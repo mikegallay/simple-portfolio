@@ -17,13 +17,82 @@ function preloadData(){
 
 preloadData();
 
+
+
+function shuffleCulture($data){
+	
+	$evenOddToggle = 1;
+	
+	$tempData = $data;
+	shuffle($tempData);
+	
+	$dir1 = 'pushRight';
+	$dir2 = 'pushLeft';
+		
+	
+	//$i%2 != 0
+	
+	for ($i = 0; $i < count($tempData); $i++) {
+		
+		$isDoub = ($tempData[$i]['isDouble'] == 'true') ? true : false;
+		// echo $tempData[$i]['isDouble'].$isDoub;
+	   if ($isDoub){
+	// if ($tempData[$i]['isDouble'] == 'true'){
+		   //change the index of the double to an even index
+		   // echo $i.' - ';
+		  $evenOdd = evalEvenOdd($i,$evenOddToggle);
+		  // echo $i.' - '.$evenOdd.','.$isDoub.'; ';
+		  // echo 'asdf '.$evenOdd;
+		  if ($i > 0 && $evenOdd){		
+			  // echo $i.' true;';
+			  // $tempData[$i]['isDouble'] = '';
+		      $out = array_splice($tempData, $i-1, 1);
+		       array_splice($tempData, count($tempData)-1, 0, $out);
+			   $evenOddToggle *= -1;
+		  }
+	   }
+	}
+	
+	for ($i = 0; $i < count($tempData); $i++) {
+		
+	   if ($tempData[$i]['info'] != ''){
+		   if ($i%2==0){
+			   $tempData[$i]['dir'] = $dir1;
+		   } else{
+			   $tempData[$i]['dir'] = $dir2;
+		   }
+	   }
+	   
+	   if ($tempData[$i]['isDouble'] == 'true'){
+		   $tempDir = $dir2;
+		   $dir2 = $dir1;
+		   $dir1 = $tempDir;
+	   }
+	   
+	}
+	   
+	return $tempData;
+	
+}
+
+function evalEvenOdd($num,$toggle){
+	// echo 'i'.$num.' '.$toggle.'; ';
+	if ($num%2 != 0 && $toggle == 1) return true;
+	if ($num%2 == 0 && $toggle == -1) return true;
+	
+	return false;
+}
+
 function HTMLfromTemplateAndJSON($tempname, $jsonfile,$shuffle) {
 	global $fullData;
 	$templateStr = file_get_contents($tempname);
 	//$fullData = file_get_contents('./content/data/merged.json');
 	
-	$dataArray = $fullData[$jsonfile];
-	if ($shuffle) shuffle($dataArray);
+	$tempDataArray = $fullData[$jsonfile];
+	$dataArray = $tempDataArray;
+	
+	if ($shuffle) $dataArray = shuffleCulture($tempDataArray);
+	
 	$str = json_encode($dataArray);
 	
 	$wrapper = '{ "objects": ' . $str . ' }';

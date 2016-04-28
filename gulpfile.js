@@ -201,7 +201,8 @@ gulp.task('clear', function(done){
 gulp.task('processData', function() {
 	gulp.src("content/data/raw/*.json")
 	.pipe(jsoncombine("merged.json",function(data){return new Buffer(JSON.stringify(data));}))
-	.pipe(gulp.dest("content/data"));
+	.pipe(gulp.dest("content/data"))
+	.pipe(notify({ message: '**** Data processing complete! ****' }));
 });
 
 // Watch

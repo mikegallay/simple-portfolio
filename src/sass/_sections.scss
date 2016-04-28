@@ -222,6 +222,11 @@ h1 {
 		margin-right: 0;
 		transition: margin 300ms 300ms, width 300ms 300ms;
 		
+		&.col-2-by-1 {
+			width:24%;
+		    margin: 0.5%;
+		}
+		
 		picture{
 			margin-left:-50%;
 			transition: margin 300ms 300ms;

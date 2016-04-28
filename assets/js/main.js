@@ -2271,10 +2271,52 @@ var force = function() {
 		
 				
 		initCultureCnt : function() {
-	  	  this.cultureContent.each(function(index) {
+			
+			$('.pushRight').on('click', function (e){
+			   e.preventDefault();
+   	
+				if(!$(this).hasClass("stretchOut")){
+					$(this).siblings().removeClass("shrinkMe stretchOut");	
+				}
+   
+				var nextTile = $(this).next();
+				var picHolder = nextTile.find('.picHolder');
+
+				var colW = picHolder.width(); //move this to a global var on resize???
+
+				//can we remove this?
+				if (!$(this).hasClass('stretchOut')) {
+					picHolder.css('min-width',colW+'px');
+				}
+
+				nextTile.toggleClass("shrinkMe");
+				$(this).toggleClass('stretchOut');
+			});   
+
+			$('.pushLeft').on('click', function(e) {
+				e.preventDefault();
+
+				if(!$(this).hasClass("stretchOut")){
+					$(this).siblings().removeClass("shrinkMe stretchOut");	
+				}
+
+				var prevTile = $(this).prev();
+				var picHolder = prevTile.find('.picHolder');
+
+				var colW = picHolder.width(); //move this to a global var on resize???
+
+				//can we remove this?
+				if (!$(this).hasClass('stretchOut')){
+					picHolder.css('min-width',colW+'px');
+				}
+
+				prevTile.toggleClass("shrinkMe");
+				$(this).toggleClass('stretchOut');	
+			});
+	  	  /*this.cultureContent.each(function(index) {
 	  		  if(index%2 == 0) {
 	  			if($(this).children("a").length > 0) {
-	  			   $(this).addClass('pushRight');
+	  			   // $(this).addClass('pushRight');
 				   
 				   $(this).on('click', function (e){
 					   e.preventDefault();
@@ -2299,7 +2341,7 @@ var force = function() {
 	  		  	}
 	  		  } else {
     			if($(this).children("a").length > 0) {
-  					$(this).addClass('pushLeft');
+  					// $(this).addClass('pushLeft');
     		  		
 					$(this).on('click', function(e) {
 						e.preventDefault();
@@ -2323,7 +2365,7 @@ var force = function() {
 					});
 				}
 	  		  }
-	    	});
+	    	});*/
 		},
 		
 		initClockCnt : function() {
