@@ -10,7 +10,7 @@ var mgbUtils = {
 	    var docViewBottom = docViewTop + $(window).height();
 
 	    var elemTop = $(elem).offset().top;
-	    var elemBottom = elemTop + $(elem).height();
+	    var elemBottom = elemTop + $(elem).height()/4;
 
 	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	},	
@@ -154,7 +154,7 @@ var mgbContent = {
                     $(this).addClass("active");
                     
                     var iframe = $('#vimeoPlayer')[0];
-                    url += "?api=1";
+                    url += "?api=1&autoplay=1";
                     $(iframe).attr('src', url);
                 }
             });
@@ -349,7 +349,7 @@ var mgbContent = {
         
 	        that.cultureContent.removeClass("stretchOut shrinkMe");
 	        that.cultureContent.css('height', colW + 'px');
-		},500);
+		},250);
         
     },
 };
@@ -501,7 +501,8 @@ window.onresize = resizeChecker;
 
 
 setTimeout(function(){ 
-	resize(); 
+	//resize(); 
+	mgbHeader.resize();
 }, 500);	
 
 var lastWindowHeight = $(window).height();

@@ -119,15 +119,15 @@ function shuffleCulture($data){
 	
 }
 
-function evalEvenOdd($num,$toggle){
+/*function evalEvenOdd($num,$toggle){
 	// echo 'i'.$num.' '.$toggle.'; ';
 	if ($num%2 != 0 && $toggle == 1) return true;
 	if ($num%2 == 0 && $toggle == -1) return true;
 	
 	return false;
-}
+}*/
 
-function HTMLfromTemplateAndJSON($tempname, $jsonfile,$shuffle) {
+function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle) {
 	global $fullData;
 	$templateStr = file_get_contents($tempname);
 	//$fullData = file_get_contents('./content/data/merged.json');

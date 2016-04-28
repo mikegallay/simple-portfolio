@@ -27,7 +27,7 @@
 				<a href="#OurWork" aria-label="">WORK</a>
 			</li>
 			<li>
-				<a href="#OurPeople" aria-label="">PEOPLE</a>
+				<a href="#OurPeople" aria-label="">CULTURE</a>
 			</li>
 			<li>
 				<a href="#OurOffices" aria-label="">OFFICES</a>
