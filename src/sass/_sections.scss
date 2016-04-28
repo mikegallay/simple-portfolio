@@ -75,7 +75,7 @@ h1 {
 	height:	auto;
 	margin: .5%;//0.4222222em;
 	overflow: hidden;
-	min-height: 150px;
+//	min-height: 150px;
 	float:left;
 	
 	a {
@@ -180,8 +180,8 @@ h1 {
 	width: 49%;
 	margin: 0.5%;
 	overflow: hidden;
-	transition: margin 300ms, width 300ms;
-	min-height: 13.5625em;
+	transition: margin 300ms, width 300ms, height 300ms;
+	//min-height: 13.5625em;
 	float:left;
 	
 	picture{
@@ -413,7 +413,7 @@ h1 {
 	background-color: #f7f7f7;
 	position: relative;
 	width: 98.5%;
-	min-height: 150px;
+//	min-height: 150px;
 	margin: 0.4222222em;
 	overflow: hidden;
 	background-color: #ffffff;
@@ -592,7 +592,7 @@ h1 {
 
 	.projectTile {
 		width: 49%;
-		min-height: 300px;
+//		min-height: 300px;
 		a {
 			.prjDescription {
 	
@@ -613,14 +613,17 @@ h1 {
 	.cultureTile {
 		width: 49%;
 		max-height: 31em;
-		min-height: 31em;
+//		min-height: 31em;
 		
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
 			font-size: 0.9em;
 		}
 	
-
+		&.col-2-by-1 {
+			width:98.9%;
+		}
+		
 		&.stretchOut {
 			width: 98.9%;
 			
@@ -641,7 +644,7 @@ h1 {
 
 	.officeTile {
 		width: 49%;
-		min-height: 300px;
+//		min-height: 300px;
 		margin: 0.5%;		
 	}
 
@@ -693,7 +696,7 @@ h1 {
 	.projectTile {
 		width: 24%;
 		max-height: 20em;
-		min-height: 240px;
+//		min-height: 240px;
 		
 		a {
 			.prjDescription {
@@ -722,7 +725,7 @@ h1 {
 	.cultureTile {
 		width: 24%;
 		max-height: 20em;
-		min-height: 20em;
+//		min-height: 20em;
 
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
@@ -822,9 +825,13 @@ h1 {
 	.cultureTile {
 		width: 15.6666666%;
 		max-height: 20em;
-		min-height: 20em;
+//		min-height: 20em;
 		margin: 0.5%;
-
+		
+		&.col-2-by-1 {
+			width:32.33333%;
+		}
+		
 		&.stretchOut {
 			width: 32.33333%;
 		}

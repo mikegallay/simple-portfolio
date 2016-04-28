@@ -2427,7 +2427,7 @@ var mgbContent = {
                 $("#officeDetails").removeClass('showDetails');
                 $("#officeDetails").html('');
                 $("#officeDetails").html(officeDataText);
-                
+				
                 setTimeout(function() {
                     $("#officeDetails").addClass('showDetails');
                     
@@ -2444,25 +2444,29 @@ var mgbContent = {
     resize: function() {
         
         var colW;
-        
-        this.cultureContent.each(function() {
+        var that = this;
+		
+		setTimeout(function(){
+	        that.cultureContent.each(function() {
             
-            if ($(this).hasClass("pushRight")) {
-                var nextTile = $(this).next();
-                var picHolder = nextTile.find('.picHolder');
+	            if ($(this).hasClass("pushRight")) {
+	                var nextTile = $(this).next();
+	                var picHolder = nextTile.find('.picHolder');
                 
-                colW = picHolder.width();
+	                colW = picHolder.width();
             
-            } else if ($(this).hasClass('pushLeft')) {
-                var prevTile = $(this).prev();
-                var picHolder = prevTile.find('.picHolder');
+	            } else if ($(this).hasClass('pushLeft')) {
+	                var prevTile = $(this).prev();
+	                var picHolder = prevTile.find('.picHolder');
                 
-                colW = picHolder.width();
-            }
-        });
+	                colW = picHolder.width();
+	            }
+	        });
         
-        this.cultureContent.removeClass("stretchOut shrinkMe");
-        this.cultureContent.css('max-height', colW + 'px');
+	        that.cultureContent.removeClass("stretchOut shrinkMe");
+	        that.cultureContent.css('height', colW + 'px');
+		},500);
+        
     },
 };
 

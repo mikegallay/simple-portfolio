@@ -29,41 +29,85 @@ function shuffleCulture($data){
 	$dir1 = 'pushRight';
 	$dir2 = 'pushLeft';
 		
+	$doubleArr = [];
+	$singleArr = [];
+	$compositeArr = [];
 	
-	//$i%2 != 0
-	
-	for ($i = 0; $i < count($tempData); $i++) {
-		
-		$isDoub = ($tempData[$i]['isDouble'] == 'true') ? true : false;
-		// echo $tempData[$i]['isDouble'].$isDoub;
-	   if ($isDoub){
-	// if ($tempData[$i]['isDouble'] == 'true'){
-		   //change the index of the double to an even index
-		   // echo $i.' - ';
-		  $evenOdd = evalEvenOdd($i,$evenOddToggle);
-		  // echo $i.' - '.$evenOdd.','.$isDoub.'; ';
-		  // echo 'asdf '.$evenOdd;
-		  if ($i > 0 && $evenOdd){		
-			  // echo $i.' true;';
-			  // $tempData[$i]['isDouble'] = '';
-		      $out = array_splice($tempData, $i-1, 1);
-		       array_splice($tempData, count($tempData)-1, 0, $out);
-			   $evenOddToggle *= -1;
-		  }
-	   }
+	// first split content into 1x1 and 2x1 arrays
+	for($i=0; $i < count($tempData); $i++) {
+		if(strcmp($tempData[$i]['isDouble'], "true") == 0) {
+			array_push($doubleArr, $tempData[$i]);
+		} else {
+			array_push($singleArr, $tempData[$i]);
+		}
 	}
 	
-	for ($i = 0; $i < count($tempData); $i++) {
+	shuffle($singleArr);
+	shuffle($doubleArr);
+	
+	$randPush = rand(0, 10);
+	
+	while((count($doubleArr) > 0) || (count($singleArr) > 0)) {
 		
-	   if ($tempData[$i]['info'] != ''){
+		if(($randPush % 2 == 0) || ($randPush < 5)) {
+			array_push($compositeArr, array_pop($doubleArr));
+		}
+		
+		for($i = 0; $i < 8; $i++) {
+			array_push($compositeArr, array_pop($singleArr));
+		}
+		
+		if(($randPush % 2) || ($randPush >= 5)) {
+			array_push($compositeArr, array_pop($doubleArr));
+		}
+		
+		if(empty($doubleArr)  && (count($singleArr) !== 0)) {
+			// push remaining single elements into composite array
+			$compositeArr = array_merge($compositeArr, $singleArr);
+			unset($singleArr);
+		} 
+		
+		if(empty($singleArr) && (count($doubleArr) !== 0)) {
+			// push remaining double elements into composite array
+			$compositeArr = array_merge($compositeArr, $doubleArr);
+			unset($doubleArr);
+		}	
+	}
+	
+
+		
+	// for ($i = 0; $i < count($tempData); $i++) {
+	//
+	// 	$isDoub = ($tempData[$i]['isDouble'] == 'true') ? true : false;
+	// 	// echo $tempData[$i]['isDouble'].$isDoub;
+	//    if ($isDoub){
+	// 	   // if ($tempData[$i]['isDouble'] == 'true'){
+	// 	   //change the index of the double to an even index
+	// 	   // echo $i.' - ';
+	// 	  $evenOdd = evalEvenOdd($i,$evenOddToggle);
+	// 	  // echo $i.' - '.$evenOdd.','.$isDoub.'; ';
+	// 	  // echo 'asdf '.$evenOdd;
+	// 	  if ($i > 0 && $evenOdd){
+	// 		  // echo $i.' true;';
+	// 		  // $tempData[$i]['isDouble'] = '';
+	// 	      $out = array_splice($tempData, $i-1, 1);
+	// 	       array_splice($tempData, count($tempData)-1, 0, $out);
+	// 		   $evenOddToggle *= -1;
+	// 	  }
+	//    }
+	// }
+	
+	for ($i = 0; $i < count($compositeArr); $i++) {
+		
+	   if ($compositeArr[$i]['info'] != ''){
 		   if ($i%2==0){
-			   $tempData[$i]['dir'] = $dir1;
+			   $compositeArr[$i]['dir'] = $dir1;
 		   } else{
-			   $tempData[$i]['dir'] = $dir2;
+			   $compositeArr[$i]['dir'] = $dir2;
 		   }
 	   }
 	   
-	   if ($tempData[$i]['isDouble'] == 'true'){
+	   if ($compositeArr[$i]['isDouble'] == 'true'){
 		   $tempDir = $dir2;
 		   $dir2 = $dir1;
 		   $dir1 = $tempDir;
@@ -71,7 +115,7 @@ function shuffleCulture($data){
 	   
 	}
 	   
-	return $tempData;
+	return $compositeArr;
 	
 }
 
