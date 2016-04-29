@@ -17,8 +17,7 @@
 		flex-direction: column;
 		flex-wrap: no-wrap;
 		justify-content: center;
-		align-items: center;
-		
+		align-items: center;	
 	}
 }
 
@@ -182,7 +181,7 @@ ul.navigation {
 	height: 0px;
 	position: relative;
 	
-	transition:height 1s .5s;
+	transition: height 1s .5s;
 	
 	&.settle{
 		transition:height 0s;

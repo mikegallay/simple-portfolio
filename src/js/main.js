@@ -29,6 +29,8 @@ var mgbUtils = {
 		to(downArrow,1,{y:"0", delay:0.75, ease:Bounce.easeOut, overwrite:false });
 		
 		this.arrowAnimation.repeat(-1).play();
+		
+		jQuery.easing.def = "easeInOutQuint";
 	},
 		
 	showLogo : function() {
@@ -140,7 +142,7 @@ var mgbContent = {
         this.initCultureCnt();
         this.initClockCnt();
         
-        force.opt.moveEasing = 'easeInOutBack';
+        //force.opt.moveEasing = 'easeInOutBack';
     },
     
     initPortfolioCnt: function() {
@@ -177,7 +179,6 @@ var mgbContent = {
             var colW = picHolder.width();
             //move this to a global var on resize???
             
-            //can we remove this?
             if (!$(this).hasClass('stretchOut')) {
                 picHolder.css('min-width', colW + 'px');
             }
@@ -198,8 +199,7 @@ var mgbContent = {
             
             var colW = picHolder.width();
             //move this to a global var on resize???
-            
-            //can we remove this?
+
             if (!$(this).hasClass('stretchOut')) {
                 picHolder.css('min-width', colW + 'px');
             }
@@ -214,59 +214,6 @@ var mgbContent = {
 			$('.cultureTile').removeClass('notLoaded');
 			setTimeout(function(){$('.cultureTile').find('img').removeClass('lazy');},150);
 		});
-        /*this.cultureContent.each(function(index) {
-	  		  if(index%2 == 0) {
-	  			if($(this).children("a").length > 0) {
-	  			   // $(this).addClass('pushRight');
-				   
-				   $(this).on('click', function (e){
-					   e.preventDefault();
-					   	
-				   		if(!$(this).hasClass("stretchOut")){
-				   			$(this).siblings().removeClass("shrinkMe stretchOut");	
-				   		}
-					   
-						var nextTile = $(this).next();
-						var picHolder = nextTile.find('.picHolder');
-
-						var colW = picHolder.width(); //move this to a global var on resize???
-
-						//can we remove this?
-						if (!$(this).hasClass('stretchOut')) {
-							picHolder.css('min-width',colW+'px');
-						}
-
-						nextTile.toggleClass("shrinkMe");
-						$(this).toggleClass('stretchOut');
-				   });   
-	  		  	}
-	  		  } else {
-    			if($(this).children("a").length > 0) {
-  					// $(this).addClass('pushLeft');
-    		  		
-					$(this).on('click', function(e) {
-						e.preventDefault();
-						
-						 if(!$(this).hasClass("stretchOut")){
-							$(this).siblings().removeClass("shrinkMe stretchOut");	
-						 }
-					
-			   			 var prevTile = $(this).prev();
-			   			 var picHolder = prevTile.find('.picHolder');
-
-			   			 var colW = picHolder.width(); //move this to a global var on resize???
-
-			   			 //can we remove this?
-			   			 if (!$(this).hasClass('stretchOut')){
-			   			 	picHolder.css('min-width',colW+'px');
-			   			 }
-
-			   			 prevTile.toggleClass("shrinkMe");
-			   			 $(this).toggleClass('stretchOut');	
-					});
-				}
-	  		  }
-	    	});*/
     },
     
     initClockCnt: function() {
@@ -403,22 +350,23 @@ var mgbMainSys = {
 			var currLink = $(this);
 
 			var hashValue = $(this).attr('href');
-			
-			force.jump(hashValue, {
-				setHash : true,
-				done: function(){
-					$(hashValue).find("span[data-forward]").addClass('forwardVisible');
-					
-					$(hashValue).children('.ll').each(function () {
-					  if (mgbUtils.isScrolledIntoView(this) === true) {
-					      $(this).addClass('in-view');
-						  $(this).parent().next().css('opacity', '1');
-					  }
-					});
-					
-					currLink.addClass('active');
-				}
+
+			$("html, body").animate({
+				scrollTop: $(hashValue).offset().top,
+			}, 1000, function() {
+				location.hash = hashValue;
 			});
+			
+			$(hashValue).find("span[data-forward]").addClass('forwardVisible');
+
+			$(hashValue).children('.ll').each(function () {
+			  if (mgbUtils.isScrolledIntoView(this) === true) {
+			      $(this).addClass('in-view');
+				  $(this).parent().next().css('opacity', '1');
+			  }
+			});
+
+			currLink.addClass('active');
 		});
 		
 		$('#mbLogo').on('mouseover',function(){
@@ -464,7 +412,6 @@ var mgbMainSys = {
 			}
 		}
 
-		
 		$('section').each(function(){
 		
 			var diff = Math.abs($(this).offset().top - $(window).scrollTop());
@@ -485,9 +432,7 @@ var mgbMainSys = {
 			 	$(this).find("span[data-forward]").addClass('forwardVisible');
 			}
 		});				
-		
-		
-		
+			
  	   $('.ll').each(function () {
  	      if (mgbUtils.isScrolledIntoView(this) === true) {
  	          $(this).addClass('in-view');
@@ -505,10 +450,9 @@ mgbMainSys.init();
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
+window.onload = pauseHashUpdate;
 
-
-setTimeout(function(){ 
-	//resize(); 
+setTimeout(function(){  
 	mgbHeader.resize();
 }, 500);	
 
@@ -531,6 +475,22 @@ function resizeChecker() {
 function resize(){
 	mgbHeader.resize();
 	mgbContent.resize();
+}
+
+// Prevent the page of jumping abruptly when loading from a hash
+function pauseHashUpdate() {
+	if((location.hash !== "#") && (location.hash !== "")) {
+		var currHash = location.hash; // store the hash 
+		location.hash = ""; // empty the hash to keep page at top until the header animation finishes 
+		
+		setTimeout(function(){
+			$("html,body").animate({
+				scrollTop: $(currHash).offset().top, 
+			}, 800, function(){
+				location.hash = currHash;
+			});
+		}, 2000);
+	}
 }
 
 setInterval(function(){
