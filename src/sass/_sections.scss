@@ -184,6 +184,10 @@ h1 {
 	//min-height: 13.5625em;
 	float:left;
 	
+	&.notLoaded{
+		display:none;
+	}
+	
 	picture{
 		margin-left:0;
 		transition: margin 300ms;

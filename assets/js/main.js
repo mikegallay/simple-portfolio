@@ -2323,6 +2323,13 @@ var mgbContent = {
             prevTile.toggleClass("shrinkMe");
             $(this).toggleClass('stretchOut');
         });
+		
+		$('#addCultureContent').on('click',function(e){
+			e.preventDefault();
+			
+			$('.cultureTile').removeClass('notLoaded');
+			setTimeout(function(){$('.cultureTile').find('img').removeClass('lazy');},150);
+		});
         /*this.cultureContent.each(function(index) {
 	  		  if(index%2 == 0) {
 	  			if($(this).children("a").length > 0) {

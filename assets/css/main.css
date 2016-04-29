@@ -1020,6 +1020,10 @@ a:active {
           transform: scale(1.25);
 }
 
+.lazy {
+  opacity: 0 !important;
+}
+
 .blueFont {
   color: #46ccc5;
 }
@@ -1540,6 +1544,9 @@ h1.joinTeamCTA {
   -webkit-transition: margin 300ms, width 300ms, height 300ms;
           transition: margin 300ms, width 300ms, height 300ms;
   float: left;
+}
+.cultureTile.notLoaded {
+  display: none;
 }
 .cultureTile picture {
   margin-left: 0;

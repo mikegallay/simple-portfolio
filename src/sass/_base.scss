@@ -76,6 +76,10 @@
 	transform:scale(1.25);
 }
 
+.lazy {
+	opacity: 0!important;
+}
+
 .blueFont {
 	color: $skyblueColor; 
 }

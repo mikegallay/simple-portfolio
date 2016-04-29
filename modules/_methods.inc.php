@@ -99,19 +99,21 @@ function shuffleCulture($data){
 	
 	for ($i = 0; $i < count($compositeArr); $i++) {
 		
-	   if ($compositeArr[$i]['info'] != ''){
+		$compositeArr[$i]['id'] = $i;
+		
+		if ($compositeArr[$i]['info'] != ''){
 		   if ($i%2==0){
 			   $compositeArr[$i]['dir'] = $dir1;
 		   } else{
 			   $compositeArr[$i]['dir'] = $dir2;
 		   }
-	   }
-	   
-	   if ($compositeArr[$i]['isDouble'] == 'true'){
+		}
+
+		if ($compositeArr[$i]['isDouble'] == 'true'){
 		   $tempDir = $dir2;
 		   $dir2 = $dir1;
 		   $dir1 = $tempDir;
-	   }
+		}
 	   
 	}
 	   

@@ -51,7 +51,7 @@
 				?>
 			</div>
 			<div class="moreButton">
-				<a id="addCultureContent" href=""><?php addIcon('more_button'); ?></a>
+				<a id="addCultureContent" href="#"><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>	
 	</section>
