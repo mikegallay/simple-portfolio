@@ -12,7 +12,7 @@
 }
 
 
-.portfolioContent, .cultureContent, .officeContent {
+.portfolioContent, .cultureContent, .officeContent, .clientContent {
 	margin-top: 1.2em;
 	display:inline-block;
 	
@@ -30,7 +30,6 @@
 		opacity: 1;
 	}
 	&.col-2-by-1 {
-		//flex-basis: 49%;
 		width:49%;
 	}
 }
@@ -84,7 +83,6 @@ h1 {
 	height:	auto;
 	margin: .5%;//0.4222222em;
 	overflow: hidden;
-//	min-height: 150px;
 	float:left;
 	
 	a {
@@ -99,7 +97,6 @@ h1 {
 		}
 		
 		.prjDescription {
-			-js-display: flex;
 			display: flex;
 			flex-flow: column;
 			justify-content: center;
@@ -190,7 +187,6 @@ h1 {
 	margin: 0.5%;
 	overflow: hidden;
 	transition: margin 300ms, width 300ms, height 300ms;
-	//min-height: 13.5625em;
 	float:left;
 	
 	&.notLoaded{
@@ -251,7 +247,6 @@ h1 {
 		cursor: pointer;
 		
 		.bio {
-			-js-display: flex;
 			display: flex;
 			flex-flow: column;
 			justify-content: center;
@@ -426,7 +421,6 @@ h1 {
 	background-color: #f7f7f7;
 	position: relative;
 	width: 98.5%;
-//	min-height: 150px;
 	margin: 0.4222222em;
 	overflow: hidden;
 	background-color: #ffffff;
@@ -491,7 +485,6 @@ h1 {
 	}
 	
 	.officeInfo {
-		-js-display: flex;
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
@@ -529,7 +522,6 @@ h1 {
 		list-style: none;
 		text-align: center;
 		padding: 0;
-		-js-display: flex;
 		display: flex;
 		flex-flow: row wrap;
 		align-content: flex-start;
@@ -587,7 +579,6 @@ h1 {
 			list-style: none;
 			text-align: left;
 			padding: 0;
-			-js-display: flex;
 			display: flex;
 			flex-flow: row wrap;
 			align-content: flex-start;
@@ -605,7 +596,7 @@ h1 {
 
 	.projectTile {
 		width: 49%;
-//		min-height: 300px;
+
 		a {
 			.prjDescription {
 	
@@ -626,7 +617,6 @@ h1 {
 	.cultureTile {
 		width: 49%;
 		max-height: 31em;
-//		min-height: 31em;
 		
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
@@ -657,7 +647,6 @@ h1 {
 
 	.officeTile {
 		width: 49%;
-//		min-height: 300px;
 		margin: 0.5%;		
 	}
 
@@ -709,7 +698,6 @@ h1 {
 	.projectTile {
 		width: 24%;
 		max-height: 20em;
-//		min-height: 240px;
 		
 		a {
 			.prjDescription {
@@ -738,7 +726,6 @@ h1 {
 	.cultureTile {
 		width: 24%;
 		max-height: 20em;
-//		min-height: 20em;
 
 		.bio {
 			font-family: 'Gotham-Light', san-serif;
@@ -838,7 +825,6 @@ h1 {
 	.cultureTile {
 		width: 15.6666666%;
 		max-height: 20em;
-//		min-height: 20em;
 		margin: 0.5%;
 		
 		&.col-2-by-1 {

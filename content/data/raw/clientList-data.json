@@ -1,114 +1,94 @@
 [
 	{	
 		"name": "Blue Cross Blue Shield Association",
-		"logo": ""
-	},
-	{
-		"name": "Dr Pepper Snapple Group",
-		"logo": ""
-	},
-	{
-		"name": "Marriott International",
-		"logo": ""
-	},
-	{
-		"name": "Scotts Miracle-Gro",
-		"logo": ""
+		"logo": "bluecross"
 	},
 	{
 		"name": "Brand USA",
-		"logo": ""
+		"logo": "brandusa"
 	},
 	{
-		"name": "Fiat Chrysler Automobiles",
-		"logo": ""
+		"name": "Cars",
+		"logo": "cars"
 	},
 	{
-		"name": "Mizkah",
-		"logo": ""
-	},
-	{
-		"name": "Staples",
-		"logo": ""
-	},
-	{
-		"name": "Cars.com",
-		"logo": ""
-	},
-	{
-		"name": "Honda Motor Company",
-		"logo": ""
-	},
-	{
-		"name": "Mondelez International",
-		"logo": ""
-	},
-	{
-		"name": "United Airlines",
-		"logo": ""
-	},
-	{
-		"name": "Central Park Conservancy",
-		"logo": ""
-	},
-	{
-		"name": "Intel Corporation",
-		"logo": ""
-	},
-	{
-		"name": "Northrop Gruman Corporation",
-		"logo": ""
-	},
-	{
-		"name": "The United States Tennis Association",
-		"logo": ""
-	},
-	{
-		"name": "Chevron Corporation",
-		"logo": ""
-	},
-	{
-		"name": "JCPenney Corporation",
-		"logo": ""
-	},
-	{
-		"name": "Proctor & Gamble",
-		"logo": ""
-	},
-	{
-		"name": "Verizon",
-		"logo": ""
+		"name": "Chevron",
+		"logo": "chevron"
 	},
 	{
 		"name": "Crayola",
-		"logo": ""
-	},
-	{
-		"name": "Jewelers Mutual Insurance Company",
-		"logo": ""
-	},
-	{
-		"name": "PureCircle",
-		"logo": ""
-	},
-	{
-		"name": "The Walt Disney Company",
-		"logo": ""
+		"logo": "crayola"
 	},
 	{
 		"name": "Darden Restaurants",
-		"logo": ""
+		"logo": "darden_restaurants"
 	},
 	{
-		"name": "Kraft Heinz Company",
-		"logo": ""
+		"name": "Dr. Pepper Snapple",
+		"logo": "drpepper_snapple"
 	},
 	{
-		"name": "Rust-Oleum",
-		"logo": ""
+		"name": "FCA",
+		"logo": "fca"
 	},
 	{
-		"name": "The Wine Group",
-		"logo": ""
+		"name": "Honda",
+		"logo": "honda"
+	},
+	{
+		"name": "Intel",
+		"logo": "Intel"
+	},
+	{
+		"name": "JCPenney",
+		"logo": "jcpenney"
+	},
+	{
+		"name": "Kraft Heinz",
+		"logo": "kraftheinz"
+	},
+	{
+		"name": "Marriott",
+		"logo": "marriott"
+	},
+	{
+		"name": "Miracle Grow",
+		"logo": "miraclegrow"
+	},
+	{
+		"name": "Mondelez",
+		"logo": "mondelez"
+	},
+	{
+		"name": "Northrop Grumman",
+		"logo": "northropgrumman"
+	},
+	{
+		"name": "PG",
+		"logo": "pg"
+	},
+	{
+		"name": "Rustoleum",
+		"logo": "rustoleum"
+	},
+	{
+		"name": "Staples",
+		"logo": "staples"
+	},
+	{
+		"name": "United",
+		"logo": "united"
+	},
+	{
+		"name": "USTA",
+		"logo": "usta"
+	},
+	{
+		"name": "Verizon",
+		"logo": "verizon"
+	},
+	{
+		"name": "Walt Disney Company",
+		"logo": "waltdisneycompany"
 	}
 ]

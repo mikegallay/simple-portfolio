@@ -1321,24 +1321,24 @@ ul.navigation li a.active {
   overflow: hidden;
 }
 
-.portfolioContent, .cultureContent, .officeContent {
+.portfolioContent, .cultureContent, .officeContent, .clientContent {
   margin-top: 1.2em;
   display: inline-block;
 }
-.portfolioContent .in-view, .cultureContent .in-view, .officeContent .in-view {
+.portfolioContent .in-view, .cultureContent .in-view, .officeContent .in-view, .clientContent .in-view {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: opacity 1s .25s, -webkit-transform 1s .25s;
           transition: opacity 1s .25s, transform 1s .25s;
 }
-.portfolioContent .in-view + .arrow, .cultureContent .in-view + .arrow, .officeContent .in-view + .arrow {
+.portfolioContent .in-view + .arrow, .cultureContent .in-view + .arrow, .officeContent .in-view + .arrow, .clientContent .in-view + .arrow {
   opacity: 1;
 }
-.portfolioContent .in-view + .bgOverlay, .cultureContent .in-view + .bgOverlay, .officeContent .in-view + .bgOverlay {
+.portfolioContent .in-view + .bgOverlay, .cultureContent .in-view + .bgOverlay, .officeContent .in-view + .bgOverlay, .clientContent .in-view + .bgOverlay {
   opacity: 1;
 }
-.portfolioContent.col-2-by-1, .cultureContent.col-2-by-1, .officeContent.col-2-by-1 {
+.portfolioContent.col-2-by-1, .cultureContent.col-2-by-1, .officeContent.col-2-by-1, .clientContent.col-2-by-1 {
   width: 49%;
 }
 
@@ -1468,10 +1468,6 @@ h1.joinTeamCTA {
           transition: top .3s .2s, left .3s .2s;
 }
 .projectTile a .prjDescription {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1608,10 +1604,6 @@ h1.joinTeamCTA {
   cursor: pointer;
 }
 .cultureTile a .bio {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1830,10 +1822,6 @@ h1.joinTeamCTA {
           transition: opacity 300ms;
 }
 .officeTile .officeInfo {
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1876,10 +1864,6 @@ h1.joinTeamCTA {
   list-style: none;
   text-align: center;
   padding: 0;
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1941,10 +1925,6 @@ h1.joinTeamCTA {
     list-style: none;
     text-align: left;
     padding: 0;
-    -js-display: -webkit-box;
-    -js-display: -webkit-flex;
-    -js-display: -ms-flexbox;
-    -js-display: flex;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2152,6 +2132,51 @@ h1.joinTeamCTA {
     margin-top: 1.5em;
   }
 }
+.clientContent {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+}
+.clientContent .clientLogo {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.clientContent .clientLogo img {
+  width: 100%;
+}
+.clientContent .clientLogo img.hover {
+  display: none;
+}
+.clientContent .clientLogo:hover img:nth-child(1).active {
+  display: none;
+}
+.clientContent .clientLogo:hover img:nth-child(2).hover {
+  display: block;
+}
+
 footer {
   background-color: #58595b;
   color: #46ccc5;
