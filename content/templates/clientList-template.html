@@ -1,8 +1,6 @@
 {{#each objects}}
-	<li>
-		<svg class="icon {{{name}}}-inline" role="img" aria-labelledby="title">
-		  <use xlink:href="#{{{name}}}"></use>
-		  <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/{{{name}}}.png" alt="{{{name}}} icon"> <!--<![endif]-->
-		</svg>
-	</li>
+	<div class="clientLogo">
+		<img src="assets/img/client_logos/clients_{{{logo}}}.svg" alt="{{{name}}}" class="display-state normal active" />
+		<img src="assets/img/client_logos/clients_{{{logo}}}_color.svg" alt="{{{name}}}" class="display-state hover" />
+	</div>
 {{/each}}
