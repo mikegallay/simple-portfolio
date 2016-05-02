@@ -29,21 +29,11 @@
 	.in-view + .bgOverlay {
 		opacity: 1;
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> 1d7bb26cfe6fb88b57a40c064629780937501382
+
 	.col-2-by-1 {
 		width:49%;
 	}
 }
-
-.cultureContent{
-	.col-2-by-1 {
-		width:99%;
-	}
-}
-
 
 
 h1 {
@@ -214,6 +204,10 @@ h1 {
 		//height:0!important;
 	}
 	
+	&.col-2-by-1 {
+		width:99%;
+	}
+	
 	picture{
 		margin-left:0;
 		transition: margin 300ms;
@@ -309,6 +303,10 @@ h1 {
 			    left: 1.87em;
 				transform: rotateZ(-90deg);
 				transition: left 400ms 90ms;
+			}
+			
+			&.showDetails{
+				opacity:1;
 			}
 		}
 		
@@ -518,6 +516,10 @@ h1 {
 		opacity: 0;
 		z-index: 9999;
 		transition: opacity 300ms;
+		
+		&.showDetails{
+			opacity:1;
+		}
 					
 		svg {
 			display: block;

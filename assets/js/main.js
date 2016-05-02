@@ -1588,6 +1588,8 @@ var mgbUtils = {
 
 	    var elemTop = $(elem).offset().top;
 	    var elemBottom = elemTop + $(elem).height()/4;
+		
+		// console.log($(elem),elemTop,elemBottom);
 
 	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	},	
@@ -2033,6 +2035,8 @@ var mgbMainSys = {
 				$('nav a').removeClass('active');
 				$('nav a[href="#'+hashName+'"]').addClass('active');
 				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');
+				
+				location.hash = hashName;
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
@@ -2048,7 +2052,9 @@ var mgbMainSys = {
  	   $('.ll').each(function () {
  	      if (mgbUtils.isScrolledIntoView(this) === true) {
  	          $(this).addClass('in-view');
- 			  $(this).parent().next().css('opacity', '1');
+ 			  var _parent = $(this).parent().next();
+			  console.log(_parent, $(this).parent().next());
+			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) _parent.addClass('showDetails');//.css('opacity', '1');
  	      }
  	   });
 	},

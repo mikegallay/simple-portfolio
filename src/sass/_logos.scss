@@ -9,30 +9,49 @@
     align-items: center;
     align-content: space-between;
 
+
 	.clientLogo {
+		position: relative;
 		margin-top: 0.75em;
 		margin-bottom: 0.75em;
 		
 		img {
+			display: none;
 			width: 100%;
-		
-			&.hover {
-				display: none;
+			height: auto;
+			opacity: 0;
+			transition: opacity 300ms 1s;
+			
+			&.fullColor {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			&.fullColor {
+				visibility: hidden;
+				width: 100%;
 			}
 		}
 	
 		&:hover {
 			img:nth-child(1) {
 				&.active {
-					display: none;
+					visibility: hidden;
 				}
 			}
 		
 			img:nth-child(2) {
-				&.hover {
+				&.fullColor {
 					display: block;
+					visibility: visible;
 				}
 			}
+		}
+		
+		.in-view {
+			display: block;
+			opacity: 1;
 		}
 	}
 }

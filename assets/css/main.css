@@ -1354,10 +1354,6 @@ ul.navigation li a.active {
   width: 49%;
 }
 
-.cultureContent .col-2-by-1 {
-  width: 99%;
-}
-
 h1 {
   margin: 0;
 }
@@ -1573,6 +1569,9 @@ h1.joinTeamCTA {
 .cultureTile.notLoaded {
   display: none;
 }
+.cultureTile.col-2-by-1 {
+  width: 99%;
+}
 .cultureTile picture {
   margin-left: 0;
   -webkit-transition: margin 300ms;
@@ -1675,6 +1674,9 @@ h1.joinTeamCTA {
           transform: rotateZ(-90deg);
   -webkit-transition: left 400ms 90ms;
           transition: left 400ms 90ms;
+}
+.cultureTile a .arrow.showDetails {
+  opacity: 1;
 }
 .cultureTile a:hover .arrow {
   border-top: 75px solid transparent;
@@ -1864,6 +1866,9 @@ h1.joinTeamCTA {
   z-index: 9999;
   -webkit-transition: opacity 300ms;
           transition: opacity 300ms;
+}
+.officeTile .officeInfo.showDetails {
+  opacity: 1;
 }
 .officeTile .officeInfo svg {
   display: block;
@@ -2181,20 +2186,37 @@ h1.joinTeamCTA {
           align-content: space-between;
 }
 .clientContent .clientLogo {
+  position: relative;
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 .clientContent .clientLogo img {
+  display: none;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  -webkit-transition: opacity 300ms 1s;
+          transition: opacity 300ms 1s;
+}
+.clientContent .clientLogo img.fullColor {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.clientContent .clientLogo img.fullColor {
+  visibility: hidden;
   width: 100%;
 }
-.clientContent .clientLogo img.hover {
-  display: none;
-}
 .clientContent .clientLogo:hover img:nth-child(1).active {
-  display: none;
+  visibility: hidden;
 }
-.clientContent .clientLogo:hover img:nth-child(2).hover {
+.clientContent .clientLogo:hover img:nth-child(2).fullColor {
   display: block;
+  visibility: visible;
+}
+.clientContent .clientLogo .in-view {
+  display: block;
+  opacity: 1;
 }
 
 footer {
