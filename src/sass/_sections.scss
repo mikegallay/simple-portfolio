@@ -29,8 +29,14 @@
 	.in-view + .bgOverlay {
 		opacity: 1;
 	}
-	&.col-2-by-1 {
+	.col-2-by-1 {
 		width:49%;
+	}
+}
+
+.cultureContent{
+	.col-2-by-1 {
+		width:99%;
 	}
 }
 
@@ -84,6 +90,13 @@ h1 {
 	margin: .5%;//0.4222222em;
 	overflow: hidden;
 	float:left;
+	//transition: height 300ms;
+	
+	&.notLoaded{
+		display:none;
+		//visibility:hidden;
+		//height:0!important;
+	}
 	
 	a {
 		display: block;
@@ -188,9 +201,12 @@ h1 {
 	overflow: hidden;
 	transition: margin 300ms, width 300ms, height 300ms;
 	float:left;
+	height:auto;
 	
 	&.notLoaded{
 		display:none;
+		//visibility:hidden;
+		//height:0!important;
 	}
 	
 	picture{

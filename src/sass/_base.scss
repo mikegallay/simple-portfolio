@@ -44,8 +44,18 @@
 .moreButton {
 	position: relative;
 	text-align: center;
-	margin-top: 0.75em;
-	margin-bottom: 0.75em;
+	margin-top: 0;
+	margin-bottom: 0;
+	transition:height 500ms 500ms,margin 500ms 500ms,opacity 500ms;
+	height:0;
+	opacity:0;
+	
+	&.active{
+		height:34px;
+		margin-top: 0.75em;
+		margin-bottom: 0.75em;
+		opacity:1;
+	}
 	
 	svg {
 		fill: #46ccc5;

@@ -987,8 +987,18 @@ a:active {
 .moreButton {
   position: relative;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms;
+          transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms;
+  height: 0;
+  opacity: 0;
+}
+.moreButton.active {
+  height: 34px;
   margin-top: 0.75em;
   margin-bottom: 0.75em;
+  opacity: 1;
 }
 .moreButton svg {
   fill: #46ccc5;
@@ -1022,6 +1032,8 @@ a:active {
 
 .lazy {
   opacity: 0 !important;
+  -webkit-transform: scale(1.25) !important;
+          transform: scale(1.25) !important;
 }
 
 .blueFont {
@@ -1338,8 +1350,12 @@ ul.navigation li a.active {
 .portfolioContent .in-view + .bgOverlay, .cultureContent .in-view + .bgOverlay, .officeContent .in-view + .bgOverlay, .clientContent .in-view + .bgOverlay {
   opacity: 1;
 }
-.portfolioContent.col-2-by-1, .cultureContent.col-2-by-1, .officeContent.col-2-by-1, .clientContent.col-2-by-1 {
+.portfolioContent .col-2-by-1, .cultureContent .col-2-by-1, .officeContent .col-2-by-1, .clientContent .col-2-by-1 {
   width: 49%;
+}
+
+.cultureContent .col-2-by-1 {
+  width: 99%;
 }
 
 h1 {
@@ -1456,6 +1472,9 @@ h1.joinTeamCTA {
   overflow: hidden;
   float: left;
 }
+.projectTile.notLoaded {
+  display: none;
+}
 .projectTile a {
   display: block;
   cursor: pointer;
@@ -1548,6 +1567,7 @@ h1.joinTeamCTA {
   -webkit-transition: margin 300ms, width 300ms, height 300ms;
           transition: margin 300ms, width 300ms, height 300ms;
   float: left;
+  height: auto;
 }
 .cultureTile.notLoaded {
   display: none;

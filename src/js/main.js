@@ -165,7 +165,7 @@ var mgbContent = {
             });
         });
 		
-		$('#addFolioContent').on('click',function(e){
+		$('#projectTileMore').on('click',function(e){
 			e.preventDefault();
 			
 			that.loadMoreContent('projectTile',2);
@@ -223,7 +223,7 @@ var mgbContent = {
             $(this).toggleClass('stretchOut');
         });
 		
-		$('#addCultureContent').on('click',function(e){
+		$('#cultureTileMore').on('click',function(e){
 			e.preventDefault();
 			
 			that.loadMoreContent('cultureTile',2);
@@ -244,6 +244,12 @@ var mgbContent = {
 			  }(nc));
 		
 		}
+		
+		
+		if ($("."+tar+".notLoaded").length == 0) {
+			// $("#"+tar+"More").parent().fadeOut();
+            setTimeout(function(){$("#"+tar+"More").parent().removeClass('active'); }, 500);
+        }
 	},
     
     initClockCnt: function() {
