@@ -57,8 +57,11 @@ function shuffleCulture($data){
 			array_push($compositeArr, array_pop($singleArr));
 		}
 		
-		if(($randPush % 2) || ($randPush >= 5)) {
-			array_push($compositeArr, array_pop($doubleArr));
+		if ((count($doubleArr) > 0)){
+			//make sure you still have a double to add here
+			if(($randPush % 2) || ($randPush >= 5)) {
+				array_push($compositeArr, array_pop($doubleArr));
+			}
 		}
 		
 		if(empty($doubleArr)  && (count($singleArr) !== 0)) {
@@ -116,7 +119,7 @@ function shuffleCulture($data){
 		}
 	   
 	}
-	   
+	
 	return $compositeArr;
 	
 }

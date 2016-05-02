@@ -1747,7 +1747,7 @@ var mgbContent = {
         $('.pushRight').on('click', function(e) {
             e.preventDefault();
 			
-			that.resize();
+			that.setCultureTileHeight();
             
             if (!$(this).hasClass("stretchOut")) {
                 $(this).siblings().removeClass("shrinkMe stretchOut");
@@ -1770,7 +1770,7 @@ var mgbContent = {
         $('.pushLeft').on('click', function(e) {
             e.preventDefault();
             
-			that.resize();
+			that.setCultureTileHeight();
 			
             if (!$(this).hasClass("stretchOut")) {
                 $(this).siblings().removeClass("shrinkMe stretchOut");
@@ -1860,31 +1860,30 @@ var mgbContent = {
             });
         });
     },
-    
-    resize: function() {
-        
+	
+	setCultureTileHeight: function(){
+		
         var colW;
         var that = this;
 		
 		setTimeout(function(){
-	        that.cultureContent.each(function() {
-            
-	            if ($(this).hasClass("pushRight")) {
-	                var nextTile = $(this).next();
-	                var picHolder = nextTile.find('.picHolder');
-                
-	                colW = picHolder.width();
-            
-	            } else if ($(this).hasClass('pushLeft')) {
-	                var prevTile = $(this).prev();
-	                var picHolder = prevTile.find('.picHolder');
-                
-	                colW = picHolder.width();
-	            }
-	        });
+			
+			var colW = that.cultureContent.first().next().find('.picHolder').width();
+			
+			$('.cultureTile').css('height', colW + 'px');
+	
+		},250);
+		
+	},
+    
+    resize: function() {
         
+        var that = this;
+		
+		this.setCultureTileHeight();
+		
+		setTimeout(function(){
 	        that.cultureContent.removeClass("stretchOut shrinkMe");
-	        that.cultureContent.css('height', colW + 'px');
 		},250);
         
     },
