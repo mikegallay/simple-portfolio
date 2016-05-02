@@ -1338,7 +1338,7 @@ ul.navigation li a.active {
 .portfolioContent .in-view + .bgOverlay, .cultureContent .in-view + .bgOverlay, .officeContent .in-view + .bgOverlay, .clientContent .in-view + .bgOverlay {
   opacity: 1;
 }
-.portfolioContent.col-2-by-1, .cultureContent.col-2-by-1, .officeContent.col-2-by-1, .clientContent.col-2-by-1 {
+.portfolioContent .col-2-by-1, .cultureContent .col-2-by-1, .officeContent .col-2-by-1, .clientContent .col-2-by-1 {
   width: 49%;
 }
 
@@ -1353,6 +1353,7 @@ h1.sectionHeading {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
   letter-spacing: 0.04em;
+  line-height: 1em;
   text-align: center;
 }
 h1.sectionHeading span[data-forward]:nth-child(1) {
@@ -1437,7 +1438,7 @@ h1.sectionHeading span[data-forward]:nth-child(10).forwardVisible {
 }
 h1.sectionHeadingSmall {
   font-family: 'Din-Regular', san-serif;
-  font-size: 2.125em;
+  font-size: 3.5em;
   font-weight: lighter;
   color: #58595b;
   letter-spacing: 0.04em;
@@ -2133,7 +2134,7 @@ h1.joinTeamCTA {
   }
 }
 .clientContent {
-  width: 90%;
+  width: 95%;
   position: relative;
   margin: 0 auto;
   display: -webkit-box;
@@ -2148,10 +2149,9 @@ h1.joinTeamCTA {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
