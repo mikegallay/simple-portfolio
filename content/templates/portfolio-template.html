@@ -1,5 +1,5 @@
 {{#each objects}}
-	<div class="projectTile {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
+	<div class="projectTile {{#greaterThan id 5}} notLoaded {{/greaterThan}} {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
 		<a data-url="{{{vimeoURL}}}">
 			<picture>
 			<!--[if IE 9]>
@@ -11,7 +11,7 @@
 				</video>
 			<![endif]-->
 			<!--[if !lte IE 9]> -->
-				<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll">
+				<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}} lazy {{/greaterThan}}">
 			<!-- <![endif]-->
 			</picture>
 			

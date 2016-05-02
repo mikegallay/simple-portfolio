@@ -30,8 +30,8 @@
 					echo $portfolioData; 
 				?>
 			</div>
-			<div class="moreButton">
-				<a id="addFolioContent" href=""><?php addIcon('more_button'); ?></a>
+			<div class="moreButton active">
+				<a id="projectTileMore" href=""><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>
 	</section>
@@ -50,8 +50,8 @@
 					echo $cultureData; 
 				?>
 			</div>
-			<div class="moreButton">
-				<a id="addCultureContent" href="#"><?php addIcon('more_button'); ?></a>
+			<div class="moreButton active">
+				<a id="cultureTileMore" href="#"><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>	
 	</section>

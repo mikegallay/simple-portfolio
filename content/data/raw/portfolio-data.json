@@ -1,5 +1,6 @@
 [
 	{	
+		"id": 0,
 		"imgSrc": "assets/img/our_work/Intel_JimParsons_Campaign1",
 		"vimeoURL": "https://player.vimeo.com/video/144913605",
 		"header": "Intel",
@@ -8,6 +9,7 @@
 		"isShowcase": "true"
 	},
 	{	
+		"id": 1,
 		"imgSrc": "assets/img/our_work/Intel_Inside",
 		"vimeoURL": "",
 		"header": "Intel",
@@ -16,6 +18,7 @@
 		"isShowcase": "true"
 	},	
 	{
+		"id": 2,
 		"imgSrc": "assets/img/our_work/Mariott_Insitu",
 		"vimeoURL": "http://player.vimeo.com/video/124646110?api=1",
 		"header": "Mariott",
@@ -24,6 +27,7 @@
 		"isShowcaseFinal": "isShowcaseFinal"
 	},
 	{
+		"id": 3,
 		"imgSrc": "assets/img/our_work/OscarMayer",
 		"vimeoURL": "http://player.vimeo.com/video/119997282",
 		"header": "Oscar Meyer",
@@ -31,6 +35,7 @@
 		"altText": "This is alt text"
 	},
 	{
+		"id": 4,
 		"imgSrc": "assets/img/our_work/IntelExperienceApp",
 		"vimeoURL": "",
 		"header": "Intel",
@@ -38,6 +43,7 @@
 		"altText": "This is alt text"
 	},
 	{	
+		"id": 5,
 		"imgSrc": "assets/img/our_work/Aussie_SGS1",
 		"vimeoURL": "",
 		"header": "Aussie",
@@ -45,6 +51,7 @@
 		"altText": "This is alt text"
 	},	
 	{
+		"id": 6,
 		"imgSrc": "assets/img/our_work/Mariott_MrGuaran-T",
 		"vimeoURL": "",
 		"header": "Marriot",
@@ -52,6 +59,7 @@
 		"altText": "This is alt text"
 	},
 	{
+		"id": 7,
 		"imgSrc": "assets/img/our_work/Verizon_SocialImprint3",
 		"vimeoURL": "",
 		"header": "Verizon",
@@ -59,6 +67,7 @@
 		"altText": "This is alt text"
 	},
 	{
+		"id": 8,
 		"imgSrc": "assets/img/our_work/United_BMB1",
 		"vimeoURL": "",
 		"header": "United <br> Airlines",
@@ -66,10 +75,11 @@
 		"altText": "This is alt text"
 	},
 	{
+		"id": 9,
 		"imgSrc": "assets/img/our_work/Apophis",
 		"vimeoURL": "",
 		"header": "Verizon",
-		"description": "Description goes here",
+		"description": "Description goes here.",
 		"altText": "This is alt text"
 	}
 ]
