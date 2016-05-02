@@ -1,5 +1,8 @@
 {{#each objects}}
 	<li>
-		{{{ name }}}
+		<svg class="icon {{{name}}}-inline" role="img" aria-labelledby="title">
+		  <use xlink:href="#{{{name}}}"></use>
+		  <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/{{{name}}}.png" alt="{{{name}}} icon"> <!--<![endif]-->
+		</svg>
 	</li>
 {{/each}}

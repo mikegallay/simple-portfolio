@@ -165,9 +165,12 @@ var mgbContent = {
     
     
     initCultureCnt: function() {
-        
+        var that = this;
+		
         $('.pushRight').on('click', function(e) {
             e.preventDefault();
+			
+			that.resize();
             
             if (!$(this).hasClass("stretchOut")) {
                 $(this).siblings().removeClass("shrinkMe stretchOut");
@@ -190,6 +193,8 @@ var mgbContent = {
         $('.pushLeft').on('click', function(e) {
             e.preventDefault();
             
+			that.resize();
+			
             if (!$(this).hasClass("stretchOut")) {
                 $(this).siblings().removeClass("shrinkMe stretchOut");
             }

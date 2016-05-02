@@ -45,8 +45,8 @@ h1 {
 		font-size: 2.125em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
-		margin-top: 1em;
-		margin-bottom: 1em;
+		margin-top: 0.75em;
+		margin-bottom: 0.75em;
 		letter-spacing: 0.04em;
 		text-align: center;
 		
@@ -60,6 +60,15 @@ h1 {
 				}
 			}	
 		}
+	}
+	
+	&.sectionHeadingSmall {
+		font-family: 'Din-Regular', san-serif;
+		font-size: 2.125em;
+		font-weight: lighter;
+		color: $sectionHeadingColor;
+		letter-spacing: 0.04em;
+		text-align: center;
 	}
 	
 	&.joinTeamCTA {
@@ -688,8 +697,8 @@ h1 {
 			color: $sectionHeadingColor;
 			letter-spacing: 0.04em;
 			line-height: 1em;
-			margin-top: 1em;
-			margin-bottom: 1em;
+			margin-top: 0.75em;
+			margin-bottom: 0.75em;
 		}
 		
 		&.joinTeamCTA {

@@ -73,11 +73,24 @@
 	
 	<section id="JoinTeam" class="fullBleed">	
 		<div class="container">
-			<h1 class="sectionHeading joinTeamCTA">INTERESTED IN <br>
+			<h1 class="sectionHeadingSmall joinTeamCTA">INTERESTED IN <br>
 				JOING THE TEAM?</h1>
 		
 			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</div>	
+	</section>
+	
+	<section id="OurClients" class="fullBleed">
+		<div class="container">
+			<h1 class="sectionHeading">OUR <span class="blueFont">CLIENTS</span></h1>
+			
+			<div class="clientContent">
+				<?php
+					$clientData = HTMLfromTemplateAndJSON("content/templates/clientList-template.html", "clientList-data");
+					echo $clientData;
+				?>
+			</div>
+		</div>
 	</section>
 <!-- 	
 	<div class="pfill-test">
@@ -93,7 +106,10 @@
 		?>
 	</div> 
 -->
-
+	<!-- <div class="client-logo-item-wrapper">
+							<img data-src="http://www.codeandtheory.com/assets/media/824d4512e141d296d0f0bffda6d43596d45247fd.svg" alt="" class="display-state normal active lazyload ll" data-id="824d4512e141d296d0f0bffda6d43596d45247fd-svg">
+						</div> -->
+						
     <?php include 'modules/_footer.inc.php'; ?>
     <?php include 'modules/_foot.inc.php'; ?>
 

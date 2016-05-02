@@ -1350,8 +1350,8 @@ h1.sectionHeading {
   font-size: 2.125em;
   font-weight: lighter;
   color: #58595b;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
   letter-spacing: 0.04em;
   text-align: center;
 }
@@ -1434,6 +1434,14 @@ h1.sectionHeading span[data-forward]:nth-child(10) {
 }
 h1.sectionHeading span[data-forward]:nth-child(10).forwardVisible {
   opacity: 1;
+}
+h1.sectionHeadingSmall {
+  font-family: 'Din-Regular', san-serif;
+  font-size: 2.125em;
+  font-weight: lighter;
+  color: #58595b;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 h1.joinTeamCTA {
   text-align: center;
@@ -2032,8 +2040,8 @@ h1.joinTeamCTA {
     color: #58595b;
     letter-spacing: 0.04em;
     line-height: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
   }
   h1.joinTeamCTA {
     text-align: center;
