@@ -1,7 +1,4 @@
-# AuthType Basic
-# AuthName "Restricted Files"
-# AuthUserFile /var/www/courtyardmarriott-stage/.htpasswd
-# Require valid-user
+AddHandler application/x-httpd-php55 .php
 
 # Caching
 <ifmodule mod_expires.c>
