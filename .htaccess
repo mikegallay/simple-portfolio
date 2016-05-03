@@ -1,4 +1,4 @@
-AddHandler application/x-httpd-php56 .php
+AddHandler application/x-httpd-php55 .php
 
 # Caching
 <ifmodule mod_expires.c>
