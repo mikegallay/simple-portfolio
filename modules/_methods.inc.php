@@ -5,17 +5,17 @@ require_once './lib/Handlebars/Autoloader.php';
 Handlebars\Autoloader::register();
 use Handlebars\Handlebars;
 
-$tempData;
-$fullData;
 $siteData = './content/data/merged.json';
+$tempData = "";
+$fullData = "";
 
-function preloadData(){
-	global $fullData, $siteData;
+function preloadData(&$tempData, &$fullData, &$siteData){
 	$tempData = file_get_contents($siteData);
 	$fullData = json_decode($tempData, true); 
 }
 
-preloadData();
+
+preloadData($tempData, $fullData, $siteData);
 
 
 
@@ -24,7 +24,12 @@ function shuffleCulture($data){
 	$evenOddToggle = 1;
 	
 	$tempData = $data;
-	shuffle($tempData);
+	
+	try {	
+		shuffle($tempData);
+	} catch ( Exception $e) {
+		die("Cannot shuffle the data");
+	}
 	
 	$dir1 = 'pushRight';
 	$dir2 = 'pushLeft';
@@ -42,63 +47,45 @@ function shuffleCulture($data){
 		}
 	}
 	
-	shuffle($singleArr);
-	shuffle($doubleArr);
+	try {
+		shuffle($singleArr);
+		shuffle($doubleArr);
+	} catch (Exception $e) {
+		die("Cannot shuffle the data");
+	}
 	
 	$randPush = rand(0, 10);
 	
 	while((count($doubleArr) > 0) || (count($singleArr) > 0)) {
-		
+
 		if(($randPush % 2 == 0) || ($randPush < 5)) {
 			array_push($compositeArr, array_pop($doubleArr));
 		}
-		
+
 		for($i = 0; $i < 8; $i++) {
 			array_push($compositeArr, array_pop($singleArr));
 		}
-		
+
 		if ((count($doubleArr) > 0)){
 			//make sure you still have a double to add here
 			if(($randPush % 2) || ($randPush >= 5)) {
 				array_push($compositeArr, array_pop($doubleArr));
 			}
 		}
-		
+
 		if(empty($doubleArr)  && (count($singleArr) !== 0)) {
 			// push remaining single elements into composite array
 			$compositeArr = array_merge($compositeArr, $singleArr);
 			unset($singleArr);
-		} 
-		
+		}
+
 		if(empty($singleArr) && (count($doubleArr) !== 0)) {
 			// push remaining double elements into composite array
 			$compositeArr = array_merge($compositeArr, $doubleArr);
 			unset($doubleArr);
-		}	
+		}
 	}
 	
-
-		
-	// for ($i = 0; $i < count($tempData); $i++) {
-	//
-	// 	$isDoub = ($tempData[$i]['isDouble'] == 'true') ? true : false;
-	// 	// echo $tempData[$i]['isDouble'].$isDoub;
-	//    if ($isDoub){
-	// 	   // if ($tempData[$i]['isDouble'] == 'true'){
-	// 	   //change the index of the double to an even index
-	// 	   // echo $i.' - ';
-	// 	  $evenOdd = evalEvenOdd($i,$evenOddToggle);
-	// 	  // echo $i.' - '.$evenOdd.','.$isDoub.'; ';
-	// 	  // echo 'asdf '.$evenOdd;
-	// 	  if ($i > 0 && $evenOdd){
-	// 		  // echo $i.' true;';
-	// 		  // $tempData[$i]['isDouble'] = '';
-	// 	      $out = array_splice($tempData, $i-1, 1);
-	// 	       array_splice($tempData, count($tempData)-1, 0, $out);
-	// 		   $evenOddToggle *= -1;
-	// 	  }
-	//    }
-	// }
 	
 	for ($i = 0; $i < count($compositeArr); $i++) {
 		
@@ -124,18 +111,9 @@ function shuffleCulture($data){
 	
 }
 
-/*function evalEvenOdd($num,$toggle){
-	// echo 'i'.$num.' '.$toggle.'; ';
-	if ($num%2 != 0 && $toggle == 1) return true;
-	if ($num%2 == 0 && $toggle == -1) return true;
-	
-	return false;
-}*/
-
 function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle) {
 	global $fullData;
 	$templateStr = file_get_contents($tempname);
-	//$fullData = file_get_contents('./content/data/merged.json');
 	
 	$tempDataArray = $fullData[$jsonfile];
 	$dataArray = $tempDataArray;

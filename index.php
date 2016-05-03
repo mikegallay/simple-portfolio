@@ -46,7 +46,7 @@
 		
 			<div class="cultureContent">
 				<?php
-					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
+					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data");
 					echo $cultureData; 
 				?>
 			</div>
