@@ -36,13 +36,6 @@ AddType text/x-component .htc
 <IfModule mod_rewrite.c>
     RewriteEngine On
     #RewriteBase /
-	
-    RewriteCond %{REQUEST_URI} ^/NFL [NC]
-    RewriteRule (.*) /nfl
-	
-    # Removes trailing slashes (prevents SEO duplicate content issues)
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.+)/$ $1 [L,R=301]
 
     # Checks to see if the user is attempting to access a valid file,
     # such as an image or css document, if this isn't true it sends the
@@ -51,10 +44,6 @@ AddType text/x-component .htc
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?p=/$1 [L]
 </IfModule>
-
-
-#redirect /NFL http://courtyard.marriott.com/nfl
-
 
 <IfModule !mod_rewrite.c>
     # Without mod_rewrite, route 404's to the front controller

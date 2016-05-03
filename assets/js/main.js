@@ -1588,8 +1588,6 @@ var mgbUtils = {
 
 	    var elemTop = $(elem).offset().top;
 	    var elemBottom = elemTop + $(elem).height()/4;
-		
-		// console.log($(elem),elemTop,elemBottom);
 
 	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	},	
@@ -1731,7 +1729,9 @@ var mgbContent = {
         this.portfolioContent.each(function() {
             $(this).children("a").on('click', function() {
                 var url = $(this).attr("data-url");
-                
+                var header = $(this).attr("data-header");
+				var title = $(this).attr("data-title");
+				
                 if (url !== "") {
                     $("nav").toggleClass("videoActive");
                     $(".vimeoContainer").addClass("active");
@@ -1908,7 +1908,6 @@ var mgbContent = {
                     $('.closeMe').on('click', function() {
                         $("#officeDetails").removeClass('showDetails');
                         $(currThis).children("a").removeClass("active");
-                        //$("#officeDetails").children().fadeOut();
                     });
                 }, 300);
             });
