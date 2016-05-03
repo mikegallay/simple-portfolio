@@ -1950,6 +1950,16 @@ h1.joinTeamCTA {
     text-align: center;
   }
 
+  .vimeoContainer .videoTitle {
+    font-size: 3em;
+    text-align: left;
+    margin: 0;
+  }
+  .vimeoContainer .videoDescription {
+    text-align: left;
+    font-size: 1.2em;
+  }
+
   #clientList {
     display: none;
     cursor: crosshair;

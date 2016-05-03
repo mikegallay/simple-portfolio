@@ -1735,8 +1735,8 @@ var mgbContent = {
                 if (url !== "") {
                     $("nav").toggleClass("videoActive");
                     $(".vimeoContainer").addClass("active");
-					$(".vimeoContainer").children("h2").html(header);
-					$(".vimeoContainer").children("p").html(title);
+					$(".vimeoContainer").children(".videoTitle").html(header);
+					$(".vimeoContainer").children(".videoDescription").html(title);
                     $(this).addClass("active");
                     
                     var iframe = $('#vimeoPlayer')[0];
@@ -1955,6 +1955,8 @@ var mgbMainSys = {
 				
 				var iframe = $('#vimeoPlayer')[0];
 				$(iframe).attr('src', '');
+				$(".vimeoContainer").children(".videoTitle").html("");
+				$(".vimeoContainer").children(".videoDescription").html("");
 				
 				if($(window).attr('scrollY') < 60){
 					$(this).removeClass("sticky");

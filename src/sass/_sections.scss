@@ -596,6 +596,18 @@ h1 {
 		}
 	}
 
+	.vimeoContainer {
+		.videoTitle {
+			font-size: 3em;
+			text-align: left;
+			margin: 0;
+		}
+		
+		.videoDescription {
+			text-align: left;
+			font-size: 1.2em;
+		}
+	}
 
 	#clientList {
 		display: none;
