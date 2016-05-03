@@ -3,66 +3,77 @@
 		"name" : "Matthew Bull",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_bull",
+		"imgType": "jpg",
 		"info": "This is some information"
 	},
 	{
 		"name" : "Pantone",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/pantone",
+		"imgType": "jpg",
 		"info": ""
 	},
 	{
 		"name" : "Biking",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/biking",
+		"imgType": "jpg",
 		"info": ""
 	},
 	{
 		"name" : "Bio Colors",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_colors",
+		"imgType": "jpg",
 		"info": "This is my information"
 	},
 	{
 		"name" : "Chelsea",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/art",
+		"imgType": "jpg",
 		"info": ""
 	},
 	{
 		"name" : "Strokes",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/strokes",
+		"imgSrc": "assets/img/our_culture/slinky",
+		"imgType": "gif",
 		"info": ""
 	},
 	{
 		"name" : "Elizabeth",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_elizabeth",
+		"imgType": "jpg",
 		"info": "This is my information"
 	},
 	{
 		"name" : "Dog",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
+		"imgType": "jpg",
 		"info": ""
 	},
 	{
 		"name" : "Tattoos",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/tatoos",
-		"info": ""
+		"imgSrc": "assets/img/our_culture/waving",
+		"imgType": "gif",
+		"info": "Hello everybody!"
 	},
 	{
 		"name" : "Skater",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_skater",
+		"imgType": "jpg",
 		"info": "This is my information"
 	},
 	{
 		"name" : "Train",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/train",
+		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true"
 	}
