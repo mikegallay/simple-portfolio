@@ -1,7 +1,4 @@
-<FilesMatch "\.php$">
-AddHandler x-httpd-php5.6 .php
-</FilesMatch>
-
+AddHandler application/x-httpd-php56 .php
 
 # Caching
 <ifmodule mod_expires.c>
