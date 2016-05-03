@@ -214,15 +214,9 @@ h1 {
 		width:99%;
 	}
 	
-	picture,.gifHolder {
+	picture {
 		margin-left:0;
 		transition: margin 300ms;
-	}
-	
-	.gifHolder{
-		img{
-			width:100%;
-		}
 	}
 	
 	&.stretchOut {

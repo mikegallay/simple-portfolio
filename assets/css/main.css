@@ -1582,13 +1582,10 @@ h1.joinTeamCTA {
 .cultureTile.col-2-by-1 {
   width: 99%;
 }
-.cultureTile picture, .cultureTile .gifHolder {
+.cultureTile picture {
   margin-left: 0;
   -webkit-transition: margin 300ms;
           transition: margin 300ms;
-}
-.cultureTile .gifHolder img {
-  width: 100%;
 }
 .cultureTile.stretchOut {
   will-change: width, margin;
