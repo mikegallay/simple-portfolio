@@ -1810,6 +1810,23 @@ var mgbContent = {
     },
 	
 	loadMoreContent:function(tar,num){
+		
+		//make sure the culture tiles have a height to animate against
+		if (tar == 'cultureTile') this.setCultureTileHeight();
+		
+		//make sure the project tiles have a height to animate against
+		//then remove it once the animation is complete.
+		if (tar == 'projectTile'){
+			
+			//use the fourth project because it is guaranteed to have a 1x1 ratio
+			var colW = $('.projectTile:nth-child(4) a').width();
+			$('.projectTile').css('height', colW + 'px');
+			
+		  	setTimeout(function(){
+		    	$('.projectTile').removeAttr('style');
+		    }, 1000);
+		}
+		
 		var newContent = $("."+tar+".notLoaded").slice(0, num);
 		
 		for (var i=0;i<newContent.length;i++){
@@ -1818,15 +1835,19 @@ var mgbContent = {
 			
 			(function(content){
 			  	setTimeout(function(){
-			    	content.find('img').removeClass('lazy');
+					//removing 'notShowing' removes the zero value for margin and height
+			    	content.removeClass('notShowing');
 			    }, 150);
+				setTimeout(function(){
+					//removing 'lazy' fades the image in
+			    	content.find('img').removeClass('lazy');
+			    }, 450);
 			  }(nc));
 		
 		}
 		
-		
+		//remove the plus button
 		if ($("."+tar+".notLoaded").length == 0) {
-			// $("#"+tar+"More").parent().fadeOut();
             setTimeout(function(){$("#"+tar+"More").parent().removeClass('active'); }, 500);
         }
 	},
@@ -2053,7 +2074,7 @@ var mgbMainSys = {
  	      if (mgbUtils.isScrolledIntoView(this) === true) {
  	          $(this).addClass('in-view');
  			  var _parent = $(this).parent().next();
-			  console.log(_parent, $(this).parent().next());
+			  //console.log(_parent, $(this).parent().next());
 			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) _parent.addClass('showDetails');//.css('opacity', '1');
  	      }
  	   });

@@ -85,12 +85,15 @@ h1 {
 	margin: .5%;//0.4222222em;
 	overflow: hidden;
 	float:left;
-	//transition: height 300ms;
+	transition: margin 300ms, height 300ms;
 	
-	&.notLoaded{
+	&.notLoaded {
 		display:none;
-		//visibility:hidden;
-		//height:0!important;
+	}
+	
+	&.notShowing {
+		margin:0;
+		height:0!important;
 	}
 	
 	a {
@@ -198,17 +201,20 @@ h1 {
 	float:left;
 	height:auto;
 	
-	&.notLoaded{
+	&.notLoaded {
 		display:none;
-		//visibility:hidden;
-		//height:0!important;
+	}
+	
+	&.notShowing {
+		margin:0;
+		height:0!important;
 	}
 	
 	&.col-2-by-1 {
 		width:99%;
 	}
 	
-	picture{
+	picture {
 		margin-left:0;
 		transition: margin 300ms;
 	}
@@ -647,11 +653,11 @@ h1 {
 		}
 	
 		&.col-2-by-1 {
-			width:98.9%;
+			width:99;
 		}
 		
 		&.stretchOut {
-			width: 98.9%;
+			width: 99;
 			
 			.arrow {
 		    	border-top: 2000px solid transparent !important;
@@ -756,7 +762,7 @@ h1 {
 		}
 
 		&.stretchOut {
-			width: 48.9%;
+			width: 49;
 		}
 		
 		&.col-2-by-1 {
