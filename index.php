@@ -26,7 +26,7 @@
 			<div class="portfolioContent">
 			
 				<?php
-					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data");
+					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data", false);
 					echo $portfolioData; 
 				?>
 			</div>
@@ -64,7 +64,7 @@
 			
 			<div class="officeContent">
 				<?php
-					$officeData = HTMLfromTemplateAndJSON("content/templates/office-template.html", "office-data");
+					$officeData = HTMLfromTemplateAndJSON("content/templates/office-template.html", "office-data", false);
 					echo $officeData; 
 				?>
 			</div>
