@@ -56,37 +56,35 @@ function shuffleCulture($data){
 	
 	$randPush = rand(0, 10);
 	
-	// while((count($doubleArr) > 0) || (count($singleArr) > 0)) {
-	//
-	// 	if(($randPush % 2 == 0) || ($randPush < 5)) {
-	// 		array_push($compositeArr, array_pop($doubleArr));
-	// 	}
-	//
-	// 	for($i = 0; $i < 8; $i++) {
-	// 		array_push($compositeArr, array_pop($singleArr));
-	// 	}
-	//
-	// 	if ((count($doubleArr) > 0)){
-	// 		//make sure you still have a double to add here
-	// 		if(($randPush % 2) || ($randPush >= 5)) {
-	// 			array_push($compositeArr, array_pop($doubleArr));
-	// 		}
-	// 	}
-	//
-	// 	if(empty($doubleArr)  && (count($singleArr) !== 0)) {
-	// 		// push remaining single elements into composite array
-	// 		$compositeArr = array_merge($compositeArr, $singleArr);
-	// 		unset($singleArr);
-	// 	}
-	//
-	// 	if(empty($singleArr) && (count($doubleArr) !== 0)) {
-	// 		// push remaining double elements into composite array
-	// 		$compositeArr = array_merge($compositeArr, $doubleArr);
-	// 		unset($doubleArr);
-	// 	}
-	// }
-	
-	$compositeArr = array_merge($singleArr, $doubleArr);
+	while((count($doubleArr) > 0) || (count($singleArr) > 0)) {
+		
+		if(($randPush % 2 == 0) || ($randPush < 5)) {
+			array_push($compositeArr, array_pop($doubleArr));
+		}
+		
+		for($i = 0; $i < 8; $i++) {
+			array_push($compositeArr, array_pop($singleArr));
+		}
+		
+		if ((count($doubleArr) > 0)){
+			//make sure you still have a double to add here
+			if(($randPush % 2) || ($randPush >= 5)) {
+				array_push($compositeArr, array_pop($doubleArr));
+			}
+		}
+		
+		if(empty($doubleArr)  && (count($singleArr) !== 0)) {
+			// push remaining single elements into composite array
+			$compositeArr = array_merge($compositeArr, $singleArr);
+			unset($singleArr);
+		} 
+		
+		if(empty($singleArr) && (count($doubleArr) !== 0)) {
+			// push remaining double elements into composite array
+			$compositeArr = array_merge($compositeArr, $doubleArr);
+			unset($doubleArr);
+		}	
+	}
 	
 	for ($i = 0; $i < count($compositeArr); $i++) {
 		
