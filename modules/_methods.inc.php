@@ -1,6 +1,8 @@
 
 <?php
 
+phpinfo();
+
 require_once './lib/Handlebars/Autoloader.php';
 Handlebars\Autoloader::register();
 use Handlebars\Handlebars;
@@ -47,8 +49,12 @@ function shuffleCulture($data){
 		}
 	}
 	
-	shuffle($singleArr);
-	shuffle($doubleArr);
+	try {
+		shuffle($singleArr);
+		shuffle($doubleArr);
+	} catch (Exception $e) {
+		die("Cannot shuffle the data");
+	}
 	
 	$randPush = rand(0, 10);
 	
