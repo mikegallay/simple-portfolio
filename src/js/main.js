@@ -53,6 +53,7 @@ var mgbHeader = {
 	videoPlayerContainer : null,
 	msgContainer: null,
 	wordArray: null,
+	wordInterval: 0,
 	
 	videoHeight : 0,
 	aspectRatio : 16/9,
@@ -68,7 +69,7 @@ var mgbHeader = {
 		this.welcomeContainer = $("#welcomeVideo");
 		this.videoPlayerContainer = $(".responsive-video");	
 		this.messageContainer = $(".largeTag");
-		this.wordArray = $(".largeTag").data("words").split(",").sort(function() { return 0.5 - Math.random() }).slice(0, 3);
+		this.wordArray = $(".largeTag").data("words").split(",").sort(function() { return 0.5 - Math.random() }).slice(0, 4);
 		
 		//console.log(this.wordArray);
 	},
@@ -460,11 +461,18 @@ var mgbMainSys = {
 			mgbUtils.hideLogo();
 		});
 		
-		mgbHeader.wordArray.forEach(function(){
-			
-		});
-		
 		mgbHeader.messageContainer.focus();
+		
+		var firstWord = mgbHeader.wordArray.shift();
+		mgbHeader.messageContainer.html(firstWord);
+		mgbHeader.wordArray.push(firstWord);
+		
+		mgbHeader.wordInterval = setInterval(function(){
+			firstWord = mgbHeader.wordArray.shift();
+			mgbHeader.messageContainer.html(firstWord);
+			mgbHeader.wordArray.push(firstWord);
+			
+		}, 5000);
 	},
 
 	resize : function() {},
