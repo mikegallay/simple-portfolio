@@ -1777,6 +1777,11 @@ var mgbContent = {
                 picHolder.css('min-width', colW + 'px');
             }
             
+			
+			// if (nextTile.hasClass("shrinkMe")){
+// 				$('.picHolder').removeAttr('style');
+// 			}
+			
             nextTile.toggleClass("shrinkMe");
             $(this).toggleClass('stretchOut');
         });
@@ -1800,6 +1805,10 @@ var mgbContent = {
                 picHolder.css('min-width', colW + 'px');
             }
             
+			// if (prevTile.hasClass("shrinkMe")){
+// 				$('.picHolder').removeAttr('style');
+// 			}
+			
             prevTile.toggleClass("shrinkMe");
             $(this).toggleClass('stretchOut');
         });
@@ -1923,7 +1932,7 @@ var mgbContent = {
 		
 		setTimeout(function(){
 			
-			var colW = that.cultureContent.first().next().find('.picHolder').width();
+			var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
 			
 			$('.cultureTile').css('height', colW + 'px');
 	
