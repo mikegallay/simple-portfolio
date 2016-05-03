@@ -2,6 +2,7 @@
 	{	
 		"id": 0,
 		"imgSrc": "assets/img/our_work/Intel_JimParsons_Campaign1",
+		"imgType": "jpg",
 		"vimeoURL": "https://player.vimeo.com/video/144913605",
 		"header": "Intel",
 		"description": "Description goes here",
@@ -11,6 +12,7 @@
 	{	
 		"id": 1,
 		"imgSrc": "assets/img/our_work/Intel_Inside",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Intel",
 		"description": "Description goes here",
@@ -20,6 +22,7 @@
 	{
 		"id": 2,
 		"imgSrc": "assets/img/our_work/Mariott_Insitu",
+		"imgType": "jpg",
 		"vimeoURL": "http://player.vimeo.com/video/124646110?api=1",
 		"header": "Mariott",
 		"description": "Description goes here",
@@ -28,7 +31,8 @@
 	},
 	{
 		"id": 3,
-		"imgSrc": "assets/img/our_work/OscarMayer",
+		"imgSrc": "assets/img/our_work/princess",
+		"imgType": "gif",
 		"vimeoURL": "http://player.vimeo.com/video/119997282",
 		"header": "Oscar Meyer",
 		"description": "Description goes here",
@@ -37,6 +41,7 @@
 	{
 		"id": 4,
 		"imgSrc": "assets/img/our_work/IntelExperienceApp",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Intel",
 		"description": "Description goes here",
@@ -45,6 +50,7 @@
 	{	
 		"id": 5,
 		"imgSrc": "assets/img/our_work/Aussie_SGS1",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Aussie",
 		"description": "Description goes here",
@@ -53,6 +59,7 @@
 	{
 		"id": 6,
 		"imgSrc": "assets/img/our_work/Mariott_MrGuaran-T",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Marriot",
 		"description": "Description goes here",
@@ -61,6 +68,7 @@
 	{
 		"id": 7,
 		"imgSrc": "assets/img/our_work/Verizon_SocialImprint3",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Verizon",
 		"description": "Description goes here",
@@ -69,6 +77,7 @@
 	{
 		"id": 8,
 		"imgSrc": "assets/img/our_work/United_BMB1",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "United <br> Airlines",
 		"description": "Description goes here",
@@ -77,6 +86,7 @@
 	{
 		"id": 9,
 		"imgSrc": "assets/img/our_work/Apophis",
+		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Verizon",
 		"description": "Description goes here.",
