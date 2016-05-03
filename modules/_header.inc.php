@@ -38,7 +38,9 @@
 		</ul>
 		
 		<div class="vimeoContainer">
+			<h2></h2>
 			<iframe id="vimeoPlayer" src="" width="700" height="394" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p></p>
 		</div>
 		
 	</nav>

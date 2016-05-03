@@ -2004,10 +2004,10 @@ h1.joinTeamCTA {
     font-size: 0.9em;
   }
   .cultureTile.col-2-by-1 {
-    width: 99;
+    width: 99%;
   }
   .cultureTile.stretchOut {
-    width: 99;
+    width: 99%;
   }
   .cultureTile.stretchOut .arrow {
     border-top: 2000px solid transparent !important;
@@ -2090,7 +2090,7 @@ h1.joinTeamCTA {
     font-size: 1em;
   }
   .cultureTile.stretchOut {
-    width: 49;
+    width: 49%;
   }
   .cultureTile.col-2-by-1 {
     width: 49%;
