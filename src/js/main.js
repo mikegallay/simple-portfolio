@@ -132,6 +132,7 @@ var mgbContent = {
     portfolioContent: null ,
     cultureContent: null ,
     officeClocks: null ,
+	cultureTimeout: null,
     
     init: function() {
         this.portfolioContent = $('.projectTile');
@@ -350,16 +351,22 @@ var mgbContent = {
 	
 	setCultureTileHeight: function(){
 		
-        var colW;
+        // var colW;
         var that = this;
+		//var colW = this.cultureContent.first().next().find('.picHolder').innerWidth();
 		
-		setTimeout(function(){
+		// var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
+		// $('.cultureTile').css('height', colW + 'px');
+		
+		clearTimeout(this.cultureTimeout);
+		
+		
+		this.cultureTimeout = setTimeout(function(){
 			
 			var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
-			
-			$('.cultureTile').css('height', colW + 'px');
+			$('.cultureTile').removeAttr('style').css('height', colW + 'px');
 	
-		},250);
+		},200);
 		
 	},
     
@@ -543,6 +550,7 @@ function resizeChecker() {
 
 		//call resize function
         resize();
+		
 	}
 }
 
