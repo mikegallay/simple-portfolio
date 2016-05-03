@@ -1628,6 +1628,8 @@ var mgbHeader = {
 	videoHeaderContainer : null,
 	welcomeContainer : null,
 	videoPlayerContainer : null,
+	msgContainer: null,
+	wordArray: null,
 	
 	videoHeight : 0,
 	aspectRatio : 16/9,
@@ -1642,6 +1644,10 @@ var mgbHeader = {
 		this.videoHeaderContainer = $(".videoHeader");
 		this.welcomeContainer = $("#welcomeVideo");
 		this.videoPlayerContainer = $(".responsive-video");	
+		this.messageContainer = $(".largeTag");
+		this.wordArray = $(".largeTag").data("words").split(",").sort(function() { return 0.5 - Math.random() }).slice(0, 3);
+		
+		//console.log(this.wordArray);
 	},
 	
 	resize : function(){
@@ -2023,6 +2029,12 @@ var mgbMainSys = {
 		$('#mbLogo').on('mouseout',function(){
 			mgbUtils.hideLogo();
 		});
+		
+		mgbHeader.wordArray.forEach(function(){
+			
+		});
+		
+		mgbHeader.messageContainer.focus();
 	},
 
 	resize : function() {},

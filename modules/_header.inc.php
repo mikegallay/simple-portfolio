@@ -56,8 +56,7 @@
 		</div>
 			
 		<div class="video-overlay">
-			<div class="largeTag"> HELLO </div>
-			<a> <?php addIcon('playbutton') ?> </a>
+			<div class="largeTag" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs"></div>
 		</div>
 		
 		<div id="downArrow">

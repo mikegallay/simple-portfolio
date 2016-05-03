@@ -239,6 +239,9 @@ ul.navigation {
 			font-weight: bold;
 			text-transform: uppercase;
 			line-height: 1em;
+			outline: 0px solid transparent;
+			cursor: -webkit-zoom-grab;
+			cursor: pointer;
 		}
 		
 		@media screen and (min-width: 768px) {

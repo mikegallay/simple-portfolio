@@ -1,5 +1,3 @@
-AddHandler application/x-httpd-php55 .php
-
 # Caching
 <ifmodule mod_expires.c>
     ExpiresActive on

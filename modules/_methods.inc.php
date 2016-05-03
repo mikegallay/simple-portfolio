@@ -118,7 +118,7 @@ function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle) {
 	$tempDataArray = $fullData[$jsonfile];
 	$dataArray = $tempDataArray;
 	
-	//if ($shuffle) $dataArray = shuffleCulture($tempDataArray);
+	if ($shuffle) $dataArray = shuffleCulture($tempDataArray);
 	
 	$str = json_encode($dataArray);
 	
