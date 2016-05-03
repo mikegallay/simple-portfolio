@@ -9,27 +9,44 @@
 			</div>
 		{{/if}}
 			<div class="picHolder">
-				<picture>
-				<!--[if IE 9]>
-					<video style="display: none;"><![endif]-->
-						<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
-				<!--[if IE 9]>
-					</video>
-				<![endif]-->
-				<!--[if !lte IE 9]> -->
-					<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
-				<!-- <![endif]-->
-				</picture>
+				{{#equal imgType 'jpg'}}
+					<picture>
+					<!--[if IE 9]>
+						<video style="display: none;"><![endif]-->
+							<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+					<!--[if IE 9]>
+						</video>
+					<![endif]-->
+					<!--[if !lte IE 9]> -->
+						<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
+					<!-- <![endif]-->
+					</picture>
 			
-				{{#if info}}
-				<div class="arrow">
-					<div class="moreArrow">
-						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
-						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
-						</svg>
-					</div>	
-				</div>
-				{{/if}}
+					{{#if info}}
+					<div class="arrow">
+						<div class="moreArrow">
+							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+							</svg>
+						</div>	
+					</div>
+					{{/if}}
+				{{/equal}}
+				{{#equal imgType 'gif'}}
+					<div class="gifHolder">
+						<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
+					</div>
+					{{#if info}}
+					<div class="arrow">
+						<div class="moreArrow">
+							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+							</svg>
+						</div>	
+					</div>
+					{{/if}}
+					
+				{{/equal}}
 			</div>
 
 		{{#if info}}
