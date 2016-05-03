@@ -24,7 +24,12 @@ function shuffleCulture($data){
 	$evenOddToggle = 1;
 	
 	$tempData = $data;
-	shuffle($tempData);
+	
+	try {	
+		shuffle($tempData);
+	} catch ( Exception $e) {
+		die("Cannot shuffle the data");
+	}
 	
 	$dir1 = 'pushRight';
 	$dir2 = 'pushLeft';
