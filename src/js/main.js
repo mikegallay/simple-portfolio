@@ -158,6 +158,8 @@ var mgbContent = {
                 if (url !== "") {
                     $("nav").toggleClass("videoActive");
                     $(".vimeoContainer").addClass("active");
+					$(".vimeoContainer").children("h2").html(header);
+					$(".vimeoContainer").children("p").html(title);
                     $(this).addClass("active");
                     
                     var iframe = $('#vimeoPlayer')[0];
