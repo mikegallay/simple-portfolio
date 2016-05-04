@@ -1607,8 +1607,8 @@ h1.joinTeamCTA {
   top: 0;
 }
 .cultureTile.stretchOut .arrow {
-  border-top: 1000px solid transparent !important;
-  border-right: 1000px solid #46ccc5 !important;
+  border-top: 1100px solid transparent !important;
+  border-right: 1100px solid #46ccc5 !important;
   -webkit-transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
           transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -1675,6 +1675,12 @@ h1.joinTeamCTA {
   border-bottom: 0 solid transparent;
   opacity: 0;
   z-index: 2;
+  -webkit-transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), right 500ms, bottom 500ms;
+          transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), right 500ms, bottom 500ms;
+}
+.cultureTile a .arrow.offTile {
+  right: -100px;
+  bottom: -100px;
   -webkit-transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
           transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -2078,7 +2084,6 @@ h1.joinTeamCTA {
 
   .projectTile {
     width: 24%;
-    max-height: 20em;
   }
   .projectTile a .prjDescription .prjDscrWrap h2 {
     font-family: 'Din-Bold', san-serif;
@@ -2096,7 +2101,6 @@ h1.joinTeamCTA {
 
   .cultureTile {
     width: 24%;
-    max-height: 20em;
   }
   .cultureTile .bio {
     font-family: 'Gotham-Light', san-serif;
@@ -2111,7 +2115,6 @@ h1.joinTeamCTA {
 
   .officeTile {
     width: 24%;
-    max-height: 20.5em;
   }
   .officeTile .officeInfo .cityName {
     text-transform: uppercase;
