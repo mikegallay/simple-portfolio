@@ -97,6 +97,8 @@ function shuffleCulture($data){
 		   } else{
 			   $compositeArr[$i]['dir'] = $dir2;
 		   }
+		} else if ($compositeArr[$i]['isDouble'] != 'true'){
+			$compositeArr[$i]['dir'] = 'static';
 		}
 
 		if ($compositeArr[$i]['isDouble'] == 'true'){

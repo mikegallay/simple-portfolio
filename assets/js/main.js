@@ -1937,16 +1937,15 @@ var mgbContent = {
 		
         var that = this;
 		
-		$('.arrow').addClass('offTile');
+		
 		
 		clearTimeout(this.cultureTimeout);
 				
 		this.cultureTimeout = setTimeout(function(){
 			
-			var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
+			// var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
+			var colW = $('.cultureTile.static').first().find('.picHolder').innerWidth();
 			$('.cultureTile').removeAttr('style').css('height', colW + 'px');
-			
-			$('.arrow').removeClass('offTile');
 			
 			//checker for page load to make sure the content is ready.
 			if (colW < 50) {
@@ -1964,12 +1963,15 @@ var mgbContent = {
 		
 		this.setCultureTileHeight();
 		
-		//setTimeout(function(){
+		$('.arrow').addClass('offTile');
+		$('.picHolder').removeAttr('style');
+        that.cultureContent.removeClass("stretchOut shrinkMe");
+		
+		setTimeout(function(){
+					
+			$('.arrow').removeClass('offTile');
 			
-			$('.picHolder').removeAttr('style');
-	        that.cultureContent.removeClass("stretchOut shrinkMe");
-			
-			//},50);
+		},600);
         
     },
 };
