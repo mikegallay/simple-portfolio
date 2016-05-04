@@ -1630,7 +1630,7 @@ var mgbHeader = {
 	videoPlayerContainer : null,
 	msgContainer: null,
 	wordArray: null,
-	wordInterval: 0,
+	firstWord: '',
 	
 	videoHeight : 0,
 	aspectRatio : 16/9,
@@ -1646,10 +1646,9 @@ var mgbHeader = {
 		this.welcomeContainer = $("#welcomeVideo");
 		this.videoPlayerContainer = $(".responsive-video");	
 		this.messageContainer = $(".largeTag");
-		this.wordArray = $(".largeTag").data("words").split(",").sort(function() { return 0.5 - Math.random() }).slice(0, 4);
-		
-		//console.log(this.wordArray);
+		this.wordArray = $(".largeTag").data("words").split(",").sort(function() { return 0.5 - Math.random() });
 	},
+	
 	
 	resize : function(){
 		var scope = this;
@@ -1726,8 +1725,6 @@ var mgbContent = {
         this.initPortfolioCnt();
         this.initCultureCnt();
         this.initClockCnt();
-        
-        //force.opt.moveEasing = 'easeInOutBack';
     },
     
     initPortfolioCnt: function() {
@@ -1757,8 +1754,7 @@ var mgbContent = {
 		$('#projectTileMore').on('click',function(e){
 			e.preventDefault();
 			
-			that.loadMoreContent('projectTile',2);
-			
+			that.loadMoreContent('projectTile',2);	
 		});
     },
     
@@ -1784,11 +1780,6 @@ var mgbContent = {
             if (!$(this).hasClass('stretchOut')) {
                 picHolder.css('min-width', colW + 'px');
             }
-            
-			
-			// if (nextTile.hasClass("shrinkMe")){
-// 				$('.picHolder').removeAttr('style');
-// 			}
 			
             nextTile.toggleClass("shrinkMe");
             $(this).toggleClass('stretchOut');
@@ -1812,10 +1803,6 @@ var mgbContent = {
             if (!$(this).hasClass('stretchOut')) {
                 picHolder.css('min-width', colW + 'px');
             }
-            
-			// if (prevTile.hasClass("shrinkMe")){
-// 				$('.picHolder').removeAttr('style');
-// 			}
 			
             prevTile.toggleClass("shrinkMe");
             $(this).toggleClass('stretchOut');
@@ -1972,7 +1959,12 @@ var mgbContent = {
 var mgbMainSys = {
 
 	init : function() {
-		$('nav').on('click', function(){
+		mgbHeader.navContainer.on('click', function(){
+			
+			// The menu navigation doubles as the container that displays videos
+			// clicking on the nav should close the video player container and return
+			// the nav menu to its original height. 
+			
 			if($(this).hasClass("videoActive")){
 				$(this).removeClass("videoActive");
 				
@@ -2004,10 +1996,10 @@ var mgbMainSys = {
 			}
 		});
 		
-		$('nav a').on('click', function(e){
+		mgbHeader.navContainer.children('a').on('click', function(e){
 			e.preventDefault();
 			
-			$('nav a').removeClass('active');
+			$(this).removeClass('active');
 			var currLink = $(this);
 
 			var hashValue = $(this).attr('href');
@@ -2018,7 +2010,7 @@ var mgbMainSys = {
 				location.hash = hashValue;
 			});
 			
-			$(hashValue).find("span[data-forward]").addClass('forwardVisible');
+			$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
 
 			$(hashValue).children('.ll').each(function () {
 			  if (mgbUtils.isScrolledIntoView(this) === true) {
@@ -2038,18 +2030,39 @@ var mgbMainSys = {
 			mgbUtils.hideLogo();
 		});
 		
-		mgbHeader.messageContainer.focus();
 		
-		var firstWord = mgbHeader.wordArray.shift();
-		mgbHeader.messageContainer.html(firstWord);
-		mgbHeader.wordArray.push(firstWord);
+		mgbHeader.firstWord = mgbHeader.wordArray.shift();
+		mgbHeader.messageContainer.html(mgbHeader.firstWord);
+		mgbHeader.wordArray.push(mgbHeader.firstWord);
 		
-		mgbHeader.wordInterval = setInterval(function(){
-			firstWord = mgbHeader.wordArray.shift();
-			mgbHeader.messageContainer.html(firstWord);
-			mgbHeader.wordArray.push(firstWord);
+		var startTime = new Date().getTime(), endTime;
+		
+		var interval = setInterval(function(){
+			endTime = new Date().getTime();
 			
-		}, 5000);
+			mgbHeader.firstWord = mgbHeader.wordArray.shift();
+			mgbHeader.messageContainer.html(mgbHeader.firstWord);
+			mgbHeader.wordArray.push(mgbHeader.firstWord);
+			
+			if((endTime - startTime) > 3000) {
+				clearInterval(interval);
+				
+				interval = setInterval(function(){
+					endTime = new Date().getTime();
+			
+					mgbHeader.firstWord = mgbHeader.wordArray.shift();
+					mgbHeader.messageContainer.html(mgbHeader.firstWord);
+					mgbHeader.wordArray.push(mgbHeader.firstWord);
+					
+					if((endTime - startTime) > 6000) {
+						clearInterval(interval);
+
+						mgbHeader.messageContainer.focus();
+						$(".moreMsg").delay(500).slideDown();
+					}
+				}, 200);
+			}
+		}, 100);
 	},
 
 	resize : function() {},
@@ -2059,17 +2072,17 @@ var mgbMainSys = {
 		var scrollBottom = $(document).height() - $("body").height();
 	
 		if(currScroll > 60) {
-			if(!$("nav").hasClass("sticky")) {
-				$("nav").addClass("sticky");
+			if(!mgbHeader.navContainer.hasClass("sticky")) {
+				mgbHeader.navContainer.addClass("sticky");
 		
 				$("#mbLogo").off('mouseout');
 		
 				mgbUtils.showLogo();
 			}
 		} else {
-			if(!$("nav").hasClass("videoActive")) {
+			if(!mgbHeader.navContainer.hasClass("videoActive")) {
 				$('nav a').removeClass('active');
-				$("nav").removeClass("sticky");
+				mgbHeader.navContainer.removeClass("sticky");
 				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
 		
 				mgbUtils.hideLogo();
@@ -2125,7 +2138,6 @@ mgbHeader.init();
 mgbContent.init();
 mgbMainSys.init();
 	
-
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
 window.onload = pauseHashUpdate;

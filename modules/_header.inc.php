@@ -57,6 +57,7 @@
 			
 		<div class="video-overlay">
 			<div class="largeTag" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs"></div>
+			<div class="moreMsg">HOW DO YOU FEEL?</div>
 		</div>
 		
 		<div id="downArrow">
