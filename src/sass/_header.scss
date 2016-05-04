@@ -244,6 +244,7 @@ ul.navigation {
 		}
 		
 		.moreMsg {
+			text-transform: uppercase;
 			display: none;
 		}
 		
@@ -254,10 +255,10 @@ ul.navigation {
 		
 				font-family: 'Din-Bold', san-serif;
 				position: relative;
-				font-size: 6.5em;
+				font-size: 5em;
 				font-weight: bold;
 				text-transform: uppercase;
-				line-height: 1em;
+				line-height: 0.9em;
 			}
 		}
 	}

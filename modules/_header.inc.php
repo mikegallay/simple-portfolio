@@ -56,8 +56,8 @@
 		</div>
 			
 		<div class="video-overlay">
-			<div class="largeTag" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs"></div>
-			<div class="moreMsg">HOW DO YOU FEEL?</div>
+			<div class="largeTag" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtag,#youreit,new york,creative,get 'er done,#social,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,website,tween max is your friend"></div>
+			<div class="moreMsg">that's us. <span class="blueFont">tell us who you are...</span></div>
 		</div>
 		
 		<div id="downArrow">
