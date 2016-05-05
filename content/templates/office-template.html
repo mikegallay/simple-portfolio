@@ -65,33 +65,45 @@
 					</div>
 					
 					<div class="info">
+						{{#if address}}
 						{{{address}}}
 						<br>
 						<br>
+						{{/if}}
+						
+						{{#if telephone}}
 						{{{telephone}}}
-	
 						<br>
 						<br>
-	
+						{{/if}}
+						
+						{{#if mainEmail}}
 						{{{mainEmail}}}
-				
 						<br>
 						<br>
+						{{/if}}
 						<br>
 					
 						<strong>NEW BUSINESS</strong>
 						<br>
 						<br>
+						{{#if contactEmail}}
 						<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
 						<br>
 						<br>
+						{{/if}}
+						
+						{{#if contactNumber}}
 						<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
 						<br>
 						<br>
+						{{/if}}
 						<br>
+						{{#if prEmail}}
 						<strong>PUBLIC RELATIONS</strong>
 						<br>
 						<a href="{{{prEmail}}}">{{{prEmail}}}</a>
+						{{/if}}
 					</div>
 				</div>
 				
