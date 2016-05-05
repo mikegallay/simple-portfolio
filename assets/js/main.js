@@ -1608,7 +1608,7 @@ var mgbUtils = {
 		
 		this.arrowAnimation.repeat(-1).play();
 		
-		jQuery.easing.def = "easeInOutQuint";
+		//jQuery.easing.def = "easeInOutQuint";
 	},
 		
 	showLogo : function() {
@@ -1664,7 +1664,16 @@ var mgbHeader = {
 			}
 		});
 		
-		this.initWordCycle();
+		$(".cta").on("click", function(){
+			$(".largeTag").text('').focus();
+		});
+		
+		this.changeHeaderCopy();
+		
+		if((location.hash === '')) {
+			this.initWordCycle();
+			$(".moreMsg").slideDown();
+		}
 	},
 	
 	
@@ -1794,7 +1803,7 @@ var mgbContent = {
                     $(this).addClass("active");
                     
                     var iframe = $('#vimeoPlayer')[0];
-                    url += "?api=1&autoplay=1";
+                    url += "?api=1";
                     $(iframe).attr('src', url);
                 }
             });
@@ -1989,7 +1998,6 @@ var mgbContent = {
 	},
     
     resize: function() {
-
         var that = this;
 		
 		this.setCultureTileHeight();
@@ -1998,12 +2006,9 @@ var mgbContent = {
 		$('.picHolder').removeAttr('style');
         that.cultureContent.removeClass("stretchOut shrinkMe");
 		
-		setTimeout(function(){
-					
+		setTimeout(function(){		
 			$('.arrow').removeClass('offTile');
-			
-		},600);
-        
+		},600);    
     },
 };
 
@@ -2146,7 +2151,7 @@ var mgbMainSys = {
  	          $(this).addClass('in-view');
  			  var _parent = $(this).parent().next();
 			 
-			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) _parent.addClass('showDetails');//.css('opacity', '1');
+			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) _parent.addClass('showDetails');
  	      }
  	   });
 	},
@@ -2163,7 +2168,6 @@ window.onresize = resizeChecker;
 window.onload = pauseHashUpdate;
 
 setTimeout(function(){  
-	// mgbHeader.resize();
 	resize();
 }, 500);	
 
@@ -2180,7 +2184,6 @@ function resizeChecker() {
 
 		//call resize function
         resize();
-		
 	}
 }
 
