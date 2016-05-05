@@ -38,7 +38,7 @@
 		</ul>
 		
 		<div class="vimeoContainer">
-			<iframe id="vimeoPlayer" src="" width="700" height="394" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<iframe id="vimeoPlayer" src="" width="" height="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <!-- width="700" height="394" -->
 			<br>
 			<h2 class="videoTitle"></h2>
 			<p class="videoDescription"></p>
@@ -50,10 +50,8 @@
 		
 		<div id="welcomeImage"></div>
 		
-		<div id="welcomeVideo">
-			
+		<div id="welcomeVideo">	
 			<video class="responsive-video" id="headerVideo" autoplay loop preload="auto"></video>
-			
 		</div>
 			
 		<div class="video-overlay">

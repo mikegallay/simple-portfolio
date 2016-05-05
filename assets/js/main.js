@@ -1608,7 +1608,7 @@ var mgbUtils = {
 		
 		this.arrowAnimation.repeat(-1).play();
 		
-		//jQuery.easing.def = "easeInOutQuint";
+		jQuery.easing.def = "easeInOutQuint";
 	},
 		
 	showLogo : function() {
@@ -1672,7 +1672,6 @@ var mgbHeader = {
 		
 		if((location.hash === '')) {
 			this.initWordCycle();
-			$(".moreMsg").slideDown();
 		}
 	},
 	
@@ -1732,6 +1731,15 @@ var mgbHeader = {
 		this.videoPlayerContainer.css('width', this.videoWidth + 'px');
 		this.videoPlayerContainer.css('height', this.videoHeight+'px');
 		this.overlayContainer.css('height',this.videoHeight + 'px');
+		
+		if($("nav").hasClass("videoActive")) {
+	        var iframe = $('#vimeoPlayer')[0];
+			var frameHeight = $(window).height() - ($(window).height() * .15);
+			var frameWidth = frameHeight * 1.48;
+		
+			iframe.setAttribute("width", frameWidth+"px");
+			iframe.setAttribute("height", frameHeight+"px");
+		}
 	},
 	
 	initWordCycle:function(){
@@ -1797,12 +1805,19 @@ var mgbContent = {
 				
                 if (url !== "") {
                     $("nav").toggleClass("videoActive");
+					$(".navigation").fadeOut(200);
                     $(".vimeoContainer").addClass("active");
 					$(".vimeoContainer").children(".videoTitle").html(header);
 					$(".vimeoContainer").children(".videoDescription").html(title);
                     $(this).addClass("active");
                     
-                    var iframe = $('#vimeoPlayer')[0];
+			        var iframe = $('#vimeoPlayer')[0];
+					var frameHeight = $(window).height() - ($(window).height() * .15);
+					var frameWidth = frameHeight * 1.48;
+		
+					iframe.setAttribute("width", frameWidth+"px");
+					iframe.setAttribute("height", frameHeight+"px");
+					
                     url += "?api=1";
                     $(iframe).attr('src', url);
                 }
@@ -2030,6 +2045,7 @@ var mgbMainSys = {
 				$(iframe).attr('src', '');
 				$(".vimeoContainer").children(".videoTitle").html("");
 				$(".vimeoContainer").children(".videoDescription").html("");
+				$(".navigation").fadeIn();
 				
 				if($(window).attr('scrollY') < 60){
 					$(this).removeClass("sticky");

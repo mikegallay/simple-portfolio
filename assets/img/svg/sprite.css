@@ -48,6 +48,36 @@
 	height: 185px;
 }
 
+.svg-icon_dogs-dims {
+	width: 33.5px;
+	height: 24.5px;
+}
+
+.svg-icon_employees-dims {
+	width: 36.5px;
+	height: 31px;
+}
+
+.svg-icon_grills-dims {
+	width: 17.5px;
+	height: 17.3px;
+}
+
+.svg-icon_mail-dims {
+	width: 10px;
+	height: 7px;
+}
+
+.svg-icon_phone-dims {
+	width: 5.5px;
+	height: 10.5px;
+}
+
+.svg-icon_windows-dims {
+	width: 24.5px;
+	height: 24.5px;
+}
+
 .svg-logo-b-dims {
 	width: 15.8px;
 	height: 24.9px;
