@@ -177,9 +177,9 @@ gulp.task('clean', function() {
     return del(['assets/**/*'/*,'assets/css', 'assets/js', 'assets/img', 'assets/fonts'*/]);
 });
 
-gulp.task('default', ['processScripts', 'processStyles', 'processImages','processSVG','copyfonts','copyLibJS']);
+gulp.task('default', ['processScripts', 'processStyles', 'processImages','processSVG','copyVideos','copyFonts','copyLibJS']);
 
-gulp.task('copyfonts', function() {
+gulp.task('copyFonts', function() {
 
 	return gulp.src(['src/fonts/**','!src/fonts/.DS_Store'])
 	.pipe(plumber())
@@ -192,6 +192,13 @@ gulp.task('copyLibJS', function() {
 	return gulp.src(['src/js/lib/*','!src/js/lib/.DS_Store'])
 	.pipe(plumber())
 	.pipe(gulp.dest('assets/js/lib'));
+});
+
+gulp.task('copyVideos', function() {
+	
+	return gulp.src(['src/videos/*','!src/videos/.DS_Store'])
+	.pipe(plumber())
+	.pipe(gulp.dest('assets/videos'));
 });
 
 gulp.task('clear', function(done){

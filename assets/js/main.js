@@ -2157,7 +2157,7 @@ var mgbMainSys = {
 if (!isMobile.any()){
 	
 	mgbHeader.maxVideoHeight = 700;
-	var headerVideoPath = 'assets/img/Main_Sequence_opt';
+	var headerVideoPath = 'assets/videos/Main_Sequence_opt';
 	
 	$('body').removeClass('no-autoplay').addClass('autoplay');
 	
