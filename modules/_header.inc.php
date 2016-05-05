@@ -47,11 +47,15 @@
 	
 	<div class="videoHeader">
 		
+		<div id="welcomeImage">
+			<?php //pictureFillImage('assets/img/common/starrettLehigh','Starrett Lehigh building'); ?>
+		</div>
+		
 		<div id="welcomeVideo">
 			
-			<video class="responsive-video" autoplay loop preload="auto">
-				<source src="assets/img/Main_Sequence_opt.mp4" type="video/mp4">
-				<source src="assets/img/Main_Sequence_opt.webm" type="video/webm">
+			<video class="responsive-video" id="headerVideo" autoplay loop preload="auto">
+				<!-- <source src="assets/img/Main_Sequence_opt.mp4" type="video/mp4">
+				<source src="assets/img/Main_Sequence_opt.webm" type="video/webm"> -->
 			</video>
 		</div>
 			
