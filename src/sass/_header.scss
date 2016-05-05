@@ -167,6 +167,16 @@ ul.navigation {
 
 /* end MB LOGO */
 
+.no-autoplay{
+	#welcomeImage {
+		width:100%;
+		height:100%;
+		background:url('../img/common/starrettLehigh.jpg') center center;
+		background-size:cover;
+		position:absolute;
+	}
+}
+
 .videoHeader {
 	font-family: 'Din-Bold', Helvetica, Arial, san-serif;
 	font-size: 1.75em;
@@ -275,5 +285,18 @@ ul.navigation {
 	
 }
 
+.autoplay{
+	#welcomeImage{display:none;}
+}
 
+@media screen and (min-width: 768px) {
+	.no-autoplay{
+		.videoHeader{
+			#welcomeImage {
+				background:url('../img/common/starrettLehigh_large.jpg') center center;
+				background-size:cover;
+			}
+		}
+	}
+}
 

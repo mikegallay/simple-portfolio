@@ -61,7 +61,7 @@ var mgbHeader = {
 	aspectRatio : 16/9,
 	videoWidth : $(window).width(),
 	navHeight : $("nav").height(),
-	maxVideoHeight : 700,
+	maxVideoHeight : 500,
 
 	init : function() {
 		this.navContainer = $('nav');
@@ -580,12 +580,24 @@ var mgbMainSys = {
 	},
 };
 
+
+//can this device support autoplaying video (not a mobile device or tablet)
+if (!isMobile.any()){
+	
+	mgbHeader.maxVideoHeight = 700;
+	var headerVideoPath = 'assets/img/Main_Sequence_opt';
+	
+	$('body').removeClass('no-autoplay').addClass('autoplay');
+	
+	$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
+	
+}
+
 mgbUtils.init();
 mgbHeader.init();
 mgbContent.init();
 mgbMainSys.init();
 
-	
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
 window.onload = pauseHashUpdate;

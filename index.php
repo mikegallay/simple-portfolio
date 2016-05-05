@@ -12,9 +12,14 @@
     <title>mcgarrybowen</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+	
+	<script>
+		var isMobile = { AndroidMobile: function () { return navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/mobile/i); }, AndroidTablet: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return (navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/BB10/i)); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPod/i); }, iPad: function () { return navigator.userAgent.match(/iPad/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.AndroidMobile() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+	</script>
+		
     <?php include 'modules/_head.inc.php'; ?>
 </head>
-<body>
+<body class="no-autoplay">
 	<?php include 'modules/_methods.inc.php'; ?>
     <?php include 'modules/_header.inc.php'; ?>
 	

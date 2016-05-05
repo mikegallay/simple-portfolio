@@ -145,8 +145,7 @@ function addIcon($str) {
 function pictureFillImage($path,$alt) {
     echo '<picture>
             <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="' . $path . '-large.jpg, ' . $path . '-large@2x.jpg 2x" media="(min-width: 1200px)">
-			<source srcset="' . $path . '-medium.jpg, ' . $path . '-medium@2x.jpg 2x" media="(min-width: 768px)">
+            <source srcset="' . $path . '_large.jpg, ' . $path . '_large@2x.jpg 2x" media="(min-width: 768px)">
 			<source srcset="' . $path . '.jpg, ' . $path . '@2x.jpg 2x">
             <!--[if IE 9]></video><![endif]-->
             <!--[if !lte IE 9]> -->
