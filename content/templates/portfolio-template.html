@@ -1,6 +1,6 @@
 {{#each objects}}
 	<div class="projectTile {{#greaterThan id 5}}notLoaded notShowing{{/greaterThan}} {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
-		<a data-url="{{{vimeoURL}}}" data-header="{{{header}}}"  data-title="{{{description}}}">
+		<a data-url="{{vimeoURL}}" data-header="{{{header}}}"  data-title="{{{description}}}">
 			<picture>
 				{{#equal imgType 'jpg'}}
 					<!--[if IE 9]>

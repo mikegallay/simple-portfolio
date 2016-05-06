@@ -38,10 +38,12 @@
 		</ul>
 		
 		<div class="vimeoContainer">
-			<iframe id="vimeoPlayer" src="" width="" height="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <!-- width="700" height="394" -->
+			<span class="vimeoVideos"></span>
+			<!--
 			<br>
 			<h2 class="videoTitle"></h2>
 			<p class="videoDescription"></p>
+			-->
 		</div>
 		
 	</nav>
@@ -56,7 +58,7 @@
 			
 		<div class="video-overlay">
 			<div class="largeTag" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,#youreit,new york,creative,get 'er done,awesome,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,the standard"></div>
-			<div class="moreMsg">that's us. <span class="cta blueFont">who you are?</span></div>
+			<div class="moreMsg">that's us. <span class="cta blueFont">who are you?</span></div>
 		</div>
 		
 		<div id="downArrow">

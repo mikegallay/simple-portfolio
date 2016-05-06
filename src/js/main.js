@@ -222,27 +222,49 @@ var mgbContent = {
 		
         this.portfolioContent.each(function() {
             $(this).children("a").on('click', function() {
-                var url = $(this).attr("data-url");
+				$(".vimeoVideos").empty(); // clear out any previously watched videos
+				
+                var videoID = $(this).attr("data-url").split(","); // get the id's for this video
+				
                 var header = $(this).attr("data-header");
 				var title = $(this).attr("data-title");
+				var defUrl = "http://player.vimeo.com/video/";
 				
-                if (url !== "") {
+                if(videoID[0] !== "") {
+					// loop through ID's and create the video slide show
+					var frameFrag = document.createDocumentFragment();
+					
+					for(var i = 0; i < videoID.length; i++){
+						var frame = document.createElement("iframe");
+						var url = defUrl + videoID[i] + "?api=1";
+						
+						frame.setAttribute("src", url);
+						frame.setAttribute("id", "vidID_"+i);
+						frame.setAttribute("frameborder", 0);
+						frame.setAttribute("webkitallowfullscreen", true);
+						frame.setAttribute("mozallowfullscreen", true);
+						frame.setAttribute("allowfullscreen", true);
+						
+						var frameHeight = $(window).height() - ($(window).height() * .15);
+						var frameWidth = frameHeight * 1.48;
+						
+						frame.setAttribute("width", frameWidth+"px");
+						frame.setAttribute("height", frameHeight+"px");
+						
+						frameFrag.appendChild(frame);
+					}
+					
+					$(".vimeoVideos").append(frameFrag);
+
+					$(".vimeoVideos").slick()
+								
+				
                     $("nav").toggleClass("videoActive");
 					$(".navigation").fadeOut(200);
                     $(".vimeoContainer").addClass("active");
 					$(".vimeoContainer").children(".videoTitle").html(header);
 					$(".vimeoContainer").children(".videoDescription").html(title);
                     $(this).addClass("active");
-                    
-			        var iframe = $('#vimeoPlayer')[0];
-					var frameHeight = $(window).height() - ($(window).height() * .15);
-					var frameWidth = frameHeight * 1.48;
-		
-					iframe.setAttribute("width", frameWidth+"px");
-					iframe.setAttribute("height", frameHeight+"px");
-					
-                    url += "?api=1";
-                    $(iframe).attr('src', url);
                 }
             });
         });
@@ -462,10 +484,10 @@ var mgbMainSys = {
 			// the nav menu to its original height. 
 			
 			if($(this).hasClass("videoActive")){
+				$(".vimeoVideos").empty();
+				
 				$(this).removeClass("videoActive");
 				
-				var iframe = $('#vimeoPlayer')[0];
-				$(iframe).attr('src', '');
 				$(".vimeoContainer").children(".videoTitle").html("");
 				$(".vimeoContainer").children(".videoDescription").html("");
 				$(".navigation").fadeIn();
