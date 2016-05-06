@@ -1562,6 +1562,94 @@ return!0}function Q(a,b,d,e){if(m.acceptData(a)){var f,g,h=m.expando,i=a.nodeTyp
 }):i.postSlide(d))):i.options.infinite===!1&&i.options.centerMode===!0&&(0>a||a>i.slideCount-i.options.slidesToScroll)?void(i.options.fade===!1&&(d=i.currentSlide,c!==!0?i.animateSlide(g,function(){i.postSlide(d)}):i.postSlide(d))):(i.options.autoplay===!0&&clearInterval(i.autoPlayTimer),e=0>d?i.slideCount%i.options.slidesToScroll!==0?i.slideCount-i.slideCount%i.options.slidesToScroll:i.slideCount+d:d>=i.slideCount?i.slideCount%i.options.slidesToScroll!==0?0:d-i.slideCount:d,i.animating=!0,i.$slider.trigger("beforeChange",[i,i.currentSlide,e]),f=i.currentSlide,i.currentSlide=e,i.setSlideClasses(i.currentSlide),i.updateDots(),i.updateArrows(),i.options.fade===!0?(c!==!0?(i.fadeSlideOut(f),i.fadeSlide(e,function(){i.postSlide(e)})):i.postSlide(e),void i.animateHeight()):void(c!==!0?i.animateSlide(h,function(){i.postSlide(e)}):i.postSlide(e))))},b.prototype.startLoad=function(){var a=this;a.options.arrows===!0&&a.slideCount>a.options.slidesToShow&&(a.$prevArrow.hide(),a.$nextArrow.hide()),a.options.dots===!0&&a.slideCount>a.options.slidesToShow&&a.$dots.hide(),a.$slider.addClass("slick-loading")},b.prototype.swipeDirection=function(){var a,b,c,d,e=this;return a=e.touchObject.startX-e.touchObject.curX,b=e.touchObject.startY-e.touchObject.curY,c=Math.atan2(b,a),d=Math.round(180*c/Math.PI),0>d&&(d=360-Math.abs(d)),45>=d&&d>=0?e.options.rtl===!1?"left":"right":360>=d&&d>=315?e.options.rtl===!1?"left":"right":d>=135&&225>=d?e.options.rtl===!1?"right":"left":e.options.verticalSwiping===!0?d>=35&&135>=d?"left":"right":"vertical"},b.prototype.swipeEnd=function(a){var c,b=this;if(b.dragging=!1,b.shouldClick=b.touchObject.swipeLength>10?!1:!0,void 0===b.touchObject.curX)return!1;if(b.touchObject.edgeHit===!0&&b.$slider.trigger("edge",[b,b.swipeDirection()]),b.touchObject.swipeLength>=b.touchObject.minSwipe)switch(b.swipeDirection()){case"left":c=b.options.swipeToSlide?b.checkNavigable(b.currentSlide+b.getSlideCount()):b.currentSlide+b.getSlideCount(),b.slideHandler(c),b.currentDirection=0,b.touchObject={},b.$slider.trigger("swipe",[b,"left"]);break;case"right":c=b.options.swipeToSlide?b.checkNavigable(b.currentSlide-b.getSlideCount()):b.currentSlide-b.getSlideCount(),b.slideHandler(c),b.currentDirection=1,b.touchObject={},b.$slider.trigger("swipe",[b,"right"])}else b.touchObject.startX!==b.touchObject.curX&&(b.slideHandler(b.currentSlide),b.touchObject={})},b.prototype.swipeHandler=function(a){var b=this;if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.options.draggable===!1&&-1!==a.type.indexOf("mouse")))switch(b.touchObject.fingerCount=a.originalEvent&&void 0!==a.originalEvent.touches?a.originalEvent.touches.length:1,b.touchObject.minSwipe=b.listWidth/b.options.touchThreshold,b.options.verticalSwiping===!0&&(b.touchObject.minSwipe=b.listHeight/b.options.touchThreshold),a.data.action){case"start":b.swipeStart(a);break;case"move":b.swipeMove(a);break;case"end":b.swipeEnd(a)}},b.prototype.swipeMove=function(a){var d,e,f,g,h,b=this;return h=void 0!==a.originalEvent?a.originalEvent.touches:null,!b.dragging||h&&1!==h.length?!1:(d=b.getLeft(b.currentSlide),b.touchObject.curX=void 0!==h?h[0].pageX:a.clientX,b.touchObject.curY=void 0!==h?h[0].pageY:a.clientY,b.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(b.touchObject.curX-b.touchObject.startX,2))),b.options.verticalSwiping===!0&&(b.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(b.touchObject.curY-b.touchObject.startY,2)))),e=b.swipeDirection(),"vertical"!==e?(void 0!==a.originalEvent&&b.touchObject.swipeLength>4&&a.preventDefault(),g=(b.options.rtl===!1?1:-1)*(b.touchObject.curX>b.touchObject.startX?1:-1),b.options.verticalSwiping===!0&&(g=b.touchObject.curY>b.touchObject.startY?1:-1),f=b.touchObject.swipeLength,b.touchObject.edgeHit=!1,b.options.infinite===!1&&(0===b.currentSlide&&"right"===e||b.currentSlide>=b.getDotCount()&&"left"===e)&&(f=b.touchObject.swipeLength*b.options.edgeFriction,b.touchObject.edgeHit=!0),b.options.vertical===!1?b.swipeLeft=d+f*g:b.swipeLeft=d+f*(b.$list.height()/b.listWidth)*g,b.options.verticalSwiping===!0&&(b.swipeLeft=d+f*g),b.options.fade===!0||b.options.touchMove===!1?!1:b.animating===!0?(b.swipeLeft=null,!1):void b.setCSS(b.swipeLeft)):void 0)},b.prototype.swipeStart=function(a){var c,b=this;return 1!==b.touchObject.fingerCount||b.slideCount<=b.options.slidesToShow?(b.touchObject={},!1):(void 0!==a.originalEvent&&void 0!==a.originalEvent.touches&&(c=a.originalEvent.touches[0]),b.touchObject.startX=b.touchObject.curX=void 0!==c?c.pageX:a.clientX,b.touchObject.startY=b.touchObject.curY=void 0!==c?c.pageY:a.clientY,void(b.dragging=!0))},b.prototype.unfilterSlides=b.prototype.slickUnfilter=function(){var a=this;null!==a.$slidesCache&&(a.unload(),a.$slideTrack.children(this.options.slide).detach(),a.$slidesCache.appendTo(a.$slideTrack),a.reinit())},b.prototype.unload=function(){var b=this;a(".slick-cloned",b.$slider).remove(),b.$dots&&b.$dots.remove(),b.$prevArrow&&b.htmlExpr.test(b.options.prevArrow)&&b.$prevArrow.remove(),b.$nextArrow&&b.htmlExpr.test(b.options.nextArrow)&&b.$nextArrow.remove(),b.$slides.removeClass("slick-slide slick-active slick-visible slick-current").attr("aria-hidden","true").css("width","")},b.prototype.unslick=function(a){var b=this;b.$slider.trigger("unslick",[b,a]),b.destroy()},b.prototype.updateArrows=function(){var b,a=this;b=Math.floor(a.options.slidesToShow/2),a.options.arrows===!0&&a.slideCount>a.options.slidesToShow&&!a.options.infinite&&(a.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false"),a.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false"),0===a.currentSlide?(a.$prevArrow.addClass("slick-disabled").attr("aria-disabled","true"),a.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false")):a.currentSlide>=a.slideCount-a.options.slidesToShow&&a.options.centerMode===!1?(a.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),a.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")):a.currentSlide>=a.slideCount-1&&a.options.centerMode===!0&&(a.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),a.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")))},b.prototype.updateDots=function(){var a=this;null!==a.$dots&&(a.$dots.find("li").removeClass("slick-active").attr("aria-hidden","true"),a.$dots.find("li").eq(Math.floor(a.currentSlide/a.options.slidesToScroll)).addClass("slick-active").attr("aria-hidden","false"))},b.prototype.visibility=function(){var a=this;document[a.hidden]?(a.paused=!0,a.autoPlayClear()):a.options.autoplay===!0&&(a.paused=!1,a.autoPlay())},b.prototype.initADA=function(){var b=this;b.$slides.add(b.$slideTrack.find(".slick-cloned")).attr({"aria-hidden":"true",tabindex:"-1"}).find("a, input, button, select").attr({tabindex:"-1"}),b.$slideTrack.attr("role","listbox"),b.$slides.not(b.$slideTrack.find(".slick-cloned")).each(function(c){a(this).attr({role:"option","aria-describedby":"slick-slide"+b.instanceUid+c})}),null!==b.$dots&&b.$dots.attr("role","tablist").find("li").each(function(c){a(this).attr({role:"presentation","aria-selected":"false","aria-controls":"navigation"+b.instanceUid+c,id:"slick-slide"+b.instanceUid+c})}).first().attr("aria-selected","true").end().find("button").attr("role","button").end().closest("div").attr("role","toolbar"),b.activateADA()},b.prototype.activateADA=function(){var a=this;a.$slideTrack.find(".slick-active").attr({"aria-hidden":"false"}).find("a, input, button, select").attr({tabindex:"0"})},b.prototype.focusHandler=function(){var b=this;b.$slider.on("focus.slick blur.slick","*",function(c){c.stopImmediatePropagation();var d=a(this);setTimeout(function(){b.isPlay&&(d.is(":focus")?(b.autoPlayClear(),b.paused=!0):(b.paused=!1,b.autoPlay()))},0)})},a.fn.slick=function(){var f,g,a=this,c=arguments[0],d=Array.prototype.slice.call(arguments,1),e=a.length;for(f=0;e>f;f++)if("object"==typeof c||"undefined"==typeof c?a[f].slick=new b(a[f],c):g=a[f].slick[c].apply(a[f].slick,d),"undefined"!=typeof g)return g;return a}});
 /*! lazysizes - v1.5.0 */
 !function(a,b){var c=b(a,a.document);a.lazySizes=c,"object"==typeof module&&module.exports&&(module.exports=c)}(window,function(a,b){"use strict";if(b.getElementsByClassName){var c,d=b.documentElement,e=a.HTMLPictureElement&&"sizes"in b.createElement("img"),f="addEventListener",g="getAttribute",h=a[f],i=a.setTimeout,j=a.requestAnimationFrame||i,k=/^picture$/i,l=["load","error","lazyincluded","_lazyloaded"],m={},n=Array.prototype.forEach,o=function(a,b){return m[b]||(m[b]=new RegExp("(\\s|^)"+b+"(\\s|$)")),m[b].test(a[g]("class")||"")&&m[b]},p=function(a,b){o(a,b)||a.setAttribute("class",(a[g]("class")||"").trim()+" "+b)},q=function(a,b){var c;(c=o(a,b))&&a.setAttribute("class",(a[g]("class")||"").replace(c," "))},r=function(a,b,c){var d=c?f:"removeEventListener";c&&r(a,b),l.forEach(function(c){a[d](c,b)})},s=function(a,c,d,e,f){var g=b.createEvent("CustomEvent");return g.initCustomEvent(c,!e,!f,d||{}),a.dispatchEvent(g),g},t=function(b,d){var f;!e&&(f=a.picturefill||c.pf)?f({reevaluate:!0,elements:[b]}):d&&d.src&&(b.src=d.src)},u=function(a,b){return(getComputedStyle(a,null)||{})[b]},v=function(a,b,d){for(d=d||a.offsetWidth;d<c.minSize&&b&&!a._lazysizesWidth;)d=b.offsetWidth,b=b.parentNode;return d},w=function(b){var c,d=0,e=a.Date,f=function(){c=!1,d=e.now(),b()},g=function(){i(f)},h=function(){j(g)};return function(){if(!c){var a=125-(e.now()-d);c=!0,6>a&&(a=6),i(h,a)}}},x=function(){var e,l,m,v,x,z,A,B,C,D,E,F,G,H,I,J=/^img$/i,K=/^iframe$/i,L="onscroll"in a&&!/glebot/.test(navigator.userAgent),M=0,N=0,O=0,P=0,Q=function(a){O--,a&&a.target&&r(a.target,Q),(!a||0>O||!a.target)&&(O=0)},R=function(a,c){var e,f=a,g="hidden"==u(b.body,"visibility")||"hidden"!=u(a,"visibility");for(C-=c,F+=c,D-=c,E+=c;g&&(f=f.offsetParent)&&f!=b.body&&f!=d;)g=(u(f,"opacity")||1)>0,g&&"visible"!=u(f,"overflow")&&(e=f.getBoundingClientRect(),g=E>e.left&&D<e.right&&F>e.top-1&&C<e.bottom+1);return g},S=function(){var a,b,f,h,i,j,k,n,o;if((x=c.loadMode)&&8>O&&(a=e.length)){b=0,P++,null==H&&("expand"in c||(c.expand=d.clientHeight>600?d.clientWidth>600?550:410:359),G=c.expand,H=G*c.expFactor),H>N&&1>O&&P>3&&x>2?(N=H,P=0):N=x>1&&P>2&&6>O?G:M;for(;a>b;b++)if(e[b]&&!e[b]._lazyRace)if(L)if((n=e[b][g]("data-expand"))&&(j=1*n)||(j=N),o!==j&&(A=innerWidth+j*I,B=innerHeight+j,k=-1*j,o=j),f=e[b].getBoundingClientRect(),(F=f.bottom)>=k&&(C=f.top)<=B&&(E=f.right)>=k*I&&(D=f.left)<=A&&(F||E||D||C)&&(m&&3>O&&!n&&(3>x||4>P)||R(e[b],j))){if(Z(e[b]),i=!0,O>9)break}else!i&&m&&!h&&4>O&&4>P&&x>2&&(l[0]||c.preloadAfterLoad)&&(l[0]||!n&&(F||E||D||C||"auto"!=e[b][g](c.sizesAttr)))&&(h=l[0]||e[b]);else Z(e[b]);h&&!i&&Z(h)}},T=w(S),U=function(a){p(a.target,c.loadedClass),q(a.target,c.loadingClass),r(a.target,V)},V=function(a){a={target:a.target},j(function(){U(a)})},W=function(a,b){try{a.contentWindow.location.replace(b)}catch(c){a.src=b}},X=function(a){var b,d,e=a[g](c.srcsetAttr);(b=c.customMedia[a[g]("data-media")||a[g]("media")])&&a.setAttribute("media",b),e&&a.setAttribute("srcset",e),b&&(d=a.parentNode,d.insertBefore(a.cloneNode(),a),d.removeChild(a))},Y=function(){var a,b=[],c=function(){for(;b.length;)b.shift()();a=!1},d=function(d){b.push(d),a||(a=!0,j(c))};return{add:d,run:c}}(),Z=function(a){var b,d,e,f,h,l,u,w=J.test(a.nodeName),x=w&&(a[g](c.sizesAttr)||a[g]("sizes")),z="auto"==x;(!z&&m||!w||!a.src&&!a.srcset||a.complete||o(a,c.errorClass))&&(z&&(u=a.offsetWidth),a._lazyRace=!0,O++,c.rC&&(u=c.rC(a,u)||u),Y.add(function(){(h=s(a,"lazybeforeunveil")).defaultPrevented||(x&&(z?(y.updateElem(a,!0,u),p(a,c.autosizesClass)):a.setAttribute("sizes",x)),d=a[g](c.srcsetAttr),b=a[g](c.srcAttr),w&&(e=a.parentNode,f=e&&k.test(e.nodeName||"")),l=h.detail.firesLoad||"src"in a&&(d||b||f),h={target:a},l&&(r(a,Q,!0),clearTimeout(v),v=i(Q,2500),p(a,c.loadingClass),r(a,V,!0)),f&&n.call(e.getElementsByTagName("source"),X),d?a.setAttribute("srcset",d):b&&!f&&(K.test(a.nodeName)?W(a,b):a.src=b),(d||f)&&t(a,{src:b})),j(function(){a._lazyRace&&delete a._lazyRace,q(a,c.lazyClass),(!l||a.complete)&&(l?Q(h):O--,U(h))})}))},$=function(){if(!m){if(Date.now()-z<999)return void i($,999);var a,d=function(){c.loadMode=3,T()};m=!0,c.loadMode=3,b.hidden?(S(),Y.run()):T(),h("scroll",function(){3==c.loadMode&&(c.loadMode=2),clearTimeout(a),a=i(d,99)},!0)}};return{_:function(){z=Date.now(),e=b.getElementsByClassName(c.lazyClass),l=b.getElementsByClassName(c.lazyClass+" "+c.preloadClass),I=c.hFac,h("scroll",T,!0),h("resize",T,!0),a.MutationObserver?new MutationObserver(T).observe(d,{childList:!0,subtree:!0,attributes:!0}):(d[f]("DOMNodeInserted",T,!0),d[f]("DOMAttrModified",T,!0),setInterval(T,999)),h("hashchange",T,!0),["focus","mouseover","click","load","transitionend","animationend","webkitAnimationEnd"].forEach(function(a){b[f](a,T,!0)}),/d$|^c/.test(b.readyState)?$():(h("load",$),b[f]("DOMContentLoaded",T),i($,2e4)),T(e.length>0)},checkElems:T,unveil:Z}}(),y=function(){var a,d=function(a,b,c){var d,e,f,g,h=a.parentNode;if(h&&(c=v(a,h,c),g=s(a,"lazybeforesizes",{width:c,dataAttr:!!b}),!g.defaultPrevented&&(c=g.detail.width,c&&c!==a._lazysizesWidth))){if(a._lazysizesWidth=c,c+="px",a.setAttribute("sizes",c),k.test(h.nodeName||""))for(d=h.getElementsByTagName("source"),e=0,f=d.length;f>e;e++)d[e].setAttribute("sizes",c);g.detail.dataAttr||t(a,g.detail)}},e=function(){var b,c=a.length;if(c)for(b=0;c>b;b++)d(a[b])},f=w(e);return{_:function(){a=b.getElementsByClassName(c.autosizesClass),h("resize",f)},checkElems:f,updateElem:d}}(),z=function(){z.i||(z.i=!0,y._(),x._())};return function(){var b,d={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:!0,expFactor:1.7,hFac:.8,loadMode:2};c=a.lazySizesConfig||a.lazysizesConfig||{};for(b in d)b in c||(c[b]=d[b]);a.lazySizesConfig=c,i(function(){c.init&&z()})}(),{cfg:c,autoSizer:y,loader:x,init:z,uP:t,aC:p,rC:q,hC:o,fire:s,gW:v}}});
+/*jshint browser:true */
+/*!
+* FitVids 1.1
+*
+* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+*/
+
+;(function( $ ){
+
+  'use strict';
+
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null,
+      ignore: null
+    };
+
+    if(!document.getElementById('fit-vids-style')) {
+      // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+      var head = document.head || document.getElementsByTagName('head')[0];
+      var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
+      var div = document.createElement("div");
+      div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
+      head.appendChild(div.childNodes[1]);
+    }
+
+    if ( options ) {
+      $.extend( settings, options );
+    }
+
+    return this.each(function(){
+      var selectors = [
+        'iframe[src*="player.vimeo.com"]',
+        'iframe[src*="youtube.com"]',
+        'iframe[src*="youtube-nocookie.com"]',
+        'iframe[src*="kickstarter.com"][src*="video.html"]',
+        'object',
+        'embed'
+      ];
+
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+
+      var ignoreList = '.fitvidsignore';
+
+      if(settings.ignore) {
+        ignoreList = ignoreList + ', ' + settings.ignore;
+      }
+
+      var $allVideos = $(this).find(selectors.join(','));
+      $allVideos = $allVideos.not('object object'); // SwfObj conflict patch
+      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
+
+      $allVideos.each(function(){
+        var $this = $(this);
+        if($this.parents(ignoreList).length > 0) {
+          return; // Disable FitVids on this video.
+        }
+        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
+        {
+          $this.attr('height', 9);
+          $this.attr('width', 16);
+        }
+        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+            aspectRatio = height / width;
+        if(!$this.attr('name')){
+          var videoName = 'fitvid' + $.fn.fitVids._count;
+          $this.attr('name', videoName);
+          $.fn.fitVids._count++;
+        }
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
+        $this.removeAttr('height').removeAttr('width');
+      });
+    });
+  };
+  
+  // Internal counter for unique video names.
+  $.fn.fitVids._count = 0;
+  
+// Works with either jQuery or Zepto
+})( window.jQuery || window.Zepto );
+
 /*!
  * VERSION: 1.18.2
  * DATE: 2015-12-22
@@ -1749,14 +1837,14 @@ var mgbHeader = {
 		this.videoPlayerContainer.css('height', this.videoHeight+'px');
 		this.overlayContainer.css('height',this.videoHeight + 'px');
 		
-		if($("nav").hasClass("videoActive")) {
+		/*if($("nav").hasClass("videoActive")) {
 	        var iframe = $('#vimeoPlayer')[0];
 			var frameHeight = $(window).height() - ($(window).height() * .15);
 			var frameWidth = frameHeight * 1.48;
 		
 			iframe.setAttribute("width", frameWidth+"px");
 			iframe.setAttribute("height", frameHeight+"px");
-		}
+		}*/
 	},
 	
 	initWordCycle:function(){
@@ -1814,9 +1902,66 @@ var mgbContent = {
 		
 		var that = this;
 		
+        var c_obj = {
+            slide: '.vimeoSlide',
+            autoplay: false,
+            //autoplaySpeed: 8000,
+            dots: true,
+            speed: 300,
+            infinite: false,
+            fade: false,
+            prevArrow: '<button type="button" data-ga-label="Arrow_Left" class="slick-prev">View previous home page carousel slide</button>',
+            nextArrow: '<button type="button" data-ga-label="Arrow_Right" class="slick-next">View next home page carousel slide</button>',
+            customPaging: function (slick, index) {
+                return '<button type="button" data-ga-label="MarqueeDot' + (index + 1) + '" data-role="none" role="button" aria-required="false" tabindex="0">Slide ' + (index + 1) + ' of ' + slick.slideCount + '</button>';
+            },
+            onInit: function () {
+
+                //$('.carousel-wrapper').fadeTo(600, 1);
+				
+				//setTimeout(function(){ $('.vimeoVideos').slick('slickPlay'); }, 500)
+				
+				//addPlayPause('pause');
+                //$('.vimeoVideos').append('<p class="slide-count">' + setSlideCount(this.currentSlide) + '</p>');
+
+                $('.vimeoVideos .slick-prev, .slick-next').on('click', function () {
+                    /*var getButton = $(event.target).data( "ga-label" );
+					
+                    if(getButton == "Arrow_Right"){
+                        trackGAEvent("Home", "click", "Arrow_Right");
+                    }
+                    else{
+                        trackGAEvent("Home", "click", "Arrow_Left");
+                    }
+
+					$('.vimeoVideos').slick('slickPause');
+					
+					//togglePlayPause('play');*/
+                   
+                });
+
+                //for ada removing the slide count on init
+                //$('.slide-count').remove();
+            },
+            onBeforeChange: function (event, slick) {
+               // $('.vimeoVideos .slick-prev, .slick-next').attr('disabled', true);
+            },
+            onAfterChange: function (event, slick) {
+				
+                //-- one rotation
+                /*var oneRotation = this.currentSlide + 1 * getTotalSlides() == getTotalSlides();
+                if (oneRotation) {
+                    $(".vimeoVideos").slickPause();
+                }*/
+                
+            }
+        };
+		
         this.portfolioContent.each(function() {
             $(this).children("a").on('click', function() {
 				$(".vimeoVideos").empty(); // clear out any previously watched videos
+				// 
+				
 				
                 var videoID = $(this).attr("data-url").split(","); // get the id's for this video
 				
@@ -1826,31 +1971,33 @@ var mgbContent = {
 				
                 if(videoID[0] !== "") {
 					// loop through ID's and create the video slide show
-					var frameFrag = document.createDocumentFragment();
 					
 					for(var i = 0; i < videoID.length; i++){
-						var frame = document.createElement("iframe");
-						var url = defUrl + videoID[i] + "?api=1";
 						
-						frame.setAttribute("src", url);
-						frame.setAttribute("id", "vidID_"+i);
-						frame.setAttribute("frameborder", 0);
-						frame.setAttribute("webkitallowfullscreen", true);
-						frame.setAttribute("mozallowfullscreen", true);
-						frame.setAttribute("allowfullscreen", true);
+						var frameFrag = '<div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/'+videoID[i]+'?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><div class="vimeoTitle">title</div></div></div>';
 						
-						var frameHeight = $(window).height() - ($(window).height() * .15);
-						var frameWidth = frameHeight * 1.48;
-						
-						frame.setAttribute("width", frameWidth+"px");
-						frame.setAttribute("height", frameHeight+"px");
-						
-						frameFrag.appendChild(frame);
+						$(".vimeoVideos").append(frameFrag);
 					}
 					
-					$(".vimeoVideos").append(frameFrag);
+					$('.vimeoVideos').fitVids();
+					
+					setTimeout(function(){
+						
+			            $(".vimeoVideos").on('init', function (event, slick) {
+			                slick.options.onInit(event, slick);
+			            });
+			            $(".vimeoVideos").on('beforeChange', function (event, slick) {
+			                slick.options.onBeforeChange(event, slick);
+			            });
+			            $(".vimeoVideos").on('afterChange', function (event, slick) {
+			                slick.options.onAfterChange(event, slick);
+			            });
 
-					$(".vimeoVideos").slick()
+			            $(".vimeoVideos").slick(c_obj); //-- passing object from above into carousel
+						
+						$('.vimeoContainer').addClass('loaded');
+						
+					},1000);
 								
 				
                     $("nav").toggleClass("videoActive");
@@ -2071,24 +2218,28 @@ var mgbContent = {
 var mgbMainSys = {
 
 	init : function() {
-		mgbHeader.navContainer.on('click', function(){
+		// mgbHeader.navContainer.on('click', function(){
+			
+			$('#homeLogo').on('click',function(){
+				
+				var nav = $('nav');
 			
 			// The menu navigation doubles as the container that displays videos
 			// clicking on the nav should close the video player container and return
 			// the nav menu to its original height. 
 			
-			if($(this).hasClass("videoActive")){
+			if(nav.hasClass("videoActive")){
 				$(".vimeoVideos").empty();
 				
-				$(this).removeClass("videoActive");
+				nav.removeClass("videoActive");
 				
 				$(".vimeoContainer").children(".videoTitle").html("");
 				$(".vimeoContainer").children(".videoDescription").html("");
 				$(".navigation").fadeIn();
 				
 				if($(window).attr('scrollY') < 60){
-					$(this).removeClass("sticky");
-					$(this).children("#mbLogo").css({'position': '', 'margin-top' : '' });
+					nav.removeClass("sticky");
+					nav.children("#mbLogo").css({'position': '', 'margin-top' : '' });
 		
 					mgbUtils.hideLogo();
 			

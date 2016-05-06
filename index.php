@@ -114,6 +114,15 @@
 		?>
 	</div> 
 -->
+		
+		<div class="vimeoContainer">
+			<div class="vimeoVideos"></div>
+			<!--
+			<br>
+			<h2 class="videoTitle"></h2>
+			<p class="videoDescription"></p>
+			-->
+		</div>
 						
     <?php include 'modules/_footer.inc.php'; ?>
     <?php include 'modules/_foot.inc.php'; ?>

@@ -155,14 +155,14 @@ var mgbHeader = {
 		this.videoPlayerContainer.css('height', this.videoHeight+'px');
 		this.overlayContainer.css('height',this.videoHeight + 'px');
 		
-		if($("nav").hasClass("videoActive")) {
+		/*if($("nav").hasClass("videoActive")) {
 	        var iframe = $('#vimeoPlayer')[0];
 			var frameHeight = $(window).height() - ($(window).height() * .15);
 			var frameWidth = frameHeight * 1.48;
 		
 			iframe.setAttribute("width", frameWidth+"px");
 			iframe.setAttribute("height", frameHeight+"px");
-		}
+		}*/
 	},
 	
 	initWordCycle:function(){
@@ -220,9 +220,66 @@ var mgbContent = {
 		
 		var that = this;
 		
+        var c_obj = {
+            slide: '.vimeoSlide',
+            autoplay: false,
+            //autoplaySpeed: 8000,
+            dots: true,
+            speed: 300,
+            infinite: false,
+            fade: false,
+            prevArrow: '<button type="button" data-ga-label="Arrow_Left" class="slick-prev">View previous home page carousel slide</button>',
+            nextArrow: '<button type="button" data-ga-label="Arrow_Right" class="slick-next">View next home page carousel slide</button>',
+            customPaging: function (slick, index) {
+                return '<button type="button" data-ga-label="MarqueeDot' + (index + 1) + '" data-role="none" role="button" aria-required="false" tabindex="0">Slide ' + (index + 1) + ' of ' + slick.slideCount + '</button>';
+            },
+            onInit: function () {
+
+                //$('.carousel-wrapper').fadeTo(600, 1);
+				
+				//setTimeout(function(){ $('.vimeoVideos').slick('slickPlay'); }, 500)
+				
+				//addPlayPause('pause');
+                //$('.vimeoVideos').append('<p class="slide-count">' + setSlideCount(this.currentSlide) + '</p>');
+
+                $('.vimeoVideos .slick-prev, .slick-next').on('click', function () {
+                    /*var getButton = $(event.target).data( "ga-label" );
+					
+                    if(getButton == "Arrow_Right"){
+                        trackGAEvent("Home", "click", "Arrow_Right");
+                    }
+                    else{
+                        trackGAEvent("Home", "click", "Arrow_Left");
+                    }
+
+					$('.vimeoVideos').slick('slickPause');
+					
+					//togglePlayPause('play');*/
+                   
+                });
+
+                //for ada removing the slide count on init
+                //$('.slide-count').remove();
+            },
+            onBeforeChange: function (event, slick) {
+               // $('.vimeoVideos .slick-prev, .slick-next').attr('disabled', true);
+            },
+            onAfterChange: function (event, slick) {
+				
+                //-- one rotation
+                /*var oneRotation = this.currentSlide + 1 * getTotalSlides() == getTotalSlides();
+                if (oneRotation) {
+                    $(".vimeoVideos").slickPause();
+                }*/
+                
+            }
+        };
+		
         this.portfolioContent.each(function() {
             $(this).children("a").on('click', function() {
 				$(".vimeoVideos").empty(); // clear out any previously watched videos
+				// 
+				
 				
                 var videoID = $(this).attr("data-url").split(","); // get the id's for this video
 				
@@ -232,31 +289,33 @@ var mgbContent = {
 				
                 if(videoID[0] !== "") {
 					// loop through ID's and create the video slide show
-					var frameFrag = document.createDocumentFragment();
 					
 					for(var i = 0; i < videoID.length; i++){
-						var frame = document.createElement("iframe");
-						var url = defUrl + videoID[i] + "?api=1";
 						
-						frame.setAttribute("src", url);
-						frame.setAttribute("id", "vidID_"+i);
-						frame.setAttribute("frameborder", 0);
-						frame.setAttribute("webkitallowfullscreen", true);
-						frame.setAttribute("mozallowfullscreen", true);
-						frame.setAttribute("allowfullscreen", true);
+						var frameFrag = '<div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/'+videoID[i]+'?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><div class="vimeoTitle">title</div></div></div>';
 						
-						var frameHeight = $(window).height() - ($(window).height() * .15);
-						var frameWidth = frameHeight * 1.48;
-						
-						frame.setAttribute("width", frameWidth+"px");
-						frame.setAttribute("height", frameHeight+"px");
-						
-						frameFrag.appendChild(frame);
+						$(".vimeoVideos").append(frameFrag);
 					}
 					
-					$(".vimeoVideos").append(frameFrag);
+					$('.vimeoVideos').fitVids();
+					
+					setTimeout(function(){
+						
+			            $(".vimeoVideos").on('init', function (event, slick) {
+			                slick.options.onInit(event, slick);
+			            });
+			            $(".vimeoVideos").on('beforeChange', function (event, slick) {
+			                slick.options.onBeforeChange(event, slick);
+			            });
+			            $(".vimeoVideos").on('afterChange', function (event, slick) {
+			                slick.options.onAfterChange(event, slick);
+			            });
 
-					$(".vimeoVideos").slick()
+			            $(".vimeoVideos").slick(c_obj); //-- passing object from above into carousel
+						
+						$('.vimeoContainer').addClass('loaded');
+						
+					},1000);
 								
 				
                     $("nav").toggleClass("videoActive");
@@ -477,24 +536,28 @@ var mgbContent = {
 var mgbMainSys = {
 
 	init : function() {
-		mgbHeader.navContainer.on('click', function(){
+		// mgbHeader.navContainer.on('click', function(){
+			
+			$('#homeLogo').on('click',function(){
+				
+				var nav = $('nav');
 			
 			// The menu navigation doubles as the container that displays videos
 			// clicking on the nav should close the video player container and return
 			// the nav menu to its original height. 
 			
-			if($(this).hasClass("videoActive")){
+			if(nav.hasClass("videoActive")){
 				$(".vimeoVideos").empty();
 				
-				$(this).removeClass("videoActive");
+				nav.removeClass("videoActive");
 				
 				$(".vimeoContainer").children(".videoTitle").html("");
 				$(".vimeoContainer").children(".videoDescription").html("");
 				$(".navigation").fadeIn();
 				
 				if($(window).attr('scrollY') < 60){
-					$(this).removeClass("sticky");
-					$(this).children("#mbLogo").css({'position': '', 'margin-top' : '' });
+					nav.removeClass("sticky");
+					nav.children("#mbLogo").css({'position': '', 'margin-top' : '' });
 		
 					mgbUtils.hideLogo();
 			
