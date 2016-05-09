@@ -2198,7 +2198,7 @@ h1.joinTeamCTA {
 }
 .vimeoContainer .vimeoVideos {
   width: 90%;
-  height: 100%;
+  height: inherit;
   margin: 0 auto;
 }
 .vimeoContainer .vimeoVideos .vimeoSlide {
@@ -2221,6 +2221,10 @@ h1.joinTeamCTA {
   -webkit-flex-wrap: no-wrap;
       -ms-flex-wrap: no-wrap;
           flex-wrap: no-wrap;
+}
+.vimeoContainer .vimeoVideos .vimeoSlide .vimeoHolder .vimeoVideo {
+  width: 80%;
+  margin-right: 1em;
 }
 .vimeoContainer .vimeoVideos .vimeoSlide .vimeoHolder .vimeoTitle {
   text-transform: uppercase;

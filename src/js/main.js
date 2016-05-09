@@ -154,15 +154,6 @@ var mgbHeader = {
 		this.videoPlayerContainer.css('width', this.videoWidth + 'px');
 		this.videoPlayerContainer.css('height', this.videoHeight+'px');
 		this.overlayContainer.css('height',this.videoHeight + 'px');
-		
-		/*if($("nav").hasClass("videoActive")) {
-	        var iframe = $('#vimeoPlayer')[0];
-			var frameHeight = $(window).height() - ($(window).height() * .15);
-			var frameWidth = frameHeight * 1.48;
-		
-			iframe.setAttribute("width", frameWidth+"px");
-			iframe.setAttribute("height", frameHeight+"px");
-		}*/
 	},
 	
 	initWordCycle:function(){
@@ -223,11 +214,11 @@ var mgbContent = {
         var c_obj = {
             slide: '.vimeoSlide',
             autoplay: false,
-            //autoplaySpeed: 8000,
-            dots: true,
+            dots: false,
             speed: 300,
             infinite: false,
             fade: false,
+			centerMode: true,
             prevArrow: '<button type="button" data-ga-label="Arrow_Left" class="slick-prev">View previous home page carousel slide</button>',
             nextArrow: '<button type="button" data-ga-label="Arrow_Right" class="slick-next">View next home page carousel slide</button>',
             customPaging: function (slick, index) {
@@ -277,21 +268,18 @@ var mgbContent = {
 		
         this.portfolioContent.each(function() {
             $(this).children("a").on('click', function() {
-				$(".vimeoVideos").empty(); // clear out any previously watched videos
-				// 
-				
+				$(".vimeoVideos").empty(); // clear out carousel
 				
                 var videoID = $(this).attr("data-url").split(","); // get the id's for this video
 				
                 var header = $(this).attr("data-header");
 				var title = $(this).attr("data-title");
-				var defUrl = "http://player.vimeo.com/video/";
+				var defUrl = "http://player.vimeo.com/video/"; // default vimeo url
 				
                 if(videoID[0] !== "") {
 					// loop through ID's and create the video slide show
 					
-					for(var i = 0; i < videoID.length; i++){
-						
+					for(var i = 0, len = videoID.length; i < len; i++){	
 						var frameFrag = '<div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/'+videoID[i]+'?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><div class="vimeoTitle">title</div></div></div>';
 						
 						$(".vimeoVideos").append(frameFrag);
@@ -331,7 +319,7 @@ var mgbContent = {
 		$('#projectTileMore').on('click',function(e){
 			e.preventDefault();
 			
-			that.loadMoreContent('projectTile',2);	
+			that.loadMoreContent('projectTile',3);	
 		});
     },
     
@@ -388,7 +376,7 @@ var mgbContent = {
 		$('#cultureTileMore').on('click',function(e){
 			e.preventDefault();
 			
-			that.loadMoreContent('cultureTile',2);
+			that.loadMoreContent('cultureTile',3);
 		});
     },
 	
@@ -412,7 +400,7 @@ var mgbContent = {
 		
 		var newContent = $("."+tar+".notLoaded").slice(0, num);
 		
-		for (var i=0;i<newContent.length;i++){
+		for (var i=0, len = newContent.length; i < len; i++){
 			var nc = $(newContent[i]);
 			nc.removeClass('notLoaded');
 			
@@ -476,7 +464,7 @@ var mgbContent = {
                 $(this).siblings().children("a").removeClass("active");
                 $(this).children("a").addClass("active");
                 
-                var officeDataText = $(this).children('span').html();
+                var officeDataText = $(this).children('article').html();
                 
                 $("#officeDetails").removeClass('showDetails');
                 $("#officeDetails").html('');
@@ -495,13 +483,11 @@ var mgbContent = {
     },
 	
 	setCultureTileHeight: function(){
-		
         var that = this;
 			
 		clearTimeout(this.cultureTimeout);
 				
 		this.cultureTimeout = setTimeout(function(){
-			
 			// var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
 			var colW = $('.cultureTile.static').first().find('.picHolder').innerWidth();
 			$('.cultureTile').removeAttr('style').css('height', colW + 'px');
@@ -732,6 +718,7 @@ function resize(){
 function pauseHashUpdate() {
 	if((location.hash !== "#") && (location.hash !== "")) {
 		mgbHeader.giveFocus = false;
+		$(".moreMsg").show();
 		
 		var currHash = location.hash; // store the hash 
 		location.hash = ""; // empty the hash to keep page at top until the header animation finishes 

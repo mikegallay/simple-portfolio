@@ -1,5 +1,5 @@
 {{#each objects}}
-	<div class="projectTile {{#greaterThan id 5}}notLoaded notShowing{{/greaterThan}} {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
+	<figure class="projectTile {{#greaterThan id 5}}notLoaded notShowing{{/greaterThan}} {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
 		<a data-url="{{vimeoURL}}" data-header="{{{header}}}"  data-title="{{{description}}}">
 			<picture>
 				{{#equal imgType 'jpg'}}
@@ -20,7 +20,7 @@
 				{{/equal}}
 			</picture>
 			
-			<div class="prjDescription">
+			<figcaption class="prjDescription">
 				<div class="prjDscrWrap">
 					{{#if header}}
 						<h2>{{{header}}}</h2>
@@ -30,7 +30,7 @@
 				</div>
 				
 				<div class="cultureArrow"></div>
-			</div>
+			</figcaption>
 		</a>
-	</div>
+	</figure>
 {{/each}}

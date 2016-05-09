@@ -99,21 +99,6 @@
 			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</div>	
 	</section>
-	
-<!-- 	
-	<div class="pfill-test">
-		<div class="pfill-wrapper">
-			<?php // pictureFillImage('assets/img/home/campaign1','campaign one alt'); ?>
-		</div>
-	</div>
-	
-	<div class="handlebars-test">
-		<?php
-		/*	$htmlFromTemplate = HTMLfromTemplateAndJSON("content/templates/test-template.html", "content/data/test-data.json");
-			echo $htmlFromTemplate; */
-		?>
-	</div> 
--->
 		
 		<div class="vimeoContainer">
 			<div class="vimeoVideos"></div>
