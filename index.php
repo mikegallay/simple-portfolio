@@ -24,22 +24,6 @@
     <?php include 'modules/_header.inc.php'; ?>
 	
 	<!-- MAIN CONTENT GOES HERE -->
-	<section id="OurWork" class="fullBleed">
-		<div class="container">		
-			<h1 class="sectionHeading"><span data-forward>IT'S NOT</span> <span data-forward class="blueFont">CREATIVE</span> <br> <span data-forward="sectionForward">UNLESS IT</span> <span data-forward class="blueFont">WORKS.</span></h1>
-		
-			<div class="portfolioContent">
-			
-				<?php
-					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data", false);
-					echo $portfolioData; 
-				?>
-			</div>
-			<div class="moreButton active">
-				<a id="projectTileMore" href=""><?php addIcon('more_button'); ?></a>
-			</div>
-		</div>
-	</section>
 	
 	<section id="OurPeople" class="fullBleed">
 		<div class="container">
@@ -60,6 +44,25 @@
 			</div>
 		</div>	
 	</section>
+	
+	
+	<section id="OurWork" class="fullBleed">
+		<div class="container">		
+			<h1 class="sectionHeading"><span data-forward>IT'S NOT</span> <span data-forward class="blueFont">CREATIVE</span> <br> <span data-forward="sectionForward">UNLESS IT</span> <span data-forward class="blueFont">WORKS.</span></h1>
+		
+			<div class="portfolioContent">
+			
+				<?php
+					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data", false);
+					echo $portfolioData; 
+				?>
+			</div>
+			<div class="moreButton active">
+				<a id="projectTileMore" href=""><?php addIcon('more_button'); ?></a>
+			</div>
+		</div>
+	</section>
+	
 	
 	<section id="OurOffices" class="fullBleed">
 		<div class="container">

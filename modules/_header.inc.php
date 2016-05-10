@@ -24,10 +24,10 @@
 		</a>
 		<ul class="navigation">			
 			<li>
-				<a href="#OurWork" aria-label="">WORK</a>
+				<a href="#OurPeople" aria-label="">CULTURE</a>
 			</li>
 			<li>
-				<a href="#OurPeople" aria-label="">CULTURE</a>
+				<a href="#OurWork" aria-label="">WORK</a>
 			</li>
 			<li>
 				<a href="#OurOffices" aria-label="">OFFICES</a>

@@ -1276,7 +1276,7 @@ ul.navigation li a.active {
 .videoHeader .video-overlay .largeTag {
   font-family: 'Din-Bold', san-serif;
   position: relative;
-  font-size: 3.5em;
+  font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1em;
@@ -1284,6 +1284,7 @@ ul.navigation li a.active {
   cursor: pointer;
 }
 .videoHeader .video-overlay .moreMsg {
+  font-size: 0.6em;
   text-transform: uppercase;
   display: none;
 }
@@ -1292,12 +1293,19 @@ ul.navigation li a.active {
 }
 @media screen and (min-width: 768px) {
   .videoHeader .video-overlay .largeTag {
-    font-family: 'Din-Bold', san-serif;
-    position: relative;
-    font-size: 5em;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 3.5em;
     line-height: 0.9em;
+  }
+  .videoHeader .video-overlay .moreMsg {
+    font-size: 1.0em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .videoHeader .video-overlay .largeTag {
+    font-size: 4em;
+  }
+  .videoHeader .video-overlay .moreMsg {
+    font-size: 1em;
   }
 }
 .videoHeader #downArrow {
@@ -1890,51 +1898,7 @@ h1.joinTeamCTA {
   width: 150px;
 }
 
-#clientList {
-  display: none;
-  cursor: crosshair;
-}
-#clientList ul {
-  margin-top: 2em;
-  font-size: 0.7em;
-  color: #000;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-#clientList ul li {
-  width: 23%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  -webkit-flex-shrink: 2;
-      -ms-flex-negative: 2;
-          flex-shrink: 2;
-}
-
 @media screen and (min-width: 768px) {
-  .largeTag {
-    font-family: 'Din-Bold', san-serif;
-    position: relative;
-    font-size: 5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1em;
-  }
-
   h1 {
     margin: 0;
   }
@@ -1959,41 +1923,6 @@ h1.joinTeamCTA {
   .vimeoContainer .videoDescription {
     text-align: left;
     font-size: 1.2em;
-  }
-
-  #clientList {
-    display: none;
-    cursor: crosshair;
-  }
-  #clientList ul {
-    margin-top: 2em;
-    font-size: 0.9em;
-    color: #000;
-    list-style: none;
-    text-align: left;
-    padding: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-            align-content: flex-start;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  #clientList ul li {
-    width: 23%;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    -webkit-flex-shrink: 2;
-        -ms-flex-negative: 2;
-            flex-shrink: 2;
   }
 
   .projectTile {
@@ -2072,8 +2001,16 @@ h1.joinTeamCTA {
   }
   h1.joinTeamCTA {
     text-align: center;
+    font-size: 2em;
   }
+}
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  h1.joinTeamCTA {
+    font-size: 3em;
+  }
+}
 
+@media screen and (min-width: 1024px) {
   .projectTile {
     width: 24%;
   }
@@ -2261,6 +2198,17 @@ h1.joinTeamCTA {
   position: relative;
   margin-top: 0.75em;
   margin-bottom: 0.75em;
+  width: 20%;
+}
+@media screen and (min-width: 768px) {
+  .clientContent .clientLogo {
+    width: 24%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .clientContent .clientLogo {
+    width: 18%;
+  }
 }
 .clientContent .clientLogo img {
   display: none;
