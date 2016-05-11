@@ -46,9 +46,14 @@
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 0;
-	transition:height 500ms 500ms,margin 500ms 500ms,opacity 500ms;
 	height:0;
 	opacity:0;
+	transform: rotateZ(0deg);
+	transition:height 500ms 500ms,margin 500ms 500ms,opacity 500ms, transform 500ms;
+	
+	&:hover {
+		transform: rotateZ(360deg);
+	}
 	
 	&.active{
 		height:34px;

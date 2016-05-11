@@ -2152,6 +2152,8 @@ var mgbContent = {
                 $("#officeDetails").html('');
                 $("#officeDetails").html(officeDataText);
 				
+				location.hash = 'officeDetails';
+				
                 setTimeout(function() {
                     $("#officeDetails").addClass('showDetails');
                     

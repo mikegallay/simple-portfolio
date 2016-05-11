@@ -990,10 +990,16 @@ a:active {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  -webkit-transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms;
-          transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms;
   height: 0;
   opacity: 0;
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  -webkit-transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms, -webkit-transform 500ms;
+          transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms, transform 500ms;
+}
+.moreButton:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
 }
 .moreButton.active {
   height: 34px;
@@ -1366,7 +1372,7 @@ h1.sectionHeading {
   font-size: 2.125em;
   font-weight: lighter;
   color: #58595b;
-  margin-top: 0.75em;
+  margin-top: 2.3em;
   margin-bottom: 0.75em;
   letter-spacing: 0.04em;
   line-height: 1em;
@@ -1461,6 +1467,7 @@ h1.sectionHeadingSmall {
   text-align: center;
 }
 h1.joinTeamCTA {
+  font-size: 2.5em;
   text-align: center;
 }
 
@@ -1590,6 +1597,9 @@ h1.joinTeamCTA {
   margin-left: 0;
   -webkit-transition: margin 300ms;
           transition: margin 300ms;
+}
+.cultureTile .bio {
+  font-size: 0.75em;
 }
 .cultureTile.stretchOut {
   will-change: width, margin;
@@ -1738,13 +1748,16 @@ h1.joinTeamCTA {
 #officeDetails h1 {
   color: #46ccc5;
   font-family: 'Din-Bold', san-serif;
-  font-size: 6em;
+  font-size: 2em;
   line-height: 0.6em;
   position: relative;
   top: 2em;
   opacity: 0;
   -webkit-transition: top 1s, opacity 10ms;
           transition: top 1s, opacity 10ms;
+}
+#officeDetails h1 .abbr {
+  display: none;
 }
 #officeDetails .ribbon {
   padding-top: 2em;
@@ -1908,10 +1921,11 @@ h1.joinTeamCTA {
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
-    margin-top: 0.5em;
+    margin-top: 1.2em;
     margin-bottom: 0.5em;
   }
   h1.joinTeamCTA {
+    font-size: 3em;
     text-align: center;
   }
 
@@ -1964,6 +1978,16 @@ h1.joinTeamCTA {
     width: 49%;
     margin: 0.5%;
   }
+
+  #officeDetails.showDetails {
+    height: 33em;
+  }
+  #officeDetails h1 {
+    font-size: 3.25em;
+  }
+  #officeDetails h1 .abbr {
+    display: none;
+  }
 }
 @media screen and (min-width: 1024px) {
   #OurWork {
@@ -1986,31 +2010,34 @@ h1.joinTeamCTA {
     padding-top: 2.5em;
   }
 
+  #officeDetails.showDetails {
+    height: 41em;
+  }
+  #officeDetails h1 {
+    font-size: 4.5em;
+  }
+  #officeDetails h1 .abbr {
+    display: none;
+  }
+
   h1 {
     margin: 0;
   }
   h1.sectionHeading {
     font-family: 'Din-Bold', san-serif;
-    font-size: 7em;
+    font-size: 6em;
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
     line-height: 1em;
-    margin-top: 0.75em;
+    margin-top: 0.45em;
     margin-bottom: 0.75em;
   }
   h1.joinTeamCTA {
     text-align: center;
-    font-size: 2em;
+    font-size: 3.5em;
   }
-}
-@media screen and (min-width: 1024px) and (min-width: 768px) {
-  h1.joinTeamCTA {
-    font-size: 3em;
-  }
-}
 
-@media screen and (min-width: 1024px) {
   .projectTile {
     width: 24%;
   }
@@ -2032,7 +2059,6 @@ h1.joinTeamCTA {
     width: 24%;
   }
   .cultureTile .bio {
-    font-family: 'Gotham-Light', san-serif;
     font-size: 1em;
   }
   .cultureTile.stretchOut {
@@ -2058,6 +2084,14 @@ h1.joinTeamCTA {
     margin-top: 1.5em;
   }
 }
+@media screen and (min-width: 1440px) {
+  #officeDetails h1 {
+    font-size: 4.5em;
+  }
+  #officeDetails h1 .abbr {
+    display: inline-block;
+  }
+}
 @media screen and (min-width: 1900px) {
   .container {
     max-width: 90%;
@@ -2072,7 +2106,7 @@ h1.joinTeamCTA {
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
-    margin-top: 1em;
+    margin-top: 0.45em;
     margin-bottom: 1em;
   }
   h1.joinTeamCTA {
@@ -2098,11 +2132,24 @@ h1.joinTeamCTA {
     max-height: 20em;
     margin: 0.5%;
   }
+  .cultureTile .bio {
+    font-size: 1.75em;
+  }
   .cultureTile.col-2-by-1 {
     width: 32.33333%;
   }
   .cultureTile.stretchOut {
     width: 32.33333%;
+  }
+
+  #officeDetails.showDetails {
+    height: 36em;
+  }
+  #officeDetails h1 {
+    font-size: 6em;
+  }
+  #officeDetails h1 .abbr {
+    display: inline-block;
   }
 
   .officeTile {

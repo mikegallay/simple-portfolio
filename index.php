@@ -67,7 +67,7 @@
 	<section id="OurOffices" class="fullBleed">
 		<div class="container">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
-			
+
 			<article id="officeDetails"></article>
 			
 			<div class="officeContent">
