@@ -1,5 +1,5 @@
 {{#each objects}}
-	<div class="cultureTile {{#greaterThan id 5}}notLoaded notShowing{{/greaterThan}} {{dir}} {{#if isDouble}}col-2-by-1{{/if}}">
+	<div class="cultureTile {{#greaterThan id 4}}notLoaded notShowing{{/greaterThan}} {{dir}} {{#if isDouble}}col-2-by-1{{/if}}">
 		{{#if info}}
 		<a href="#">
 			<div class="bio">
@@ -19,7 +19,7 @@
 								</video>
 							<![endif]-->
 							<!--[if !lte IE 9]> -->
-								<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
+								<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 4}}lazy{{/greaterThan}}">
 							<!-- <![endif]-->
 						{{/equal}}
 						{{#equal imgType 'gif'}}
