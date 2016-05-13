@@ -31,13 +31,17 @@ var mgbUtils = {
 		to(owenContainer,.2,{width:79, ease:Quad.easeOut}, .4);
 		
 		this.logoAnimation.stop();	
-	
-		this.arrowAnimation.to(downArrow,1,{y:"-20", delay:0,ease:Back.easeInOut}).
-		to(downArrow,1,{y:"0", delay:0.75, ease:Bounce.easeOut, overwrite:false });
 		
-		this.arrowAnimation.repeat(-1).play();
+		if (mgbMainSys.mainContentLoaded == true){
+			this.arrowAnimation.to(downArrow,1,{y:"-20", delay:0,ease:Back.easeInOut}).
+			to(downArrow,1,{y:"0", delay:0.75, ease:Bounce.easeOut, overwrite:false });
+			this.arrowAnimation.repeat(-1).play();
+		}
 		
-		jQuery.easing.def = "easeInOutQuint";
+		
+		
+		
+		// jQuery.easing.def = "easeInOutQuint";
 	},
 		
 	showLogo : function() {
@@ -119,37 +123,15 @@ var mgbHeader = {
 
 	init : function() {
 		this.navContainer = $('nav');
-		this.mainContainer = $('#mainContent');
+		this.mainContainer = $('section:nth-child(2)');
 		this.overlayContainer = $('.video-overlay');
 		this.videoHeaderContainer = $(".videoHeader");
 		this.welcomeContainer = $("#welcomeVideo");
 		this.videoPlayerContainer = $(".responsive-video");	
-		this.messageContainer = $(".largeTag");
-		this.wordArray = $(".largeTag").data("words").split(",").sort(function() { return 0.5 - Math.random() });
+		this.messageContainer = $(".headerHeroText");
 		
-		this.messageContainer.on('click', function(){
-			$(".largeTag").text('');
-		});
+		if (mgbMainSys.mainContentLoaded == true) this.initHeaderCopy();
 		
-		this.messageContainer.keypress(function(e){
-			var code = e.which;
-			
-			if(e.which == 13){
-				e.preventDefault();
-				
-				$(".largeTag").text('');
-			}
-		});
-		
-		$(".cta").on("click", function(){
-			$(".largeTag").text('').focus();
-		});
-		
-		this.changeHeaderCopy();
-		
-		if((location.hash === '')) {
-			this.initWordCycle();
-		}
 	},
 	
 	
@@ -261,6 +243,33 @@ var mgbHeader = {
 			headerWords.addCallback(function(){that.changeHeaderCopy()}, spinLength + n);
 		}
 		
+	},
+	
+	initHeaderCopy:function(){
+		this.wordArray = $(".headerHeroText").data("words").split(",").sort(function() { return 0.5 - Math.random() });
+		this.messageContainer.on('click', function(){
+			$(".headerHeroText").text('');
+		});
+		
+		this.messageContainer.keypress(function(e){
+			var code = e.which;
+			
+			if(e.which == 13){
+				e.preventDefault(); 
+				
+				$(".headerHeroText").text('');
+			}
+		});
+		
+		$(".cta").on("click", function(){
+			$(".headerHeroText").text('').focus();
+		});
+		
+		this.changeHeaderCopy();
+		
+		if((location.hash === '')) {
+			this.initWordCycle();
+		}
 	},
 	
 	changeHeaderCopy:function(){
@@ -798,7 +807,7 @@ var mgbMainSys = {
 		if (this.mainContentLoaded == true && reqUrl.indexOf('work') == -1){
 			
 			console.log("home already loaded")
-			$("#overlayContent").removeClass("active");
+			$('#overlayCover').removeClass('active');
 			
 			setTimeout(function(){
 				
@@ -842,7 +851,9 @@ var mgbMainSys = {
 			if (reqUrl.indexOf('work') != -1){ //request page is a work page
 				success =  $($.parseHTML(response)).filter("#overlayContent"); 
 				
-				$("nav").toggleClass("overlayActive");
+				//$("nav").toggleClass("overlayActive");
+				$('#overlayCover').addClass('active');
+				
 				
 				setTimeout(function(){
 					
@@ -854,7 +865,7 @@ var mgbMainSys = {
 					 //call js to init current page
 					mgbOverlay.init();
 
-				},400);
+				},400); 
 				
 			}else{ //back to homepage
 				success =  $($.parseHTML(response)).filter("#mainContent"); 
@@ -866,7 +877,8 @@ var mgbMainSys = {
 				setTimeout(function(){
 					$("#overlayContent").removeClass("active");
 					$("#overlayContent").removeAttr('style');
-		            $("nav").toggleClass("overlayActive");
+		            // $("nav").toggleClass("overlayActive");
+		            $('#overlayCover').removeClass('active');
 					window.scrollTo(0, 0);
 					$("#mainContent").removeClass("inactive");
 					$("#mainContent").html(success.html());
@@ -876,7 +888,7 @@ var mgbMainSys = {
 					mgbContent.resize();
 					
 					mgbHeader.navContainer.addClass('settle');
-					$('#mainContent').addClass('settle');
+					$('section:nth-child(2)').addClass('settle');
 					mgbHeader.overlayContainer.addClass('settle');
 					mgbHeader.videoHeaderContainer.addClass('settle');
 
@@ -923,6 +935,7 @@ if($("#homepage-flag").length > 0) {
     mgbContent.init();
 	mgbMainSys.mainContentLoaded = true;
 }else{
+	$('#overlayCover').addClass('active');
 	mgbOverlay.init();
 }
 mgbMainSys.init();

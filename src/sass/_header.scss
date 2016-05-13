@@ -142,6 +142,7 @@ ul.menu {
 	position: relative;
 	
 	transition: height 1s .5s;
+	overflow:hidden;
 	
 	&.settle{
 		transition:height 0s;

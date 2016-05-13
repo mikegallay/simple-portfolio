@@ -12,6 +12,8 @@
 		<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_home.php"); ?>
 	</div>
 	
+	<div id="overlayCover"></div>
+	
 	<div id="overlayContent"></div>
 	
 	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_footer.inc.php");?>

@@ -10,6 +10,8 @@
 		
 	</div>
 	
+	<div id="overlayCover"></div>
+	
 	<div id="overlayContent">
 
 		<?php

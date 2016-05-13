@@ -38,23 +38,5 @@
 		</ul>
 		
 	</nav>
-	
-	<section class="videoHeader">
-		
-		<div id="welcomeImage"></div>
-		
-		<div id="welcomeVideo">	
-			<video class="responsive-video" id="headerVideo" autoplay loop preload="auto"></video>
-		</div>
-			
-		<div class="video-overlay">
-			<div class="headerHeroText" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,#youreit,new york,creative,get 'er done,awesome,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,the standard"></div>
-			<div class="moreMsg">that's us. <span class="cta blueFont">get to know more!</span></div>
-		</div>
-		
-		<div id="downArrow">
-			<?php addIcon('marquee_down_arrow')?>
-		</div>
 
-	</section>
 </header> 

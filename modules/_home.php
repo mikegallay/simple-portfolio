@@ -1,7 +1,24 @@
 	<!-- MAIN CONTENT GOES HERE -->
+	<section class="videoHeader">
+		
+		<div id="welcomeImage"></div>
+		
+		<div id="welcomeVideo">	
+			<video class="responsive-video" id="headerVideo" autoplay loop preload="auto"></video>
+		</div>
+			
+		<div class="video-overlay">
+			<div class="headerHeroText" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,#youreit,new york,creative,get 'er done,awesome,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,the standard"></div>
+			<div class="moreMsg">that's us. <span class="cta blueFont">get to know more!</span></div>
+		</div>
+		
+		<div id="downArrow">
+			<?php addIcon('marquee_down_arrow')?>
+		</div>
 
+	</section>
 	<section id="OurPeople" class="fullBleed">
-		<div class="container" id="settleContainer">
+		<div class="container">
 			<h1 class="sectionHeading"><span data-forward>WHO SAYS</span> <span data-forward class="blueFont">WE</span> <span data-forward>CAN'T?</span></h1>
 	
 			<div class="row alignRight">
@@ -71,8 +88,7 @@
 
 	<section id="JoinTeam" class="fullBleed">	
 		<div class="container">
-			<h1 class="sectionHeadingSmall joinTeamCTA">INTERESTED IN <br>
-				JOING THE TEAM?</h1>
+			<h1 class="sectionHeadingSmall joinTeamCTA">INTERESTED IN JOINING THE TEAM?</h1>
 	
 			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</div>	

@@ -53,6 +53,22 @@
 	}
 }*/
 
+
+#overlayCover{
+	width:100%;
+	height:0;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#6b6d6f;
+	transform:translate3d(0,0,0);
+	transition:height 500ms 1000ms;
+	&.active{
+		
+		height:100%;
+	}
+}
+
 #overlayContent{
 	opacity:0;
 	left:100%;
