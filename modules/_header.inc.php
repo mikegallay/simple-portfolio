@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</a>
-		<ul class="navigation">			
+		<ul class="menu">			
 			<li>
 				<a href="#OurPeople" aria-label="">CULTURE</a>
 			</li>
@@ -37,11 +37,9 @@
 			</li>	
 		</ul>
 		
-		
-		
 	</nav>
 	
-	<div class="videoHeader">
+	<section class="videoHeader">
 		
 		<div id="welcomeImage"></div>
 		
@@ -50,18 +48,13 @@
 		</div>
 			
 		<div class="video-overlay">
-			<div class="largeTag" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,#youreit,new york,creative,get 'er done,awesome,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,the standard"></div>
-			<div class="moreMsg">that's us. <span class="cta blueFont">who are you?</span></div>
+			<div class="headerHeroText" contentEditable="true" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,#youreit,new york,creative,get 'er done,awesome,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,the standard"></div>
+			<div class="moreMsg">that's us. <span class="cta blueFont">get to know more!</span></div>
 		</div>
 		
 		<div id="downArrow">
 			<?php addIcon('marquee_down_arrow')?>
 		</div>
 
-	</div>
+	</section>
 </header> 
-<!-- <div class="lltest" style="margin-top:500px;position:relative;"><span style="color:black;">TEST IMAGE</span><br/><img
-	alt="100%x200"
-	src="assets/img/our_work/Intel_Inside.jpg"
-	data-src="assets/img/our_work/Intel_Inside@2x.jpg"
-	class="lazyload ll" width="300" height="300" /></div> -->
