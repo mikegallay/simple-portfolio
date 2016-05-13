@@ -4,6 +4,12 @@ var mgbUtils = {
  	ts : TweenMax.set,
 	logoAnimation : new TimelineMax(),
 	arrowAnimation : new TimelineMax(),
+	pLoadTarget: 6,
+	cLoadTarget:5,
+	pLoaded:6,
+	cLoaded:5,
+	cMoreTarget:5,
+	pMoreTarget:6,
 	
 	
 	isScrolledIntoView : function(elem) {
@@ -41,6 +47,54 @@ var mgbUtils = {
 	hideLogo : function() {
 		this.logoAnimation.pause().reverse();
 	},
+	
+	resize : function(){
+		// console.log('lastWindowWidth',lastWindowWidth);
+		if (lastWindowWidth > 1024){
+			this.cLoadTarget = 7;
+			this.pLoadTarget = 6;
+			if (this.cLoaded < this.cLoadTarget){
+				mgbContent.loadMoreContent('cultureTile',this.cLoadTarget - this.cLoaded);
+				this.cLoaded = this.cLoadTarget;
+			}
+			
+			if (this.pLoaded < this.pLoadTarget){
+				mgbContent.loadMoreContent('projectTile',this.pLoadTarget - this.pLoaded);
+				this.pLoaded = this.pLoadTarget;
+			}
+			
+			this.cMoreTarget = 7;
+			this.pMoreTarget = 8;
+			
+		}
+		
+		if (lastWindowWidth > 1900){
+			this.cLoadTarget = 10;
+			this.pLoadTarget = 9;
+			
+			/*
+			// make sure the target is a multiple of 5 just in case the user 
+			// has loaded more at a smaller size and made the screen bigger
+			if (this.cLoaded > this.cLoadTarget && this.cLoaded%5 != 0){
+				this.cLoadTarget =  round(this.cLoaded/5) * 5;
+			}
+			*/
+			
+			if (this.cLoaded < this.cLoadTarget){
+				mgbContent.loadMoreContent('cultureTile',this.cLoadTarget - this.cLoaded);
+				this.cLoaded = this.cLoadTarget;
+			}
+			
+			if (this.pLoaded < this.pLoadTarget){
+				mgbContent.loadMoreContent('projectTile',this.pLoadTarget - this.pLoaded);
+				this.pLoaded = this.pLoadTarget;
+			}
+			
+			this.cMoreTarget = 5;
+			this.pMoreTarget = 6;
+			
+		}
+	}
 };
 
 	
@@ -319,7 +373,8 @@ var mgbContent = {
 		$('#projectTileMore').on('click',function(e){
 			e.preventDefault();
 			
-			that.loadMoreContent('projectTile',3);	
+			that.loadMoreContent('projectTile',mgbUtils.pMoreTarget);
+			mgbUtils.pLoaded += mgbUtils.pMoreTarget;
 		});
     },
     
@@ -376,7 +431,9 @@ var mgbContent = {
 		$('#cultureTileMore').on('click',function(e){
 			e.preventDefault();
 			
-			that.loadMoreContent('cultureTile',3);
+			that.loadMoreContent('cultureTile',mgbUtils.cMoreTarget);
+			
+			mgbUtils.cLoaded += mgbUtils.cMoreTarget;
 		});
     },
 	
@@ -713,6 +770,7 @@ function resizeChecker() {
 
 function resize(){
 	mgbHeader.resize();
+	mgbUtils.resize();
 	mgbContent.resize();
 }
 

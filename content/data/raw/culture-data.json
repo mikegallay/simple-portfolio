@@ -77,4 +77,36 @@
 		"info": "",
 		"isDouble": "true"
 	}
+	
+	,	{
+		"name" : "Dog",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/dog",
+		"imgType": "jpg",
+		"info": ""
+	},
+	{
+		"name" : "Tattoos",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/waving",
+		"imgType": "gif",
+		"info": "Hello everybody!"
+	},
+	{
+		"name" : "Train",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
+		"imgType": "jpg",
+		"info": "",
+		"isDouble": "true"
+	}
+	,
+		{
+			"name" : "Train",
+			"title": "My Title",
+			"imgSrc": "assets/img/our_culture/train",
+			"imgType": "jpg",
+			"info": "",
+			"isDouble": "true"
+		}
 ]
