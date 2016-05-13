@@ -62,7 +62,8 @@
 	left:0;
 	background:#6b6d6f;
 	transform:translate3d(0,0,0);
-	transition:height 500ms 1000ms;
+	transition:height 300ms 1000ms;
+	
 	&.active{
 		
 		height:100%;
@@ -76,8 +77,9 @@
     height: auto;
 	top: 100px;
 	margin: 100px 5%;
-	transition:opacity 500ms 1000ms;
+	transition:opacity 300ms 1000ms;
 	z-index:100;
+	
 	&.active{
 		left:0;
 		opacity:1;

@@ -37,11 +37,8 @@ var mgbUtils = {
 			to(downArrow,1,{y:"0", delay:0.75, ease:Bounce.easeOut, overwrite:false });
 			this.arrowAnimation.repeat(-1).play();
 		}
-		
-		
-		
-		
-		// jQuery.easing.def = "easeInOutQuint";
+
+		jQuery.easing.def = "easeInOutQuint";
 	},
 		
 	showLogo : function() {
@@ -130,36 +127,40 @@ var mgbHeader = {
 		this.videoPlayerContainer = $(".responsive-video");	
 		this.messageContainer = $(".headerHeroText");
 		
-		if (mgbMainSys.mainContentLoaded == true) this.initHeaderCopy();
-		
+		if (mgbMainSys.mainContentLoaded == true) 
+		{
+			this.initHeaderCopy();
+		}
 	},
 	
 	
 	resize : function(){
 		var scope = this;
-		
-		
-		
-		
+
+		this.navContainer.addClass('settle');
+		this.mainContainer.addClass('settle');
+		this.overlayContainer.addClass('settle');
+
+		setTimeout(function(){
+		scope.videoHeaderContainer.addClass('settle');
+		}, 1000);
 
 		this.navHeight = $('nav').height();
-		
 		this.videoHeight = lastWindowHeight;
 
 		if (this.videoHeight > this.maxVideoHeight) {
-			this.videoHeight = this.maxVideoHeight;
+		this.videoHeight = this.maxVideoHeight;
 		}
 
 		var videoHolderHeight = this.videoHeight;
 
-		// this.videoHeaderContainer.css('height',videoHolderHeight+'px');
+		this.videoHeaderContainer.css('height',videoHolderHeight+'px');
 
 		this.videoWidth = (this.videoHeight * this.aspectRatio);
 
 		var screenAR = lastWindowWidth / this.videoHeight;
 		
 		// check to see if overlay is required
-		// 
 		var loc = $(location).attr('href');
 		
 		if (loc.indexOf('work') != -1){
@@ -847,7 +848,7 @@ var mgbMainSys = {
         request.done(function (response) {
 			
 			var success;
-			
+				
 			if (reqUrl.indexOf('work') != -1){ //request page is a work page
 				success =  $($.parseHTML(response)).filter("#overlayContent"); 
 				
@@ -887,18 +888,22 @@ var mgbMainSys = {
 					mgbContent.init();
 					mgbContent.resize();
 					
-					mgbHeader.navContainer.addClass('settle');
-					$('section:nth-child(2)').addClass('settle');
-					mgbHeader.overlayContainer.addClass('settle');
-					mgbHeader.videoHeaderContainer.addClass('settle');
-
+					// mgbHeader.navContainer.addClass('settle');
+// 					$('section:nth-child(2)').addClass('settle');
+// 					mgbHeader.overlayContainer.addClass('settle');
+// 					mgbHeader.videoHeaderContainer.addClass('settle');
+					
+					loadHeaderVideo();
+					
 				},400);
 			}
 
         });
+		
         request.fail(function (err) {
             if (window.console && window.console.log) console.error("Page failed to load: ", page);
         });
+		
         request.always(function (content) {});
     }
 };
@@ -908,37 +913,41 @@ var mgbOverlay = {
     init: function() {
 		$('.overlayHeadline').on('click',function(){
 			mgbMainSys.getPage('/',true);
-		})
-		
-		
-		
+		});
     }
 };
 
 
 
 //can this device support autoplaying video (not a mobile device or tablet)
-if (!isMobile.any()){
-	
+function loadHeaderVideo() {
 	mgbHeader.maxVideoHeight = 700;
 	var headerVideoPath = '/assets/videos/Main_Sequence_opt';
 	
 	$('body').removeClass('no-autoplay').addClass('autoplay');
 	
 	$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
-	
+
+	mgbHeader.resize();
 }
 
-mgbUtils.init();
-mgbHeader.init();
+var useHeaderVideo = false;
+
+if (!isMobile.any()) useHeaderVideo = true;
+
 if($("#homepage-flag").length > 0) {
     mgbContent.init();
 	mgbMainSys.mainContentLoaded = true;
+	// if (useHeaderVideo) loadHeaderVideo();
 }else{
 	$('#overlayCover').addClass('active');
 	mgbOverlay.init();
 }
+mgbUtils.init();
+mgbHeader.init();
 mgbMainSys.init();
+
+if($("#homepage-flag").length > 0 && useHeaderVideo) loadHeaderVideo();
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
@@ -947,6 +956,7 @@ window.onload = pauseHashUpdate;
 $(window).on('hashchange', function () {
     mgbMainSys.getPage(location.hash);
 });
+
 window.onpopstate = function (event) {
     if (event.state) {
         // console.log('retrieving ', event.state.url, ' from history');

@@ -1651,8 +1651,8 @@ h1.joinTeamCTA {
   display: none;
 }
 .projectTile a:hover .prjDescription .cultureArrow {
-  border-top: 1000px solid transparent;
-  border-right: 1000px solid #46ccc5;
+  border-top: 1500px solid transparent;
+  border-right: 1500px solid #46ccc5;
 }
 .projectTile a:hover .prjDescription .prjDscrWrap {
   top: -5%;
@@ -1661,8 +1661,8 @@ h1.joinTeamCTA {
           transition: top 300ms 200ms, opacity 300ms 200ms;
 }
 .projectTile a.active .prjDescription .cultureArrow {
-  border-top: 1000px solid transparent;
-  border-right: 1000px solid #46ccc5;
+  border-top: 1500px solid transparent;
+  border-right: 1500px solid #46ccc5;
 }
 .projectTile a.active .prjDescription .prjDscrWrap {
   top: -5%;
@@ -2321,8 +2321,8 @@ h1.joinTeamCTA {
   background: #6b6d6f;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: height 500ms 1000ms;
-          transition: height 500ms 1000ms;
+  -webkit-transition: height 300ms 1000ms;
+          transition: height 300ms 1000ms;
 }
 #overlayCover.active {
   height: 100%;
@@ -2335,8 +2335,8 @@ h1.joinTeamCTA {
   height: auto;
   top: 100px;
   margin: 100px 5%;
-  -webkit-transition: opacity 500ms 1000ms;
-          transition: opacity 500ms 1000ms;
+  -webkit-transition: opacity 300ms 1000ms;
+          transition: opacity 300ms 1000ms;
   z-index: 100;
 }
 #overlayContent.active {
