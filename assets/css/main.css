@@ -877,11 +877,6 @@ a:active {
   max-width: 85.625em;
   margin: 1.5625em auto;
   padding: 0;
-  margin-top: 100%;
-  -webkit-transition: margin 1s .5s;
-          transition: margin 1s .5s;
-}
-.container.settle {
   margin-top: 1.5625em;
 }
 
@@ -1064,7 +1059,7 @@ nav {
   left: 0;
   margin-top: 1.5625em;
   width: 100%;
-  z-index: 99999;
+  z-index: 99;
   height: 4.25em;
   opacity: 0.98;
   -webkit-transition: background-color 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -1082,7 +1077,7 @@ nav.sticky {
   background-color: #6b6d6f;
   margin-top: 0;
 }
-nav.videoActive {
+nav.overlayActive {
   height: 100%;
   background-color: #37383a;
   opacity: 1.0;
@@ -1341,6 +1336,19 @@ ul.navigation li a.active {
   min-height: 200px;
   width: 100%;
   overflow: hidden;
+}
+
+#mainContent {
+  margin-top: 100%;
+  -webkit-transition: margin 1s .5s;
+          transition: margin 1s .5s;
+}
+#mainContent.inactive {
+  display: none;
+  position: fixed;
+}
+#mainContent.settle {
+  margin-top: 1.5625em;
 }
 
 .portfolioContent, .cultureContent, .officeContent, .clientContent {
@@ -2161,57 +2169,75 @@ h1.joinTeamCTA {
   }
 }
 /*light box video*/
-.vimeoContainer {
-  display: none;
+/*.vimeoContainer {
+	display: none;
+	opacity:0;
+    position: fixed;
+    width: 100%;
+    height: 90%;
+    margin-top: 4em;
+    top: 0px;
+    left: 0px;
+    z-index: 999999;
+	transition:opacity 1s;
+
+	&.active {
+		display:block;
+	}
+	
+	&.loaded{
+		opacity:1;
+	}
+	
+	.vimeoVideos{
+	    width: 90%;
+		height: inherit;
+	    margin: 0 auto;
+		
+		.vimeoSlide{
+			width:90%;
+			position:relative;
+			margin:0 auto;
+			display:flex;
+			justify-content:center;
+			flex-direction:column;
+			flex-wrap:no-wrap;
+			
+			.vimeoHolder{
+			    //max-width: 600px;
+			    //padding: 0 25%;
+				.vimeoVideo{
+					width: 80%;
+					margin-right: 1em;
+					
+					.fluid-width-video-wrapper{
+				
+					}
+				}
+				.vimeoTitle{
+					text-transform:uppercase;
+				}
+			}	
+		}
+	}
+}*/
+#overlayContent {
   opacity: 0;
-  position: fixed;
-  width: 100%;
-  height: 90%;
-  margin-top: 4em;
-  top: 0px;
-  left: 0px;
-  z-index: 999999;
-  -webkit-transition: opacity 1s;
-          transition: opacity 1s;
+  left: 100%;
+  width: 90%;
+  height: auto;
+  top: 100px;
+  margin: 100px 5%;
+  -webkit-transition: opacity 500ms 1000ms;
+          transition: opacity 500ms 1000ms;
+  z-index: 100;
 }
-.vimeoContainer.active {
-  display: block;
-}
-.vimeoContainer.loaded {
+#overlayContent.active {
+  left: 0;
   opacity: 1;
-}
-.vimeoContainer .vimeoVideos {
-  width: 90%;
-  height: inherit;
-  margin: 0 auto;
-}
-.vimeoContainer .vimeoVideos .vimeoSlide {
-  width: 90%;
-  position: relative;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-wrap: no-wrap;
-      -ms-flex-wrap: no-wrap;
-          flex-wrap: no-wrap;
-}
-.vimeoContainer .vimeoVideos .vimeoSlide .vimeoHolder .vimeoVideo {
-  width: 80%;
-  margin-right: 1em;
-}
-.vimeoContainer .vimeoVideos .vimeoSlide .vimeoHolder .vimeoTitle {
-  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  top: 0;
 }
 
 .clientContent {

@@ -1801,7 +1801,7 @@ var mgbHeader = {
 
 	init : function() {
 		this.navContainer = $('nav');
-		this.mainContainer = $('.container');
+		this.mainContainer = $('#mainContent');
 		this.overlayContainer = $('.video-overlay');
 		this.videoHeaderContainer = $(".videoHeader");
 		this.welcomeContainer = $("#welcomeVideo");
@@ -1837,14 +1837,10 @@ var mgbHeader = {
 	
 	resize : function(){
 		var scope = this;
-
-		this.navContainer.addClass('settle');
-		this.mainContainer.addClass('settle');
-		this.overlayContainer.addClass('settle');
-
-		setTimeout(function(){
-			scope.videoHeaderContainer.addClass('settle');
-		}, 1000);
+		
+		
+		
+		
 
 		this.navHeight = $('nav').height();
 		
@@ -1856,11 +1852,51 @@ var mgbHeader = {
 
 		var videoHolderHeight = this.videoHeight;
 
-		this.videoHeaderContainer.css('height',videoHolderHeight+'px');
+		// this.videoHeaderContainer.css('height',videoHolderHeight+'px');
 
 		this.videoWidth = (this.videoHeight * this.aspectRatio);
 
 		var screenAR = lastWindowWidth / this.videoHeight;
+		
+		// check to see if overlay is required
+		// 
+		var loc = $(location).attr('href');
+		
+		if (loc.indexOf('work') != -1){
+			
+			$("#mainContent").addClass("inactive");
+			
+			$(".navigation").fadeOut(200);
+			
+			setTimeout(function(){			
+					
+				scope.overlayContainer.addClass('settle');
+				
+		        $("#overlayContent").addClass("active");
+				scope.navContainer.addClass('settle');
+				$("nav").toggleClass("overlayActive sticky");
+				mgbUtils.logoAnimation.progress(1, false);
+			},1000)
+			
+			setTimeout(function(){
+				
+				scope.mainContainer.addClass('settle');
+				
+				scope.videoHeaderContainer.addClass('settle');
+				scope.videoHeaderContainer.css('height',videoHolderHeight+'px');
+			},3000)
+			
+		}else{
+			this.navContainer.addClass('settle');
+			this.mainContainer.addClass('settle');
+			this.overlayContainer.addClass('settle');
+
+			setTimeout(function(){
+				scope.videoHeaderContainer.addClass('settle');
+			}, 1000);
+			
+			this.videoHeaderContainer.css('height',videoHolderHeight+'px');
+		}
 		
 
 		//reset all inline styles
@@ -1919,7 +1955,7 @@ var mgbHeader = {
 		
 		$(".moreMsg").delay(500).slideDown();
 		if(mgbHeader.giveFocus === true) {
-			mgbHeader.messageContainer.focus();
+			// mgbHeader.messageContainer.focus();
 		}
 	}
 
@@ -1941,6 +1977,9 @@ var mgbContent = {
         this.initPortfolioCnt();
         this.initCultureCnt();
         this.initClockCnt();
+		
+		
+		
     },
     
     initPortfolioCnt: function() {
@@ -2004,7 +2043,7 @@ var mgbContent = {
 		
         this.portfolioContent.each(function() {
             $(this).children("a").on('click', function() {
-				$(".vimeoVideos").empty(); // clear out carousel
+				/*$(".vimeoVideos").empty(); // clear out carousel
 				
                 var videoID = $(this).attr("data-url").split(","); // get the id's for this video
 				
@@ -2042,13 +2081,18 @@ var mgbContent = {
 					},1000);
 								
 				
-                    $("nav").toggleClass("videoActive");
+                    $("nav").toggleClass("overlayActive");
 					$(".navigation").fadeOut(200);
                     $(".vimeoContainer").addClass("active");
 					$(".vimeoContainer").children(".videoTitle").html(header);
 					$(".vimeoContainer").children(".videoDescription").html(title);
                     $(this).addClass("active");
-                }
+                }*/
+               
+				
+				mgbMainSys.getPage('work/intel',true);
+				
+				
             });
         });
 		
@@ -2209,7 +2253,7 @@ var mgbContent = {
                 $("#officeDetails").html('');
                 $("#officeDetails").html(officeDataText);
 				
-				location.hash = 'officeDetails';
+				// location.hash = 'officeDetails';
 				
                 setTimeout(function() {
                     $("#officeDetails").addClass('showDetails');
@@ -2261,9 +2305,12 @@ var mgbContent = {
 
 // Module to handle window resizing
 var mgbMainSys = {
-
+	currPage: '/',
+	mainContentLoaded: false,
+	
 	init : function() {
 		// mgbHeader.navContainer.on('click', function(){
+			var that = this;
 			
 			$('#homeLogo').on('click',function(){
 				
@@ -2273,13 +2320,13 @@ var mgbMainSys = {
 			// clicking on the nav should close the video player container and return
 			// the nav menu to its original height. 
 			
-			if(nav.hasClass("videoActive")){
-				$(".vimeoVideos").empty();
+			if(nav.hasClass("overlayActive")){
+				/*$(".vimeoVideos").empty();
 				
-				nav.removeClass("videoActive");
+				nav.removeClass("overlayActive");
 				
 				$(".vimeoContainer").children(".videoTitle").html("");
-				$(".vimeoContainer").children(".videoDescription").html("");
+				$(".vimeoContainer").children(".videoDescription").html("");*/
 				$(".navigation").fadeIn();
 				
 				if($(window).attr('scrollY') < 60){
@@ -2293,7 +2340,7 @@ var mgbMainSys = {
 					});
 
 					$('#mbLogo').on('mouseout',function(){
-						mgbUtils.hideLogo();
+						if (!$('#overlayContent').hasClass('active')) mgbUtils.hideLogo();
 					});
 				}
 				
@@ -2316,7 +2363,7 @@ var mgbMainSys = {
 			$("html, body").animate({
 				scrollTop: $(hashValue).offset().top,
 			}, 1000, function() {
-				location.hash = hashValue;
+				//location.hash = hashValue;
 			});
 			
 			$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
@@ -2336,7 +2383,7 @@ var mgbMainSys = {
 		});
 
 		$('#mbLogo').on('mouseout',function(){
-			mgbUtils.hideLogo();
+			if (!$('#overlayContent').hasClass('active')) mgbUtils.hideLogo();
 		});
 	},
 	
@@ -2345,7 +2392,7 @@ var mgbMainSys = {
 	handleScrolling : function(){
 		var currScroll = $(window).attr('scrollY');
 		var scrollBottom = $(document).height() - $("body").height();
-	
+
 		if(currScroll > 60) {
 			if(!$('nav').hasClass("sticky")) {
 				$('nav').addClass("sticky");
@@ -2355,7 +2402,7 @@ var mgbMainSys = {
 				mgbUtils.showLogo();
 			}
 		} else {
-			if(!$('nav').hasClass("videoActive")) {
+			if(!$('nav').hasClass("overlayActive")) {
 				$('nav a').removeClass('active');
 				$('nav').removeClass("sticky");
 				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
@@ -2367,10 +2414,10 @@ var mgbMainSys = {
 				});
 
 				$('#mbLogo').on('mouseout',function(){
-					mgbUtils.hideLogo();
+					if (!$('#overlayContent').hasClass('active')) mgbUtils.hideLogo();
 				});
 			
-				location.hash = '';
+				// location.hash = '';
 			}
 		}
 
@@ -2384,7 +2431,7 @@ var mgbMainSys = {
 				$('nav a[href="#'+hashName+'"]').addClass('active');
 				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');
 				
-				location.hash = hashName;
+				// location.hash = hashName;
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
@@ -2392,9 +2439,9 @@ var mgbMainSys = {
 				$('.navigation li:last-child a').addClass('active');
 			} 
 			
-			if(mgbUtils.isScrolledIntoView( $(this).find("h1") )) {
+			/*if(mgbUtils.isScrolledIntoView( $(this).find("h1") )) {
 			 	$(this).find("span[data-forward]").addClass('forwardVisible');
-			}
+			}*/
 		});				
 			
  	   $('.ll').each(function () {
@@ -2406,14 +2453,145 @@ var mgbMainSys = {
  	      }
  	   });
 	},
+	
+    pushHistoryState: function (page, bool) {
+        if (window.history.pushState) {
+            if (bool !== false) { //-- do not add to history if using back button
+                // console.log('pushing ', page, ' to history');
+                window.history.pushState({
+                    url: page
+                }, "", page);
+            }
+        } else {
+            window.location.hash = page;
+        }
+    },
+	
+    getPage: function (page, bool) {
+        this.pushHistoryState(page, bool); //-- add page view to history
+		
+		console.log(page,bool,appRoot);
+
+		
+        if (page == '/') page = 'index.php'; //-- was causing navigation bug when left blank
+
+        var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
+		
+		if (this.mainContentLoaded == true && reqUrl.indexOf('work') == -1){
+			
+			console.log("home already loaded")
+			$("#overlayContent").removeClass("active");
+			
+			setTimeout(function(){
+				
+	            $("nav").toggleClass("overlayActive");
+				window.scrollTo(0, 0);
+				$("#mainContent").removeClass("inactive");
+				
+				$("#overlayContent").html('');
+
+			},400);
+			return;
+		}
+		
+		console.log('reqUrl',reqUrl);
+		
+        // 
+        //var $contentHolder = $(".dynam-container");
+
+       /* if (this.currPage === page) {
+            Nav.collapseNav();
+            return false;
+        } //-- do not load same content if already visible*/
+
+        var request = $.ajax({
+            url: reqUrl,
+            dataType: 'html',
+            beforeSend: function () {
+                //-- unslick carousel before we go!
+                try {
+					
+                } catch (err) {
+                    // if (window.console && window.console.log) console.error('carousel destroy error');
+                }
+            }
+        });
+		
+        request.done(function (response) {
+			
+			var success;
+			
+			if (reqUrl.indexOf('work') != -1){ //request page is a work page
+				success =  $($.parseHTML(response)).filter("#overlayContent"); 
+				
+				$("nav").toggleClass("overlayActive");
+				
+				setTimeout(function(){
+					
+		            $("#overlayContent").addClass("active");
+					window.scrollTo(0, 0);
+					$("#mainContent").addClass("inactive");
+					$("#overlayContent").html(success.html());
+			
+					 //call js to init current page
+					mgbOverlay.init();
+
+				},400);
+				
+			}else{ //back to homepage
+				success =  $($.parseHTML(response)).filter("#mainContent"); 
+				
+				mgbMainSys.mainContentLoaded = true;
+				
+				$("#overlayContent").css("opacity",0);
+				
+				setTimeout(function(){
+					$("#overlayContent").removeClass("active");
+					$("#overlayContent").removeAttr('style');
+		            $("nav").toggleClass("overlayActive");
+					window.scrollTo(0, 0);
+					$("#mainContent").removeClass("inactive");
+					$("#mainContent").html(success.html());
+					$("#overlayContent").html('');
+					
+					mgbContent.init();
+					mgbContent.resize();
+					
+					mgbHeader.navContainer.addClass('settle');
+					$('#mainContent').addClass('settle');
+					mgbHeader.overlayContainer.addClass('settle');
+					mgbHeader.videoHeaderContainer.addClass('settle');
+
+				},400);
+			}
+
+        });
+        request.fail(function (err) {
+            if (window.console && window.console.log) console.error("Page failed to load: ", page);
+        });
+        request.always(function (content) {});
+    }
 };
+
+var mgbOverlay = {
+    
+    init: function() {
+		$('.overlayHeadline').on('click',function(){
+			mgbMainSys.getPage('/',true);
+		})
+		
+		
+		
+    }
+};
+
 
 
 //can this device support autoplaying video (not a mobile device or tablet)
 if (!isMobile.any()){
 	
 	mgbHeader.maxVideoHeight = 700;
-	var headerVideoPath = 'assets/videos/Main_Sequence_opt';
+	var headerVideoPath = '/assets/videos/Main_Sequence_opt';
 	
 	$('body').removeClass('no-autoplay').addClass('autoplay');
 	
@@ -2423,12 +2601,27 @@ if (!isMobile.any()){
 
 mgbUtils.init();
 mgbHeader.init();
-mgbContent.init();
+if($("#homepage-flag").length > 0) {
+    mgbContent.init();
+	mgbMainSys.mainContentLoaded = true;
+}else{
+	mgbOverlay.init();
+}
 mgbMainSys.init();
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
 window.onload = pauseHashUpdate;
+
+$(window).on('hashchange', function () {
+    mgbMainSys.getPage(location.hash);
+});
+window.onpopstate = function (event) {
+    if (event.state) {
+        // console.log('retrieving ', event.state.url, ' from history');
+        mgbMainSys.getPage(event.state.url, false);
+    }
+};
 
 setTimeout(function(){  
 	resize();
@@ -2453,7 +2646,7 @@ function resizeChecker() {
 function resize(){
 	mgbHeader.resize();
 	mgbUtils.resize();
-	mgbContent.resize();
+	if (mgbMainSys.mainContentLoaded == true) mgbContent.resize();
 }
 
 // Prevent the page of jumping abruptly when loading from a hash
@@ -2463,13 +2656,13 @@ function pauseHashUpdate() {
 		$(".moreMsg").show();
 		
 		var currHash = location.hash; // store the hash 
-		location.hash = ""; // empty the hash to keep page at top until the header animation finishes 
+		// location.hash = ""; // empty the hash to keep page at top until the header animation finishes
 		
 		setTimeout(function(){
 			$("html,body").animate({
 				scrollTop: $(currHash).offset().top, 
 			}, 800, function(){
-				location.hash = currHash;
+				// location.hash = currHash;
 			});
 		}, 2000);
 	}
