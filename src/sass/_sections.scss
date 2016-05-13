@@ -11,6 +11,18 @@
 	overflow: hidden;
 }
 
+#mainContent{
+	margin-top:100%;
+	transition:margin 1s .5s;
+	&.inactive{
+		display:none;
+		position:fixed;
+	}
+	&.settle{
+		margin-top:1.5625em;
+	}
+}
+
 
 .portfolioContent, .cultureContent, .officeContent, .clientContent {
 	margin-top: 1.2em;

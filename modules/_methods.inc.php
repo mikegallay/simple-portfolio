@@ -1,11 +1,10 @@
 
 <?php
-
-require_once './lib/Handlebars/Autoloader.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/Handlebars/Autoloader.php';
 Handlebars\Autoloader::register();
 use Handlebars\Handlebars;
 
-$siteData = './content/data/merged.json';
+$siteData = $_SERVER['DOCUMENT_ROOT'] . '/content/data/merged.json';
 $tempData = "";
 $fullData = "";
 
@@ -147,4 +146,4 @@ function pictureFillImage($path,$alt) {
 }
 
 ?>
-<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?></span>
+<span class="hidden"><?php include_once($_SERVER['DOCUMENT_ROOT'] . "/assets/img/svg/icon-sprite-def.svg"); ?></span>
