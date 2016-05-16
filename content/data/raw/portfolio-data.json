@@ -1,23 +1,21 @@
 [
-	{	
+	{
 		"id": 0,
-		"imgSrc": "/assets/img/our_work/Intel_JimParsons_Campaign1",
-		"imgType": "jpg",
-		"vimeoURL": "144913605,147738221",
-		"header": "Intel",
-		"description": "Description goes here",
-		"altText": "This is alt text",
-		"isShowcase": "true"
-	},
-	{	
-		"id": 1,
-		"imgSrc": "/assets/img/our_work/Intel_Inside",
+		"imgSrc": "/assets/img/our_work/United",
 		"imgType": "jpg",
 		"vimeoURL": "",
-		"header": "Intel",
+		"header": "United <br> Airlines",
 		"description": "Description goes here",
-		"altText": "Description goes here",
-		"isShowcase": "true"
+		"altText": "This is alt text"
+	},
+	{
+		"id": 1,
+		"imgSrc": "/assets/img/our_work/Maserati",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "Maserati",
+		"description": "Description goes here.",
+		"altText": "This is alt text"
 	},	
 	{
 		"id": 2,
@@ -29,8 +27,18 @@
 		"altText": "This is alt text",
 		"isShowcaseFinal": "isShowcaseFinal"
 	},
-	{
+	{	
 		"id": 3,
+		"imgSrc": "/assets/img/our_work/IntelInside",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "Intel",
+		"description": "Description goes here",
+		"altText": "Description goes here",
+		"isShowcase": "true"
+	},
+	{
+		"id": 4,
 		"imgSrc": "/assets/img/our_work/princess",
 		"imgType": "gif",
 		"vimeoURL": "119997282",
@@ -39,8 +47,8 @@
 		"altText": "This is alt text"
 	},
 	{
-		"id": 4,
-		"imgSrc": "/assets/img/our_work/IntelExperienceApp",
+		"id": 5,
+		"imgSrc": "/assets/img/our_work/IEM",
 		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Intel",
@@ -48,8 +56,8 @@
 		"altText": "This is alt text"
 	},
 	{	
-		"id": 5,
-		"imgSrc": "/assets/img/our_work/Aussie_SGS1",
+		"id": 6,
+		"imgSrc": "/assets/img/our_work/Aussie",
 		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Aussie",
@@ -57,35 +65,81 @@
 		"altText": "This is alt text"
 	},	
 	{
-		"id": 6,
-		"imgSrc": "/assets/img/our_work/Mariott_MrGuaran-T",
+		"id": 7,
+		"imgSrc": "/assets/img/our_work/MrT",
 		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Marriot",
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
-	{
-		"id": 7,
-		"imgSrc": "/assets/img/our_work/Verizon_SocialImprint3",
-		"imgType": "jpg",
-		"vimeoURL": "",
-		"header": "Verizon",
-		"description": "Description goes here",
-		"altText": "This is alt text"
-	},
-	{
+	{	
 		"id": 8,
-		"imgSrc": "/assets/img/our_work/United_BMB1",
+		"imgSrc": "/assets/img/our_work/JimParsons",
 		"imgType": "jpg",
-		"vimeoURL": "",
-		"header": "United <br> Airlines",
+		"vimeoURL": "144913605,147738221",
+		"header": "Intel",
 		"description": "Description goes here",
-		"altText": "This is alt text"
+		"altText": "This is alt text",
+		"isShowcase": "true"
 	},
 	{
 		"id": 9,
+		"imgSrc": "/assets/img/our_work/CanadaDry",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "Canada Dry",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 10,
 		"imgSrc": "/assets/img/our_work/Apophis",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "Verizon",
+		"description": "Description goes here.",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 11,
+		"imgSrc": "/assets/img/our_work/Droid",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "Verizon",
+		"description": "Description goes here.",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 12,
+		"imgSrc": "/assets/img/our_work/Honda",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "Honda",
+		"description": "Description goes here.",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 13,
+		"imgSrc": "/assets/img/our_work/Leaf",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "PureCircle",
+		"description": "Description goes here.",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 14,
+		"imgSrc": "/assets/img/our_work/NFL",
+		"imgType": "jpg",
+		"vimeoURL": "",
+		"header": "NFL",
+		"description": "Description goes here.",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 15,
+		"imgSrc": "/assets/img/our_work/Verizon",
 		"imgType": "jpg",
 		"vimeoURL": "",
 		"header": "Verizon",
