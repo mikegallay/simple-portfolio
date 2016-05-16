@@ -22,7 +22,12 @@
 				</div>
 			</div>
 		</a>
-		<ul class="menu">			
+		<div class="hamburger">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+		<ul class="menu">
 			<li>
 				<a href="#OurPeople" aria-label="">CULTURE</a>
 			</li>

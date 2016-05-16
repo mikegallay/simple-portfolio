@@ -1121,6 +1121,25 @@ nav {
   z-index: 9999;
 }
 
+.hamburger {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-top: 1em;
+  margin-right: 2em;
+  z-index: 999;
+}
+.hamburger span {
+  position: relative;
+  display: block;
+  width: 1.5em;
+  height: 0.25em;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+  background-color: #ffffff;
+}
+
 ul.menu {
   background-color: #6b6d6f;
   position: relative;
@@ -1135,7 +1154,7 @@ ul.menu {
   margin-bottom: 0;
   width: 20%;
   height: 100%;
-  right: -30%;
+  right: -35%;
   top: 0;
 }
 ul.menu li {
@@ -1377,6 +1396,10 @@ ul.menu.active {
     opacity: 1.0;
     -webkit-transition: height 400ms;
             transition: height 400ms;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   ul.menu {
@@ -2221,10 +2244,10 @@ h1.joinTeamCTA {
     font-size: 2em;
   }
   .projectTile.col-2-by-1 {
-    width: 32%;
+    width: 32.3%;
   }
   .projectTile.isShowcaseFinal {
-    width: 32%;
+    width: 32.3%;
   }
 
   .cultureTile {

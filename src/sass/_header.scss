@@ -87,6 +87,26 @@ nav {
 	z-index: 9999;
 }
 
+.hamburger {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	float: right;
+	margin-top: 1em;
+	margin-right: 2em;
+	z-index: 999;
+	
+	span {
+		position: relative;
+		display: block;
+		width: 1.5em;
+		height: 0.25em;
+		margin-top: 0.1em;
+		margin-bottom: 0.3em;
+		background-color: #ffffff;
+	}
+}
+
 ul.menu {
 	background-color: rgba(107, 109, 111, 1.0);
 	position: relative;
@@ -101,9 +121,9 @@ ul.menu {
 	margin-bottom: 0;
 	width: 20%;
 	height: 100%;
-	right: -30%;
+	right: -35%;
 	top: 0;
-		
+	
 	li {
 		display: block;
 		margin-top: 0.5em;
@@ -379,6 +399,10 @@ ul.menu {
 			opacity: 1.0;
 			transition: height 400ms;
 		}
+	}
+
+	.hamburger {
+		display: none;
 	}
 
 	ul.menu {
