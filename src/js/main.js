@@ -103,6 +103,49 @@ var mgbUtils = {
 var mgbHeader = {
 	navContainer : null,
 	mainContainer : null,
+	navHeight : $("nav").height(),
+
+	init : function() {
+		this.navContainer = $('nav');
+		this.mainContainer = $('section:nth-child(2)');
+	},
+	
+	
+	resize : function(){
+		var scope = this;
+
+		this.navContainer.addClass('settle');
+		this.mainContainer.addClass('settle');
+		this.navHeight = $('nav').height();
+
+
+		// check to see if overlay is required
+		var loc = $(location).attr('href');
+		
+		if (loc.indexOf('work') != -1){
+			
+			$("#mainContent").addClass("inactive");
+			
+			$(".navigation").fadeOut(200);
+			
+			setTimeout(function(){			
+				$("nav").toggleClass("overlayActive sticky");
+				mgbUtils.logoAnimation.progress(1, false);
+			},1000)
+			
+			setTimeout(function(){	
+				scope.mainContainer.addClass('settle');
+			},3000)
+			
+		}else{
+			this.navContainer.addClass('settle');
+			this.mainContainer.addClass('settle');
+		}
+	}
+};
+
+
+var mgbHeroVideo = {
 	overlayContainer : null,
 	videoHeaderContainer : null,
 	welcomeContainer : null,
@@ -110,17 +153,13 @@ var mgbHeader = {
 	msgContainer: null,
 	wordArray: null,
 	firstWord: '',
-	giveFocus: true,
 	
 	videoHeight : 0,
 	aspectRatio : 16/9,
 	videoWidth : $(window).width(),
-	navHeight : $("nav").height(),
 	maxVideoHeight : 500,
 
 	init : function() {
-		this.navContainer = $('nav');
-		this.mainContainer = $('section:nth-child(2)');
 		this.overlayContainer = $('.video-overlay');
 		this.videoHeaderContainer = $(".videoHeader");
 		this.welcomeContainer = $("#welcomeVideo");
@@ -137,15 +176,12 @@ var mgbHeader = {
 	resize : function(){
 		var scope = this;
 
-		this.navContainer.addClass('settle');
-		this.mainContainer.addClass('settle');
 		this.overlayContainer.addClass('settle');
 
 		setTimeout(function(){
 		scope.videoHeaderContainer.addClass('settle');
 		}, 1000);
 
-		this.navHeight = $('nav').height();
 		this.videoHeight = lastWindowHeight;
 
 		if (this.videoHeight > this.maxVideoHeight) {
@@ -163,19 +199,15 @@ var mgbHeader = {
 		// check to see if overlay is required
 		var loc = $(location).attr('href');
 		
+		console.log(loc);
+		
 		if (loc.indexOf('work') != -1){
-			
-			$("#mainContent").addClass("inactive");
-			
-			$(".navigation").fadeOut(200);
-			
+						
 			setTimeout(function(){			
 					
 				scope.overlayContainer.addClass('settle');
 				
 		        $("#overlayContent").addClass("active");
-				scope.navContainer.addClass('settle');
-				$("nav").toggleClass("overlayActive sticky");
 				mgbUtils.logoAnimation.progress(1, false);
 			},1000)
 			
@@ -188,8 +220,6 @@ var mgbHeader = {
 			},3000)
 			
 		}else{
-			this.navContainer.addClass('settle');
-			this.mainContainer.addClass('settle');
 			this.overlayContainer.addClass('settle');
 
 			setTimeout(function(){
@@ -274,17 +304,28 @@ var mgbHeader = {
 	},
 	
 	changeHeaderCopy:function(){
-		mgbHeader.firstWord = mgbHeader.wordArray.shift();
-		mgbHeader.messageContainer.html(mgbHeader.firstWord);
-		mgbHeader.wordArray.push(mgbHeader.firstWord);
+		this.firstWord = this.wordArray.shift();
+		this.messageContainer.html(this.firstWord);
+		this.wordArray.push(this.firstWord);
 	},
 	
 	wordCycleComplete:function(){
 		
 		$(".moreMsg").delay(500).slideDown();
-		if(mgbHeader.giveFocus === true) {
+		if(this.giveFocus === true) {
 			// mgbHeader.messageContainer.focus();
 		}
+	},
+	
+	loadHeaderVideo: function() {
+		this.maxVideoHeight = 700;
+		var headerVideoPath = '/assets/videos/Main_Sequence_opt';
+	
+		$('body').removeClass('no-autoplay').addClass('autoplay');
+	
+		$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
+
+		this.resize();
 	}
 
 };
@@ -305,13 +346,9 @@ var mgbContent = {
         this.initPortfolioCnt();
         this.initCultureCnt();
         this.initClockCnt();
-		
-		
-		
     },
     
-    initPortfolioCnt: function() {
-		
+    initPortfolioCnt: function() {		
 		var that = this;
 		
         var c_obj = {
@@ -920,20 +957,8 @@ var mgbOverlay = {
 
 
 //can this device support autoplaying video (not a mobile device or tablet)
-function loadHeaderVideo() {
-	mgbHeader.maxVideoHeight = 700;
-	var headerVideoPath = '/assets/videos/Main_Sequence_opt';
-	
-	$('body').removeClass('no-autoplay').addClass('autoplay');
-	
-	$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
 
-	mgbHeader.resize();
-}
 
-var useHeaderVideo = false;
-
-if (!isMobile.any()) useHeaderVideo = true;
 
 if($("#homepage-flag").length > 0) {
     mgbContent.init();
@@ -945,9 +970,10 @@ if($("#homepage-flag").length > 0) {
 }
 mgbUtils.init();
 mgbHeader.init();
+mgbHeroVideo.init();
 mgbMainSys.init();
 
-if($("#homepage-flag").length > 0 && useHeaderVideo) loadHeaderVideo();
+if($("#homepage-flag").length > 0 && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
@@ -986,6 +1012,7 @@ function resizeChecker() {
 
 function resize(){
 	mgbHeader.resize();
+	mgbHeroVideo.resize();
 	mgbUtils.resize();
 	if (mgbMainSys.mainContentLoaded == true) mgbContent.resize();
 }
