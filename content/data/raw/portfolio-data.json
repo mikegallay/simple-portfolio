@@ -38,6 +38,15 @@
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
+	{
+		"id": 9,
+		"imgSrc": "/assets/img/our_work/Mariott_Insitu",
+		"imgType": "jpg",
+		"vimeoURL": "124646110",
+		"header": "Mariott",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
 	{	
 		"id": 4,
 		"imgSrc": "/assets/img/our_work/Aussie",
@@ -81,15 +90,6 @@
 		"vimeoURL": "",
 		"header": "Verizon",
 		"description": "Description goes here.",
-		"altText": "This is alt text"
-	},
-	{
-		"id": 9,
-		"imgSrc": "/assets/img/our_work/Mariott_Insitu",
-		"imgType": "jpg",
-		"vimeoURL": "124646110",
-		"header": "Mariott",
-		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{	
