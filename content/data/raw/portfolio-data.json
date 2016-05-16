@@ -26,7 +26,8 @@
 		"vimeoURL": "",
 		"header": "Canada Dry",
 		"description": "Description goes here",
-		"altText": "This is alt text"
+		"altText": "This is alt text",
+		"isShowcaseFinal": "isShowcaseFinal"
 	},
 	{
 		"id": 3,
@@ -89,8 +90,7 @@
 		"vimeoURL": "124646110",
 		"header": "Mariott",
 		"description": "Description goes here",
-		"altText": "This is alt text",
-		"isShowcaseFinal": "isShowcaseFinal"
+		"altText": "This is alt text"
 	},
 	{	
 		"id": 10,

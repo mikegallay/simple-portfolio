@@ -48,6 +48,11 @@
 	height: 185px;
 }
 
+.svg-facebook-dims {
+	width: 6.7px;
+	height: 13.5px;
+}
+
 .svg-icon_dogs-dims {
 	width: 33.5px;
 	height: 24.5px;
@@ -76,6 +81,16 @@
 .svg-icon_windows-dims {
 	width: 24.5px;
 	height: 24.5px;
+}
+
+.svg-instagram-dims {
+	width: 13.5px;
+	height: 13.5px;
+}
+
+.svg-linkedin-dims {
+	width: 13.3px;
+	height: 12.9px;
 }
 
 .svg-logo-b-dims {
@@ -116,5 +131,10 @@
 .svg-playbutton-dims {
 	width: 42px;
 	height: 42px;
+}
+
+.svg-twitter-dims {
+	width: 13.3px;
+	height: 11px;
 }
 
