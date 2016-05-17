@@ -2373,7 +2373,7 @@ h1.joinTeamCTA {
   height: auto;
   top: 0;
   margin: 100px 5%;
-  position: absolute;
+  position: relative;
   -webkit-transition: opacity 250ms 0ms,height 500ms;
           transition: opacity 250ms 0ms,height 500ms;
   z-index: 100;
