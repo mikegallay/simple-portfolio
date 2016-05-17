@@ -381,10 +381,11 @@ ul.menu {
 		opacity: 0.98;
 		transition: background 300ms, margin-top 300ms 300ms, top 1s 300ms, height 500ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
-		a[href='#Home'] {
+		#homeLogo{
 			display: inline-block;
 			position: absolute;
-			top: -11px;
+			top: 0px;
+			transition:top 300ms;
 		}
 
 		&.settle{
@@ -395,6 +396,9 @@ ul.menu {
 			background: rgba(107, 109, 111, 1.0);
 			margin-top: 0;
 			transition: background 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+			#homeLogo{
+				top: -11px;
+			}
 		}
 		
 		&.overlayActive{
