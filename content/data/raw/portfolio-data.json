@@ -3,7 +3,7 @@
 		"id": 0,
 		"imgSrc": "/assets/img/our_work/United",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "work/intel",
 		"header": "United Airlines",
 		"description": "Description goes here",
 		"altText": "This is alt text",
@@ -13,7 +13,7 @@
 		"id": 1,
 		"imgSrc": "/assets/img/our_work/Maserati",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "work/maserati",
 		"header": "Maserati",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
@@ -23,7 +23,7 @@
 		"id": 2,
 		"imgSrc": "/assets/img/our_work/CanadaDry",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Canada Dry",
 		"description": "Description goes here",
 		"altText": "This is alt text",
@@ -33,7 +33,7 @@
 		"id": 3,
 		"imgSrc": "/assets/img/our_work/princess",
 		"imgType": "gif",
-		"vimeoURL": "119997282",
+		"contentPath": "119997282",
 		"header": "Oscar Meyer",
 		"description": "Description goes here",
 		"altText": "This is alt text"
@@ -42,7 +42,7 @@
 		"id": 9,
 		"imgSrc": "/assets/img/our_work/Mariott_Insitu",
 		"imgType": "jpg",
-		"vimeoURL": "124646110",
+		"contentPath": "124646110",
 		"header": "Mariott",
 		"description": "Description goes here",
 		"altText": "This is alt text"
@@ -51,7 +51,7 @@
 		"id": 4,
 		"imgSrc": "/assets/img/our_work/Aussie",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Aussie",
 		"description": "Description goes here",
 		"altText": "This is alt text"
@@ -60,7 +60,7 @@
 		"id": 5,
 		"imgSrc": "/assets/img/our_work/MrT",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Marriot",
 		"description": "Description goes here",
 		"altText": "This is alt text"
@@ -69,7 +69,7 @@
 		"id": 6,
 		"imgSrc": "/assets/img/our_work/Leaf",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "PureCircle",
 		"description": "Description goes here.",
 		"altText": "This is alt text"
@@ -78,7 +78,7 @@
 		"id": 7,
 		"imgSrc": "/assets/img/our_work/NFL",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "NFL",
 		"description": "Description goes here.",
 		"altText": "This is alt text"
@@ -87,7 +87,7 @@
 		"id": 8,
 		"imgSrc": "/assets/img/our_work/Apophis",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Verizon",
 		"description": "Description goes here.",
 		"altText": "This is alt text"
@@ -96,7 +96,7 @@
 		"id": 10,
 		"imgSrc": "/assets/img/our_work/IntelInside",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "Description goes here"
@@ -105,7 +105,7 @@
 		"id": 11,
 		"imgSrc": "/assets/img/our_work/IEM",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text"
@@ -114,7 +114,7 @@
 		"id": 12,
 		"imgSrc": "/assets/img/our_work/JimParsons",
 		"imgType": "jpg",
-		"vimeoURL": "144913605,147738221",
+		"contentPath": "144913605,147738221",
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text"
@@ -123,7 +123,7 @@
 		"id": 13,
 		"imgSrc": "/assets/img/our_work/Honda",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Honda",
 		"description": "Description goes here.",
 		"altText": "This is alt text"
@@ -132,7 +132,7 @@
 		"id": 14,
 		"imgSrc": "/assets/img/our_work/Verizon",
 		"imgType": "jpg",
-		"vimeoURL": "",
+		"contentPath": "",
 		"header": "Verizon",
 		"description": "Description goes here.",
 		"altText": "This is alt text"

@@ -163,9 +163,12 @@ ul.menu {
 	
 	transition: height 1s .5s;
 	overflow:hidden;
+	margin-bottom:100%;
 	
 	&.settle{
-		transition:height 0s;
+		margin-bottom:0;
+		transition:height 0s,margin 1s .5s;
+		
 	}
 	
 
@@ -364,9 +367,9 @@ ul.menu {
 
 
 	nav {
-		background-color: rgba(107, 109, 111, 0.0);
-		background-image: '';
-		background-size: 0px 0px;
+		background: rgba(107, 109, 111, 0.0);
+		//background-image: '';
+		//background-size: 0px 0px;
 		border: none;
 		position: fixed;
 		top: -100px;
@@ -376,7 +379,7 @@ ul.menu {
 		z-index: 99999;
 		height: 4.25em;
 		opacity: 0.98;
-		transition: background-color 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+		transition: background 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
 
 		a[href='#Home'] {
 			display: inline-block;
@@ -389,8 +392,20 @@ ul.menu {
 		}
 
 		&.sticky {
-			background-color: rgba(107, 109, 111, 1.0);
+			background: rgba(107, 109, 111, 1.0);
 			margin-top: 0;
+		}
+		
+		&.overlayActive{
+			background: rgba(107,109,111,1);
+			background: -moz-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(1%, rgba(107,109,111,1)), color-stop(68%, rgba(107,109,111,1)), color-stop(100%, rgba(107,109,111,0)));
+			background: -webkit-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
+			background: -o-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
+			background: -ms-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
+			background: linear-gradient(to bottom, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6d6f', endColorstr='#6b6d6f', GradientType=0 );
+			
 		}
 
 		&.videoActive {

@@ -68,6 +68,10 @@ textarea {
 @import 'slick';
 @import 'ie';
 
+html {
+    overflow-y:scroll;
+}
+
 
 /* ==========================================================================
    Media Queries

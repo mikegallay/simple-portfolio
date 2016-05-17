@@ -1190,10 +1190,12 @@ ul.menu.active {
   -webkit-transition: height 1s .5s;
           transition: height 1s .5s;
   overflow: hidden;
+  margin-bottom: 100%;
 }
 .videoHeader.settle {
-  -webkit-transition: height 0s;
-          transition: height 0s;
+  margin-bottom: 0;
+  -webkit-transition: height 0s,margin 1s .5s;
+          transition: height 0s,margin 1s .5s;
 }
 .videoHeader #welcomeVideo {
   position: relative;
@@ -1363,9 +1365,7 @@ ul.menu.active {
 
   /* end MB LOGO */
   nav {
-    background-color: rgba(107, 109, 111, 0);
-    background-image: '';
-    background-size: 0px 0px;
+    background: rgba(107, 109, 111, 0);
     border: none;
     position: fixed;
     top: -100px;
@@ -1375,8 +1375,8 @@ ul.menu.active {
     z-index: 99999;
     height: 4.25em;
     opacity: 0.98;
-    -webkit-transition: background-color 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
-            transition: background-color 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: background 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: background 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   nav a[href='#Home'] {
     display: inline-block;
@@ -1387,8 +1387,15 @@ ul.menu.active {
     top: 0;
   }
   nav.sticky {
-    background-color: #6b6d6f;
+    background: #6b6d6f;
     margin-top: 0;
+  }
+  nav.overlayActive {
+    background: #6b6d6f;
+    background: -webkit-gradient(left top, left bottom, color-stop(1%, #6b6d6f), color-stop(68%, #6b6d6f), color-stop(100%, rgba(107, 109, 111, 0)));
+    background: -webkit-linear-gradient(top, #6b6d6f 1%, #6b6d6f 68%, rgba(107, 109, 111, 0) 100%);
+    background: linear-gradient(to bottom, #6b6d6f 1%, #6b6d6f 68%, rgba(107, 109, 111, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6d6f', endColorstr='#6b6d6f', GradientType=0 );
   }
   nav.videoActive {
     height: 100%;
@@ -1445,15 +1452,11 @@ ul.menu.active {
   overflow: hidden;
 }
 
-section:nth-child(2) {
-  margin-top: 100%;
-  -webkit-transition: margin 1s .5s;
-          transition: margin 1s .5s;
-}
-section:nth-child(2).settle {
-  margin-top: 1.5625em;
-}
-
+/*section:nth-child(2){
+	margin-top:100%;
+	transition:margin 1s .5s;
+	&.settle{margin-top:1.5625em;}
+}*/
 #JoinTeam {
   min-height: 200px;
   width: 100%;
@@ -2339,36 +2342,39 @@ h1.joinTeamCTA {
 #overlayCover {
   width: 100%;
   height: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: #6b6d6f;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: height 300ms 1000ms;
-          transition: height 300ms 1000ms;
+  -webkit-transition: height 500ms 250ms;
+          transition: height 500ms 250ms;
+  z-index: 99;
 }
 #overlayCover.active {
+  -webkit-transition: height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
+          transition: height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
   height: 100%;
 }
 
 #overlayContent {
   opacity: 0;
-  left: 100%;
   width: 90%;
   height: auto;
-  top: 100px;
+  top: 0;
   margin: 100px 5%;
-  -webkit-transition: opacity 300ms 1000ms;
-          transition: opacity 300ms 1000ms;
+  position: absolute;
+  -webkit-transition: opacity 250ms 0ms,height 500ms;
+          transition: opacity 250ms 0ms,height 500ms;
   z-index: 100;
+  overflow: hidden;
 }
 #overlayContent.active {
-  left: 0;
   opacity: 1;
   display: block;
-  position: absolute;
-  top: 0;
+  -webkit-transition: opacity 500ms 750ms, height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
+          transition: opacity 500ms 750ms, height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .clientContent {
@@ -2704,6 +2710,10 @@ footer .legal p.copyright a {
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 /* ==========================================================================
