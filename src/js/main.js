@@ -166,22 +166,29 @@ var mgbMainSys = {
 		
         this.pushHistoryState(page, bool); //-- add page view to history
 		
-		console.log(page,bool,appRoot);
+		var useOverlay = true;
 		
-        if (page == '/') page = 'index.php'; 
-
+		if (page == '/'){
+			page = 'index.php'; 
+			useOverlay = false;
+		}
+		
+		// console.log('page',page,useOverlay);
+		
         var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
-		if (this.mainContentLoaded == true && reqUrl.indexOf('work') == -1){ // if the url doesn't direct to a portfolio page
+		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
 			console.log("home already loaded");
 			
 			$("nav").removeClass("overlayActive sticky");
 			
 			mgbHeader.hideLogo();
+			mgbHeader.deactivateNavActive();
 			
-			$("#overlayContent").removeClass("active");
-            $('#overlayCover').removeClass('active');
+			
+			mgbOverlay.kill();
+			
 			
 			$("#mainContent").removeClass("inactive");
 			
@@ -211,7 +218,7 @@ var mgbMainSys = {
 			
 			var success;
 				
-			if (reqUrl.indexOf('work') != -1){ //request page is a work page requires overlay
+			if (useOverlay){ //request page requires overlay
 				
 				$('#overlayCover').addClass('active'); //css takes 500ms
 				
@@ -226,12 +233,12 @@ var mgbMainSys = {
 					 //call js to init current page
 					mgbOverlay.init();
 					
-		            $("#overlayContent").addClass("active");
+		            
 					
 					$("nav").addClass("overlayActive").removeClass("sticky");
 			
 					mgbHeader.hideLogo();
-			
+					mgbHeader.deactivateNavActive();
 					
 					$("#mainContent").addClass("inactive");
 					
@@ -259,11 +266,11 @@ var mgbMainSys = {
 				mgbHeroVideo.loadHeaderVideo();
 				
 				$("nav").removeClass("overlayActive sticky");
+				mgbHeader.deactivateNavActive();
 			
 				mgbHeader.hideLogo();
-			
-				$("#overlayContent").removeClass("active");
-	            $('#overlayCover').removeClass('active');
+				
+				mgbOverlay.kill();
 				
 				setTimeout(function(){
 					
@@ -305,6 +312,7 @@ var mgbHeader = {
 		this.logoAnimation.stop();	
 		
 		this.addListeners();
+		
 	},
 	
 	addListeners : function(){
@@ -331,14 +339,10 @@ var mgbHeader = {
 					});*/
 			}
 			
-			mgbContent.portfolioContent.each(function(){
-				if($(this).children("a").hasClass("active")) {
-					$(this).children("a").removeClass("active");
-				}
-			});
+			mgbContent.deactivateActiveContent();
 		});
 	
-		$('nav a').on('click', function(e){
+		$('nav .menu a').on('click', function(e){
 			e.preventDefault();
 		
 			$(this).removeClass('active');
@@ -349,7 +353,7 @@ var mgbHeader = {
 			$("html, body").animate({
 				scrollTop: $(hashValue).offset().top,
 			}, 1000, function() {
-				location.hash = hashValue;
+				//location.hash = hashValue;
 			});
 		
 			$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
@@ -364,13 +368,22 @@ var mgbHeader = {
 			currLink.addClass('active');
 		});
 	
-		$('#mbLogo').on('mouseover',function(){
+		$('#homeLogo').mouseover(function(){
+			console.log("showLogo")
 			mgbHeader.showLogo();
 		});
 
-		$('#mbLogo').on('mouseout',function(){
+		$('#homeLogo').mouseout(function(){
+			
+			console.log("hideLogo")
 			mgbHeader.hideLogo();
 		});
+	},
+	
+	deactivateNavActive : function(){
+		
+		$('nav .menu a').removeClass('active');
+		
 	},
 	
 	
@@ -378,38 +391,35 @@ var mgbHeader = {
 		var scope = this;
 
 		this.navContainer.addClass('settle');
-		// this.mainContainer.addClass('settle');
 		this.navHeight = $('nav').height();
 
+/*
 		// check to see if overlay is required
 		var loc = $(location).attr('href');
 		
 		if (loc.indexOf('work') != -1){
 			
-			$("#mainContent").addClass("inactive");
+			// $("#mainContent").addClass("inactive");
 			
-			$(".navigation").fadeOut(200);
+			// $(".navigation").fadeOut(200);
 			
 			setTimeout(function(){			
-				$("nav").toggleClass("overlayActive sticky");
-				mgbHeader.logoAnimation.progress(1, false);
+				// $("nav").toggleClass("overlayActive sticky");
+				// mgbHeader.logoAnimation.progress(1, false);
 			},1000)
 			
-			setTimeout(function(){	
-				// scope.mainContainer.addClass('settle');
-			},3000)
 			
 		}else{
-			this.navContainer.addClass('settle');
+			
 			// this.mainContainer.addClass('settle');
-		}
+		}*/
 	},
 	showLogo : function() {
 		this.logoAnimation.play();
 	},
 	
 	hideLogo : function() {
-		this.logoAnimation.pause().reverse();
+		if (!this.navContainer.hasClass('sticky')) this.logoAnimation.pause().reverse();
 	}
 };
 
@@ -502,7 +512,7 @@ var mgbHeroVideo = {
 		}
 		
 		// check to see if overlay is required
-		var loc = $(location).attr('href');
+		/*var loc = $(location).attr('href');
 		
 		console.log(loc);
 		
@@ -538,7 +548,7 @@ var mgbHeroVideo = {
 			}, 1000);
 			
 			this.videoHeaderContainer.css('height',videoHolderHeight+'px');
-		}
+		}*/
 		
 
 		
@@ -631,6 +641,16 @@ var mgbContent = {
         this.initCultureCnt();
         this.initClockCnt();
     },
+	
+	deactivateActiveContent : function(){
+		
+		this.portfolioContent.each(function(){
+			if($(this).children("a").hasClass("active")) {
+				$(this).children("a").removeClass("active");
+			}
+		});
+		
+	},
     
     initPortfolioCnt: function() {		
 		var that = this;
@@ -981,10 +1001,19 @@ var mgbContent = {
 var mgbOverlay = {
     
     init: function() {
+		$("#overlayContent").addClass("active");
+		this.addListeners();
+    },
+	
+	kill : function(){
+		$("#overlayContent").removeClass("active");
+        $('#overlayCover').removeClass('active');
+	},
+	addListeners : function(){
 		$('.overlayHeadline').on('click',function(){
 			mgbMainSys.getPage('/',true);
 		});
-    }
+	}
 };
 
 
@@ -993,12 +1022,13 @@ var mgbOverlay = {
 
 
 
-if($("#homepage-flag").length > 0) {
+if($("#homepage-flag").length > 0) { //this is the homepage
     mgbContent.init();
 	mgbMainSys.mainContentLoaded = true;
 	// if (useHeaderVideo) loadHeaderVideo();
 }else{
 	$('#overlayCover').addClass('active');
+	mgbHeader.logoAnimation.progress(1, false);
 	mgbOverlay.init();
 }
 // mgbUtils.init();
