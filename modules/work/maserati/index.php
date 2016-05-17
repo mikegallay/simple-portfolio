@@ -22,20 +22,14 @@
 		<section class="content">
 			<div class="overlayHeadline">
 				MASERATI
-	</div>	
+			</div>	
 				
 				
-				<div class="row alignRight">
-					I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. 
-				</div>
-				
-				
-				
-				
-			
+			<div class="row alignRight">
+				I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. 
+			</div>
 		</section>
-		
-		
+	
 	</div>
 	
 	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_footer.inc.php");?>
@@ -43,7 +37,6 @@
 	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_foot.inc.php");?>
 	
 </body>
-
 </html>
 
 

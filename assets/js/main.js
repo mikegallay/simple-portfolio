@@ -1790,10 +1790,11 @@ var mgbMainSys = {
 					if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
 				});*/
 			
-				// location.hash = '';
+				//location.hash = '';
 			}
 		}
-
+		
+		// update the navigation based on which section is at the top of the viewport
 		$('section').each(function(){
 		
 			var diff = Math.abs($(this).offset().top - $(window).scrollTop());
@@ -1802,9 +1803,9 @@ var mgbMainSys = {
 			if(diff <= 60) {			
 				$('nav a').removeClass('active');
 				$('nav a[href="#'+hashName+'"]').addClass('active');
-				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');
+				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');			
 				
-				// location.hash = hashName;
+				//location.hash = hashName;
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
@@ -1816,13 +1817,16 @@ var mgbMainSys = {
 			 	$(this).find("span[data-forward]").addClass('forwardVisible');
 			}*/
 		});				
-			
+		
+	   // lazyload images into view when they are in the viewport
  	   $('.ll').each(function () {
  	      if (mgbMainSys.isScrolledIntoView(this) === true) {
  	          $(this).addClass('in-view');
  			  var _parent = $(this).parent().next();
 			 
-			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) _parent.addClass('showDetails');
+			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) {
+				  _parent.addClass('showDetails');
+			  }
  	      }
  	   });
 	},
@@ -1850,11 +1854,14 @@ var mgbMainSys = {
 
         var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
-		if (this.mainContentLoaded == true && reqUrl.indexOf('work') == -1){
+		if (this.mainContentLoaded == true && reqUrl.indexOf('work') == -1){ // if the url doesn't direct to a portfolio page
 			
 			console.log("home already loaded");
 			
-			$("nav").removeClass("overlayActive");
+			$("nav").removeClass("overlayActive sticky");
+			
+			mgbHeader.hideLogo();
+			
 			$("#overlayContent").removeClass("active");
             $('#overlayCover').removeClass('active');
 			
@@ -1892,6 +1899,8 @@ var mgbMainSys = {
 				
 				setTimeout(function(){
 					
+					window.scrollTo(0, 0);
+					
 					success =  $($.parseHTML(response)).filter("#overlayContent"); 
 
 					$("#overlayContent").html(success.html());
@@ -1901,7 +1910,10 @@ var mgbMainSys = {
 					
 		            $("#overlayContent").addClass("active");
 					
-					$("nav").addClass("overlayActive");
+					$("nav").addClass("overlayActive").removeClass("sticky");
+			
+					mgbHeader.hideLogo();
+			
 					
 					$("#mainContent").addClass("inactive");
 					
@@ -1909,7 +1921,7 @@ var mgbMainSys = {
 				
 				setTimeout(function(){
 					
-					window.scrollTo(0, 0);
+					
 					
 				},1000);
 				
@@ -1928,7 +1940,10 @@ var mgbMainSys = {
 				
 				mgbHeroVideo.loadHeaderVideo();
 				
-				$("nav").removeClass("overlayActive");
+				$("nav").removeClass("overlayActive sticky");
+			
+				mgbHeader.hideLogo();
+			
 				$("#overlayContent").removeClass("active");
 	            $('#overlayCover').removeClass('active');
 				
@@ -1985,14 +2000,10 @@ var mgbHeader = {
 			// the nav menu to its original height. 
 		
 			if(nav.hasClass("overlayActive")){
-				$(".navigation").fadeIn();
-			
-				if($(window).attr('scrollY') < 60){
-					nav.removeClass("sticky");
-					nav.children("#mbLogo").css({'position': '', 'margin-top' : '' });
-	
-					mgbHeader.hideLogo();
-		
+				//$(".navigation").fadeIn();
+
+					mgbMainSys.getPage("/", true);
+					
 					/*$('#mbLogo').on('mouseover',function(){
 						mgbHeader.showLogo();
 					});
@@ -2000,14 +2011,13 @@ var mgbHeader = {
 					$('#mbLogo').on('mouseout',function(){
 						if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
 					});*/
-				}
-			
-				mgbContent.portfolioContent.each(function(){
-					if($(this).children("a").hasClass("active")) {
-						$(this).children("a").removeClass("active");
-					}
-				});
 			}
+			
+			mgbContent.portfolioContent.each(function(){
+				if($(this).children("a").hasClass("active")) {
+					$(this).children("a").removeClass("active");
+				}
+			});
 		});
 	
 		$('nav a').on('click', function(e){
@@ -2021,7 +2031,7 @@ var mgbHeader = {
 			$("html, body").animate({
 				scrollTop: $(hashValue).offset().top,
 			}, 1000, function() {
-				//location.hash = hashValue;
+				location.hash = hashValue;
 			});
 		
 			$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
@@ -2041,7 +2051,7 @@ var mgbHeader = {
 		});
 
 		$('#mbLogo').on('mouseout',function(){
-			if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
+			mgbHeader.hideLogo();
 		});
 	},
 	
@@ -2113,8 +2123,7 @@ var mgbHeroVideo = {
 			
 			this.arrowAnimation.to(downArrow,1,{y:"-20", delay:0,ease:Back.easeInOut}).
 			to(downArrow,1,{y:"0", delay:0.75, ease:Bounce.easeOut, overwrite:false });
-			this.arrowAnimation.repeat(-1).play();
-			
+			this.arrowAnimation.repeat(-1).play();	
 		}
 		
 	},
