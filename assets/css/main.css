@@ -976,6 +976,13 @@ a:active {
   vertical-align: initial;
 }
 
+.facebook-inline, .instagram-inline, .twitter-inline, .linkedin-inline {
+  width: 1.75em;
+  height: 1.75em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
 .alignRight {
   text-align: right;
 }
@@ -2452,15 +2459,22 @@ h1.joinTeamCTA {
 }
 
 footer {
+  position: relative;
   background-color: #58595b;
   color: #46ccc5;
-  font-size: 0.8em;
-  padding: 0.2em 1em;
+  font-size: 0.95em;
+  padding: 1.25em 1em;
+  z-index: 101;
+}
+footer .legal {
+  display: table-cell;
+  vertical-align: center;
+  float: right;
 }
 footer .legal p.copyright {
   color: #ffffff;
   font-family: 'Din-Regular', san-serif;
-  font-size: 0.75em;
+  font-size: 0.9em;
   text-align: right;
 }
 footer .legal p.copyright a {
