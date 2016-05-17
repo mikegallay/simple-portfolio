@@ -107,8 +107,6 @@ var mgbMainSys = {
 				$('#mbLogo').on('mouseout',function(){
 					if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
 				});*/
-			
-				//location.hash = '';
 			}
 		}
 		
@@ -352,9 +350,7 @@ var mgbHeader = {
 
 			$("html, body").animate({
 				scrollTop: $(hashValue).offset().top,
-			}, 1000, function() {
-				//location.hash = hashValue;
-			});
+			}, 1000);
 		
 			$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
 
