@@ -895,6 +895,11 @@ a:active {
   background-color: #4ee5dd;
 }
 
+@media screen and (min-width: 320px) {
+  .button {
+    font-size: 0.85em;
+  }
+}
 @font-face {
   font-family: 'Din-Regular';
   src: url("../fonts/din-regular.eot");
@@ -1130,21 +1135,53 @@ nav {
 
 .hamburger {
   cursor: pointer;
-  display: inline-block;
-  position: relative;
-  float: right;
-  margin-top: 1em;
-  margin-right: 2em;
-  z-index: 999;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+  margin-right: 1.5em;
+  margin-top: 2em;
+  position: absolute;
+  right: 0.5em;
+  top: 0;
 }
-.hamburger span {
-  position: relative;
+.hamburger div {
+  position: absolute;
+  background: #fff;
   display: block;
-  width: 1.5em;
-  height: 0.25em;
-  margin-top: 0.1em;
-  margin-bottom: 0.3em;
-  background-color: #ffffff;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transform: translateY(0px) translateX(0px) rotate(0);
+          transform: translateY(0px) translateX(0px) rotate(0);
+  -webkit-transition: top 300ms 300ms, opacity 100ms 300ms, height 300ms 300ms, width 300ms 300ms, border-radius 300ms 300ms, -webkit-transform 300ms 300ms;
+          transition: top 300ms 300ms, opacity 100ms 300ms, height 300ms 300ms, width 300ms 300ms, border-radius 300ms 300ms, transform 300ms 300ms;
+}
+.hamburger div:nth-child(1) {
+  top: 1em;
+}
+.hamburger div:nth-child(3) {
+  top: -1em;
+}
+.hamburger.active div:nth-child(1) {
+  top: 0em;
+  border-radius: 10%;
+  height: 2em;
+  width: 0.25em;
+  -webkit-transform: translateY(-12px) translateX(0px) rotateZ(-45deg);
+          transform: translateY(-12px) translateX(0px) rotateZ(-45deg);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  top: 0em;
+  border-radius: 10%;
+  height: 2em;
+  width: 0.25em;
+  -webkit-transform: translateY(-12px) translateX(0px) rotateZ(45deg);
+          transform: translateY(-12px) translateX(0px) rotateZ(45deg);
 }
 
 ul.menu {
@@ -1474,6 +1511,7 @@ ul.menu.active {
 #JoinTeam {
   min-height: 200px;
   width: 100%;
+  margin-bottom: 1em;
   overflow: hidden;
 }
 
@@ -2050,6 +2088,19 @@ h1.joinTeamCTA {
   width: 150px;
 }
 
+@media screen and (min-width: 320px) {
+  h1 {
+    margin: 0;
+  }
+  h1.sectionHeading {
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+  }
+  h1.joinTeamCTA {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+}
 @media screen and (min-width: 768px) {
   h1 {
     margin: 0;
@@ -2492,6 +2543,27 @@ footer .legal p.copyright a {
   text-align: center;
 }
 
+@media screen and (min-width: 320px) {
+  footer {
+    text-align: center;
+    font-size: 0.75em;
+    min-height: 4em;
+  }
+  footer a {
+    display: inline-block;
+  }
+  footer .legal {
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    float: none;
+  }
+  footer .legal p.copyright {
+    font-size: inherit;
+    text-align: inherit;
+  }
+}
 /* Slider */
 .slick-slider {
   position: relative;

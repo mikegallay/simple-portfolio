@@ -2021,6 +2021,10 @@ var mgbHeader = {
 			
 			mgbContent.deactivateActiveContent();
 		});
+		
+		$('nav .hamburger').on('click', function(){
+			$(this).toggleClass("active");
+		});
 	
 		$('nav .menu a').on('click', function(e){
 			e.preventDefault();
