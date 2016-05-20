@@ -9,7 +9,6 @@
 	<div id="mainContent">
 		
 	</div>
-	"../../../
 	<div id="overlayCover"></div>
 	
 	<div id="overlayContent">
