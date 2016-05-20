@@ -2022,7 +2022,7 @@ var mgbHeader = {
 			mgbContent.deactivateActiveContent();
 		});
 		
-		$('nav .hamburger').on('click', function(){
+		$('nav #menuToggleHolder').on('click', function(){
 			$(this).toggleClass("active");
 		});
 	
