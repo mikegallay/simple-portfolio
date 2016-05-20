@@ -1,15 +1,15 @@
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_head.inc.php"); ?>
+<?php include_once("../../../modules/_head.inc.php"); ?>
 
 <body class="no-autoplay">
 	
-	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_methods.inc.php");?>
+	<?php include_once("../../../modules/_methods.inc.php");?>
 
-    <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_header.inc.php");?>
+    <?php include_once("../../../modules/_header.inc.php");?>
 	
 	<div id="mainContent">
 		
 	</div>
-	
+	"../../../
 	<div id="overlayCover"></div>
 	
 	<div id="overlayContent">
@@ -32,9 +32,9 @@
 	
 	</div>
 	
-	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_footer.inc.php");?>
+	<?php include_once("../../../modules/_footer.inc.php");?>
 	
-	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/modules/_foot.inc.php");?>
+	<?php include_once("../../../modules/_foot.inc.php");?>
 	
 </body>
 </html>
