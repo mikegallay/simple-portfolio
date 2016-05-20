@@ -87,57 +87,95 @@ nav {
 	z-index: 9999;
 }
 
+
+@keyframes move-dots {		
+	100% {
+		top: 20%;
+	}
+}
+
+@keyframes grow-center {
+		
+	100% {
+	 	background-color: rgba(255, 255, 255, 0.0);
+	 	border: 2px solid #fff;
+		left: -13%;
+		top: -15%;
+		width: 2.5em;
+		height: 2.5em;	
+	}
+}
+
 .hamburger {
   cursor: pointer;
-  
-  transform: rotate(0);
   transition: .5s ease-in-out;
-  margin-right: 1.5em;
-  margin-top: 2em;
   position: absolute;
   right: 0.5em;
+  width: 2em;
+  height: 2em;
   top: 0;
+  //outline: 1px solid red;
   
   div {
 	position: absolute;
-	background: #fff;
 	display: block;
+	background: rgba(255, 255, 255, 1);
+	left: 43%;
 	width: 0.5em;
 	height: 0.5em;
 	border-radius: 50%;
-	opacity: 1;
-	transform: translateY(0px) translateX(0px) rotate(0);
-	transition: top 300ms 300ms, opacity 100ms 300ms, height 300ms 300ms, width 300ms 300ms, border-radius 300ms 300ms, transform 300ms 300ms;
+	border-color: #fff;
+	border-width: 4px;
+	transform: rotate(0);
+	transform-origin: center;
+	transition: transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
 	
 	&:nth-child(1) {
-		top: 1em;
+		top: -2%;
+	}
+	
+	&:nth-child(2) {
+		border: 0px solid #fff;
+		top: 42%;
+		transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
 	}
 	
 	&:nth-child(3) {
-		top: -1em;
+		top: 83%;
 	}
   }
   
   &.active {
 	div {	
-	  &:nth-child(1) {
-		  top: 0em;
-		  border-radius: 10%;
-		  height: 2em;
-		  width: 0.25em;
-		  transform:  translateY(-12px) translateX(0px) rotateZ(-45deg);
+	  &:nth-child(1), &:nth-child(3) {
+		  border-radius: 30px;
+		  height: 23px;
+		  width: 3px;
+		  left: 53%;
+		  
+		  animation-name: move-dots;
+		  animation-duration: 300ms;
+		  animation-delay: 600ms;
+		  animation-fill-mode: forwards;
+		  
+		  transition: transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
 	  }
   	  
-	  &:nth-child(2) {
-		  opacity: 0;
+	  &:nth-child(1) {
+	  	transform: rotateZ(-45deg);
+	  }
+	  
+	  &:nth-child(2) {		 
+		 animation-name: grow-center;
+		 animation-duration: 300ms;
+		 animation-delay: 1s;
+		 animation-fill-mode: forwards;
+		 
+		 transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
 	  }
 	  
 	  &:nth-child(3) {
-		  top: 0em;
-		  border-radius: 10%;
-		  height: 2em;
-		  width: 0.25em;
-		  transform: translateY(-12px) translateX(0px) rotateZ(45deg);
+		  transform: rotateZ(45deg);
 	  }
 	}
   }

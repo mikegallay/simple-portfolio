@@ -890,6 +890,8 @@ a:active {
   text-decoration: none;
   font-family: 'Din-Regular', san-serif;
   font-size: 1.0625em;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 .button:hover {
   background-color: #4ee5dd;
@@ -898,6 +900,11 @@ a:active {
 @media screen and (min-width: 320px) {
   .button {
     font-size: 0.85em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 1.25em;
   }
 }
 @font-face {
@@ -1005,8 +1012,8 @@ a:active {
           transition: height 500ms 500ms,margin 500ms 500ms,opacity 500ms, transform 500ms;
 }
 .moreButton:hover {
-  -webkit-transform: rotateZ(360deg);
-          transform: rotateZ(360deg);
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
 }
 .moreButton.active {
   height: 34px;
@@ -1133,55 +1140,111 @@ nav {
   z-index: 9999;
 }
 
+@-webkit-keyframes move-dots {
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes move-dots {
+  100% {
+    top: 20%;
+  }
+}
+@-webkit-keyframes grow-center {
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
+    left: -13%;
+    top: -15%;
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+@keyframes grow-center {
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
+    left: -13%;
+    top: -15%;
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
 .hamburger {
   cursor: pointer;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
   -webkit-transition: .5s ease-in-out;
           transition: .5s ease-in-out;
-  margin-right: 1.5em;
-  margin-top: 2em;
   position: absolute;
   right: 0.5em;
+  width: 2em;
+  height: 2em;
   top: 0;
 }
 .hamburger div {
   position: absolute;
-  background: #fff;
   display: block;
+  background: white;
+  left: 43%;
   width: 0.5em;
   height: 0.5em;
   border-radius: 50%;
-  opacity: 1;
-  -webkit-transform: translateY(0px) translateX(0px) rotate(0);
-          transform: translateY(0px) translateX(0px) rotate(0);
-  -webkit-transition: top 300ms 300ms, opacity 100ms 300ms, height 300ms 300ms, width 300ms 300ms, border-radius 300ms 300ms, -webkit-transform 300ms 300ms;
-          transition: top 300ms 300ms, opacity 100ms 300ms, height 300ms 300ms, width 300ms 300ms, border-radius 300ms 300ms, transform 300ms 300ms;
+  border-color: #fff;
+  border-width: 4px;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
+          transition: transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
 }
 .hamburger div:nth-child(1) {
-  top: 1em;
+  top: -2%;
+}
+.hamburger div:nth-child(2) {
+  border: 0px solid #fff;
+  top: 42%;
+  -webkit-transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
+          transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
 }
 .hamburger div:nth-child(3) {
-  top: -1em;
+  top: 83%;
+}
+.hamburger.active div:nth-child(1), .hamburger.active div:nth-child(3) {
+  border-radius: 30px;
+  height: 23px;
+  width: 3px;
+  left: 53%;
+  -webkit-animation-name: move-dots;
+          animation-name: move-dots;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: -webkit-transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
+          transition: transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
 }
 .hamburger.active div:nth-child(1) {
-  top: 0em;
-  border-radius: 10%;
-  height: 2em;
-  width: 0.25em;
-  -webkit-transform: translateY(-12px) translateX(0px) rotateZ(-45deg);
-          transform: translateY(-12px) translateX(0px) rotateZ(-45deg);
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
 }
 .hamburger.active div:nth-child(2) {
-  opacity: 0;
+  -webkit-animation-name: grow-center;
+          animation-name: grow-center;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
+          transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
 }
 .hamburger.active div:nth-child(3) {
-  top: 0em;
-  border-radius: 10%;
-  height: 2em;
-  width: 0.25em;
-  -webkit-transform: translateY(-12px) translateX(0px) rotateZ(45deg);
-          transform: translateY(-12px) translateX(0px) rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
 ul.menu {
@@ -2201,7 +2264,7 @@ h1.joinTeamCTA {
   }
 
   #officeDetails.showDetails {
-    height: 41em;
+    height: 42.25em;
   }
   #officeDetails h1 {
     font-size: 4.5em;
@@ -2558,6 +2621,32 @@ footer .legal p.copyright a {
     text-align: center;
     width: 100%;
     float: none;
+  }
+  footer .legal p.copyright {
+    font-size: inherit;
+    text-align: inherit;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    text-align: center;
+    font-size: 0.75em;
+    min-height: 4em;
+  }
+  footer a {
+    display: inline-block;
+  }
+  footer .socialIcons {
+    position: relative;
+    float: left;
+    margin-top: 0.5em;
+  }
+  footer .legal {
+    display: block;
+    font-size: 1em;
+    text-align: right;
+    width: 60%;
+    float: right;
   }
   footer .legal p.copyright {
     font-size: inherit;

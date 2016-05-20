@@ -61,6 +61,8 @@ a {
 	text-decoration: none;
 	font-family: 'Din-Regular', san-serif;
 	font-size: 1.0625em;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
 	
 	&:hover {
 		background-color: #4ee5dd;
@@ -70,5 +72,11 @@ a {
 @media screen and (min-width: 320px) {
 	.button {
 	    font-size: 0.85em;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.button {
+	    font-size: 1.25em;
 	}
 }

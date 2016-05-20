@@ -52,7 +52,7 @@
 	transition:height 500ms 500ms,margin 500ms 500ms,opacity 500ms, transform 500ms;
 	
 	&:hover {
-		transform: rotateZ(360deg);
+		transform: rotateZ(180deg);
 	}
 	
 	&.active{
@@ -84,11 +84,11 @@
 .lazyload,
 .lazyloading {
     opacity: 0;
-	transform:scale(1.25);
+	transform: scale(1.25);
 }
 .lazyloaded {
     opacity: 0;
-	transform:scale(1.25);
+	transform: scale(1.25);
 }
 
 .lazy {
