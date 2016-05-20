@@ -106,79 +106,112 @@ nav {
 	}
 }
 
-.hamburger {
-  cursor: pointer;
-  transition: .5s ease-in-out;
-  position: absolute;
-  right: 0.5em;
-  width: 2em;
-  height: 2em;
-  top: 0;
-  //outline: 1px solid red;
-  
-  div {
-	position: absolute;
-	display: block;
-	background: rgba(255, 255, 255, 1);
-	left: 43%;
-	width: 0.5em;
-	height: 0.5em;
-	border-radius: 50%;
-	border-color: #fff;
-	border-width: 4px;
-	transform: rotate(0);
-	transform-origin: center;
-	transition: transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
+
+#menuToggleHolder{
+	width:49px;
+	height:49px;
+	position:absolute;
+	right: 8px;
+	display:inline-block;
+	cursor: pointer;
+	overflow:hidden;
+	transform:rotate(0deg);
+	transition:transform 400ms 200ms;
+	#menuToggle{
+		width:50px;
+		height:50px;
+		//background:blue;
+		position:relative;
+		//background:gray;
+		left:25px;
+		top:25px;
+		width:100%;
+		height:100%;
+		position: relative;
+
+		div {
+			position: absolute;
+			border-radius: 25px;
+			transform-origin:center;
+			.hamDot{
 	
-	&:nth-child(1) {
-		top: -2%;
+				width: 8px;
+				height: 8px;
+				border: 0px solid white;
+				opacity: 1;
+				top: -4px;
+			    left: -4px;
+			    position: relative;
+				background:rgba(255,255,255,1);
+				
+			}
+			
+			&#ham1 {
+				top: -15px;
+				transition:top 300ms 500ms;
+				.hamDot{
+					transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
+				}
+			}
+			
+			&#ham2 {
+				.hamDot{
+					border:2px solid white;
+					width:4px;
+					height:4px;
+					left:-4px;
+					top:-4px;
+					transition:top 300ms 150ms,left 300ms 150ms,width 300ms 150ms,height 300ms 150ms,background 0ms 450ms;}
+				}
+
+			&#ham3 {
+				top: 15px;
+				transition:top 300ms 500ms;
+				.hamDot{
+					transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
+				}
+			}
+		}
 	}
-	
-	&:nth-child(2) {
-		border: 0px solid #fff;
-		top: 42%;
-		transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
+	&.active{
+		transform: rotate(225deg);
+		transition:transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		#menuToggle{
+			.hamDot{
+			}
+			#ham1{
+				top:0px;
+				transition:top 300ms;
+				.hamDot{
+				    width: 21px;
+				    left: -11px;
+				    height: 3px;
+				    top: -2px;
+					transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
+				}
+			}
+		
+			#ham2{
+				.hamDot{
+					width:37px;height:37px;
+					left:-21px;top:-21px;
+					background:rgba(255,255,255,0);
+					transition:top 300ms 300ms,left 300ms 300ms,width 300ms 300ms,height 300ms 300ms, background 0ms 300ms;
+				}
+			}
+			#ham3{
+				top:0px;
+				transition:top 300ms;
+				.hamDot{
+				    width: 3px;
+				    left: -2px;
+				    height: 21px;
+				    top: -11px;
+					transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
+				}
+			}
+		}
 	}
-	
-	&:nth-child(3) {
-		top: 83%;
-	}
-  }
-  
-  &.active {
-	div {	
-	  &:nth-child(1), &:nth-child(3) {
-		  border-radius: 30px;
-		  height: 23px;
-		  width: 3px;
-		  left: 53%;
-		  
-		  animation-name: move-dots;
-		  animation-duration: 300ms;
-		  animation-delay: 600ms;
-		  animation-fill-mode: forwards;
-		  
-		  transition: transform 300ms 1s, left 300ms 1s, top 300ms 1s, height 300ms 1s, width 300ms 1s, border-radius 300ms 1s;
-	  }
-  	  
-	  &:nth-child(1) {
-	  	transform: rotateZ(-45deg);
-	  }
-	  
-	  &:nth-child(2) {		 
-		 animation-name: grow-center;
-		 animation-duration: 300ms;
-		 animation-delay: 1s;
-		 animation-fill-mode: forwards;
-		 
-		 transition: background-color 300ms 300ms, left 300ms 300ms, top 300ms 300ms, width 300ms 300ms, height 300ms 300ms, border 300ms 300ms;
-	  }
-	  
-	  &:nth-child(3) {
-		  transform: rotateZ(45deg);
-	  }
-	}
-  }
 }
 
 
@@ -497,7 +530,7 @@ ul.menu {
 		}
 	}
 
-	.hamburger {
+	#menuToggleHolder, .hamburger {
 		display: none;
 	}
 
@@ -538,113 +571,6 @@ ul.menu {
 	
 				&.active {
 					color: #46ccc5;
-				}
-			}
-		}
-	}
-}
-
-#menuToggleHolder{
-	width:49px;
-	height:49px;
-	//background:blue;
-	position:relative;
-	display:inline-block;
-	cursor: pointer;
-	overflow:hidden;
-	transform:rotate(0deg);
-	transition:transform 400ms 200ms;
-	#menuToggle{
-		width:50px;
-		height:50px;
-		//background:blue;
-		position:relative;
-		//background:gray;
-		left:25px;
-		top:25px;
-		width:100%;
-		height:100%;
-		position: relative;
-
-		div {
-			position: absolute;
-			border-radius: 25px;
-			transform-origin:center;
-			.hamDot{
-	
-				width: 8px;
-				height: 8px;
-				border: 0px solid white;
-				opacity: 1;
-				top: -4px;
-			    left: -4px;
-			    position: relative;
-				background:rgba(255,255,255,1);
-				
-			}
-			
-			&#ham1 {
-				top: -16px;
-				transition:top 300ms 500ms;
-				.hamDot{
-					transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
-				}
-			}
-			
-			&#ham2 {
-				.hamDot{
-					border:2px solid white;
-					width:4px;
-					height:4px;
-					left:-4px;
-					top:-4px;
-					transition:top 300ms 150ms,left 300ms 150ms,width 300ms 150ms,height 300ms 150ms,background 0ms 450ms;}
-				}
-
-			&#ham3 {
-				top: 16px;
-				transition:top 300ms 500ms;
-				.hamDot{
-					transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
-				}
-			}
-		}
-	}
-	&.aaa{
-		transform: rotate(225deg);
-		transition:transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-		#menuToggle{
-			.hamDot{
-			}
-			#ham1{
-				top:0px;
-				transition:top 300ms;
-				.hamDot{
-				    width: 21px;
-				    left: -11px;
-				    height: 3px;
-				    top: -2px;
-					transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
-				}
-			}
-		
-			#ham2{
-				.hamDot{
-					width:37px;height:37px;
-					left:-21px;top:-21px;
-					background:rgba(255,255,255,0);
-					transition:top 300ms 300ms,left 300ms 300ms,width 300ms 300ms,height 300ms 300ms, background 0ms 300ms;
-				}
-			}
-			#ham3{
-				top:0px;
-				transition:top 300ms;
-				.hamDot{
-				    width: 3px;
-				    left: -2px;
-				    height: 21px;
-				    top: -11px;
-					transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
 				}
 			}
 		}
