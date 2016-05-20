@@ -13,12 +13,13 @@
 	<div id="overlayCover"></div>
 	
 	<div id="overlayContent">
+		<div id="heroImage">
+			<?php
+			pictureFillImage('/assets/img/common/starrettLehigh','alt copy goes here')
 
-		<?php
-
-		$vimeoArray = ['144913605','144913606'];
-
-		?>
+			?>
+		</div>
+		
 		<section class="content">
 			<div class="overlayHeadline">
 				INTELLLL

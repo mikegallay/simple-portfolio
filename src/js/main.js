@@ -369,13 +369,13 @@ var mgbHeader = {
 		});
 	
 		$('#homeLogo').mouseover(function(){
-			console.log("showLogo")
+			// console.log("showLogo")
 			mgbHeader.showLogo();
 		});
 
 		$('#homeLogo').mouseout(function(){
 			
-			console.log("hideLogo")
+			// console.log("hideLogo")
 			mgbHeader.hideLogo();
 		});
 	},
@@ -1047,9 +1047,13 @@ $(window).on('hashchange', function () {
 });
 
 window.onpopstate = function (event) {
+	console.log('pop',event,loc = window.location.pathname);
+	
     if (event.state) {
         // console.log('retrieving ', event.state.url, ' from history');
         mgbMainSys.getPage(event.state.url, false);
+    }else{
+    	mgbMainSys.getPage(window.location.pathname, false);
     }
 };
 
