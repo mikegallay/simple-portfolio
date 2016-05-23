@@ -1,6 +1,6 @@
 <div id="heroImage">
 	<?php
-	pictureFillImage('assets/img/common/starrettLehigh','alt copy goes here')
+	pictureFillImage($appRoot.'assets/img/common/starrettLehigh','alt copy goes here')
 
 	?>
 </div>

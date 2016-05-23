@@ -1,6 +1,6 @@
 // Module to handle site functionality (loading,scrolling,resizing)
 var mgbMainSys = {
-	currPage: '/',
+	currPage: appRoot,
 	mainContentLoaded: false,
 	
 	//load targets for tiles
@@ -166,7 +166,7 @@ var mgbMainSys = {
 		
 		var useOverlay = true;
 		
-		if (page == '/'){
+		if (page == appRoot){
 			page = 'index.php'; 
 			useOverlay = false;
 		}else{
@@ -330,7 +330,7 @@ var mgbHeader = {
 			if(nav.hasClass("overlayActive")){
 				//$(".navigation").fadeIn();
 
-					mgbMainSys.getPage("/", true);
+					mgbMainSys.getPage(appRoot, true);
 					
 					/*$('#mbLogo').on('mouseover',function(){
 						mgbHeader.showLogo();
@@ -1015,7 +1015,7 @@ var mgbOverlay = {
 	},
 	addListeners : function(){
 		$('.overlayHeadline').on('click',function(){
-			mgbMainSys.getPage('/',true);
+			mgbMainSys.getPage(appRoot,true);
 		});
 	}
 };
