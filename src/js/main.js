@@ -614,7 +614,7 @@ var mgbHeroVideo = {
 	
 	loadHeaderVideo: function() {
 		this.maxVideoHeight = 700;
-		var headerVideoPath = '/assets/videos/Main_Sequence_opt';
+		var headerVideoPath = 'assets/videos/Main_Sequence_opt';
 	
 		$('body').removeClass('no-autoplay').addClass('autoplay');
 	
