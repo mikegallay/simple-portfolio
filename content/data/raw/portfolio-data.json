@@ -1,7 +1,7 @@
 [
 	{
 		"id": 0,
-		"imgSrc": "/assets/img/our_work/United",
+		"imgSrc": "assets/img/our_work/United",
 		"imgType": "jpg",
 		"contentPath": "work/intel",
 		"header": "United Airlines",
@@ -11,7 +11,7 @@
 	},
 	{
 		"id": 1,
-		"imgSrc": "/assets/img/our_work/Maserati",
+		"imgSrc": "assets/img/our_work/Maserati",
 		"imgType": "jpg",
 		"contentPath": "work/maserati",
 		"header": "Maserati",
@@ -21,7 +21,7 @@
 	},
 	{
 		"id": 2,
-		"imgSrc": "/assets/img/our_work/CanadaDry",
+		"imgSrc": "assets/img/our_work/CanadaDry",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Canada Dry",
@@ -31,7 +31,7 @@
 	},
 	{
 		"id": 3,
-		"imgSrc": "/assets/img/our_work/princess",
+		"imgSrc": "assets/img/our_work/princess",
 		"imgType": "gif",
 		"contentPath": "119997282",
 		"header": "Oscar Meyer",
@@ -40,7 +40,7 @@
 	},
 	{
 		"id": 9,
-		"imgSrc": "/assets/img/our_work/Mariott_Insitu",
+		"imgSrc": "assets/img/our_work/Mariott_Insitu",
 		"imgType": "jpg",
 		"contentPath": "124646110",
 		"header": "Mariott",
@@ -49,7 +49,7 @@
 	},
 	{	
 		"id": 4,
-		"imgSrc": "/assets/img/our_work/Aussie",
+		"imgSrc": "assets/img/our_work/Aussie",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Aussie",
@@ -58,7 +58,7 @@
 	},
 	{
 		"id": 5,
-		"imgSrc": "/assets/img/our_work/MrT",
+		"imgSrc": "assets/img/our_work/MrT",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Marriot",
@@ -67,7 +67,7 @@
 	},
 	{
 		"id": 6,
-		"imgSrc": "/assets/img/our_work/Leaf",
+		"imgSrc": "assets/img/our_work/Leaf",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "PureCircle",
@@ -76,7 +76,7 @@
 	},
 	{
 		"id": 7,
-		"imgSrc": "/assets/img/our_work/NFL",
+		"imgSrc": "assets/img/our_work/NFL",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "NFL",
@@ -85,7 +85,7 @@
 	},
 	{
 		"id": 8,
-		"imgSrc": "/assets/img/our_work/Apophis",
+		"imgSrc": "assets/img/our_work/Apophis",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Verizon",
@@ -94,7 +94,7 @@
 	},
 	{	
 		"id": 10,
-		"imgSrc": "/assets/img/our_work/IntelInside",
+		"imgSrc": "assets/img/our_work/IntelInside",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Intel",
@@ -103,7 +103,7 @@
 	},
 	{
 		"id": 11,
-		"imgSrc": "/assets/img/our_work/IEM",
+		"imgSrc": "assets/img/our_work/IEM",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Intel",
@@ -112,7 +112,7 @@
 	},	
 	{	
 		"id": 12,
-		"imgSrc": "/assets/img/our_work/JimParsons",
+		"imgSrc": "assets/img/our_work/JimParsons",
 		"imgType": "jpg",
 		"contentPath": "144913605,147738221",
 		"header": "Intel",
@@ -121,7 +121,7 @@
 	},
 	{
 		"id": 13,
-		"imgSrc": "/assets/img/our_work/Honda",
+		"imgSrc": "assets/img/our_work/Honda",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Honda",
@@ -130,7 +130,7 @@
 	},
 	{
 		"id": 14,
-		"imgSrc": "/assets/img/our_work/Verizon",
+		"imgSrc": "assets/img/our_work/Verizon",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Verizon",

@@ -1,6 +1,6 @@
 [
 	{	
-		"imgSrc": "/assets/img/our_offices/office_amsterdam",
+		"imgSrc": "assets/img/our_offices/office_amsterdam",
 		"city": "AMSTERDAM",
 		"timeDiff": "+2",
 		"address": "Prins Hendrikkade 21-2",
@@ -13,11 +13,11 @@
 		"contactNumber": "+31 20 623 26 96",
 		"mainEmail": "office@achtung.nl",
 		"prEmail": "",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_amsterdam"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_chicago",
+		"imgSrc": "assets/img/our_offices/office_chicago",
 		"city": "CHICAGO",
 		"timeDiff": "-5",
 		"address": "515 North State Street, 29th Floor <br> Chicago, IL 60652",
@@ -30,11 +30,11 @@
 		"contactNumber": "+1 (212) 384-6430",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_chicago"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_hongkong",
+		"imgSrc": "assets/img/our_offices/office_hongkong",
 		"city": "HONG KONG",
 		"timeDiff": "+8",
 		"address": "",
@@ -47,11 +47,11 @@
 		"contactNumber": "+1 (212) 384-6430",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_hongkong"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_london",
+		"imgSrc": "assets/img/our_offices/office_london",
 		"city": "LONDON",
 		"timeDiff": "+1",
 		"address": "22 Torrington Place <br> London WC1E 7HJ",
@@ -64,11 +64,11 @@
 		"contactNumber": "+44 (0) 7500 762 585",
 		"mainEmail": "hello@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_london"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_newyork",
+		"imgSrc": "assets/img/our_offices/office_newyork",
 		"city": "NEW YORK",
 		"timeDiff": "-4",
 		"address": "601 West 26th Street <br> New York, NY 10001",
@@ -81,11 +81,11 @@
 		"contactNumber": "+1 (212) 384-6430",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_newyork"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_paris",
+		"imgSrc": "assets/img/our_offices/office_paris",
 		"city": "PARIS",
 		"timeDiff": "+2",
 		"address": "",
@@ -98,11 +98,11 @@
 		"contactNumber": "+1 (212) 384-6430",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_paris"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_sanfransisco",
+		"imgSrc": "assets/img/our_offices/office_sanfransisco",
 		"city": "SAN FRAN<span class='abbr'>CISCO</span>",
 		"shortName": "SAN FRAN",
 		"timeDiff": "-7",
@@ -116,11 +116,11 @@
 		"contactNumber": "+1 (212) 384-6430",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_sanfransisco"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_saupaulo",
+		"imgSrc": "assets/img/our_offices/office_saupaulo",
 		"city": "SAU PAULO",
 		"timeDiff": "-3",
 		"address": "Rua Wisard, 298, 1º andar <br> Vila Madalena, São Paulo, SP <br> CEP 05434-000",
@@ -133,11 +133,11 @@
 		"contactNumber": "+55 11 2173 0333",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "lucia.caldas@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_saopaulo"
 	},
 	{	
-		"imgSrc": "/assets/img/our_offices/office_shanghai",
+		"imgSrc": "assets/img/our_offices/office_shanghai",
 		"city": "SHANGHAI",
 		"timeDiff": "+8",
 		"address": "11 Fl., 5 Corporate Avenue, <br> 150 Hubin Rd <br> Huangpu District <br> Shanghai, PRC 200021",
@@ -150,7 +150,7 @@
 		"contactNumber": "+86 21 33351088",
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
-		"heroImage": "/assets/img/our_offices/coverShots/newyork",
+		"heroImage": "assets/img/our_offices/coverShots/newyork",
 		"clockImage": "clock_icons_shanghai"
 	}
 ]
