@@ -1,3 +1,5 @@
+<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?></span>
+
 <header id="Home">
 	<nav>
 		<a href="#Home" id="homeLogo">

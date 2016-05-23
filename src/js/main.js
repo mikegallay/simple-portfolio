@@ -169,11 +169,13 @@ var mgbMainSys = {
 		if (page == '/'){
 			page = 'index.php'; 
 			useOverlay = false;
+		}else{
+			page += '.php';
 		}
 		
 		// console.log('page',page,useOverlay);
-		
-        var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
+		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
+        // var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
 		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
@@ -201,7 +203,7 @@ var mgbMainSys = {
 
         var request = $.ajax({
             url: reqUrl,
-            dataType: 'html',
+            dataType: 'text',
             beforeSend: function () {
                 //-- unslick carousel before we go!
                 try {
@@ -224,9 +226,11 @@ var mgbMainSys = {
 					
 					window.scrollTo(0, 0);
 					
-					success =  $($.parseHTML(response)).filter("#overlayContent"); 
+					// console.log(response);
+					// success =  $($.parseHTML(response)).filter("#overlayContent");
+					// success =  $.parseHTML(response);
 
-					$("#overlayContent").html(success.html());
+					$("#overlayContent").html(response);
 					
 					 //call js to init current page
 					mgbOverlay.init();
@@ -250,11 +254,11 @@ var mgbMainSys = {
 				
 			}else{ //back to homepage
 				
-				success =  $($.parseHTML(response)).filter("#mainContent"); 
+				// success =  $($.parseHTML(response)).filter("#mainContent");
 			
 				mgbMainSys.mainContentLoaded = true;
 				
-				$("#mainContent").html(success.html());
+				$("#mainContent").html(response);
 				$("#mainContent").removeClass("inactive");
 				
 				mgbContent.init();

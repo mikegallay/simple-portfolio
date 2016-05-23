@@ -1,8 +1,3 @@
-<?php
-	$appRoot = '/';//dirname($_SERVER["PHP_SELF"]);
-	//if($appRoot !== '/' ) $appRoot = $appRoot.'/'; //-- needs trailing slash
-?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -23,11 +18,13 @@
 	</script>
 		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-
-	<link rel="stylesheet" href="assets/css/main.css">
-
-	<script src="assets/js/lib/modernizr-custom.js"></script>
+	
 	<script>var appRoot='<?php echo $appRoot; ?>';</script>
+	
+	<link rel="stylesheet" href="<?php echo $appRoot?>assets/css/main.css">
+
+	<script src="<?php echo $appRoot; ?>assets/js/lib/modernizr-custom.js"></script>
+	
 	
 	<script>
 		// Picture element HTML5 shiv

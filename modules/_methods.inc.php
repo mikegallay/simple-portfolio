@@ -1,9 +1,4 @@
-
 <?php
-// include 'lib/Handlebars/Autoloader.php';
-
-
-// echo 'hi there' . DIR_BASE;
 // require_once $_SERVER['lib/Handlebars/Autoloader.php'];
 require_once 'lib/Handlebars/Autoloader.php';
 Handlebars\Autoloader::register();
@@ -151,4 +146,3 @@ function pictureFillImage($path,$alt) {
 }
 
 ?>
-<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?></span>

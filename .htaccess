@@ -31,10 +31,15 @@ AddType text/x-component .htc
 
 
 <IfModule mod_rewrite.c>
-	RewriteEngine On
+	#RewriteEngine On
 	#
 	
-	RewriteRule ^work(.*)$ /modules/work$1 [L]
+	#RewriteRule ^work(.*)$ /modules/work$1 [L]
+	# 
+	Options -MultiViews
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^ index.php [QSA,L]
 	
 </IfModule>
 
