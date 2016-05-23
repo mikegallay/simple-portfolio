@@ -27,7 +27,7 @@
 	
 			<div class="cultureContent">
 				<?php
-					$cultureData = HTMLfromTemplateAndJSON($_SERVER['DOCUMENT_ROOT'] . "/content/templates/culture-template.html", "culture-data",true);
+					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
 					echo $cultureData; 
 				?>
 			</div>
@@ -45,7 +45,7 @@
 			<div class="portfolioContent">
 		
 				<?php
-					$portfolioData = HTMLfromTemplateAndJSON($_SERVER['DOCUMENT_ROOT'] . "/content/templates/portfolio-template.html", "portfolio-data", false);
+					$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data", false);
 					echo $portfolioData; 
 				?>
 			</div>
@@ -64,7 +64,7 @@
 		
 			<div class="officeContent">
 				<?php
-					$officeData = HTMLfromTemplateAndJSON($_SERVER['DOCUMENT_ROOT'] . "/content/templates/office-template.html", "office-data", false);
+					$officeData = HTMLfromTemplateAndJSON("content/templates/office-template.html", "office-data", false);
 					echo $officeData; 
 				?>
 			</div>
@@ -78,7 +78,7 @@
 		
 			<div class="clientContent">
 				<?php
-					$clientData = HTMLfromTemplateAndJSON($_SERVER['DOCUMENT_ROOT'] . "/content/templates/clientList-template.html", "clientList-data");
+					$clientData = HTMLfromTemplateAndJSON("content/templates/clientList-template.html", "clientList-data");
 					echo $clientData;
 				?>
 			</div>
