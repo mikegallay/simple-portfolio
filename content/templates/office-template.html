@@ -38,77 +38,79 @@
 		</a>
 		
 		<article hidden>
-			<div class="wrap">
-				<div class="leftSide">
-					<picture>
-					<!--[if IE 9]>
-						<video style="display: none;"><![endif]-->
-							<source data-srcset="{{{heroImage}}}.jpg 1x, {{{heroImage}}}@2x.jpg 2x" media="(min-width: 1024px)">
-					<!--[if IE 9]>
-						</video>
-					<![endif]-->
-					<!--[if !lte IE 9]> -->
-						<img src="assets/img/common/blank.png" data-srcset="{{{heroImage}}}_large.jpg 1x, {{{heroImage}}}_large@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
-					<!-- <![endif]-->
-					</picture>
-				</div>
+				<div class="clearfix">
+					<div class="leftSide">
+						<picture>
+						<!--[if IE 9]>
+							<video style="display: none;"><![endif]-->
+								<source data-srcset="{{{heroImage}}}.jpg 1x, {{{heroImage}}}@2x.jpg 2x" media="(min-width: 1024px)">
+						<!--[if IE 9]>
+							</video>
+						<![endif]-->
+						<!--[if !lte IE 9]> -->
+							<img src="assets/img/common/blank.png" data-srcset="{{{heroImage}}}_large.jpg 1x, {{{heroImage}}}_large@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
+						<!-- <![endif]-->
+						</picture>
+					</div>
 				
-				<div class="rightSide">
-					<h3>{{{city}}}</h3>
-					<div class="ribbon">
-						<div class="closeMe">
-							<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-							</svg>
+					<div class="rightSide">
+						<h3>{{{city}}}</h3>
+						<div class="ribbon">
+							<div class="closeMe">
+								<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+								  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
+								</svg>
+							</div>
+					
+							<div class="info">
+								{{#if address}}
+								{{{address}}}
+								<br>
+								<br>
+								{{/if}}
+						
+								{{#if telephone}}
+								{{{telephone}}}
+								<br>
+								<br>
+								{{/if}}
+						
+								{{#if mainEmail}}
+								{{{mainEmail}}}
+								<br>
+								<br>
+								{{/if}}
+								<br>
+					
+								<strong>NEW BUSINESS</strong>
+								<br>
+								<br>
+								{{#if contactEmail}}
+								<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
+								<br>
+								<br>
+								{{/if}}
+						
+								{{#if contactNumber}}
+								<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
+								<br>
+								<br>
+								{{/if}}
+								<br>
+								{{#if prEmail}}
+								<strong>PUBLIC RELATIONS</strong>
+								<br>
+								<a href="{{{prEmail}}}">{{{prEmail}}}</a>
+								{{/if}}
+							</div>
 						</div>
 					
-						<div class="info">
-							{{#if address}}
-							{{{address}}}
-							<br>
-							<br>
-							{{/if}}
-						
-							{{#if telephone}}
-							{{{telephone}}}
-							<br>
-							<br>
-							{{/if}}
-						
-							{{#if mainEmail}}
-							{{{mainEmail}}}
-							<br>
-							<br>
-							{{/if}}
-							<br>
-					
-							<strong>NEW BUSINESS</strong>
-							<br>
-							<br>
-							{{#if contactEmail}}
-							<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
-							<br>
-							<br>
-							{{/if}}
-						
-							{{#if contactNumber}}
-							<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
-							<br>
-							<br>
-							{{/if}}
-							<br>
-							{{#if prEmail}}
-							<strong>PUBLIC RELATIONS</strong>
-							<br>
-							<a href="{{{prEmail}}}">{{{prEmail}}}</a>
-							{{/if}}
+						<div class="officeStats">
+							<div class="tempSpace" style="height: 5.5em; background-color: #c6c6c6;"></div>
 						</div>
 					</div>
+				
 					
-					<div class="officeStats">
-						<div class="tempSpace" style="height: 5.5em; background-color: #c6c6c6;"></div>
-					</div>
-				</div>
 			</div>
 
 		</article>

@@ -1993,11 +1993,7 @@ h1.joinTeamCTA {
   width: 100%;
   height: 0em;
 }
-#officeDetails .wrap {
-  clear: left;
-  position: relative;
-}
-#officeDetails .wrap .leftSide {
+#officeDetails .leftSide {
   float: none;
   width: 99%;
   display: block;
@@ -2006,15 +2002,15 @@ h1.joinTeamCTA {
   padding-left: 0.5%;
   max-height: 28.125em;
 }
-#officeDetails .wrap .leftSide picture {
+#officeDetails .leftSide picture {
   opacity: 0;
   -webkit-transition: opacity 500ms;
           transition: opacity 500ms;
 }
-#officeDetails .wrap .leftSide picture .lazyloaded {
+#officeDetails .leftSide picture .lazyloaded {
   opacity: 1;
 }
-#officeDetails .wrap .rightSide {
+#officeDetails .rightSide {
   float: none;
   width: 99%;
   padding-right: 1%;
@@ -2299,6 +2295,8 @@ h1.joinTeamCTA {
   }
   .officeTile .officeInfo svg.clockGraphic {
     width: 150px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 
   #officeDetails.showDetails {
@@ -2341,11 +2339,7 @@ h1.joinTeamCTA {
     padding-top: 2.5em;
   }
 
-  #officeDetails .wrap {
-    clear: left;
-    position: relative;
-  }
-  #officeDetails .wrap .leftSide {
+  #officeDetails .leftSide {
     float: left;
     width: 49%;
     display: inline-block;
@@ -2354,10 +2348,10 @@ h1.joinTeamCTA {
     padding-left: 0.5%;
     max-height: 28.125em;
   }
-  #officeDetails .wrap .leftSide picture {
+  #officeDetails .leftSide picture {
     opacity: 1;
   }
-  #officeDetails .wrap .rightSide {
+  #officeDetails .rightSide {
     float: left;
     width: 49%;
     padding-right: 0.5%;
@@ -2428,7 +2422,7 @@ h1.joinTeamCTA {
   }
 
   .officeTile {
-    width: 24%;
+    width: 19%;
   }
   .officeTile .officeInfo .cityName {
     text-transform: uppercase;
@@ -2441,6 +2435,12 @@ h1.joinTeamCTA {
   }
   .officeTile .officeInfo svg.clockGraphic {
     margin-top: 1.5em;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .officeTile .officeInfo p {
+    margin-top: 0;
+    line-height: 0.75em;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -3063,18 +3063,10 @@ html {
   visibility: hidden;
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
+.clearfix:after, .clearfix::after {
+  content: "";
   display: table;
-}
-
-.clearfix:after {
   clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
 }
 
 /* ==========================================================================

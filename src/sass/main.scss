@@ -120,19 +120,12 @@ html {
     visibility: hidden;
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+.clearfix:after, .clearfix::after {
+	content:"";
+	    display:table;
+	    clear:both;
 }
 
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
 
 /* ==========================================================================
    Print styles
