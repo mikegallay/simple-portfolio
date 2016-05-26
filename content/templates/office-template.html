@@ -43,22 +43,19 @@
 					<picture>
 					<!--[if IE 9]>
 						<video style="display: none;"><![endif]-->
-							<source srcset="{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x">
+							<source data-srcset="{{{heroImage}}}.jpg 1x, {{{heroImage}}}@2x.jpg 2x" media="(min-width: 1024px)">
 					<!--[if IE 9]>
 						</video>
 					<![endif]-->
 					<!--[if !lte IE 9]> -->
-						<img srcset='{{{heroImage}}}@2x.jpg' src="assets/img/common/blank.png" alt="{{{altText}}}">
+						<img src="assets/img/common/blank.png" data-srcset="{{{heroImage}}}_large.jpg 1x, {{{heroImage}}}_large@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
 					<!-- <![endif]-->
 					</picture>
 				</div>
 				
 				<div class="rightSide">
-				
-					<h1>{{{city}}}</h1>
-	
+					<h3>{{{city}}}</h3>
 					<div class="ribbon">
-					
 						<div class="closeMe">
 							<svg class="icon more_button-inline" role="img" aria-labelledby="title">
 							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
@@ -107,11 +104,13 @@
 							{{/if}}
 						</div>
 					</div>
+					
+					<div class="officeStats">
+						<div class="tempSpace" style="height: 5.5em; background-color: #c6c6c6;"></div>
+					</div>
 				</div>
 			</div>
-			<div class="officeStats">
-				<div class="tempSpace" style="height: 5.5em; background-color: #c6c6c6;"></div>
-			</div>
+
 		</article>
 	</div>
 {{/each}}

@@ -357,19 +357,19 @@ h1 {
 
 
 #officeDetails {
-	display:inline-block;
+	display: block;
 	width: 100%;
 	height: 0em;
 	
-	transition: height 400ms 300ms  cubic-bezier(0.6, -0.28, 0.735, 0.045);
-	
 	.wrap {
-		clear: both;
-	
+		clear: left;
+		position: relative;
+		
 		.leftSide {
-			float: left;
-			width: 49%;
-			display: inline-block;
+			float: none;
+			width: 99%;
+			display: block;
+			padding-top: 1em;
 			padding-right: 0.5%;
 			padding-left: 0.5%;
 			max-height: 28.125em;
@@ -377,26 +377,32 @@ h1 {
 			picture {
 				opacity: 0;
 				transition: opacity 500ms;
+				
+				.lazyloaded {
+					opacity: 1;
+				}
 			}
 		}
 
 		.rightSide {
-			float: left;
-			width: 45%;
-			padding-right: 0.5%;
-			padding-left: 3%;
+			float: none;
+			width: 99%;
+			padding-right: 1%;
+			padding-left: 1%;
 			padding-top: 0.5%;
-			display: inline-block;
+			display: block;
 		}
 	}
 		
-	h1 {
+	h3 {
 		color: $skyblueColor;
 		font-family: 'Din-Bold', san-serif;
-		font-size: 2em;
-		line-height: 0.6em;
+		font-size: 2.5em;
+		line-height: 0.4em;
 		position: relative;
-		top: 2em;
+		text-align: center;
+		margin: 0;
+		top: 3em;
 		opacity: 0;
 		transition: top 1s, opacity 10ms;
 		
@@ -435,20 +441,19 @@ h1 {
 	}
 	
 	.officeStats {
-		padding-top: 2em;
-		padding-bottom: 2em;
+		padding-top: 1em;
 		opacity: 0;
 		transition: opacity 500ms;
 	}
 	
 	
 	&.showDetails {
-		height: 41em;
-		transition: height 500ms;
+		height: 100%;
+		transition: height 300ms;
 		
-		h1 {
+		h3 {
 			opacity: 1;
-			top: 0em;
+			top: 0%;
 			transition: top 1s 500ms, opacity 1ms 700ms;
 		}
 		
@@ -457,6 +462,7 @@ h1 {
 			transition: height 300ms 300ms;
 			
 			.info {
+				font-size: 0.9em;
 				opacity: 1;
 				transition: opacity 500ms 800ms;
 			}
@@ -477,17 +483,17 @@ h1 {
 }
 
 .officeTile {
-	background-color: #ffffff;//#f7f7f7;
+	background-color: #ffffff;
 	position: relative;
-	width: 98.5%;
-	margin: 0.4222222em;
+	width: 49%;
+	margin: 0.5%;
 	overflow: hidden;
 	float:left;
 	
 	a {
 		cursor: pointer;
 		display: block;
-		
+
 		&:hover {
 			
 			background-color: #46ccc5;
@@ -498,6 +504,7 @@ h1 {
 			}
 			
 			svg {
+				
 				circle.clockHours {
 					stroke: #DEE2EA;
 				}
@@ -561,13 +568,7 @@ h1 {
 		}
 					
 		svg {
-			display: block;
-			margin: 0 auto;
-			overflow: visible;
-			
-			&.clockGraphic {
-				width: 150px;
-			}
+			display: none;
 		}
 	}		
 }
@@ -677,15 +678,55 @@ h1 {
 
 	.officeTile {
 		width: 49%;
-		margin: 0.5%;		
+		margin: 0.5%;
+		
+		
+		.officeInfo {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			position: absolute;
+			font-size: 1em;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 9999;
+			transition: opacity 300ms;
+		
+			&.showDetails{
+				opacity:1;
+			}
+					
+			svg {			
+				display: block;
+				margin: 0 auto;
+				overflow: visible;
+
+				&.clockGraphic {
+					width: 150px;
+				}
+			}
+		}			
 	}
 	
 	#officeDetails {
 		&.showDetails {
-			height: 33em;
-		}
+			height: 100%;
+			transition: height 300ms;
 		
-		h1 {
+			h3 {
+				opacity: 1;
+				top: 2%;
+				transition: top 1s 500ms, opacity 1ms 700ms;
+			}
+		}
+
+	
+		h3 {
+			line-height: 0.8em;
 			font-size: 3.25em;
 			
 			.abbr {
@@ -720,8 +761,44 @@ h1 {
 	}
 	
 	#officeDetails {
+		
+		.wrap {
+			clear: left;
+			position: relative;
+		
+			.leftSide {
+				float: left;
+				width: 49%;
+				display: inline-block;
+				padding-top: 1em;
+				padding-right: 0.5%;
+				padding-left: 0.5%;
+				max-height: 28.125em;
+	
+				picture {
+					opacity: 1;
+				}
+			}
+
+			.rightSide {
+				float: left;
+				width: 49%;
+				padding-right: 0.5%;
+				padding-left: 0.5%;
+				padding-top: 0.5%;
+				display: inline-block;
+			}
+		}		
+		
 		&.showDetails {
-			height: 42.25em;
+			height: 100%;
+			
+			picture {
+
+				.lazyloaded {
+					transform: scale(1);
+				}
+			}
 		}
 		
 		h1 {

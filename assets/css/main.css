@@ -1989,19 +1989,19 @@ h1.joinTeamCTA {
 }
 
 #officeDetails {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 0em;
-  -webkit-transition: height 400ms 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-          transition: height 400ms 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 #officeDetails .wrap {
-  clear: both;
+  clear: left;
+  position: relative;
 }
 #officeDetails .wrap .leftSide {
-  float: left;
-  width: 49%;
-  display: inline-block;
+  float: none;
+  width: 99%;
+  display: block;
+  padding-top: 1em;
   padding-right: 0.5%;
   padding-left: 0.5%;
   max-height: 28.125em;
@@ -2011,26 +2011,31 @@ h1.joinTeamCTA {
   -webkit-transition: opacity 500ms;
           transition: opacity 500ms;
 }
-#officeDetails .wrap .rightSide {
-  float: left;
-  width: 45%;
-  padding-right: 0.5%;
-  padding-left: 3%;
-  padding-top: 0.5%;
-  display: inline-block;
+#officeDetails .wrap .leftSide picture .lazyloaded {
+  opacity: 1;
 }
-#officeDetails h1 {
+#officeDetails .wrap .rightSide {
+  float: none;
+  width: 99%;
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-top: 0.5%;
+  display: block;
+}
+#officeDetails h3 {
   color: #46ccc5;
   font-family: 'Din-Bold', san-serif;
-  font-size: 2em;
-  line-height: 0.6em;
+  font-size: 2.5em;
+  line-height: 0.4em;
   position: relative;
-  top: 2em;
+  text-align: center;
+  margin: 0;
+  top: 3em;
   opacity: 0;
   -webkit-transition: top 1s, opacity 10ms;
           transition: top 1s, opacity 10ms;
 }
-#officeDetails h1 .abbr {
+#officeDetails h3 .abbr {
   display: none;
 }
 #officeDetails .ribbon {
@@ -2061,20 +2066,19 @@ h1.joinTeamCTA {
   min-width: 200%;
 }
 #officeDetails .officeStats {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
   opacity: 0;
   -webkit-transition: opacity 500ms;
           transition: opacity 500ms;
 }
 #officeDetails.showDetails {
-  height: 41em;
-  -webkit-transition: height 500ms;
-          transition: height 500ms;
+  height: 100%;
+  -webkit-transition: height 300ms;
+          transition: height 300ms;
 }
-#officeDetails.showDetails h1 {
+#officeDetails.showDetails h3 {
   opacity: 1;
-  top: 0em;
+  top: 0%;
   -webkit-transition: top 1s 500ms, opacity 1ms 700ms;
           transition: top 1s 500ms, opacity 1ms 700ms;
 }
@@ -2084,6 +2088,7 @@ h1.joinTeamCTA {
           transition: height 300ms 300ms;
 }
 #officeDetails.showDetails .ribbon .info {
+  font-size: 0.9em;
   opacity: 1;
   -webkit-transition: opacity 500ms 800ms;
           transition: opacity 500ms 800ms;
@@ -2102,8 +2107,8 @@ h1.joinTeamCTA {
 .officeTile {
   background-color: #ffffff;
   position: relative;
-  width: 98.5%;
-  margin: 0.4222222em;
+  width: 49%;
+  margin: 0.5%;
   overflow: hidden;
   float: left;
 }
@@ -2177,12 +2182,7 @@ h1.joinTeamCTA {
   opacity: 1;
 }
 .officeTile .officeInfo svg {
-  display: block;
-  margin: 0 auto;
-  overflow: visible;
-}
-.officeTile .officeInfo svg.clockGraphic {
-  width: 150px;
+  display: none;
 }
 
 @media screen and (min-width: 320px) {
@@ -2265,14 +2265,58 @@ h1.joinTeamCTA {
     width: 49%;
     margin: 0.5%;
   }
+  .officeTile .officeInfo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 9999;
+    -webkit-transition: opacity 300ms;
+            transition: opacity 300ms;
+  }
+  .officeTile .officeInfo.showDetails {
+    opacity: 1;
+  }
+  .officeTile .officeInfo svg {
+    display: block;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  .officeTile .officeInfo svg.clockGraphic {
+    width: 150px;
+  }
 
   #officeDetails.showDetails {
-    height: 33em;
+    height: 100%;
+    -webkit-transition: height 300ms;
+            transition: height 300ms;
   }
-  #officeDetails h1 {
+  #officeDetails.showDetails h3 {
+    opacity: 1;
+    top: 2%;
+    -webkit-transition: top 1s 500ms, opacity 1ms 700ms;
+            transition: top 1s 500ms, opacity 1ms 700ms;
+  }
+  #officeDetails h3 {
+    line-height: 0.8em;
     font-size: 3.25em;
   }
-  #officeDetails h1 .abbr {
+  #officeDetails h3 .abbr {
     display: none;
   }
 }
@@ -2297,8 +2341,36 @@ h1.joinTeamCTA {
     padding-top: 2.5em;
   }
 
+  #officeDetails .wrap {
+    clear: left;
+    position: relative;
+  }
+  #officeDetails .wrap .leftSide {
+    float: left;
+    width: 49%;
+    display: inline-block;
+    padding-top: 1em;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    max-height: 28.125em;
+  }
+  #officeDetails .wrap .leftSide picture {
+    opacity: 1;
+  }
+  #officeDetails .wrap .rightSide {
+    float: left;
+    width: 49%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    padding-top: 0.5%;
+    display: inline-block;
+  }
   #officeDetails.showDetails {
-    height: 42.25em;
+    height: 100%;
+  }
+  #officeDetails.showDetails picture .lazyloaded {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   #officeDetails h1 {
     font-size: 4.5em;
