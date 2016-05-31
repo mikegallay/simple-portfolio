@@ -14,7 +14,8 @@
 		"mainEmail": "office@achtung.nl",
 		"prEmail": "",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_amsterdam"
+		"clockImage": "clock_icons_amsterdam",
+		"trackingLabel": "Home|Click|Amsterdam_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_chicago",
@@ -31,7 +32,8 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_chicago"
+		"clockImage": "clock_icons_chicago",
+		"trackingLabel": "Home|Click|Chicago_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_hongkong",
@@ -48,7 +50,8 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_hongkong"
+		"clockImage": "clock_icons_hongkong",
+		"trackingLabel": "Home|Click|HongKong_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_london",
@@ -65,7 +68,8 @@
 		"mainEmail": "hello@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_london"
+		"clockImage": "clock_icons_london",
+		"trackingLabel": "Home|Click|London_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_newyork",
@@ -82,7 +86,8 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_newyork"
+		"clockImage": "clock_icons_newyork",
+		"trackingLabel": "Home|Click|NewYork_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_paris",
@@ -99,7 +104,8 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_paris"
+		"clockImage": "clock_icons_paris",
+		"trackingLabel": "Home|Click|Paris_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_sanfransisco",
@@ -117,7 +123,8 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_sanfransisco"
+		"clockImage": "clock_icons_sanfransisco",
+		"trackingLabel": "Home|Click|SanFrancisco_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_saupaulo",
@@ -134,7 +141,8 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "lucia.caldas@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_saopaulo"
+		"clockImage": "clock_icons_saopaulo",
+		"trackingLabel": "Home|Click|SaoPaulo_Office"
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_shanghai",
@@ -151,6 +159,7 @@
 		"mainEmail": "info@mcgarrybowen.com",
 		"prEmail": "pr@mcgarrybowen.com",
 		"heroImage": "assets/img/our_offices/coverShots/newyork",
-		"clockImage": "clock_icons_shanghai"
+		"clockImage": "clock_icons_shanghai",
+		"trackingLabel": "Home|Click|Shanghai_Office"
 	}
 ]

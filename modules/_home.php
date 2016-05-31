@@ -44,7 +44,7 @@
 				?>
 			</div>
 			<div class="moreButton active">
-				<a id="cultureTileMore" href="#"><?php addIcon('more_button'); ?></a>
+				<a id="cultureTileMore" href="#" data-tracking-label="Home|Click|Culture_LoadMore"><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>	
 	</section>
@@ -62,7 +62,7 @@
 				?>
 			</div>
 			<div class="moreButton active">
-				<a id="projectTileMore" href=""><?php addIcon('more_button'); ?></a>
+				<a id="projectTileMore" href="" data-tracking-label="Home|Click|Project_LoadMore"><?php addIcon('more_button'); ?></a>
 			</div>
 		</div>
 	</section>
@@ -102,7 +102,7 @@
 		<div class="container">
 			<h1 class="sectionHeadingSmall joinTeamCTA">INTERESTED IN JOINING THE TEAM?</h1>
 	
-			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings">TAKE A GANDER AT OUR JOB LISTINGS</a>
+			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</div>	
 	</section>
 	
