@@ -21,10 +21,22 @@
 		<div class="container">
 			<h1 class="sectionHeading">WHO SAYS <span data-forward class="blueFont">WE</span> CAN'T?</h1>
 	
-			<div class="row alignRight">
-				<a id="officeToggle" class="button" alt="">OUR OFFICES  <?php addIcon('menu_dropdown_arrow'); ?></a>
+			<div class="alignRight">
+				<a id="officeToggle" class="button" alt=""><?php addIcon('menu_dropdown_arrow'); ?></a>
 			</div>
-	
+			
+			<ul class="cityFilter">
+				<li><a>Amsterdam</a></li>
+				<li><a>Chicago</a></li>
+				<li><a>Hong Kong</a></li>
+				<li><a>London</a></li>
+				<li><a>New York</a></li>
+				<li><a>Paris</a></li>
+				<li><a>San Francisco</a></li>
+				<li><a>Sau Paulo</a></li>
+				<li><a>Shanghai</a></li>
+			</ul>
+			
 			<div class="cultureContent">
 				<?php
 					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);

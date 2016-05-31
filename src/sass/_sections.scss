@@ -368,14 +368,13 @@ h1 {
 		padding-top: 1em;
 		padding-right: 0.5%;
 		padding-left: 0.5%;
-		max-height: 28.125em;
-
-		picture {
-			opacity: 0;
-			transition: opacity 500ms;
+		//max-height: 28.125em;
+		overflow: hidden;
 		
-			.lazyloaded {
-				opacity: 1;
+		picture {
+			.lazyload {
+				opacity: 0;
+				transition: opacity 500ms;
 			}
 		}
 	}
@@ -394,7 +393,7 @@ h1 {
 		color: $skyblueColor;
 		font-family: 'Din-Bold', san-serif;
 		font-size: 2.5em;
-		line-height: 0.4em;
+		line-height: 0em;
 		position: relative;
 		text-align: center;
 		margin: 0;
@@ -470,9 +469,12 @@ h1 {
 		}
 		
 		.leftSide {
-			picture {
-				opacity: 1;
-				transition: opacity 500ms 500ms;
+			picture{
+				.lazyloaded {
+					transform: scale(1);
+					opacity: 1;
+					transition: opacity 500ms 500ms;
+				}
 			}
 		}
 	}
@@ -540,7 +542,7 @@ h1 {
 		z-index: 0;
 	}
 	
-	picture {
+	.lazyload {
 		opacity: 1;
 		transition: opacity 300ms;
 	}
@@ -642,6 +644,40 @@ h1 {
 	}
 	
 	
+	#OurPeople {
+		ul {
+			color: #46ccc5;
+			&.cityFilter {
+				list-style: none;
+				display: block;
+				text-align: right;
+				
+				li {
+					display: none;
+					cursor: pointer;
+					margin-left: 1em;
+					margin-right: 1em;
+					
+					a {
+						padding: 0.45em;
+						
+						&:hover {
+							color: #ffffff;
+							background-color: #46ccc5;
+						}
+					}
+				}
+				
+				&.active {
+					li {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+	
+	
 	.cultureTile {
 		width: 49%;
 		max-height: 31em;
@@ -693,6 +729,16 @@ h1 {
 			transition: opacity 300ms;
 		
 			&.showDetails{
+				
+				.leftSide {
+					picture {
+						.lazyloaded {
+							transform: scale(1);
+							opacity: 1;
+						}
+					}
+				}
+				
 				opacity:1;
 			}
 					
@@ -719,11 +765,17 @@ h1 {
 				top: 2%;
 				transition: top 1s 500ms, opacity 1ms 700ms;
 			}
+			
+			.leftSide {
+				picture {
+					opacity: 1;
+				}
+			}
 		}
 
 	
 		h3 {
-			line-height: 0.8em;
+			line-height: 0.6em;
 			font-size: 3.25em;
 			
 			.abbr {
@@ -766,10 +818,15 @@ h1 {
 			padding-top: 1em;
 			padding-right: 0.5%;
 			padding-left: 0.5%;
-			max-height: 28.125em;
+			overflow: hidden;
+			//max-height: 28.125em;
 
-			picture {
-				opacity: 1;
+			.leftSide {
+				picture {
+					.lazyload {
+						opacity: 0;
+					}
+				}
 			}
 		}
 
@@ -785,10 +842,12 @@ h1 {
 		&.showDetails {
 			height: 100%;
 			
-			picture {
-
-				.lazyloaded {
-					transform: scale(1);
+			.leftSide {
+				picture {
+					.lazyloaded {
+						transform: scale(1);
+						opacity: 1;
+					}
 				}
 			}
 		}

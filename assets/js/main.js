@@ -2463,6 +2463,10 @@ var mgbContent = {
     initCultureCnt: function() {
         var that = this;
 		
+		$('#officeToggle').on('click', function(){
+			$('.cityFilter').toggleClass('active');
+		});
+		
         $('.pushRight').on('click', function(e) {
             e.preventDefault();
 			
@@ -2608,6 +2612,11 @@ var mgbContent = {
                 $("#officeDetails").html('');
                 $("#officeDetails").html(officeDataText);
 				
+				// setTimeout(function(){
+// 					var rightHeight = $("#officeDetails").find(".rightSide").height();
+// 					$("#officeDetails").find(".leftSide").attr("max-height", rightHeight + "px");
+// 				}, 1000);
+				
 				// location.hash = 'officeDetails';
 				
                 setTimeout(function() {
@@ -2616,6 +2625,7 @@ var mgbContent = {
                     $('.closeMe').on('click', function() {
                         $("#officeDetails").removeClass('showDetails');
                         $(currThis).children("a").removeClass("active");
+						$("#officeDetails").html('');
                     });
                 }, 300);
             });

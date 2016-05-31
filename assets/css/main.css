@@ -897,6 +897,12 @@ a:active {
   background-color: #4ee5dd;
 }
 
+.closeButton {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+
 @media screen and (min-width: 320px) {
   .button {
     font-size: 0.85em;
@@ -2000,15 +2006,12 @@ h1.joinTeamCTA {
   padding-top: 1em;
   padding-right: 0.5%;
   padding-left: 0.5%;
-  max-height: 28.125em;
+  overflow: hidden;
 }
-#officeDetails .leftSide picture {
+#officeDetails .leftSide picture .lazyload {
   opacity: 0;
   -webkit-transition: opacity 500ms;
           transition: opacity 500ms;
-}
-#officeDetails .leftSide picture .lazyloaded {
-  opacity: 1;
 }
 #officeDetails .rightSide {
   float: none;
@@ -2022,7 +2025,7 @@ h1.joinTeamCTA {
   color: #46ccc5;
   font-family: 'Din-Bold', san-serif;
   font-size: 2.5em;
-  line-height: 0.4em;
+  line-height: 0em;
   position: relative;
   text-align: center;
   margin: 0;
@@ -2094,7 +2097,9 @@ h1.joinTeamCTA {
   -webkit-transition: opacity 500ms 500ms;
           transition: opacity 500ms 500ms;
 }
-#officeDetails.showDetails .leftSide picture {
+#officeDetails.showDetails .leftSide picture .lazyloaded {
+  -webkit-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
   -webkit-transition: opacity 500ms 500ms;
           transition: opacity 500ms 500ms;
@@ -2146,7 +2151,7 @@ h1.joinTeamCTA {
   background-size: 3px 3px;
   z-index: 0;
 }
-.officeTile picture {
+.officeTile .lazyload {
   opacity: 1;
   -webkit-transition: opacity 300ms;
           transition: opacity 300ms;
@@ -2232,6 +2237,31 @@ h1.joinTeamCTA {
     display: block;
   }
 
+  #OurPeople ul {
+    color: #46ccc5;
+  }
+  #OurPeople ul.cityFilter {
+    list-style: none;
+    display: block;
+    text-align: right;
+  }
+  #OurPeople ul.cityFilter li {
+    display: none;
+    cursor: pointer;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  #OurPeople ul.cityFilter li a {
+    padding: 0.45em;
+  }
+  #OurPeople ul.cityFilter li a:hover {
+    color: #ffffff;
+    background-color: #46ccc5;
+  }
+  #OurPeople ul.cityFilter.active li {
+    display: inline;
+  }
+
   .cultureTile {
     width: 49%;
     max-height: 31em;
@@ -2288,6 +2318,11 @@ h1.joinTeamCTA {
   .officeTile .officeInfo.showDetails {
     opacity: 1;
   }
+  .officeTile .officeInfo.showDetails .leftSide picture .lazyloaded {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
   .officeTile .officeInfo svg {
     display: block;
     margin: 0 auto;
@@ -2310,8 +2345,11 @@ h1.joinTeamCTA {
     -webkit-transition: top 1s 500ms, opacity 1ms 700ms;
             transition: top 1s 500ms, opacity 1ms 700ms;
   }
+  #officeDetails.showDetails .leftSide picture {
+    opacity: 1;
+  }
   #officeDetails h3 {
-    line-height: 0.8em;
+    line-height: 0.6em;
     font-size: 3.25em;
   }
   #officeDetails h3 .abbr {
@@ -2346,10 +2384,10 @@ h1.joinTeamCTA {
     padding-top: 1em;
     padding-right: 0.5%;
     padding-left: 0.5%;
-    max-height: 28.125em;
+    overflow: hidden;
   }
-  #officeDetails .leftSide picture {
-    opacity: 1;
+  #officeDetails .leftSide .leftSide picture .lazyload {
+    opacity: 0;
   }
   #officeDetails .rightSide {
     float: left;
@@ -2362,9 +2400,10 @@ h1.joinTeamCTA {
   #officeDetails.showDetails {
     height: 100%;
   }
-  #officeDetails.showDetails picture .lazyloaded {
+  #officeDetails.showDetails .leftSide picture .lazyloaded {
     -webkit-transform: scale(1);
             transform: scale(1);
+    opacity: 1;
   }
   #officeDetails h1 {
     font-size: 4.5em;
