@@ -1694,11 +1694,39 @@ var mgbMainSys = {
 	pMoreTarget:6,
 	
 	init : function() {
-			
+		this.addListeners();	
 	},
 	
 	addListeners : function(){
+		$(document).on('click', '[data-tracking-label]', function(e) {
+		    var $self = $(this),
+		        virtualPath = $self.attr('data-tracking-label');
+		    var pieces = virtualPath.split('|');
+			
+			if ($self.hasClass('cultureLink')){
+				$self.toggleClass('active');
 		
+			}
+			
+			if (!$self.hasClass('active')) pieces[2] += "_close";
+			
+		    if (pieces.length == 3) {
+				console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
+		       /* if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
+		            // internal exit page link
+		            e.preventDefault();
+					
+		            // makes sure to get interaction data before user leaves site
+		            ga('send', 'event', pieces[0], pieces[1], pieces[2], {
+		                'hitCallback': function() {
+		                    window.location.href = $self.attr('href');
+		                }
+		            });
+		        } else {
+		            ga('send', 'event', pieces[0], pieces[1], pieces[2]);
+		        }*/
+		    }
+		});
 	},
 	
 	resize : function(){

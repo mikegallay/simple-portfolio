@@ -4,7 +4,8 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
-		"info": "This is some information"
+		"info": "This is some information",
+		"trackingLabel": "Home|Click|MatthewBull_Culture"
 	},
 	{
 		"name" : "Pantone",
@@ -25,7 +26,8 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_colors",
 		"imgType": "jpg",
-		"info": "This is my information"
+		"info": "This is my information",
+		"trackingLabel": "Home|Click|BioColors_Culture"
 	},
 	{
 		"name" : "Chelsea",
@@ -46,7 +48,8 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_elizabeth",
 		"imgType": "jpg",
-		"info": "This is my information"
+		"info": "This is my information",
+		"trackingLabel": "Home|Click|Elizabeth_Culture"
 	},
 	{
 		"name" : "Dog",
@@ -60,14 +63,16 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
-		"info": "Hello everybody!"
+		"info": "Hello everybody!",
+		"trackingLabel": "Home|Click|Waving_Culture"
 	},
 	{
 		"name" : "Skater",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_skater",
 		"imgType": "jpg",
-		"info": "This is my information"
+		"info": "This is my information",
+		"trackingLabel": "Home|Click|Skater_Culture"
 	},
 	{
 		"name" : "Train",
@@ -90,7 +95,8 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
-		"info": "Hello everybody!"
+		"info": "Hello everybody!",
+		"trackingLabel": "Home|Click|Waving_Culture"
 	},
 	{
 		"name" : "Train",
