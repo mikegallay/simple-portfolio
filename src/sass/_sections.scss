@@ -815,7 +815,7 @@ h1 {
 			float: left;
 			width: 49%;
 			display: inline-block;
-			padding-top: 1em;
+			padding-top: 0em;
 			padding-right: 0.5%;
 			padding-left: 0.5%;
 			overflow: hidden;
@@ -852,8 +852,9 @@ h1 {
 			}
 		}
 		
-		h1 {
+		h3 {
 			font-size: 4.5em;
+			text-align: left;
 			
 			.abbr {
 				display: none;
