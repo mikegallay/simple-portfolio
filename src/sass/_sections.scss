@@ -19,6 +19,7 @@
 }
 
 #mainContent{
+	overflow:hidden;
 	&.inactive{
 		display:none;
 		position:fixed;
