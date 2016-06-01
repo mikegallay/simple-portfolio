@@ -18,23 +18,23 @@ var mgbMainSys = {
 		//setTimeout(function(){$('.fullBleed').removeClass("glitch");},1000);
 		
 		$('a').on('mouseover',function(){
-			that.addGlitch($(this));
+			that.addGlitch($(this),250);
 		})
 	},
 	
-	addGlitch : function(tar){
+	addGlitch : function(tar,t){
 		$(tar).addClass("glitch");
+
 		setTimeout(function(){
 			$(tar).removeClass("glitch");
-			
-		},250);
+		},t);
 	},
 	
-	selectRandomItemToGlitch : function(el){
+	selectRandomItemToGlitch : function(el,t){
 		
 		var arr = el.split('|');
 		var index = Math.floor(Math.random()*arr.length);
-		this.addGlitch(arr[index]);
+		this.addGlitch(arr[index],t);
 		
 	},
 	
@@ -44,9 +44,9 @@ var mgbMainSys = {
 		
 		//header glitches
 		//offset by 1 second from the rest
-		setTimeout(function(){
+		/*setTimeout(function(){
 			that.selectRandomItemToGlitch('#mbLogo|.menu');
-		},1000);
+		},1000);*/
 		
 		setTimeout(function(){
 			
@@ -58,40 +58,61 @@ var mgbMainSys = {
 			for (var i=0;i<that.cLoaded;i++){
 				targets += '.cultureTile:nth-child('+i+') img|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+			}(targets));
 			
 			//work section
 			targets = '#OurWork .sectionHeading|#OurWork .moreButton|';
 			for (var i=0;i<that.pLoaded;i++){
 				targets += '.projectTile:nth-child('+i+') img|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+			}(targets));
+			
 			
 			//office section
 			targets = '#OurOffices .sectionHeading|';
 			for (var i=0;i<$('.officeTile').length;i++){
 				targets += '.officeTile:nth-child('+i+') img|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+			}(targets));
 			
 			//clients/jobs section
 			targets = '#OurClients .sectionHeading|.joinTeamCTA|';
 			for (var i=0;i<$('.clientLogo').length;i++){
 				targets += '.clientLogo:nth-child('+i+')|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+			}(targets));
 			
 			//footer
 			targets = '.legal|';
 			for (var i=0;i<$('.socialIcons a').length;i++){
 				targets += '.socialIcons a:nth-child('+i+')|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			that.selectRandomItemToGlitch(targets,250);
 			
-			that.initializeGlitches(1000 + Math.random() * 4000);
+			that.initializeGlitches(3000 + Math.random() * 2000);
 			
 		},t);
-		
+	
 	},
 	
 	addListeners : function(){
@@ -231,7 +252,7 @@ var mgbMainSys = {
 				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');			
 				
 				//location.hash = hashName;
-				console.log(hashName);
+				//console.log(hashName);
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
@@ -725,7 +746,7 @@ var mgbHeroVideo = {
 		if(this.giveFocus === true) {
 			// mgbHeader.messageContainer.focus();
 		}
-		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal');
+		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal',250);
 		mgbMainSys.initializeGlitches(2000);
 	},
 	
