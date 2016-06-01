@@ -225,12 +225,13 @@ var mgbMainSys = {
 			var diff = Math.abs($(this).offset().top - $(window).scrollTop());
 			var hashName = $(this).attr('id');
 			
-			if(diff <= 60) {			
+			if(diff <= 600) {			
 				$('nav a').removeClass('active');
 				$('nav a[href="#'+hashName+'"]').addClass('active');
 				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');			
 				
 				//location.hash = hashName;
+				console.log(hashName);
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
@@ -404,6 +405,7 @@ var mgbMainSys = {
 // Module to handle site navigation
 var mgbHeader = {
 	navContainer : null,
+	giveFocus: true, 
 	// mainContainer : null,
 	navHeight : $("nav").height(),
 	ts : TweenMax.set,
@@ -428,8 +430,7 @@ var mgbHeader = {
 	
 	addListeners : function(){
 		
-		$('#homeLogo').on('click',function(){
-			
+		$('#homeLogo').on('click',function(){		
 			var nav = $('nav');
 		
 			// The menu navigation doubles as the container that displays videos
@@ -467,19 +468,20 @@ var mgbHeader = {
 
 			$("html, body").animate({
 				scrollTop: $(hashValue).offset().top,
-			}, 1000);
-		
-			$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
+			}, 1000, function() {
+				$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
 
-			$(hashValue).children('.ll').each(function () {
-			  if (mgbMainSys.isScrolledIntoView(this) === true) {
-			      $(this).addClass('in-view');
-				  $(this).parent().next().css('opacity', '1');
-			  }
-			});
+				$(hashValue).children('.ll').each(function () {
+				  if (mgbMainSys.isScrolledIntoView(this) === true) {
+				      $(this).addClass('in-view');
+					  $(this).parent().next().css('opacity', '1');
+				  }
+				});
 
-			currLink.addClass('active');
+				currLink.addClass('active');	
+			});		
 		});
+	
 	
 		$('#homeLogo').mouseover(function(){
 			// console.log("showLogo")
@@ -1165,7 +1167,7 @@ if($("#homepage-flag").length > 0 && !isMobile.any()) mgbHeroVideo.loadHeaderVid
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
-window.onload = pauseHashUpdate;
+window.onunload = displayCurrentContent;
 
 $(window).on('hashchange', function () {
     mgbMainSys.getPage(location.hash);
@@ -1206,25 +1208,14 @@ function resize(){
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
 	mgbMainSys.resize();
-	if (mgbMainSys.mainContentLoaded == true) mgbContent.resize();
+	
+	if (mgbMainSys.mainContentLoaded == true) {
+		mgbContent.resize();
+	}
 }
 
 // Prevent the page of jumping abruptly when loading from a hash
-function pauseHashUpdate() {
-	if((location.hash !== "#") && (location.hash !== "")) {
-		mgbHeader.giveFocus = false;
-		$(".moreMsg").show();
-		
-		var currHash = location.hash; // store the hash 
-		// location.hash = ""; // empty the hash to keep page at top until the header animation finishes
-		
-		setTimeout(function(){
-			$("html,body").animate({
-				scrollTop: $(currHash).offset().top, 
-			}, 800, function(){
-				// location.hash = currHash;
-			});
-		}, 2000);
-	}
+function displayCurrentContent() {
+	$(window).scrollTop(0);
 }
 
