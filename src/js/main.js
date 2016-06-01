@@ -1218,4 +1218,3 @@ function resize(){
 function displayCurrentContent() {
 	$(window).scrollTop(0);
 }
-

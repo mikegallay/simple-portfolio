@@ -1694,7 +1694,86 @@ var mgbMainSys = {
 	pMoreTarget:6,
 	
 	init : function() {
+		var that = this;
 		this.addListeners();	
+		// $('.fullBleed').addClass("glitch");
+		//setTimeout(function(){$('.fullBleed').removeClass("glitch");},1000);
+		
+		$('a').on('mouseover',function(){
+			that.addGlitch($(this));
+		})
+	},
+	
+	addGlitch : function(tar){
+		$(tar).addClass("glitch");
+		setTimeout(function(){
+			$(tar).removeClass("glitch");
+			
+		},250);
+	},
+	
+	selectRandomItemToGlitch : function(el){
+		
+		var arr = el.split('|');
+		var index = Math.floor(Math.random()*arr.length);
+		this.addGlitch(arr[index]);
+		
+	},
+	
+	initializeGlitches : function(t){
+		
+		var that = this;
+		
+		//header glitches
+		//offset by 1 second from the rest
+		setTimeout(function(){
+			that.selectRandomItemToGlitch('#mbLogo|.menu');
+		},1000);
+		
+		setTimeout(function(){
+			
+			//video section
+			that.selectRandomItemToGlitch('#welcomeImage|.responsive-video|.headerHeroText|.moreMsg');
+			
+			//culture section
+			var targets = '#OurPeople .sectionHeading|#OurPeople .moreButton|';
+			for (var i=0;i<that.cLoaded;i++){
+				targets += '.cultureTile:nth-child('+i+') img|'
+			}
+			that.selectRandomItemToGlitch(targets);
+			
+			//work section
+			targets = '#OurWork .sectionHeading|#OurWork .moreButton|';
+			for (var i=0;i<that.pLoaded;i++){
+				targets += '.projectTile:nth-child('+i+') img|'
+			}
+			that.selectRandomItemToGlitch(targets);
+			
+			//office section
+			targets = '#OurOffices .sectionHeading|';
+			for (var i=0;i<$('.officeTile').length;i++){
+				targets += '.officeTile:nth-child('+i+') img|'
+			}
+			that.selectRandomItemToGlitch(targets);
+			
+			//clients/jobs section
+			targets = '#OurClients .sectionHeading|.joinTeamCTA|';
+			for (var i=0;i<$('.clientLogo').length;i++){
+				targets += '.clientLogo:nth-child('+i+')|'
+			}
+			that.selectRandomItemToGlitch(targets);
+			
+			//footer
+			targets = '.legal|';
+			for (var i=0;i<$('.socialIcons a').length;i++){
+				targets += '.socialIcons a:nth-child('+i+')|'
+			}
+			that.selectRandomItemToGlitch(targets);
+			
+			that.initializeGlitches(1000 + Math.random() * 4000);
+			
+		},t);
+		
 	},
 	
 	addListeners : function(){
@@ -1721,7 +1800,7 @@ var mgbMainSys = {
 		                'hitCallback': function() {
 		                    window.location.href = $self.attr('href');
 		                }
-		            });
+		            });*
 		        } else {
 		            ga('send', 'event', pieces[0], pieces[1], pieces[2]);
 		        }*/
@@ -1745,6 +1824,7 @@ var mgbMainSys = {
 	
 	checkTileLoad : function(){
 		if (lastWindowWidth > 1024){
+			//console.log("tile load >1024");
 			this.cLoadTarget = 7;
 			this.pLoadTarget = 6;
 			if (this.cLoaded < this.cLoadTarget){
@@ -1763,6 +1843,7 @@ var mgbMainSys = {
 		}
 		
 		if (lastWindowWidth > 1900){
+			//console.log("tile load >1900");
 			this.cLoadTarget = 10;
 			this.pLoadTarget = 9;
 			
@@ -2326,6 +2407,8 @@ var mgbHeroVideo = {
 		if(this.giveFocus === true) {
 			// mgbHeader.messageContainer.focus();
 		}
+		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal');
+		mgbMainSys.initializeGlitches(2000);
 	},
 	
 	loadHeaderVideo: function() {
@@ -2817,4 +2900,3 @@ function resize(){
 function displayCurrentContent() {
 	$(window).scrollTop(0);
 }
-
