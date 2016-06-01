@@ -22,7 +22,7 @@
 			<h1 class="sectionHeading">WHO SAYS <span data-forward class="blueFont">WE</span> CAN'T?</h1>
 	
 			<div class="alignRight">
-				<a id="officeToggle" class="button" alt=""><?php addIcon('menu_dropdown_arrow'); ?></a>
+				<a id="officeToggle" class="button" alt="">OUR OFFICES<?php addIcon('menu_dropdown_arrow'); ?></a>
 			</div>
 			
 			<ul class="cityFilter">

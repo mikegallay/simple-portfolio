@@ -5,21 +5,24 @@
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"info": "This is some information",
-		"trackingLabel": "Home|Click|MatthewBull_Culture"
+		"trackingLabel": "Home|Click|MatthewBull_Culture",
+		"office": "NY"
 	},
 	{
 		"name" : "Pantone",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/pantone",
 		"imgType": "jpg",
-		"info": ""
+		"info": "",
+		"office": "CHI"
 	},
 	{
 		"name" : "Biking",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/biking",
 		"imgType": "jpg",
-		"info": ""
+		"info": "",
+		"office": "NY"
 	},
 	{
 		"name" : "Bio Colors",
@@ -27,21 +30,24 @@
 		"imgSrc": "assets/img/our_culture/bio_colors",
 		"imgType": "jpg",
 		"info": "This is my information",
-		"trackingLabel": "Home|Click|BioColors_Culture"
+		"trackingLabel": "Home|Click|BioColors_Culture",
+		"office": "AMS"
 	},
 	{
 		"name" : "Chelsea",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/art",
 		"imgType": "jpg",
-		"info": ""
+		"info": "",
+		"office": "NY"
 	},
 	{
 		"name" : "Strokes",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/slinky",
 		"imgType": "gif",
-		"info": ""
+		"info": "",
+		"office": "SF"
 	},
 	{
 		"name" : "Elizabeth",
@@ -49,14 +55,15 @@
 		"imgSrc": "assets/img/our_culture/bio_elizabeth",
 		"imgType": "jpg",
 		"info": "This is my information",
-		"trackingLabel": "Home|Click|Elizabeth_Culture"
+		"trackingLabel": "Home|Click|Elizabeth_Culture",
+		"office": "LDN"
 	},
 	{
 		"name" : "Dog",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
-		"info": ""
+		"info": "PAR"
 	},
 	{
 		"name" : "Tattoos",
@@ -64,7 +71,8 @@
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
 		"info": "Hello everybody!",
-		"trackingLabel": "Home|Click|Waving_Culture"
+		"trackingLabel": "Home|Click|Waving_Culture",
+		"office": "SAO"
 	},
 	{
 		"name" : "Skater",
@@ -72,7 +80,8 @@
 		"imgSrc": "assets/img/our_culture/bio_skater",
 		"imgType": "jpg",
 		"info": "This is my information",
-		"trackingLabel": "Home|Click|Skater_Culture"
+		"trackingLabel": "Home|Click|Skater_Culture",
+		"office": "LDN"
 	},
 	{
 		"name" : "Train",
@@ -80,15 +89,15 @@
 		"imgSrc": "assets/img/our_culture/train",
 		"imgType": "jpg",
 		"info": "",
-		"isDouble": "true"
-	}
-	
-	,	{
+		"isDouble": "true",
+		"office": "CHI"
+		},	{
 		"name" : "Dog",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
-		"info": ""
+		"info": "", 
+		"office": "PAR"
 	},
 	{
 		"name" : "Tattoos",
@@ -96,7 +105,8 @@
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
 		"info": "Hello everybody!",
-		"trackingLabel": "Home|Click|Waving_Culture"
+		"trackingLabel": "Home|Click|Waving_Culture",
+		"office": "NY"
 	},
 	{
 		"name" : "Train",
@@ -104,15 +114,16 @@
 		"imgSrc": "assets/img/our_culture/train",
 		"imgType": "jpg",
 		"info": "",
-		"isDouble": "true"
-	}
-	,
+		"isDouble": "true",
+		"office": "CHI"
+	},
 		{
 			"name" : "Train",
 			"title": "My Title",
 			"imgSrc": "assets/img/our_culture/train",
 			"imgType": "jpg",
 			"info": "",
-			"isDouble": "true"
+			"isDouble": "true",
+			"office": "CHI"
 		}
 ]
