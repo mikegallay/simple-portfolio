@@ -1699,9 +1699,9 @@ var mgbMainSys = {
 		// $('.fullBleed').addClass("glitch");
 		//setTimeout(function(){$('.fullBleed').removeClass("glitch");},1000);
 		
-		$('a').on('mouseover',function(){
+		/*$('a').on('mouseover',function(){
 			that.addGlitch($(this),250);
-		})
+		})*/
 	},
 	
 	addGlitch : function(tar,t){
@@ -1994,6 +1994,8 @@ var mgbMainSys = {
 			
 			console.log("home already loaded");
 			
+			$('footer').removeAttr('style');
+			
 			$("nav").removeClass("overlayActive sticky");
 			
 			mgbHeader.hideLogo();
@@ -2068,6 +2070,8 @@ var mgbMainSys = {
 			}else{ //back to homepage
 				
 				// success =  $($.parseHTML(response)).filter("#mainContent");
+				
+				$('footer').removeAttr('style');
 			
 				mgbMainSys.mainContentLoaded = true;
 				
@@ -2831,8 +2835,10 @@ var mgbContent = {
 var mgbOverlay = {
     
     init: function() {
+		var that = this;
 		$("#overlayContent").addClass("active");
 		this.addListeners();
+		setTimeout(function(){that.resize();},50);
     },
 	
 	kill : function(){
@@ -2840,9 +2846,15 @@ var mgbOverlay = {
         $('#overlayCover').removeClass('active');
 	},
 	addListeners : function(){
-		$('.overlayHeadline').on('click',function(){
+		$('.returnHome').on('click',function(){
 			mgbMainSys.getPage(appRoot,true);
 		});
+	},
+	resize : function(){
+		$('footer').removeAttr('style');
+		var footerY = $('footer').position().top;
+		var footerH = lastWindowHeight - footerY;
+		$('footer').css('height',footerH+'px');
 	}
 };
 
@@ -2915,6 +2927,8 @@ function resize(){
 	if (mgbMainSys.mainContentLoaded == true) {
 		mgbContent.resize();
 	}
+	
+	if ($('#overlayContent').hasClass('active')) mgbOverlay.resize();
 }
 
 // Prevent the page of jumping abruptly when loading from a hash

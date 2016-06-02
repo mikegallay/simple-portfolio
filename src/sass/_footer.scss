@@ -3,7 +3,7 @@ footer {
 	background-color: #58595b;
 	color: #46ccc5;
 	font-size: 0.95em;
-	padding: 1.25em 1em;
+	padding: 1.25em 1em 0.5em;
 	z-index: 101;
 	overflow:hidden;
 	
@@ -15,7 +15,7 @@ footer {
 		p {
 			&.copyright {
 				color: #ffffff;
-				font-family: 'Din-Regular', san-serif;
+				font-family: 'Din-Regular', sans-serif;
 				font-size: 0.9em;
 				text-align: right;
 				
@@ -68,15 +68,21 @@ footer {
 		text-align: center;
 		font-size: 0.75em;
 		min-height: 4em;
-		
+		padding: 1.25em 3em 0em;
 		a {
 			display: inline-block;
 		}
-		
+		.container{
+			
+		}
 		.socialIcons {
 			position: relative;
 			float: left;
 			margin-top: 0.5em;
+			.facebook-inline, .instagram-inline, .twitter-inline, .linkedin-inline {
+				margin-right:1em;
+				margin-left:0;
+			}
 		}
 		
 		.legal {
@@ -85,7 +91,6 @@ footer {
 		    text-align: right;
 			width: 60%;
 			float: right;
-			
 			p {
 				&.copyright {
 					font-size: inherit;
@@ -94,4 +99,13 @@ footer {
 			}
 		}
 	}
+	
+	#overlayContent.active + footer{
+		padding: 1.25em 0em 0em;
+		.container{
+			width:90%;
+			margin:0 auto;
+		}
+	}
+	
 }
