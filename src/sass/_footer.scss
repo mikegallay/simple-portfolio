@@ -6,12 +6,13 @@ footer {
 	padding: 1.25em 1em 0.5em;
 	z-index: 101;
 	overflow:hidden;
+	min-height: 6em;
 	
 	.legal {
 		display: table-cell;
 		vertical-align: center;
 		float: right;
-		
+		line-height:1.5em;
 		p {
 			&.copyright {
 				color: #ffffff;
@@ -38,7 +39,7 @@ footer {
 	footer {
 		text-align: center;
 		font-size: 0.75em;
-		min-height: 4em;
+		
 		
 		a {
 			display: inline-block;
@@ -58,6 +59,12 @@ footer {
 				}	
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 450px) {
+	footer{
+		min-height:4em;
 	}
 }
 

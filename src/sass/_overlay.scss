@@ -13,6 +13,11 @@
 		transition:height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
 		height:100%;
 	}
+	/*&.mobileNav{
+		width: 100%;
+	    height: 100%;
+	    opacity: 0.9;
+	}*/
 }
 
 #overlayContent{
@@ -26,13 +31,25 @@
 	z-index:100;
 	overflow:hidden;
 	#heroImage{
-		max-height:700px;
+		max-height:500px;
 		overflow:hidden;
 		display: flex;
 		justify-content: center; /* align horizontal */
 		align-items: center; /* align vertical */
+		background:black;
+		transition:height 300ms 300ms;
 		picture{
 			width:100%;
+			opacity:1;
+			transition:opacity 300ms;
+		}
+		&.faded{
+			picture{
+				opacity:0!important;
+			}
+		}
+		&.collapsed{
+			height:0!important;
 		}
 	}
 	 
@@ -40,8 +57,79 @@
 		opacity:1;
 		display:block;
 		transition:opacity 500ms 750ms,height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
+		
 	}
 }
+
+/* VIMEO HEADER */
+
+.videoHolder {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 0;
+	background: black;
+	transition:height 300ms 300ms;
+	//display:none;
+	&.expanded{
+		transition:height 0ms;
+	}
+	.videoWrapper {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+}
+.videoCloseButton{
+	position:absolute;
+	top:30px;
+	right:30px;
+	.videoClose{
+		transform:rotate(-45deg);
+//		background: $skyblueColor;
+		//border-radius: 25px;
+		opacity:0;
+		visibility:hidden;
+		transition:opacity 500ms 500ms;
+	    position: inherit;
+	    right: 0px;
+		cursor:pointer;
+//		box-shadow: 5px 5px 5px #888888;
+		//filter: drop-shadow( 5px 5px 5px #888888 );
+		//border: 1px solid $skyblueColor;
+		
+		background: rgba(0,0,0,0.4);
+		background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0.4)), color-stop(80%, rgba(0,0,0,0)));
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+		background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+		background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+		background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+		
+		svg {
+			fill: white;
+		}
+		&:hover{
+			//background: $skyblueColor;
+			svg {
+				fill: $skyblueColor;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1024px) {
+	//only show close button at this size
+	.videoCloseButton{
+		.videoClose{
+			&.revealed{
+				visibility:visible;
+				opacity:1;
+			}
+		}
+	}
+}
+
 
 /* WORK TEMPLATE */
 
@@ -70,7 +158,7 @@
 	}
 	.workDetails{
 		width:100%;
-		margin-bottom:1em;
+		margin-bottom:0em;
 		display: inline-block;
 		.workCopy{
 			width:90%;
@@ -196,7 +284,7 @@
 			.workCopy{
 				width:50%;
 				float:left;
-				margin:0;
+				//margin:0;
 			}
 			.workThumbs{
 				width:45%;

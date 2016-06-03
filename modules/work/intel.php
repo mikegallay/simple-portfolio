@@ -5,6 +5,15 @@
 	?>
 </div>
 
+<div class="videoHolder"></div>
+<div class="videoCloseButton">
+	<a class="videoClose">
+		<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
+		</svg>
+	</a>
+</div>
+
 <section class="workContainer">
 	<!-- <div class="returnHome">< Back </div> -->
 	<div class="workHeadline">
@@ -23,9 +32,8 @@
 					<!-- <a href="../work/maserati">jump to maserati</a> -->
 		</div>
 		<div class="workThumbs">
-			<!-- <div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/144913605?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div> -->
 			<div class="workThumb">
-				<a data-content="119997282">
+				<a data-content="144913605">
 					<img src="../assets/img/work_pages/intel_thumb01.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
@@ -36,7 +44,7 @@
 				</a>
 			</div>
 			<div class="workThumb">
-				<a data-content="119997282">
+				<a data-content="144913607">
 					<img src="../assets/img/work_pages/intel_thumb02.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
