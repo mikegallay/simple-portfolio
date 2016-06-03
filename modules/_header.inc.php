@@ -17,14 +17,14 @@
 						<div id="owen"><?php addIcon('logo-owen')?></div>
 					</div>
 				</div>
-			</div></a>
+			</div>
+		</a>
+		
 		<div id="menuToggleHolder">
-			<div id="menuToggle">
-				
-					<div id="ham1"><div class="hamDot"></div></div>
-					<div id="ham2"><div class="hamDot"></div></div>
-					<div id="ham3"><div class="hamDot"></div></div>
-				
+			<div id="menuToggle">			
+				<div id="ham1"><div class="hamDot"></div></div>
+				<div id="ham2"><div class="hamDot"></div></div>
+				<div id="ham3"><div class="hamDot"></div></div>	
 			</div>
 		</div>
 		

@@ -17,39 +17,22 @@
 		</div>
 
 	</section>
-	<section id="OurPeople" class="fullBleed">
+	
+	<section id="Timeline" class="fullBleed">
 		<div class="container">
 			<h1 class="sectionHeading">WHO SAYS <span data-forward class="blueFont">WE</span> CAN'T?</h1>
-	
-			<div class="alignRight">
-				<a id="officeToggle" class="button" alt="">OUR OFFICES<?php addIcon('menu_dropdown_arrow'); ?></a>
+		</div>
+		
+		<div style="width: 100%; text-align: center; position:relative">
+			<div style="width: 100%; height: 560px; margin: 0 auto; transform: scale(1.85); margin-bottom: 4em; max-height: 1280px;">
+				<svg class="icon mb_timeline_path-inline" role="img" aria-labelledby="title">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mb_timeline_path"></use>
+				  <!--[if lt IE 9]> <img src="assets/img/svg/ie8-fallback/mb_timeline_path.png" alt="mb_timeline_path icon"> <!--<![endif]-->
+				</svg>
 			</div>
-			
-			<ul class="cityFilter">
-				<li><a>Amsterdam</a></li>
-				<li><a>Chicago</a></li>
-				<li><a>Hong Kong</a></li>
-				<li><a>London</a></li>
-				<li><a>New York</a></li>
-				<li><a>Paris</a></li>
-				<li><a>San Francisco</a></li>
-				<li><a>Sau Paulo</a></li>
-				<li><a>Shanghai</a></li>
-			</ul>
-			
-			<div class="cultureContent">
-				<?php
-					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
-					echo $cultureData; 
-				?>
-			</div>
-			<div class="moreButton active">
-				<a id="cultureTileMore" href="#" data-tracking-label="Home|Click|Culture_LoadMore"><?php addIcon('more_button'); ?></a>
-			</div>
-		</div>	
+		</div>
 	</section>
-
-
+	
 	<section id="OurWork" class="fullBleed">
 		<div class="container">		
 			<h1 class="sectionHeading">IT'S NOT <span data-forward class="blueFont">CREATIVE</span> <br> UNLESS IT <span data-forward class="blueFont">WORKS.</span></h1>
@@ -67,6 +50,38 @@
 		</div>
 	</section>
 
+	<section id="OurPeople" class="fullBleed">
+		<div class="container">
+			<h1 class="sectionHeading">OUR <span data-forward class="blueFont">CULTURE</span></h1>
+	
+			<div class="alignRight">
+				<a id="officeToggle" class="button" alt="">OUR OFFICE<?php addIcon('menu_dropdown_arrow'); ?></a>
+			</div>
+
+			<!-- <div>
+				<input class="cityFilter" id="select-all" name="radio-select" type="radio"><label for="select-ams">All</label></li>
+				<input class="cityFilter" id="select-ams" name="radio-select" type="radio"><label for="select-ams">Amsterdam</label></li>
+				<input class="cityFilter" id="select-chi" name="radio-select" type="radio"><label for="select-chi">Chicago</label></li>
+				<input class="cityFilter" id="select-hk" name="radio-select" type="radio"><label for="select-hk">Hong Kong</label></li>
+				<input class="cityFilter" id="select-ldn" name="radio-select" type="radio"><label for="select-ldn">London</label></li>
+				<input class="cityFilter" id="select-ny" name="radio-select" type="radio"><label for="select-ny">New York</label></li>
+				<input class="cityFilter" id="select-par" name="radio-select" type="radio"><label for="select-par">Paris</label></li>
+				<input class="cityFilter" id="select-sf" name="radio-select" type="radio"><label for="select-ams">San Francisco</label></li>
+				<input class="cityFilter" id="select-sao" name="radio-select" type="radio"><label for="select-sao">Sau Paulo</label></li>
+				<input class="cityFilter" id="select-sg" name="radio-select" type="radio"><label for="select-ams">Shanghai</label></li>
+			</div> -->
+
+			<div class="cultureContent">				
+				<?php
+					$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
+					echo $cultureData; 
+				?>
+			</div>
+			<div class="moreButton active">
+				<a id="cultureTileMore" href="#" data-tracking-label="Home|Click|Culture_LoadMore"><?php addIcon('more_button'); ?></a>
+			</div>
+		</div>	
+	</section>
 
 	<section id="OurOffices" class="fullBleed">
 		<div class="container">

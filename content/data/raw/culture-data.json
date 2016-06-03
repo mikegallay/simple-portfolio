@@ -6,7 +6,7 @@
 		"imgType": "jpg",
 		"info": "This is some information",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "NY"
+		"office": "ny"
 	},
 	{
 		"name" : "Pantone",
@@ -14,7 +14,7 @@
 		"imgSrc": "assets/img/our_culture/pantone",
 		"imgType": "jpg",
 		"info": "",
-		"office": "CHI"
+		"office": "chi"
 	},
 	{
 		"name" : "Biking",
@@ -22,7 +22,7 @@
 		"imgSrc": "assets/img/our_culture/biking",
 		"imgType": "jpg",
 		"info": "",
-		"office": "NY"
+		"office": "ny"
 	},
 	{
 		"name" : "Bio Colors",
@@ -31,7 +31,7 @@
 		"imgType": "jpg",
 		"info": "This is my information",
 		"trackingLabel": "Home|Click|BioColors_Culture",
-		"office": "AMS"
+		"office": "ams"
 	},
 	{
 		"name" : "Chelsea",
@@ -39,7 +39,7 @@
 		"imgSrc": "assets/img/our_culture/art",
 		"imgType": "jpg",
 		"info": "",
-		"office": "NY"
+		"office": "ny"
 	},
 	{
 		"name" : "Strokes",
@@ -47,7 +47,7 @@
 		"imgSrc": "assets/img/our_culture/slinky",
 		"imgType": "gif",
 		"info": "",
-		"office": "SF"
+		"office": "sf"
 	},
 	{
 		"name" : "Elizabeth",
@@ -56,14 +56,15 @@
 		"imgType": "jpg",
 		"info": "This is my information",
 		"trackingLabel": "Home|Click|Elizabeth_Culture",
-		"office": "LDN"
+		"office": "ldn"
 	},
 	{
 		"name" : "Dog",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
-		"info": "PAR"
+		"info": "",
+		"office": "par"
 	},
 	{
 		"name" : "Tattoos",
@@ -72,7 +73,7 @@
 		"imgType": "gif",
 		"info": "Hello everybody!",
 		"trackingLabel": "Home|Click|Waving_Culture",
-		"office": "SAO"
+		"office": "sao"
 	},
 	{
 		"name" : "Skater",
@@ -81,7 +82,7 @@
 		"imgType": "jpg",
 		"info": "This is my information",
 		"trackingLabel": "Home|Click|Skater_Culture",
-		"office": "LDN"
+		"office": "ldn"
 	},
 	{
 		"name" : "Train",
@@ -90,14 +91,14 @@
 		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true",
-		"office": "CHI"
+		"office": "chi"
 		},	{
 		"name" : "Dog",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
 		"info": "", 
-		"office": "PAR"
+		"office": "par"
 	},
 	{
 		"name" : "Tattoos",
@@ -106,7 +107,7 @@
 		"imgType": "gif",
 		"info": "Hello everybody!",
 		"trackingLabel": "Home|Click|Waving_Culture",
-		"office": "NY"
+		"office": "ny"
 	},
 	{
 		"name" : "Train",
@@ -115,7 +116,7 @@
 		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true",
-		"office": "CHI"
+		"office": "chi"
 	},
 		{
 			"name" : "Train",
@@ -124,6 +125,6 @@
 			"imgType": "jpg",
 			"info": "",
 			"isDouble": "true",
-			"office": "CHI"
+			"office": "chi"
 		}
 ]

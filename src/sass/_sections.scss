@@ -646,34 +646,35 @@ h1 {
 	
 	
 	#OurPeople {
-		ul {
-			color: #46ccc5;
-			&.cityFilter {
-				list-style: none;
-				display: block;
-				text-align: right;
-				
-				li {
-					display: none;
-					cursor: pointer;
+		
+		.cultureContent {
+			input.cityFilter {
+				display: none;
+							
+				label {
 					margin-left: 1em;
 					margin-right: 1em;
 					
-					a {
-						padding: 0.45em;
-						
-						&:hover {
-							color: #ffffff;
-							background-color: #46ccc5;
-						}
-					}
+					display: none;
 				}
-				
-				&.active {
-					li {
-						display: inline;
-					}
+			
+				&.active ~ label{
+					color: #46ccc5;
+					display: inline-block;
 				}
+			}
+			
+			div > input#select-ams:checked + .cultureTile:not([data-office-filter='ams']),
+			div > input#select-chi:checked + .cultureTile:not([data-office-filter='chi']),
+			div > input#select-hk:checked + .cultureTile:not([data-office-filter='hk']),
+			div > input#select-ldn:checked + .cultureTile:not([data-office-filter='ldn']),
+			div > input#select-ny:checked + .cultureTile:not([data-office-filter='ny']),
+			div > input#select-par:checked + .cultureTile:not([data-office-filter='par']),
+			div > input#select-sf:checked + .cultureTile:not([data-office-filter='sf']),
+			div > input#select-sao:checked + .cultureTile:not([data-office-filter='sao']),
+			div > input#select-sg:checked + .cultureTile:not([data-office-filter='sg']) {			
+				opacity: 0.25;
+				pointer-events: none;
 			}
 		}
 	}

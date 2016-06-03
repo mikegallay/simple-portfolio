@@ -1,5 +1,5 @@
 {{#each objects}}
-	<div class="cultureTile {{#greaterThan id 4}}notLoaded notShowing{{/greaterThan}} {{dir}} {{#if isDouble}}col-2-by-1{{/if}}">
+	<div class="cultureTile {{#greaterThan id 4}}notLoaded notShowing{{/greaterThan}} {{dir}} {{#if isDouble}}col-2-by-1{{/if}}" {{#if office}}data-office-filter="{{{office}}}"{{/if}}>
 		{{#if info}}
 		<a href="#" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} class="cultureLink">
 			<div class="bio">
