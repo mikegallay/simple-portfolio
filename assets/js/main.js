@@ -2120,6 +2120,7 @@ var mgbMainSys = {
 				setTimeout(function(){
 					
 					$("#overlayContent").empty();
+					mgbMainSys.checkTileLoad();
 					
 				},500);
 			}
@@ -3088,9 +3089,10 @@ function resizeChecker() {
 function resize(){
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
-	mgbMainSys.resize();
+	
 	
 	if (mgbMainSys.mainContentLoaded == true) {
+		mgbMainSys.resize();
 		mgbContent.resize();
 	}
 	
