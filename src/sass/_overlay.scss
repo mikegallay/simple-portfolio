@@ -7,7 +7,7 @@
 	background:#6b6d6f;
 	transform:translate3d(0,0,0);
 	transition:height 500ms 250ms;
-	z-index:99;
+	z-index:98;
 	
 	&.active{
 		transition:height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -28,7 +28,7 @@
 	margin: 0;
 	position:relative;
 	transition:opacity 250ms 0ms,height 500ms;
-	z-index:100;
+	z-index:99;
 	overflow:hidden;
 	#heroImage{
 		max-height:500px;

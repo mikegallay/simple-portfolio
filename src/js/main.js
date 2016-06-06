@@ -117,35 +117,42 @@ var mgbMainSys = {
 	},
 	
 	addListeners : function(){
+		var that = this;
 		$(document).on('click', '[data-tracking-label]', function(e) {
-		    var $self = $(this),
-		        virtualPath = $self.attr('data-tracking-label');
-		    var pieces = virtualPath.split('|');
-			
+		    var virtualPath = $(this).attr('data-tracking-label');
+		    	that.gaTracking(virtualPath,$(this));
+		});
+	},
+	
+	gaTracking : function(virtualPath,$self){
+	    var pieces = virtualPath.split('|');
+		
+		if ($self){
 			if ($self.hasClass('cultureLink')){
 				$self.toggleClass('active');
-		
+	
 			}
-			
+		
 			if (!$self.hasClass('active')) pieces[2] += "_close";
-			
-		    if (pieces.length == 3) {
-				console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
-		       /* if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
-		            // internal exit page link
-		            e.preventDefault();
-					
-		            // makes sure to get interaction data before user leaves site
-		            ga('send', 'event', pieces[0], pieces[1], pieces[2], {
-		                'hitCallback': function() {
-		                    window.location.href = $self.attr('href');
-		                }
-		            });*
-		        } else {
-		            ga('send', 'event', pieces[0], pieces[1], pieces[2]);
-		        }*/
-		    }
-		});
+		}		
+		
+	    if (pieces.length == 3) {
+			console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
+	       /* if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
+	            // internal exit page link
+	            e.preventDefault();
+				
+	            // makes sure to get interaction data before user leaves site
+	            ga('send', 'event', pieces[0], pieces[1], pieces[2], {
+	                'hitCallback': function() {
+	                    window.location.href = $self.attr('href');
+	                }
+	            });*
+	        } else {
+	            ga('send', 'event', pieces[0], pieces[1], pieces[2]);
+	        }*/
+	    }
+		
 	},
 	
 	resize : function(){
@@ -306,6 +313,8 @@ var mgbMainSys = {
         this.pushHistoryState(page, bool); //-- add page view to history
 		
 		mgbMainSys.currPage = page;
+		
+		$('#Home').removeClass('removed');
 		
 		var useOverlay = true;
 		
@@ -1220,9 +1229,10 @@ var mgbOverlay = {
 		});
 	},
 	loadVideo : function(id){
+		var that = this;
 		$('.videoHolder').empty();
 		$('#heroImage').addClass('faded collapsed');
-		$('nav').addClass('removed');
+		$('#Home').addClass('removed');
 		$('.videoClose').addClass('revealed');
 		
 		var videoHeight = (lastWindowWidth*9)/16;
@@ -1231,7 +1241,7 @@ var mgbOverlay = {
 		
 		setTimeout(function(){
 			
-			$('.videoHolder').html('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>');
+			$('.videoHolder').html('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1&player_id=vimeoPlayer" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="vimeoPlayer" data-vimeoId='+id+'></iframe></div>');
 		
 			$('.videoWrapper').fitVids();
 			$('.videoHolder').addClass('expanded');
@@ -1240,14 +1250,70 @@ var mgbOverlay = {
 			
 			mgbOverlay.resize();
 			
+			that.addVideoEvents();
+			
 		},600);
 	},
+	addVideoEvents : function(){
+		// var that = this;
+		var iframe = $('#vimeoPlayer')[0];
+		var player = $f(iframe); 
+		
+		player.id = $(iframe).data('vimeoid');
+		player.progress = null;
+		
+		//console.log(iframe,player);
+		//console.log(player.id);
+		
+		player.addEvent('ready', function() {
+			//console.log('vimeo ready');
+
+			player.addEvent('pause', vimeoPaused);
+			player.addEvent('finish', vimeoComplete);
+			player.addEvent('playProgress', vimeoUpdate);
+			
+		});
+		
+		function vimeoPaused(data){
+			mgbMainSys.gaTracking('a|'+player.id+'|c');
+		};
+		
+		function vimeoComplete(data){
+			mgbMainSys.gaTracking('a|'+player.id+'|_COMOPLETE');
+		};
+		
+		function vimeoUpdate(data){
+			var progress = data.percent * 100;
+			if (progress > 0 && progress <= 25) {
+				if (player.progress !== 0 ) {
+					mgbMainSys.gaTracking('a|'+player.id+'|_STARTED');
+					player.progress = 0;
+				}
+			} else if (progress > 25 && progress <= 50) {
+				if (player.progress !== 25 ) {
+					mgbMainSys.gaTracking('a|'+player.id+'|_25');
+					player.progress = 25;
+				}
+			} else if (progress > 50 && progress <= 75) {
+				if (player.progress !== 50) {
+					mgbMainSys.gaTracking('a|'+player.id+'|_50');
+					player.progress = 50;
+				}
+			} else if (progress > 75) {
+				if (player.progress !== 75) {
+					mgbMainSys.gaTracking('a|'+player.id+'|_75');
+					player.progress = 75;
+				}
+			}
+		};
+	},
+	
 	removeVideo : function(){
 		$('.videoHolder').empty();
 		$('.videoHolder').removeAttr('style');
 		$('.videoHolder').removeClass('expanded');
 		$('#heroImage').removeClass('faded collapsed');
-		$('nav').removeClass('removed');
+		$('#Home').removeClass('removed');
 		$('.videoClose').removeClass('revealed');
 		
 		setTimeout(function(){

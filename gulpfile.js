@@ -32,6 +32,7 @@ var gulp = require('gulp'),
 var concatScripts = [
 	'src/js/lib/jquery-1.11.2.min.js',
 	'src/js/plugins/plugin.base.js',
+	'src/js/plugins/froogaloop.min.js',
 	'src/js/plugins/slick.min.js',
 	'src/js/plugins/lazysizes.min.js',
 	'src/js/plugins/jquery.fitvids.js',

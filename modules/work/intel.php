@@ -33,7 +33,7 @@
 		</div>
 		<div class="workThumbs">
 			<div class="workThumb">
-				<a data-content="144913605">
+				<a data-content="144913605" data-tracking-label="Intel|Click|Video1" aria-label="">
 					<img src="../assets/img/work_pages/intel_thumb01.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
@@ -44,7 +44,7 @@
 				</a>
 			</div>
 			<div class="workThumb">
-				<a data-content="144913607">
+				<a data-content="144913607" data-tracking-label="Intel|Click|Video2" aria-label="">
 					<img src="../assets/img/work_pages/intel_thumb02.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
@@ -55,7 +55,7 @@
 				</a>
 			</div>
 			<div class="workThumb">
-				<a data-content="119997282">
+				<a data-content="119997282" data-tracking-label="Intel|Click|Video3" aria-label="">
 					<img src="../assets/img/work_pages/intel_thumb03.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
