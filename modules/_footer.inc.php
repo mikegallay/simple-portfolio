@@ -9,7 +9,7 @@
 		
 		<div class="legal">
 			<p class="copyright">
-				&copy; mcgarrybowen All Rights Reserved. <a href="" data-tracking-label="Footer|Click|Terms">Terms of Use</a> / <a href="" data-tracking-label="Footer|Click|Privacy">Privacy Policy</a>
+				&copy; mcgarrybowen All Rights Reserved. <a href="" data-tracking-label="Footer|Click|TermsPrivacy">Terms of Use&nbsp;/&nbsp;Privacy Policy</a>
 			</p>
 		</div>
 	</div>
