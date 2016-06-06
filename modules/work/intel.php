@@ -6,7 +6,7 @@
 </div>
 
 <div class="videoHolder"></div>
-<div class="videoCloseButton">
+<div class="videoCloseButton shadow">
 	<a class="videoClose">
 		<svg class="icon more_button-inline" role="img" aria-labelledby="title">
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
