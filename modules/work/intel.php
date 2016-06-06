@@ -1,38 +1,62 @@
 <div id="heroImage">
 	<?php
-	pictureFillImage($appRoot.'assets/img/common/starrettLehigh','alt copy goes here')
+	pictureFillImage($appRoot.'assets/img/work_pages/intel','alt copy goes here')
 
 	?>
 </div>
 
-<section class="content">
-	<div class="overlayHeadline">
-		INTELLLL
-</div>	
-		<div class="row alignRight">
-			<div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/144913605?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><div class="vimeoTitle">title</div></div></div>
+<section class="workContainer">
+	<!-- <div class="returnHome">< Back </div> -->
+	<div class="workHeadline">
+		<h1>Innovation Adventure, TV & Video</h1>
+		<h2>Client: Intel</h2>
+	</div>
+	<div class="workDetails">
+		<div class="workCopy">
+			<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
+			<a href="" class="button">VIEW THE WEBSITE <span class="moreArrow">
+				<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+				</svg>
+			</span></a>
+					
+					<!-- <a href="../work/maserati">jump to maserati</a> -->
 		</div>
-		
-		<div class="row alignRight">
-			I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. 
+		<div class="workThumbs">
+			<!-- <div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/144913605?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div> -->
+			<div class="workThumb">
+				<a data-content="119997282">
+					<img src="../assets/img/work_pages/intel_thumb01.jpg" alt="">
+					<figcaption class="prjDescription">
+						<div class="prjDscrWrap">
+							<h3>Intel Commercial</h3>
+						</div>
+						<div class="cultureArrow"></div>
+					</figcaption>
+				</a>
+			</div>
+			<div class="workThumb">
+				<a data-content="119997282">
+					<img src="../assets/img/work_pages/intel_thumb02.jpg" alt="">
+					<figcaption class="prjDescription">
+						<div class="prjDscrWrap">
+							<h3>Intel Commercial</h3>
+						</div>
+						<div class="cultureArrow"></div>
+					</figcaption>
+				</a>
+			</div>
+			<div class="workThumb">
+				<a data-content="119997282">
+					<img src="../assets/img/work_pages/intel_thumb03.jpg" alt="">
+					<figcaption class="prjDescription">
+						<div class="prjDscrWrap">
+							<h3>Intel Commercial</h3>
+						</div>
+						<div class="cultureArrow"></div>
+					</figcaption>
+				</a>
+			</div>
 		</div>
-		
-		<div class="row alignRight">
-			I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. 
-		</div>
-		
-		<div class="row alignRight">
-			I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. 
-		</div>
-		
-		
-		
-		<div class="row alignRight">
-			I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. I'm OOO today and tomorrow and don't have an access to my work computer. Is it ok to send you the pad file on Monday? Otherwise I can ask someone else to drop it in the server. Let me know. 
-		</div>
-		
-		<div class="row alignRight">
-			<div class="vimeoSlide"><div class="vimeoHolder"><div class="vimeoVideo"><iframe src="https://player.vimeo.com/video/144913605?title=0&byline=0&portrait=0&badge=0&api=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><div class="vimeoTitle">title</div></div></div>
-		</div>
-	
+	</div>
 </section>

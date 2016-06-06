@@ -14,12 +14,13 @@
     width: 260px;
     height: 70px;
     display: inline-block;
-	margin-left:25px;
+	margin-left:7px;
+	position:relative;
 	transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	#mcgarryTXT{
 		top:36px;
-		left:33px;
+		left:7px;
 		position:absolute;
 
 		#m{
@@ -49,7 +50,7 @@
 	#bowenTXT{
 		position:absolute;
 		top:28px;
-		left:66px; 
+		left:40px; 
 
 		#b{
 			width:17px;
@@ -111,7 +112,8 @@ nav {
 	width:49px;
 	height:49px;
 	position:absolute;
-	right: 8px;
+	right: 15px;
+	top:8px;
 	display:inline-block;
 	cursor: pointer;
 	overflow:hidden;
@@ -262,7 +264,7 @@ ul.menu {
 }
 
 .videoHeader {
-	font-family: 'Din-Bold', Helvetica, Arial, san-serif;
+	font-family: 'Din-Bold', Helvetica, Arial, sans-serif;
 	font-size: 1.75em;
 	
 	display: inline-block;
@@ -325,7 +327,7 @@ ul.menu {
 		}
 
 		.headerHeroText {	
-			font-family: 'Din-Bold', san-serif;
+			font-family: 'Din-Bold', sans-serif;
 			position: relative;
 			font-size: 2em;
 			font-weight: bold;
@@ -407,69 +409,10 @@ ul.menu {
 	/* MB LOGO */
 
 	#mbLogo {
-	    overflow: hidden;
-	    width: 260px;
-	    height: 70px;
-	    display: inline-block;
 		margin-left:25px;
-		transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-	
-		#mcgarryTXT{
-			top:36px;
-			left:33px;
-			position:absolute;
 		
-			#m{
-				width:31px;
-				height:26px;
-				overflow:hidden;
-				position:absolute;
-			}
-		
-			#cgarryContainer{
-				width:0px;
-				height:26px;
-				left:30px;
-				overflow:hidden;
-				position:absolute;
-			
-				#cgarry{
-					width:102px;
-					height:26px;
-					left:0px;
-					overflow:hidden;
-					position:absolute;
-				}
-			}
-		}
 
-		#bowenTXT{
-			position:absolute;
-			top:28px;
-			left:66px; /*152px*/
 		
-			#b{
-				width:17px;
-				height:26px;
-				overflow:hidden;
-				position:absolute;
-			}
-		
-			#owenContainer{
-				width:0px;
-				height:26px;
-				left:18px;
-				overflow:hidden;
-				position:absolute;
-				#owen{
-					width:79px;
-					height:26px;
-					left:0px;
-					overflow:hidden;
-					position:absolute;
-				}
-			}
-		}
 	}
 
 	/* end MB LOGO */
@@ -510,7 +453,7 @@ ul.menu {
 			}
 		}
 		
-		&.overlayActive{
+		/*&.overlayActive{
 			background: rgba(107,109,111,1);
 			background: -moz-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
 			background: -webkit-gradient(left top, left bottom, color-stop(1%, rgba(107,109,111,1)), color-stop(68%, rgba(107,109,111,1)), color-stop(100%, rgba(107,109,111,0)));
@@ -520,7 +463,7 @@ ul.menu {
 			background: linear-gradient(to bottom, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6d6f', endColorstr='#6b6d6f', GradientType=0 );
 			
-		}
+		}*/
 
 		&.videoActive {
 			height: 100%;
@@ -536,7 +479,7 @@ ul.menu {
 
 	ul.menu {
 		background-color: transparent;
-		font-family: 'Din-Regular', san-serif;
+		font-family: 'Din-Regular', sans-serif;
 		height: 2.5em;
 		padding-left: 0;
 		padding-top: 0;

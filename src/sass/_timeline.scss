@@ -1,0 +1,54 @@
+.timelineDate {	
+	color: #58595b;
+	overflow: visible;
+	display: inline-block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	
+	&.align-left {
+		text-align: left;
+	}
+	
+	&.align-right {
+		text-align: right;
+	}	
+	
+	a {
+		position: relative;
+		left: -60px;
+		top: -10px;
+		color: #000000;
+		display: inline-block;
+		width: 65px;
+		text-decoration: none;
+		
+		.arrow {
+			width: 0;
+			height: 0;
+			border-style: solid;
+	
+			&.left {
+				display: inline-block;
+				border-width: 5px 10px 5px 0;
+				border-color: transparent #46ccc5 transparent transparent;
+				margin-right: 5px;
+			}
+	
+			&.right {
+				border-width: 5px 0 5px 10px;
+				border-color: transparent transparent transparent #46ccc5;
+				display: inline-block;
+				margin-left: 5px;
+			}
+	
+			&.bottom {
+				border-width: 10px 5px 0 5px;
+				border-color: #46ccc5 transparent transparent transparent;
+				margin: 0 auto;
+				margin-bottom: 0em;
+				display: block;
+			}
+		}
+	}
+}

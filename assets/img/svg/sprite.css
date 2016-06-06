@@ -119,8 +119,13 @@
 }
 
 .svg-mb_timeline_path-dims {
-	width: 2000px;
-	height: 327.83px;
+	width: 900px;
+	height: 292.5px;
+}
+
+.svg-mb_timeline_stroke-dims {
+	width: 600px;
+	height: 127.4px;
 }
 
 .svg-menu_dropdown_arrow-dims {

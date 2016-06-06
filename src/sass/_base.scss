@@ -105,11 +105,12 @@
 .glitch {
 	overflow:hidden;
 	margin: 0;
-	animation: spazz .2s steps(1);
+	animation: spazz .2s steps(1) infinite;
 	.fullColor{
 		visibility:visible!important;
 	}
 }
+
 
 .socialIcons .glitch,.copyright .glitch,.menu .glitch{
 	overflow:visible;
@@ -175,7 +176,7 @@ $filters: (
                 }
                 filter: unquote($filter_css_value);
                // background-color: hsl(random(360), 100%, 70%);
-                transform: translate(#{random(20) - 10}px, #{random(20) - 10}px) scale(random(8) / 100 + 1.01);
+                transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(10) / 100 + 1.02);
             }
         }
     }

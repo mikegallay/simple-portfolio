@@ -17,24 +17,24 @@ var mgbMainSys = {
 		// $('.fullBleed').addClass("glitch");
 		//setTimeout(function(){$('.fullBleed').removeClass("glitch");},1000);
 		
-		$('a').on('mouseover',function(){
-			that.addGlitch($(this));
-		})
+		/*$('a').on('mouseover',function(){
+			that.addGlitch($(this),250);
+		})*/
 	},
 	
-	addGlitch : function(tar){
+	addGlitch : function(tar,t){
 		$(tar).addClass("glitch");
+
 		setTimeout(function(){
 			$(tar).removeClass("glitch");
-			
-		},250);
+		},t);
 	},
 	
-	selectRandomItemToGlitch : function(el){
+	selectRandomItemToGlitch : function(el,t){
 		
 		var arr = el.split('|');
 		var index = Math.floor(Math.random()*arr.length);
-		this.addGlitch(arr[index]);
+		this.addGlitch(arr[index],t);
 		
 	},
 	
@@ -44,9 +44,9 @@ var mgbMainSys = {
 		
 		//header glitches
 		//offset by 1 second from the rest
-		setTimeout(function(){
+		/*setTimeout(function(){
 			that.selectRandomItemToGlitch('#mbLogo|.menu');
-		},1000);
+		},1000);*/
 		
 		setTimeout(function(){
 			
@@ -58,40 +58,61 @@ var mgbMainSys = {
 			for (var i=0;i<that.cLoaded;i++){
 				targets += '.cultureTile:nth-child('+i+') img|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+			}(targets));
 			
 			//work section
 			targets = '#OurWork .sectionHeading|#OurWork .moreButton|';
 			for (var i=0;i<that.pLoaded;i++){
 				targets += '.projectTile:nth-child('+i+') img|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+			}(targets));
+			
 			
 			//office section
 			targets = '#OurOffices .sectionHeading|';
 			for (var i=0;i<$('.officeTile').length;i++){
 				targets += '.officeTile:nth-child('+i+') img|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+			}(targets));
 			
 			//clients/jobs section
 			targets = '#OurClients .sectionHeading|.joinTeamCTA|';
 			for (var i=0;i<$('.clientLogo').length;i++){
 				targets += '.clientLogo:nth-child('+i+')|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			
+			(function(tars){
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
+			}(targets));
 			
 			//footer
 			targets = '.legal|';
 			for (var i=0;i<$('.socialIcons a').length;i++){
 				targets += '.socialIcons a:nth-child('+i+')|'
 			}
-			that.selectRandomItemToGlitch(targets);
+			that.selectRandomItemToGlitch(targets,250);
 			
-			that.initializeGlitches(1000 + Math.random() * 4000);
+			that.initializeGlitches(3000 + Math.random() * 2000);
 			
 		},t);
-		
+	
 	},
 	
 	addListeners : function(){
@@ -230,8 +251,11 @@ var mgbMainSys = {
 				$('nav a[href="#'+hashName+'"]').addClass('active');
 				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');			
 				
-				//location.hash = hashName;
-				console.log(hashName);
+				if(hashName === "Timeline") {
+					if(mgbTimeLine !== null) {
+						mgbTimeLine.drawTimeline();
+					}
+				}
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
@@ -290,6 +314,8 @@ var mgbMainSys = {
 		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
 			console.log("home already loaded");
+			
+			$('footer').removeAttr('style');
 			
 			$("nav").removeClass("overlayActive sticky");
 			
@@ -365,6 +391,8 @@ var mgbMainSys = {
 			}else{ //back to homepage
 				
 				// success =  $($.parseHTML(response)).filter("#mainContent");
+				
+				$('footer').removeAttr('style');
 			
 				mgbMainSys.mainContentLoaded = true;
 				
@@ -535,6 +563,19 @@ var mgbHeader = {
 	
 	hideLogo : function() {
 		if (!this.navContainer.hasClass('sticky')) this.logoAnimation.pause().reverse();
+	}
+};
+
+var mgbTimeLine = {
+	mgbtl: null,
+	timelineAnimation : new TimelineMax(),
+	init: function(){
+		mgbtl = $('#mb_timeline_path2');
+		TweenMax.set(mgbtl, {drawSVG: "100% 100%"});
+	},
+	
+	drawTimeline: function(){
+		TweenMax.to(mgbtl, 2, {drawSVG: "100% 0%", ease: Cubic.easeInOut});
 	}
 };
 
@@ -725,7 +766,7 @@ var mgbHeroVideo = {
 		if(this.giveFocus === true) {
 			// mgbHeader.messageContainer.focus();
 		}
-		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal');
+		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal',250);
 		mgbMainSys.initializeGlitches(2000);
 	},
 	
@@ -1128,8 +1169,10 @@ var mgbContent = {
 var mgbOverlay = {
     
     init: function() {
+		var that = this;
 		$("#overlayContent").addClass("active");
 		this.addListeners();
+		setTimeout(function(){that.resize();},50);
     },
 	
 	kill : function(){
@@ -1137,9 +1180,15 @@ var mgbOverlay = {
         $('#overlayCover').removeClass('active');
 	},
 	addListeners : function(){
-		$('.overlayHeadline').on('click',function(){
+		$('.returnHome').on('click',function(){
 			mgbMainSys.getPage(appRoot,true);
 		});
+	},
+	resize : function(){
+		$('footer').removeAttr('style');
+		var footerY = $('footer').position().top;
+		var footerH = lastWindowHeight - footerY;
+		$('footer').css('height',footerH+'px');
 	}
 };
 
@@ -1162,6 +1211,7 @@ if($("#homepage-flag").length > 0) { //this is the homepage
 mgbMainSys.init();
 mgbHeader.init();
 mgbHeroVideo.init();
+mgbTimeLine.init();
 
 if($("#homepage-flag").length > 0 && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
 
@@ -1212,6 +1262,8 @@ function resize(){
 	if (mgbMainSys.mainContentLoaded == true) {
 		mgbContent.resize();
 	}
+	
+	if ($('#overlayContent').hasClass('active')) mgbOverlay.resize();
 }
 
 // Prevent the page of jumping abruptly when loading from a hash
