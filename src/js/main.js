@@ -2,6 +2,7 @@
 var mgbMainSys = {
 	currPage: null,
 	mainContentLoaded: false,
+	mobileNavMaxWidth: 1024,
 	
 	//load targets for tiles
   	pLoadTarget: 6,
@@ -162,7 +163,7 @@ var mgbMainSys = {
 	},	
 	
 	checkTileLoad : function(){
-		if (lastWindowWidth > 1024){
+		if (lastWindowWidth > mgbMainSys.mobileNavMaxWidth){
 			//console.log("tile load >1024");
 			this.cLoadTarget = 7;
 			this.pLoadTarget = 6;
@@ -216,11 +217,11 @@ var mgbMainSys = {
 
 		if(currScroll > 60) {
 			if(!$('nav').hasClass("sticky")) {
-				$('nav').addClass("sticky");
+				if (lastWindowWidth > mgbMainSys.mobileNavMaxWidth) $('nav').addClass("sticky");
 		
 				$("#mbLogo").off('mouseout');
 		
-				if (lastWindowWidth >= 1024) mgbHeader.showLogo();
+				if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.showLogo();
 			}
 		} else {
 			if(!$('nav').hasClass("overlayActive")) {
@@ -228,7 +229,7 @@ var mgbMainSys = {
 				$('nav').removeClass("sticky");
 				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
 		
-				if (lastWindowWidth >= 1024) mgbHeader.hideLogo();
+				if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.hideLogo();
 			
 				/*$('#mbLogo').on('mouseover',function(){
 					mgbHeader.showLogo();
@@ -526,13 +527,13 @@ var mgbHeader = {
 	
 		$('#homeLogo').mouseover(function(){
 			// console.log("showLogo")
-			if (lastWindowWidth >= 1024) mgbHeader.showLogo();
+			if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.showLogo();
 		});
 
 		$('#homeLogo').mouseout(function(){
 			
 			// console.log("hideLogo")
-			if (lastWindowWidth >= 1024) mgbHeader.hideLogo();
+			if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.hideLogo();
 		});
 	},
 	
