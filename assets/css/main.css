@@ -995,6 +995,12 @@ a:active {
   margin-right: 0.5em;
 }
 
+.mb_timeline_path-inline {
+  fill: #46ccc5;
+  width: inherit;
+  height: inherit;
+}
+
 .alignRight {
   text-align: right;
 }
@@ -1076,800 +1082,796 @@ a:active {
 }
 
 @-webkit-keyframes spazz {
-  0% {
-    -webkit-filter:  hue-rotate(205.2deg);
-            filter:  hue-rotate(205.2deg);
-    -webkit-transform: translate(-2px, 3px) scale(1.1);
-            transform: translate(-2px, 3px) scale(1.1);
-  }
-  1% {
-    -webkit-filter:  saturate(6.13) hue-rotate(7.2deg);
-            filter:  saturate(6.13) hue-rotate(7.2deg);
-    -webkit-transform: translate(-1px, -1px) scale(1.08);
-            transform: translate(-1px, -1px) scale(1.08);
+  2% {
+    -webkit-filter:  hue-rotate(136.8deg);
+            filter:  hue-rotate(136.8deg);
+    -webkit-transform: translate(-4px, -3px) scale(1.12);
+            transform: translate(-4px, -3px) scale(1.12);
   }
   3% {
-    -webkit-filter:  hue-rotate(162deg);
-            filter:  hue-rotate(162deg);
-    -webkit-transform: translate(1px, -1px) scale(1.06);
-            transform: translate(1px, -1px) scale(1.06);
+    -webkit-filter:  hue-rotate(68.4deg);
+            filter:  hue-rotate(68.4deg);
+    -webkit-transform: translate(3px, -1px) scale(1.11);
+            transform: translate(3px, -1px) scale(1.11);
   }
-  10% {
-    -webkit-filter:  hue-rotate(122.4deg);
-            filter:  hue-rotate(122.4deg);
-    -webkit-transform: translate(-1px, 2px) scale(1.06);
-            transform: translate(-1px, 2px) scale(1.06);
-  }
-  13% {
-    -webkit-filter:  hue-rotate(68.4deg) brightness(47%);
-            filter:  hue-rotate(68.4deg) brightness(47%);
-    -webkit-transform: translate(0px, 4px) scale(1.04);
-            transform: translate(0px, 4px) scale(1.04);
-  }
-  14% {
-    -webkit-filter:  saturate(6.4) hue-rotate(237.6deg);
-            filter:  saturate(6.4) hue-rotate(237.6deg);
-    -webkit-transform: translate(0px, 2px) scale(1.11);
-            transform: translate(0px, 2px) scale(1.11);
-  }
-  16% {
-    -webkit-filter:  hue-rotate(208.8deg) contrast(6.67);
-            filter:  hue-rotate(208.8deg) contrast(6.67);
-    -webkit-transform: translate(5px, 2px) scale(1.04);
-            transform: translate(5px, 2px) scale(1.04);
-  }
-  17% {
-    -webkit-filter:  hue-rotate(39.6deg) brightness(65.5%);
-            filter:  hue-rotate(39.6deg) brightness(65.5%);
-    -webkit-transform: translate(3px, 3px) scale(1.04);
-            transform: translate(3px, 3px) scale(1.04);
-  }
-  18% {
-    -webkit-filter:  saturate(1.72) hue-rotate(133.2deg);
-            filter:  saturate(1.72) hue-rotate(133.2deg);
-    -webkit-transform: translate(-4px, -2px) scale(1.03);
-            transform: translate(-4px, -2px) scale(1.03);
-  }
-  20% {
-    -webkit-filter:  hue-rotate(111.6deg);
-            filter:  hue-rotate(111.6deg);
-    -webkit-transform: translate(-3px, 1px) scale(1.1);
-            transform: translate(-3px, 1px) scale(1.1);
-  }
-  21% {
-    -webkit-filter:  hue-rotate(270deg);
-            filter:  hue-rotate(270deg);
-    -webkit-transform: translate(-3px, 5px) scale(1.03);
-            transform: translate(-3px, 5px) scale(1.03);
-  }
-  24% {
-    -webkit-filter:  saturate(7.21) hue-rotate(169.2deg);
-            filter:  saturate(7.21) hue-rotate(169.2deg);
-    -webkit-transform: translate(3px, 3px) scale(1.08);
-            transform: translate(3px, 3px) scale(1.08);
-  }
-  25% {
-    -webkit-filter:  saturate(9.46) hue-rotate(129.6deg) contrast(9.64);
-            filter:  saturate(9.46) hue-rotate(129.6deg) contrast(9.64);
-    -webkit-transform: translate(4px, 0px) scale(1.08);
-            transform: translate(4px, 0px) scale(1.08);
-  }
-  26% {
-    -webkit-filter:  hue-rotate(255.6deg) contrast(5.23);
-            filter:  hue-rotate(255.6deg) contrast(5.23);
-    -webkit-transform: translate(1px, 0px) scale(1.07);
-            transform: translate(1px, 0px) scale(1.07);
-  }
-  28% {
-    -webkit-filter:  hue-rotate(241.2deg);
-            filter:  hue-rotate(241.2deg);
-    -webkit-transform: translate(2px, 4px) scale(1.11);
-            transform: translate(2px, 4px) scale(1.11);
-  }
-  30% {
-    -webkit-filter:  hue-rotate(115.2deg);
-            filter:  hue-rotate(115.2deg);
-    -webkit-transform: translate(4px, -2px) scale(1.12);
-            transform: translate(4px, -2px) scale(1.12);
-  }
-  31% {
-    -webkit-filter:  hue-rotate(126.0deg);
-            filter:  hue-rotate(126.0deg);
-    -webkit-transform: translate(-4px, 2px) scale(1.08);
-            transform: translate(-4px, 2px) scale(1.08);
-  }
-  33% {
-    -webkit-filter:  hue-rotate(50.4deg);
-            filter:  hue-rotate(50.4deg);
-    -webkit-transform: translate(1px, 2px) scale(1.05);
-            transform: translate(1px, 2px) scale(1.05);
-  }
-  34% {
-    -webkit-filter:  hue-rotate(360deg);
-            filter:  hue-rotate(360deg);
-    -webkit-transform: translate(-4px, 3px) scale(1.05);
-            transform: translate(-4px, 3px) scale(1.05);
-  }
-  35% {
-    -webkit-filter:  hue-rotate(57.6deg);
-            filter:  hue-rotate(57.6deg);
-    -webkit-transform: translate(3px, 3px) scale(1.07);
-            transform: translate(3px, 3px) scale(1.07);
-  }
-  36% {
-    -webkit-filter:  hue-rotate(21.6deg);
-            filter:  hue-rotate(21.6deg);
-    -webkit-transform: translate(1px, -3px) scale(1.07);
-            transform: translate(1px, -3px) scale(1.07);
-  }
-  38% {
-    -webkit-filter:  hue-rotate(259.2deg) contrast(7.39);
-            filter:  hue-rotate(259.2deg) contrast(7.39);
-    -webkit-transform: translate(5px, 4px) scale(1.04);
-            transform: translate(5px, 4px) scale(1.04);
-  }
-  39% {
-    -webkit-filter:  hue-rotate(75.6deg);
-            filter:  hue-rotate(75.6deg);
-    -webkit-transform: translate(4px, -3px) scale(1.06);
-            transform: translate(4px, -3px) scale(1.06);
-  }
-  41% {
-    -webkit-filter:  saturate(4.06) hue-rotate(244.8deg);
-            filter:  saturate(4.06) hue-rotate(244.8deg);
-    -webkit-transform: translate(0px, 1px) scale(1.08);
-            transform: translate(0px, 1px) scale(1.08);
-  }
-  42% {
-    -webkit-filter:  hue-rotate(176.4deg);
-            filter:  hue-rotate(176.4deg);
-    -webkit-transform: translate(5px, 4px) scale(1.11);
-            transform: translate(5px, 4px) scale(1.11);
-  }
-  44% {
-    -webkit-filter:  hue-rotate(50.4deg);
-            filter:  hue-rotate(50.4deg);
-    -webkit-transform: translate(1px, -2px) scale(1.09);
-            transform: translate(1px, -2px) scale(1.09);
-  }
-  46% {
-    -webkit-filter:  saturate(8.38) hue-rotate(111.6deg);
-            filter:  saturate(8.38) hue-rotate(111.6deg);
-    -webkit-transform: translate(4px, -1px) scale(1.05);
-            transform: translate(4px, -1px) scale(1.05);
-  }
-  48% {
-    -webkit-filter:  hue-rotate(190.8deg);
-            filter:  hue-rotate(190.8deg);
-    -webkit-transform: translate(5px, -1px) scale(1.04);
-            transform: translate(5px, -1px) scale(1.04);
-  }
-  49% {
-    -webkit-filter:  hue-rotate(194.4deg);
-            filter:  hue-rotate(194.4deg);
-    -webkit-transform: translate(2px, 0px) scale(1.06);
-            transform: translate(2px, 0px) scale(1.06);
-  }
-  50% {
-    -webkit-filter:  hue-rotate(46.8deg);
-            filter:  hue-rotate(46.8deg);
-    -webkit-transform: translate(4px, 4px) scale(1.12);
-            transform: translate(4px, 4px) scale(1.12);
-  }
-  51% {
-    -webkit-filter:  hue-rotate(349.2deg);
-            filter:  hue-rotate(349.2deg);
-    -webkit-transform: translate(1px, 2px) scale(1.04);
-            transform: translate(1px, 2px) scale(1.04);
-  }
-  52% {
-    -webkit-filter:  hue-rotate(50.4deg);
-            filter:  hue-rotate(50.4deg);
-    -webkit-transform: translate(-1px, -4px) scale(1.05);
-            transform: translate(-1px, -4px) scale(1.05);
-  }
-  53% {
-    -webkit-filter:  hue-rotate(223.2deg);
-            filter:  hue-rotate(223.2deg);
-    -webkit-transform: translate(0px, 4px) scale(1.05);
-            transform: translate(0px, 4px) scale(1.05);
-  }
-  54% {
-    -webkit-filter:  hue-rotate(57.6deg);
-            filter:  hue-rotate(57.6deg);
-    -webkit-transform: translate(2px, 3px) scale(1.11);
-            transform: translate(2px, 3px) scale(1.11);
-  }
-  55% {
-    -webkit-filter:  hue-rotate(223.2deg);
-            filter:  hue-rotate(223.2deg);
-    -webkit-transform: translate(-2px, -1px) scale(1.11);
-            transform: translate(-2px, -1px) scale(1.11);
-  }
-  56% {
-    -webkit-filter:  hue-rotate(129.6deg);
-            filter:  hue-rotate(129.6deg);
-    -webkit-transform: translate(-1px, -4px) scale(1.04);
-            transform: translate(-1px, -4px) scale(1.04);
-  }
-  58% {
-    -webkit-filter:  hue-rotate(349.2deg);
-            filter:  hue-rotate(349.2deg);
-    -webkit-transform: translate(1px, -2px) scale(1.11);
-            transform: translate(1px, -2px) scale(1.11);
-  }
-  59% {
-    -webkit-filter:  hue-rotate(18deg);
-            filter:  hue-rotate(18deg);
-    -webkit-transform: translate(1px, -4px) scale(1.1);
-            transform: translate(1px, -4px) scale(1.1);
-  }
-  60% {
-    -webkit-filter:  hue-rotate(244.8deg) contrast(3.52);
-            filter:  hue-rotate(244.8deg) contrast(3.52);
-    -webkit-transform: translate(-4px, 4px) scale(1.06);
-            transform: translate(-4px, 4px) scale(1.06);
-  }
-  61% {
-    -webkit-filter:  saturate(8.92) hue-rotate(288deg);
-            filter:  saturate(8.92) hue-rotate(288deg);
-    -webkit-transform: translate(-2px, -1px) scale(1.08);
-            transform: translate(-2px, -1px) scale(1.08);
-  }
-  64% {
-    -webkit-filter:  hue-rotate(90deg);
-            filter:  hue-rotate(90deg);
-    -webkit-transform: translate(0px, -4px) scale(1.06);
-            transform: translate(0px, -4px) scale(1.06);
-  }
-  65% {
-    -webkit-filter:  hue-rotate(82.8deg);
-            filter:  hue-rotate(82.8deg);
-    -webkit-transform: translate(1px, 4px) scale(1.06);
-            transform: translate(1px, 4px) scale(1.06);
-  }
-  66% {
-    -webkit-filter:  hue-rotate(90deg);
-            filter:  hue-rotate(90deg);
-    -webkit-transform: translate(5px, -1px) scale(1.05);
-            transform: translate(5px, -1px) scale(1.05);
-  }
-  67% {
-    -webkit-filter:  hue-rotate(190.8deg);
-            filter:  hue-rotate(190.8deg);
-    -webkit-transform: translate(-3px, -3px) scale(1.06);
-            transform: translate(-3px, -3px) scale(1.06);
-  }
-  68% {
-    -webkit-filter:  hue-rotate(126.0deg);
-            filter:  hue-rotate(126.0deg);
-    -webkit-transform: translate(2px, 4px) scale(1.08);
-            transform: translate(2px, 4px) scale(1.08);
-  }
-  69% {
-    -webkit-filter:  hue-rotate(118.8deg) contrast(4.69);
-            filter:  hue-rotate(118.8deg) contrast(4.69);
-    -webkit-transform: translate(0px, -1px) scale(1.05);
-            transform: translate(0px, -1px) scale(1.05);
-  }
-  70% {
-    -webkit-filter:  saturate(2.71) hue-rotate(187.2deg) contrast(3.52);
-            filter:  saturate(2.71) hue-rotate(187.2deg) contrast(3.52);
-    -webkit-transform: translate(0px, 1px) scale(1.05);
-            transform: translate(0px, 1px) scale(1.05);
-  }
-  71% {
-    -webkit-filter:  hue-rotate(338.4deg);
-            filter:  hue-rotate(338.4deg);
-    -webkit-transform: translate(-2px, -1px) scale(1.08);
-            transform: translate(-2px, -1px) scale(1.08);
-  }
-  72% {
-    -webkit-filter:  hue-rotate(352.8deg) contrast(2.53);
-            filter:  hue-rotate(352.8deg) contrast(2.53);
-    -webkit-transform: translate(2px, 1px) scale(1.04);
-            transform: translate(2px, 1px) scale(1.04);
-  }
-  73% {
-    -webkit-filter:  saturate(7.66) hue-rotate(270deg);
-            filter:  saturate(7.66) hue-rotate(270deg);
-    -webkit-transform: translate(-4px, -4px) scale(1.09);
-            transform: translate(-4px, -4px) scale(1.09);
-  }
-  74% {
-    -webkit-filter:  hue-rotate(151.2deg);
-            filter:  hue-rotate(151.2deg);
-    -webkit-transform: translate(4px, 2px) scale(1.09);
-            transform: translate(4px, 2px) scale(1.09);
-  }
-  75% {
-    -webkit-filter:  hue-rotate(280.8deg);
-            filter:  hue-rotate(280.8deg);
-    -webkit-transform: translate(-1px, -4px) scale(1.09);
-            transform: translate(-1px, -4px) scale(1.09);
-  }
-  76% {
-    -webkit-filter:  hue-rotate(205.2deg);
-            filter:  hue-rotate(205.2deg);
-    -webkit-transform: translate(5px, 1px) scale(1.09);
-            transform: translate(5px, 1px) scale(1.09);
-  }
-  77% {
-    -webkit-filter:  hue-rotate(162deg);
-            filter:  hue-rotate(162deg);
-    -webkit-transform: translate(-4px, -3px) scale(1.09);
-            transform: translate(-4px, -3px) scale(1.09);
-  }
-  78% {
-    -webkit-filter:  hue-rotate(309.6deg);
-            filter:  hue-rotate(309.6deg);
-    -webkit-transform: translate(0px, 3px) scale(1.12);
-            transform: translate(0px, 3px) scale(1.12);
-  }
-  82% {
-    -webkit-filter:  hue-rotate(334.8deg);
-            filter:  hue-rotate(334.8deg);
-    -webkit-transform: translate(-4px, 3px) scale(1.06);
-            transform: translate(-4px, 3px) scale(1.06);
-  }
-  84% {
-    -webkit-filter:  hue-rotate(54deg);
-            filter:  hue-rotate(54deg);
+  6% {
+    -webkit-filter:  saturate(1.54) hue-rotate(342deg);
+            filter:  saturate(1.54) hue-rotate(342deg);
     -webkit-transform: translate(-4px, 1px) scale(1.05);
             transform: translate(-4px, 1px) scale(1.05);
   }
-  85% {
-    -webkit-filter:  hue-rotate(277.2deg);
-            filter:  hue-rotate(277.2deg);
-    -webkit-transform: translate(-1px, 4px) scale(1.06);
-            transform: translate(-1px, 4px) scale(1.06);
+  7% {
+    -webkit-filter:  saturate(3.34) hue-rotate(57.6deg);
+            filter:  saturate(3.34) hue-rotate(57.6deg);
+    -webkit-transform: translate(2px, 0px) scale(1.08);
+            transform: translate(2px, 0px) scale(1.08);
   }
-  86% {
-    -webkit-filter:  hue-rotate(97.2deg);
-            filter:  hue-rotate(97.2deg);
-    -webkit-transform: translate(-4px, 1px) scale(1.09);
-            transform: translate(-4px, 1px) scale(1.09);
+  8% {
+    -webkit-filter:  hue-rotate(248.4deg);
+            filter:  hue-rotate(248.4deg);
+    -webkit-transform: translate(1px, -4px) scale(1.12);
+            transform: translate(1px, -4px) scale(1.12);
   }
-  87% {
-    -webkit-filter:  hue-rotate(295.2deg);
-            filter:  hue-rotate(295.2deg);
-    -webkit-transform: translate(2px, 5px) scale(1.11);
-            transform: translate(2px, 5px) scale(1.11);
+  10% {
+    -webkit-filter:  hue-rotate(288deg) contrast(5.86);
+            filter:  hue-rotate(288deg) contrast(5.86);
+    -webkit-transform: translate(3px, 4px) scale(1.03);
+            transform: translate(3px, 4px) scale(1.03);
   }
-  89% {
-    -webkit-filter:  hue-rotate(270deg);
-            filter:  hue-rotate(270deg);
-    -webkit-transform: translate(-4px, 4px) scale(1.1);
-            transform: translate(-4px, 4px) scale(1.1);
+  11% {
+    -webkit-filter:  hue-rotate(158.4deg);
+            filter:  hue-rotate(158.4deg);
+    -webkit-transform: translate(0px, 0px) scale(1.12);
+            transform: translate(0px, 0px) scale(1.12);
   }
-  94% {
-    -webkit-filter:  hue-rotate(284.4deg);
-            filter:  hue-rotate(284.4deg);
-    -webkit-transform: translate(0px, 2px) scale(1.08);
-            transform: translate(0px, 2px) scale(1.08);
+  12% {
+    -webkit-filter:  hue-rotate(183.6deg);
+            filter:  hue-rotate(183.6deg);
+    -webkit-transform: translate(3px, 5px) scale(1.11);
+            transform: translate(3px, 5px) scale(1.11);
   }
-  95% {
-    -webkit-filter:  hue-rotate(345.6deg);
-            filter:  hue-rotate(345.6deg);
+  13% {
+    -webkit-filter:  saturate(3.97) hue-rotate(316.8deg);
+            filter:  saturate(3.97) hue-rotate(316.8deg);
+    -webkit-transform: translate(-2px, 1px) scale(1.11);
+            transform: translate(-2px, 1px) scale(1.11);
+  }
+  14% {
+    -webkit-filter:  hue-rotate(219.6deg);
+            filter:  hue-rotate(219.6deg);
+    -webkit-transform: translate(0px, 2px) scale(1.03);
+            transform: translate(0px, 2px) scale(1.03);
+  }
+  15% {
+    -webkit-filter:  hue-rotate(90deg);
+            filter:  hue-rotate(90deg);
+    -webkit-transform: translate(5px, 1px) scale(1.09);
+            transform: translate(5px, 1px) scale(1.09);
+  }
+  16% {
+    -webkit-filter:  hue-rotate(7.2deg);
+            filter:  hue-rotate(7.2deg);
+    -webkit-transform: translate(-2px, -2px) scale(1.11);
+            transform: translate(-2px, -2px) scale(1.11);
+  }
+  17% {
+    -webkit-filter:  hue-rotate(324deg);
+            filter:  hue-rotate(324deg);
+    -webkit-transform: translate(-3px, 1px) scale(1.11);
+            transform: translate(-3px, 1px) scale(1.11);
+  }
+  19% {
+    -webkit-filter:  hue-rotate(108deg);
+            filter:  hue-rotate(108deg);
+    -webkit-transform: translate(1px, 3px) scale(1.05);
+            transform: translate(1px, 3px) scale(1.05);
+  }
+  21% {
+    -webkit-filter:  saturate(7.75) hue-rotate(334.8deg) contrast(4.87);
+            filter:  saturate(7.75) hue-rotate(334.8deg) contrast(4.87);
+    -webkit-transform: translate(5px, -4px) scale(1.1);
+            transform: translate(5px, -4px) scale(1.1);
+  }
+  22% {
+    -webkit-filter:  hue-rotate(115.2deg);
+            filter:  hue-rotate(115.2deg);
+    -webkit-transform: translate(2px, -3px) scale(1.12);
+            transform: translate(2px, -3px) scale(1.12);
+  }
+  23% {
+    -webkit-filter:  hue-rotate(338.4deg) contrast(4.51);
+            filter:  hue-rotate(338.4deg) contrast(4.51);
+    -webkit-transform: translate(-1px, -2px) scale(1.03);
+            transform: translate(-1px, -2px) scale(1.03);
+  }
+  24% {
+    -webkit-filter:  hue-rotate(111.6deg);
+            filter:  hue-rotate(111.6deg);
+    -webkit-transform: translate(1px, 1px) scale(1.05);
+            transform: translate(1px, 1px) scale(1.05);
+  }
+  25% {
+    -webkit-filter:  hue-rotate(201.6deg);
+            filter:  hue-rotate(201.6deg);
+    -webkit-transform: translate(-3px, 3px) scale(1.03);
+            transform: translate(-3px, 3px) scale(1.03);
+  }
+  26% {
+    -webkit-filter:  hue-rotate(266.4deg);
+            filter:  hue-rotate(266.4deg);
+    -webkit-transform: translate(-2px, -4px) scale(1.04);
+            transform: translate(-2px, -4px) scale(1.04);
+  }
+  27% {
+    -webkit-filter:  hue-rotate(172.8deg);
+            filter:  hue-rotate(172.8deg);
+    -webkit-transform: translate(-1px, 2px) scale(1.09);
+            transform: translate(-1px, 2px) scale(1.09);
+  }
+  29% {
+    -webkit-filter:  hue-rotate(306deg);
+            filter:  hue-rotate(306deg);
     -webkit-transform: translate(2px, 2px) scale(1.08);
             transform: translate(2px, 2px) scale(1.08);
   }
-  96% {
-    -webkit-filter:  hue-rotate(291.6deg) invert(1);
-            filter:  hue-rotate(291.6deg) invert(1);
-    -webkit-transform: translate(4px, 2px) scale(1.11);
-            transform: translate(4px, 2px) scale(1.11);
+  30% {
+    -webkit-filter:  hue-rotate(39.6deg) contrast(5.86);
+            filter:  hue-rotate(39.6deg) contrast(5.86);
+    -webkit-transform: translate(5px, -3px) scale(1.07);
+            transform: translate(5px, -3px) scale(1.07);
   }
-  99% {
-    -webkit-filter:  hue-rotate(36deg);
-            filter:  hue-rotate(36deg);
-    -webkit-transform: translate(5px, 5px) scale(1.03);
-            transform: translate(5px, 5px) scale(1.03);
+  31% {
+    -webkit-filter:  hue-rotate(302.4deg);
+            filter:  hue-rotate(302.4deg);
+    -webkit-transform: translate(-3px, -4px) scale(1.07);
+            transform: translate(-3px, -4px) scale(1.07);
+  }
+  33% {
+    -webkit-filter:  hue-rotate(194.4deg) invert(1);
+            filter:  hue-rotate(194.4deg) invert(1);
+    -webkit-transform: translate(2px, 4px) scale(1.12);
+            transform: translate(2px, 4px) scale(1.12);
+  }
+  35% {
+    -webkit-transform: translate(0px, 5px) scale(1.09);
+            transform: translate(0px, 5px) scale(1.09);
+  }
+  37% {
+    -webkit-filter:  hue-rotate(280.8deg);
+            filter:  hue-rotate(280.8deg);
+    -webkit-transform: translate(1px, -2px) scale(1.12);
+            transform: translate(1px, -2px) scale(1.12);
+  }
+  38% {
+    -webkit-filter:  saturate(6.94) hue-rotate(43.2deg);
+            filter:  saturate(6.94) hue-rotate(43.2deg);
+    -webkit-transform: translate(-1px, 2px) scale(1.12);
+            transform: translate(-1px, 2px) scale(1.12);
+  }
+  40% {
+    -webkit-filter:  hue-rotate(288deg);
+            filter:  hue-rotate(288deg);
+    -webkit-transform: translate(1px, 3px) scale(1.09);
+            transform: translate(1px, 3px) scale(1.09);
+  }
+  41% {
+    -webkit-filter:  hue-rotate(352.8deg);
+            filter:  hue-rotate(352.8deg);
+    -webkit-transform: translate(-1px, 3px) scale(1.11);
+            transform: translate(-1px, 3px) scale(1.11);
+  }
+  42% {
+    -webkit-filter:  hue-rotate(122.4deg);
+            filter:  hue-rotate(122.4deg);
+    -webkit-transform: translate(1px, 0px) scale(1.1);
+            transform: translate(1px, 0px) scale(1.1);
+  }
+  43% {
+    -webkit-filter:  saturate(8.92) hue-rotate(194.4deg);
+            filter:  saturate(8.92) hue-rotate(194.4deg);
+    -webkit-transform: translate(-4px, 3px) scale(1.07);
+            transform: translate(-4px, 3px) scale(1.07);
+  }
+  44% {
+    -webkit-filter:  hue-rotate(158.4deg);
+            filter:  hue-rotate(158.4deg);
+    -webkit-transform: translate(2px, 4px) scale(1.04);
+            transform: translate(2px, 4px) scale(1.04);
+  }
+  45% {
+    -webkit-filter:  saturate(4.6) hue-rotate(230.4deg);
+            filter:  saturate(4.6) hue-rotate(230.4deg);
+    -webkit-transform: translate(-4px, 1px) scale(1.12);
+            transform: translate(-4px, 1px) scale(1.12);
+  }
+  46% {
+    -webkit-filter:  saturate(2.35) hue-rotate(226.8deg);
+            filter:  saturate(2.35) hue-rotate(226.8deg);
+    -webkit-transform: translate(3px, -4px) scale(1.11);
+            transform: translate(3px, -4px) scale(1.11);
+  }
+  47% {
+    -webkit-filter:  hue-rotate(248.4deg);
+            filter:  hue-rotate(248.4deg);
+    -webkit-transform: translate(-3px, -2px) scale(1.04);
+            transform: translate(-3px, -2px) scale(1.04);
+  }
+  49% {
+    -webkit-filter:  hue-rotate(295.2deg);
+            filter:  hue-rotate(295.2deg);
+    -webkit-transform: translate(5px, -3px) scale(1.04);
+            transform: translate(5px, -3px) scale(1.04);
+  }
+  50% {
+    -webkit-filter:  hue-rotate(349.2deg);
+            filter:  hue-rotate(349.2deg);
+    -webkit-transform: translate(-1px, -3px) scale(1.06);
+            transform: translate(-1px, -3px) scale(1.06);
+  }
+  51% {
+    -webkit-filter:  hue-rotate(306deg);
+            filter:  hue-rotate(306deg);
+    -webkit-transform: translate(3px, 1px) scale(1.11);
+            transform: translate(3px, 1px) scale(1.11);
+  }
+  52% {
+    -webkit-filter:  hue-rotate(43.2deg);
+            filter:  hue-rotate(43.2deg);
+    -webkit-transform: translate(0px, 0px) scale(1.11);
+            transform: translate(0px, 0px) scale(1.11);
+  }
+  54% {
+    -webkit-filter:  hue-rotate(183.6deg);
+            filter:  hue-rotate(183.6deg);
+    -webkit-transform: translate(4px, 2px) scale(1.04);
+            transform: translate(4px, 2px) scale(1.04);
+  }
+  56% {
+    -webkit-filter:  hue-rotate(183.6deg);
+            filter:  hue-rotate(183.6deg);
+    -webkit-transform: translate(1px, -3px) scale(1.09);
+            transform: translate(1px, -3px) scale(1.09);
+  }
+  57% {
+    -webkit-filter:  hue-rotate(212.4deg);
+            filter:  hue-rotate(212.4deg);
+    -webkit-transform: translate(1px, 0px) scale(1.06);
+            transform: translate(1px, 0px) scale(1.06);
+  }
+  59% {
+    -webkit-filter:  hue-rotate(93.6deg);
+            filter:  hue-rotate(93.6deg);
+    -webkit-transform: translate(5px, 3px) scale(1.08);
+            transform: translate(5px, 3px) scale(1.08);
+  }
+  60% {
+    -webkit-filter:  hue-rotate(259.2deg);
+            filter:  hue-rotate(259.2deg);
+    -webkit-transform: translate(-2px, 2px) scale(1.11);
+            transform: translate(-2px, 2px) scale(1.11);
+  }
+  61% {
+    -webkit-filter:  hue-rotate(21.6deg);
+            filter:  hue-rotate(21.6deg);
+    -webkit-transform: translate(2px, 3px) scale(1.09);
+            transform: translate(2px, 3px) scale(1.09);
+  }
+  63% {
+    -webkit-filter:  hue-rotate(108deg);
+            filter:  hue-rotate(108deg);
+    -webkit-transform: translate(3px, -1px) scale(1.06);
+            transform: translate(3px, -1px) scale(1.06);
+  }
+  65% {
+    -webkit-filter:  hue-rotate(7.2deg) contrast(7.57);
+            filter:  hue-rotate(7.2deg) contrast(7.57);
+    -webkit-transform: translate(4px, -2px) scale(1.12);
+            transform: translate(4px, -2px) scale(1.12);
+  }
+  66% {
+    -webkit-filter:  hue-rotate(212.4deg);
+            filter:  hue-rotate(212.4deg);
+    -webkit-transform: translate(-4px, -1px) scale(1.09);
+            transform: translate(-4px, -1px) scale(1.09);
+  }
+  69% {
+    -webkit-filter:  hue-rotate(277.2deg);
+            filter:  hue-rotate(277.2deg);
+    -webkit-transform: translate(3px, 1px) scale(1.03);
+            transform: translate(3px, 1px) scale(1.03);
+  }
+  70% {
+    -webkit-filter:  hue-rotate(302.4deg) invert(1) brightness(40.5%);
+            filter:  hue-rotate(302.4deg) invert(1) brightness(40.5%);
+    -webkit-transform: translate(-1px, 1px) scale(1.03);
+            transform: translate(-1px, 1px) scale(1.03);
+  }
+  71% {
+    -webkit-filter:  hue-rotate(21.6deg);
+            filter:  hue-rotate(21.6deg);
+    -webkit-transform: translate(-4px, 3px) scale(1.08);
+            transform: translate(-4px, 3px) scale(1.08);
+  }
+  72% {
+    -webkit-filter:  hue-rotate(226.8deg);
+            filter:  hue-rotate(226.8deg);
+    -webkit-transform: translate(-3px, -4px) scale(1.05);
+            transform: translate(-3px, -4px) scale(1.05);
+  }
+  73% {
+    -webkit-filter:  saturate(8.83) hue-rotate(284.4deg);
+            filter:  saturate(8.83) hue-rotate(284.4deg);
+    -webkit-transform: translate(0px, 0px) scale(1.05);
+            transform: translate(0px, 0px) scale(1.05);
+  }
+  76% {
+    -webkit-filter:  hue-rotate(122.4deg);
+            filter:  hue-rotate(122.4deg);
+    -webkit-transform: translate(-4px, 3px) scale(1.1);
+            transform: translate(-4px, 3px) scale(1.1);
+  }
+  77% {
+    -webkit-filter:  hue-rotate(201.6deg);
+            filter:  hue-rotate(201.6deg);
+    -webkit-transform: translate(2px, 5px) scale(1.11);
+            transform: translate(2px, 5px) scale(1.11);
+  }
+  78% {
+    -webkit-filter:  hue-rotate(54deg);
+            filter:  hue-rotate(54deg);
+    -webkit-transform: translate(-2px, 1px) scale(1.05);
+            transform: translate(-2px, 1px) scale(1.05);
+  }
+  83% {
+    -webkit-filter:  hue-rotate(223.2deg) contrast(3.88);
+            filter:  hue-rotate(223.2deg) contrast(3.88);
+    -webkit-transform: translate(5px, -4px) scale(1.06);
+            transform: translate(5px, -4px) scale(1.06);
+  }
+  86% {
+    -webkit-filter:  hue-rotate(208.8deg);
+            filter:  hue-rotate(208.8deg);
+    -webkit-transform: translate(-2px, -2px) scale(1.1);
+            transform: translate(-2px, -2px) scale(1.1);
+  }
+  87% {
+    -webkit-filter:  hue-rotate(144deg) contrast(2.71);
+            filter:  hue-rotate(144deg) contrast(2.71);
+    -webkit-transform: translate(0px, 4px) scale(1.05);
+            transform: translate(0px, 4px) scale(1.05);
+  }
+  88% {
+    -webkit-filter:  saturate(2.62) hue-rotate(244.8deg);
+            filter:  saturate(2.62) hue-rotate(244.8deg);
+    -webkit-transform: translate(-2px, -1px) scale(1.07);
+            transform: translate(-2px, -1px) scale(1.07);
+  }
+  91% {
+    -webkit-filter:  hue-rotate(3.6deg);
+            filter:  hue-rotate(3.6deg);
+    -webkit-transform: translate(3px, -3px) scale(1.11);
+            transform: translate(3px, -3px) scale(1.11);
+  }
+  93% {
+    -webkit-filter:  saturate(10) hue-rotate(306deg);
+            filter:  saturate(10) hue-rotate(306deg);
+    -webkit-transform: translate(3px, 0px) scale(1.12);
+            transform: translate(3px, 0px) scale(1.12);
+  }
+  95% {
+    -webkit-filter:  hue-rotate(309.6deg) brightness(65.5%);
+            filter:  hue-rotate(309.6deg) brightness(65.5%);
+    -webkit-transform: translate(-2px, -2px) scale(1.07);
+            transform: translate(-2px, -2px) scale(1.07);
+  }
+  98% {
+    -webkit-filter:  hue-rotate(288deg);
+            filter:  hue-rotate(288deg);
+    -webkit-transform: translate(2px, 3px) scale(1.1);
+            transform: translate(2px, 3px) scale(1.1);
   }
   100% {
-    -webkit-filter:  hue-rotate(111.6deg) contrast(1.54);
-            filter:  hue-rotate(111.6deg) contrast(1.54);
-    -webkit-transform: translate(3px, -3px) scale(1.03);
-            transform: translate(3px, -3px) scale(1.03);
+    -webkit-filter:  saturate(1.72) hue-rotate(266.4deg);
+            filter:  saturate(1.72) hue-rotate(266.4deg);
+    -webkit-transform: translate(2px, -3px) scale(1.1);
+            transform: translate(2px, -3px) scale(1.1);
   }
 }
 
 @keyframes spazz {
-  0% {
-    -webkit-filter:  hue-rotate(205.2deg);
-            filter:  hue-rotate(205.2deg);
-    -webkit-transform: translate(-2px, 3px) scale(1.1);
-            transform: translate(-2px, 3px) scale(1.1);
-  }
-  1% {
-    -webkit-filter:  saturate(6.13) hue-rotate(7.2deg);
-            filter:  saturate(6.13) hue-rotate(7.2deg);
-    -webkit-transform: translate(-1px, -1px) scale(1.08);
-            transform: translate(-1px, -1px) scale(1.08);
+  2% {
+    -webkit-filter:  hue-rotate(136.8deg);
+            filter:  hue-rotate(136.8deg);
+    -webkit-transform: translate(-4px, -3px) scale(1.12);
+            transform: translate(-4px, -3px) scale(1.12);
   }
   3% {
-    -webkit-filter:  hue-rotate(162deg);
-            filter:  hue-rotate(162deg);
-    -webkit-transform: translate(1px, -1px) scale(1.06);
-            transform: translate(1px, -1px) scale(1.06);
+    -webkit-filter:  hue-rotate(68.4deg);
+            filter:  hue-rotate(68.4deg);
+    -webkit-transform: translate(3px, -1px) scale(1.11);
+            transform: translate(3px, -1px) scale(1.11);
   }
-  10% {
-    -webkit-filter:  hue-rotate(122.4deg);
-            filter:  hue-rotate(122.4deg);
-    -webkit-transform: translate(-1px, 2px) scale(1.06);
-            transform: translate(-1px, 2px) scale(1.06);
-  }
-  13% {
-    -webkit-filter:  hue-rotate(68.4deg) brightness(47%);
-            filter:  hue-rotate(68.4deg) brightness(47%);
-    -webkit-transform: translate(0px, 4px) scale(1.04);
-            transform: translate(0px, 4px) scale(1.04);
-  }
-  14% {
-    -webkit-filter:  saturate(6.4) hue-rotate(237.6deg);
-            filter:  saturate(6.4) hue-rotate(237.6deg);
-    -webkit-transform: translate(0px, 2px) scale(1.11);
-            transform: translate(0px, 2px) scale(1.11);
-  }
-  16% {
-    -webkit-filter:  hue-rotate(208.8deg) contrast(6.67);
-            filter:  hue-rotate(208.8deg) contrast(6.67);
-    -webkit-transform: translate(5px, 2px) scale(1.04);
-            transform: translate(5px, 2px) scale(1.04);
-  }
-  17% {
-    -webkit-filter:  hue-rotate(39.6deg) brightness(65.5%);
-            filter:  hue-rotate(39.6deg) brightness(65.5%);
-    -webkit-transform: translate(3px, 3px) scale(1.04);
-            transform: translate(3px, 3px) scale(1.04);
-  }
-  18% {
-    -webkit-filter:  saturate(1.72) hue-rotate(133.2deg);
-            filter:  saturate(1.72) hue-rotate(133.2deg);
-    -webkit-transform: translate(-4px, -2px) scale(1.03);
-            transform: translate(-4px, -2px) scale(1.03);
-  }
-  20% {
-    -webkit-filter:  hue-rotate(111.6deg);
-            filter:  hue-rotate(111.6deg);
-    -webkit-transform: translate(-3px, 1px) scale(1.1);
-            transform: translate(-3px, 1px) scale(1.1);
-  }
-  21% {
-    -webkit-filter:  hue-rotate(270deg);
-            filter:  hue-rotate(270deg);
-    -webkit-transform: translate(-3px, 5px) scale(1.03);
-            transform: translate(-3px, 5px) scale(1.03);
-  }
-  24% {
-    -webkit-filter:  saturate(7.21) hue-rotate(169.2deg);
-            filter:  saturate(7.21) hue-rotate(169.2deg);
-    -webkit-transform: translate(3px, 3px) scale(1.08);
-            transform: translate(3px, 3px) scale(1.08);
-  }
-  25% {
-    -webkit-filter:  saturate(9.46) hue-rotate(129.6deg) contrast(9.64);
-            filter:  saturate(9.46) hue-rotate(129.6deg) contrast(9.64);
-    -webkit-transform: translate(4px, 0px) scale(1.08);
-            transform: translate(4px, 0px) scale(1.08);
-  }
-  26% {
-    -webkit-filter:  hue-rotate(255.6deg) contrast(5.23);
-            filter:  hue-rotate(255.6deg) contrast(5.23);
-    -webkit-transform: translate(1px, 0px) scale(1.07);
-            transform: translate(1px, 0px) scale(1.07);
-  }
-  28% {
-    -webkit-filter:  hue-rotate(241.2deg);
-            filter:  hue-rotate(241.2deg);
-    -webkit-transform: translate(2px, 4px) scale(1.11);
-            transform: translate(2px, 4px) scale(1.11);
-  }
-  30% {
-    -webkit-filter:  hue-rotate(115.2deg);
-            filter:  hue-rotate(115.2deg);
-    -webkit-transform: translate(4px, -2px) scale(1.12);
-            transform: translate(4px, -2px) scale(1.12);
-  }
-  31% {
-    -webkit-filter:  hue-rotate(126.0deg);
-            filter:  hue-rotate(126.0deg);
-    -webkit-transform: translate(-4px, 2px) scale(1.08);
-            transform: translate(-4px, 2px) scale(1.08);
-  }
-  33% {
-    -webkit-filter:  hue-rotate(50.4deg);
-            filter:  hue-rotate(50.4deg);
-    -webkit-transform: translate(1px, 2px) scale(1.05);
-            transform: translate(1px, 2px) scale(1.05);
-  }
-  34% {
-    -webkit-filter:  hue-rotate(360deg);
-            filter:  hue-rotate(360deg);
-    -webkit-transform: translate(-4px, 3px) scale(1.05);
-            transform: translate(-4px, 3px) scale(1.05);
-  }
-  35% {
-    -webkit-filter:  hue-rotate(57.6deg);
-            filter:  hue-rotate(57.6deg);
-    -webkit-transform: translate(3px, 3px) scale(1.07);
-            transform: translate(3px, 3px) scale(1.07);
-  }
-  36% {
-    -webkit-filter:  hue-rotate(21.6deg);
-            filter:  hue-rotate(21.6deg);
-    -webkit-transform: translate(1px, -3px) scale(1.07);
-            transform: translate(1px, -3px) scale(1.07);
-  }
-  38% {
-    -webkit-filter:  hue-rotate(259.2deg) contrast(7.39);
-            filter:  hue-rotate(259.2deg) contrast(7.39);
-    -webkit-transform: translate(5px, 4px) scale(1.04);
-            transform: translate(5px, 4px) scale(1.04);
-  }
-  39% {
-    -webkit-filter:  hue-rotate(75.6deg);
-            filter:  hue-rotate(75.6deg);
-    -webkit-transform: translate(4px, -3px) scale(1.06);
-            transform: translate(4px, -3px) scale(1.06);
-  }
-  41% {
-    -webkit-filter:  saturate(4.06) hue-rotate(244.8deg);
-            filter:  saturate(4.06) hue-rotate(244.8deg);
-    -webkit-transform: translate(0px, 1px) scale(1.08);
-            transform: translate(0px, 1px) scale(1.08);
-  }
-  42% {
-    -webkit-filter:  hue-rotate(176.4deg);
-            filter:  hue-rotate(176.4deg);
-    -webkit-transform: translate(5px, 4px) scale(1.11);
-            transform: translate(5px, 4px) scale(1.11);
-  }
-  44% {
-    -webkit-filter:  hue-rotate(50.4deg);
-            filter:  hue-rotate(50.4deg);
-    -webkit-transform: translate(1px, -2px) scale(1.09);
-            transform: translate(1px, -2px) scale(1.09);
-  }
-  46% {
-    -webkit-filter:  saturate(8.38) hue-rotate(111.6deg);
-            filter:  saturate(8.38) hue-rotate(111.6deg);
-    -webkit-transform: translate(4px, -1px) scale(1.05);
-            transform: translate(4px, -1px) scale(1.05);
-  }
-  48% {
-    -webkit-filter:  hue-rotate(190.8deg);
-            filter:  hue-rotate(190.8deg);
-    -webkit-transform: translate(5px, -1px) scale(1.04);
-            transform: translate(5px, -1px) scale(1.04);
-  }
-  49% {
-    -webkit-filter:  hue-rotate(194.4deg);
-            filter:  hue-rotate(194.4deg);
-    -webkit-transform: translate(2px, 0px) scale(1.06);
-            transform: translate(2px, 0px) scale(1.06);
-  }
-  50% {
-    -webkit-filter:  hue-rotate(46.8deg);
-            filter:  hue-rotate(46.8deg);
-    -webkit-transform: translate(4px, 4px) scale(1.12);
-            transform: translate(4px, 4px) scale(1.12);
-  }
-  51% {
-    -webkit-filter:  hue-rotate(349.2deg);
-            filter:  hue-rotate(349.2deg);
-    -webkit-transform: translate(1px, 2px) scale(1.04);
-            transform: translate(1px, 2px) scale(1.04);
-  }
-  52% {
-    -webkit-filter:  hue-rotate(50.4deg);
-            filter:  hue-rotate(50.4deg);
-    -webkit-transform: translate(-1px, -4px) scale(1.05);
-            transform: translate(-1px, -4px) scale(1.05);
-  }
-  53% {
-    -webkit-filter:  hue-rotate(223.2deg);
-            filter:  hue-rotate(223.2deg);
-    -webkit-transform: translate(0px, 4px) scale(1.05);
-            transform: translate(0px, 4px) scale(1.05);
-  }
-  54% {
-    -webkit-filter:  hue-rotate(57.6deg);
-            filter:  hue-rotate(57.6deg);
-    -webkit-transform: translate(2px, 3px) scale(1.11);
-            transform: translate(2px, 3px) scale(1.11);
-  }
-  55% {
-    -webkit-filter:  hue-rotate(223.2deg);
-            filter:  hue-rotate(223.2deg);
-    -webkit-transform: translate(-2px, -1px) scale(1.11);
-            transform: translate(-2px, -1px) scale(1.11);
-  }
-  56% {
-    -webkit-filter:  hue-rotate(129.6deg);
-            filter:  hue-rotate(129.6deg);
-    -webkit-transform: translate(-1px, -4px) scale(1.04);
-            transform: translate(-1px, -4px) scale(1.04);
-  }
-  58% {
-    -webkit-filter:  hue-rotate(349.2deg);
-            filter:  hue-rotate(349.2deg);
-    -webkit-transform: translate(1px, -2px) scale(1.11);
-            transform: translate(1px, -2px) scale(1.11);
-  }
-  59% {
-    -webkit-filter:  hue-rotate(18deg);
-            filter:  hue-rotate(18deg);
-    -webkit-transform: translate(1px, -4px) scale(1.1);
-            transform: translate(1px, -4px) scale(1.1);
-  }
-  60% {
-    -webkit-filter:  hue-rotate(244.8deg) contrast(3.52);
-            filter:  hue-rotate(244.8deg) contrast(3.52);
-    -webkit-transform: translate(-4px, 4px) scale(1.06);
-            transform: translate(-4px, 4px) scale(1.06);
-  }
-  61% {
-    -webkit-filter:  saturate(8.92) hue-rotate(288deg);
-            filter:  saturate(8.92) hue-rotate(288deg);
-    -webkit-transform: translate(-2px, -1px) scale(1.08);
-            transform: translate(-2px, -1px) scale(1.08);
-  }
-  64% {
-    -webkit-filter:  hue-rotate(90deg);
-            filter:  hue-rotate(90deg);
-    -webkit-transform: translate(0px, -4px) scale(1.06);
-            transform: translate(0px, -4px) scale(1.06);
-  }
-  65% {
-    -webkit-filter:  hue-rotate(82.8deg);
-            filter:  hue-rotate(82.8deg);
-    -webkit-transform: translate(1px, 4px) scale(1.06);
-            transform: translate(1px, 4px) scale(1.06);
-  }
-  66% {
-    -webkit-filter:  hue-rotate(90deg);
-            filter:  hue-rotate(90deg);
-    -webkit-transform: translate(5px, -1px) scale(1.05);
-            transform: translate(5px, -1px) scale(1.05);
-  }
-  67% {
-    -webkit-filter:  hue-rotate(190.8deg);
-            filter:  hue-rotate(190.8deg);
-    -webkit-transform: translate(-3px, -3px) scale(1.06);
-            transform: translate(-3px, -3px) scale(1.06);
-  }
-  68% {
-    -webkit-filter:  hue-rotate(126.0deg);
-            filter:  hue-rotate(126.0deg);
-    -webkit-transform: translate(2px, 4px) scale(1.08);
-            transform: translate(2px, 4px) scale(1.08);
-  }
-  69% {
-    -webkit-filter:  hue-rotate(118.8deg) contrast(4.69);
-            filter:  hue-rotate(118.8deg) contrast(4.69);
-    -webkit-transform: translate(0px, -1px) scale(1.05);
-            transform: translate(0px, -1px) scale(1.05);
-  }
-  70% {
-    -webkit-filter:  saturate(2.71) hue-rotate(187.2deg) contrast(3.52);
-            filter:  saturate(2.71) hue-rotate(187.2deg) contrast(3.52);
-    -webkit-transform: translate(0px, 1px) scale(1.05);
-            transform: translate(0px, 1px) scale(1.05);
-  }
-  71% {
-    -webkit-filter:  hue-rotate(338.4deg);
-            filter:  hue-rotate(338.4deg);
-    -webkit-transform: translate(-2px, -1px) scale(1.08);
-            transform: translate(-2px, -1px) scale(1.08);
-  }
-  72% {
-    -webkit-filter:  hue-rotate(352.8deg) contrast(2.53);
-            filter:  hue-rotate(352.8deg) contrast(2.53);
-    -webkit-transform: translate(2px, 1px) scale(1.04);
-            transform: translate(2px, 1px) scale(1.04);
-  }
-  73% {
-    -webkit-filter:  saturate(7.66) hue-rotate(270deg);
-            filter:  saturate(7.66) hue-rotate(270deg);
-    -webkit-transform: translate(-4px, -4px) scale(1.09);
-            transform: translate(-4px, -4px) scale(1.09);
-  }
-  74% {
-    -webkit-filter:  hue-rotate(151.2deg);
-            filter:  hue-rotate(151.2deg);
-    -webkit-transform: translate(4px, 2px) scale(1.09);
-            transform: translate(4px, 2px) scale(1.09);
-  }
-  75% {
-    -webkit-filter:  hue-rotate(280.8deg);
-            filter:  hue-rotate(280.8deg);
-    -webkit-transform: translate(-1px, -4px) scale(1.09);
-            transform: translate(-1px, -4px) scale(1.09);
-  }
-  76% {
-    -webkit-filter:  hue-rotate(205.2deg);
-            filter:  hue-rotate(205.2deg);
-    -webkit-transform: translate(5px, 1px) scale(1.09);
-            transform: translate(5px, 1px) scale(1.09);
-  }
-  77% {
-    -webkit-filter:  hue-rotate(162deg);
-            filter:  hue-rotate(162deg);
-    -webkit-transform: translate(-4px, -3px) scale(1.09);
-            transform: translate(-4px, -3px) scale(1.09);
-  }
-  78% {
-    -webkit-filter:  hue-rotate(309.6deg);
-            filter:  hue-rotate(309.6deg);
-    -webkit-transform: translate(0px, 3px) scale(1.12);
-            transform: translate(0px, 3px) scale(1.12);
-  }
-  82% {
-    -webkit-filter:  hue-rotate(334.8deg);
-            filter:  hue-rotate(334.8deg);
-    -webkit-transform: translate(-4px, 3px) scale(1.06);
-            transform: translate(-4px, 3px) scale(1.06);
-  }
-  84% {
-    -webkit-filter:  hue-rotate(54deg);
-            filter:  hue-rotate(54deg);
+  6% {
+    -webkit-filter:  saturate(1.54) hue-rotate(342deg);
+            filter:  saturate(1.54) hue-rotate(342deg);
     -webkit-transform: translate(-4px, 1px) scale(1.05);
             transform: translate(-4px, 1px) scale(1.05);
   }
-  85% {
-    -webkit-filter:  hue-rotate(277.2deg);
-            filter:  hue-rotate(277.2deg);
-    -webkit-transform: translate(-1px, 4px) scale(1.06);
-            transform: translate(-1px, 4px) scale(1.06);
+  7% {
+    -webkit-filter:  saturate(3.34) hue-rotate(57.6deg);
+            filter:  saturate(3.34) hue-rotate(57.6deg);
+    -webkit-transform: translate(2px, 0px) scale(1.08);
+            transform: translate(2px, 0px) scale(1.08);
   }
-  86% {
-    -webkit-filter:  hue-rotate(97.2deg);
-            filter:  hue-rotate(97.2deg);
-    -webkit-transform: translate(-4px, 1px) scale(1.09);
-            transform: translate(-4px, 1px) scale(1.09);
+  8% {
+    -webkit-filter:  hue-rotate(248.4deg);
+            filter:  hue-rotate(248.4deg);
+    -webkit-transform: translate(1px, -4px) scale(1.12);
+            transform: translate(1px, -4px) scale(1.12);
   }
-  87% {
-    -webkit-filter:  hue-rotate(295.2deg);
-            filter:  hue-rotate(295.2deg);
-    -webkit-transform: translate(2px, 5px) scale(1.11);
-            transform: translate(2px, 5px) scale(1.11);
+  10% {
+    -webkit-filter:  hue-rotate(288deg) contrast(5.86);
+            filter:  hue-rotate(288deg) contrast(5.86);
+    -webkit-transform: translate(3px, 4px) scale(1.03);
+            transform: translate(3px, 4px) scale(1.03);
   }
-  89% {
-    -webkit-filter:  hue-rotate(270deg);
-            filter:  hue-rotate(270deg);
-    -webkit-transform: translate(-4px, 4px) scale(1.1);
-            transform: translate(-4px, 4px) scale(1.1);
+  11% {
+    -webkit-filter:  hue-rotate(158.4deg);
+            filter:  hue-rotate(158.4deg);
+    -webkit-transform: translate(0px, 0px) scale(1.12);
+            transform: translate(0px, 0px) scale(1.12);
   }
-  94% {
-    -webkit-filter:  hue-rotate(284.4deg);
-            filter:  hue-rotate(284.4deg);
-    -webkit-transform: translate(0px, 2px) scale(1.08);
-            transform: translate(0px, 2px) scale(1.08);
+  12% {
+    -webkit-filter:  hue-rotate(183.6deg);
+            filter:  hue-rotate(183.6deg);
+    -webkit-transform: translate(3px, 5px) scale(1.11);
+            transform: translate(3px, 5px) scale(1.11);
   }
-  95% {
-    -webkit-filter:  hue-rotate(345.6deg);
-            filter:  hue-rotate(345.6deg);
+  13% {
+    -webkit-filter:  saturate(3.97) hue-rotate(316.8deg);
+            filter:  saturate(3.97) hue-rotate(316.8deg);
+    -webkit-transform: translate(-2px, 1px) scale(1.11);
+            transform: translate(-2px, 1px) scale(1.11);
+  }
+  14% {
+    -webkit-filter:  hue-rotate(219.6deg);
+            filter:  hue-rotate(219.6deg);
+    -webkit-transform: translate(0px, 2px) scale(1.03);
+            transform: translate(0px, 2px) scale(1.03);
+  }
+  15% {
+    -webkit-filter:  hue-rotate(90deg);
+            filter:  hue-rotate(90deg);
+    -webkit-transform: translate(5px, 1px) scale(1.09);
+            transform: translate(5px, 1px) scale(1.09);
+  }
+  16% {
+    -webkit-filter:  hue-rotate(7.2deg);
+            filter:  hue-rotate(7.2deg);
+    -webkit-transform: translate(-2px, -2px) scale(1.11);
+            transform: translate(-2px, -2px) scale(1.11);
+  }
+  17% {
+    -webkit-filter:  hue-rotate(324deg);
+            filter:  hue-rotate(324deg);
+    -webkit-transform: translate(-3px, 1px) scale(1.11);
+            transform: translate(-3px, 1px) scale(1.11);
+  }
+  19% {
+    -webkit-filter:  hue-rotate(108deg);
+            filter:  hue-rotate(108deg);
+    -webkit-transform: translate(1px, 3px) scale(1.05);
+            transform: translate(1px, 3px) scale(1.05);
+  }
+  21% {
+    -webkit-filter:  saturate(7.75) hue-rotate(334.8deg) contrast(4.87);
+            filter:  saturate(7.75) hue-rotate(334.8deg) contrast(4.87);
+    -webkit-transform: translate(5px, -4px) scale(1.1);
+            transform: translate(5px, -4px) scale(1.1);
+  }
+  22% {
+    -webkit-filter:  hue-rotate(115.2deg);
+            filter:  hue-rotate(115.2deg);
+    -webkit-transform: translate(2px, -3px) scale(1.12);
+            transform: translate(2px, -3px) scale(1.12);
+  }
+  23% {
+    -webkit-filter:  hue-rotate(338.4deg) contrast(4.51);
+            filter:  hue-rotate(338.4deg) contrast(4.51);
+    -webkit-transform: translate(-1px, -2px) scale(1.03);
+            transform: translate(-1px, -2px) scale(1.03);
+  }
+  24% {
+    -webkit-filter:  hue-rotate(111.6deg);
+            filter:  hue-rotate(111.6deg);
+    -webkit-transform: translate(1px, 1px) scale(1.05);
+            transform: translate(1px, 1px) scale(1.05);
+  }
+  25% {
+    -webkit-filter:  hue-rotate(201.6deg);
+            filter:  hue-rotate(201.6deg);
+    -webkit-transform: translate(-3px, 3px) scale(1.03);
+            transform: translate(-3px, 3px) scale(1.03);
+  }
+  26% {
+    -webkit-filter:  hue-rotate(266.4deg);
+            filter:  hue-rotate(266.4deg);
+    -webkit-transform: translate(-2px, -4px) scale(1.04);
+            transform: translate(-2px, -4px) scale(1.04);
+  }
+  27% {
+    -webkit-filter:  hue-rotate(172.8deg);
+            filter:  hue-rotate(172.8deg);
+    -webkit-transform: translate(-1px, 2px) scale(1.09);
+            transform: translate(-1px, 2px) scale(1.09);
+  }
+  29% {
+    -webkit-filter:  hue-rotate(306deg);
+            filter:  hue-rotate(306deg);
     -webkit-transform: translate(2px, 2px) scale(1.08);
             transform: translate(2px, 2px) scale(1.08);
   }
-  96% {
-    -webkit-filter:  hue-rotate(291.6deg) invert(1);
-            filter:  hue-rotate(291.6deg) invert(1);
-    -webkit-transform: translate(4px, 2px) scale(1.11);
-            transform: translate(4px, 2px) scale(1.11);
+  30% {
+    -webkit-filter:  hue-rotate(39.6deg) contrast(5.86);
+            filter:  hue-rotate(39.6deg) contrast(5.86);
+    -webkit-transform: translate(5px, -3px) scale(1.07);
+            transform: translate(5px, -3px) scale(1.07);
   }
-  99% {
-    -webkit-filter:  hue-rotate(36deg);
-            filter:  hue-rotate(36deg);
-    -webkit-transform: translate(5px, 5px) scale(1.03);
-            transform: translate(5px, 5px) scale(1.03);
+  31% {
+    -webkit-filter:  hue-rotate(302.4deg);
+            filter:  hue-rotate(302.4deg);
+    -webkit-transform: translate(-3px, -4px) scale(1.07);
+            transform: translate(-3px, -4px) scale(1.07);
+  }
+  33% {
+    -webkit-filter:  hue-rotate(194.4deg) invert(1);
+            filter:  hue-rotate(194.4deg) invert(1);
+    -webkit-transform: translate(2px, 4px) scale(1.12);
+            transform: translate(2px, 4px) scale(1.12);
+  }
+  35% {
+    -webkit-transform: translate(0px, 5px) scale(1.09);
+            transform: translate(0px, 5px) scale(1.09);
+  }
+  37% {
+    -webkit-filter:  hue-rotate(280.8deg);
+            filter:  hue-rotate(280.8deg);
+    -webkit-transform: translate(1px, -2px) scale(1.12);
+            transform: translate(1px, -2px) scale(1.12);
+  }
+  38% {
+    -webkit-filter:  saturate(6.94) hue-rotate(43.2deg);
+            filter:  saturate(6.94) hue-rotate(43.2deg);
+    -webkit-transform: translate(-1px, 2px) scale(1.12);
+            transform: translate(-1px, 2px) scale(1.12);
+  }
+  40% {
+    -webkit-filter:  hue-rotate(288deg);
+            filter:  hue-rotate(288deg);
+    -webkit-transform: translate(1px, 3px) scale(1.09);
+            transform: translate(1px, 3px) scale(1.09);
+  }
+  41% {
+    -webkit-filter:  hue-rotate(352.8deg);
+            filter:  hue-rotate(352.8deg);
+    -webkit-transform: translate(-1px, 3px) scale(1.11);
+            transform: translate(-1px, 3px) scale(1.11);
+  }
+  42% {
+    -webkit-filter:  hue-rotate(122.4deg);
+            filter:  hue-rotate(122.4deg);
+    -webkit-transform: translate(1px, 0px) scale(1.1);
+            transform: translate(1px, 0px) scale(1.1);
+  }
+  43% {
+    -webkit-filter:  saturate(8.92) hue-rotate(194.4deg);
+            filter:  saturate(8.92) hue-rotate(194.4deg);
+    -webkit-transform: translate(-4px, 3px) scale(1.07);
+            transform: translate(-4px, 3px) scale(1.07);
+  }
+  44% {
+    -webkit-filter:  hue-rotate(158.4deg);
+            filter:  hue-rotate(158.4deg);
+    -webkit-transform: translate(2px, 4px) scale(1.04);
+            transform: translate(2px, 4px) scale(1.04);
+  }
+  45% {
+    -webkit-filter:  saturate(4.6) hue-rotate(230.4deg);
+            filter:  saturate(4.6) hue-rotate(230.4deg);
+    -webkit-transform: translate(-4px, 1px) scale(1.12);
+            transform: translate(-4px, 1px) scale(1.12);
+  }
+  46% {
+    -webkit-filter:  saturate(2.35) hue-rotate(226.8deg);
+            filter:  saturate(2.35) hue-rotate(226.8deg);
+    -webkit-transform: translate(3px, -4px) scale(1.11);
+            transform: translate(3px, -4px) scale(1.11);
+  }
+  47% {
+    -webkit-filter:  hue-rotate(248.4deg);
+            filter:  hue-rotate(248.4deg);
+    -webkit-transform: translate(-3px, -2px) scale(1.04);
+            transform: translate(-3px, -2px) scale(1.04);
+  }
+  49% {
+    -webkit-filter:  hue-rotate(295.2deg);
+            filter:  hue-rotate(295.2deg);
+    -webkit-transform: translate(5px, -3px) scale(1.04);
+            transform: translate(5px, -3px) scale(1.04);
+  }
+  50% {
+    -webkit-filter:  hue-rotate(349.2deg);
+            filter:  hue-rotate(349.2deg);
+    -webkit-transform: translate(-1px, -3px) scale(1.06);
+            transform: translate(-1px, -3px) scale(1.06);
+  }
+  51% {
+    -webkit-filter:  hue-rotate(306deg);
+            filter:  hue-rotate(306deg);
+    -webkit-transform: translate(3px, 1px) scale(1.11);
+            transform: translate(3px, 1px) scale(1.11);
+  }
+  52% {
+    -webkit-filter:  hue-rotate(43.2deg);
+            filter:  hue-rotate(43.2deg);
+    -webkit-transform: translate(0px, 0px) scale(1.11);
+            transform: translate(0px, 0px) scale(1.11);
+  }
+  54% {
+    -webkit-filter:  hue-rotate(183.6deg);
+            filter:  hue-rotate(183.6deg);
+    -webkit-transform: translate(4px, 2px) scale(1.04);
+            transform: translate(4px, 2px) scale(1.04);
+  }
+  56% {
+    -webkit-filter:  hue-rotate(183.6deg);
+            filter:  hue-rotate(183.6deg);
+    -webkit-transform: translate(1px, -3px) scale(1.09);
+            transform: translate(1px, -3px) scale(1.09);
+  }
+  57% {
+    -webkit-filter:  hue-rotate(212.4deg);
+            filter:  hue-rotate(212.4deg);
+    -webkit-transform: translate(1px, 0px) scale(1.06);
+            transform: translate(1px, 0px) scale(1.06);
+  }
+  59% {
+    -webkit-filter:  hue-rotate(93.6deg);
+            filter:  hue-rotate(93.6deg);
+    -webkit-transform: translate(5px, 3px) scale(1.08);
+            transform: translate(5px, 3px) scale(1.08);
+  }
+  60% {
+    -webkit-filter:  hue-rotate(259.2deg);
+            filter:  hue-rotate(259.2deg);
+    -webkit-transform: translate(-2px, 2px) scale(1.11);
+            transform: translate(-2px, 2px) scale(1.11);
+  }
+  61% {
+    -webkit-filter:  hue-rotate(21.6deg);
+            filter:  hue-rotate(21.6deg);
+    -webkit-transform: translate(2px, 3px) scale(1.09);
+            transform: translate(2px, 3px) scale(1.09);
+  }
+  63% {
+    -webkit-filter:  hue-rotate(108deg);
+            filter:  hue-rotate(108deg);
+    -webkit-transform: translate(3px, -1px) scale(1.06);
+            transform: translate(3px, -1px) scale(1.06);
+  }
+  65% {
+    -webkit-filter:  hue-rotate(7.2deg) contrast(7.57);
+            filter:  hue-rotate(7.2deg) contrast(7.57);
+    -webkit-transform: translate(4px, -2px) scale(1.12);
+            transform: translate(4px, -2px) scale(1.12);
+  }
+  66% {
+    -webkit-filter:  hue-rotate(212.4deg);
+            filter:  hue-rotate(212.4deg);
+    -webkit-transform: translate(-4px, -1px) scale(1.09);
+            transform: translate(-4px, -1px) scale(1.09);
+  }
+  69% {
+    -webkit-filter:  hue-rotate(277.2deg);
+            filter:  hue-rotate(277.2deg);
+    -webkit-transform: translate(3px, 1px) scale(1.03);
+            transform: translate(3px, 1px) scale(1.03);
+  }
+  70% {
+    -webkit-filter:  hue-rotate(302.4deg) invert(1) brightness(40.5%);
+            filter:  hue-rotate(302.4deg) invert(1) brightness(40.5%);
+    -webkit-transform: translate(-1px, 1px) scale(1.03);
+            transform: translate(-1px, 1px) scale(1.03);
+  }
+  71% {
+    -webkit-filter:  hue-rotate(21.6deg);
+            filter:  hue-rotate(21.6deg);
+    -webkit-transform: translate(-4px, 3px) scale(1.08);
+            transform: translate(-4px, 3px) scale(1.08);
+  }
+  72% {
+    -webkit-filter:  hue-rotate(226.8deg);
+            filter:  hue-rotate(226.8deg);
+    -webkit-transform: translate(-3px, -4px) scale(1.05);
+            transform: translate(-3px, -4px) scale(1.05);
+  }
+  73% {
+    -webkit-filter:  saturate(8.83) hue-rotate(284.4deg);
+            filter:  saturate(8.83) hue-rotate(284.4deg);
+    -webkit-transform: translate(0px, 0px) scale(1.05);
+            transform: translate(0px, 0px) scale(1.05);
+  }
+  76% {
+    -webkit-filter:  hue-rotate(122.4deg);
+            filter:  hue-rotate(122.4deg);
+    -webkit-transform: translate(-4px, 3px) scale(1.1);
+            transform: translate(-4px, 3px) scale(1.1);
+  }
+  77% {
+    -webkit-filter:  hue-rotate(201.6deg);
+            filter:  hue-rotate(201.6deg);
+    -webkit-transform: translate(2px, 5px) scale(1.11);
+            transform: translate(2px, 5px) scale(1.11);
+  }
+  78% {
+    -webkit-filter:  hue-rotate(54deg);
+            filter:  hue-rotate(54deg);
+    -webkit-transform: translate(-2px, 1px) scale(1.05);
+            transform: translate(-2px, 1px) scale(1.05);
+  }
+  83% {
+    -webkit-filter:  hue-rotate(223.2deg) contrast(3.88);
+            filter:  hue-rotate(223.2deg) contrast(3.88);
+    -webkit-transform: translate(5px, -4px) scale(1.06);
+            transform: translate(5px, -4px) scale(1.06);
+  }
+  86% {
+    -webkit-filter:  hue-rotate(208.8deg);
+            filter:  hue-rotate(208.8deg);
+    -webkit-transform: translate(-2px, -2px) scale(1.1);
+            transform: translate(-2px, -2px) scale(1.1);
+  }
+  87% {
+    -webkit-filter:  hue-rotate(144deg) contrast(2.71);
+            filter:  hue-rotate(144deg) contrast(2.71);
+    -webkit-transform: translate(0px, 4px) scale(1.05);
+            transform: translate(0px, 4px) scale(1.05);
+  }
+  88% {
+    -webkit-filter:  saturate(2.62) hue-rotate(244.8deg);
+            filter:  saturate(2.62) hue-rotate(244.8deg);
+    -webkit-transform: translate(-2px, -1px) scale(1.07);
+            transform: translate(-2px, -1px) scale(1.07);
+  }
+  91% {
+    -webkit-filter:  hue-rotate(3.6deg);
+            filter:  hue-rotate(3.6deg);
+    -webkit-transform: translate(3px, -3px) scale(1.11);
+            transform: translate(3px, -3px) scale(1.11);
+  }
+  93% {
+    -webkit-filter:  saturate(10) hue-rotate(306deg);
+            filter:  saturate(10) hue-rotate(306deg);
+    -webkit-transform: translate(3px, 0px) scale(1.12);
+            transform: translate(3px, 0px) scale(1.12);
+  }
+  95% {
+    -webkit-filter:  hue-rotate(309.6deg) brightness(65.5%);
+            filter:  hue-rotate(309.6deg) brightness(65.5%);
+    -webkit-transform: translate(-2px, -2px) scale(1.07);
+            transform: translate(-2px, -2px) scale(1.07);
+  }
+  98% {
+    -webkit-filter:  hue-rotate(288deg);
+            filter:  hue-rotate(288deg);
+    -webkit-transform: translate(2px, 3px) scale(1.1);
+            transform: translate(2px, 3px) scale(1.1);
   }
   100% {
-    -webkit-filter:  hue-rotate(111.6deg) contrast(1.54);
-            filter:  hue-rotate(111.6deg) contrast(1.54);
-    -webkit-transform: translate(3px, -3px) scale(1.03);
-            transform: translate(3px, -3px) scale(1.03);
+    -webkit-filter:  saturate(1.72) hue-rotate(266.4deg);
+            filter:  saturate(1.72) hue-rotate(266.4deg);
+    -webkit-transform: translate(2px, -3px) scale(1.1);
+            transform: translate(2px, -3px) scale(1.1);
   }
 }
 #Home {
@@ -1881,7 +1883,7 @@ a:active {
   -webkit-transition: height 500ms,top 500ms;
           transition: height 500ms,top 500ms;
   height: 80px;
-  z-index: 100;
+  z-index: 99999;
   position: fixed;
   top: 0;
 }
@@ -3095,29 +3097,29 @@ h1.joinTeamCTA {
     display: block;
   }
 
-  #OurPeople ul {
-    color: #46ccc5;
-  }
-  #OurPeople ul.cityFilter {
-    list-style: none;
-    display: block;
-    text-align: right;
-  }
-  #OurPeople ul.cityFilter li {
+  #OurPeople .cultureContent input.cityFilter {
     display: none;
-    cursor: pointer;
+  }
+  #OurPeople .cultureContent input.cityFilter label {
     margin-left: 1em;
     margin-right: 1em;
+    display: none;
   }
-  #OurPeople ul.cityFilter li a {
-    padding: 0.45em;
+  #OurPeople .cultureContent input.cityFilter.active ~ label {
+    color: #46ccc5;
+    display: inline-block;
   }
-  #OurPeople ul.cityFilter li a:hover {
-    color: #ffffff;
-    background-color: #46ccc5;
-  }
-  #OurPeople ul.cityFilter.active li {
-    display: inline;
+  #OurPeople .cultureContent div > input#select-ams:checked + .cultureTile:not([data-office-filter='ams']),
+  #OurPeople .cultureContent div > input#select-chi:checked + .cultureTile:not([data-office-filter='chi']),
+  #OurPeople .cultureContent div > input#select-hk:checked + .cultureTile:not([data-office-filter='hk']),
+  #OurPeople .cultureContent div > input#select-ldn:checked + .cultureTile:not([data-office-filter='ldn']),
+  #OurPeople .cultureContent div > input#select-ny:checked + .cultureTile:not([data-office-filter='ny']),
+  #OurPeople .cultureContent div > input#select-par:checked + .cultureTile:not([data-office-filter='par']),
+  #OurPeople .cultureContent div > input#select-sf:checked + .cultureTile:not([data-office-filter='sf']),
+  #OurPeople .cultureContent div > input#select-sao:checked + .cultureTile:not([data-office-filter='sao']),
+  #OurPeople .cultureContent div > input#select-sg:checked + .cultureTile:not([data-office-filter='sg']) {
+    opacity: 0.25;
+    pointer-events: none;
   }
 
   .cultureTile {
@@ -3276,12 +3278,12 @@ h1.joinTeamCTA {
   }
   h1.sectionHeading {
     font-family: 'Din-Bold', sans-serif;
-    font-size: 6em;
+    font-size: 5em;
     font-weight: lighter;
     color: #58595b;
     letter-spacing: 0.04em;
     line-height: 1em;
-    margin-top: 0.45em;
+    margin-top: 0.75em;
     margin-bottom: 0.75em;
   }
   h1.joinTeamCTA {
@@ -3778,6 +3780,65 @@ h1.joinTeamCTA {
 .clientContent .clientLogo .in-view {
   display: block;
   opacity: 1;
+}
+
+.timelineDate {
+  color: #58595b;
+  font-size: 0.85em;
+  font-weight: bolder;
+  overflow: visible;
+  display: inline-block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 400ms;
+          transition: opacity 400ms;
+}
+.timelineDate.active {
+  opacity: 1;
+}
+.timelineDate.align-left {
+  text-align: left;
+}
+.timelineDate.align-right {
+  text-align: right;
+}
+.timelineDate a {
+  position: relative;
+  left: -60px;
+  top: -10px;
+  color: #000000;
+  display: inline-block;
+  width: 65px;
+  text-decoration: none;
+}
+.timelineDate a .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.timelineDate a .arrow.left {
+  display: inline-block;
+  border-width: 5px 10px 5px 0;
+  border-color: transparent #46ccc5 transparent transparent;
+  margin-right: 5px;
+}
+.timelineDate a .arrow.right {
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent #46ccc5;
+  display: inline-block;
+  margin-left: 5px;
+}
+.timelineDate a .arrow.bottom {
+  border-width: 10px 5px 0 5px;
+  border-color: #46ccc5 transparent transparent transparent;
+  margin: 0 auto;
+  margin-bottom: 0em;
+  display: block;
+}
+.timelineDate a:hover {
+  color: #46ccc5;
 }
 
 footer {

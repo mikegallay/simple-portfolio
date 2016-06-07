@@ -2305,11 +2305,17 @@ var mgbTimeLine = {
 	timelineAnimation : new TimelineMax(),
 	init: function(){
 		mgbtl = $('#mb_timeline_path2');
+		
 		TweenMax.set(mgbtl, {drawSVG: "100% 100%"});
+		
+		this.timelineAnimation.eventCallback("onComplete", function(){
+			$(".timelineDate").addClass("active");
+		});
 	},
 	
 	drawTimeline: function(){
-		TweenMax.to(mgbtl, 2, {drawSVG: "100% 0%", ease: Cubic.easeInOut});
+		this.timelineAnimation.to(mgbtl, 2, {drawSVG: "100% 0%", ease: Cubic.easeInOut});
+		this.timelineAnimation.play();
 	}
 };
 

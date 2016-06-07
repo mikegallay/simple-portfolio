@@ -1,10 +1,18 @@
 .timelineDate {	
 	color: #58595b;
+	font-size: 0.85em;
+	font-weight: bolder;
 	overflow: visible;
 	display: inline-block;
 	position: absolute;
 	width: 0px;
 	height: 0px;
+	opacity: 0;
+	transition: opacity 400ms;
+	
+	&.active {
+		opacity: 1;
+	}
 	
 	&.align-left {
 		text-align: left;
@@ -50,5 +58,9 @@
 				display: block;
 			}
 		}
+		
+		&:hover {
+			color: #46ccc5;
+		};
 	}
 }

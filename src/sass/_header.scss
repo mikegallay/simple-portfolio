@@ -6,9 +6,10 @@
 	display: block;
 	transition:height 500ms,top 500ms;
 	height:80px;
-	z-index:100;
+	z-index:99999;
 	position:fixed;
 	top:0;
+	
 	&:before{
 		content: '';
 	    width: 100%;
@@ -23,6 +24,7 @@
 		
 		
 	}
+	
 	&.sticky{
 		&:before{
 			opacity:1;
@@ -33,6 +35,7 @@
 			//margin-left:4px;//8px;
 		}
 	}
+	
 	&.mobile{
 		//height:100%;
 		//background-color:gray;

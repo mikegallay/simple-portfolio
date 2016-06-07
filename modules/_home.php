@@ -23,43 +23,56 @@
 			<h1 class="sectionHeading">WHO SAYS <span data-forward class="blueFont">WE</span> CAN'T?</h1>
 		</div>
 		
-		<div style="width: 100%; text-align: center; position:relative">
-			<div style="width: 100%; margin: 0 auto; margin-bottom: 4em; max-height: 1280px; transform: scale(1.5); padding-top: 150px; padding-bottom: 100px;">
-				
-				<svg class="icon mb_timeline_path-inline" xmlns="http://www.w3.org/2000/svg" viewBox="-433.3 385.4 600 127.4"><path id="mb_timeline_path2" fill="none" stroke="#46ccc5" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" d="M166.7 510.3h-218c24.7 0 35.2-21.8 35.2-44.3 0-22-11.6-41.4-35.3-41.4-14.3 0-22.5 5.6-27.1 13.2h-.3V388H-94v120.4c-5.9 0-25.6-.4-32.3-.4-6.6 0-7.2.2-13.9.4v-4.8c5.1 0 6.1 0 6.1-6.1v-40.7c0-11.6-2.4-22.6-16-22.6-7.2 0-17.5 5.9-21.7 8.8v54.5c0 6.1 1.6 6.1 6.7 6.1v4.8c-6.4 0-7.1-.4-13.7-.4s-7.3.2-13.9.4v-4.8h.3c5.2 0 5.9 0 5.9-6.1v-40.7c0-11.6-2.4-22.6-16-22.6-7.2 0-17.5 5.9-21.7 8.8v54.5c0 6.1 1 6.1 6.2 6.1h.3v4.8c-6.4 0-6.9-.4-13.5-.4s-7.3.2-14.4.4v-4.8h.9c5.2 0 5.8 0 5.8-6.1v-49.7c0-8.1-2.8-9.2-9.6-12.9h-184.8"/>
-				<g>
+		<!-- <div class="timelineBullets">
+			<ul>
+				<li><span>2001:</span> Phasellus sed lacus malesuada, pellentesque augue id, convallis lacus.</li>
+				<li><span>2001:</span> Nunc vel risus vitae lorem blandit vulputate sit amet eget dui.</li>
+				<li><span>2001:</span> Mauris vel lacus sit amet orci euismod tempor.</li>
+				<li><span>2001:</span> Curabitur at odio vel leo cursus fermentum vel ut mi.</li>
+				<li><span>2001:</span> Aenean sit amet dolor interdum, iaculis massa et, mattis velit.</li>
+				<li><span>2001:</span> Cras quis ex condimentum, mollis nisi sit amet, molestie velit.</li>
+			</ul>
+		</div> -->
+		<div style="width:100%;position:relative;">
+			
+		
+			<div style="width: 130%; margin-bottom: 200px; margin-left: -34%;">	
+			
+					<svg class="icon mb_timeline_path-inline" xmlns="http://www.w3.org/2000/svg" viewBox="-433.3 385.4 600 127.4"><path id="mb_timeline_path2" fill="none" stroke="#46ccc5" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" d="M166.7 510.3h-218c24.7 0 35.2-21.8 35.2-44.3 0-22-11.6-41.4-35.3-41.4-14.3 0-22.5 5.6-27.1 13.2h-.3V388H-94v120.4c-5.9 0-25.6-.4-32.3-.4-6.6 0-7.2.2-13.9.4v-4.8c5.1 0 6.1 0 6.1-6.1v-40.7c0-11.6-2.4-22.6-16-22.6-7.2 0-17.5 5.9-21.7 8.8v54.5c0 6.1 1.6 6.1 6.7 6.1v4.8c-6.4 0-7.1-.4-13.7-.4s-7.3.2-13.9.4v-4.8h.3c5.2 0 5.9 0 5.9-6.1v-40.7c0-11.6-2.4-22.6-16-22.6-7.2 0-17.5 5.9-21.7 8.8v54.5c0 6.1 1 6.1 6.2 6.1h.3v4.8c-6.4 0-6.9-.4-13.5-.4s-7.3.2-14.4.4v-4.8h.9c5.2 0 5.8 0 5.8-6.1v-49.7c0-8.1-2.8-9.2-9.6-12.9h-184.8"/>					
+					</svg>
+					<div style="position:absolute; width:100%; height:100%; top:0; left:0;">
 					
-				</g>
-				</svg>
-				<div class="timelineDate" style="top: 43%; left: 26%;">
-					<a href="#">2002<span class="arrow bottom"></span></a>
-				</div>
-
-				<div class="timelineDate align-right" style="top: 69%; left: 39%">
-					<a href="#"><span class="arrow left"></span>2003</a>
-				</div>
-
-				<div class="timelineDate" style="left: 49%; top: 43%;">
-					<a href="#" class="dateButton">2004<span class="arrow bottom"></span></a>
-				</div>
 				
-				<div class="timelineDate align-right" style="left: 56%; top: 70%;">
-					<a href="#" class="dateButton">2008<span class="arrow right"></span></a>
-				</div>
-				
-				<div class="timelineDate align-right" style="left: 56%; top: 32%;">
-					<a href="#" class="dateButton">2009<span class="arrow right"></span></a>
-				</div>
+						<div class="timelineDate" style="top: 33%; left: 16%;">
+							<a href="#">2002<span class="arrow bottom"></span></a>
+						</div>
 
-				 <div class="timelineDate align-left" style="left: 75%; top: 54%;">
-					<a href="#"><span class="arrow left"></span>2011</a>
-				</div>
+						<div class="timelineDate align-right" style="top: 85%; left: 20%">
+							<a href="#">2003<span class="arrow right"></span></a>
+						</div>
 
-				<div class="timelineDate" style="left: 78%; top: 75%;">
-					<a href="#">2012<span class="arrow bottom"></span></a>
+						<div class="timelineDate" style="left: 47%; top: 32%;">
+							<a href="#" class="dateButton">2004<span class="arrow bottom"></span></a>
+						</div>
+			
+						<div class="timelineDate align-right" style="left: 60.5%; top: 90%;">
+							<a href="#" class="dateButton">2008<span class="arrow right"></span></a>
+						</div>
+			
+						<div class="timelineDate align-right" style="left: 60.5%; top: 9%;">
+							<a href="#" class="dateButton">2009<span class="arrow right"></span></a>
+						</div>
+
+						 <div class="timelineDate align-left" style="left: 86%; top: 40%;">
+							<a href="#"><span class="arrow left"></span>2011</a>
+						</div>
+
+						<div class="timelineDate" style="left: 90%; top: 92%;">
+							<a href="#">2012<span class="arrow bottom"></span></a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 	
 	<section id="OurWork" class="fullBleed">
