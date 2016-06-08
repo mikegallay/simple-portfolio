@@ -10,6 +10,262 @@
 	position:fixed;
 	top:0;
 	
+	nav {
+		position: relative;//fixed;
+		width: 100%;
+		height: 4.25em;
+		margin-top: 0.5em;
+		display: inline-block;
+		//z-index: 9999;
+		#homeLogo{
+			/* MB LOGO */
+
+			#mbLogo {
+
+			    overflow: hidden;
+			    width: 260px;
+			    height: 70px;
+			    display: inline-block;
+				position:relative;
+				transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	
+	
+			    margin-top: 0px;
+			    margin-left: -10px;
+	
+				transform: scale(.8);
+				&.mobile{
+					margin-top:-10px;
+					//margin-left:4px;//8px;
+				}
+
+				#mcgarryTXT{
+					top:36px;
+					left:7px;
+					position:absolute;
+
+					#m{
+						width:31px;
+						height:26px;
+						overflow:hidden;
+						position:absolute;
+					}
+
+					#cgarryContainer{
+						width:0px;
+						height:26px;
+						left:30px;
+						overflow:hidden;
+						position:absolute;
+
+						#cgarry{
+							width:102px;
+							height:26px;
+							left:0px;
+							overflow:hidden;
+							position:absolute;
+						}
+					}
+				}
+
+				#bowenTXT{
+					position:absolute;
+					top:28px;
+					left:40px; 
+
+					#b{
+						width:17px;
+						height:26px;
+						overflow:hidden;
+						position:absolute;
+					}
+
+					#owenContainer{
+						width:0px;
+						height:26px;
+						left:18px;
+						overflow:hidden;
+						position:absolute;
+						#owen{
+							width:79px;
+							height:26px;
+							left:0px;
+							overflow:hidden;
+							position:absolute;
+						}
+					}
+				}
+			}
+
+			/* end MB LOGO */
+		}
+		
+		#menuToggleHolder{
+			width:49px;
+			height:49px;
+			position:absolute;
+			right: 8px;
+			top:8px;
+			display:inline-block;
+			cursor: pointer;
+			overflow:hidden;
+			transform:rotate(0deg);
+			transition:transform 400ms 200ms;
+			#menuToggle{
+				width:50px;
+				height:50px;
+				//background:blue;
+				position:relative;
+				//background:gray;
+				left:25px;
+				top:25px;
+				width:100%;
+				height:100%;
+				position: relative;
+
+				div {
+					position: absolute;
+					border-radius: 25px;
+					transform-origin:center;
+					.hamDot{
+	
+						width: 8px;
+						height: 8px;
+						border: 0px solid white;
+						opacity: 1;
+						top: -4px;
+					    left: -4px;
+					    position: relative;
+						background:rgba(255,255,255,1);
+				
+					}
+			
+					&#ham1 {
+						top: -15px;
+						transition:top 300ms 500ms;
+						.hamDot{
+							transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
+						}
+					}
+			
+					&#ham2 {
+						.hamDot{
+							border:2px solid white;
+							width:4px;
+							height:4px;
+							left:-4px;
+							top:-4px;
+							transition:top 300ms 150ms,left 300ms 150ms,width 300ms 150ms,height 300ms 150ms,background 0ms 450ms;}
+						}
+
+					&#ham3 {
+						top: 15px;
+						transition:top 300ms 500ms;
+						.hamDot{
+							transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
+						}
+					}
+				}
+			}
+			&.active{
+				transform: rotate(225deg);
+				transition:transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+				#menuToggle{
+					.hamDot{
+					}
+					#ham1{
+						top:0px;
+						transition:top 300ms;
+						.hamDot{
+						    width: 21px;
+						    left: -11px;
+						    height: 3px;
+						    top: -2px;
+							transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
+						}
+					}
+		
+					#ham2{
+						.hamDot{
+							width:37px;height:37px;
+							left:-21px;top:-21px;
+							background:rgba(255,255,255,0);
+							transition:top 300ms 300ms,left 300ms 300ms,width 300ms 300ms,height 300ms 300ms, background 0ms 300ms;
+						}
+					}
+					#ham3{
+						top:0px;
+						transition:top 300ms;
+						.hamDot{
+						    width: 3px;
+						    left: -2px;
+						    height: 21px;
+						    top: -11px;
+							transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
+						}
+					}
+				}
+			}
+		}
+		
+		ul.menu {
+			//background-color: rgba(107, 109, 111, 1.0);
+			position: relative;
+			float: right;
+			list-style: none;
+			text-align: center;
+		    padding-left: 0;
+		    padding-right: 1em;
+			padding-top: 1em;
+			margin-top: 0em;
+			margin-bottom: 0;
+			width: 20%;
+			height: 100%;
+			right: -35%;
+			top: 0;
+		    display: flex;
+		    align-items: center;
+		    flex-flow: column nowrap;
+		    align-self: center;
+		    justify-content: space-around;
+			li {
+				display: block;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				opacity:0;
+				transition:opacity 300ms 500ms;
+				a {
+					text-decoration: none;
+				}
+			}
+	
+			&.active {
+				position: fixed;
+				right: 0%;
+				transition: right 400ms;
+			}
+	
+			&.mobile{
+				position: absolute;
+			    right: 0%;
+			    width: 100%;
+			    font-size: 3em;
+			    margin: 0;
+			    padding: 0;
+			    top: 12%;
+			    line-height: 2em;
+			    font-family: 'Din-Bold', sans-serif;
+			    height: 79%;
+	    
+				li{
+					margin:0;
+					opacity:1;
+			
+				}
+			}
+		}
+	}
+	
 	&:before{
 		content: '';
 	    width: 100%;
@@ -21,8 +277,7 @@
 	    display: block;
 		transition:opacity 300ms;
 		opacity:0;
-		
-		
+
 	}
 	
 	&.sticky{
@@ -34,6 +289,11 @@
 			margin-top:-10px;
 			//margin-left:4px;//8px;
 		}
+	}
+	
+	&.removed{
+		top:-100px;
+		nav{position:relative;}
 	}
 	
 	&.mobile{
@@ -49,290 +309,8 @@
 		}
 		nav{
 			height:100%;
-			position: absolute;
-		    top: 0;
-		}
-	}
-	&.removed{
-		top:-100px;
-		nav{position:relative;}
-	}
-}
-
-/* MB LOGO */
-
-#mbLogo {
-
-    overflow: hidden;
-    width: 260px;
-    height: 70px;
-    display: inline-block;
-	position:relative;
-	transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-	
-	
-    margin-top: 0px;
-    margin-left: -10px;
-	
-	transform: scale(.8);
-	&.mobile{
-		margin-top:-10px;
-		//margin-left:4px;//8px;
-	}
-
-	#mcgarryTXT{
-		top:36px;
-		left:7px;
-		position:absolute;
-
-		#m{
-			width:31px;
-			height:26px;
-			overflow:hidden;
-			position:absolute;
-		}
-
-		#cgarryContainer{
-			width:0px;
-			height:26px;
-			left:30px;
-			overflow:hidden;
-			position:absolute;
-
-			#cgarry{
-				width:102px;
-				height:26px;
-				left:0px;
-				overflow:hidden;
-				position:absolute;
-			}
-		}
-	}
-
-	#bowenTXT{
-		position:absolute;
-		top:28px;
-		left:40px; 
-
-		#b{
-			width:17px;
-			height:26px;
-			overflow:hidden;
-			position:absolute;
-		}
-
-		#owenContainer{
-			width:0px;
-			height:26px;
-			left:18px;
-			overflow:hidden;
-			position:absolute;
-			#owen{
-				width:79px;
-				height:26px;
-				left:0px;
-				overflow:hidden;
-				position:absolute;
-			}
-		}
-	}
-}
-
-/* end MB LOGO */
-
-
-nav {
-	position: relative;//fixed;
-	width: 100%;
-	height: 4.25em;
-	margin-top: 0.5em;
-	display: inline-block;
-	//z-index: 9999;
-}
-
-
-@keyframes move-dots {		
-	100% {
-		top: 20%;
-	}
-}
-
-@keyframes grow-center {
-		
-	100% {
-	 	background-color: rgba(255, 255, 255, 0.0);
-	 	border: 2px solid #fff;
-		left: -13%;
-		top: -15%;
-		width: 2.5em;
-		height: 2.5em;	
-	}
-}
-
-
-#menuToggleHolder{
-	width:49px;
-	height:49px;
-	position:absolute;
-	right: 8px;
-	top:8px;
-	display:inline-block;
-	cursor: pointer;
-	overflow:hidden;
-	transform:rotate(0deg);
-	transition:transform 400ms 200ms;
-	#menuToggle{
-		width:50px;
-		height:50px;
-		//background:blue;
-		position:relative;
-		//background:gray;
-		left:25px;
-		top:25px;
-		width:100%;
-		height:100%;
-		position: relative;
-
-		div {
-			position: absolute;
-			border-radius: 25px;
-			transform-origin:center;
-			.hamDot{
-	
-				width: 8px;
-				height: 8px;
-				border: 0px solid white;
-				opacity: 1;
-				top: -4px;
-			    left: -4px;
-			    position: relative;
-				background:rgba(255,255,255,1);
-				
-			}
-			
-			&#ham1 {
-				top: -15px;
-				transition:top 300ms 500ms;
-				.hamDot{
-					transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
-				}
-			}
-			
-			&#ham2 {
-				.hamDot{
-					border:2px solid white;
-					width:4px;
-					height:4px;
-					left:-4px;
-					top:-4px;
-					transition:top 300ms 150ms,left 300ms 150ms,width 300ms 150ms,height 300ms 150ms,background 0ms 450ms;}
-				}
-
-			&#ham3 {
-				top: 15px;
-				transition:top 300ms 500ms;
-				.hamDot{
-					transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
-				}
-			}
-		}
-	}
-	&.active{
-		transform: rotate(225deg);
-		transition:transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-		#menuToggle{
-			.hamDot{
-			}
-			#ham1{
-				top:0px;
-				transition:top 300ms;
-				.hamDot{
-				    width: 21px;
-				    left: -11px;
-				    height: 3px;
-				    top: -2px;
-					transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
-				}
-			}
-		
-			#ham2{
-				.hamDot{
-					width:37px;height:37px;
-					left:-21px;top:-21px;
-					background:rgba(255,255,255,0);
-					transition:top 300ms 300ms,left 300ms 300ms,width 300ms 300ms,height 300ms 300ms, background 0ms 300ms;
-				}
-			}
-			#ham3{
-				top:0px;
-				transition:top 300ms;
-				.hamDot{
-				    width: 3px;
-				    left: -2px;
-				    height: 21px;
-				    top: -11px;
-					transition:transform 300ms 400ms,width 300ms 400ms,height 300ms 400ms,left 300ms 400ms,top 300ms 400ms;
-				}
-			}
-		}
-	}
-}
-
-
-
-ul.menu {
-	//background-color: rgba(107, 109, 111, 1.0);
-	position: relative;
-	float: right;
-	list-style: none;
-	text-align: center;
-    padding-left: 0;
-    padding-right: 1em;
-	padding-top: 1em;
-	margin-top: 0em;
-	margin-bottom: 0;
-	width: 20%;
-	height: 100%;
-	right: -35%;
-	top: 0;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    align-self: center;
-    justify-content: space-around;
-	li {
-		display: block;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
-		opacity:0;
-		transition:opacity 300ms 500ms;
-		a {
-			text-decoration: none;
-		}
-	}
-	
-	&.active {
-		position: fixed;
-		right: 0%;
-		transition: right 400ms;
-	}
-	
-	&.mobile{
-		position: absolute;
-	    right: 0%;
-	    width: 100%;
-	    font-size: 3em;
-	    margin: 0;
-	    padding: 0;
-	    top: 12%;
-	    line-height: 2em;
-	    font-family: 'Din-Bold', sans-serif;
-	    height: 79%;
-	    
-		li{
-			margin:0;
-			opacity:1;
-			
+			//position: absolute;
+		   // top: 0;
 		}
 	}
 }
@@ -470,11 +448,20 @@ ul.menu {
 
 
 @media screen and (min-width: 768px) {
-	#mbLogo{
-		transform: scale(1);
-		margin-top:3px;
-		margin-left:11px;
+	
+	
+	#Home {
+		nav {
+			#homeLogo {
+				#mbLogo{
+					transform: scale(1);
+					margin-top:3px;
+					margin-left:11px;
+				}
+			}
+		}
 	}
+	
 	.no-autoplay{
 		.videoHeader{
 			#welcomeImage {
@@ -488,6 +475,98 @@ ul.menu {
 
 @media screen and (min-width: 1024px) {
 	#Home {
+		nav{
+			background: rgba(107, 109, 111, 0.0);
+			//background-image: '';
+			//background-size: 0px 0px;
+			border: none;
+			position: fixed;
+			top: -100px;
+			left: 0;
+			margin-top: 1.5625em;
+			width: 100%;
+			z-index: 99999;
+			height: 4.25em;
+			opacity: 0.98;
+			transition: background 300ms, margin-top 300ms 300ms, top 1s 300ms, height 500ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			#homeLogo{
+				display: inline-block;
+				position: absolute;
+				top: 0px;
+				transition:top 300ms;
+				#mbLogo{
+					margin-left:25px;
+					margin-top:0px;
+				}
+			}
+			#menuToggleHolder, .hamburger {
+				display: none;
+			}
+			ul.menu {
+				background-color: transparent;
+				font-family: 'Din-Regular', sans-serif;
+				height: 2.5em;
+				padding-left: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-right: 1.5625em;
+				font-size: 0.875em;
+				text-align: right;
+				display: inline-block;
+				list-style: none;
+				width: 50%;
+			    float: right;
+				border-color: transparent;
+				border-width: 0;
+				margin-top: 1em;
+				right: 0;
+		
+				li {
+					margin: 1em 1.3em;
+					display: inline-block;
+					opacity:1;
+			
+					&.logo {
+						margin-right: auto;
+					}
+	
+					a {
+						display: inline-block;
+						text-decoration: none;
+	
+						&:hover {
+							color: #46ccc5;
+						}
+	
+						&.active {
+							color: #46ccc5;
+						}
+					}
+				}
+			}
+			&.settle{
+				top:0;
+			}
+			&.removed{
+				top:-200px!important;
+			}
+
+			&.sticky {
+				background: rgba(107, 109, 111, 1.0);
+				margin-top: 0;
+				transition: background 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+				#homeLogo{
+					top: -11px;
+				}
+			}
+
+			&.videoActive {
+				height: 100%;
+			    background-color: rgb(55, 56, 58);
+				opacity: 1.0;
+				transition: height 400ms;
+			}
+		}
 		//height: auto;
 		width: 100%;
 		height:100px;
@@ -496,130 +575,12 @@ ul.menu {
 		display: block;
 		&.sticky{
 			height:68px;
-			#mbLogo {
-				margin-left:25px;
-				margin-top:0px;
-		
-
-		
-			}
-		}
-	}
-	
-
-	/* MB LOGO */
-
-	#mbLogo {
-		margin-left:25px;
-		margin-top:0px;
-		
-
-		
-	}
-
-	/* end MB LOGO */
-
-
-	nav {
-		background: rgba(107, 109, 111, 0.0);
-		//background-image: '';
-		//background-size: 0px 0px;
-		border: none;
-		position: fixed;
-		top: -100px;
-		left: 0;
-		margin-top: 1.5625em;
-		width: 100%;
-		z-index: 99999;
-		height: 4.25em;
-		opacity: 0.98;
-		transition: background 300ms, margin-top 300ms 300ms, top 1s 300ms, height 500ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-
-		#homeLogo{
-			display: inline-block;
-			position: absolute;
-			top: 0px;
-			transition:top 300ms;
-		}
-
-		&.settle{
-			top:0;
-		}
-		&.removed{
-			top:-200px!important;
-		}
-
-		&.sticky {
-			background: rgba(107, 109, 111, 1.0);
-			margin-top: 0;
-			transition: background 300ms 300ms, margin-top 300ms, top 1s 1s, height 500ms cubic-bezier(0.23, 1, 0.32, 1);
-			#homeLogo{
-				top: -11px;
-			}
-		}
-		
-		/*&.overlayActive{
-			background: rgba(107,109,111,1);
-			background: -moz-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
-			background: -webkit-gradient(left top, left bottom, color-stop(1%, rgba(107,109,111,1)), color-stop(68%, rgba(107,109,111,1)), color-stop(100%, rgba(107,109,111,0)));
-			background: -webkit-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
-			background: -o-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
-			background: -ms-linear-gradient(top, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
-			background: linear-gradient(to bottom, rgba(107,109,111,1) 1%, rgba(107,109,111,1) 68%, rgba(107,109,111,0) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6d6f', endColorstr='#6b6d6f', GradientType=0 );
-			
-		}*/
-
-		&.videoActive {
-			height: 100%;
-		    background-color: rgb(55, 56, 58);
-			opacity: 1.0;
-			transition: height 400ms;
-		}
-	}
-
-	#menuToggleHolder, .hamburger {
-		display: none;
-	}
-
-	ul.menu {
-		background-color: transparent;
-		font-family: 'Din-Regular', sans-serif;
-		height: 2.5em;
-		padding-left: 0;
-		padding-top: 0;
-		padding-bottom: 0;
-		padding-right: 1.5625em;
-		font-size: 0.875em;
-		text-align: right;
-		display: inline-block;
-		list-style: none;
-		width: 50%;
-	    float: right;
-		border-color: transparent;
-		border-width: 0;
-		margin-top: 1em;
-		right: 0;
-		
-		li {
-			margin: 1em 1.3em;
-			display: inline-block;
-			opacity:1;
-			
-			&.logo {
-				margin-right: auto;
-			}
-	
-			a {
-				display: inline-block;
-				text-decoration: none;
-	
-				&:hover {
-					color: #46ccc5;
-				}
-	
-				&.active {
-					color: #46ccc5;
+			nav{
+				#homeLogo{
+					#mbLogo{
+						margin-left:25px;
+						margin-top:0px;
+					}
 				}
 			}
 		}
