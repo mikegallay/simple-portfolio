@@ -123,6 +123,28 @@
 	}
 }
 
+/* TERMS & PRIVACY */
+#terms{
+	max-width:1280px;
+	margin:6em auto 1em;
+	padding:20px;
+	h1{
+		color:$skyblueColor;
+		text-transform:uppercase;
+		font-size:2em;
+		font-family: 'Din-Bold', sans-serif;
+		line-height:1em;
+	}
+	h2{	
+		color:$skyblueColor;
+		text-transform:uppercase;
+		font-family: 'Din-Bold', sans-serif;
+		//font-style:italic;
+		font-size:1em;
+		margin-top:0;
+	}
+}
+
 
 /* WORK TEMPLATE */
 
