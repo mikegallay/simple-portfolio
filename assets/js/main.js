@@ -2270,6 +2270,7 @@ var mgbHeader = {
 		this.navContainer.addClass('settle');
 		this.navHeight = $('nav').height();
 
+		if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) this.hideMobileNav();
 /*
 		// check to see if overlay is required
 		var loc = $(location).attr('href');
