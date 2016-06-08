@@ -2445,10 +2445,7 @@ var mgbHeroVideo = {
 			}, 1000);
 			
 			this.videoHeaderContainer.css('height',videoHolderHeight+'px');
-		}*/
-		
-
-		
+		}*/	
 	},
 	
 	initWordCycle:function(){
@@ -2464,8 +2461,7 @@ var mgbHeroVideo = {
 		for (i=0;i<13;i++){
 			if (i > 0) n += ((i-1) * .1)/2.5;
 			headerWords.addCallback(function(){that.changeHeaderCopy()}, spinLength + n);
-		}
-		
+		}	
 	},
 	
 	initHeaderCopy:function(){
@@ -2521,7 +2517,6 @@ var mgbHeroVideo = {
 
 		this.resize();
 	}
-
 };
 
 // Module to handle site content

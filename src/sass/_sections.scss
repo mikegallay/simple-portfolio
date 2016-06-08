@@ -437,9 +437,34 @@ h1 {
 	}
 	
 	.officeStats {
+		display: flex;
+		flex-direction: row wrap;
+		justify-content: space-around;
+		align-items: flex-start;
 		padding-top: 1em;
 		opacity: 0;
 		transition: opacity 500ms;
+		
+		div {
+			display: inline-block;
+			text-align: center;
+			
+			h4 {
+				color: $skyblueColor;
+				font-family: 'Din-Bold', sans-serif;
+				font-weight: bolder;
+				font-size: 3em;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			
+			span {
+				color: $skyblueColor;
+				font-family: 'Din-Regular', sans-serif;
+				font-weight: lighter;
+				font-size: 1em;
+			}
+		}
 	}
 	
 	
