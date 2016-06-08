@@ -1989,6 +1989,7 @@ var mgbMainSys = {
 	},
 	
     pushHistoryState: function (page, bool) {
+		console.log('push',page);
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
                 // console.log('pushing ', page, ' to history');
@@ -2006,7 +2007,7 @@ var mgbMainSys = {
 		if (page == appRoot){
 	        this.pushHistoryState(page, bool); //-- add page view to history
 		} else{
-	        this.pushHistoryState('/'+page, bool); //-- add page view to history
+	        this.pushHistoryState(appRoot+page, bool); //-- add page view to history
 		
 		}
        

@@ -302,6 +302,7 @@ var mgbMainSys = {
 	},
 	
     pushHistoryState: function (page, bool) {
+		console.log('push',page);
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
                 // console.log('pushing ', page, ' to history');
