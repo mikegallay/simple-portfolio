@@ -319,7 +319,7 @@ var mgbMainSys = {
 		if (page == appRoot){
 	        this.pushHistoryState(page, bool); //-- add page view to history
 		} else{
-	        this.pushHistoryState('/'+page, bool); //-- add page view to history
+	        this.pushHistoryState(appRoot+page, bool); //-- add page view to history
 		
 		}
        
