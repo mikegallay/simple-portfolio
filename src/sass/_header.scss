@@ -16,7 +16,7 @@
 		height: 4.25em;
 		margin-top: 0.5em;
 		display: inline-block;
-		//z-index: 9999;
+
 		#homeLogo{
 			/* MB LOGO */
 
@@ -284,10 +284,13 @@
 		&:before{
 			opacity:1;
 		}
-		
-		#mbLogo{
-			margin-top:-10px;
-			//margin-left:4px;//8px;
+		nav {
+			#homeLogo {
+				#mbLogo{
+					margin-top:-10px;
+					//margin-left:4px;//8px;
+				}
+			}
 		}
 	}
 	

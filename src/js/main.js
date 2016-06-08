@@ -855,12 +855,13 @@ var mgbContent = {
     },
 	
 	deactivateActiveContent : function(){
-		
-		this.portfolioContent.each(function(){
-			if($(this).children("a").hasClass("active")) {
-				$(this).children("a").removeClass("active");
-			}
-		});
+		if (mgbMainSys.mainContentLoaded == true) {
+			this.portfolioContent.each(function(){
+				if($(this).children("a").hasClass("active")) {
+					$(this).children("a").removeClass("active");
+				}
+			});
+		}
 		
 	},
     
@@ -1353,6 +1354,7 @@ var mgbOverlay = {
 		$('footer').css('height',footerH+'px');
 		
 		//add height style to hero image to be able to collapse it using css3
+		console.log($('#heroImage picture').innerHeight());
 		$('#heroImage').css('height',$('#heroImage picture').innerHeight() + "px");
 		$('.videoHolder').css('height',$('.videoWrapper').height()+'px');
 		
