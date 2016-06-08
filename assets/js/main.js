@@ -1806,6 +1806,7 @@ var mgbMainSys = {
 	addListeners : function(){
 		var that = this;
 		$(document).on('click', '[data-tracking-label]', function(e) {
+			e.preventDefault();
 		    var virtualPath = $(this).attr('data-tracking-label');
 		    	that.gaTracking(virtualPath,$(this));
 		});
@@ -1825,19 +1826,21 @@ var mgbMainSys = {
 		
 	    if (pieces.length == 3) {
 			console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
-	       /* if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
+	        if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
 	            // internal exit page link
-	            e.preventDefault();
+	            
 				
 	            // makes sure to get interaction data before user leaves site
-	            ga('send', 'event', pieces[0], pieces[1], pieces[2], {
-	                'hitCallback': function() {
-	                    window.location.href = $self.attr('href');
-	                }
-	            });*
+	          //  ga('send', 'event', pieces[0], pieces[1], pieces[2], {
+	               // 'hitCallback': function() {
+	                    //don't use location href = window.location.href = $self.attr('href');
+						mgbMainSys.getPage($self.attr('href')); 
+	               // }
+			   // });
 	        } else {
-	            ga('send', 'event', pieces[0], pieces[1], pieces[2]);
-	        }*/
+	           // ga('send', 'event', pieces[0], pieces[1], pieces[2]);
+	        }
+			   
 	    }
 		
 	},
@@ -2000,8 +2003,13 @@ var mgbMainSys = {
 	
     getPage: function (page, bool) {
 		
-        this.pushHistoryState(page, bool); //-- add page view to history
+		if (page == appRoot){
+	        this.pushHistoryState(page, bool); //-- add page view to history
+		} else{
+	        this.pushHistoryState('/'+page, bool); //-- add page view to history
 		
+		}
+       
 		mgbMainSys.currPage = page;
 		
 		$('#Home').removeClass('removed');
@@ -2069,18 +2077,12 @@ var mgbMainSys = {
 				setTimeout(function(){
 					
 					window.scrollTo(0, 0);
-					
-					// console.log(response);
-					// success =  $($.parseHTML(response)).filter("#overlayContent");
-					// success =  $.parseHTML(response);
 
 					$("#overlayContent").html(response);
 					
 					 //call js to init current page
 					mgbOverlay.init();
-					
-		            
-					
+										
 					$("nav").addClass("overlayActive").removeClass("sticky");
 			
 					mgbHeader.hideLogo();
@@ -2089,12 +2091,6 @@ var mgbMainSys = {
 					$("#mainContent").addClass("inactive");
 					
 				},500);
-				
-				setTimeout(function(){
-					
-					
-					
-				},1000);
 				
 			}else{ //back to homepage
 				

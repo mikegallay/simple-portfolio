@@ -18,17 +18,23 @@
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
-	$ishome = true;
+	
+	$ishome = false;
+	
+	if ($routes[0] == null || $routes[0] == 'index.php'){
+		$ishome = true;
+	}
 	
 	//check to see if this requires an overlay? i.e. contains 'work'
-	foreach($routes as $route)
+	/*foreach($routes as $route)
 	{
+		//echo '$len '. strlen($route);
 		
-		if(trim($route) == 'work')
+		if(strlen($route) == 0)
 			
-			$ishome = false;
+			$ishome = true;
 			break;
-	}
+	}*/
 	
 	if (isset($_GET['ajax'])) {
 		
