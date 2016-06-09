@@ -176,7 +176,7 @@ $filters: (
                 }
                 filter: unquote($filter_css_value);
                // background-color: hsl(random(360), 100%, 70%);
-                transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(10) / 100 + 1.02);
+                transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(10) / 100 + 1.02) skewX(#{random(20)-10 + 'deg'});
             }
         }
     }
