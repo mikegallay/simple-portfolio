@@ -52,8 +52,7 @@
 ?>
 <?php include_once("modules/_head.inc.php"); ?>
 
-<body class="no-autoplay">
-	
+<body class="no-autoplay">	
 	<?php if ($ishome){ ?>
 		
 		<span id="homepage-flag" style="display: none"></span>

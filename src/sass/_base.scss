@@ -105,7 +105,7 @@
 .glitch {
 	overflow:hidden;
 	margin: 0;
-	animation: spazz .2s steps(1) infinite;
+	animation: spazz 1s steps(1) infinite;
 	.fullColor{
 		visibility:visible!important;
 	}
@@ -125,7 +125,7 @@ $filters: (
             min: 1,
             max: 10
         ),
-        probability: 1/5
+        probability: 3/5
     ),
     hue-rotate: (
         units: 'deg',
@@ -175,9 +175,9 @@ $filters: (
                         $filter_css_value: $filter_css_value + ' #{$filter}(#{random(100) / 100 * ($max - $min) + $min}#{map-get($filter_props, units)})';
                     }
                 }
-                filter: unquote($filter_css_value);
+                filter: unquote($filter_css_value) url("/#distortFilter");
                // background-color: hsl(random(360), 100%, 70%);
-                transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(10) / 100 + 1.02);
+                transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(10) / 100 + 1.02) skewX(#{random(20)-10 + 'deg'});
             }
         }
     }
