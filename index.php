@@ -1,40 +1,30 @@
 <?php
+	//include 'ChromePhp.php';
+	
+	
+	$appRoot = dirname($_SERVER["PHP_SELF"]);
+	
+	if($appRoot !== '/' ) $appRoot = $appRoot.'/'; //-- needs trailing slash
+	
 	require_once("modules/_methods.inc.php");
 
-	$appRoot = dirname($_SERVER["PHP_SELF"]);
-	if($appRoot !== '/' ) $appRoot = $appRoot.'/'; //-- needs trailing slash
-
-	function getCurrentUri()
+	function getCurrentUri($root)
 	{
-		$basepath = implode('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)) . '/';
-		$uri = substr($_SERVER['REQUEST_URI'], strlen($basepath));
-		//if (strstr($uri, '?')) $uri = substr($uri, 0, strpos($uri, '?'));
-		//$uri = '/' . trim($uri, '/');
-		
+		$uri = substr($_SERVER['REQUEST_URI'], strlen($root));
 		return $uri;
 	}
  
-	$base_url = getCurrentUri();
+ 	$actual_link = $_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI];
+	$base_url = getCurrentUri($appRoot);
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
 	
 	$ishome = false;
 	
-	if ($routes[0] == null || $routes[0] == 'index.php'){
+	if ($routes[0] == null || $routes[0] == 'index.php' || $routes[0] == 'index.php?ajax=1'){
 		$ishome = true;
 	}
-	
-	//check to see if this requires an overlay? i.e. contains 'work'
-	/*foreach($routes as $route)
-	{
-		//echo '$len '. strlen($route);
-		
-		if(strlen($route) == 0)
-			
-			$ishome = true;
-			break;
-	}*/
 	
 	if (isset($_GET['ajax'])) {
 		
@@ -57,11 +47,8 @@
 <body class="no-autoplay">
 	
 	<?php if ($ishome){ ?>
-		
 		<span id="homepage-flag" style="display: none"></span>
 	<?php } ?>
-	
-	
 
     <?php include_once("modules/_header.inc.php");?>
 	

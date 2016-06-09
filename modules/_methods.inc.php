@@ -123,8 +123,6 @@ function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle) {
 	return $renderedHTML;
 }
 
-
-
 function addIcon($str) {
     echo '<svg class="icon ' . $str . '-inline" role="img" aria-labelledby="title">
   <use xlink:href="#' . $str . '"></use>
