@@ -138,7 +138,7 @@ var mgbMainSys = {
 		}		
 		
 	    if (pieces.length == 3) {
-			console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
+			//console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
 	        if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
 	            // internal exit page link
 	            
@@ -242,7 +242,7 @@ var mgbMainSys = {
 			
 			//if (!$('#Home').hasClass('mobile')) 
 			$('#Home').removeClass("sticky");
-			if(!$('nav').hasClass("overlayActive")) {
+			//if(!$('nav').hasClass("overlayActive")) {
 				$('nav a').removeClass('active');
 				$('nav').removeClass("sticky");
 				// $('#Home').removeClass("sticky");
@@ -257,7 +257,7 @@ var mgbMainSys = {
 				$('#mbLogo').on('mouseout',function(){
 					if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
 				});*/
-			}
+			//}
 		}
 		
 		// update the navigation based on which section is at the top of the viewport
@@ -302,6 +302,7 @@ var mgbMainSys = {
 	},
 	
     pushHistoryState: function (page, bool) {
+		console.log('push',page);
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
                 // console.log('pushing ', page, ' to history');
@@ -316,12 +317,7 @@ var mgbMainSys = {
 	
     getPage: function (page, bool) {
 		
-		if (page == appRoot){
-	        this.pushHistoryState(page, bool); //-- add page view to history
-		} else{
-	        this.pushHistoryState('/'+page, bool); //-- add page view to history
-		
-		}
+		this.pushHistoryState(page, bool);
        
 		mgbMainSys.currPage = page;
 		
@@ -336,9 +332,9 @@ var mgbMainSys = {
 			page += '.php';
 		}
 		
-		// console.log('page',page,useOverlay);
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
-        // var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
+		
+		// console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
@@ -381,8 +377,6 @@ var mgbMainSys = {
 		
         request.done(function (response) {
 			
-			var success;
-				
 			if (useOverlay){ //request page requires overlay
 				
 				$('#overlayCover').addClass('active'); //css takes 500ms
@@ -390,6 +384,8 @@ var mgbMainSys = {
 				setTimeout(function(){
 					
 					window.scrollTo(0, 0);
+					
+					// console.log('repsonseOverlay ',response);
 
 					$("#overlayContent").html(response);
 					
@@ -407,14 +403,14 @@ var mgbMainSys = {
 				
 			}else{ //back to homepage
 				
-				// success =  $($.parseHTML(response)).filter("#mainContent");
+				// console.log('repsonse ' ,response);
 				
 				$('footer').removeAttr('style');
-			
-				mgbMainSys.mainContentLoaded = true;
 				
 				$("#mainContent").html(response);
 				$("#mainContent").removeClass("inactive");
+				
+				mgbMainSys.mainContentLoaded = true;
 				
 				mgbContent.init();
 				mgbContent.resize();

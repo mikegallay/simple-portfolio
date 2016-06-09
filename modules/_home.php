@@ -1,4 +1,4 @@
-	<!-- MAIN CONTENT GOES HERE -->
+	<!-- MAIN CONTENT GOES HERE -->	
 	<section class="videoHeader">
 		
 		<div id="welcomeImage"></div>
