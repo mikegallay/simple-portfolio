@@ -1,4 +1,13 @@
-<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?></span>
+<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?>	
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-distortFilter">
+		<defs>
+			<filter id="distortFilter">
+				<feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+				<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="40" in="SourceGraphic" in2="warp" />
+			</filter>
+		</defs>
+	</svg>
+</span>
 
 <header id="Home">
 	<nav id="mainNav">
