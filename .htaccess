@@ -31,11 +31,7 @@ AddType text/x-component .htc
 
 
 <IfModule mod_rewrite.c>
-	#RewriteEngine On
-	#
-	
-	#RewriteRule ^work(.*)$ /modules/work$1 [L]
-	# 
+# Rewrites all requests (i.e. work/intel) to root index.php on initial load
 	Options -MultiViews
 	RewriteEngine On
 	RewriteCond %{REQUEST_FILENAME} !-f

@@ -26,6 +26,7 @@
 		$ishome = true;
 	}
 	
+	
 	if (isset($_GET['ajax'])) {
 		
 		if (!$ishome){ // not the homepage
@@ -40,13 +41,21 @@
 		include($new_url);
 	  
 		return;
-	}
+		
+	} /*else {
+		echo 'base'.$base_url;
+		if (!file_exists($appRoot . $base_url) || !file_exists($appRoot . "modules/" . $base_url)){
+			//header("Location:" . $appRoot . "404.php" );
+			//exit();
+		}
+	}*/
 ?>
 <?php include_once("modules/_head.inc.php"); ?>
 
 <body class="no-autoplay">
 	
 	<?php if ($ishome){ ?>
+		
 		<span id="homepage-flag" style="display: none"></span>
 	<?php } ?>
 
