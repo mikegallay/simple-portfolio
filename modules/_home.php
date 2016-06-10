@@ -65,7 +65,7 @@
 			</div>
 	</section> -->
 	
-	<section id="OurWork" class="fullBleed">
+	<section id="work" class="homeSection fullBleed">
 		<div class="container">		
 			<h1 class="sectionHeading">IT'S NOT <span data-forward class="blueFont">CREATIVE</span> <br> UNLESS IT <span data-forward class="blueFont">WORKS.</span></h1>
 	
@@ -82,7 +82,7 @@
 		</div>
 	</section>
 
-	<section id="OurPeople" class="fullBleed">
+	<section id="culture" class="homeSection fullBleed">
 		<div class="container">
 			<h1 class="sectionHeading">OUR <span data-forward class="blueFont">CULTURE</span></h1>
 	
@@ -115,7 +115,7 @@
 		</div>	
 	</section>
 
-	<section id="OurOffices" class="fullBleed">
+	<section id="offices" class="homeSection fullBleed">
 		<div class="container">
 			<h1 class="sectionHeading">OUR OFFICES</h1>
 
@@ -131,7 +131,7 @@
 	</section>
 
 
-	<section id="OurClients" class="fullBleed">
+	<section id="clients" class="fullBleed">
 		<div class="container">
 			<h1 class="sectionHeading">OUR <span class="blueFont">CLIENTS</span></h1>
 		
@@ -145,11 +145,11 @@
 	</section>
 
 
-	<section id="JoinTeam" class="fullBleed">	
+	<section id="careers" class="fullBleed">	
 		<div class="container">
 			<h1 class="sectionHeadingSmall joinTeamCTA">INTERESTED IN JOINING THE TEAM?</h1>
 	
-			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" alt="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS</a>
+			<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS</a>
 		</div>	
 	</section>
 	

@@ -12,15 +12,44 @@ var mgbMainSys = {
 	cMoreTarget:5,
 	pMoreTarget:6,
 	
+	waypointsInitialized: false,
+	
 	init : function() {
 		var that = this;
-		this.addListeners();	
-		// $('.fullBleed').addClass("glitch");
-		//setTimeout(function(){$('.fullBleed').removeClass("glitch");},1000);
+		if($(".homeSection").length > 0) this.initWaypoints();
+		this.addListeners();
 		
-		/*$('a').on('mouseover',function(){
-			that.addGlitch($(this),250);
-		})*/
+	},
+	
+	initWaypoints : function(){  
+		
+		var that = this;
+		
+		this.waypointsInitialized = true;
+		
+		$('.homeSection .sectionHeading').each(function() {
+			
+			new Waypoint.Inview({
+				element: this,
+				offset: '50%',
+				enter: function(direction) {
+					//$('.menu a').removeClass('active');
+					mgbHeader.deactivateNavActive();
+					var id = $(this.element).parent().parent().attr("id");
+					$("#nav-" + id).addClass('active');
+				},
+				exit: function(direction) {
+					var id = $(this.element).parent().parent().attr("id");
+					$("#nav-" + id).removeClass('active');
+				  }
+			});
+		});
+	},
+	
+	scrollToSection : function(section){
+		$("html, body").animate({
+				scrollTop: $("#"+section).offset().top,
+			}, 1000);
 	},
 	
 	addGlitch : function(tar,t){
@@ -55,7 +84,7 @@ var mgbMainSys = {
 			that.selectRandomItemToGlitch('#welcomeImage|.responsive-video|.headerHeroText|.moreMsg');
 			
 			//culture section
-			var targets = '#OurPeople .sectionHeading|#OurPeople .moreButton|';
+			var targets = '#culture .sectionHeading|#culture .moreButton|';
 			for (var i=0;i<that.cLoaded;i++){
 				targets += '.cultureTile:nth-child('+i+') img|'
 			}
@@ -67,7 +96,7 @@ var mgbMainSys = {
 			}(targets));
 			
 			//work section
-			targets = '#OurWork .sectionHeading|#OurWork .moreButton|';
+			targets = '#work .sectionHeading|#work .moreButton|';
 			for (var i=0;i<that.pLoaded;i++){
 				targets += '.projectTile:nth-child('+i+') img|'
 			}
@@ -80,7 +109,7 @@ var mgbMainSys = {
 			
 			
 			//office section
-			targets = '#OurOffices .sectionHeading|';
+			targets = '#offices .sectionHeading|';
 			for (var i=0;i<$('.officeTile').length;i++){
 				targets += '.officeTile:nth-child('+i+') img|'
 			}
@@ -91,7 +120,8 @@ var mgbMainSys = {
 			}(targets));
 			
 			//clients/jobs section
-			targets = '#OurClients .sectionHeading|.joinTeamCTA|';
+			/*
+			targets = '#clients .sectionHeading|.joinTeamCTA|';
 			for (var i=0;i<$('.clientLogo').length;i++){
 				targets += '.clientLogo:nth-child('+i+')|'
 			}
@@ -102,6 +132,7 @@ var mgbMainSys = {
 				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
 				setTimeout(function(){that.selectRandomItemToGlitch(tars,150);},300);
 			}(targets));
+			*/
 			
 			//footer
 			targets = '.legal|';
@@ -131,14 +162,14 @@ var mgbMainSys = {
 		if ($self){
 			if ($self.hasClass('cultureLink')){
 				$self.toggleClass('active');
-	
+				if (!$self.hasClass('active')) pieces[2] += "_close";
 			}
 		
-			if (!$self.hasClass('active')) pieces[2] += "_close";
+			
 		}		
 		
 	    if (pieces.length == 3) {
-			//console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
+			console.log(pieces[0]+'/'+pieces[1]+'/'+pieces[2]);
 	        if ($self.attr('href') && $self.attr('href')[0] != '#' && $self.attr('target') != '_blank') {
 	            // internal exit page link
 	            
@@ -243,7 +274,7 @@ var mgbMainSys = {
 			//if (!$('#Home').hasClass('mobile')) 
 			$('#Home').removeClass("sticky");
 			//if(!$('nav').hasClass("overlayActive")) {
-				$('nav a').removeClass('active');
+				// $('nav a').removeClass('active');
 				$('nav').removeClass("sticky");
 				// $('#Home').removeClass("sticky");
 				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
@@ -267,7 +298,7 @@ var mgbMainSys = {
 			var hashName = $(this).attr('id');
 			
 			if(diff <= 600) {			
-				$('nav a').removeClass('active');
+				// $('nav a').removeClass('active');
 				$('nav a[href="#'+hashName+'"]').addClass('active');
 				$('#'+hashName).find("span[data-forward]").addClass('forwardVisible');			
 				
@@ -279,8 +310,8 @@ var mgbMainSys = {
 			}
 		
 			if($(window).scrollTop() === scrollBottom) {
-				$('nav a').removeClass('active');
-				$('.navigation li:last-child a').addClass('active');
+				// $('nav a').removeClass('active');
+				// $('.navigation li:last-child a').addClass('active');
 			} 
 			
 			/*if(mgbUtils.isScrolledIntoView( $(this).find("h1") )) {
@@ -302,13 +333,18 @@ var mgbMainSys = {
 	},
 	
     pushHistoryState: function (page, bool) {
-		console.log('push',page);
+		// console.log('push',page);
+		
+		var root = appRoot;
+		
+		if (page == appRoot) root = '';
+		
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
                 // console.log('pushing ', page, ' to history');
                 window.history.pushState({
                     url: page
-                }, "", page);
+                }, "", root + page);
             }
         } else {
             window.location.hash = page;
@@ -318,19 +354,30 @@ var mgbMainSys = {
     getPage: function (page, bool) {
 		
 		this.pushHistoryState(page, bool);
-       
+		
+		//check to see if they home section array contains the page
+		var homeSectionIndex = jQuery.inArray(page, homeSections);
+		var isHomeSection = (homeSectionIndex != -1);
+		       
 		mgbMainSys.currPage = page;
 		
 		$('#Home').removeClass('removed');
 		
+		
 		var useOverlay = true;
 		
-		if (page == appRoot){
+		if (page == appRoot || isHomeSection){
 			page = 'index.php'; 
 			useOverlay = false;
+			if (!$('#overlayCover').hasClass('active')){
+				mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
+				return;
+			}
 		}else{
 			page += '.php';
 		}
+		
+		$('#overlayCover').removeClass('active');
 		
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
@@ -347,15 +394,16 @@ var mgbMainSys = {
 			mgbHeader.hideLogo();
 			mgbHeader.deactivateNavActive();
 			
-			
 			mgbOverlay.kill();
-			
 			
 			$("#mainContent").removeClass("inactive");
 			
 			setTimeout(function(){
 				
 				$("#overlayContent").empty();
+				if (isHomeSection) {
+					mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
+				}
 
 			},500);
 			
@@ -416,6 +464,8 @@ var mgbMainSys = {
 				mgbContent.resize();
 				mgbHeroVideo.init();
 				
+				if (!mgbMainSys.waypointsInitialized) mgbMainSys.initWaypoints();
+				
 				mgbHeroVideo.loadHeaderVideo();
 				
 				$("nav").removeClass("overlayActive sticky");
@@ -430,7 +480,19 @@ var mgbMainSys = {
 					$("#overlayContent").empty();
 					mgbMainSys.checkTileLoad();
 					
+					
+					
 				},500);
+				
+				setTimeout(function(){
+					
+					if (isHomeSection) {
+						mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
+					}
+					
+				},1000);
+				
+				
 			}
 
         });
@@ -512,17 +574,19 @@ var mgbHeader = {
 			
 			that.hideMobileNav();
 
-			if (mgbMainSys.currPage != appRoot) {
+			/*if (mgbMainSys.currPage != appRoot) {
 				mgbMainSys.getPage('/',true);
 				return;
-			}
+			}*/
 			
-			$(this).removeClass('active');
+			// $(this).removeClass('active');
 			var currLink = $(this);
 
-			var hashValue = $(this).attr('href');
-
-			$("html, body").animate({
+			//var hashValue = $(this).attr('href');
+			
+			//scroll nav
+			
+			/*$("html, body").animate({
 				scrollTop: $(hashValue).offset().top,
 			}, 1000, function() {
 				$(hashValue).find("span[data-forward]").addClass('forwardVisible'); // animate the text for the section
@@ -535,7 +599,7 @@ var mgbHeader = {
 				});
 
 				currLink.addClass('active');	
-			});		
+			});	*/	
 		});
 	
 	
@@ -1341,10 +1405,14 @@ var mgbOverlay = {
 		$('footer').css('height',footerH+'px');
 		
 		//add height style to hero image to be able to collapse it using css3
-		console.log($('#heroImage picture').innerHeight());
-		$('#heroImage').css('height',$('#heroImage picture').innerHeight() + "px");
-		$('.videoHolder').css('height',$('.videoWrapper').height()+'px');
 		
+		if($("#heroImage").length > 0) {
+			$('#heroImage').css('height',$('#heroImage picture').innerHeight() + "px");
+		}
+		
+		if($(".videoHolder").length > 0) {
+			$('.videoHolder').css('height',$('.videoWrapper').height()+'px');
+		}
 		
 	}
 };
@@ -1358,6 +1426,13 @@ var mgbOverlay = {
 if($("#homepage-flag").length > 0) { //this is the homepage
     mgbContent.init();
 	mgbMainSys.mainContentLoaded = true;
+	var pathname = window.location.pathname;
+	
+	if (pathname != appRoot){
+		var section = pathname.replace('/', '');
+		setTimeout(function(){mgbMainSys.scrollToSection(section);},2000);
+		
+	}
 	// if (useHeaderVideo) loadHeaderVideo();
 }else{
 	$('#overlayCover').addClass('active');
@@ -1377,9 +1452,9 @@ window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
 window.onunload = displayCurrentContent;
 
-$(window).on('hashchange', function () {
+/*$(window).on('hashchange', function () {
     mgbMainSys.getPage(location.hash);
-});
+});*/
 
 window.onpopstate = function (event) {
 	console.log('pop',event,loc = window.location.pathname);

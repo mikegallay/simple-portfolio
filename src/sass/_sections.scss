@@ -1,5 +1,5 @@
 
-#OurWork, #OurPeople, #OurOffices {
+#work, #culture, #offices {
 	min-height: 500px;
 	width: 100%;
 	overflow: hidden;
@@ -11,7 +11,7 @@
 	&.settle{margin-top:1.5625em;}
 }*/
 
-#JoinTeam {
+#careers {
 	min-height: 200px;
 	width: 100%;
 	margin-bottom: 1em;
@@ -669,7 +669,7 @@ h1 {
 	}
 	
 	
-	#OurPeople {
+	#culture {
 		
 		.cultureContent {
 			input.cityFilter {
@@ -815,22 +815,22 @@ h1 {
 
 @media screen and (min-width: 1024px) {
 
-	#OurWork {
+	#work {
 		min-height: 500px;
 		padding-top: 2.5em;
 	}
 
-	#OurPeople {
+	#culture {
 		min-height: 500px;
 		padding-top: 2.5em;
 	}
 
-	#OurOffices {
+	#offices {
 		min-height: 500px;
 		padding-top: 2.5em;
 	}
 
-	#JoinTeam {
+	#careeres {
 		min-height: 200px;
 		padding-top: 2.5em;
 	}

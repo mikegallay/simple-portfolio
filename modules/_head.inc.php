@@ -19,7 +19,12 @@
 		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 	
-	<script>var appRoot='<?php echo $appRoot; ?>';</script>
+	<script>
+		var appRoot='<?php echo $appRoot; ?>';
+		var homeSections = [];
+    	<?php foreach($homeSections as $key => $val){ ?>
+        	homeSections.push('<?php echo $val; ?>');
+		<?php } ?></script>
 	
 	<link rel="stylesheet" href="<?php echo $appRoot?>assets/css/main.css">
 

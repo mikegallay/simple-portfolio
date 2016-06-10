@@ -1,6 +1,6 @@
 <?php
-	//include 'ChromePhp.php';
-	
+// include 'ChromePhp.php';
+// ChromePhp::log('Hello console!');
 	
 	$appRoot = dirname($_SERVER["PHP_SELF"]);
 	
@@ -19,10 +19,13 @@
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
+	$homeSections = array("work", "culture", "offices");
 	
 	$ishome = false;
 	
-	if ($routes[0] == null || $routes[0] == 'index.php' || $routes[0] == 'index.php?ajax=1'){
+	$isHomeSection = (count($routes) < 2 && (in_array($routes[0], $homeSections)));//(count($routes) < 2 && (in_array($routes[0], $homeSections)))
+	
+	if ($routes[0] == null || $routes[0] == 'index.php' || $routes[0] == 'index.php?ajax=1' || $isHomeSection){
 		$ishome = true;
 	}
 	
@@ -68,8 +71,6 @@
 	
 	<div id="overlayContent">
 		<?php if (!$ishome){ 
-			
-			
 			include_once("modules/" . $base_url . ".php");
 		}?>
 	</div>

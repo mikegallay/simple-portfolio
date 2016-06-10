@@ -40,16 +40,16 @@
 		
 		<ul class="menu">
 			<li>
-				<a href="#OurPeople" aria-label="" data-tracking-label="Nav|Click|Culture">CULTURE</a>
+				<a id="nav-work" href="work" aria-label="" data-tracking-label="Nav|Click|Work">WORK</a>
 			</li>
 			<li>
-				<a href="#OurWork" aria-label="" data-tracking-label="Nav|Click|Work">WORK</a>
+				<a id="nav-culture" href="culture" aria-label="" data-tracking-label="Nav|Click|Culture">CULTURE</a>
 			</li>
 			<li>
-				<a href="#OurOffices" aria-label="" data-tracking-label="Nav|Click|Office">OFFICES</a>
+				<a id="nav-offices" href="offices" aria-label="" data-tracking-label="Nav|Click|Office">OFFICES</a>
 			</li>
 			<li>
-				<a href="#JoinTeam" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
+				<a href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
 			</li>	
 		</ul>
 		
