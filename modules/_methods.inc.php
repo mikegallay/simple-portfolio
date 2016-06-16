@@ -103,7 +103,7 @@ function shuffleCulture($data){
 	
 }
 
-function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle) {
+function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle = false) {
 	global $fullData;
 	$templateStr = file_get_contents($tempname);
 	

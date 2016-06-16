@@ -1,4 +1,5 @@
 <?php
+	error_reporting(E_ALL & ~E_NOTICE);
 // include 'ChromePhp.php';
 // ChromePhp::log('Hello console!');
 	
@@ -14,7 +15,7 @@
 		return $uri;
 	}
  
- 	$actual_link = $_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI];
+ 	$actual_link = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	$base_url = getCurrentUri($appRoot);
 	$new_url = '';
 	$routes = array();
