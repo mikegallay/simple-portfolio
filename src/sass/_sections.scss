@@ -405,7 +405,7 @@ h1 {
 		padding-bottom: 2em;
 		position: relative;
 		height: 0%;
-		transition: height 500ms;
+		transition: height 500ms, top 0s;
 		
 		.info {
 			opacity: 0;
@@ -473,7 +473,12 @@ h1 {
 		
 		.ribbon {
 			height: 100%;
-			transition: height 300ms 300ms;
+			transition: height 300ms 300ms,top 5s;
+			top:0px;
+			&.moving{
+				top:1px;
+				transition: height 300ms 300ms,top 0s;
+			}
 			
 			.info {
 				font-size: 0.9em;

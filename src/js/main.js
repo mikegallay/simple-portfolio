@@ -1147,53 +1147,53 @@ var mgbContent = {
 		}
 	},
 
-		initClockCnt: function() {
-			$(".officeTile").each(function(index) {
-				var timeOffset = parseInt($(this).data("timeOffset")), 
-				d = new Date(), 
-				utc = d.getTime() + (d.getTimezoneOffset() * 60000), 
-				nd = new Date(utc + (3600000 * timeOffset));
+	initClockCnt: function() {
+		$(".officeTile").each(function(index) {
+			var timeOffset = parseInt($(this).data("timeOffset")), 
+			d = new Date(), 
+			utc = d.getTime() + (d.getTimezoneOffset() * 60000), 
+			nd = new Date(utc + (3600000 * timeOffset));
 
-				var ndHours = nd.getHours();
-				var ndMinutes = nd.getMinutes();
+			var ndHours = nd.getHours();
+			var ndMinutes = nd.getMinutes();
 
-				var ampm = "AM";
-				if (ndHours > 12) {
-				ndHours -= 12;
-				ampm = "PM";
+			var ampm = "AM";
+			if (ndHours > 12) {
+			ndHours -= 12;
+			ampm = "PM";
 
-				}
+			}
 
-				var clockHours = Math.floor((ndHours / 12) * 100) + "%";
-				var clockMinutes = Math.floor(100 * (ndMinutes / 60)) + "%";
+			var clockHours = Math.floor((ndHours / 12) * 100) + "%";
+			var clockMinutes = Math.floor(100 * (ndMinutes / 60)) + "%";
 
-				/* nd = nd.toLocaleString({
-				hour: 'numeric',
-				minute: 'numeric'
-				}).replace(/:\d{2}\s/, ' ').split(",")[1];*/
+			/* nd = nd.toLocaleString({
+			hour: 'numeric',
+			minute: 'numeric'
+			}).replace(/:\d{2}\s/, ' ').split(",")[1];*/
 
-				if (ndHours == 0) ndHours = 12;
-				if (ndMinutes < 10) ndMinutes = "0" + ndMinutes;
-				var displayTime = ndHours + ":" + ndMinutes + " " + ampm;
-				// console.log("nd",displayTime);
+			if (ndHours == 0) ndHours = 12;
+			if (ndMinutes < 10) ndMinutes = "0" + ndMinutes;
+			var displayTime = ndHours + ":" + ndMinutes + " " + ampm;
+			// console.log("nd",displayTime);
 
-				$(this).children("a").find("time").text(displayTime);
+			$(this).children("a").find("time").text(displayTime);
 
-				var hrEle = $(this).find(".clockHours");
-				var minEle = $(this).find(".clockMinutes");
+			var hrEle = $(this).find(".clockHours");
+			var minEle = $(this).find(".clockMinutes");
 
-				TweenMax.to(hrEle, 1, {
-				transformOrigin: "50% 50%",
-				drawSVG: clockHours,
-				overwrite: true
-				});
-				TweenMax.to(minEle, 1, {
-				transformOrigin: "50% 50%",
-				drawSVG: clockMinutes,
-				overwrite: false
-				});
+			TweenMax.to(hrEle, 1, {
+			transformOrigin: "50% 50%",
+			drawSVG: clockHours,
+			overwrite: true
+			});
+			TweenMax.to(minEle, 1, {
+			transformOrigin: "50% 50%",
+			drawSVG: clockMinutes,
+			overwrite: false
+			});
 
-				$(this).on('click', function() {
+			$(this).on('click', function() {
 				var currThis = $(this);
 				$(this).siblings().children("a").removeClass("active");
 				$(this).children("a").addClass("active");
@@ -1210,6 +1210,8 @@ var mgbContent = {
 				// 				}, 1000);
 
 				// location.hash = 'officeDetails';
+				
+				mgbMainSys.scrollToSection("offices");
 
 				setTimeout(function() {
 					$("#officeDetails").addClass('showDetails');
@@ -1219,7 +1221,7 @@ var mgbContent = {
 						$(currThis).children("a").removeClass("active");
 						$("#officeDetails").html('');
 					});
-				}, 300);
+				}, 1000);
 			});
 		});
 
@@ -1309,6 +1311,14 @@ var mgbContent = {
 		setTimeout(function(){		
 			$('.arrow').removeClass('offTile');
 		},600);
+
+		if ($("#officeDetails").hasClass('showDetails')) {
+			$('.ribbon').addClass('moving');
+			setTimeout(function(){
+				$('.ribbon').removeClass('moving');
+				},350);
+			
+		}
 	},
 };
 
