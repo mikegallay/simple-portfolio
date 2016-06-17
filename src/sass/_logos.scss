@@ -1,5 +1,6 @@
 .clientContent {
 	width: 95%;
+	max-width:1280px;
 	position: relative;
 	margin: 0 auto;
 	display: flex;
@@ -9,12 +10,11 @@
     align-items: center;
     align-content: space-between;
 
-
 	.clientLogo {
 		position: relative;
 		margin-top: 0.75em;
 		margin-bottom: 0.75em;
-		width: 20%;
+		width: 30%;
 		
 		
 		@media screen and (min-width: 768px) {
@@ -23,6 +23,10 @@
 		
 		@media screen and (min-width: 1024px) {
 			width: 18%;
+		}
+		
+		@media screen and (min-width: 1440px) {
+			width: 15%;
 		}
 		
 		

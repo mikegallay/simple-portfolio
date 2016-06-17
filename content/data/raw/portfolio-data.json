@@ -40,15 +40,6 @@
 		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
-	{
-		"id": 9,
-		"imgSrc": "assets/img/our_work/Mariott",
-		"imgType": "jpg",
-		"contentPath": "124646110",
-		"header": "Mariott",
-		"description": "Description goes here",
-		"altText": "This is alt text"
-	},
 	{	
 		"id": 4,
 		"imgSrc": "assets/img/our_work/Aussie",
@@ -92,6 +83,16 @@
 		"contentPath": "",
 		"header": "Verizon",
 		"description": "Description goes here.",
+		"altText": "This is alt text"
+	},
+
+	{
+		"id": 9,
+		"imgSrc": "assets/img/our_work/Mariott",
+		"imgType": "jpg",
+		"contentPath": "124646110",
+		"header": "Mariott",
+		"description": "Description goes here",
 		"altText": "This is alt text"
 	},
 	{	

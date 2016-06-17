@@ -56,10 +56,10 @@
 ?>
 <?php include_once("modules/_head.inc.php"); ?>
 
-<body class="no-autoplay">	
+<body class="no-autoplay <?php if ($ishome){ ?>ishome<?php } ?>">	
 	<?php if ($ishome){ ?>
 		
-		<span id="homepage-flag" style="display: none"></span>
+		<!-- <span id="homepage-flag" style="display: none"></span> -->
 	<?php } ?>
 
     <?php include_once("modules/_header.inc.php");?>

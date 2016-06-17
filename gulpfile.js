@@ -35,7 +35,7 @@ var concatScripts = [
 	'src/js/plugins/froogaloop.min.js',
 	'src/js/plugins/jquery.waypoints.min.js',
 	'src/js/plugins/waypoints.inview.min.js',
-	'src/js/plugins/slick.min.js',
+	//'src/js/plugins/slick.min.js',
 	'src/js/plugins/lazysizes.min.js',
 	'src/js/plugins/jquery.fitvids.js',
 	'src/js/lib/TweenMax.min.js',

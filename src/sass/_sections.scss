@@ -5,6 +5,12 @@
 	overflow: hidden;
 }
 
+#work,#clients{
+	h1.sectionHeading{
+		margin-top:1em;
+	}
+}
+
 /*section:nth-child(2){
 	margin-top:100%;
 	transition:margin 1s .5s;
@@ -12,10 +18,11 @@
 }*/
 
 #careers {
-	min-height: 200px;
-	width: 100%;
-	margin-bottom: 1em;
-	overflow: hidden;
+	//min-height: 100px;
+	width: 90%;
+	margin:1.7em 5%;
+	//overflow: hidden;
+	text-align:center;
 }
 
 #mainContent{
@@ -56,7 +63,7 @@ h1 {
 	
 	&.sectionHeading {
 		font-family: 'Din-Bold', sans-serif;
-		font-size: 2.125em;
+		font-size: 1.8em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
 		margin-top: 2.3em;
@@ -82,12 +89,13 @@ h1 {
 		font-size: 3.5em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
-		letter-spacing: 0.04em;
 		text-align: center;
+		line-height: 1.1em;
+		margin-bottom:.5em;
 	}
 	
 	&.joinTeamCTA {
-		font-size: 2.5em;
+		font-size: 1.5em;
 		text-align: center;
 	}
 }
@@ -159,7 +167,8 @@ h1 {
 				h2 {				
 					font-family: 'Din-Bold', sans-serif;
 					text-transform: uppercase;
-					font-size: 2em;
+					font-size: 1.4em;
+					line-height: 1.1em;
 				}
 		
 				p {
@@ -170,7 +179,7 @@ h1 {
 			}	
 		}
 		
-		&:hover {
+		&:hover,&:active {
 			.prjDescription {
 				
 				.cultureArrow {
@@ -180,23 +189,7 @@ h1 {
 				
 					
 				.prjDscrWrap {
-					top: -5%;
-					opacity: 1;
-					transition: top 300ms 200ms, opacity 300ms 200ms;
-				}
-			}
-		}
-		
-		&.active {
-			.prjDescription {
-				
-				.cultureArrow {
-				    border-top: 1500px solid transparent;
-				    border-right: 1500px solid #46ccc5;
-				}
-						
-				.prjDscrWrap {
-					top: -5%;
+					top: 0;
 					opacity: 1;
 					transition: top 300ms 200ms, opacity 300ms 200ms;
 				}
@@ -518,7 +511,7 @@ h1 {
 		cursor: pointer;
 		display: block;
 
-		&:hover {
+		&:hover,&.active {
 			
 			background-color: #46ccc5;
 			transition: opacity 300ms;
@@ -529,21 +522,6 @@ h1 {
 			
 			svg {
 				
-				circle.clockHours {
-					stroke: #DEE2EA;
-				}
-			}
-		}
-		
-		&.active {
-			background-color: #46ccc5;
-			transition: opacity 300ms;
-			
-			.bgOverlay, picture {
-				opacity: 0;
-			}
-			
-			svg {
 				circle.clockHours {
 					stroke: #DEE2EA;
 				}
@@ -593,6 +571,17 @@ h1 {
 		svg {
 			display: none;
 		}
+		p{
+			line-height: 0.8em;
+			.cityName{
+				font-size:1em;
+				font-family: 'Din-Regular', sans-serif;
+			}
+			.cityTime{
+				font-size:.8em;
+				font-family: 'Din-Regular', sans-serif;
+			}
+		}
 	}		
 }
 
@@ -607,14 +596,24 @@ h1 {
 			margin-bottom: 0.5em;
 		}
 		
-		&.joinTeamCTA {
-			margin-top: 1em;
-			font-size: 2em;
-		}	
+			
 	}
 }
 
+@media screen and (min-width: 414px){
+	
+	h1 {
+		&.sectionHeading {
+			font-size:2.1em;
+		}
+		&.joinTeamCTA {
+			margin-top: 1em;
+			font-size: 2em;
+		}
+	}
+}
 
+/*
 @media screen and (min-width: 768px) {
 	
 	h1 {
@@ -810,29 +809,110 @@ h1 {
 		}
 	}
 }
+*/
 
 
-
-@media screen and (min-width: 1024px) {
-
+@media screen and (min-width: 768px) {
+	
 	#work {
 		min-height: 500px;
-		padding-top: 2.5em;
+		padding-top: 1.5em;
 	}
 
 	#culture {
 		min-height: 500px;
-		padding-top: 2.5em;
+		//padding-top: 2.5em;
 	}
 
 	#offices {
 		min-height: 500px;
-		padding-top: 2.5em;
+		//padding-top: 2.5em;
 	}
 
 	#careeres {
 		min-height: 200px;
 		padding-top: 2.5em;
+	}
+	#careers {
+		margin:3em 5%;
+	}
+
+	#work,#clients{
+		h1.sectionHeading{
+			margin-top:.75em;
+		}
+	}
+	
+	h1 {
+		margin: 0;
+	
+		&.sectionHeading {
+			font-family: 'Din-Bold', sans-serif;
+			font-size: 4em;
+			font-weight: lighter;
+			color: $sectionHeadingColor;
+			letter-spacing: 0.04em;
+			line-height: 1em;
+			margin-top: 0.75em;
+			margin-bottom: 0.75em;
+		}
+		
+		&.joinTeamCTA {
+			text-align: center;
+			font-size: 2.5em;
+		}
+	}
+
+	.projectTile {
+		width: 24%;
+		//max-height: 20em;
+		
+		a {
+			.prjDescription {
+	
+				.prjDscrWrap {
+				
+					h2 {
+						font-family: 'Din-Bold', sans-serif;			
+						font-size: 1.5em;
+						margin-bottom: 0;
+					}
+					
+					p {
+						font-family: 'Gotham-Light', sans-serif;
+						font-size: 1em;
+						margin-top: 0;
+					}
+				}	
+			}
+			&:hover,&:active {
+				.prjDescription {
+					.prjDscrWrap {
+						top: -5%;
+					}
+				}
+			}
+		}
+		
+		&.col-2-by-1 {
+			width:49%;
+		}
+	}
+	
+	.cultureTile {
+		width: 24%;
+		
+		.bio {
+			font-size: 1em;
+		}
+
+		&.stretchOut {
+			width: 49%;
+		}
+		
+		&.col-2-by-1 {
+			width:49%;
+		}
 	}
 	
 	#officeDetails {
@@ -888,90 +968,35 @@ h1 {
 		}
 	}
 	
-	h1 {
-		margin: 0;
-	
-		&.sectionHeading {
-			font-family: 'Din-Bold', sans-serif;
-			font-size: 5em;
-			font-weight: lighter;
-			color: $sectionHeadingColor;
-			letter-spacing: 0.04em;
-			line-height: 1em;
-			margin-top: 0.75em;
-			margin-bottom: 0.75em;
-		}
-		
-		&.joinTeamCTA {
-			text-align: center;
-			font-size: 3.5em;
-		}
-	}
-
-	.projectTile {
-		width: 24%;
-		//max-height: 20em;
-		
-		a {
-			.prjDescription {
-	
-				.prjDscrWrap {
-				
-					h2 {
-						font-family: 'Din-Bold', sans-serif;			
-						font-size: 1.875em;
-						margin-bottom: 0;
-					}
-					
-					p {
-						font-family: 'Gotham-Light', sans-serif;
-						font-size: 1em;
-						margin-top: 0;
-					}
-				}	
-			}
-		}
-		
-		&.col-2-by-1 {
-			width:49%;
-		}
-	}
-	
-	.cultureTile {
-		width: 24%;
-		
-		.bio {
-			font-size: 1em;
-		}
-
-		&.stretchOut {
-			width: 49%;
-		}
-		
-		&.col-2-by-1 {
-			width:49%;
-		}
-	}
-	
 	.officeTile {
-		width: 19%;
+		width: 32.3%;
 	
 		.officeInfo {			
 			.cityName {
 				text-transform: uppercase;
-				font-family: 'Din-Regular', sans-serif;
 				font-size: 1.25em;
 			}
 			
 			.cityTime {
-				font-family: 'Din-Regular', sans-serif;
 				font-size: 1.0625em;
 			}
 			
-			svg {
+			/*svg {
 				&.clockGraphic {
 					margin-top: 1.5em;
 					transform: scale(0.85);
+				}
+			}*/
+			svg {			
+				display: block;
+				margin: 0 auto;
+				overflow: visible;
+
+				&.clockGraphic {
+					width: 150px;
+					transform: scale(0.8);
+				    margin-top: 5%;
+				    margin-bottom: 0%;
 				}
 			}
 			
@@ -980,25 +1005,90 @@ h1 {
 				line-height: 0.75em;
 			}
 		}
-	}		
+	}	
 }
 
-@media screen and (min-width:1440px) {
-	#officeDetails {
-		h1 {
-			font-size: 4.5em;
+@media screen and (min-width:1024px) {
+
+	.container {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	h1 {
+		&.sectionHeading {
+			font-size: 5em;
+		}
+	}
+	.projectTile {
+		
+		a {
+			.prjDescription {
+	
+				.prjDscrWrap {
+				
+					h2 {		
+						font-size: 1.875em;
+					}
+					p {
+						display:block;
+					}
+				}	
+			}
+		}
+	}
 			
-			.abbr {
-				.headerHeroText:inline-block;
+	.officeTile {
+		width: 24%;
+	
+		.officeInfo {			
+			.cityName {
+				font-size: 1.25em;
+			}
+			
+			.cityTime {
+				font-size: 1.0625em;
+			}
+			
+			svg {
+
+				&.clockGraphic {
+					width: 150px;
+				    transform: scale(0.9);
+				    margin-top: 9%;
+				    margin-bottom: 4%;
+				}
 			}
 		}
 	}	
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width:1440px) {
+	
+	h1 {
+		&.sectionHeading {
+			margin-top: 0.4em;
+		}
+	}
+	#officeDetails {
+		h1 {
+			font-size: 4.5em;
+			
+			/*.abbr {
+				.headerHeroText:inline-block;
+			}*/
+		}
+	}	
+	#careers {
+		margin:5em 5%;
+	}
+}
 
+@media screen and (min-width: 1900px) {
+	#work {
+		padding-top: 6.5em;
+	}
 	.container {
-		max-width: 90%;
+		max-width: 80%;
 		margin: 0 auto;
 	}
 
@@ -1007,12 +1097,11 @@ h1 {
 	
 		&.sectionHeading {
 			font-family: 'Din-Bold', sans-serif;
-			font-size: 7em;
+			font-size: 6em;
 			font-weight: lighter;
 			color: $sectionHeadingColor;
-			letter-spacing: 0.04em;
-			margin-top: 0.45em;
-			margin-bottom: 1em;
+			margin-top: 0.25em;
+			margin-bottom: .9em;
 		}
 		
 		&.joinTeamCTA {

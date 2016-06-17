@@ -7,6 +7,13 @@
 
 	ga('create', 'UA-XXXXXXXX-X', 'auto');
 	ga('send', 'pageview');
+	
+	//make sure you start at the top of the page on reload
+	window.onbeforeunload = function(){
+		document.body.style.display = "none";
+		window.scrollTo(0,0);
+	}
+	
 </script>
 
 <script src="<?php echo $appRoot; ?>assets/js/main.js"></script>

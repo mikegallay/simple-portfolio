@@ -2,7 +2,7 @@
 var mgbMainSys = {
 	currPage: null,
 	mainContentLoaded: false,
-	mobileNavMaxWidth: 1024,
+	mobileNavMaxWidth: 768 - 16,//1024,
 	
 	//load targets for tiles
   	pLoadTarget: 6,
@@ -16,7 +16,13 @@ var mgbMainSys = {
 	
 	init : function() {
 		var that = this;
-		if($(".homeSection").length > 0) this.initWaypoints();
+		
+		
+		setTimeout(function(){
+			if($(".homeSection").length > 0) {that.initWaypoints(); console.log("here")}
+			mgbContent.setCultureTileHeight();
+			},500);
+		
 		this.addListeners();
 		
 	},
@@ -31,7 +37,6 @@ var mgbMainSys = {
 			
 			new Waypoint.Inview({
 				element: this,
-				offset: '50%',
 				enter: function(direction) {
 					//$('.menu a').removeClass('active');
 					mgbHeader.deactivateNavActive();
@@ -41,14 +46,14 @@ var mgbMainSys = {
 				exit: function(direction) {
 					var id = $(this.element).parent().parent().attr("id");
 					$("#nav-" + id).removeClass('active');
-				  }
+				}
 			});
 		});
 	},
 	
 	scrollToSection : function(section){
 		$("html, body").animate({
-				scrollTop: $("#"+section).offset().top,
+				scrollTop: $("#"+section).offset().top - 40,
 			}, 1000);
 	},
 	
@@ -204,7 +209,7 @@ var mgbMainSys = {
 	},	
 	
 	checkTileLoad : function(){
-		if (lastWindowWidth > mgbMainSys.mobileNavMaxWidth){
+		if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth){
 			//console.log("tile load >1024");
 			this.cLoadTarget = 7;
 			this.pLoadTarget = 6;
@@ -223,7 +228,7 @@ var mgbMainSys = {
 			
 		}
 		
-		if (lastWindowWidth > 1900){
+		if (lastWindowWidth >= 1900){
 			//console.log("tile load >1900");
 			this.cLoadTarget = 10;
 			this.pLoadTarget = 9;
@@ -401,11 +406,14 @@ var mgbMainSys = {
 			setTimeout(function(){
 				
 				$("#overlayContent").empty();
-				if (isHomeSection) {
-					mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
-				}
 
 			},500);
+			
+			setTimeout(function(){
+				
+				if (isHomeSection) mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
+
+			},1200);
 			
 			return;
 		}
@@ -480,17 +488,13 @@ var mgbMainSys = {
 					$("#overlayContent").empty();
 					mgbMainSys.checkTileLoad();
 					
-					
-					
 				},500);
 				
 				setTimeout(function(){
 					
-					if (isHomeSection) {
-						mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
-					}
+					if (isHomeSection) mgbMainSys.scrollToSection(homeSections[homeSectionIndex]);
 					
-				},1000);
+				},1200);
 				
 				
 			}
@@ -1139,106 +1143,142 @@ var mgbContent = {
 		
 		//remove the plus button
 		if ($("."+tar+".notLoaded").length == 0) {
-            setTimeout(function(){$("#"+tar+"More").parent().removeClass('active'); }, 500);
-        }
+			setTimeout(function(){$("#"+tar+"More").parent().removeClass('active'); }, 500);
+		}
 	},
-    
-    initClockCnt: function() {
-        $(".officeTile").each(function(index) {
-            var timeOffset = parseInt($(this).data("timeOffset")), 
-            d = new Date(), 
-            utc = d.getTime() + (d.getTimezoneOffset() * 60000), 
-            nd = new Date(utc + (3600000 * timeOffset));
-            
-            var ndHours = nd.getHours();
-            if (ndHours > 12) {
-                ndHours -= 12;
-            }
-            
-            var clockHours = Math.floor((ndHours / 12) * 100) + "%";
-            var clockMinutes = Math.floor(100 * (nd.getMinutes() / 60)) + "%";
-            
-            nd = nd.toLocaleString({
-                hour: 'numeric',
-                minute: 'numeric'
-            }).replace(/:\d{2}\s/, ' ').split(",")[1];
-            
-            $(this).children("a").find("time").text(nd);
-            
-            var hrEle = $(this).find(".clockHours");
-            var minEle = $(this).find(".clockMinutes");
-            
-			TweenMax.to(hrEle, 1, {
-                transformOrigin: "50% 50%",
-                drawSVG: clockHours,
-                overwrite: true
-            });
-			TweenMax.to(minEle, 1, {
-                transformOrigin: "50% 50%",
-                drawSVG: clockMinutes,
-                overwrite: false
-            });
-            
-            $(this).on('click', function() {
-                var currThis = $(this);
-                $(this).siblings().children("a").removeClass("active");
-                $(this).children("a").addClass("active");
-                
-                var officeDataText = $(this).children('article').html();
-                
-                $("#officeDetails").removeClass('showDetails');
-                $("#officeDetails").html('');
-                $("#officeDetails").html(officeDataText);
-				
-				// setTimeout(function(){
-// 					var rightHeight = $("#officeDetails").find(".rightSide").height();
-// 					$("#officeDetails").find(".leftSide").attr("max-height", rightHeight + "px");
-// 				}, 1000);
-				
-				// location.hash = 'officeDetails';
-				
-                setTimeout(function() {
-                    $("#officeDetails").addClass('showDetails');
-                    
-                    $('.closeMe').on('click', function() {
-                        $("#officeDetails").removeClass('showDetails');
-                        $(currThis).children("a").removeClass("active");
-						$("#officeDetails").html('');
-                    });
-                }, 300);
-            });
-        });
-		
-		setInterval(function(){
-			$(".officeTile").each(function(index){
-				var timeOffset = parseInt($(this).data("timeOffset")),
-			  	d = new Date(),
-				utc = d.getTime() + (d.getTimezoneOffset() * 60000),
-				nd = new Date(utc + (3600000*timeOffset));
+
+		initClockCnt: function() {
+			$(".officeTile").each(function(index) {
+				var timeOffset = parseInt($(this).data("timeOffset")), 
+				d = new Date(), 
+				utc = d.getTime() + (d.getTimezoneOffset() * 60000), 
+				nd = new Date(utc + (3600000 * timeOffset));
 
 				var ndHours = nd.getHours();
-				if(ndHours > 12) {
-					ndHours -= 12;
+				var ndMinutes = nd.getMinutes();
+
+				var ampm = "AM";
+				if (ndHours > 12) {
+				ndHours -= 12;
+				ampm = "PM";
+
 				}
 
-				var clockHours = Math.floor((ndHours/12) * 100) + "%";
-				var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
+				var clockHours = Math.floor((ndHours / 12) * 100) + "%";
+				var clockMinutes = Math.floor(100 * (ndMinutes / 60)) + "%";
 
-				nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
+				/* nd = nd.toLocaleString({
+				hour: 'numeric',
+				minute: 'numeric'
+				}).replace(/:\d{2}\s/, ' ').split(",")[1];*/
 
-				$(this).children("a").find("time").text(nd);
+				if (ndHours == 0) ndHours = 12;
+				if (ndMinutes < 10) ndMinutes = "0" + ndMinutes;
+				var displayTime = ndHours + ":" + ndMinutes + " " + ampm;
+				// console.log("nd",displayTime);
+
+				$(this).children("a").find("time").text(displayTime);
 
 				var hrEle = $(this).find(".clockHours");
 				var minEle = $(this).find(".clockMinutes");
 
-				TweenMax.to(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
-				TweenMax.to(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
+				TweenMax.to(hrEle, 1, {
+				transformOrigin: "50% 50%",
+				drawSVG: clockHours,
+				overwrite: true
+				});
+				TweenMax.to(minEle, 1, {
+				transformOrigin: "50% 50%",
+				drawSVG: clockMinutes,
+				overwrite: false
+				});
+
+				$(this).on('click', function() {
+				var currThis = $(this);
+				$(this).siblings().children("a").removeClass("active");
+				$(this).children("a").addClass("active");
+
+				var officeDataText = $(this).children('article').html();
+
+				$("#officeDetails").removeClass('showDetails');
+				$("#officeDetails").html('');
+				$("#officeDetails").html(officeDataText);
+
+				// setTimeout(function(){
+				// 					var rightHeight = $("#officeDetails").find(".rightSide").height();
+				// 					$("#officeDetails").find(".leftSide").attr("max-height", rightHeight + "px");
+				// 				}, 1000);
+
+				// location.hash = 'officeDetails';
+
+				setTimeout(function() {
+					$("#officeDetails").addClass('showDetails');
+
+					$('.closeMe').on('click', function() {
+						$("#officeDetails").removeClass('showDetails');
+						$(currThis).children("a").removeClass("active");
+						$("#officeDetails").html('');
+					});
+				}, 300);
+			});
+		});
+
+		setInterval(function(){
+		$(".officeTile").each(function(index){
+			var timeOffset = parseInt($(this).data("timeOffset")),
+			d = new Date(),
+			utc = d.getTime() + (d.getTimezoneOffset() * 60000),
+			nd = new Date(utc + (3600000*timeOffset));
+			
+			/*var ndHours = nd.getHours();
+			if(ndHours > 12) {
+				ndHours -= 12;
+			}
+
+			var clockHours = Math.floor((ndHours/12) * 100) + "%";
+			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
+
+			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
+			
+			$(this).children("a").find("time").text(nd);*/
+			
+			
+
+			var ndHours = nd.getHours();
+			var ndMinutes = nd.getMinutes();
+
+			var ampm = "AM";
+			if (ndHours > 12) {
+			    ndHours -= 12;
+				ampm = "PM";
+
+			}
+
+			var clockHours = Math.floor((ndHours / 12) * 100) + "%";
+			var clockMinutes = Math.floor(100 * (ndMinutes / 60)) + "%";
+
+			/* nd = nd.toLocaleString({
+			    hour: 'numeric',
+			    minute: 'numeric'
+			}).replace(/:\d{2}\s/, ' ').split(",")[1];*/
+
+			if (ndHours == 0) ndHours = 12;
+			if (ndMinutes < 10) ndMinutes = "0" + ndMinutes;
+			var displayTime = ndHours + ":" + ndMinutes + " " + ampm;
+			
+			$(this).children("a").find("time").text(displayTime);
+
+			var hrEle = $(this).find(".clockHours");
+			var minEle = $(this).find(".clockMinutes");
+
+			TweenMax.to(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
+			TweenMax.to(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
 			});
 		}, 60000);
     },
 	
 	setCultureTileHeight: function(){
-        var that = this;
+		var that = this;
 			
 		clearTimeout(this.cultureTimeout);
 				
@@ -1256,34 +1296,34 @@ var mgbContent = {
 		},350);
 		
 	},
-    
-    resize: function() {
-        var that = this;
+	
+	resize: function() {
+		var that = this;
 		
 		this.setCultureTileHeight();
 		
 		$('.arrow').addClass('offTile');
 		$('.picHolder').removeAttr('style');
-        that.cultureContent.removeClass("stretchOut shrinkMe");
+		that.cultureContent.removeClass("stretchOut shrinkMe");
 		
 		setTimeout(function(){		
 			$('.arrow').removeClass('offTile');
-		},600);    
-    },
+		},600);
+	},
 };
 
 var mgbOverlay = {
-    
-    init: function() {
+
+	init: function() {
 		var that = this;
 		$("#overlayContent").addClass("active");
 		this.addListeners();
-		setTimeout(function(){that.resize();},50);
-    },
+		setTimeout(function(){that.resize();},1000);
+	},
 	
 	kill : function(){
 		$("#overlayContent").removeClass("active");
-        $('#overlayCover').removeClass('active');
+		$('#overlayCover').removeClass('active');
 	},
 	addListeners : function(){
 		var that = this;
@@ -1422,8 +1462,7 @@ var mgbOverlay = {
 //can this device support autoplaying video (not a mobile device or tablet)
 
 
-
-if($("#homepage-flag").length > 0) { //this is the homepage
+if($("body").hasClass("ishome")) { //this is the homepage
     mgbContent.init();
 	mgbMainSys.mainContentLoaded = true;
 	var pathname = window.location.pathname;
@@ -1445,12 +1484,12 @@ mgbHeader.init();
 mgbHeroVideo.init();
 mgbTimeLine.init();
 
-if($("#homepage-flag").length > 0 && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
-if($("#homepage-flag").length > 0) mgbMainSys.currPage = appRoot;
+if($("body").hasClass("ishome") && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
+if($("body").hasClass("ishome")) mgbMainSys.currPage = appRoot;
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
-window.onunload = displayCurrentContent;
+// window.onunload = displayCurrentContent;
 
 /*$(window).on('hashchange', function () {
     mgbMainSys.getPage(location.hash);
@@ -1501,6 +1540,6 @@ function resize(){
 }
 
 // Prevent the page of jumping abruptly when loading from a hash
-function displayCurrentContent() {
-	$(window).scrollTop(0);
-}
+//function displayCurrentContent() {
+	//$(window).scrollTop(0);
+	//}

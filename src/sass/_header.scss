@@ -16,6 +16,11 @@
 		height: 4.25em;
 		margin-top: 0.5em;
 		display: inline-block;
+		
+		.container{
+			max-width: 100%;
+			margin: 0 auto;
+		}
 
 		#homeLogo{
 			/* MB LOGO */
@@ -256,7 +261,7 @@
 			    line-height: 2em;
 			    font-family: 'Din-Bold', sans-serif;
 			    height: 79%;
-	    
+
 				li{
 					margin:0;
 					opacity:1;
@@ -270,7 +275,7 @@
 		content: '';
 	    width: 100%;
 	    height: 100%;
-	    background-color: gray;
+	    background-color: $overlayColor;
 	    position: absolute;
 	    top: 0;
 	    left: 0;
@@ -318,6 +323,8 @@
 	}
 }
 
+
+
 .no-autoplay{
 	#welcomeImage {
 		width:100%;
@@ -337,7 +344,7 @@
 	height: 0px;
 	position: relative;
 	
-	transition: height 1s .5s;
+	transition: height 1s 0s;
 	overflow:hidden;
 	margin-bottom:100%;
 	
@@ -476,7 +483,7 @@
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	#Home {
 		nav{
 			background: rgba(107, 109, 111, 0.0);
@@ -517,7 +524,7 @@
 				text-align: right;
 				display: inline-block;
 				list-style: none;
-				width: 50%;
+				width: 70%;//50%;
 			    float: right;
 				border-color: transparent;
 				border-width: 0;
@@ -525,7 +532,7 @@
 				right: 0;
 		
 				li {
-					margin: 1em 1.3em;
+					margin: 1em;// 1.3em;
 					display: inline-block;
 					opacity:1;
 			
@@ -585,6 +592,46 @@
 						margin-top:0px;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#Home {
+		nav {
+			.container{
+				max-width: 86%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	#Home {
+		nav {
+			.container{
+				max-width: 84.5%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	#Home {
+		nav {
+			.container{
+				max-width: 84%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1900px) {
+	#Home {
+		nav {
+			.container{
+				max-width: 82.7%;
 			}
 		}
 	}
