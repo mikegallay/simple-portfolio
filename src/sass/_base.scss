@@ -67,17 +67,7 @@
 	}
 }
 
-.closeMe {
-	position: absolute;
-	top: 3%;
-	right: 3%;
-	transform: rotateZ(45deg);
-	cursor: pointer;
-	
-	svg {
-		fill: white;
-	}
-}
+
 
 
 /* fade image in after load */

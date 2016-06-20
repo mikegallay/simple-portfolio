@@ -2882,11 +2882,17 @@ var mgbContent = {
 				$(this).children("a").addClass("active");
 
 				var officeDataText = $(this).children('article').html();
-
+				
 				$("#officeDetails").removeClass('showDetails');
 				$("#officeDetails").html('');
 				$("#officeDetails").html(officeDataText);
-
+				
+				var titleLength = $("#officeDetails h3").text().length;
+				if (titleLength > 10) {
+					$(".rightSide h3").addClass("long");
+				}else{
+					$(".rightSide h3").removeClass("long");
+				}
 				// setTimeout(function(){
 				// 					var rightHeight = $("#officeDetails").find(".rightSide").height();
 				// 					$("#officeDetails").find(".leftSide").attr("max-height", rightHeight + "px");

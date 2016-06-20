@@ -39,16 +39,21 @@
 		
 		<article hidden>
 				<div class="clearfix">
+					
 					<div class="leftSide">
 						<picture>
 						<!--[if IE 9]>
 							<video style="display: none;"><![endif]-->
-								<source data-srcset="{{{heroImage}}}.jpg 1x, {{{heroImage}}}@2x.jpg 2x" media="(min-width: 1024px)">
+							
+								<source data-srcset="{{{heroImage}}}_large.jpg, {{{heroImage}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
+							<source data-srcset="{{{heroImage}}}_medium.jpg, {{{heroImage}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
+							<source data-srcset="{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x">
+							
 						<!--[if IE 9]>
 							</video>
 						<![endif]-->
 						<!--[if !lte IE 9]> -->
-							<img src="assets/img/common/blank.png" data-srcset="{{{heroImage}}}_large.jpg 1x, {{{heroImage}}}_large@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
+							<img src="assets/img/common/blank.png" data-src="{{{heroImage}}}_medium@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
 						<!-- <![endif]-->
 						</picture>
 					</div>
@@ -56,51 +61,103 @@
 					<div class="rightSide">
 						<h3>{{{city}}}</h3>
 						<div class="ribbon">
-							<div class="closeMe">
-								<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-								  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-								</svg>
-							</div>
+							
 					
 							<div class="info">
 								{{#if address}}
-								{{{address}}}
-								<br>
-								<br>
+								
+								<p class="info-address">
+									<a href="http://maps.google.com">
+										<span class="office-icon">
+											<svg class="icon icon_location-inline" role="img" aria-labelledby="title">
+											  <use xlink:href="#icon_location"></use>
+											  <!--[if lt IE 9]>
+												  <img src="assets/img/svg/ie8-fallback/icon_location.png" alt="icon_location icon"> 								  <!--<![endif]-->
+											</svg>
+										</span>
+										<span class="office-content">{{{address}}}</span>
+									</a>
+								</p>
 								{{/if}}
 						
 								{{#if telephone}}
-								{{{telephone}}}
-								<br>
-								<br>
+								<p>
+									<a href="tel:{{{telephone}}}">
+										<span class="office-icon">
+											<svg class="icon icon_phone-inline" role="img" aria-labelledby="title">
+											  <use xlink:href="#icon_phone"></use>
+											  <!--[if lt IE 9]>
+												  <img src="assets/img/svg/ie8-fallback/icon_phone.png" alt="icon_phone icon"> 								  <!--<![endif]-->
+											</svg>
+										</span>
+										<span class="office-content">{{{telephone}}}</span>
+									</a>
+								</p>
 								{{/if}}
 						
 								{{#if mainEmail}}
-								{{{mainEmail}}}
-								<br>
-								<br>
+								
+								<p>
+									<a href="mailto:{{{mainEmail}}}">
+										<span class="office-icon">
+											<svg class="icon icon_mail-inline" role="img" aria-labelledby="title">
+											  <use xlink:href="#icon_mail"></use>
+											  <!--[if lt IE 9]>
+												  <img src="assets/img/svg/ie8-fallback/icon_mail.png" alt="icon_mail icon"> 								  <!--<![endif]-->
+											</svg>
+										</span>
+										<span class="office-content">{{{mainEmail}}}</span>
+									</a>
+								</p>
 								{{/if}}
-								<br>
 					
-								<strong>NEW BUSINESS</strong>
-								<br>
-								<br>
-								{{#if contactEmail}}
-								<a href="mailto:{{{contactEmail}}}">{{{contactEmail}}}</a>
-								<br>
-								<br>
-								{{/if}}
-						
+								<h4>NEW BUSINESS</h4>
+								
 								{{#if contactNumber}}
-								<a href="tel:{{{contactNumber}}}">{{{contactNumber}}}</a>
-								<br>
-								<br>
+								<p>
+								<a href="tel:{{{contactNumber}}}">
+									<span class="office-icon">
+										<svg class="icon icon_phone-inline" role="img" aria-labelledby="title">
+										  <use xlink:href="#icon_phone"></use>
+										  <!--[if lt IE 9]>
+											  <img src="assets/img/svg/ie8-fallback/icon_phone.png" alt="icon_phone icon"> 								  <!--<![endif]-->
+										</svg>
+									</span>
+									<span class="office-content">{{{contactNumber}}}</span>
+								</a>
+								</p>
 								{{/if}}
-								<br>
+								
+								{{#if contactEmail}}
+								<p>
+								
+								<a href="mailto:{{{contactEmail}}}">
+									<span class="office-icon">
+										<svg class="icon icon_mail-inline" role="img" aria-labelledby="title">
+										  <use xlink:href="#icon_mail"></use>
+										  <!--[if lt IE 9]>
+											  <img src="assets/img/svg/ie8-fallback/icon_mail.png" alt="icon_mail icon"> 								  <!--<![endif]-->
+										</svg>
+									</span>
+									<span class="office-content">{{{contactEmail}}}</span>
+								</a>
+								</p>
+								{{/if}}
+								
 								{{#if prEmail}}
-								<strong>PUBLIC RELATIONS</strong>
-								<br>
-								<a href="{{{prEmail}}}">{{{prEmail}}}</a>
+								<h4>PUBLIC RELATIONS</h4>
+								<p>
+								<a href="mailto:{{{prEmail}}}">
+									<span class="office-icon">
+										<svg class="icon icon_mail-inline" role="img" aria-labelledby="title">
+										  <use xlink:href="#icon_mail"></use>
+										  <!--[if lt IE 9]>
+											  <img src="assets/img/svg/ie8-fallback/icon_mail.png" alt="icon_mail icon"> 								  <!--<![endif]-->
+										</svg>
+									</span>
+									<span class="office-content">{{{prEmail}}}</span>
+								</a>
+								</p>
 								{{/if}}
 							</div>
 						</div>
@@ -148,7 +205,11 @@
 						</div>
 					</div>
 				
-					
+					<div class="closeMe">
+						<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
+						</svg>
+					</div>
 			</div>
 
 		</article>
