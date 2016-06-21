@@ -1702,11 +1702,24 @@ var mgbMainSys = {
 		
 		
 		setTimeout(function(){
-			if($(".homeSection").length > 0) {that.initWaypoints(); console.log("here")}
-			mgbContent.setCultureTileHeight();
+			if($(".homeSection").length > 0) {
+				that.initWaypoints(); 
+			}
+				mgbContent.setCultureTileHeight();
 			},500);
 		
 		this.addListeners();
+		
+	},
+	
+	createWaypoint: function(id){
+		var waypoint = $('#'+id).waypoint(function(direction) {
+			var elemId = this.element.id;
+			mgbHeader.deactivateNavActive();
+			$("#nav-" + elemId).addClass('active');
+		}, {
+			offset: '100%'
+		})
 		
 	},
 	
@@ -1716,22 +1729,16 @@ var mgbMainSys = {
 		
 		this.waypointsInitialized = true;
 		
-		$('.homeSection .sectionHeading').each(function() {
-			
-			new Waypoint.Inview({
-				element: this,
-				enter: function(direction) {
-					//$('.menu a').removeClass('active');
-					mgbHeader.deactivateNavActive();
-					var id = $(this.element).parent().parent().attr("id");
-					$("#nav-" + id).addClass('active');
-				},
-				exit: function(direction) {
-					var id = $(this.element).parent().parent().attr("id");
-					$("#nav-" + id).removeClass('active');
-				}
-			});
-		});
+		this.createWaypoint('work');
+		this.createWaypoint('culture');
+		this.createWaypoint('offices');
+		
+		//create waypoint to note when clients section enters, to deactivate the other navs
+		var clientWaypoint = $('#clients').waypoint(function(direction) {
+			mgbHeader.deactivateNavActive();
+		}, {
+			offset: '50%'
+		})
 	},
 	
 	scrollToSection : function(section){
@@ -1941,6 +1948,7 @@ var mgbMainSys = {
 	},
 	
 	handleScrolling : function(){
+		// console.log("scrolling");
 		var currScroll = $(window).attr('scrollY');
 		var scrollBottom = $(document).height() - $("body").height();
 
@@ -1979,6 +1987,7 @@ var mgbMainSys = {
 			//}
 		}
 		
+		/*
 		// update the navigation based on which section is at the top of the viewport
 		$('section').each(function(){
 		
@@ -2001,11 +2010,7 @@ var mgbMainSys = {
 				// $('nav a').removeClass('active');
 				// $('.navigation li:last-child a').addClass('active');
 			} 
-			
-			/*if(mgbUtils.isScrolledIntoView( $(this).find("h1") )) {
-			 	$(this).find("span[data-forward]").addClass('forwardVisible');
-			}*/
-		});				
+		});	*/
 		
 	   // lazyload images into view when they are in the viewport
  	   $('.ll').each(function () {
@@ -2258,6 +2263,7 @@ var mgbHeader = {
 	
 		$('nav .menu a').on('click', function(e){
 			e.preventDefault();
+			$('nav #menuToggleHolder').removeClass("active");
 			
 			that.hideMobileNav();
 
@@ -2792,9 +2798,10 @@ var mgbContent = {
 		//make sure the culture tiles have a height to animate against
 		if (tar == 'cultureTile') this.setCultureTileHeight();
 		
+		//REMOVED THIS TEMPORARILY. WAS WONKY ON SAFARI!!
 		//make sure the project tiles have a height to animate against
 		//then remove it once the animation is complete.
-		if (tar == 'projectTile'){
+		/*if (tar == 'projectTile'){
 			
 			//use the fourth project because it is guaranteed to have a 1x1 ratio
 			var colW = $('.projectTile:nth-child(4) a').width();
@@ -2802,8 +2809,8 @@ var mgbContent = {
 			
 		  	setTimeout(function(){
 		    	$('.projectTile').removeAttr('style');
-		    }, 1000);
-		}
+		    }, 2000);
+		}*/
 		
 		var newContent = $("."+tar+".notLoaded").slice(0, num);
 		
@@ -3195,7 +3202,7 @@ window.onresize = resizeChecker;
 });*/
 
 window.onpopstate = function (event) {
-	console.log('pop',event,loc = window.location.pathname);
+	//console.log('pop',event,loc = window.location.pathname);
 	
     if (event.state) {
         // console.log('retrieving ', event.state.url, ' from history');

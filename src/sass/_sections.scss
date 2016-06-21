@@ -39,9 +39,10 @@
 	display:inline-block;
 	
 	.in-view {
-	    opacity: 1;
+		opacity: 1;
 		transform:scale(1);
-	    transition: opacity 1s .25s, transform 1s .25s;
+//		transition: opacity 1s .25s, transform 1s .25s;
+		transition: opacity 1s 50ms, transform 1s 50ms;
 	}
 	
 	.in-view + .arrow {
@@ -71,10 +72,10 @@ h1 {
 		letter-spacing: 0.04em;
 		line-height: 1em;
 		text-align: center;
-		
+	
 		@for $i from 1 through 10 {
 			span[data-forward]:nth-child(#{$i}) {
-				opacity: 0;
+				opacity: 1;
 				transition: opacity 1s #{$i * 300}ms;
 			
 				&.forwardVisible {
