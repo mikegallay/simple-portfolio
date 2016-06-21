@@ -353,9 +353,12 @@ h1 {
 #offices{
 	#officeDetails {
 	display: block;
+	opacity:0;
 	width: 100%;
 	height: 0em;
 	position:relative;
+	overflow:hidden;
+	transition: height 300ms 500ms,opacity 300ms;
 	.leftSide {
 		float: none;
 		width: 100%;
@@ -484,15 +487,17 @@ h1 {
 		}
 	}
 	
-	
+	&.removed {
+		opacity:0!important;
+	}
 	&.showDetails {
-		height: 100%;
-		transition: height 300ms;
-		
+		//height: 100%;
+		opacity:1;
+		overflow:visible;
 		h3 {
 			opacity: 1;
 			top: 0em;
-			transition: top 1s 500ms, opacity 1ms 700ms;
+			transition: top 1s 600ms, opacity 1ms 600ms;
 			//added
 			font-size:3em;
 			top:-15px;
@@ -516,7 +521,7 @@ h1 {
 			.info {
 				font-size: 0.9em;
 				opacity: 1;
-				transition: opacity 500ms 800ms;
+				transition: opacity 500ms 600ms;
 				//added
 				position:relative;
 				top: -1em;
@@ -569,7 +574,7 @@ h1 {
 				.lazyloaded {
 					transform: scale(1);
 					opacity: 1;
-					transition: opacity 500ms 500ms;
+					transition: opacity 500ms 600ms;
 				}
 			}
 		}
@@ -937,7 +942,7 @@ h1 {
 			}
 		
 			&.showDetails {
-				height: 100%;
+				//height: 100%;
 				
 				h3{
 					font-size: 3.6em;
@@ -1289,7 +1294,7 @@ h1 {
 
 	#officeDetails {
 		&.showDetails {
-			height: 36em;
+			//height: 36em;
 		}
 		
 		h1 {

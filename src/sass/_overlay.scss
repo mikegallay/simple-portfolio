@@ -113,17 +113,6 @@
 		}
 	}
 }
-@media screen and (min-width: 1024px) {
-	//only show close button at this size
-	.videoCloseButton{
-		.videoClose{
-			&.revealed{
-				visibility:visible;
-				opacity:1;
-			}
-		}
-	}
-}
 
 /* TERMS & PRIVACY */
 #terms{
@@ -290,8 +279,21 @@
 }
 
 @media screen and (min-width: 1024px) {
+	
+	#terms{
+		max-width:80%;
+	}
+	//only show close button at this size
+	.videoCloseButton{
+		.videoClose{
+			&.revealed{
+				visibility:visible;
+				opacity:1;
+			}
+		}
+	}
 	.workContainer{
-		max-width: 1280px;
+		max-width: 80%;
 		.workHeadline{
 			max-width:100%;
 			float:left;
