@@ -18,7 +18,8 @@
 	<!-- <div class="returnHome">< Back </div> -->
 	<div class="workHeadline">
 		<h1>Innovation Adventure, TV & Video</h1>
-		<h2>Client: Intel</h2>
+		<p>Client: Intel</p>
+		<p>Office: Chicago</p>
 	</div>
 	<div class="workDetails">
 		<div class="workCopy">
@@ -37,7 +38,7 @@
 					<img src="../assets/img/work_pages/intel_thumb01.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
-							<h3>Intel Commercial</h3>
+							<h3>Jump man</h3>
 						</div>
 						<div class="cultureArrow"></div>
 					</figcaption>
@@ -48,7 +49,7 @@
 					<img src="../assets/img/work_pages/intel_thumb02.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
-							<h3>Intel Commercial</h3>
+							<h3>Wakey wakey</h3>
 						</div>
 						<div class="cultureArrow"></div>
 					</figcaption>
@@ -59,7 +60,7 @@
 					<img src="../assets/img/work_pages/intel_thumb03.jpg" alt="">
 					<figcaption class="prjDescription">
 						<div class="prjDscrWrap">
-							<h3>Intel Commercial</h3>
+							<h3>In the back seat</h3>
 						</div>
 						<div class="cultureArrow"></div>
 					</figcaption>
