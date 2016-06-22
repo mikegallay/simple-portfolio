@@ -1,20 +1,24 @@
-<div id="heroImage">
-	<?php
-	pictureFillImage($appRoot.'assets/img/work_pages/intel','alt copy goes here')
+<div class="subpageHeader parallaxHeader">
+	<div id="heroImage">
+		<?php
+		pictureFillImage($appRoot.'assets/img/work_pages/intel','alt copy goes here')
 
-	?>
+		?>
+	</div>
+
+	<div class="videoHolder"></div>
+	<div class="videoCloseButton shadow">
+		<a class="videoClose">
+			<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+			  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
+			</svg>
+		</a>
+	</div>
+	
 </div>
 
-<div class="videoHolder"></div>
-<div class="videoCloseButton shadow">
-	<a class="videoClose">
-		<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-		</svg>
-	</a>
-</div>
-
-<section class="workContainer">
+<div class="contentWrapper" style="background:#6b6d6f;">
+	<section class="workContainer">
 	<!-- <div class="returnHome">< Back </div> -->
 	<div class="workHeadline">
 		<h1>Innovation Adventure, TV & Video</h1>
@@ -68,4 +72,11 @@
 			</div>
 		</div>
 	</div>
+	<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
+	<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
+	<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
+	<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
+	<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
+	<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
 </section>
+</div>

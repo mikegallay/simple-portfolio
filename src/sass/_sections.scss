@@ -20,7 +20,7 @@
 #careers {
 	//min-height: 100px;
 	width: 90%;
-	margin:1.7em 5%;
+	padding:1.7em 5%;
 	//overflow: hidden;
 	text-align:center;
 }
@@ -31,8 +31,24 @@
 		display:none;
 		position:fixed;
 	}
+	.contentWrapper{
+		background: white;
+		transition:top 500ms 300ms;
+		top:0;
+		position:relative;
+			section{
+				opacity:0;transition:opacity 1s 500ms;
+			
+			}
+		&.settle{
+		
+			section{
+				opacity:1;
+			}
+		}
+	//	line-height:0;
+	}
 }
-
 
 .portfolioContent, .cultureContent, .officeContent, .clientContent {
 	margin-top: 1.2em;
@@ -655,11 +671,13 @@ h1 {
 		}
 		p{
 			line-height: 0.8em;
-			.cityName{
+			margin-bottom: 0.4em;
+			margin-top: 0;
+			&.cityName{
 				font-size:1em;
 				font-family: 'Din-Regular', sans-serif;
 			}
-			.cityTime{
+			&.cityTime{
 				font-size:.8em;
 				font-family: 'Din-Regular', sans-serif;
 			}
@@ -1025,7 +1043,7 @@ h1 {
 		padding-top: 2.5em;
 	}
 	#careers {
-		margin:3em 5%;
+		padding:3em 5%;
 	}
 
 	#work,#clients{
@@ -1219,7 +1237,7 @@ h1 {
 		}
 	}	
 	#careers {
-		margin:5em 5%;
+		padding:5em 5%;
 	}
 }
 

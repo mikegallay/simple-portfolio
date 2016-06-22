@@ -1,4 +1,5 @@
-<section id="terms">
+<div class="contentWrapper" style="background:#6b6d6f;">
+	<section id="terms">
 	<h1>Terms of Use / Privacy Policy</h1>
 
 	<p>The following Conditions of Use govern your use of services on Dentsu McGarry Bowen, LLC site(s) located at mcgarrybowen (together with any sub-domains, extensions or replacements, the "Site"). Use of the Site constitutes full acceptance of and agreement to the Terms; if you do not accept you are not granted rights to use the Site as defined herein, and should refrain from accessing or submitting content to the Site.</p>
@@ -37,3 +38,4 @@
 	<p>Alternatively, you may wish to visit <a href="http://www.aboutcookies.org" target=new>www.aboutcookies.org</a>, which contains comprehensive information on how to do this on a wide variety of desktop browsers.</p>
 
 </section>
+</div>
