@@ -1696,6 +1696,7 @@ var mgbMainSys = {
 	pMoreTarget:6,
 	
 	waypointsInitialized: false,
+	glitchesInitialized: false,
 	
 	init : function() {
 		var that = this;
@@ -1766,6 +1767,8 @@ var mgbMainSys = {
 	initializeGlitches : function(t){
 		
 		var that = this;
+		
+		this.glitchesInitialized = true;
 		
 		//header glitches
 		//offset by 1 second from the rest
@@ -1958,9 +1961,17 @@ var mgbMainSys = {
 		var currScroll = $(window).attr('scrollY');
 		// var scrollBottom = $(document).height() - $("body").height();
 		
+		var stickyNavRevealY = mgbHeroVideo.maxVideoHeight - 60
 		
+		if ($('#overlayContent').hasClass('active')){
+			if($("#heroImage").length > 0) {
+				stickyNavRevealY = $('#heroImage img').innerHeight() - 60;
+			}else{
+				stickyNavRevealY = 60;
+			}
+		}
 
-		if(currScroll > mgbHeroVideo.maxVideoHeight - 60) {
+		if(currScroll > stickyNavRevealY) {
 			$('#Home').addClass("sticky");
 			if(!$('nav').hasClass("sticky")) {
 				//if (lastWindowWidth > mgbMainSys.mobileNavMaxWidth) {
@@ -2591,7 +2602,7 @@ var mgbHeroVideo = {
 			// mgbHeader.messageContainer.focus();
 		}
 		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal',250);
-		mgbMainSys.initializeGlitches(2000);
+		if (this.glitchesInitialized == false) mgbMainSys.initializeGlitches(2000);
 	},
 	
 	loadHeaderVideo: function() {
