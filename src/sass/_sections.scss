@@ -384,6 +384,8 @@ h1 {
 		padding-left: 0;
 		//max-height: 28.125em;
 		overflow: hidden;
+		z-index:2;
+		position:relative;
 		
 		picture {
 			.lazyload {
@@ -406,7 +408,7 @@ h1 {
 		right: 10px;
 		transform: rotateZ(45deg);
 		cursor: pointer;
-	
+		z-index:2;
 		svg {
 			fill: white;
 		}
@@ -433,7 +435,7 @@ h1 {
 		position: relative;
 		height: 0%;
 		transition: height 500ms, top 0s;
-		
+		z-index:1;
 		.info {
 			opacity: 0;
 			transition: opacity 500ms;
