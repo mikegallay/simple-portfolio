@@ -1,4 +1,4 @@
-<span class="hidden"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?>	
+<span class="hidden" id="svgsprites"><?php include_once("assets/img/svg/icon-sprite-def.svg"); ?>	
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-distortFilter">
 		<defs>
 			<filter id="distortFilter">

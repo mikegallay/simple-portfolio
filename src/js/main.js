@@ -23,8 +23,10 @@ var mgbMainSys = {
 			if($(".homeSection").length > 0) {
 				that.initWaypoints(); 
 			}
-				mgbContent.setCultureTileHeight();
-			},500);
+			
+			mgbContent.setCultureTileHeight();
+		
+		},2000);
 		
 		this.addListeners();
 		
@@ -36,13 +38,14 @@ var mgbMainSys = {
 			mgbHeader.deactivateNavActive();
 			$("#nav-" + elemId).addClass('active');
 		}, {
-			offset: '100%'
+			offset: '25%'
 		})
 		
 	},
 	
 	initWaypoints : function(){  
 		
+		//not woring properly
 		var that = this;
 		
 		this.waypointsInitialized = true;
@@ -56,7 +59,9 @@ var mgbMainSys = {
 			mgbHeader.deactivateNavActive();
 		}, {
 			offset: '50%'
-		})
+		});
+		
+		
 	},
 	
 	scrollToSection : function(section,t){
@@ -302,7 +307,7 @@ var mgbMainSys = {
 				//if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.showLogo();
 			}
 		} else {
-			
+			mgbHeader.deactivateNavActive();
 			//if (!$('#Home').hasClass('mobile')) 
 			$('#Home').removeClass("sticky");
 			//if(!$('nav').hasClass("overlayActive")) {
