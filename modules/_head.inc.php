@@ -26,7 +26,7 @@
         	homeSections.push('<?php echo $val; ?>');
 		<?php } ?></script>
 	
-	<link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,greek,greek-ext' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo $appRoot?>assets/css/main.css">
 
 	<script src="<?php echo $appRoot; ?>assets/js/lib/modernizr-custom.js"></script>
