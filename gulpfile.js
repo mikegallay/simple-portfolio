@@ -2,7 +2,7 @@
 
 // in terminal cd to the current directory
 // $ sudo npm install gulp
-// $ sudo npm install gulp-uglify gulp-concat gulp-compass gulp-cssnano gulp-concat-css gulp-cache gulp-notify gulp-livereload gulp-rename gulp-autoprefixer gulp-imagemin gulp-jshint del gulp-util path gulp-svg-sprite gulp-svg2png gulp-responsive --save-dev
+// $ sudo npm install gulp-uglify gulp-concat gulp-compass gulp-minify-css gulp-concat-css gulp-cache gulp-notify gulp-livereload gulp-rename gulp-autoprefixer gulp-imagemin del gulp-util path gulp-svg-sprite gulp-svg2png gulp-plumber gulp-jsoncombine --save-dev
 // npm install to install packages below
 
 var gulp = require('gulp'),
@@ -24,8 +24,6 @@ var gulp = require('gulp'),
 	svg2png = require('gulp-svg2png'),
 	plumber = require('gulp-plumber');
 	jsoncombine = require("gulp-jsoncombine");
-	//responsive = require('gulp-responsive');
-
 
 // add all javascript files dependent here
 // append other files to the end of the list 
@@ -138,42 +136,6 @@ gulp.task('processImages', function() {
 		.pipe(gulp.dest('assets/img/'))
 		.pipe(notify({ message: '**** Image processing complete! ****' }));
 });
-
-
-/*gulp.task('retinizeImages', funtion(){
-
-	// optionally send images to responsive export tool
-	// see: https://github.com/mahnunchik/gulp-responsive
-
-	return gulp.src(['src/img/**'])
-		.pipe(plumber())	
-		.pipe(responsive.responsive({ 
-			'*.jpg': [{				  
-				width: 250, 
-			}, {
-				width: 250 * 2,
-				remame: { suffix: '@2x' },
-			}, {
-				width: 250 * 3,
-				rename: { suffix: '@3x '},
-			}],
-			'*.png': [{				  
-				width: 250, 
-			}, {
-				width: 250 * 2,
-				remame: { suffix: '@2x' },
-			}, {
-				width: 250 * 3,
-				rename: { suffix: '@3x '},
-			}],
-		}, {
-			min: true,	// preserving aspect ratio, resize the image to be as small as possible 
-						// while ensuring its dimensions are greater than or equal to the width and height specified.
-			quality: 70,
-			progressive: true,
-			withMetadata: false,
-		}));
-});*/
 
 
 gulp.task('clean', function() {
