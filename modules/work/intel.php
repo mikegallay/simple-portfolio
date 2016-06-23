@@ -17,7 +17,7 @@
 	
 </div>
 
-<div class="contentWrapper" style="background:#6b6d6f;">
+<div class="contentWrapper" style="background:#37383a;">
 	<section class="workContainer">
 	<!-- <div class="returnHome">< Back </div> -->
 	<div class="workHeadline">
