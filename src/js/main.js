@@ -403,6 +403,7 @@ var mgbMainSys = {
 		if (page == appRoot || isHomeSection){
 			page = 'index.php'; 
 			useOverlay = false;
+			//your on the homepage and hit one of the top navs
 			if (!$('#overlayCover').hasClass('active')){
 				mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
 				return;
@@ -592,8 +593,8 @@ var mgbHeader = {
 		
 			//if(nav.hasClass("overlayActive")){
 				//$(".navigation").fadeIn();
-
-					mgbMainSys.getPage(appRoot, true);
+			mgbHeader.deactivateNavActive();
+			mgbMainSys.getPage(appRoot, true);
 					
 					/*$('#mbLogo').on('mouseover',function(){
 						mgbHeader.showLogo();
@@ -1073,6 +1074,8 @@ var mgbContent = {
                     $(this).addClass("active");
                 }*/
                
+			   mgbHeader.deactivateNavActive();
+			   $("#nav-work").addClass('active');
 				var thisPage = $(this).data('content');
 				mgbMainSys.getPage(thisPage,true);
 				
@@ -1403,9 +1406,9 @@ var mgbOverlay = {
 	},
 	addListeners : function(){
 		var that = this;
-		$('.returnHome').on('click',function(){
+		/*$('.returnHome').on('click',function(){
 			mgbMainSys.getPage(appRoot,true);
-		});
+		});*/
 		$('.workThumb a').on('click', function(e){
 			e.preventDefault();
 			if ($(this).hasClass('active')) return;

@@ -1,5 +1,5 @@
 <div class="contentWrapper" style="background:blue;">
-	<section id="terms">
+	<section class="no-header" id="terms">
 	<h1>Terms of Use / Privacy Policy</h1>
 
 	<p>The following Conditions of Use govern your use of services on Dentsu McGarry Bowen, LLC site(s) located at mcgarrybowen (together with any sub-domains, extensions or replacements, the "Site"). Use of the Site constitutes full acceptance of and agreement to the Terms; if you do not accept you are not granted rights to use the Site as defined herein, and should refrain from accessing or submitting content to the Site.</p>

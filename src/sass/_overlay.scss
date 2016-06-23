@@ -133,11 +133,15 @@
 	}
 }
 
+.no-header{
+	margin:0em auto 1em;
+	padding:7em 0 0;
+}
+
 /* TERMS & PRIVACY */
 #terms{
 	max-width:1280px;
-	margin:6em auto 1em;
-	padding:20px;
+	
 	h1{
 		color:$skyblueColor;
 		text-transform:uppercase;
