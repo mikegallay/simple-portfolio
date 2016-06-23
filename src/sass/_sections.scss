@@ -20,7 +20,7 @@
 #careers {
 	//min-height: 100px;
 	width: 90%;
-	padding:1.7em 5%;
+	padding:1.7em 5% 3em;
 	//overflow: hidden;
 	text-align:center;
 }
@@ -384,7 +384,7 @@ h1 {
 		padding-left: 0;
 		//max-height: 28.125em;
 		overflow: hidden;
-		z-index:2;
+		z-index:0;
 		position:relative;
 		
 		picture {
@@ -400,6 +400,7 @@ h1 {
 		width: 99%;
 		padding: 0 1% 1%;
 		display: block;
+		z-index:2;
 	}
 	
 	.closeMe{
@@ -425,7 +426,7 @@ h1 {
 		top: 2em;
 		opacity: 0;
 		transition: top 1s, opacity 10ms;
-		
+		z-index:2;
 		
 	}
 	
@@ -435,7 +436,7 @@ h1 {
 		position: relative;
 		height: 0%;
 		transition: height 500ms, top 0s;
-		z-index:1;
+		z-index:2;
 		.info {
 			opacity: 0;
 			transition: opacity 500ms;
@@ -462,8 +463,8 @@ h1 {
 		}
 		
 		&::before {
-			left: -200%;
-		    min-width: 200%;
+			left: -500%;
+		    min-width: 500%;
 		}
 	}
 	
@@ -472,7 +473,7 @@ h1 {
 		flex-direction: row wrap;
 		justify-content: space-around;
 		align-items: flex-start;*/
-		display:inline-block;
+		display:block;
 		
 		padding-top: 1em;
 		opacity: 0;
@@ -709,7 +710,7 @@ h1 {
 			font-size:2.1em;
 		}
 		&.joinTeamCTA {
-			margin-top: 1em;
+			margin-top: 0em;
 			font-size: 2em;
 		}
 	}
@@ -938,6 +939,7 @@ h1 {
 				padding-right: 0.5%;
 				padding-left: 0.5%;
 				overflow: hidden;
+				z-index:3;
 				//max-height: 28.125em;
 
 				.leftSide {
@@ -1045,7 +1047,7 @@ h1 {
 		padding-top: 2.5em;
 	}
 	#careers {
-		padding:3em 5%;
+		padding:3em 5% 5em;
 	}
 
 	#work,#clients{
