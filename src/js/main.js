@@ -170,9 +170,13 @@ var mgbMainSys = {
 	addListeners : function(){
 		var that = this;
 		$(document).on('click', '[data-tracking-label]', function(e) {
-			e.preventDefault();
-		    var virtualPath = $(this).attr('data-tracking-label');
-		    	that.gaTracking(virtualPath,$(this));
+			
+			if($(this).attr('target') != "_blank" ) { 
+				console.log("asdfasdfasdf")
+				e.preventDefault();
+			}
+			var virtualPath = $(this).attr('data-tracking-label');
+			that.gaTracking(virtualPath,$(this));
 		});
 	},
 	
@@ -283,13 +287,13 @@ var mgbMainSys = {
 		var currScroll = $(window).attr('scrollY');
 		// var scrollBottom = $(document).height() - $("body").height();
 		
-		var stickyNavRevealY = mgbHeroVideo.maxVideoHeight - 60
+		var stickyNavRevealY = mgbHeroVideo.maxVideoHeight - 75
 		
 		if ($('#overlayContent').hasClass('active')){
 			if($("#heroImage").length > 0) {
-				stickyNavRevealY = $('#heroImage img').innerHeight() - 60;
+				stickyNavRevealY = $('#heroImage img').innerHeight() - 75;
 			}else{
-				stickyNavRevealY = 60;
+				stickyNavRevealY = 50;
 			}
 		}
 
@@ -496,7 +500,7 @@ var mgbMainSys = {
 					$("nav").addClass("overlayActive").removeClass("sticky");
 			
 					mgbHeader.hideLogo();
-					mgbHeader.deactivateNavActive();
+					
 					
 				},1000);
 				
@@ -516,6 +520,8 @@ var mgbMainSys = {
 				mgbContent.init();
 				mgbContent.resize();
 				mgbHeroVideo.init();
+				
+				mgbHeader.deactivateNavActive();
 				
 				if (!mgbMainSys.waypointsInitialized) mgbMainSys.initWaypoints();
 				
@@ -1099,50 +1105,54 @@ var mgbContent = {
 			$('.cityFilter').toggleClass('active');
 		});
 		
-        $('.pushRight').on('click', function(e) {
+		$('.closeCulture').on('click', function(e) {
+			$('.cultureTile').removeClass('shrinkMe stretchOut');
+		});
+		
+        $('.pushRight .cultureLink').on('click', function(e) {
             e.preventDefault();
 			
 			that.setCultureTileHeight();
             
-            if (!$(this).hasClass("stretchOut")) {
-                $(this).siblings().removeClass("shrinkMe stretchOut");
+            if (!$(this).parent().hasClass("stretchOut")) {
+                $(this).parent().siblings().removeClass("shrinkMe stretchOut");
             }
             
-            var nextTile = $(this).next();
+            var nextTile = $(this).parent().next();
             var picHolder = nextTile.find('.picHolder');
             
             var colW = picHolder.width();
             //move this to a global var on resize???
             
-            if (!$(this).hasClass('stretchOut')) {
+            if (!$(this).parent().hasClass('stretchOut')) {
                 picHolder.css('min-width', colW + 'px');
             }
 			
             nextTile.toggleClass("shrinkMe");
-            $(this).toggleClass('stretchOut');
+            $(this).parent().toggleClass('stretchOut');
         });
         
-        $('.pushLeft').on('click', function(e) {
+        $('.pushLeft .cultureLink').on('click', function(e) {
             e.preventDefault();
             
 			that.setCultureTileHeight();
 			
-            if (!$(this).hasClass("stretchOut")) {
-                $(this).siblings().removeClass("shrinkMe stretchOut");
+            if (!$(this).parent().hasClass("stretchOut")) {
+                $(this).parent().siblings().removeClass("shrinkMe stretchOut");
             }
             
-            var prevTile = $(this).prev();
+            var prevTile = $(this).parent().prev();
             var picHolder = prevTile.find('.picHolder');
             
             var colW = picHolder.width();
             //move this to a global var on resize???
 
-            if (!$(this).hasClass('stretchOut')) {
+            if (!$(this).parent().hasClass('stretchOut')) {
                 picHolder.css('min-width', colW + 'px');
             }
 			
             prevTile.toggleClass("shrinkMe");
-            $(this).toggleClass('stretchOut');
+            $(this).parent().toggleClass('stretchOut');
         });
 		
 		$('#cultureTileMore').on('click',function(e){

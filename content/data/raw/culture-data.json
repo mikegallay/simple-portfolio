@@ -1,18 +1,21 @@
 [
 	{
 		"name" : "Matthew Bull",
-		"title": "My Title",
+		"title": "Chief Creative Officer",
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
-		"info": "This is some information",
+		"infoType": "card",
+		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
+		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "ny"
+		"office": "New York"
 	},
 	{
 		"name" : "Pantone",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/pantone",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "",
 		"office": "chi"
 	},
@@ -21,6 +24,7 @@
 		"title": "",
 		"imgSrc": "assets/img/our_culture/biking",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "",
 		"office": "ny"
 	},
@@ -29,7 +33,9 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_colors",
 		"imgType": "jpg",
+		"infoType": "card",
 		"info": "This is my information",
+		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|BioColors_Culture",
 		"office": "ams"
 	},
@@ -38,6 +44,7 @@
 		"title": "",
 		"imgSrc": "assets/img/our_culture/art",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "",
 		"office": "ny"
 	},
@@ -46,6 +53,7 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/slinky",
 		"imgType": "gif",
+		"infoType": "",
 		"info": "",
 		"office": "sf"
 	},
@@ -54,7 +62,9 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_elizabeth",
 		"imgType": "jpg",
+		"infoType": "card",
 		"info": "This is my information",
+		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|Elizabeth_Culture",
 		"office": "ldn"
 	},
@@ -63,6 +73,7 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "",
 		"office": "par"
 	},
@@ -71,7 +82,9 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
+		"infoType": "card",
 		"info": "Hello everybody!",
+		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|Waving_Culture",
 		"office": "sao"
 	},
@@ -80,7 +93,9 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_skater",
 		"imgType": "jpg",
+		"infoType": "card",
 		"info": "This is my information",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|Skater_Culture",
 		"office": "ldn"
 	},
@@ -89,14 +104,17 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/train",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "",
 		"isDouble": "true",
 		"office": "chi"
-		},	{
+	},	
+	{
 		"name" : "Dog",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "", 
 		"office": "par"
 	},
@@ -105,7 +123,9 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
+		"infoType": "card",
 		"info": "Hello everybody!",
+		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|Waving_Culture",
 		"office": "ny"
 	},
@@ -114,17 +134,19 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/train",
 		"imgType": "jpg",
+		"infoType": "",
 		"info": "",
 		"isDouble": "true",
 		"office": "chi"
 	},
-		{
-			"name" : "Train",
-			"title": "My Title",
-			"imgSrc": "assets/img/our_culture/train",
-			"imgType": "jpg",
-			"info": "",
-			"isDouble": "true",
-			"office": "chi"
-		}
+	{
+		"name" : "Train",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/train",
+		"imgType": "jpg",
+		"infoType": "",
+		"info": "",
+		"isDouble": "true",
+		"office": "chi"
+	}
 ]
