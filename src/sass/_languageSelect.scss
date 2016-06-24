@@ -33,12 +33,12 @@ select {
 	.flag{
 	    float: right;
 	    /* padding: 0 !important; */
-	    margin: 1.8em 0 0 0;
+	    margin: 1.8em 3.6em 0 0;
 	    width: 16px;
 	    height: 11px;
 	    background: url(../img/common/flagssprite.png) no-repeat;
 	    position: relative;
-	    padding-right: 3.6em;
+//	    padding-right: 3.6em;
 		transition:margin 200ms 0ms;
 	}
 	&.sticky{
@@ -52,10 +52,16 @@ select {
 
 @media screen and (min-width: 768px) {
 	#Home{
-	.flag{
-		 margin: 1.8em 0 0 0;
-	    padding-right: 1.5em;
-	}
+		.flag{
+			margin: 1.8em 0 0 0;
+			margin-right: 1.5em;
+		}
+		&.sticky{
+			.flag{
+				margin-top:1.8em;
+			}
+		
+		}
 }
 }
 #Home{
