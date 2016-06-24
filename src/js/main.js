@@ -695,7 +695,11 @@ var mgbHeader = {
 		this.navContainer.addClass('settle');
 		this.navHeight = $('nav').height();
 
-		if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) this.hideMobileNav();
+		if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) {
+			$('#menuToggleHolder').removeClass('active');
+			this.hideMobileNav();
+		}
+		
 /*
 		// check to see if overlay is required
 		var loc = $(location).attr('href');

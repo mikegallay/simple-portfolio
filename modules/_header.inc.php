@@ -29,7 +29,7 @@
 					</div>
 				</div>
 			</a>
-		
+			<div class="flag us"></div>
 			<div id="menuToggleHolder">
 				<div id="menuToggle">			
 					<div id="ham1"><div class="hamDot"></div></div>
@@ -37,14 +37,9 @@
 					<div id="ham3"><div class="hamDot"></div></div>	
 				</div>
 			</div>
-			<!-- <select id="office-selector" dir="rtl">
-				<option value="volvo">Global - EN</option>
-				<option value="volvo">USA - EN</option>
-				<option value="mercedes">Paris - EN</option>
-				<option value="saab">Paris - FR</option>
-				<option value="audi">Amsterdam - EN</option>
-				<option value="audi">Amsterdam - NL</option>
-			</select> -->
+			
+			
+			
 			<ul class="menu">
 				<li>
 					<a id="nav-work" href="work" aria-label="" data-tracking-label="Nav|Click|Work">WORK</a>
@@ -59,7 +54,14 @@
 					<a href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
 				</li>	
 			</ul>
-			
+			<!-- <select id="office-selector" dir="rtl">
+				<option value="a">Global - EN</option>
+				<option value="a">USA - EN</option>
+				<option value="a">Paris - EN</option>
+				<option value="a">Paris - FR</option>
+				<option value="a">Amsterdam - EN</option>
+				<option value="a">Amsterdam - NL</option>
+			</select> -->
 			
 		</div>
 	</nav>

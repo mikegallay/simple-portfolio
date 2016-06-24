@@ -2,10 +2,10 @@
 	height: auto;
 	width: 100%;
 	position: relative;
-	overflow: hidden;
+//	overflow: hidden;
 	display: block;
 	transition:height 500ms,top 500ms;
-	height:80px;
+	height:60px;
 	z-index:99999;
 	position:fixed;
 	top: 0px;
@@ -15,8 +15,8 @@
 	nav {
 		position: relative;//fixed;
 		width: 100%;
-		height: 4.25em;
-		margin-top: 0.5em;
+		height: 60px;
+		//margin-top: 0.5em;
 		display: inline-block;
 		top:-100px;
 		transition: top 1s 1000ms;
@@ -38,8 +38,8 @@
 				transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	
 	
-			    margin-top: 0px;
-			    margin-left: -10px;
+			    margin-top: 4px;
+			    margin-left: -16px;
 	
 				transform: scale(.8);
 				&.mobile{
@@ -112,13 +112,13 @@
 			width:49px;
 			height:49px;
 			position:absolute;
-			right: 8px;
-			top:8px;
+			right: 4px;
+			top:10px;
 			display:inline-block;
 			cursor: pointer;
 			overflow:hidden;
-			transform:rotate(0deg);
-			transition:transform 400ms 200ms;
+			transform:rotate(0deg) scale(.85);
+			transition:top 200ms 0ms,transform 400ms 200ms;//right 400ms 200ms,
 			#menuToggle{
 				width:50px;
 				height:50px;
@@ -176,8 +176,9 @@
 				}
 			}
 			&.active{
-				transform: rotate(225deg);
-				transition:transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+				transform: rotate(225deg) scale(.8);
+				right: 4px;
+				transition:transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
 				#menuToggle{
 					.hamDot{
 					}
@@ -229,7 +230,7 @@
 			margin-bottom: 0;
 			width: 20%;
 			height: 100%;
-			right: -35%;
+			right: -50%;
 			top: 0;
 		    display: flex;
 		    align-items: center;
@@ -271,14 +272,7 @@
 			
 				}
 			}
-			/*&:after{
-				content: "|";
-				font-size: 1.3em;
-				top: 0em;
-				position: relative;
-				font-family: sans-serif;
-				padding-left: .2em;
-			};*/
+			
 		}
 		
 		&.settle{
@@ -290,7 +284,7 @@
 		content: '';
 	    width: 100%;
 	    height: 100%;
-	    background-color: $overlayColor;
+	    background-color: $headerFooterGray;
 	    position: absolute;
 	    top: 0;
 	    left: 0;
@@ -305,9 +299,12 @@
 			opacity:1;
 		}
 		nav {
+			#menuToggleHolder{
+				top:5px;
+			}
 			#homeLogo {
 				#mbLogo{
-					margin-top:-10px;
+					margin-top:-12px;
 					//margin-left:4px;//8px;
 				}
 			}
@@ -535,7 +532,7 @@
 				padding-left: 0;
 				padding-top: 0;
 				padding-bottom: 0;
-				padding-right: 1.25em;
+				padding-right: 1.5em;
 				font-size: 0.875em;
 				text-align: right;
 				display: inline-block;
@@ -544,8 +541,17 @@
 			    float: right;
 				border-color: transparent;
 				border-width: 0;
-				margin-top: 1em;
+				margin-top: .8em;
 				right: 0;
+				
+				&:after{
+					content: "|";
+					font-size: 1.3em;
+					top: 0em;
+					position: relative;
+					font-family: sans-serif;
+					padding-left: .2em;
+				};
 		
 				li {
 					margin: 1em;// 1.3em;
@@ -613,40 +619,6 @@
 	}
 }
 
-#office-selector{
-	float: right;
-	width: 125px;
-	margin-top: 2em;
-	position:relative;
-	font-size:0.9em;
-	.dd-flag{
-		float:left;
-		position:absolute;
-		left:0;
-	}
-}
-
-select {
-	-webkit-appearance: button;
-	-moz-appearance: button;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-moz-padding-end: 20px;
-	-webkit-padding-start: 2px;
-	-moz-padding-start: 2px;
-	color: #555;
-	font-size: inherit;
-	margin: 0;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	background: none;
-	border: none;
-	color: white;
-	text-transform: uppercase;
-	font-family: 'Din-Regular', sans-serif;
-	text-align: right;
-}
 
 
 
