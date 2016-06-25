@@ -1,10 +1,29 @@
 #office-selector{
-    width: 30px;
-    margin-top: 2em;
-    position: absolute;
-    font-size: 0.9em;
-    right: 8em;
-//	opacity:0;
+	float: right;
+	margin-top: 1.6em;
+	position: relative;
+	font-size: 0.9em;
+	right: 3.6em;
+	width: 0px;
+	padding-left: 40px;
+	border-radius: 5px;
+	outline:none;
+//	overflow: hidden;
+	//background: url("../img/common/select-downarrow.png") no-repeat 90% 50%;
+}
+
+#office-selector select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+#office-selector select:focus {
+    outline: none;
 }
 
 select {
@@ -33,7 +52,7 @@ select {
 	.flag{
 	    float: right;
 	    /* padding: 0 !important; */
-	    margin: 1.8em 3.6em 0 0;
+	    margin: 1.8em 1.5em 0 0;
 	    width: 16px;
 	    height: 11px;
 	    background: url(../img/common/flagssprite.png) no-repeat;
@@ -51,6 +70,12 @@ select {
 
 
 @media screen and (min-width: 768px) {
+	#office-selector{
+		margin-top: 1.6em;
+		right: 3em;
+		padding-left: 40px;
+		background: url("../img/common/select-downarrow.png") no-repeat 90% 50%;
+	}
 	#Home{
 		.flag{
 			margin: 1.8em 0 0 0;

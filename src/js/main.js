@@ -15,6 +15,10 @@ var mgbMainSys = {
 	waypointsInitialized: false,
 	glitchesInitialized: false,
 	
+	currCoun: 'us',
+	currCity: 'glo',
+	currLang: 'en',
+	
 	init : function() {
 		var that = this;
 		
@@ -29,6 +33,7 @@ var mgbMainSys = {
 		},2000);
 		
 		this.addListeners();
+		this.handleOfficeSelector();
 		
 	},
 	
@@ -177,6 +182,23 @@ var mgbMainSys = {
 			}
 			var virtualPath = $(this).attr('data-tracking-label');
 			that.gaTracking(virtualPath,$(this));
+		});
+		
+		
+	},
+	
+	handleOfficeSelector : function(){
+		var that = this;
+		$('#office-selector').change(function(){
+			var currId = that.currCoun;
+			$('.flag').removeClass(currId);
+		    var selVal = $('#office-selector').val();
+			
+			var selArr = selVal.split('-');
+			that.currCoun = selArr[0];
+			that.currCity = selArr[1];
+			that.currLang = selArr[2];
+			$('.flag').addClass(that.currCoun);
 		});
 	},
 	

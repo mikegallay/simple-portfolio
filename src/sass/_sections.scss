@@ -251,7 +251,7 @@ h1 {
 		top:20px;
 		.inner{
 			h5{
-				display:none;
+			//	display:none;
 			}
 			p{
 				margin-top:0;
@@ -318,8 +318,13 @@ h1 {
 					font-family: 'Open Sans', sans-serif;
 					font-weight: 300;
 					font-style:italic;
-					font-size:.8em;
+					font-size:1em;
 					margin:0;
+				}
+				p{
+					margin-top:.5em;
+					margin-bottom:0;
+					font-size:1em;
 				}
 			}
 			
@@ -329,7 +334,6 @@ h1 {
 		.linkedin,.closeCulture{
 			opacity: 1;
 			transition: opacity 500ms 750ms;
-
 			z-index: 20;
 		}
 		
@@ -1205,21 +1209,22 @@ h1 {
 			font-size: .9em;
 			.inner{
 				width:80%;
-				h5{display:block;}
+				//h5{display:block;}
 				p{margin-top:.75em;}
 			}
 		}
 		
+		
 		.linkedin{
-			bottom: 8px;
-			right: 0px;
-			transform: scale(1.0);
+			//bottom: 8px;
+			//right: 0px;
+			//transform: scale(1.0);
 		}
 	
 		.closeCulture{
-			top: 10px;
-			right: 10px;
-			transform: rotateZ(45deg) scale(1.0);
+			//top: 10px;
+			//right: 10px;
+			//transform: rotateZ(45deg) scale(1.0);
 			svg {
 				fill: white;
 			}
@@ -1304,6 +1309,20 @@ h1 {
 			}
 		}
 	}
+	
+	/*.cultureTile{
+		.linkedin{
+			bottom: 8px;
+			right: 0px;
+			transform: scale(1.0);
+		}
+	
+		.closeCulture{
+			top: 10px;
+			right: 10px;
+			transform: rotateZ(45deg) scale(1.0);
+		}
+	}*/
 			
 	.officeTile {
 		width: 24%;

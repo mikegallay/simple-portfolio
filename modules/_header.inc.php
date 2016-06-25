@@ -29,6 +29,16 @@
 					</div>
 				</div>
 			</a>
+			<select id="office-selector" dir="rtl">
+				<option value="us-glo-en">Global</option>
+				<option value="us-nyc-en">New York - EN</option>
+				<option value="us-chi-en">Chicago - EN</option>
+				<option value="us-sfo-en">San Francisco - EN</option>
+				<option value="fr-par-en">Paris - EN</option>
+				<option value="fr-par-fr">Paris - FR</option>
+				<option value="nl-ams-en">Amsterdam - EN</option>
+				<option value="nl-ams-nl">Amsterdam - NL</option>
+			</select>
 			<div class="flag us"></div>
 			<div id="menuToggleHolder">
 				<div id="menuToggle">			
@@ -54,14 +64,7 @@
 					<a href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
 				</li>	
 			</ul>
-			<!-- <select id="office-selector" dir="rtl">
-				<option value="a">Global - EN</option>
-				<option value="a">USA - EN</option>
-				<option value="a">Paris - EN</option>
-				<option value="a">Paris - FR</option>
-				<option value="a">Amsterdam - EN</option>
-				<option value="a">Amsterdam - NL</option>
-			</select> -->
+			
 			
 		</div>
 	</nav>
