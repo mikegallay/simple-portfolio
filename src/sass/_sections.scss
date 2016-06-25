@@ -245,10 +245,18 @@ h1 {
 	}
 	
 	.bio {
-		font-size: 0.75em;
+		font-size: 0.8em;
 		opacity:0;
 		position: absolute;
 		top:20px;
+		.inner{
+			h5{
+				display:none;
+			}
+			p{
+				margin-top:0;
+			}
+		}
 		
 	}
 	
@@ -256,15 +264,19 @@ h1 {
 		opacity:0;
 		cursor:pointer;
 		position:absolute;
-		bottom: 8px;
-		right: 0px;
+		bottom: 5px;
+		right: -3px;
+		transform:scale(.85);
+		svg {
+			fill: white;
+		}
 	}
 	
 	.closeCulture{
 		position: absolute;
-		top: 10px;
-		right: 10px;
-		transform: rotateZ(45deg);
+		top: 5px;
+		right: 5px;
+		transform:scale(.85) rotate(45deg);
 		cursor: pointer;
 		opacity:0;
 		svg {
@@ -294,7 +306,7 @@ h1 {
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%,-50%);
-				width: 80%;
+				width: 85%;
 				margin: 0;
 				h4{
 					font-family: 'Din-Bold', sans-serif;
@@ -764,6 +776,18 @@ h1 {
 	}
 }
 
+@media screen and (min-width: 375px){
+	
+	.cultureTile{
+		.bio{
+			.inner{
+				h5{display:block;}
+				p{margin-top:.75em;}
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 414px){
 	
 	h1 {
@@ -1179,6 +1203,26 @@ h1 {
 		
 		.bio {
 			font-size: .9em;
+			.inner{
+				width:80%;
+				h5{display:block;}
+				p{margin-top:.75em;}
+			}
+		}
+		
+		.linkedin{
+			bottom: 8px;
+			right: 0px;
+			transform: scale(1.0);
+		}
+	
+		.closeCulture{
+			top: 10px;
+			right: 10px;
+			transform: rotateZ(45deg) scale(1.0);
+			svg {
+				fill: white;
+			}
 		}
 
 		&.stretchOut {
