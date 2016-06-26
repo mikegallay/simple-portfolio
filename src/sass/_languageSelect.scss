@@ -72,7 +72,7 @@ select {
 	    position: absolute;
 //	    padding-right: 3.6em;
 		transition:margin 200ms 0ms;
-		right:3.1em;
+		right:2.4em;
 	}
 	&.sticky{
 		.flag{
@@ -136,7 +136,7 @@ select {
   cursor: pointer;*/ 
     margin: 1.2em 0px 0 0px;
     padding-left: 31px;
-    padding-right: 9px;
+    padding-right: 0;
   cursor: pointer;
 	}
 @media screen and (min-width: 768px) {
