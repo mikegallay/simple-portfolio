@@ -215,7 +215,8 @@ var mgbMainSys = {
 					setTimeout(function(){
 						//if global is set (from keyboard control): use it; if not use mouse value
 						var v = (that.currSelection != null) ? that.currSelection.value : this.value;
-						that.handleOfficeChange(v);
+						
+						if (v) that.handleOfficeChange(v);
 						that.currSelection = null; //reset global
 					},100);
 					

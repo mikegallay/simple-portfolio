@@ -134,11 +134,17 @@ select {
   line-height: 1.5em;
   width: 200px;
   cursor: pointer;*/ 
-    margin: 1.7em 0px 0 0px;
+    margin: 1.2em 0px 0 0px;
     padding-left: 31px;
-    padding-right: 0px;
+    padding-right: 9px;
   cursor: pointer;
 	}
+@media screen and (min-width: 768px) {
+	.dk-select, .dk-select-multi {
+    margin: 1.7em 0px 0 0px;
+    padding-right: 0px;
+}
+}
 
 .dk-selected {
   /*width: 100%;
@@ -246,7 +252,7 @@ select {
 	    top: -0.8em;
 	    padding: 0;
 	    margin: 0;
-	    right: 0.3em;
+	    right:5px;
 	}
 }
 
