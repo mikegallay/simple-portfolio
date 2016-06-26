@@ -15,6 +15,7 @@ var mgbMainSys = {
 	waypointsInitialized: false,
 	glitchesInitialized: false,
 	
+	currSelection: null,
 	currCoun: 'us',
 	currCity: 'glo',
 	currLang: 'en',
@@ -187,19 +188,46 @@ var mgbMainSys = {
 		
 	},
 	
+	handleOfficeChange : function(val){
+		var currId = this.currCoun;
+		$('.flag').removeClass(currId);
+	    var selVal = val;
+		
+		var selArr = selVal.split('-');
+		this.currCoun = selArr[0];
+		this.currCity = selArr[1];
+		this.currLang = selArr[2];
+		$('.flag').addClass(this.currCoun);
+	},
+	
 	handleOfficeSelector : function(){
 		var that = this;
-		$('#office-selector').change(function(){
-			var currId = that.currCoun;
-			$('.flag').removeClass(currId);
-		    var selVal = $('#office-selector').val();
-			
-			var selArr = selVal.split('-');
-			that.currCoun = selArr[0];
-			that.currCity = selArr[1];
-			that.currLang = selArr[2];
-			$('.flag').addClass(that.currCoun);
-		});
+		
+		if ($('body').hasClass('autoplay')){
+			//not a mobile device/table: use dropkick
+			//fire "selection" on close to allow for keyboard control
+			$("#office-selector").dropkick({
+				change: function () {
+					//set global selection on change (fired using down arrow on keyboard)
+					that.currSelection = this;
+				},
+				close: function () {
+					setTimeout(function(){
+						//if global is set (from keyboard control): use it; if not use mouse value
+						var v = (that.currSelection != null) ? that.currSelection.value : this.value;
+						that.handleOfficeChange(v);
+						that.currSelection = null; //reset global
+					},100);
+					
+					
+				}
+			});
+		} else{
+			//use tradition select/option
+			$('#office-selector').change(function(){
+				that.handleOfficeChange($('#office-selector').val());
+			});
+		}
 	},
 	
 	gaTracking : function(virtualPath,$self){
@@ -964,7 +992,7 @@ var mgbHeroVideo = {
 		this.maxVideoHeight = 700;
 		var headerVideoPath = 'assets/videos/Main_Sequence_opt';
 	
-		$('body').removeClass('no-autoplay').addClass('autoplay');
+		// $('body').removeClass('no-autoplay').addClass('autoplay');
 	
 		$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
 
