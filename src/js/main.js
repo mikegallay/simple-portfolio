@@ -34,7 +34,7 @@ var mgbMainSys = {
 		},2000);
 		
 		this.addListeners();
-		this.handleOfficeSelector();
+		
 		
 	},
 	
@@ -992,8 +992,6 @@ var mgbHeroVideo = {
 		this.maxVideoHeight = 700;
 		var headerVideoPath = 'assets/videos/Main_Sequence_opt';
 	
-		// $('body').removeClass('no-autoplay').addClass('autoplay');
-	
 		$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
 
 		this.resize();
@@ -1633,6 +1631,11 @@ mgbMainSys.init();
 mgbHeader.init();
 mgbHeroVideo.init();
 mgbTimeLine.init();
+
+if(!isMobile.any()) {
+	$('body').removeClass('no-autoplay').addClass('autoplay');
+}
+mgbMainSys.handleOfficeSelector();
 
 if($("body").hasClass("ishome") && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
 if($("body").hasClass("ishome")) mgbMainSys.currPage = appRoot;
