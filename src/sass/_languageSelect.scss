@@ -21,6 +21,7 @@
 	border-radius: 5px;
 	outline:none;
     padding-bottom: 0.5em;
+	//transform:margin 200ms;
 //	overflow: hidden;
 //	background: url("../img/common/select-downarrow.png") no-repeat 90% 50%;
 }
@@ -65,13 +66,13 @@ select {
 	.flag{
 	    //float: left;
 	    /* padding: 0 !important; */
-	    margin: 1.3em 1.5em 0 0;
+	    margin: 1.2em 1.5em 0 0;
 	    width: 16px;
 	    height: 11px;
 	    background: url(../img/common/flagssprite.png) no-repeat;
 	    position: absolute;
 //	    padding-right: 3.6em;
-		transition:margin 200ms 0ms;
+		//transition:margin 200ms 0ms;
 		right:2.4em;
 	}
 	&.sticky{
@@ -109,10 +110,14 @@ select {
 			position:relative;
 			float:left;
 			right:0;
+			transform:margin 200ms;
 		}
 		&.sticky{
 			.flag{
-				margin-top:1.8em;
+				margin-top:1.4em;
+			}
+			.dk-select{
+				margin-top:1.3em;
 			}
 		
 		}
@@ -134,7 +139,7 @@ select {
   line-height: 1.5em;
   width: 200px;
   cursor: pointer;*/ 
-    margin: 1.2em 0px 0 0px;
+    margin: 1em 0px 0 0px;
     padding-left: 31px;
     padding-right: 0;
   cursor: pointer;
@@ -143,6 +148,7 @@ select {
 	.dk-select, .dk-select-multi {
     margin: 1.7em 0px 0 0px;
     padding-right: 0px;
+	
 }
 }
 
@@ -195,11 +201,11 @@ select {
   right: 0;*/
 	position: absolute;
 	    display: none;
-	    left: -130px;
+	    left: -153px;
 	    right: 0;
 	    width: 180px;
 	    top: 20px;
-	    margin-top: 1em; }
+	    margin-top: 1.3em; }
 
 .dk-select-open-up .dk-select-options {
   /*border-radius: 0.4em 0.4em 0 0;
@@ -241,18 +247,19 @@ select {
     font-family: "Din-Regular";
     text-transform: uppercase;
     padding: 0.5em 1em; 
+	border-top-right-radius: 0;
 	&:before{
-	    content: "";
+		content: "";
 	    width: 0;
 	    height: 0;
-	    border-left: 7px solid transparent;
-	    border-right: 7px solid transparent;
-	    border-bottom: 12px solid $skyblueColor;
+	    border-left: 15px solid transparent;
+	    border-right: 0px solid transparent;
+	    border-bottom: 15px solid #46ccc5;
 	    position: absolute;
-	    top: -0.8em;
+	    top: -0.9em;
 	    padding: 0;
 	    margin: 0;
-	    right:5px;
+	    right: 0px;
 	}
 }
 

@@ -63,21 +63,21 @@
 
 					#m{
 						width:31px;
-						height:26px;
+						height:27px;
 						overflow:hidden;
 						position:absolute;
 					}
 
 					#cgarryContainer{
 						width:0px;
-						height:26px;
+						height:27px;
 						left:30px;
 						overflow:hidden;
 						position:absolute;
 
 						#cgarry{
 							width:102px;
-							height:26px;
+							height:27px;
 							left:0px;
 							overflow:hidden;
 							position:absolute;
@@ -92,20 +92,20 @@
 
 					#b{
 						width:17px;
-						height:26px;
+						height:27px;
 						overflow:hidden;
 						position:absolute;
 					}
 
 					#owenContainer{
 						width:0px;
-						height:26px;
+						height:27px;
 						left:18px;
 						overflow:hidden;
 						position:absolute;
 						#owen{
-							width:79px;
-							height:26px;
+							width:80px;
+							height:27px;
 							left:0px;
 							overflow:hidden;
 							position:absolute;
@@ -122,12 +122,12 @@
 			height:49px;
 			position:absolute;
 			right: -1px;//4px;
-			top:0;//10px;
+			top:-1px;
 			display:inline-block;
 			cursor: pointer;
 			overflow:hidden;
 			transform:rotate(0deg) scale(.85);
-			transition:right 200ms 0ms,top 200ms 0ms,transform 400ms 200ms;//right 400ms 200ms,
+			transition:right 200ms 100ms,top 200ms 0ms,transform 400ms 200ms;//right 400ms 200ms,
 			
 			
 			#menuToggle{
@@ -189,7 +189,7 @@
 			&.active{
 				transform: rotate(225deg) scale(.8);
 				right: 4px;
-				transition:right 200ms 200ms,transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
+				transition:right 200ms 100ms,transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
 				#menuToggle{
 					.hamDot{
 					}
@@ -327,6 +327,7 @@ height:0%;
 					//margin-left:4px;//8px;
 				}
 			}
+			
 		}
 	}
 	
@@ -356,6 +357,9 @@ height:0%;
 				#navWrapper{
 //					width:100%;
 //					right:0;
+					.flag,.dk-select,#office-selector{
+						z-index:-1;
+					}
 				}
 			}
 			//position: absolute;
@@ -588,6 +592,9 @@ height:0%;
 				    top: -2px;
 				    font-family: "Open Sans";
 				}
+				&.sticky{
+					margin-top:.4em;
+				}
 			    
 				
 				/*&:after{
@@ -653,7 +660,11 @@ height:0%;
 		display: block;
 		&.sticky{
 			height:68px;
+			
 			nav{
+				.menu{
+					margin-top:.3em;
+				}
 				#homeLogo{
 					#mbLogo{
 						margin-left:25px;
