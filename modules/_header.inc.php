@@ -44,17 +44,19 @@
 						<a href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
 					</li>	
 				</ul>
+				<!--
 				<div class="flag us"></div>
-				<select id="office-selector" dir="">
-					<option value="us-glo-en">Global</option>
-					<option value="us-nyc-en">New York - EN</option>
-					<option value="us-chi-en">Chicago - EN</option>
-					<option value="us-sfo-en">San Francisco - EN</option>
-					<option value="fr-par-en">Paris - EN</option>
-					<option value="fr-par-fr">Paris - FR</option>
-					<option value="nl-ams-en">Amsterdam - EN</option>
-					<option value="nl-ams-nl">Amsterdam - NL</option>
-				</select>
+								<select id="office-selector" dir="">
+									<option value="us-glo-en">Global</option>
+									<option value="us-nyc-en">New York - EN</option>
+									<option value="us-chi-en">Chicago - EN</option>
+									<option value="us-sfo-en">San Francisco - EN</option>
+									<option value="fr-par-en">Paris - EN</option>
+									<option value="fr-par-fr">Paris - FR</option>
+									<option value="nl-ams-en">Amsterdam - EN</option>
+									<option value="nl-ams-nl">Amsterdam - NL</option>
+								</select>-->
+				
 				<div id="menuToggleHolder">
 					<div id="menuToggle">			
 						<div id="ham1"><div class="hamDot"></div></div>

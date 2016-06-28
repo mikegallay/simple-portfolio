@@ -3322,7 +3322,11 @@ mgbTimeLine.init();
 if(!isMobile.any()) {
 	$('body').removeClass('no-autoplay').addClass('autoplay');
 }
-mgbMainSys.handleOfficeSelector();
+
+//globalization/flags
+//uncomment .flag and select in _header_inc.php
+//uncomment #Home nav ul.menu:after css in _header.css
+// mgbMainSys.handleOfficeSelector();
 
 if($("body").hasClass("ishome") && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
 if($("body").hasClass("ishome")) mgbMainSys.currPage = appRoot;
