@@ -9,7 +9,14 @@
 	</svg>
 </span>
 
+
 <header id="Home">
+	
+	<!-- <div id="siteSelect" style="position: relative; display: none; width: 100%; height: 60px; background: red; text-align: center;">
+		It looks like your viewing this site from outide the U.S. <br>
+		Would you like to visit one of our other sites?
+	</div> -->
+	
 	<nav id="mainNav">
 		<div class="container">
 			<a href="#" id="homeLogo" data-tracking-label="Nav|Click|Logo">
@@ -69,6 +76,4 @@
 			
 		</div>
 	</nav>
-	
-
 </header> 

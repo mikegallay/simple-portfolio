@@ -2508,14 +2508,16 @@ var mgbHeroVideo = {
 			this.overlayContainer = $('.video-overlay');
 			this.videoHeaderContainer = $(".videoHeader");
 			this.welcomeContainer = $("#welcomeVideo");
-			this.videoPlayerContainer = $(".responsive-video");	
+			this.videoPlayerContainer = $(".responsive-video");
+
 			this.messageContainer = $(".headerHeroText");
 			
 			this.initHeaderCopy();
 			
 			this.arrowAnimation.to(downArrow,1,{y:"-20", delay:0,ease:Back.easeInOut}).
 			to(downArrow,1,{y:"0", delay:0.75, ease:Bounce.easeOut, overwrite:false });
-			this.arrowAnimation.repeat(-1).play();	
+			this.arrowAnimation.repeat(-1).play();
+
 		}
 		
 	},
@@ -2679,8 +2681,28 @@ var mgbHeroVideo = {
 		this.maxVideoHeight = 700;
 		var headerVideoPath = 'assets/videos/Main_Sequence_opt';
 	
-		$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
+		//$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
+		
+		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/119997282?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1&player_id=vimeoPlayer width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="119997282" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+		
+		setTimeout(function(){
+			$("#headerVideo #vimeoPlayer").css({"width": "100%", "height":"100%" });
+			
+			var iframe = $("#vimeoPlayer")[0],
+			player = $f(iframe);
+		
+			console.log("player name: ", player);
+		
+			player.addEvent('ready', function(){
+				player.api('setVolume', 0);
+			});
+		}, 1000);
 
+		
+		// $('.videoHolder').html('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=0&player_id=vimeoPlayer" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="vimeoPlayer" data-vimeoId='+id+'></iframe></div>');
+		//
+		// $('.videoWrapper').fitVids();
+		
 		this.resize();
 	}
 };
@@ -3317,7 +3339,7 @@ if($("body").hasClass("ishome")) { //this is the homepage
 mgbMainSys.init();
 mgbHeader.init();
 mgbHeroVideo.init();
-mgbTimeLine.init();
+//mgbTimeLine.init();
 
 if(!isMobile.any()) {
 	$('body').removeClass('no-autoplay').addClass('autoplay');
@@ -3328,7 +3350,34 @@ if(!isMobile.any()) {
 //uncomment #Home nav ul.menu:after css in _header.css
 // mgbMainSys.handleOfficeSelector();
 
-if($("body").hasClass("ishome") && !isMobile.any()) mgbHeroVideo.loadHeaderVideo();
+if($("body").hasClass("ishome") && !isMobile.any()) {
+	mgbHeroVideo.loadHeaderVideo();
+
+	// Check for location in header section
+	if("geolocation" in navigator) {
+		navigator.geolocation.getCurrentPosition(function(pos){
+
+			var lat = pos.coords.latitude;
+			var lng = pos.coords.longitude;
+
+			$.ajax({ url:'https://nominatim.openstreetmap.org/reverse?format=json&lat='+lat+'&lon='+lng+'&zoom=18&addressdetails=1',
+			         success: function(data){
+			             var countryCode = data.address.country_code;
+			 
+						 if(countryCode === "us") {
+							 setTimeout(function(){
+							 	$("#siteSelect").fadeIn();
+							 }, 2000);
+						 }
+			         }
+			});
+		}, function(){
+			console.log("Not able to get location.");
+		});
+	}
+	/////////////	
+}
+
 if($("body").hasClass("ishome")) mgbMainSys.currPage = appRoot;
 
 window.onscroll = mgbMainSys.handleScrolling;
@@ -3383,7 +3432,5 @@ function resize(){
 	if ($('#overlayContent').hasClass('active')) mgbOverlay.resize();
 }
 
-// Prevent the page of jumping abruptly when loading from a hash
-//function displayCurrentContent() {
-	//$(window).scrollTop(0);
-	//}
+
+
