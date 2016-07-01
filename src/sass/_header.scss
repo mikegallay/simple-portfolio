@@ -502,6 +502,59 @@ height:0%;
 	#welcomeImage{display:none;}
 }
 
+$pinnedOffset:60px;
+$pinnedPadding:10px;
+
+.pinned{
+	height:0px;
+	width:100%;
+	color:$sectionHeadingColor;
+	padding:0 $pinnedPadding;
+	margin:0;
+	background:lightblue;
+	overflow:hidden;
+	transition:height 500ms,padding 500ms;
+}
+
+.showPinned{
+	#Home{
+		top:$pinnedOffset + $pinnedPadding * 2;
+		nav{
+			//top:$pinnedOffset + $pinnedPadding * 2;
+			transition:top 500ms;
+		}
+	}
+	#mainContent,#overlayContent{
+		//top:80px;
+		.parallaxHeader{
+			//top:$pinnedOffset + 20px;
+			position:relative!important;
+		}
+		.pinned{
+			width:100%;
+			height:$pinnedOffset;
+			padding:$pinnedPadding;
+		}
+	}
+	
+	&.ishome{
+		.overlayContent{
+			.pinned{
+				height:0px;
+			}
+		}
+	}
+	
+	&.nothome{
+		#mainContent{
+			.pinned{
+				height:0px;
+				padding:0 $pinnedPadding;
+			}
+		}
+	}
+}
+
 
 @media screen and (min-width: 768px) {
 	
@@ -536,7 +589,7 @@ height:0%;
 			//background-image: '';
 			//background-size: 0px 0px;
 			border: none;
-			position: fixed;
+			position: relative;//fixed;
 			top: -100px;
 			left: 0;
 			margin-top: 1.5625em;
@@ -592,6 +645,7 @@ height:0%;
 				    top: -2px;
 				    font-family: "Open Sans";
 				}*/
+				
 				&.sticky{
 					margin-top:.4em;
 				}
@@ -668,7 +722,7 @@ height:0%;
 
 
 
-
+//ugly fix to align header at multiple sizes
 @media screen and (min-width: 1024px) {
 	#Home {
 		nav {

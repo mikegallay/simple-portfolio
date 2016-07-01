@@ -57,21 +57,24 @@
 <?php include_once("modules/_head.inc.php"); ?>
 
 <body class="no-autoplay <?php if ($ishome){ ?>ishome<?php } ?>">	
-	<?php if ($ishome){ ?>
-		
-		<!-- <span id="homepage-flag" style="display: none"></span> -->
-	<?php } ?>
 
     <?php include_once("modules/_header.inc.php");?>
 	
 	<div id="mainContent">
-		<?php if ($ishome){ include_once("modules/_home.php"); } ?>
+		
+		<?php 
+		include("modules/_pinnedToTop.php"); 
+		if ($ishome){ 
+			include_once("modules/_home.php"); 
+		} ?>
 	</div>
 	
 	<div id="overlayCover"></div>
 	
 	<div id="overlayContent">
-		<?php if (!$ishome){ 
+		<?php 
+		include("modules/_pinnedToTop.php"); 
+		if (!$ishome){ 
 			include_once("modules/" . $base_url . ".php");
 		}?>
 	</div>

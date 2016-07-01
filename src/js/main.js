@@ -1001,9 +1001,9 @@ var mgbHeroVideo = {
 
 // Module to handle site content
 var mgbContent = {
-    portfolioContent: null ,
-    cultureContent: null ,
-    officeClocks: null ,
+    portfolioContent: null,
+    cultureContent: null,
+    officeClocks: null,
 	cultureTimeout: null,
     
     init: function() {

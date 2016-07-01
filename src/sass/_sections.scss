@@ -27,6 +27,7 @@
 
 #mainContent{
 	overflow:hidden;
+	position:relative;
 	&.inactive{
 		display:none;
 		position:fixed;
