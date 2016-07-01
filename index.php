@@ -63,7 +63,7 @@
 	<div id="mainContent">
 		
 		<?php 
-		include("modules/_pinnedToTop.php"); 
+		
 		if ($ishome){ 
 			include_once("modules/_home.php"); 
 		} ?>

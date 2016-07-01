@@ -76,7 +76,7 @@ var mgbMainSys = {
 		if ($('body').hasClass('nothome')){
 			var h = 0;
 			if($("#heroImage").length > 0) h = $('#heroImage img').innerHeight();
-				$('.contentWrapper').css('margin-top',-h+"px");
+			$('.contentWrapper').css('margin-top',-h+"px");
 		}
 		
 	},
@@ -355,7 +355,17 @@ var mgbMainSys = {
 		$('.parallaxHeader').css({ top: topOff });
 		
 		// console.log("scrolling");
+		
+		if ($('body').hasClass('showPinned')){
+			mgbMainSys.hidePinned();
+		}
+		
 		var currScroll = $(window).attr('scrollY');
+		
+		if (currScroll == 0){
+			mgbMainSys.showPinned();
+		}
+		
 		// var scrollBottom = $(document).height() - $("body").height();
 		
 		var stickyNavRevealY = mgbHeroVideo.maxVideoHeight - 75

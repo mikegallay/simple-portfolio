@@ -514,8 +514,10 @@ $pinnedPadding:10px;
 	background:lightblue;
 	overflow:hidden;
 	transition:height 500ms,padding 500ms;
+    z-index: 99;
+    position: relative;
 }
-
+/*
 .showPinned{
 	#Home{
 		top:$pinnedOffset + $pinnedPadding * 2;
@@ -555,6 +557,30 @@ $pinnedPadding:10px;
 				height:0px;
 				padding:0 $pinnedPadding;
 			}
+		}
+	}
+}
+*/
+
+.showPinned{
+	.pinned{
+		width:100%;
+		height:$pinnedOffset;
+		padding:$pinnedPadding;
+	}
+	#Home{
+		top:$pinnedOffset + $pinnedPadding * 2;
+		&:before{
+			top:$pinnedOffset + $pinnedPadding * 2;
+		}
+		nav{
+//			top:$pinnedOffset + $pinnedPadding * 2;
+//			transition:top 500ms;
+		}
+	}
+	#mainContent,#overlayContent{
+		.parallaxHeader{
+			position:relative!important;
 		}
 	}
 }
