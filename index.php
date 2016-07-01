@@ -56,7 +56,7 @@
 ?>
 <?php include_once("modules/_head.inc.php"); ?>
 
-<body class="no-autoplay <?php if ($ishome){ ?>ishome<?php } ?>">	
+<body class="no-autoplay <?php if ($ishome){ ?>ishome<?php } else {?>nothome<?php } ?>">	
 
     <?php include_once("modules/_header.inc.php");?>
 	
@@ -73,7 +73,6 @@
 	
 	<div id="overlayContent">
 		<?php 
-		include("modules/_pinnedToTop.php"); 
 		if (!$ishome){ 
 			include_once("modules/" . $base_url . ".php");
 		}?>

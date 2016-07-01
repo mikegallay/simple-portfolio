@@ -70,6 +70,26 @@ var mgbMainSys = {
 		
 	},
 	
+	showPinned : function(){
+		
+		$('body').addClass("showPinned");
+		if ($('body').hasClass('nothome')){
+			var h = 0;
+			if($("#heroImage").length > 0) h = $('#heroImage img').innerHeight();
+				$('.contentWrapper').css('margin-top',-h+"px");
+		}
+		
+	},
+	
+	hidePinned : function(){
+		
+		$('body').removeClass("showPinned");
+		if ($('body').hasClass('nothome')){
+			$('.contentWrapper').css('margin-top',0+"px");
+		}
+		
+	},
+	
 	scrollToSection : function(section,t){
 		$("html, body").animate({
 				scrollTop: $("#"+section).offset().top - 40,
@@ -483,6 +503,8 @@ var mgbMainSys = {
 			
 			$("nav").removeClass("overlayActive sticky");
 			
+			$('body').removeClass('nothome').addClass('ishome');
+			
 			mgbHeader.hideLogo();
 			mgbHeader.deactivateNavActive();
 			
@@ -541,6 +563,8 @@ var mgbMainSys = {
 				setTimeout(function(){
 					window.scrollTo(0, 0);
 					
+					$('body').removeClass('ishome').addClass('nothome');
+					
 					$("#mainContent").addClass("inactive");
 
 					$("#overlayContent").html(response);
@@ -558,6 +582,8 @@ var mgbMainSys = {
 			}else{ //back to homepage
 				
 				// console.log('repsonse ' ,response);
+				// 
+				$('body').removeClass('nothome').addClass('ishome');
 				
 				$('#overlayCover').removeClass('active');
 				

@@ -520,20 +520,24 @@ $pinnedPadding:10px;
 	#Home{
 		top:$pinnedOffset + $pinnedPadding * 2;
 		nav{
-			//top:$pinnedOffset + $pinnedPadding * 2;
 			transition:top 500ms;
 		}
 	}
 	#mainContent,#overlayContent{
-		//top:80px;
 		.parallaxHeader{
-			//top:$pinnedOffset + 20px;
 			position:relative!important;
 		}
 		.pinned{
 			width:100%;
 			height:$pinnedOffset;
 			padding:$pinnedPadding;
+		}
+	}
+	
+	#overlayContent{
+		.contentWrapper{
+			//top:0px !important;
+			//transition:top 0s;
 		}
 	}
 	
@@ -554,7 +558,6 @@ $pinnedPadding:10px;
 		}
 	}
 }
-
 
 @media screen and (min-width: 768px) {
 	
