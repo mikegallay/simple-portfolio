@@ -1,10 +1,9 @@
 	<!-- MAIN CONTENT GOES HERE -->	
-	<section class="videoHeader parallaxHeader">
-		
+	<section class="videoHeader parallaxHeader">	
 		<div id="welcomeImage"></div>
 		
 		<div id="welcomeVideo">	
-			<video class="responsive-video" id="headerVideo" autoplay loop preload="auto"></video>
+			<div class="responsive-video" id="headerVideo"></div>
 		</div>
 			
 		<div class="video-overlay">
