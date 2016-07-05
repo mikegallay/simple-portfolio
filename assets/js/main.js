@@ -1891,7 +1891,10 @@ var mgbMainSys = {
 			that.gaTracking(virtualPath,$(this));
 		});
 		
-		
+		$('.showPinned').children('button').on('click', function(){
+			console.log("hide pinned clicked");
+			$(that).hidePinned();
+		});
 	},
 	
 	handleOfficeChange : function(val){
@@ -2048,8 +2051,22 @@ var mgbMainSys = {
 		
 		var currScroll = $(window).attr('scrollY');
 		
+		$('#removePinnedHeader').on('click', function(){
+			var hiddenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)mgbHeaderHidden\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+			
+			if(hiddenCookie !== "true"){
+				document.cookie = "mgbHeaderHidden=true;max-age=2592e3";
+				
+				mgbMainSys.hidePinned();
+			}
+		});
+		
 		if (currScroll == 0){
-			mgbMainSys.showPinned();
+			var hiddenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)mgbHeaderHidden\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+			
+			if(hiddenCookie == false) {
+				mgbMainSys.showPinned();
+			}
 		}
 		
 		// var scrollBottom = $(document).height() - $("body").height();
