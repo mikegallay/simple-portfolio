@@ -1450,8 +1450,6 @@ var mgbContent = {
 			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
 			
 			$(this).children("a").find("time").text(nd);*/
-			
-			
 
 			var ndHours = nd.getHours();
 			var ndMinutes = nd.getMinutes();

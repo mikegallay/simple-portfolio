@@ -1,0 +1,33 @@
+{{#each objects}}
+	<div class="newsTile">
+		<a data-content="{{contentPath}}" data-header="{{{header}}}"  data-title="{{{description}}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}}>
+			<picture>
+				{{#equal imgType 'jpg'}}
+					<!--[if IE 9]>
+						<video style="display: none;"><![endif]-->
+							<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+					<!--[if IE 9]>
+						</video>
+					<![endif]-->
+					<!--[if !lte IE 9]> -->
+						<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll">
+					<!-- <![endif]-->
+				{{/equal}}
+				{{#equal imgType 'gif'}}
+					<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll">
+				{{/equal}}
+			</picture>
+			
+			<div class="prjDescription">
+				<div class="prjDscrWrap">
+					{{#if header}}
+						<h3>{{{header}}}</h3>
+					{{/if}}
+					<p>{{{description}}}</p>
+				</div>
+				
+				<div class="cultureArrow"></div>
+			</div>
+		</a>
+	</div>
+{{/each}}

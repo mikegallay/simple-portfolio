@@ -1,0 +1,38 @@
+[
+	{	
+		"id": 0,
+		"imgSrc": "assets/img/our_work/IntelInside",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Intel",
+		"description": "Description goes here",
+		"altText": "Description goes here"
+	},
+	{	
+		"id": 1,
+		"imgSrc": "assets/img/our_work/JimParsons",
+		"imgType": "jpg",
+		"contentPath": "144913605,147738221",
+		"header": "Intel",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 2,
+		"imgSrc": "assets/img/our_work/CanadaDry",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Canada Dry",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	},
+	{
+		"id": 3,
+		"imgSrc": "assets/img/our_work/CanadaDry",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Canada Dry",
+		"description": "Description goes here",
+		"altText": "This is alt text"
+	}
+]
