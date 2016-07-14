@@ -5,8 +5,9 @@
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Intel",
-		"description": "Description goes here",
-		"altText": "Description goes here"
+		"description": "Description goes here.",
+		"altText": "Description goes here",
+		"linkTitle": "Link Title"
 	},
 	{	
 		"id": 1,
@@ -15,7 +16,8 @@
 		"contentPath": "144913605,147738221",
 		"header": "Intel",
 		"description": "Description goes here",
-		"altText": "This is alt text"
+		"altText": "This is alt text",
+		"linkTitle": "Link Title"
 	},
 	{
 		"id": 2,
@@ -24,7 +26,8 @@
 		"contentPath": "",
 		"header": "Canada Dry",
 		"description": "Description goes here",
-		"altText": "This is alt text"
+		"altText": "This is alt text",
+		"linkTitle": "Link Title"
 	},
 	{
 		"id": 3,
@@ -32,7 +35,8 @@
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Canada Dry",
-		"description": "Description goes here",
-		"altText": "This is alt text"
+		"description": "This is a longer description that goes here and breaks the line.",
+		"altText": "This is alt text",
+		"linkTitle": "Link Title"
 	}
 ]
