@@ -7,7 +7,8 @@
 		"header": "Intel",
 		"description": "Description goes here.",
 		"altText": "Description goes here",
-		"linkTitle": "Link Title"
+		"linkTitle": "Link Title",
+		"articleLink": ""
 	},
 	{	
 		"id": 1,
@@ -17,7 +18,8 @@
 		"header": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title"
+		"linkTitle": "Link Title",
+		"articleLink": ""
 	},
 	{
 		"id": 2,
@@ -27,7 +29,8 @@
 		"header": "Canada Dry",
 		"description": "Description goes here",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title"
+		"linkTitle": "Link Title",
+		"articleLink": ""
 	},
 	{
 		"id": 3,
@@ -37,6 +40,7 @@
 		"header": "Canada Dry",
 		"description": "This is a longer description that goes here and breaks the line.",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title"
+		"linkTitle": "Link Title",
+		"articleLink": ""
 	}
 ]

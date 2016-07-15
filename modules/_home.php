@@ -153,6 +153,9 @@
 						echo $newsData;
 					?>
 				</div>
+				<div class="moreButton active">
+					<a id="newsTileMore" href="#" data-tracking-label="Home|Click|News_LoadMore"><?php addIcon('more_button'); ?></a>
+				</div>
 			</div>
 		</section>
 		

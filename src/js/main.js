@@ -1089,6 +1089,7 @@ var mgbContent = {
         this.initPortfolioCnt();
         this.initCultureCnt();
         this.initClockCnt();
+		this.initNewsCnt();
     },
 	
 	deactivateActiveContent : function(){
@@ -1483,6 +1484,12 @@ var mgbContent = {
 			});
 		}, 60000);
     },
+	
+	initNewsCnt : function() {
+		var that = this;
+		
+		
+	},
 	
 	setCultureTileHeight: function(){
 		var that = this;
