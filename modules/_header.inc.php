@@ -42,8 +42,11 @@
 						<a id="nav-offices" href="offices" aria-label="" data-tracking-label="Nav|Click|Office">OFFICES</a>
 					</li>
 					<li>
-						<a href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
-					</li>	
+						<a id="nav-careers"  href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
+					</li>
+					<li>
+						<a id="nav-news" href="news" aria-label="" data-tracking-label="Nav|Click|News">NEWS</a>
+					</li>
 				</ul>
 				<!--
 				<div class="flag us"></div>

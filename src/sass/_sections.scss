@@ -227,6 +227,15 @@ h1 {
 	float:left;
 	height:auto;
 	display: inline-block;
+
+	&.notLoaded {
+		display:none;
+	}
+	
+	&.notShowing {
+		margin:0;
+		height:0!important;
+	}
 	
 	a {
 		display: inline-block;

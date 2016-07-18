@@ -42,5 +42,50 @@
 		"altText": "This is alt text",
 		"linkTitle": "Link Title",
 		"articleLink": ""
+	},
+
+	{	
+		"id": 5,
+		"imgSrc": "assets/img/our_work/IntelInside",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Intel",
+		"description": "Description goes here.",
+		"altText": "Description goes here",
+		"linkTitle": "Link Title",
+		"articleLink": ""
+	},
+	{	
+		"id": 6,
+		"imgSrc": "assets/img/our_work/JimParsons",
+		"imgType": "jpg",
+		"contentPath": "144913605,147738221",
+		"header": "Intel",
+		"description": "Description goes here",
+		"altText": "This is alt text",
+		"linkTitle": "Link Title",
+		"articleLink": ""
+	},
+	{
+		"id": 7,
+		"imgSrc": "assets/img/our_work/CanadaDry",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Canada Dry",
+		"description": "Description goes here",
+		"altText": "This is alt text",
+		"linkTitle": "Link Title",
+		"articleLink": ""
+	},
+	{
+		"id": 8,
+		"imgSrc": "assets/img/our_work/CanadaDry",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Canada Dry",
+		"description": "This is a longer description that goes here and breaks the line.",
+		"altText": "This is alt text",
+		"linkTitle": "Link Title",
+		"articleLink": ""
 	}
 ]

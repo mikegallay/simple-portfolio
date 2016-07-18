@@ -1693,10 +1693,13 @@ var mgbMainSys = {
 	//load targets for tiles
   	pLoadTarget: 6,
 	cLoadTarget:5,
+	nLoadTargets: 4,
 	pLoaded:6,
 	cLoaded:5,
+	nLoadTargets: 4,
 	cMoreTarget:5,
 	pMoreTarget:6,
+	nMoreTargets: 4,
 	
 	waypointsInitialized: false,
 	glitchesInitialized: false,
@@ -1730,7 +1733,7 @@ var mgbMainSys = {
 			mgbHeader.deactivateNavActive();
 			$("#nav-" + elemId).addClass('active');
 		}, {
-			offset: '25%'
+			offset: '10%'
 		})
 		
 	},
@@ -1745,6 +1748,8 @@ var mgbMainSys = {
 		this.createWaypoint('work');
 		this.createWaypoint('culture');
 		this.createWaypoint('offices');
+		this.createWaypoint('careers');
+		this.createWaypoint('news');
 		
 		//create waypoint to note when clients section enters, to deactivate the other navs
 		var clientWaypoint = $('#clients').waypoint(function(direction) {
@@ -1884,7 +1889,7 @@ var mgbMainSys = {
 		$(document).on('click', '[data-tracking-label]', function(e) {
 			
 			if($(this).attr('target') != "_blank" ) { 
-				console.log("asdfasdfasdf")
+				//console.log("asdfasdfasdf")
 				e.preventDefault();
 			}
 			var virtualPath = $(this).attr('data-tracking-label');
@@ -1892,7 +1897,7 @@ var mgbMainSys = {
 		});
 		
 		$('.showPinned').children('button').on('click', function(){
-			console.log("hide pinned clicked");
+			//console.log("hide pinned clicked");
 			$(that).hidePinned();
 		});
 	},
@@ -1947,9 +1952,7 @@ var mgbMainSys = {
 			if ($self.hasClass('cultureLink')){
 				$self.toggleClass('active');
 				if (!$self.hasClass('active')) pieces[2] += "_close";
-			}
-		
-			
+			}	
 		}		
 		
 	    if (pieces.length == 3) {
@@ -1992,6 +1995,8 @@ var mgbMainSys = {
 			//console.log("tile load >1024");
 			this.cLoadTarget = 7;
 			this.pLoadTarget = 6;
+			this.nLoadTarget = 4;
+			
 			if (this.cLoaded < this.cLoadTarget){
 				mgbContent.loadMoreContent('cultureTile',this.cLoadTarget - this.cLoaded);
 				this.cLoaded = this.cLoadTarget;
@@ -2002,8 +2007,14 @@ var mgbMainSys = {
 				this.pLoaded = this.pLoadTarget;
 			}
 			
+			if (this.nLoaded < this.nLoadTarget){
+				mgbContent.loadMoreContent('newsTile', this.nLoadTarget - this.nLoaded);
+				this.nLoaded = this.nLoadTarget;
+			}
+			
 			this.cMoreTarget = 7;
 			this.pMoreTarget = 8;
+			this.nMoreTarget = 8;
 			
 		}
 		
@@ -2011,6 +2022,7 @@ var mgbMainSys = {
 			//console.log("tile load >1900");
 			this.cLoadTarget = 10;
 			this.pLoadTarget = 9;
+			this.nLoadTarget = 8;
 			
 			/*
 			// make sure the target is a multiple of 5 just in case the user 
@@ -2030,8 +2042,14 @@ var mgbMainSys = {
 				this.pLoaded = this.pLoadTarget;
 			}
 			
+			if (this.nLoaded < this.nLoadTarget){
+				mgbContent.loadMoreContent('newsTile', this.nLoadTarget - this.nLoaded);
+				this.nLoaded = this.nLoadTarget;
+			}
+			
 			this.cMoreTarget = 5;
 			this.pMoreTarget = 6;
+			this.nMoreTarget = 4;
 			
 		}
 	},
@@ -2415,7 +2433,7 @@ var mgbHeader = {
 		});
 	
 		$('nav .menu a').on('click', function(e){
-			e.preventDefault();
+			//e.preventDefault();
 			$('nav #menuToggleHolder').removeClass("active");
 			
 			that.hideMobileNav();
@@ -2766,11 +2784,13 @@ var mgbContent = {
     cultureContent: null,
     officeClocks: null,
 	cultureTimeout: null,
+	newsContent: null,
     
     init: function() {
         this.portfolioContent = $('.projectTile');
         this.cultureContent = $('.cultureTile');
         this.officeClocks = $('.officeTile');
+		this.newsContent = $('.newsTile');
         
         this.initPortfolioCnt();
         this.initCultureCnt();
@@ -3174,7 +3194,12 @@ var mgbContent = {
 	initNewsCnt : function() {
 		var that = this;
 		
-		
+		$('#newsTileMore').on('click',function(e){
+			e.preventDefault();
+			
+			that.loadMoreContent('newsTile',mgbMainSys.pMoreTarget);
+			mgbMainSys.pLoaded += mgbMainSys.pMoreTarget;
+		});
 	},
 	
 	setCultureTileHeight: function(){
@@ -3281,6 +3306,7 @@ var mgbOverlay = {
 			
 		},600);
 	},
+	
 	addVideoEvents : function(){
 		// var that = this;
 		var iframe = $('#vimeoPlayer')[0];
