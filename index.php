@@ -20,7 +20,7 @@
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
-	$homeSections = array("work", "culture", "offices");
+	$homeSections = array("work", "culture", "offices", "news"); // sections of home page that are linked in the navigation (NOT individual pages)
 	
 	$ishome = false;
 	
