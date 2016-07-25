@@ -2754,7 +2754,7 @@ var mgbHeroVideo = {
 	
 		//$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
 		
-		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/119997282?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1&player_id=vimeoPlayer width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="119997282" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/159242901?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1&loop=1&player_id=vimeoPlayer width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="119997282" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 		
 		setTimeout(function(){
 			$("#headerVideo #vimeoPlayer").css({"width": "100%", "height":"100%" });
