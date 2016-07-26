@@ -134,6 +134,7 @@ var mgbMainSys = {
 			//video section
 			that.selectRandomItemToGlitch('#welcomeImage|.responsive-video|.headerHeroText|.moreMsg');
 			
+			/*
 			//culture section
 			var targets = '#culture .sectionHeading|#culture .moreButton|';
 			for (var i=0;i<that.cLoaded;i++){
@@ -169,6 +170,8 @@ var mgbMainSys = {
 				setTimeout(function(){that.selectRandomItemToGlitch(tars,500);},0);
 				setTimeout(function(){that.selectRandomItemToGlitch(tars,250);},200);
 			}(targets));
+			
+			*/
 			
 			//clients/jobs section
 			/*
@@ -309,7 +312,7 @@ var mgbMainSys = {
 			//console.log("tile load >1024");
 			this.cLoadTarget = 7;
 			this.pLoadTarget = 6;
-			this.nLoadTarget = 4;
+			this.nLoadTarget = 6;
 			
 			if (this.cLoaded < this.cLoadTarget){
 				mgbContent.loadMoreContent('cultureTile',this.cLoadTarget - this.cLoaded);
@@ -328,7 +331,7 @@ var mgbMainSys = {
 			
 			this.cMoreTarget = 7;
 			this.pMoreTarget = 8;
-			this.nMoreTarget = 8;
+			this.nMoreTarget = 6;
 			
 		}
 		
@@ -336,7 +339,7 @@ var mgbMainSys = {
 			//console.log("tile load >1900");
 			this.cLoadTarget = 10;
 			this.pLoadTarget = 9;
-			this.nLoadTarget = 8;
+			this.nLoadTarget = 6;
 			
 			/*
 			// make sure the target is a multiple of 5 just in case the user 
@@ -363,7 +366,7 @@ var mgbMainSys = {
 			
 			this.cMoreTarget = 5;
 			this.pMoreTarget = 6;
-			this.nMoreTarget = 4;
+			this.nMoreTarget = 6;
 			
 		}
 	},
@@ -1058,8 +1061,13 @@ var mgbHeroVideo = {
 		if(this.giveFocus === true) {
 			// mgbHeader.messageContainer.focus();
 		}
-		mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal',250);
-		if (this.glitchesInitialized == false) mgbMainSys.initializeGlitches(2000);
+		
+		//mgbMainSys.addGlitch('.fullBleed, #mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal',250);
+		mgbMainSys.addGlitch('#mbLogo, .menu, .responsive-video,.video-overlay,.socialIcons,.legal',250);
+		
+		if (this.glitchesInitialized == false) {
+			mgbMainSys.initializeGlitches(2000);
+		}
 	},
 	
 	loadHeaderVideo: function() {
