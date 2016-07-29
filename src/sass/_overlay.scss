@@ -39,7 +39,8 @@
 		opacity:0;
 		top:0;
 		position:relative;
-		
+	    margin: 0 0.5em;
+			
 	}
 	#heroImage{
 		max-height:500px;
@@ -286,6 +287,11 @@
 }
 
 @media screen and (min-width: 768px) {
+	#overlayContent{
+		.contentWrapper{
+			margin:0 1em;
+		}
+	}
 	.workContainer{
 		.workDetails{
 			.workThumbs{
@@ -304,7 +310,11 @@
 }
 
 @media screen and (min-width: 1024px) {
-	
+	#overlayContent{
+		.contentWrapper{
+			margin:0;
+		}
+	}
 	#terms{
 		max-width:80%;
 	}

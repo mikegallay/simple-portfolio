@@ -52,9 +52,13 @@
 						</h5>
 					{{/equal}}
 					{{#equal infoType 'quote'}}
-					<p>
-						<strong>{{ name }}</strong>
-					</p>
+						<p class="quote">
+							<span>{{ info }}</span>
+						</p>
+						<p class="byline">
+							<span class="name">{{ name }}</span><br/>
+							<span class="title">{{ title }}</span><br/>
+						</p>
 					{{/equal}}
 				</div>
 			</div>

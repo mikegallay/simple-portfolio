@@ -400,7 +400,7 @@ var mgbMainSys = {
 			var hiddenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)mgbHeaderHidden\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 			
 			if(hiddenCookie == false) {
-				mgbMainSys.showPinned();
+				//mgbMainSys.showPinned();
 			}
 		}
 		
