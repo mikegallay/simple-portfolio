@@ -41,19 +41,19 @@
 			<div class="bio">
 				<div class="inner">
 					{{#equal infoType 'card'}}
+						<h2>
+							{{ info }}
+						</h2>
 						<h4>
-							{{ name }}
+						 {{ name }}
 						</h4>
 						<h5>
 							{{ title }}, {{ office }}
 						</h5>
-						<p>
-							{{ info }}
-						</p>
 					{{/equal}}
 					{{#equal infoType 'quote'}}
 					<p>
-						{{ info }}
+						<strong>{{ name }}</strong>
 					</p>
 					{{/equal}}
 				</div>
