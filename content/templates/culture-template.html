@@ -53,11 +53,13 @@
 					{{/equal}}
 					{{#equal infoType 'quote'}}
 						<p class="quote">
-							<span>{{ info }}</span>
+							<span class="start-quote">"</span>
+							<span class="quote-info">{{ info }}</span>
+							<span class="end-quote">"</span>
 						</p>
 						<p class="byline">
 							<span class="name">{{ name }}</span><br/>
-							<span class="title">{{ title }}</span><br/>
+							<span class="title">{{ title }}</span>
 						</p>
 					{{/equal}}
 				</div>

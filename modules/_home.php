@@ -124,6 +124,21 @@
 				</div>
 			</div>
 		</section>
+		<section id="news" class="homeSection fullBleed">
+			<div class="container">
+				<h1 class="sectionHeadingSmall latestNews">LATEST NEWS</h1>
+				
+				<div class="newsContent">
+					<?php
+						$newsData = HTMLfromTemplateAndJSON("content/templates/news-template.html", "news-data");
+						echo $newsData;
+					?>
+				</div>
+				<div class="moreButton active">
+					<a id="newsTileMore" href="#" data-tracking-label="Home|Click|News_LoadMore"><?php addIcon('more_button'); ?></a>
+				</div>
+			</div>
+		</section>
 		<section id="clients" class="fullBleed">
 			<div class="container">
 				<h1 class="sectionHeading">OUR <span class="blueFont">CLIENTS</span></h1>
@@ -143,20 +158,6 @@
 				<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS</a>
 			</div>	
 		</section>
-		<section id="news" class="homeSection fullBleed">
-			<div class="container">
-				<h1 class="sectionHeadingSmall latestNews">LATEST NEWS</h1>
-				
-				<div class="newsContent">
-					<?php
-						$newsData = HTMLfromTemplateAndJSON("content/templates/news-template.html", "news-data");
-						echo $newsData;
-					?>
-				</div>
-				<div class="moreButton active">
-					<a id="newsTileMore" href="#" data-tracking-label="Home|Click|News_LoadMore"><?php addIcon('more_button'); ?></a>
-				</div>
-			</div>
-		</section>
+		
 		
 	</div>

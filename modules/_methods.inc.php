@@ -7,10 +7,45 @@ use Handlebars\Handlebars;
 $siteData = 'content/data/merged.json';
 $tempData = "";
 $fullData = "";
+$portfolio_arr = array();
+
+//portfolio array control content
+
+function pushToPortFolioArray($data){
+	global $portfolio_arr;
+	
+	$tempData = $data;
+	
+	for($i=0; $i < count($tempData); $i++) {
+		echo count($portfolio_arr);
+		array_push($portfolio_arr, $tempData[$i]['header']);
+		// $portfolio_arr[] = $tempData[$i]['header'];
+	}
+}
+
+function getPrevPortfolio($currPort){
+	global $portfolio_arr;
+	$prevPort = $currPort--;
+	if ($prevPort == 0) $prevPort = count($portfolio_arr) - 1;
+	echo $portfolio_arr[$prevPort];
+	
+}
+
+function getNextPortfolio($currPort){
+	global $portfolio_arr;
+	$nextPort = $currPort++;
+	if ($nextPort > count($portfolio_arr) - 1) $nextPort = 0;
+	echo $portfolio_arr[$nextPort];
+}
+
+//end portfolio control content
 
 function preloadData(&$tempData, &$fullData, &$siteData){
 	$tempData = file_get_contents($siteData);
 	$fullData = json_decode($tempData, true); 
+	
+	$tempDataArray = $fullData["portfolio-data"];
+	pushToPortFolioArray($tempDataArray);
 }
 
 preloadData($tempData, $fullData, $siteData);
@@ -103,8 +138,13 @@ function shuffleCulture($data){
 	
 }
 
+
+
+
+
 function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle = false) {
 	global $fullData;
+	
 	$templateStr = file_get_contents($tempname);
 	
 	$tempDataArray = $fullData[$jsonfile];

@@ -20,7 +20,7 @@
 
 <div class="contentWrapper" style="background:#37383a;">
 	<section class="workContainer">
-	<!-- <div class="returnHome">< Back </div> -->
+	<div class="subnav"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><a href="<?php getPrevPortfolio(0) ?>" id="subnav-prev"><?php getPrevPortfolio(0) ?></a> | <a href="<?php getNextPortfolio(0) ?>" id="subnav-prev"><?php getNextPortfolio(0) ?></a><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></div>
 	<div class="workHeadline">
 		<h1>Innovation Adventure, TV & Video</h1>
 		<p>Client: Intel</p>
