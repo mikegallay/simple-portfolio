@@ -4,67 +4,85 @@
 		"imgSrc": "assets/img/our_work/IntelInside",
 		"imgType": "jpg",
 		"contentPath": "",
-		"header": "Intel",
-		"description": "Description goes here.",
+		"header": "mcgarrybowen wins Burt's Bees &amp; Clorox Specialty Brands",
+		"description": "",
 		"altText": "Description goes here",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"publishedBy": "Ad Age",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	},
 	{	
 		"id": 1,
 		"imgSrc": "assets/img/our_work/JimParsons",
 		"imgType": "jpg",
 		"contentPath": "144913605,147738221",
-		"header": "Intel",
-		"description": "Description goes here",
+		"header": "mcgarrybowen turns body shaming upside down in new JCPenney work",
+		"description": "",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"publishedBy": "Cosmopolitan",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	},
 	{
 		"id": 2,
 		"imgSrc": "assets/img/our_work/CanadaDry",
 		"imgType": "jpg",
 		"contentPath": "",
-		"header": "Canada Dry",
-		"description": "Description goes here",
+		"header": "mbLondon names BBH's Jason Gonsalves as UK CEO",
+		"description": "",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"publishedBy": "Campaign Live",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	},
 	{
 		"id": 3,
 		"imgSrc": "assets/img/our_work/CanadaDry",
 		"imgType": "jpg",
 		"contentPath": "",
-		"header": "Canada Dry",
-		"description": "This is a longer description that goes here and breaks the line.",
+		"header": "mcgarrybowen launches in Mexico with creative powerhouse Arrechedera Claverol",
+		"description": "",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"publishedBy": "Ad Age",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	},
 
 	{	
-		"id": 5,
+		"id": 4,
 		"imgSrc": "assets/img/our_work/IntelInside",
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Intel",
-		"description": "Description goes here.",
-		"altText": "Description goes here",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"description": "",
+		"altText": "",
+		"publishedBy": "Link Title",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	},
 	{	
-		"id": 6,
+		"id": 5,
 		"imgSrc": "assets/img/our_work/JimParsons",
 		"imgType": "jpg",
 		"contentPath": "144913605,147738221",
 		"header": "Intel",
-		"description": "Description goes here",
+		"description": "",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"publishedBy": "Link Title",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
+	},
+	{
+		"id": 6,
+		"imgSrc": "assets/img/our_work/CanadaDry",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "Canada Dry",
+		"description": "",
+		"altText": "This is alt text",
+		"publishedBy": "Link Title",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	},
 	{
 		"id": 7,
@@ -72,20 +90,10 @@
 		"imgType": "jpg",
 		"contentPath": "",
 		"header": "Canada Dry",
-		"description": "Description goes here",
+		"description": "",
 		"altText": "This is alt text",
-		"linkTitle": "Link Title",
-		"articleLink": ""
-	},
-	{
-		"id": 8,
-		"imgSrc": "assets/img/our_work/CanadaDry",
-		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Canada Dry",
-		"description": "This is a longer description that goes here and breaks the line.",
-		"altText": "This is alt text",
-		"linkTitle": "Link Title",
-		"articleLink": ""
+		"publishedBy": "Link Title",
+		"articleLink": "",
+		"trackingLabel": "Home|Click|Article_News"
 	}
 ]

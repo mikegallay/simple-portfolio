@@ -2400,7 +2400,7 @@ var mgbHeader = {
 	
 	addListeners : function(){
 		var that = this;
-		$('#homeLogo').on('click',function(e){
+		$('#homeLogom, .subnav .home').on('click',function(e){
 			e.preventDefault();		
 			var nav = $('nav');
 		

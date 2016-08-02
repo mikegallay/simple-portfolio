@@ -6,8 +6,8 @@
 				<div class="articleLink">
 					<div class="articleLinkWrap">
 						<p><small>READ ON</small></p>
-						{{#if linkTitle}}
-							<h2>{{{linkTitle}}}</h2>
+						{{#if publishedBy}}
+							<h2>{{{publishedBy}}}</h2>
 						{{/if}}
 					</div>
 				
@@ -19,7 +19,9 @@
 						{{#if header}}
 							<h3>{{{header}}}</h3>
 						{{/if}}
-						<p>{{{description}}}</p>
+						{{#if description}}
+							<p>{{{description}}}</p>
+						{{/if}}
 					</div>
 				</div>
 				

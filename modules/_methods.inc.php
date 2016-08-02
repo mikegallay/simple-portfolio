@@ -17,7 +17,7 @@ function pushToPortFolioArray($data){
 	$tempData = $data;
 	
 	for($i=0; $i < count($tempData); $i++) {
-		echo count($portfolio_arr);
+		//echo count($portfolio_arr);
 		array_push($portfolio_arr, $tempData[$i]['header']);
 		// $portfolio_arr[] = $tempData[$i]['header'];
 	}

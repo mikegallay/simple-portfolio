@@ -68,6 +68,11 @@
 	height: 17.3px;
 }
 
+.svg-icon_home-dims {
+	width: 96px;
+	height: 96px;
+}
+
 .svg-icon_location-dims {
 	width: 100px;
 	height: 100px;
@@ -119,8 +124,8 @@
 }
 
 .svg-marquee_down_arrow-dims {
-	width: 19px;
-	height: 10px;
+	width: 200px;
+	height: 200px;
 }
 
 .svg-mb_timeline_path-dims {
