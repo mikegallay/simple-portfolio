@@ -6,7 +6,7 @@
 	left:0;
 	background:$overlayColor;
 	transform:translate3d(0,0,0);
-	transition:height 300ms 300ms;
+	transition:height 500ms 300ms;
 	z-index:98;
 	
 	&.active{

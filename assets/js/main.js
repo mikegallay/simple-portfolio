@@ -2400,27 +2400,10 @@ var mgbHeader = {
 	
 	addListeners : function(){
 		var that = this;
-		$('#homeLogom, .subnav .home').on('click',function(e){
+		$('#homeLogom').on('click',function(e){
 			e.preventDefault();		
-			var nav = $('nav');
-		
-			// The menu navigation doubles as the container that displays videos
-			// clicking on the nav should close the video player container and return
-			// the nav menu to its original height. 
-		
-			//if(nav.hasClass("overlayActive")){
-				//$(".navigation").fadeIn();
 			mgbHeader.deactivateNavActive();
 			mgbMainSys.getPage(appRoot, true);
-					
-					/*$('#mbLogo').on('mouseover',function(){
-						mgbHeader.showLogo();
-					});
-
-					$('#mbLogo').on('mouseout',function(){
-						if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
-					});*/
-			//}
 			
 			mgbContent.deactivateActiveContent();
 		});
@@ -2762,7 +2745,7 @@ var mgbHeroVideo = {
 	
 		//$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
 		
-		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/176376361?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1&player_id=vimeoPlayer width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="176376361" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/176376361?title=0&loop=1&byline=0&portrait=0&badge=0&api=1&autoplay=1&player_id=vimeoPlayer width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="176376361" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 		
 		setTimeout(function(){
 			$("#headerVideo #vimeoPlayer").css({"width": "100%", "height":"100%" });
@@ -3268,9 +3251,16 @@ var mgbOverlay = {
 	},
 	addListeners : function(){
 		var that = this;
-		/*$('.returnHome').on('click',function(){
-			mgbMainSys.getPage(appRoot,true);
-		});*/
+		
+		$('.subnav .home').on('click',function(e){
+			e.preventDefault();		
+			
+			mgbHeader.deactivateNavActive();
+			mgbMainSys.getPage(appRoot, true);
+		
+			mgbContent.deactivateActiveContent();
+		});
+		
 		$('.workThumb a').on('click', function(e){
 			e.preventDefault();
 			if ($(this).hasClass('active')) return;
