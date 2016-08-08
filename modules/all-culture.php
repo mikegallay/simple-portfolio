@@ -1,6 +1,15 @@
-<section class="content">
-	<div class="overlayHeadline">
-		ALL CULTURE
+<!-- <div class="subpageHeader parallaxHeader">
+	<div id="heroImage">
+		<?php
+		//pictureFillImage($appRoot.'assets/img/work_pages/intel','alt copy goes here')
+
+		?>
+	</div>
+</div> -->
+
+<div class="contentWrapper" style="background:#37383a;">
+	<div class="cultureHeadline">
+		<h1>ALL CULTURE</h1>
 	</div>	
 		
 	<div class="cultureContent">				
@@ -9,4 +18,4 @@
 			echo $cultureData; 
 		?>
 	</div>
-</section>
+</div>

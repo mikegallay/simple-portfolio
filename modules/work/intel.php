@@ -1,4 +1,3 @@
-<?php //include("modules/_pinnedToTop.php"); ?>
 <div class="subpageHeader parallaxHeader">
 	<div id="heroImage">
 		<?php

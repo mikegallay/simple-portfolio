@@ -2397,8 +2397,10 @@ var mgbHeader = {
 	
 	addListeners : function(){
 		var that = this;
-		$('#homeLogom').on('click',function(e){
+		$('#homeLogo').on('click',function(e){
 			e.preventDefault();		
+			
+			console.log('ar',appRoot);
 			mgbHeader.deactivateNavActive();
 			mgbMainSys.getPage(appRoot, true);
 			
