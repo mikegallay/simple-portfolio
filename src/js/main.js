@@ -2,6 +2,7 @@
 var mgbMainSys = {
 	currPage: null,
 	mainContentLoaded: false,
+	allCultureLoaded: false,
 	mobileNavMaxWidth: 768 - 16,//1024,
 	
 	//load targets for tiles
@@ -520,7 +521,6 @@ var mgbMainSys = {
 		
 		$('#Home').removeClass('removed');
 		
-		
 		var useOverlay = true;
 		
 		if (page == appRoot || isHomeSection){
@@ -535,11 +535,9 @@ var mgbMainSys = {
 			page += '.php';
 		}
 		
-		
-		
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
-		// console.log('req',reqUrl);
+		console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
@@ -602,7 +600,6 @@ var mgbMainSys = {
 				} 
 				
 				setTimeout(function(){	
-					
 					
 					$('#overlayCover').addClass('active'); //css takes 500ms
 					
@@ -1529,7 +1526,7 @@ var mgbContent = {
 	
 	resize: function() {
 		var that = this;
-		
+
 		this.setCultureTileHeight();
 		
 		$('.arrow').addClass('offTile');
@@ -1803,6 +1800,7 @@ var lastWindowHeight = $(window).height();
 var lastWindowWidth = $(window).width();
 	
 function resizeChecker() {
+	console.log('resizeChecker')
     //confirm window was actually resized
     if ($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
 
@@ -1816,11 +1814,14 @@ function resizeChecker() {
 }
 
 function resize(){
+	
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
 	
+	console.log('resize');
 	
-	if (mgbMainSys.mainContentLoaded == true) {
+	if (mgbMainSys.mainContentLoaded == true || mgbMainSys.allCultureLoaded == true) {
+		
 		mgbMainSys.resize();
 		mgbContent.resize();
 	}

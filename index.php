@@ -82,6 +82,18 @@
 	
 	<?php include_once("modules/_foot.inc.php");?>
 	
+	<?php if ($base_url == "all-culture") {?>
+		<script type="text/javascript">
+			// $( document ).ready(function() {
+			   mgbContent.initCultureCnt();
+			   mgbContent.cultureContent = $('.cultureTile');
+			   mgbMainSys.allCultureLoaded = true;
+			// });
+	
+		</script>
+	<?php } ?>
+	
+	
 </body>
 
 </html>

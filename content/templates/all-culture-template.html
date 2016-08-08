@@ -1,0 +1,84 @@
+{{#each objects}}
+	<div class="cultureTile {{dir}} {{#if isDouble}}col-2-by-1{{/if}}" {{#if office}}data-office-filter="{{{office}}}"{{/if}}>
+		{{#if info}}
+		<a href="#" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} class="cultureLink">
+		{{/if}}
+			<div class="picHolder">
+				
+					<picture>
+						{{#equal imgType 'jpg'}}
+							<!--[if IE 9]>
+								<video style="display: none;"><![endif]-->
+									<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+							<!--[if IE 9]>
+								</video>
+							<![endif]-->
+							<!--[if !lte IE 9]> -->
+								<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll">
+							<!-- <![endif]-->
+						{{/equal}}
+						{{#equal imgType 'gif'}}
+							<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll">
+						{{/equal}}
+					</picture>
+			
+					{{#if info}}
+					<div class="arrow">
+						<div class="moreArrow">
+							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+							</svg>
+						</div>	
+					</div>
+					{{/if}}
+				
+			</div>
+
+		{{#if info}}
+		</a>
+		{{/if}}
+		{{#if info}}
+			<div class="bio">
+				<div class="inner">
+					{{#equal infoType 'card'}}
+						<h2>
+							{{ info }}
+						</h2>
+						<h4>
+						 {{ name }}
+						</h4>
+						<h5>
+							{{ title }}, {{ office }}
+						</h5>
+					{{/equal}}
+					{{#equal infoType 'quote'}}
+						<p class="quote">
+							<span class="start-quote">"</span>
+							<span class="quote-info">{{ info }}</span>
+							<span class="end-quote">"</span>
+						</p>
+						<p class="byline">
+							<span class="name">{{ name }}</span><br/>
+							<span class="title">{{ title }}</span>
+						</p>
+					{{/equal}}
+				</div>
+			</div>
+			{{#if linkedin}}
+				<a class="linkedin" target="_blank" href="https://www.linkedin.com/in/{{{ linkedin }}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_linkedin"{{/if}}>
+					<svg class="icon linkedin-inline" role="img" aria-labelledby="title">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use>
+					</svg>
+				</a>
+			{{/if}}
+			<div class="closeCulture">
+				<a href="#" aria-label="Close {{{name}}} culture section" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_close"{{/if}}>
+					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
+					</svg>
+				</a>
+			</div>
+			
+		{{/if}}
+	</div>
+{{/each}}
