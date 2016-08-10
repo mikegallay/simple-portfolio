@@ -2223,7 +2223,7 @@ var mgbMainSys = {
 		
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
-		console.log('req',reqUrl);
+		// console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
@@ -2307,6 +2307,12 @@ var mgbMainSys = {
 			
 					mgbHeader.hideLogo();
 					
+					//if is all-culture overlay, initialize that content.
+					
+					if (reqUrl.indexOf('all-culture') != -1){
+						mgbOverlay.addAllCultureListeners();
+						resize();
+					}
 					
 				},1000);
 				
@@ -3200,6 +3206,12 @@ var mgbContent = {
 		this.cultureTimeout = setTimeout(function(){
 			// var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
 			var colW = $('.cultureTile.static').first().find('.picHolder').innerWidth();
+			
+			// if the all culture overlay is active, use these tiles to resize their content
+			if ($('#allCultureWrapper .cultureTile.static')[0]){
+				colW = $('#allCultureWrapper .cultureTile.static').first().find('.picHolder').innerWidth();
+			}
+			
 			$('.cultureTile').removeAttr('style').css('height', colW + 'px');
 			
 			//checker for page load to make sure the content is ready.
@@ -3274,6 +3286,13 @@ var mgbOverlay = {
 			that.removeVideo();
 		});
 	},
+	
+	addAllCultureListeners : function(){
+	   mgbContent.initCultureCnt();
+	   mgbContent.cultureContent = $('.cultureTile');
+	   mgbMainSys.allCultureLoaded = true;
+	},	
+	
 	loadVideo : function(id){
 		var that = this;
 		$('.videoHolder').empty();
@@ -3488,7 +3507,7 @@ var lastWindowHeight = $(window).height();
 var lastWindowWidth = $(window).width();
 	
 function resizeChecker() {
-	console.log('resizeChecker')
+	// console.log('resizeChecker')
     //confirm window was actually resized
     if ($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
 
@@ -3506,7 +3525,7 @@ function resize(){
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
 	
-	console.log('resize');
+	// console.log('resize');
 	
 	if (mgbMainSys.mainContentLoaded == true || mgbMainSys.allCultureLoaded == true) {
 		
