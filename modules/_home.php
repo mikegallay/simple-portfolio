@@ -79,7 +79,7 @@
 			</div>
 		</section>
 		<section id="culture" class="homeSection fullBleed">
-			<a href="all-culture" style="color:red;">Culture ALL!!!</a>
+			<a href="all-culture" data-tracking-label="Home|Click|AllCulture" style="color:red;">Culture ALL!!!</a>
 			<div class="container">
 				<h1 class="sectionHeading">OUR <span data-forward class="blueFont">CULTURE</span></h1>
 	

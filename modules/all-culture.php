@@ -7,7 +7,7 @@
 	</div>
 </div> -->
 
-<div class="contentWrapper" style="background:#37383a;">
+<div class="contentWrapper" id="allCultureWrapper" style="background:#37383a;">
 	<div class="cultureHeadline">
 		<h1>ALL CULTURE</h1>
 	</div>	
