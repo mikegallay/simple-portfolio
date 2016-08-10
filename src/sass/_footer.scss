@@ -8,6 +8,10 @@ footer {
 	overflow:hidden;
 	min-height: 6em;
 	
+	&.tempHide{
+		opacity:0;
+	}
+	
 	svg{
 		fill:#46ccc5;
 	}

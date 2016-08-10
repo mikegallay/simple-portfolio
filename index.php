@@ -88,6 +88,7 @@
 			   mgbContent.initCultureCnt();
 			   mgbContent.cultureContent = $('.cultureTile');
 			   mgbMainSys.allCultureLoaded = true;
+			   setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
 			// });
 	
 		</script>

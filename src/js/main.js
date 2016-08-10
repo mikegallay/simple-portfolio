@@ -476,18 +476,24 @@ var mgbMainSys = {
 				// $('.navigation li:last-child a').addClass('active');
 			} 
 		});	*/
+		var el = '.ll';
+		if (mgbMainSys.allCultureLoaded) {el = '.ll-all';}
+		mgbMainSys.checkInView(el);
+	},
+	
+	checkInView : function(el){
 		
-	   // lazyload images into view when they are in the viewport
- 	   $('.ll').each(function () {
- 	      if (mgbMainSys.isScrolledIntoView(this) === true) {
- 	          $(this).addClass('in-view');
- 			  var _parent = $(this).parent().next();
-			 
+		// lazyload images into view when they are in the viewport
+		$(el).each(function () {
+		  if (mgbMainSys.isScrolledIntoView(this) === true) {
+		      $(this).addClass('in-view');
+			  var _parent = $(this).parent().next();
+	 
 			  if (_parent.hasClass('officeInfo') || _parent.hasClass('arrow')) {
 				  _parent.addClass('showDetails');
 			  }
- 	      }
- 	   });
+		  }
+		});
 	},
 	
     pushHistoryState: function (page, bool) {
@@ -593,6 +599,9 @@ var mgbMainSys = {
 		
         request.done(function (response) {
 			
+			mgbMainSys.allCultureLoaded = false;
+			$('footer').addClass('tempHide');
+			
 			if (useOverlay){ //request page requires overlay
 				
 				if ($('#overlayContent').hasClass('active')){
@@ -621,7 +630,23 @@ var mgbMainSys = {
 			
 					mgbHeader.hideLogo();
 					
+<<<<<<< HEAD
 					
+=======
+					//if is all-culture overlay, initialize that content.
+					if (reqUrl.indexOf('all-culture') != -1){
+						
+						 setTimeout(function(){
+							 mgbOverlay.addAllCultureListeners();
+							 mgbMainSys.checkInView('.ll-all');
+							 resize();
+							 $('footer').removeClass('tempHide');
+						}, 2000);
+						
+					}else{
+						$('footer').removeClass('tempHide');
+					}
+>>>>>>> d238338ce6d062adf8300d2f23fe1792e60cc63b
 				},1000);
 				
 			}else{ //back to homepage
@@ -666,6 +691,8 @@ var mgbMainSys = {
 				setTimeout(function(){
 					
 					if (isHomeSection) mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
+					
+					$('footer').removeClass('tempHide');
 					
 				},1200);
 				
