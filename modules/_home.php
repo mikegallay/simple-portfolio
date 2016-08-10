@@ -85,22 +85,9 @@
 	
 				<!--<div class="alignRight">
 					<a id="officeToggle" class="button" alt="">OUR OFFICE<?php //addIcon('menu_dropdown_arrow'); ?></a>
-				</div>
+				</div> --> 
 
-				 <div>
-					<input class="cityFilter" id="select-all" name="radio-select" type="radio"><label for="select-ams">All</label></li>
-					<input class="cityFilter" id="select-ams" name="radio-select" type="radio"><label for="select-ams">Amsterdam</label></li>
-					<input class="cityFilter" id="select-chi" name="radio-select" type="radio"><label for="select-chi">Chicago</label></li>
-					<input class="cityFilter" id="select-hk" name="radio-select" type="radio"><label for="select-hk">Hong Kong</label></li>
-					<input class="cityFilter" id="select-ldn" name="radio-select" type="radio"><label for="select-ldn">London</label></li>
-					<input class="cityFilter" id="select-ny" name="radio-select" type="radio"><label for="select-ny">New York</label></li>
-					<input class="cityFilter" id="select-par" name="radio-select" type="radio"><label for="select-par">Paris</label></li>
-					<input class="cityFilter" id="select-sf" name="radio-select" type="radio"><label for="select-ams">San Francisco</label></li>
-					<input class="cityFilter" id="select-sao" name="radio-select" type="radio"><label for="select-sao">Sau Paulo</label></li>
-					<input class="cityFilter" id="select-sg" name="radio-select" type="radio"><label for="select-ams">Shanghai</label></li>
-				</div> -->
-
-				<div class="cultureContent">				
+				<div class="cultureContent">
 					<?php
 						$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
 						echo $cultureData; 

@@ -460,6 +460,7 @@ h1 {
 		margin:2em auto 0 !important;
 		width:50%;
 		padding-top:1em;
+		
 	    &:before{
 			content: " ";
 		    width: 150px;
@@ -468,15 +469,16 @@ h1 {
 		    left: 50%;
 			margin-left:-75px;
 			margin-top:-1.5em;
-background: rgba(255,255,255,0);
-background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(15%, rgba(255,255,255,1)), color-stop(85%, rgba(255,255,255,1)), color-stop(86%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
-background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
-background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
-background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
-background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+			background: rgba(255,255,255,0);
+			background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(15%, rgba(255,255,255,1)), color-stop(85%, rgba(255,255,255,1)), color-stop(86%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
+			background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
+			background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
+			background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 86%, rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
 	    }
+		
 		.name{
 			text-transform:uppercase;
 			font-size:1em;
@@ -485,6 +487,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 //			top:1.4em;
 			
 		}
+		
 		.title{
 			font-style:italic;
 			font-size:.9em;
@@ -501,6 +504,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 		transform:scale(.85) rotate(45deg);
 		cursor: pointer;
 		opacity:0;
+		
 		svg {
 			fill: white;
 		}
@@ -532,12 +536,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 				transform: translate(-50%,-50%);
 				width: 85%;
 				margin: 0;
+				
 				h4{
 					font-family: 'Din-Bold', sans-serif;
 					font-size: 1.6em;
 					text-transform:uppercase;
 					margin:0;
 				}
+				
 				h5{
 					font-family: 'Open Sans', sans-serif;
 					font-weight: 300;
@@ -545,6 +551,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 					font-size:1em;
 					margin:0;
 				}
+				
 				p{
 					margin-top:.5em;
 					margin-bottom:0;
@@ -736,10 +743,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 		height: 0%;
 		transition: height 500ms, top 0s;
 		z-index:2;
+		
 		.info {
 			opacity: 0;
 			transition: opacity 500ms;
 			text-align: center;
+			
 			h4{
 				font-family: 'Open Sans', sans-serif;
 			    font-weight: 300;
@@ -751,7 +760,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 			
 		}
 		
-		&::after,&::before {
+		&::after, &::before {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -810,6 +819,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	&.removed {
 		opacity:0!important;
 	}
+	
 	&.showDetails {
 		//height: 100%;
 		opacity:1;
@@ -821,12 +831,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 			//added
 			font-size:3em;
 			top:-15px;
+			
 			&.long {
 				font-size: 2.4em;
 				top: -11px;
 			}
-			
-			
 		}
 		
 		.ribbon {
@@ -870,6 +879,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 							display: inline-block;
 						}
 					}
+					
 					&.info-address{
 						font-size:1.1em;
 						margin-top:.5em;
@@ -904,6 +914,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	}
 }
 }
+
 .officeTile {
 	background-color: #ffffff;
 	position: relative;
@@ -1031,6 +1042,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 		}
 	}
 }
+
+/*
+
+
+#culture {
+	
+	.cultureContent {
+		input.cityFilter {
+			display: none;
+						
+			&~label {
+				margin-left: 1em;
+				margin-right: 1em;
+				font-weight: bold;
+				color: #58595b;
+				cursor: pointer;
+				
+				&:hover {
+					color: #46ccc5;
+				}
+			}
+		}
+		
+		div > input#select-ams:checked + .cultureTile:not([data-office-filter='ams']),
+		div > input#select-chi:checked + .cultureTile:not([data-office-filter='chi']),
+		div > input#select-hk:checked + .cultureTile:not([data-office-filter='hk']),
+		div > input#select-ldn:checked + .cultureTile:not([data-office-filter='ldn']),
+		div > input#select-ny:checked + .cultureTile:not([data-office-filter='ny']),
+		div > input#select-par:checked + .cultureTile:not([data-office-filter='par']),
+		div > input#select-sf:checked + .cultureTile:not([data-office-filter='sf']),
+		div > input#select-sao:checked + .cultureTile:not([data-office-filter='sao']),
+		div > input#select-sg:checked + .cultureTile:not([data-office-filter='sg']) {			
+			opacity: 0.25;
+			pointer-events: none;
+		}
+	}
+}
+*/
 
 /*
 @media screen and (min-width: 768px) {
