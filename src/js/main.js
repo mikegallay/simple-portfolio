@@ -630,9 +630,6 @@ var mgbMainSys = {
 			
 					mgbHeader.hideLogo();
 					
-<<<<<<< HEAD
-					
-=======
 					//if is all-culture overlay, initialize that content.
 					if (reqUrl.indexOf('all-culture') != -1){
 						
@@ -646,7 +643,7 @@ var mgbMainSys = {
 					}else{
 						$('footer').removeClass('tempHide');
 					}
->>>>>>> d238338ce6d062adf8300d2f23fe1792e60cc63b
+
 				},1000);
 				
 			}else{ //back to homepage
@@ -1615,6 +1612,13 @@ var mgbOverlay = {
 			that.removeVideo();
 		});
 	},
+	
+	addAllCultureListeners : function(){
+	   mgbContent.initCultureCnt();
+	   mgbContent.cultureContent = $('.cultureTile');
+	   mgbMainSys.allCultureLoaded = true;
+	},	
+	
 	loadVideo : function(id){
 		var that = this;
 		$('.videoHolder').empty();

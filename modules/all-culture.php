@@ -14,7 +14,7 @@
 		
 	<div class="cultureContent">
 		
-		 <div>
+		 <div id="filterOptions">
 			<input class="cityFilter" id="select-all" name="radio-select" type="radio"><label for="select-ams">All</label>
 			<input class="cityFilter" id="select-ams" name="radio-select" type="radio"><label for="select-ams">Amsterdam</label>
 			<input class="cityFilter" id="select-chi" name="radio-select" type="radio"><label for="select-chi">Chicago</label>
