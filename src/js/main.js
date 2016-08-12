@@ -1283,6 +1283,39 @@ var mgbContent = {
 		});
     },
 	
+	findNext : function(el){
+		//used to find next culture item
+		//important on all culture page when "next" item may be hidden
+		var $el = el,p = $el.parent().next();
+		for (var i=0;i<10;i++){
+			if (p.hasClass('hide')) {
+				$el = p;
+				p = $el.next();
+			}else{
+				return p;
+			}
+		}
+		
+		return p;
+	},
+	
+	findPrev : function(el){
+		//used to find prev culture item
+		//important on all culture page when "prev" item may be hidden
+		var $el = el,p = $el.parent().prev();
+		for (var i=0;i<10;i++){
+			if (p.hasClass('hide')) {
+				$el = p;
+				p = $el.prev();
+			}else{
+				return p;
+			}
+		}
+		
+		return p;
+	},
+	
+	
 	pushLeftPushRight : function(leftEl,rightEl){
 		var that = this;
 		var elR = rightEl;
@@ -1297,7 +1330,7 @@ var mgbContent = {
                 $(this).parent().siblings().removeClass("shrinkMe stretchOut");
             }
             
-            var nextTile = $(this).parent().next();
+            var nextTile = that.findNext($(this));//$(this).parent().next();
             var picHolder = nextTile.find('.picHolder');
             
             var colW = picHolder.width();
@@ -1320,7 +1353,7 @@ var mgbContent = {
                 $(this).parent().siblings().removeClass("shrinkMe stretchOut");
             }
             
-            var prevTile = $(this).parent().prev();
+            var prevTile =  that.findPrev($(this));//$(this).parent().prev();
             var picHolder = prevTile.find('.picHolder');
             
             var colW = picHolder.width();
