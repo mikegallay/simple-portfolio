@@ -1691,13 +1691,14 @@ var mgbOverlay = {
 			var tile = $(this);
 			var chosen = jQuery.inArray(filter, that.allCultureFilter);
 			
+			// if (tile.hasClass('col-2-by-1')) chosen = 1;
+			
 			tile.removeClass('shrinkMe');
 			tile.removeClass('stretchOut');
 			tile.removeClass('hide');
 			
 			
 			if (chosen == -1 && filterList != "all") {
-				console.log('filter ',filterList);
 				tile.addClass('hide');
 			}else{
 				// var hasInfo = (tile.hasClass('pushLeft') || tile.hasClass('pushRight')) ? true : false;
@@ -1708,6 +1709,9 @@ var mgbOverlay = {
 					tile.removeClass('pushRight');
 				}
 				tempCultureList.push('count');
+				
+				if (tile.hasClass('col-2-by-1')) tempCultureList.push('count');
+				
 				if (hasInfo){
 					if (tempCultureList.length % 2 ==0){
 						tile.addClass('pushLeft');
