@@ -142,7 +142,7 @@ h1 {
 	overflow: hidden;
 	float:left;
 	transition: margin 300ms, height 300ms;
-	
+	min-height:150px;
 	&.notLoaded {
 		display:none;
 	}
@@ -238,7 +238,7 @@ h1 {
 	float:left;
 	height:auto;
 	display: inline-block;
-
+	min-height:150px;
 	&.notLoaded {
 		display:none;
 	}
@@ -385,7 +385,7 @@ h1 {
 	transition: margin 300ms, width 300ms, height 300ms;
 	float:left;
 	height:auto;
-	
+	min-height:150px;
 	&.notLoaded {
 		display:none;
 	}
@@ -922,7 +922,7 @@ h1 {
 	margin: 0.5%;
 	overflow: hidden;
 	float:left;
-	
+	min-height:150px;
 	a {
 		cursor: pointer;
 		display: block;
@@ -1041,45 +1041,6 @@ h1 {
 			font-size: 2em;
 		}
 	}
-}
-
-
-
-
-	
-.cultureContent {
-	
-	#filterOptions {
-		input.cityFilter {
-			display: none;
-					
-			&~label {
-				margin-left: 1em;
-				margin-right: 1em;
-				font-weight: bold;
-				color: #58595b;
-				cursor: pointer;
-			
-				&:hover {
-					color: #46ccc5;
-				}
-			}
-		}
-	
-//		div > input#select-ams:checked + .cultureTile:not([data-office-filter='ams']),
-//		div > input#select-chi:checked + .cultureTile:not([data-office-filter='chi']),
-//		div > input#select-hk:checked + .cultureTile:not([data-office-filter='hk']),
-//		div > input#select-ldn:checked + .cultureTile:not([data-office-filter='ldn']),
-//		div > input#select-ny:checked + .cultureTile:not([data-office-filter='ny']),
-//		div > input#select-par:checked + .cultureTile:not([data-office-filter='par']),
-//		div > input#select-sf:checked + .cultureTile:not([data-office-filter='sf']),
-//		div > input#select-sao:checked + .cultureTile:not([data-office-filter='sao']),
-//		div > input#select-sg:checked + .cultureTile:not([data-office-filter='sg']) {
-//			opacity: 0.25;
-//			pointer-events: none;
-//		}
-	}
-	
 }
 
 

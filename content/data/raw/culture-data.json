@@ -8,7 +8,8 @@
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "New York"
+		"office": "New York",
+		"filter": "ny"
 	},
 	{
 		"name" : "Pantone",
@@ -17,7 +18,8 @@
 		"imgType": "jpg",
 		"infoType": "",
 		"info": "",
-		"office": "chi"
+		"office": "Chicago",
+		"filter": "chi"
 	},
 	{
 		"name" : "Biking",
@@ -26,7 +28,8 @@
 		"imgType": "jpg",
 		"infoType": "",
 		"info": "",
-		"office": "ny"
+		"office": "New York",
+		"filter": "ny"
 	},
 	{
 		"name" : "Bio Colors",
@@ -37,7 +40,8 @@
 		"info": "This is my information",
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|BioColors_Culture",
-		"office": "ams"
+		"office": "Amsterdam",
+		"filter": "ams"
 	},
 	{
 		"name" : "Chelsea",
@@ -46,7 +50,8 @@
 		"imgType": "jpg",
 		"infoType": "",
 		"info": "",
-		"office": "ny"
+		"office": "New York",
+		"filter": "ny"
 	},
 	{
 		"name" : "Strokes",
@@ -55,7 +60,8 @@
 		"imgType": "gif",
 		"infoType": "",
 		"info": "",
-		"office": "sf"
+		"office": "San Francisco",
+		"filter": "sf"
 	},
 	{
 		"name" : "Elizabeth",
@@ -66,7 +72,8 @@
 		"info": "This is personal mantra. Take it or leave it. Peace!",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Elizabeth_Culture",
-		"office": "ldn"
+		"office": "London",
+		"filter": "ldn"
 	},
 	{
 		"name" : "Dog",
@@ -75,7 +82,8 @@
 		"imgType": "jpg",
 		"infoType": "",
 		"info": "",
-		"office": "par"
+		"office": "Paris",
+		"filter": "par"
 	},
 	{
 		"name" : "Tattoos",
@@ -86,7 +94,8 @@
 		"info": "Hello everybody!",
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|Waving_Culture",
-		"office": "sao"
+		"office": "Sao Paulo",
+		"filter": "sao"
 	},
 	{
 		"name" : "Skater",
@@ -97,7 +106,8 @@
 		"info": "This is my information",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Skater_Culture",
-		"office": "ldn"
+		"office": "London",
+		"filter": "ldn"
 	},
 	{
 		"name" : "Train",
@@ -107,7 +117,8 @@
 		"infoType": "",
 		"info": "",
 		"isDouble": "true",
-		"office": "chi"
+		"office": "Chicago",
+		"filter": "chi"
 	},	
 	{
 		"name" : "Dog",
@@ -116,7 +127,8 @@
 		"imgType": "jpg",
 		"infoType": "",
 		"info": "", 
-		"office": "par"
+		"office": "Paris",
+		"filter": "par"
 	},
 	{
 		"name" : "Tattoos",
@@ -127,7 +139,8 @@
 		"info": "Hello everybody!",
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|Waving_Culture",
-		"office": "ny"
+		"office": "New York",
+		"filter": "ny"
 	},
 	{
 		"name" : "Train",
@@ -137,7 +150,8 @@
 		"infoType": "",
 		"info": "",
 		"isDouble": "true",
-		"office": "chi"
+		"office": "Chicago",
+		"filter": "chi"
 	},
 	{
 		"name" : "Train",
@@ -147,6 +161,7 @@
 		"infoType": "",
 		"info": "",
 		"isDouble": "true",
-		"office": "chi"
+		"office": "none",
+		"filter": "none"
 	}
 ]

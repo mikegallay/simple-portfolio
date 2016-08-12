@@ -85,10 +85,8 @@
 	<?php if ($base_url == "all-culture") {?>
 		<script type="text/javascript">
 			// $( document ).ready(function() {
-			   mgbContent.initCultureCnt();
-			   mgbContent.cultureContent = $('.cultureTile');
-			   mgbMainSys.allCultureLoaded = true;
-			   setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
+				mgbOverlay.addAllCultureListeners();
+				setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
 			// });
 	
 		</script>
