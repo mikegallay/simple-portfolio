@@ -3346,6 +3346,7 @@ var mgbOverlay = {
 
 		mgbContent.initCultureCnt();
 		mgbContent.cultureContent = $('.cultureTile');
+		mgbContent.setCultureTileHeight();
 		mgbMainSys.allCultureLoaded = true;
 
 		$('input:checkbox[name=radio-select]').change(function() {
