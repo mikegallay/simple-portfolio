@@ -2100,40 +2100,43 @@ var mgbMainSys = {
 				stickyNavRevealY = 50;
 			}
 		}
-
-		if(currScroll > stickyNavRevealY) {
-			$('#Home').addClass("sticky");
-			if(!$('nav').hasClass("sticky")) {
-				//if (lastWindowWidth > mgbMainSys.mobileNavMaxWidth) {
-					$('nav').addClass("sticky");
-					/*}else{
-					$('#Home').addClass("")
-				}*/
 		
-				$("#mbLogo").off('mouseout');
-				mgbHeader.showLogo();
-				//if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.showLogo();
-			}
-		} else {
-			mgbHeader.deactivateNavActive();
-			//if (!$('#Home').hasClass('mobile')) 
-			$('#Home').removeClass("sticky");
-			//if(!$('nav').hasClass("overlayActive")) {
-				// $('nav a').removeClass('active');
-				$('nav').removeClass("sticky");
-				// $('#Home').removeClass("sticky");
-				$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
-				if (!$('#Home').hasClass('mobile')) mgbHeader.hideLogo();
-				// if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.hideLogo();
-			
-				/*$('#mbLogo').on('mouseover',function(){
+		//there is extra code here, but we only want this to happen on the homepage now
+		if($('body').hasClass('ishome')){
+			if(currScroll > stickyNavRevealY) {
+				$('#Home').addClass("sticky");
+				if(!$('nav').hasClass("sticky")) {
+					//if (lastWindowWidth > mgbMainSys.mobileNavMaxWidth) {
+						$('nav').addClass("sticky");
+						/*}else{
+						$('#Home').addClass("")
+					}*/
+		
+					$("#mbLogo").off('mouseout');
 					mgbHeader.showLogo();
-				});
+					//if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.showLogo();
+				}
+			} else {
+				mgbHeader.deactivateNavActive();
+				//if (!$('#Home').hasClass('mobile')) 
+				$('#Home').removeClass("sticky");
+				//if(!$('nav').hasClass("overlayActive")) {
+					// $('nav a').removeClass('active');
+					$('nav').removeClass("sticky");
+					// $('#Home').removeClass("sticky");
+					$("nav #mbLogo").css({'position': '', 'margin-top' : '' });
+					if (!$('#Home').hasClass('mobile')) mgbHeader.hideLogo();
+					// if (lastWindowWidth >= mgbMainSys.mobileNavMaxWidth) mgbHeader.hideLogo();
+			
+					/*$('#mbLogo').on('mouseover',function(){
+						mgbHeader.showLogo();
+					});
 
-				$('#mbLogo').on('mouseout',function(){
-					if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
-				});*/
-			//}
+					$('#mbLogo').on('mouseout',function(){
+						if (!$('#overlayContent').hasClass('active')) mgbHeader.hideLogo();
+					});*/
+				//}
+			}
 		}
 		
 		/*
@@ -2241,6 +2244,9 @@ var mgbMainSys = {
 			
 			$('body').removeClass('nothome').addClass('ishome');
 			
+			$('nav').removeClass('settle sticky');
+			
+			
 			mgbHeader.hideLogo();
 			mgbHeader.deactivateNavActive();
 			
@@ -2303,6 +2309,11 @@ var mgbMainSys = {
 					
 					$('body').removeClass('ishome').addClass('nothome');
 					
+					//lock the nav as gray bar on sub pages
+					$('nav').addClass('settle sticky');
+					mgbHeader.showLogo();
+					
+					
 					$("#mainContent").addClass("inactive");
 
 					$("#overlayContent").html(response);
@@ -2310,9 +2321,9 @@ var mgbMainSys = {
 					 //call js to init current page
 					mgbOverlay.init();
 										
-					$("nav").addClass("overlayActive").removeClass("sticky");
+					$("nav").addClass("overlayActive");//.removeClass("sticky");
 			
-					mgbHeader.hideLogo();
+					// mgbHeader.hideLogo();
 					
 					//if is all-culture overlay, initialize that content.
 					if (reqUrl.indexOf('all-culture') != -1){
@@ -2335,6 +2346,8 @@ var mgbMainSys = {
 				// console.log('repsonse ' ,response);
 				// 
 				$('body').removeClass('nothome').addClass('ishome');
+				
+				$('nav').removeClass('settle sticky');
 				
 				$('#overlayCover').removeClass('active');
 				

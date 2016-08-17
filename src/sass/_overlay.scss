@@ -6,11 +6,11 @@
 	left:0;
 	background:$overlayColor;
 	transform:translate3d(0,0,0);
-	transition:height 500ms 300ms;
+	transition:height 0s;//500ms 300ms;
 	z-index:98;
 	
 	&.active{
-		transition:height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
+//		transition:height 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
 		height:100%;
 	}
 	/*&.mobileNav{
