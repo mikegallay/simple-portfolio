@@ -30,9 +30,11 @@
 				}
 			}
 		}
+		
 
 		
 		.cultureContent{
+			width:100%;
 			.cultureTile{
 				transition:width 300ms,margin 300ms;
 				&.hide{
@@ -40,7 +42,17 @@
 					width:0px;
 					margin:0;
 				}
+				&.static{
+				    height: 0px!important;
+				    overflow: hidden;
+				    margin: 0;
+				    padding: 0;
+				    margin-top: -1px;
+				    max-height: 0px;
+				    min-height: 0px;
+				}
 			}
+			
 			
 		}
 		.cultureHeadline{

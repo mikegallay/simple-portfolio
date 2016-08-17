@@ -5,11 +5,47 @@
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"infoType": "card",
+		"info": "",
+		"linkedin": "michael-gallay-316a074",
+		"trackingLabel": "Home|Click|MatthewBull_Culture",
+		"office": "New York",
+		"filter": "always"
+	},
+	{
+		"name" : "Matthew Bull Original",
+		"title": "Chief Creative Officer",
+		"imgSrc": "assets/img/our_culture/bio_bull",
+		"imgType": "jpg",
+		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
-		"filter": "ny"
+		"filter": "ams"
+	},
+	{
+		"name" : "Matthew Bull",
+		"title": "Chief Creative Officer",
+		"imgSrc": "assets/img/our_culture/bio_bull",
+		"imgType": "jpg",
+		"infoType": "card",
+		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
+		"linkedin": "michael-gallay-316a074",
+		"trackingLabel": "Home|Click|MatthewBull_Culture",
+		"office": "New York",
+		"filter": "par"
+	},
+	{
+		"name" : "Matthew Bull",
+		"title": "Chief Creative Officer",
+		"imgSrc": "assets/img/our_culture/bio_bull",
+		"imgType": "jpg",
+		"infoType": "card",
+		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
+		"linkedin": "michael-gallay-316a074",
+		"trackingLabel": "Home|Click|MatthewBull_Culture",
+		"office": "New York",
+		"filter": "par"
 	},
 	{
 		"name" : "Matthew Bull",
@@ -45,31 +81,7 @@
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
-		"filter": "ny"
-	},
-	{
-		"name" : "Matthew Bull",
-		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_bull",
-		"imgType": "jpg",
-		"infoType": "card",
-		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
-		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "New York",
-		"filter": "ny"
-	},
-	{
-		"name" : "Matthew Bull",
-		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_bull",
-		"imgType": "jpg",
-		"infoType": "card",
-		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
-		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "New York",
-		"filter": "ny"
+		"filter": "chi"
 	},
 	{
 		"name" : "Matthew Bull",

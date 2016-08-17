@@ -3273,8 +3273,18 @@ var mgbContent = {
 		clearTimeout(this.cultureTimeout);
 				
 		this.cultureTimeout = setTimeout(function(){
+			
 			// var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
-			var colW = $('.cultureTile.static').first().find('.picHolder').innerWidth();
+			
+			var firstStatic = $('.cultureTile.static').first();
+			
+			var colW = firstStatic.find('.picHolder').innerWidth();
+			
+			/*//for the global culture page where there is no static content
+			if (firstStatic.length == 0){
+				colW = $('#allCultureWrapper .cultureTile').first().find('.picHolder').innerWidth();
+			}
+			console.log('colW',colW);*/
 			$('.cultureTile').removeAttr('style').css('height', colW + 'px');
 			
 			//checker for page load to make sure the content is ready.
@@ -3358,10 +3368,14 @@ var mgbOverlay = {
 		mgbContent.cultureContent = $('.cultureTile');
 		mgbContent.setCultureTileHeight();
 		mgbMainSys.allCultureLoaded = true;
+		that.filterAllCulture('all');
 
 		$('input:checkbox[name=radio-select]').change(function() {
-			console.log('change')
-			if ($('#label-select-'+this.value).hasClass('active')){
+			
+			$('#allCultureWrapper label').removeClass('active');
+			that.allCultureFilter = [];
+			
+			/*if ($('#label-select-'+this.value).hasClass('active')){
 				that.allCultureFilter.splice(that.allCultureFilter.indexOf(this.value),1);
 				$('#label-select-'+this.value).removeClass('active');
 				
@@ -3369,12 +3383,15 @@ var mgbOverlay = {
 					that.filterAllCulture('all');
 					return;
 				}
-			}else{
-				that.allCultureFilter.push(this.value);
-				$('#label-select-'+this.value).addClass('active');
-			}
-			console.log(that.allCultureFilter);
-			that.filterAllCulture();
+			}else{*/
+			that.allCultureFilter.push(this.value);
+			$('#label-select-'+this.value).addClass('active');
+				//}
+			
+			var filterOption = "";
+			if (that.allCultureFilter[0] == "all") filterOption = "all";
+			that.filterAllCulture(filterOption);
+			
 		});
 	   
 	},	
@@ -3396,7 +3413,7 @@ var mgbOverlay = {
 			
 			
 			if (chosen == -1 && filterList != "all") {
-				tile.addClass('hide');
+				if (!tile.hasClass('static')) tile.addClass('hide');
 			}else{
 				// var hasInfo = (tile.hasClass('pushLeft') || tile.hasClass('pushRight')) ? true : false;
 				var hasInfo = false;
@@ -3405,7 +3422,8 @@ var mgbOverlay = {
 					tile.removeClass('pushLeft');
 					tile.removeClass('pushRight');
 				}
-				tempCultureList.push('count');
+				
+				if (!tile.hasClass('static')) tempCultureList.push('count');
 				
 				if (tile.hasClass('col-2-by-1')) tempCultureList.push('count');
 				
@@ -3416,19 +3434,19 @@ var mgbOverlay = {
 						tile.addClass('pushRight');
 					}
 				}
-				
-				
 			}
-		 // console.log( $( this ).data('office-filter'),chosen );
 		});
-		// console.log(tempCultureList);
-		
+
+		mgbContent.setCultureTileHeight();
+
 		setTimeout(function(){
 			mgbMainSys.checkInView('.ll-all');
 			
 			$( "#allCultureWrapper .cultureLink").off( "click" );
 			
 			mgbContent.pushLeftPushRight($( "#allCultureWrapper .pushLeft .cultureLink"),$( "#allCultureWrapper .pushRight .cultureLink"));
+			
+			
 		},1000);
 	},
 	

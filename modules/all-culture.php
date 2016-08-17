@@ -13,6 +13,7 @@
 	</div>	
 	<div id="filterOptions">
 		<!-- <input class="cityFilter" id="select-all" value="all" name="radio-select" type="radio"><label id="label-select-all" for="select-ams">All</label> -->
+		<input class="cityFilter" id="select-all" value="all" name="radio-select" type="checkbox"><label class="active" id="label-select-all" for="select-all">All</label>
 		<input class="cityFilter" id="select-ams" value="ams" name="radio-select" type="checkbox"><label id="label-select-ams" for="select-ams">Amsterdam</label>
 		<input class="cityFilter" id="select-chi" value="chi" name="radio-select" type="checkbox"><label id="label-select-chi" for="select-chi">Chicago</label>
 		<input class="cityFilter" id="select-hk" value="hk" name="radio-select" type="checkbox"><label id="label-select-hk" for="select-hk">Hong Kong</label>
@@ -25,7 +26,7 @@
 	</div>	
 	<div class="cultureContent">
 		<?php
-			$cultureData = HTMLfromTemplateAndJSON("content/templates/all-culture-template.html", "culture-global-data",false);
+			$cultureData = HTMLfromTemplateAndJSON("content/templates/all-culture-template.html", "culture-global-data");
 			echo $cultureData; 
 		?>
 	</div>
