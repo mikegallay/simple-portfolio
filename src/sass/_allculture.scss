@@ -3,23 +3,34 @@
 		padding-top:120px;
 		max-width:1280px;
 		margin:0 auto;
-		#filterOptions{
-			input.cityFilter {
-				display: none;
-					
-				&~label {
-					margin-left: 1em;
-					margin-right: 1em;
-					font-weight: bold;
-					color: #58595b;
-					cursor: pointer;
-			
-					&:hover,&.active {
-						color: #46ccc5;
-					}
+		
+		input.cityFilter {
+			display: none;
+				
+			&~label {
+				display: inline;
+				margin-left: 1em;
+				margin-right: 1em;
+				margin-top: 1em;
+				
+				font-weight: bold;
+				color: #58595b;
+				cursor: pointer;
+		
+				&:hover,&.active {
+					color: #46ccc5;
+				}
+				
+				&:first-of-type {
+					margin-left: 0;
+				}
+				
+				&:last-of-type {
+					display: inline-block;
 				}
 			}
 		}
+
 		
 		.cultureContent{
 			.cultureTile{
