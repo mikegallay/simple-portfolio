@@ -3273,8 +3273,18 @@ var mgbContent = {
 		clearTimeout(this.cultureTimeout);
 				
 		this.cultureTimeout = setTimeout(function(){
+			
 			// var colW = that.cultureContent.first().next().find('.picHolder').innerWidth();
-			var colW = $('.cultureTile.static').first().find('.picHolder').innerWidth();
+			
+			var firstStatic = $('.cultureTile.static').first();
+			
+			var colW = firstStatic.find('.picHolder').innerWidth();
+			
+			/*//for the global culture page where there is no static content
+			if (firstStatic.length == 0){
+				colW = $('#allCultureWrapper .cultureTile').first().find('.picHolder').innerWidth();
+			}
+			console.log('colW',colW);*/
 			$('.cultureTile').removeAttr('style').css('height', colW + 'px');
 			
 			//checker for page load to make sure the content is ready.
@@ -3358,6 +3368,7 @@ var mgbOverlay = {
 		mgbContent.cultureContent = $('.cultureTile');
 		mgbContent.setCultureTileHeight();
 		mgbMainSys.allCultureLoaded = true;
+		that.filterAllCulture('all');
 
 		$('input:checkbox[name=radio-select]').change(function() {
 			console.log('change')
@@ -3405,7 +3416,8 @@ var mgbOverlay = {
 					tile.removeClass('pushLeft');
 					tile.removeClass('pushRight');
 				}
-				tempCultureList.push('count');
+				
+				if (!tile.hasClass('static')) tempCultureList.push('count');
 				
 				if (tile.hasClass('col-2-by-1')) tempCultureList.push('count');
 				

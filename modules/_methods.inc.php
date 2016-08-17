@@ -50,17 +50,18 @@ function preloadData(&$tempData, &$fullData, &$siteData){
 
 preloadData($tempData, $fullData, $siteData);
 
-function shuffleCulture($data){
+function formatCulture($data,$shuffle){
 	
 	$evenOddToggle = 1;
 	
 	$tempData = $data;
 	
-	try {	
+	if ($shuffle == true) shuffle($tempData);
+	/*try {	
 		shuffle($tempData);
 	} catch ( Exception $e) {
 		die("Cannot shuffle the data");
-	}
+	}*/
 	
 	$dir1 = 'pushRight';
 	$dir2 = 'pushLeft';
@@ -78,12 +79,16 @@ function shuffleCulture($data){
 		}
 	}
 	
-	try {
+	if ($shuffle == true){
+		shuffle($singleArr);
+		shuffle($doubleArr);
+	}
+	/*try {
 		shuffle($singleArr);
 		shuffle($doubleArr);
 	} catch (Exception $e) {
 		die("Cannot shuffle the data");
-	}
+	}*/
 	
 	//$firstTime = true;
 	$buildInterval = 0;
@@ -103,7 +108,7 @@ function shuffleCulture($data){
 				}
 				 
 			}else{
-				if (count($singleArr) > 0) array_push($compositeArr, array_pop($singleArr));
+				if (count($singleArr) > 0) array_push($compositeArr, array_shift($singleArr));
 			}
 			
 		}
@@ -142,7 +147,7 @@ function shuffleCulture($data){
 
 
 
-function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle = false) {
+function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
 	global $fullData;
 	
 	$templateStr = file_get_contents($tempname);
@@ -150,7 +155,10 @@ function HTMLfromTemplateAndJSON($tempname, $jsonfile, $shuffle = false) {
 	$tempDataArray = $fullData[$jsonfile];
 	$dataArray = $tempDataArray;
 	
-	if ($shuffle) $dataArray = shuffleCulture($tempDataArray);
+	
+	if ($jsonfile == "culture-data") $dataArray = formatCulture($tempDataArray,$true);
+	if ($jsonfile == "culture-global-data") $dataArray = formatCulture($tempDataArray,$false);
+	//if ($shuffle) $dataArray = shuffleCulture($tempDataArray);
 	
 	$str = json_encode($dataArray);
 	

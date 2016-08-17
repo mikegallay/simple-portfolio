@@ -25,7 +25,7 @@
 	</div>	
 	<div class="cultureContent">
 		<?php
-			$cultureData = HTMLfromTemplateAndJSON("content/templates/all-culture-template.html", "culture-global-data",false);
+			$cultureData = HTMLfromTemplateAndJSON("content/templates/all-culture-template.html", "culture-global-data");
 			echo $cultureData; 
 		?>
 	</div>
