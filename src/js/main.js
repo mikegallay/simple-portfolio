@@ -1685,8 +1685,11 @@ var mgbOverlay = {
 		that.filterAllCulture('all');
 
 		$('input:checkbox[name=radio-select]').change(function() {
-			console.log('change')
-			if ($('#label-select-'+this.value).hasClass('active')){
+			
+			$('#allCultureWrapper label').removeClass('active');
+			that.allCultureFilter = [];
+			
+			/*if ($('#label-select-'+this.value).hasClass('active')){
 				that.allCultureFilter.splice(that.allCultureFilter.indexOf(this.value),1);
 				$('#label-select-'+this.value).removeClass('active');
 				
@@ -1694,12 +1697,16 @@ var mgbOverlay = {
 					that.filterAllCulture('all');
 					return;
 				}
-			}else{
+			}else{*/
 				that.allCultureFilter.push(this.value);
 				$('#label-select-'+this.value).addClass('active');
-			}
+				//}
 			console.log(that.allCultureFilter);
-			that.filterAllCulture();
+			
+			var filterOption = "";
+			if (that.allCultureFilter[0] == "all") filterOption = "all";
+			that.filterAllCulture(filterOption);
+			
 		});
 	   
 	},	
