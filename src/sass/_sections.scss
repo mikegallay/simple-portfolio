@@ -19,6 +19,22 @@
 	}
 }
 
+#culture{
+	.all-culture{
+		float:right;
+		//color:$skyblueColor;
+//		text-transform:uppercase;
+		//text-decoration:none;
+		margin-right: 0.5%;
+		.moreArrow{
+			transform: rotateZ(-90deg);
+			    right: -0.5em;
+			    display: inline-block;
+			    position: relative;
+		}
+	}
+}
+
 #careers {
 	//min-height: 100px;
 	width: 90%;
@@ -79,7 +95,9 @@
 		width:49%;
 	}
 }
-
+.cultureContent{
+	width:100%;
+}
 
 h1 {
 	margin: 0;

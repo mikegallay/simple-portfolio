@@ -1698,10 +1698,9 @@ var mgbOverlay = {
 					return;
 				}
 			}else{*/
-				that.allCultureFilter.push(this.value);
-				$('#label-select-'+this.value).addClass('active');
+			that.allCultureFilter.push(this.value);
+			$('#label-select-'+this.value).addClass('active');
 				//}
-			console.log(that.allCultureFilter);
 			
 			var filterOption = "";
 			if (that.allCultureFilter[0] == "all") filterOption = "all";
@@ -1728,7 +1727,7 @@ var mgbOverlay = {
 			
 			
 			if (chosen == -1 && filterList != "all") {
-				tile.addClass('hide');
+				if (!tile.hasClass('static')) tile.addClass('hide');
 			}else{
 				// var hasInfo = (tile.hasClass('pushLeft') || tile.hasClass('pushRight')) ? true : false;
 				var hasInfo = false;
@@ -1749,19 +1748,19 @@ var mgbOverlay = {
 						tile.addClass('pushRight');
 					}
 				}
-				
-				
 			}
-		 // console.log( $( this ).data('office-filter'),chosen );
 		});
-		// console.log(tempCultureList);
-		
+
+		mgbContent.setCultureTileHeight();
+
 		setTimeout(function(){
 			mgbMainSys.checkInView('.ll-all');
 			
 			$( "#allCultureWrapper .cultureLink").off( "click" );
 			
 			mgbContent.pushLeftPushRight($( "#allCultureWrapper .pushLeft .cultureLink"),$( "#allCultureWrapper .pushRight .cultureLink"));
+			
+			
 		},1000);
 	},
 	

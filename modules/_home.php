@@ -79,14 +79,19 @@
 			</div>
 		</section>
 		<section id="culture" class="homeSection fullBleed">
-			<a href="all-culture" data-tracking-label="Home|Click|AllCulture" style="color:red;">Culture ALL!!!</a>
+			
 			<div class="container">
 				<h1 class="sectionHeading">OUR <span data-forward class="blueFont">CULTURE</span></h1>
 	
 				<!--<div class="alignRight">
 					<a id="officeToggle" class="button" alt="">OUR OFFICE<?php //addIcon('menu_dropdown_arrow'); ?></a>
 				</div> --> 
-
+				<a class="all-culture button" href="all-culture" data-tracking-label="Home|Click|AllCulture">GLOBAL LEADERSHIP 					<span class="moreArrow">
+						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+						</svg>
+					</span>
+				</a>
 				<div class="cultureContent">
 					<?php
 						$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
