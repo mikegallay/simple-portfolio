@@ -64,7 +64,7 @@
 		</section> -->
 		<section id="work" class="homeSection fullBleed">
 			<div class="container">		
-				<h1 class="sectionHeading">IT'S NOT <span data-forward class="blueFont">CREATIVE</span> <br> UNLESS IT <span data-forward class="blueFont">WORKS.</span></h1>
+				<h1 class="sectionHeading">IT'S NOT <span class="blueFont">CREATIVE</span> <br> UNLESS IT <span class="blueFont">WORKS.</span></h1>
 	
 				<div class="portfolioContent">
 		
@@ -81,7 +81,7 @@
 		<section id="culture" class="homeSection fullBleed">
 			
 			<div class="container">
-				<h1 class="sectionHeading">OUR <span data-forward class="blueFont">CULTURE</span></h1>
+				<h1 class="sectionHeading">OUR <span class="blueFont">CULTURE</span></h1>
 	
 				<!--<div class="alignRight">
 					<a id="officeToggle" class="button" alt="">OUR OFFICE<?php //addIcon('menu_dropdown_arrow'); ?></a>
@@ -106,9 +106,9 @@
 		
 		<section id="news" class="homeSection fullBleed">
 			<div class="container">
-				<h1 class="sectionHeadingSmall latestNews">LATEST NEWS</h1>
+				<h1 class="sectionHeading whiteText">LATEST NEWS</h1>
 				
-				<div class="newsContent">
+				<div class="newsContent clearfix">
 					<?php
 						$newsData = HTMLfromTemplateAndJSON("content/templates/news-template.html", "news-data");
 						echo $newsData;
