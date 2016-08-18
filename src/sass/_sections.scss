@@ -13,33 +13,30 @@
 	background-color: #6d7075;
 }
 
-#work,#clients{
+#work, #clients{
 	h1.sectionHeading{
-		margin-top:1em;
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 }
 
 #culture{
 	.all-culture{
 		float:right;
-		//color:$skyblueColor;
-//		text-transform:uppercase;
-		//text-decoration:none;
 		margin-right: 0.5%;
+		
 		.moreArrow{
 			transform: rotateZ(-90deg);
-			    right: -0.5em;
-			    display: inline-block;
-			    position: relative;
+			right: -0.5em;
+			display: inline-block;
+			position: relative;
 		}
 	}
 }
 
 #careers {
-	//min-height: 100px;
 	width: 90%;
 	padding:1.7em 5% 3em;
-	//overflow: hidden;
 	text-align:center;
 }
 
@@ -47,10 +44,12 @@
 #mainContent{
 	overflow:hidden;
 	position:relative;
+	
 	&.inactive{
 		display:none;
 		position:fixed;
 	}
+	
 	.contentWrapper{
 		background: white;
 		transition:top 500ms 300ms;
@@ -66,20 +65,20 @@
 				opacity:1;
 			}
 		}
-	//	line-height:0;
 	}
 }
+
 .clientContent{
 	-webkit-transform: translate3d(0,0,0);
 }
-.portfolioContent, .cultureContent, .officeContent, .clientContent, .newsContent {
+
+.portfolioContent, .cultureContent, .officeContent, .clientContent {
 	margin-top: 1.2em;
 	display:inline-block;
 	
 	.in-view {
 		opacity: 1;
 		transform:scale(1);
-//		transition: opacity 1s .25s, transform 1s .25s;
 		transition: opacity 1s 50ms, transform 1s 50ms;
 	}
 	
@@ -108,20 +107,13 @@ h1 {
 		font-weight: lighter;
 		color: $sectionHeadingColor;
 		margin-top: 2.3em;
-		margin-bottom: 0.75em;
+		margin-bottom: 0.5em;
 		letter-spacing: 0.04em;
-		line-height: 1em;
+		line-height: 1;
 		text-align: center;
-	
-		@for $i from 1 through 10 {
-			span[data-forward]:nth-child(#{$i}) {
-				opacity: 1;
-				transition: opacity 1s #{$i * 300}ms;
-			
-				&.forwardVisible {
-					opacity: 1;
-				}
-			}	
+		
+		&.whiteText {
+			color: $textWhite;
 		}
 	}
 	
@@ -131,7 +123,7 @@ h1 {
 		font-weight: lighter;
 		color: $sectionHeadingColor;
 		text-align: center;
-		line-height: 1.1em;
+		line-height: 1.1;
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
 		
@@ -152,11 +144,11 @@ h1 {
 
 
 .projectTile {
-	background-color: #ffffff;//#f7f7f7;
+	background-color: #ffffff;
 	position: relative;
-	width: 49%;//99%;
+	width: 49%;
 	height:	auto;
-	margin: .5%;//0.4222222em;
+	margin: .5%;
 	overflow: hidden;
 	float:left;
 	transition: margin 300ms, height 300ms;
@@ -218,7 +210,7 @@ h1 {
 					font-family: 'Din-Bold', sans-serif;
 					text-transform: uppercase;
 					font-size: 1.4em;
-					line-height: 1.1em;
+					line-height: 1.1;
 				}
 		
 				p {
@@ -390,7 +382,6 @@ h1 {
 
 
 .cultureTile {
-	//background-color: #ffffff;//#f7f7f7;
 	position: relative;
 	width: 49%;
 	margin: 0.5%;
@@ -399,6 +390,7 @@ h1 {
 	float:left;
 	height:auto;
 	min-height:150px;
+	
 	&.notLoaded {
 		display:none;
 	}
@@ -418,18 +410,39 @@ h1 {
 	}
 	
 	.bio {
-		font-size: 0.8em;
 		opacity:0;
 		position: absolute;
 		top:20px;
 		text-align: center;
 		
 		.inner{
-			h5{
-			//	display:none;
+			h2 {
+				font-size: 0.85em;
 			}
+			
+			h4 {
+				font-size: 1em;
+			}
+			
+			h5 {
+				font-size: 0.85;
+			}
+			
 			p{
 				margin-top:0;
+				
+				&.quote {
+					font-size: 0.8em;
+				}
+				
+				.start-quote, .end-quote {
+					font-size: 1em;
+					top: 0;
+				 }
+				 
+				.quote-info {
+					font-size: 0.8em;
+				}
 			}
 		}	
 	}
@@ -447,7 +460,7 @@ h1 {
 	}
 	
 	.quote{
-		line-height:.8em;
+		line-height:.8;
 		text-align:center;
 		.quote-info{
 			font-size:2em;
@@ -469,7 +482,7 @@ h1 {
 	}
 	
 	.byline{
-		line-height:1em;
+		line-height:1;
 		margin:2em auto 0 !important;
 		width:50%;
 		padding-top:1em;
@@ -647,8 +660,6 @@ h1 {
 			transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 475ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			
 			&.offTile{
-				//right: -100px;
-				//bottom: -100px;
 			    border-top: 0px solid transparent;
 			    border-right: 0px solid #46ccc5;
 				transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 150ms, border-right 150ms;
@@ -695,10 +706,9 @@ h1 {
 		float: none;
 		width: 100%;
 		display: block;
-		padding-top: 0;//1em;
+		padding-top: 0;
 		padding-right: 0;
 		padding-left: 0;
-		//max-height: 28.125em;
 		overflow: hidden;
 		z-index:0;
 		position:relative;
@@ -726,6 +736,7 @@ h1 {
 		transform: rotateZ(45deg);
 		cursor: pointer;
 		z-index:2;
+		
 		svg {
 			fill: white;
 		}
@@ -735,15 +746,14 @@ h1 {
 		color: $skyblueColor;
 		font-family: 'Din-Bold', sans-serif;
 		font-size: 2.5em;
-		line-height: 0em;
+		line-height: 0;
 		position: relative;
 		text-align: center;
 		margin: 0;
 		top: 2em;
 		opacity: 0;
 		transition: top 1s, opacity 10ms;
-		z-index:2;
-		
+		z-index: 2;	
 	}
 	
 	.ribbon {
@@ -766,8 +776,6 @@ h1 {
 				padding: 0;
 				margin: .5em 0 0em;
 			}
-			
-			
 		}
 		
 		&::after, &::before {
@@ -827,7 +835,6 @@ h1 {
 	}
 	
 	&.showDetails {
-		//height: 100%;
 		opacity:1;
 		overflow:visible;
 		h3 {
@@ -876,11 +883,9 @@ h1 {
 						.office-icon {
 							display: inline;
 							padding:0em 0.5em;
-							//border:3px solid white;
 							float: left;
 						}
 						.office-content {
-							//display:none;
 							padding-left: 8px;
 							display: inline-block;
 						}
@@ -988,7 +993,7 @@ h1 {
 			display: none;
 		}
 		p{
-			line-height: 0.8em;
+			line-height: 0.8;
 			margin-bottom: 0.4em;
 			margin-top: 0;
 			&.cityName{
@@ -1012,9 +1017,7 @@ h1 {
 		&.sectionHeading {
 			margin-top: 1.3em;
 			margin-bottom: 0.5em;
-		}
-		
-			
+		}	
 	}
 }
 
@@ -1044,206 +1047,6 @@ h1 {
 }
 
 
-
-/*
-@media screen and (min-width: 768px) {
-	
-	h1 {
-		margin: 0;
-	
-		&.sectionHeading {
-			font-family: 'Din-Bold', sans-serif;
-			font-size: 4.125em;
-			font-weight: lighter;
-			color: $sectionHeadingColor;
-			letter-spacing: 0.04em;
-			margin-top: 1.2em;
-			margin-bottom: 0.5em;
-		}
-	
-		&.joinTeamCTA {
-			font-size: 3em;
-			text-align: center;
-		}
-	}
-
-	.vimeoContainer {
-		.videoTitle {
-			font-size: 3em;
-			text-align: left;
-			margin: 0;
-		}
-		
-		.videoDescription {
-			text-align: left;
-			font-size: 1.2em;
-		}
-	}
-
-	.projectTile {
-		width: 49%;
-
-		a {
-			.prjDescription {
-	
-				.prjDscrWrap {
-				
-					h2 {				
-						font-size: 2em;
-					}
-					p{
-						display:block;
-					}
-				}	
-			}
-		}
-	}
-	
-	
-	#culture {
-		
-		.cultureContent {
-			input.cityFilter {
-				display: none;
-							
-				label {
-					margin-left: 1em;
-					margin-right: 1em;
-					
-					display: none;
-				}
-			
-				&.active ~ label{
-					color: #46ccc5;
-					display: inline-block;
-				}
-			}
-			
-			div > input#select-ams:checked + .cultureTile:not([data-office-filter='ams']),
-			div > input#select-chi:checked + .cultureTile:not([data-office-filter='chi']),
-			div > input#select-hk:checked + .cultureTile:not([data-office-filter='hk']),
-			div > input#select-ldn:checked + .cultureTile:not([data-office-filter='ldn']),
-			div > input#select-ny:checked + .cultureTile:not([data-office-filter='ny']),
-			div > input#select-par:checked + .cultureTile:not([data-office-filter='par']),
-			div > input#select-sf:checked + .cultureTile:not([data-office-filter='sf']),
-			div > input#select-sao:checked + .cultureTile:not([data-office-filter='sao']),
-			div > input#select-sg:checked + .cultureTile:not([data-office-filter='sg']) {			
-				opacity: 0.25;
-				pointer-events: none;
-			}
-		}
-	}
-	
-	
-	.cultureTile {
-		width: 49%;
-		max-height: 31em;
-		
-		.bio {
-			font-family: 'Gotham-Light', sans-serif;
-			font-size: 0.9em;
-		}
-	
-		&.col-2-by-1 {
-			width:99%;
-		}
-		
-		&.stretchOut {
-			width: 99%;
-			
-			.arrow {
-		    	border-top: 2000px solid transparent !important;
-		    	border-right: 2000px solid #46ccc5 !important;
-				
-				.moreArrow {
-				    position: absolute;
-				    z-index: 100;
-				    top: -1.5625em;
-				    left: 1.87em;
-				}
-			}
-		}
-	}
-
-	.officeTile {
-		width: 49%;
-		margin: 0.5%;
-		
-		
-		.officeInfo {
-			display: flex;
-			flex-flow: column;
-			justify-content: center;
-			position: absolute;
-			font-size: 1em;
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			top: 0;
-			left: 0;
-			opacity: 0;
-			z-index: 9999;
-			transition: opacity 300ms;
-		
-			&.showDetails{
-				
-				.leftSide {
-					picture {
-						.lazyloaded {
-							transform: scale(1);
-							opacity: 1;
-						}
-					}
-				}
-				
-				opacity:1;
-			}
-					
-			svg {			
-				display: block;
-				margin: 0 auto;
-				overflow: visible;
-
-				&.clockGraphic {
-					width: 150px;
-					transform: scale(1);
-				}
-			}
-		}			
-	}
-	
-	#officeDetails {
-		&.showDetails {
-			height: 100%;
-			transition: height 300ms;
-		
-			h3 {
-				opacity: 1;
-				top: 0em;
-				transition: top 1s 500ms, opacity 1ms 700ms;
-			}
-			
-			.leftSide {
-				picture {
-					opacity: 1;
-				}
-			}
-		}
-
-	
-		h3 {
-			line-height: 0.6em;
-			font-size: 3.25em;
-			
-			.abbr {
-				display: none;
-			}
-		}
-	}
-}
-*/
-
-
 @media screen and (min-width: 768px) {
 	
 	#work {
@@ -1253,20 +1056,11 @@ h1 {
 
 	#culture {
 		min-height: 500px;
-		//padding-top: 2.5em;
 	}
-	
-//	#news{
-//		.newsContent{
-//			.newsTile{
-//				width: 32.3%;
-//			}
-//		}
-//	}
 
 	#offices {
 		min-height: 500px;
-		//padding-top: 2.5em;
+
 		#officeDetails {
 			.leftSide {
 				float: left;
@@ -1277,7 +1071,6 @@ h1 {
 				padding-left: 0.5%;
 				overflow: hidden;
 				z-index:3;
-				//max-height: 28.125em;
 
 				.leftSide {
 					picture {
@@ -1301,7 +1094,6 @@ h1 {
 			}
 		
 			&.showDetails {
-				//height: 100%;
 				
 				h3{
 					font-size: 3.6em;
@@ -1404,9 +1196,9 @@ h1 {
 			font-weight: lighter;
 			color: $sectionHeadingColor;
 			letter-spacing: 0.04em;
-			line-height: 1em;
-			margin-top: 0.75em;
-			margin-bottom: 0.75em;
+			line-height: 1;
+			//margin-top: 0.75em;
+//			margin-bottom: 0.75em;
 		}
 		
 		&.joinTeamCTA, &.latestNews {
@@ -1417,7 +1209,6 @@ h1 {
 
 	.projectTile {
 		width: 24%;
-		//max-height: 20em;
 		
 		a {
 			.prjDescription {
@@ -1456,25 +1247,16 @@ h1 {
 		width: 24%;
 		
 		.bio {
-			font-size: .9em;
 			.inner{
 				width:80%;
-				//h5{display:block;}
-				p{margin-top:.75em;}
+				
+				p{
+					margin-top: 0.75em;
+				}
 			}
 		}
-		
-		
-		.linkedin{
-			//bottom: 8px;
-			//right: 0px;
-			//transform: scale(1.0);
-		}
-	
+
 		.closeCulture{
-			//top: 10px;
-			//right: 10px;
-			//transform: rotateZ(45deg) scale(1.0);
 			svg {
 				fill: white;
 			}
@@ -1503,13 +1285,7 @@ h1 {
 			.cityTime {
 				font-size: 1.1em;
 			}
-			
-			/*svg {
-				&.clockGraphic {
-					margin-top: 1.5em;
-					transform: scale(0.85);
-				}
-			}*/
+
 			svg {			
 				display: block;
 				margin: 0 auto;
@@ -1525,7 +1301,7 @@ h1 {
 			
 			p {
 				margin-top: 0;
-				line-height: 0.75em;
+				line-height: 0.75;
 			}
 		}
 	}
@@ -1615,25 +1391,37 @@ h1 {
 				}
 			}
 		}
-	}	
+	}
+	
+	.cultureTile {
+		
+		.bio {
+			.inner{
+				width:80%;
+				
+				p{	
+					font-size: 1.4em;
+					margin-top: 0.75em;
+				}
+			}
+		}
+	}		
 }
 
 @media screen and (min-width:1440px) {
 	
 	h1 {
 		&.sectionHeading {
-			margin-top: 0.4em;
+			margin-top: 0.5em;
 		}
 	}
+	
 	#officeDetails {
 		h1 {
 			font-size: 4.5em;
-			
-			/*.abbr {
-				.headerHeroText:inline-block;
-			}*/
 		}
-	}	
+	}
+	
 	#careers {
 		padding:5em 5%;
 	}
@@ -1643,6 +1431,7 @@ h1 {
 	#work {
 		padding-top: 2em;
 	}
+	
 	.container {
 		max-width: 80%;
 		margin: 0 auto;
@@ -1719,10 +1508,6 @@ h1 {
 	}
 
 	#officeDetails {
-		&.showDetails {
-			//height: 36em;
-		}
-		
 		h1 {
 			font-size: 6em;
 			
