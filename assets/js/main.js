@@ -1762,6 +1762,16 @@ var mgbMainSys = {
 		
 	},
 	
+	expandNav: function(){
+		
+		
+	},
+	
+	collapseNav: function(){
+		
+		
+	},
+	
 	showPinned : function(){
 		
 		$('body').addClass("showPinned");
@@ -2444,6 +2454,7 @@ var mgbHeader = {
 		
 		$('nav #menuToggleHolder').on('click', function(){
 			$(this).toggleClass("active");
+			$('#navWrapper').toggleClass('active');
 			if ($(this).hasClass("active")){
 				that.showMobileNav();
 			}else{
@@ -3635,7 +3646,10 @@ if($("body").hasClass("ishome") && !isMobile.any()) {
 	/////////////	
 }
 
-if($("body").hasClass("ishome")) mgbMainSys.currPage = appRoot;
+if($("body").hasClass("ishome")) {
+	mgbMainSys.currPage = appRoot;
+	$('footer').removeClass('tempHide');
+}
 
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
