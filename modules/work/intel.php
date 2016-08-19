@@ -19,7 +19,7 @@
 
 <div class="contentWrapper" style="background:#37383a;">
 	<section class="workContainer">
-	<div class="subnav left"><a href="/work" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span>View All Work</a></div>
+	<div class="subnav left"><a href="work" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span>View All Work</a></div>
 	<div class="workHeadline">
 		<h1>Innovation Adventure, TV & Video</h1>
 		<p>Client: Intel</p>

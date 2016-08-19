@@ -24,7 +24,8 @@
 	.all-culture{
 		float:right;
 		margin-right: 0.5%;
-		
+		color:$skyblueColor!important;
+		text-decoration:none;
 		.moreArrow{
 			transform: rotateZ(-90deg);
 			right: -0.5em;
@@ -72,7 +73,7 @@
 	-webkit-transform: translate3d(0,0,0);
 }
 
-.portfolioContent, .cultureContent, .officeContent, .clientContent {
+.portfolioContent, .cultureContent, .officeContent, .clientContent, .newsContent {
 	margin-top: 1.2em;
 	display:inline-block;
 	
@@ -1518,7 +1519,7 @@ h1 {
 	}
 	
 	.officeTile {
-		width: 19%;
+		width: 15.6666666%;//19%;
 		max-height: 39em;	
 
 		.officeInfo {
@@ -1533,7 +1534,7 @@ h1 {
 	#news{
 		.newsContent{
 			.newsTile{
-				width: 12.5%;
+				width: 15.6666666%;//12.5%; //leave as 6 across until we get more content
 				
 				h2 {
 					font-size: 0.8em;

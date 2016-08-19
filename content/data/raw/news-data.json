@@ -71,29 +71,5 @@
 		"publishedBy": "Link Title",
 		"articleLink": "",
 		"trackingLabel": "Home|Click|Article_News"
-	},
-	{
-		"id": 6,
-		"imgSrc": "assets/img/our_work/CanadaDry",
-		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Canada Dry",
-		"description": "",
-		"altText": "This is alt text",
-		"publishedBy": "Link Title",
-		"articleLink": "",
-		"trackingLabel": "Home|Click|Article_News"
-	},
-	{
-		"id": 7,
-		"imgSrc": "assets/img/our_work/CanadaDry",
-		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Canada Dry",
-		"description": "",
-		"altText": "This is alt text",
-		"publishedBy": "Link Title",
-		"articleLink": "",
-		"trackingLabel": "Home|Click|Article_News"
 	}
 ]

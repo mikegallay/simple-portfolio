@@ -111,6 +111,12 @@ var mgbMainSys = {
 		
 	},
 	
+	showFooter : function(){
+		setTimeout(function(){
+			$('footer').removeClass('tempHide');
+		},1000);
+	},
+	
 	hidePinned : function(){
 		
 		$('body').removeClass("showPinned");
@@ -544,6 +550,8 @@ var mgbMainSys = {
 		
 		var useOverlay = true;
 		
+		console.log('isHomeSection',isHomeSection)
+		
 		if (page == appRoot || isHomeSection){
 			page = 'index.php'; 
 			useOverlay = false;
@@ -558,7 +566,7 @@ var mgbMainSys = {
 		
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
-		// console.log('req',reqUrl);
+		console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !useOverlay){ // if going to home page, check if content is already loaded before ajax call
 			
@@ -597,14 +605,16 @@ var mgbMainSys = {
 				
 				if (isHomeSection) mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
 
-			},1200);
+			},1000);
 			
 			return;
 		}
 		
-		$('#Home').removeClass('settle');
+		$('#Home').removeClass('settle'); //this hides the nav instantly during page transitions
 		mgbOverlay.kill();
 		$('footer').addClass('tempHide');
+
+		if (useOverlay) $('body').addClass('overlayReady'); //turn white bg gray to hide a flash of white when the overlay is building.
 
         var request = $.ajax({
             url: reqUrl,
@@ -623,7 +633,7 @@ var mgbMainSys = {
 			
 			mgbMainSys.allCultureLoaded = false;
 			
-			$('#Home').removeClass('settle')
+			// $('#Home').removeClass('settle')
 			
 			if (useOverlay){ //request page requires overlay
 				
@@ -633,6 +643,7 @@ var mgbMainSys = {
 				
 				if (!$('#overlayCover').hasClass('active')){
 					$('#overlayCover').addClass('active');
+					$('body').removeClass('overlayReady');
 				} 
 				
 				/*setTimeout(function(){	
@@ -667,12 +678,11 @@ var mgbMainSys = {
 							 mgbOverlay.addAllCultureListeners();
 							 mgbMainSys.checkInView('.ll-all');
 							 resize();
-							 $('footer').removeClass('tempHide');
 						}, 1000);
 						
-					}else{
-						$('footer').removeClass('tempHide');
 					}
+					
+					mgbMainSys.showFooter();
 
 				},500);
 				
@@ -716,7 +726,7 @@ var mgbMainSys = {
 				$("nav").removeClass("overlayActive");
 				
 				// mgbOverlay.kill();
-				$('footer').removeClass('tempHide');
+				mgbMainSys.showFooter();
 				
 				setTimeout(function(){
 					
@@ -726,12 +736,8 @@ var mgbMainSys = {
 				},500);
 				
 				setTimeout(function(){
-					
 					if (isHomeSection) mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
-					
-					
-					
-				},1000);
+				},2000);
 				
 				
 			}
@@ -1633,8 +1639,6 @@ var mgbContent = {
 			
 			var colW = firstStatic.find('.picHolder').innerWidth();
 			
-			console.log("scth",firstStatic,colW);
-			
 			/*//for the global culture page where there is no static content
 			if (firstStatic.length == 0){
 				colW = $('#allCultureWrapper .cultureTile').first().find('.picHolder').innerWidth();
@@ -1691,11 +1695,11 @@ var mgbOverlay = {
 	addListeners : function(){
 		var that = this;
 		
-		$('.subnav .home').on('click',function(e){
+		$('.subnav a').on('click',function(e){
 			e.preventDefault();		
-			
-			mgbHeader.deactivateNavActive();
-			mgbMainSys.getPage(appRoot, true);
+
+			// mgbHeader.deactivateNavActive();
+			mgbMainSys.getPage($(this).attr('href'), true);
 		
 			mgbContent.deactivateActiveContent();
 		});
@@ -2020,8 +2024,8 @@ window.onpopstate = function (event) {
 
 setTimeout(function(){  
 	resize();
-	$('footer').removeClass('tempHide');
-}, 500);	
+	mgbMainSys.showFooter(); // show the footer once page is loaded
+}, 500);
 
 var lastWindowHeight = $(window).height();
 var lastWindowWidth = $(window).width();

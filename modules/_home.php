@@ -86,11 +86,11 @@
 				<!--<div class="alignRight">
 					<a id="officeToggle" class="button" alt="">OUR OFFICE<?php //addIcon('menu_dropdown_arrow'); ?></a>
 				</div> --> 
-				<a class="all-culture button" href="all-culture" data-tracking-label="Home|Click|AllCulture">GLOBAL LEADERSHIP 					<span class="moreArrow">
+				<a class="all-culture" href="all-culture" data-tracking-label="Home|Click|AllCulture">Global Leadership 					<!-- <span class="moreArrow">
 						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
 						</svg>
-					</span>
+					</span> -->
 				</a>
 				<div class="cultureContent">
 					<?php
@@ -114,9 +114,9 @@
 						echo $newsData;
 					?>
 				</div>
-				<div class="moreButton active">
-					<a id="newsTileMore" href="#" data-tracking-label="Home|Click|News_LoadMore"><?php addIcon('more_button'); ?></a>
-				</div>
+				<!-- <div class="moreButton active">
+					<a id="newsTileMore" href="#" data-tracking-label="Home|Click|News_LoadMore"><?php //addIcon('more_button'); ?></a>
+				</div> -->
 			</div>
 		</section>
 		
