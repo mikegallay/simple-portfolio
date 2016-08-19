@@ -1629,7 +1629,11 @@ var mgbContent = {
 			
 			var firstStatic = $('.cultureTile.static').first();
 			
+			if ($('#mainContent').hasClass('inactive')) firstStatic = $('#allCultureWrapper .cultureTile.static').first();
+			
 			var colW = firstStatic.find('.picHolder').innerWidth();
+			
+			console.log("scth",firstStatic,colW);
 			
 			/*//for the global culture page where there is no static content
 			if (firstStatic.length == 0){
