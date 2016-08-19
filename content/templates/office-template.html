@@ -62,6 +62,22 @@
 							
 					
 							<div class="info">
+								{{#if weblink}}
+								
+								<p class="info-weblink">
+									<a href="{{{weblink}}}">
+										<span class="office-icon">
+											<svg class="icon icon_location-inline" role="img" aria-labelledby="title">
+											  <use xlink:href="#icon_location"></use>
+											  <!--[if lt IE 9]>
+												  <img src="assets/img/svg/ie8-fallback/icon_location.png" alt="icon_location icon"> 								  <!--<![endif]-->
+											</svg>
+										</span>
+										<span class="office-content">{{{weblink}}}</span>
+									</a>
+								</p>
+								{{/if}}								
+								
 								{{#if address}}
 								
 								<p class="info-address">
@@ -161,6 +177,7 @@
 						</div>
 					
 						<div class="officeStats">
+							<!-- STAT -->
 							<div>
 								<svg class="icon icon_employees-inline" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_employees"></use>
@@ -170,7 +187,8 @@
 								<h4>200+</h4>
 								<span>EMPLOYEES<span>
 							</div>
-
+							
+							<!-- STAT -->
 							<div>
 								<svg class="icon icon_dogs-inline" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_dogs"></use>
@@ -180,7 +198,8 @@
 								<h4>25</h4>
 								<span>DOGS<span>
 							</div>
-
+							
+							<!-- STAT -->
 							<div>
 								<svg class="icon icon_windows-inline" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_windows"></use>
@@ -190,7 +209,8 @@
 								<h4>306</h4>
 								<span>WINDOWS<span>
 							</div>
-
+							
+							<!-- STAT -->
 							<div>
 								<svg class="icon icon_grills-inline" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_grills"></use>
