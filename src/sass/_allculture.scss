@@ -1,7 +1,6 @@
 #overlayContent{
 	#allCultureWrapper{
-		padding-top:120px;
-		max-width:1280px;
+		padding-top:100px;
 		margin:0 auto;
 		
 		input.cityFilter {
@@ -37,8 +36,7 @@
 			width:100%;
 			.cultureTile{
 				transition:width 300ms,margin 300ms;
-				&.hide{
-//					transition:width 500ms,margin 500ms;
+				&.hide{ 
 					width:0px;
 					margin:0;
 				}
