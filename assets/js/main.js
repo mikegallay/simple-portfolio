@@ -2233,6 +2233,7 @@ var mgbMainSys = {
 		mgbMainSys.currPage = page;
 		
 		$('#Home').removeClass('removed');
+		$('#overlayCover').removeClass('white');
 		
 		var useOverlay = true;
 		
@@ -2296,10 +2297,15 @@ var mgbMainSys = {
 			return;
 		}
 		
+		// Fire immediately on getPage
 		$('#Home').removeClass('settle'); //this hides the nav instantly during page transitions
 		mgbOverlay.kill();
 		$('footer').addClass('tempHide');
-
+		
+		if (reqUrl.indexOf('all-culture') != -1){
+			$("#overlayCover").addClass("white");
+		}
+		
 		if (useOverlay) $('body').addClass('overlayReady'); //turn white bg gray to hide a flash of white when the overlay is building.
 
         var request = $.ajax({

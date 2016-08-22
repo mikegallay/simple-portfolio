@@ -7,7 +7,7 @@
 	</div>
 </div> -->
 
-<section class="contentWrapper" id="allCultureWrapper" style="background:#37383a;">
+<section class="contentWrapper" id="allCultureWrapper" style="background:#fffff;">
 	<div class="container">
 		
 		<h1 class="sectionHeading"><span class="blueFont">GLOBAL LEADERSHIP</span></h1>

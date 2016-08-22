@@ -69,7 +69,8 @@
 		} ?>
 	</div>
 	
-	<div id="overlayCover"></div>
+	<div id="overlayCover" class="<?php if ($base_url == "all-culture") {?> white <?php } ?>">
+	</div>
 	
 	<div id="overlayContent">
 		<?php 
