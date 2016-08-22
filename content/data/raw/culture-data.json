@@ -12,6 +12,16 @@
 		"filter": "ny"
 	},
 	{
+		"name" : "Pantone",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/waving",
+		"imgType": "gif",
+		"infoType": "",
+		"info": "",
+		"office": "Chicago",
+		"filter": "chi"
+	},
+	{
 		"name" : "Biking",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/bio_jen",
@@ -22,9 +32,41 @@
 		"filter": "ny"
 	},
 	{
+		"name" : "Dogs",
+		"title": "",
+		"imgSrc": "assets/img/our_culture/dog",
+		"imgType": "jpg",
+		"infoType": "",
+		"info": "",
+		"office": "New York",
+		"filter": "ny"
+	},
+	{
+		"name" : "Art",
+		"title": "",
+		"imgSrc": "assets/img/our_culture/art",
+		"imgType": "jpg",
+		"infoType": "",
+		"info": "",
+		"office": "New York",
+		"filter": "ny"
+	},
+	{
 		"name" : "Bio Colors",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_ned",
+		"imgType": "jpg",
+		"infoType": "card",
+		"info": "This is my information",
+		"linkedin": "michael-gallay-316a074",
+		"trackingLabel": "Home|Click|BioColors_Culture",
+		"office": "Amsterdam",
+		"filter": "ams"
+	},
+	{
+		"name" : "Bio Bull",
+		"title": "My Title",
+		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "This is my information",
