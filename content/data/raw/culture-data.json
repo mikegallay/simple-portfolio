@@ -12,16 +12,6 @@
 		"filter": "ny"
 	},
 	{
-		"name" : "Pantone",
-		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/bio_brandon",
-		"imgType": "jpg",
-		"infoType": "",
-		"info": "",
-		"office": "Chicago",
-		"filter": "chi"
-	},
-	{
 		"name" : "Biking",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/bio_jen",
@@ -46,7 +36,7 @@
 	{
 		"name" : "Elizabeth",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/bio_jen",
+		"imgSrc": "assets/img/our_culture/bio_brandon",
 		"imgType": "jpg",
 		"infoType": "quote",
 		"info": "This is personal mantra. Take it or leave it. Peace!",
