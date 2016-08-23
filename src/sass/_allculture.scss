@@ -1,8 +1,14 @@
 #overlayContent{
 	#allCultureWrapper{
-		padding-top:100px;
+		padding-top: 50px;
 		margin:0 auto;
+
 		
+		@media screen and (min-width: 1024px) {
+			padding-top: 100px;
+		}
+
+
 		#filterOptions {
 			
 			text-align: center;
