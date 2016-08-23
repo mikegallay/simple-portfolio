@@ -10,7 +10,7 @@
 <section class="contentWrapper" id="allCultureWrapper" style="background:#fffff;">
 	<div class="container">
 		
-		<h1 class="sectionHeading"><span class="blueFont">GLOBAL LEADERSHIP</span></h1>
+		<h1 class="sectionHeading">GLOBAL <span class="blueFont">LEADERSHIP</span></h1>
 
 		<div id="filterOptions">
 			<!-- <input class="cityFilter" id="select-all" value="all" name="radio-select" type="radio"><label id="label-select-all" for="select-ams">All</label> -->
