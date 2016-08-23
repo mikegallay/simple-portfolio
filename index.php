@@ -1,7 +1,5 @@
 <?php
 	error_reporting(E_ALL & ~E_NOTICE);
-// include 'ChromePhp.php';
-// ChromePhp::log('Hello console!');
 	
 	$appRoot = dirname($_SERVER["PHP_SELF"]);
 	
@@ -63,10 +61,10 @@
 	<div id="mainContent">
 		
 		<?php 
-		
 		if ($ishome){ 
 			include_once("modules/_home.php"); 
-		} ?>
+		}
+		?>
 	</div>
 	
 	<div id="overlayCover" class="<?php if ($base_url == "all-culture") {?> white <?php } ?>">
@@ -74,22 +72,20 @@
 	
 	<div id="overlayContent">
 		<?php 
-		if (!$ishome){ 
+		if (!$ishome) { 
 			include_once("modules/" . $base_url . ".php");
-		}?>
+		}
+		?>
 	</div>
 	
 	<?php include_once("modules/_footer.inc.php");?>
 	
 	<?php include_once("modules/_foot.inc.php");?>
 	
-	<?php if ($base_url == "all-culture") {?>
+	<?php if ($base_url == "all-culture") { ?>
 		<script type="text/javascript">
-			// $( document ).ready(function() {
-				mgbOverlay.addAllCultureListeners();
-				setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
-			// });
-	
+			mgbOverlay.addAllCultureListeners();
+			setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
 		</script>
 	<?php } ?>
 	

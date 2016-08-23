@@ -9,14 +9,33 @@
 	min-height: 350px;
 	width: 100%;
 	overflow: hidden;
-	padding-bottom: 2em;
 	background-color: #6d7075;
+	padding-bottom: 2em;
+	
+	@media screen and (min-width: 425px) {
+		padding-bottom: 3em;
+	}
+	
+	@media screen and (min-width: 768px) {
+		padding-bottom: 2.5em;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		padding-bottom: 3em;
+	}
+	
+	@media screen and (min-width: 1440px) {
+		padding-bottom: 4.5em;
+	}
 }
 
-#work, #clients{
-	h1.sectionHeading{
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+h1.sectionHeading{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	
+	@media screen and (min-width: 1024px) {
+		margin-top: 1em;
+		margin-bottom: 0.2em;
 	}
 }
 
@@ -26,11 +45,18 @@
 		margin-right: 0.5%;
 		color:$skyblueColor!important;
 		text-decoration:none;
+		
 		.moreArrow{
 			transform: rotateZ(-90deg);
 			right: -0.5em;
 			display: inline-block;
 			position: relative;
+		}
+	}
+	
+	h1 {
+		&.sectionHeading {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -107,8 +133,6 @@ h1 {
 		font-size: 1.8em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
-		//margin-top: 2.3em;
-//		margin-bottom: 0.5em;
 		letter-spacing: 0.04em;
 		line-height: 1;
 		text-align: center;
@@ -1005,17 +1029,17 @@ h1 {
 }
 
 
-@media screen and (min-width: 320px){
-	
-	h1 {
-		margin: 0;
-	
-		&.sectionHeading {
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}	
-	}
-}
+//@media screen and (min-width: 320px){
+//
+//	h1 {
+//		margin: 0;
+//
+//		&.sectionHeading {
+//			margin-top: 1em;
+//			margin-bottom: 1em;
+//		}
+//	}
+//}
 
 @media screen and (min-width: 375px){
 	
@@ -1182,8 +1206,6 @@ h1 {
 			color: $sectionHeadingColor;
 			letter-spacing: 0.04em;
 			line-height: 1;
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
 		}
 		
 		&.joinTeamCTA, &.latestNews {
@@ -1435,12 +1457,6 @@ h1 {
 		}
 	}
 	
-	h1 {
-		&.sectionHeading {
-			margin-top: 0.5em;
-		}
-	}
-	
 	#officeDetails {
 		h1 {
 			font-size: 4.5em;
@@ -1470,8 +1486,6 @@ h1 {
 			font-size: 6em;
 			font-weight: lighter;
 			color: $sectionHeadingColor;
-			margin-top: 0.6em;
-			margin-bottom: .6em;
 		}
 		
 		&.joinTeamCTA, &.latestNews {

@@ -13,7 +13,19 @@
 		<h1 class="sectionHeading">GLOBAL <span class="blueFont">LEADERSHIP</span></h1>
 
 		<div id="filterOptions">
-			<!-- <input class="cityFilter" id="select-all" value="all" name="radio-select" type="radio"><label id="label-select-all" for="select-ams">All</label> -->
+			<select>
+				<option value="all">All</option>
+				<option value="ams">Amsterdam</option>
+				<option value="chi">Chicago</option>
+				<option value="hk">Hong Kong</option>
+				<option value="ldn">London</option>
+				<option value="ny">New York</option>
+				<option value="par">Paris</option>
+				<option value="sf">San Francisco</option>
+				<option value="sao">Sau Paulo</option>
+				<option value="sg">Shanghai</option>
+			</select>
+			
 			<input class="cityFilter" id="select-all" value="all" name="radio-select" type="checkbox"><label class="active" id="label-select-all" for="select-all">All</label>
 			<input class="cityFilter" id="select-ams" value="ams" name="radio-select" type="checkbox"><label id="label-select-ams" for="select-ams">Amsterdam</label>
 			<input class="cityFilter" id="select-chi" value="chi" name="radio-select" type="checkbox"><label id="label-select-chi" for="select-chi">Chicago</label>
