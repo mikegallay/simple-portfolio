@@ -1737,6 +1737,8 @@ var mgbOverlay = {
 			that.allCultureFilter.push(this.value);
 			$('#label-select-'+this.value).addClass('active');
 			
+			$('select').val(this.value);
+			
 			var filterOption = "";
 			if (that.allCultureFilter[0] == "all") filterOption = "all";
 			that.filterAllCulture(filterOption);
@@ -1744,9 +1746,13 @@ var mgbOverlay = {
 		});
 	   
 	   $('select').change(function() {
-		   that.allCultureFilter = [];
-		   that.allCultureFilter.push(this.value);
+		   $('#allCultureWrapper label').removeClass('active');
 		   
+		   	that.allCultureFilter = [];
+		   	that.allCultureFilter.push(this.value);
+		  	
+			$('#label-select-'+this.value).addClass('active');
+			
 			var filterOption = "";
 			if (that.allCultureFilter[0] == "all") filterOption = "all";
 			that.filterAllCulture(filterOption);
