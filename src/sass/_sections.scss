@@ -15,8 +15,8 @@
 
 #work, #clients{
 	h1.sectionHeading{
-		margin-top: 1em;
-		margin-bottom: 1em;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
 	}
 }
 
@@ -74,7 +74,7 @@
 }
 
 .portfolioContent, .cultureContent, .officeContent, .clientContent, .newsContent {
-	margin-top: 1.2em;
+	//margin-top: 1.2em;
 	display:inline-block;
 	
 	.in-view {
@@ -107,8 +107,8 @@ h1 {
 		font-size: 1.8em;
 		font-weight: lighter;
 		color: $sectionHeadingColor;
-		margin-top: 2.3em;
-		margin-bottom: 0.5em;
+		//margin-top: 2.3em;
+//		margin-bottom: 0.5em;
 		letter-spacing: 0.04em;
 		line-height: 1;
 		text-align: center;
@@ -154,6 +154,7 @@ h1 {
 	float:left;
 	transition: margin 300ms, height 300ms;
 	min-height:150px;
+	
 	&.notLoaded {
 		display:none;
 	}
@@ -1010,8 +1011,8 @@ h1 {
 		margin: 0;
 	
 		&.sectionHeading {
-			margin-top: 1.3em;
-			margin-bottom: 0.5em;
+			margin-top: 1em;
+			margin-bottom: 1em;
 		}	
 	}
 }
@@ -1044,12 +1045,7 @@ h1 {
 
 @media screen and (min-width: 768px) {
 	
-	#work {
-		min-height: 500px;
-		padding-top: 1.5em;
-	}
-
-	#culture {
+	#work, #culture {
 		min-height: 500px;
 	}
 
@@ -1175,12 +1171,6 @@ h1 {
 	#careers {
 		padding:3em 5% 5em;
 	}
-
-	#work,#clients{
-		h1.sectionHeading{
-			margin-top:.75em;
-		}
-	}
 	
 	h1 {
 		margin: 0;
@@ -1192,8 +1182,8 @@ h1 {
 			color: $sectionHeadingColor;
 			letter-spacing: 0.04em;
 			line-height: 1;
-			//margin-top: 0.75em;
-//			margin-bottom: 0.75em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
 		}
 		
 		&.joinTeamCTA, &.latestNews {
@@ -1332,6 +1322,7 @@ h1 {
 		max-width: 80%;
 		margin: 0 auto;
 	}
+	
 	h1 {
 		&.sectionHeading {
 			font-size: 5em;
@@ -1354,7 +1345,11 @@ h1 {
 			}
 		}
 	}
-
+	
+	#work {
+		padding-top: 1.5em;
+	}
+	
 	#news{
 		.newsContent{
 			.newsTile{

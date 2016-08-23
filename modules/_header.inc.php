@@ -13,7 +13,7 @@
 <header id="Home">
 	<nav id="mainNav">
 		<div class="container">
-			<a href="#" id="homeLogo" data-tracking-label="Nav|Click|Logo">
+			<a href="/" id="homeLogo" data-tracking-label="Nav|Click|Logo">
 				<div id="mbLogo">
 					<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve"><rect x="1" y="1" fill="none" stroke="#46ccc5" stroke-linecap="square" stroke-width="3" width="62" height="62" id="rect" /></svg>
 					<div id="mcgarryTXT">

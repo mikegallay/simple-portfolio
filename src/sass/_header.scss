@@ -262,6 +262,7 @@
 		    flex-flow: column nowrap;
 		    align-self: center;
 		    justify-content: space-around;
+			
 			li {
 				display: block;
 				margin-top: 0.5em;
@@ -703,10 +704,6 @@ $pinnedPadding:10px;
 						text-decoration: none;
 	
 						&:hover {
-							color: #46ccc5;
-						}
-	
-						&.active {
 							color: #46ccc5;
 						}
 					}

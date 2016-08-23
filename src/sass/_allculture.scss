@@ -3,34 +3,37 @@
 		padding-top:100px;
 		margin:0 auto;
 		
-		input.cityFilter {
-			display: none;
+		#filterOptions {
+			
+			text-align: center;
+			
+			input.cityFilter {
+				display: none;
 				
-			&~label {
-				display: inline;
-				margin-left: 1em;
-				margin-right: 1em;
-				margin-top: 1em;
+				&~label {
+					display: inline;
+					margin-left: 1em;
+					margin-right: 1em;
+					margin-top: 1em;
 				
-				font-weight: bold;
-				color: #58595b;
-				cursor: pointer;
+					font-weight: bold;
+					color: #58595b;
+					cursor: pointer;
 		
-				&:hover,&.active {
-					color: #46ccc5;
-				}
+					&:hover,&.active {
+						color: #46ccc5;
+					}
 				
-				&:first-of-type {
-					margin-left: 0;
-				}
+					&:first-of-type {
+						margin-left: 0;
+					}
 				
-				&:last-of-type {
-					display: inline-block;
+					&:last-of-type {
+						display: inline-block;
+					}
 				}
 			}
 		}
-		
-
 		
 		.cultureContent{
 			width:100%;

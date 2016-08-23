@@ -7,7 +7,7 @@
 		</div>
 			
 		<div class="video-overlay">
-			<div class="headerHeroText" data-words="#hello,mgb,#$@%!,#content,pizza,nyc,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,#youreit,new york,creative,get 'er done,awesome,beer,cocktails,#agencylife,601 w26th,zeeshan,intel,clorox,burt's bees,united,the standard"></div>
+			<div class="headerHeroText" data-words="#hello,mcgarrybowen,awesome,beer,cocktails,the alamo,chicago,technology,san francisco,new york,mission burritos,#content,pizza,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,creative,awesome,beer,cocktails,#agencylife,intel,hidden valley ranch,burt's bees,united,wrigley field"></div>
 			<div class="moreMsg">that's us. <span class="cta blueFont">get to know more!</span></div>
 		</div>
 		

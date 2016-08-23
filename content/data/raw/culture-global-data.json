@@ -2,7 +2,7 @@
 	{
 		"name" : "Matthew Bull Original",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_ned",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "",
@@ -26,7 +26,7 @@
 	{
 		"name" : "Matthew Bull",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_jen",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
@@ -38,7 +38,7 @@
 	{
 		"name" : "Matthew Bull",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
@@ -50,7 +50,7 @@
 	{
 		"name" : "Matthew Bull",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_brandon",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
@@ -74,7 +74,7 @@
 	{
 		"name" : "Matthew Bull",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_ned",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
@@ -86,7 +86,31 @@
 	{
 		"name" : "Matthew Bull",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_jen",
+		"imgType": "jpg",
+		"infoType": "card",
+		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
+		"linkedin": "michael-gallay-316a074",
+		"trackingLabel": "Home|Click|MatthewBull_Culture",
+		"office": "New York",
+		"filter": "ny"
+	},
+	{
+		"name" : "Matthew Bull",
+		"title": "Chief Creative Officer",
+		"imgSrc": "assets/img/our_culture/bio_ned",
+		"imgType": "jpg",
+		"infoType": "card",
+		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
+		"linkedin": "michael-gallay-316a074",
+		"trackingLabel": "Home|Click|MatthewBull_Culture",
+		"office": "New York",
+		"filter": "ny"
+	},
+	{
+		"name" : "Matthew Bull",
+		"title": "Chief Creative Officer",
+		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
@@ -110,31 +134,7 @@
 	{
 		"name" : "Matthew Bull",
 		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
-		"imgType": "jpg",
-		"infoType": "card",
-		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
-		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "New York",
-		"filter": "ny"
-	},
-	{
-		"name" : "Matthew Bull",
-		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
-		"imgType": "jpg",
-		"infoType": "card",
-		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
-		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "New York",
-		"filter": "ny"
-	},
-	{
-		"name" : "Matthew Bull",
-		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_gordon",
+		"imgSrc": "assets/img/our_culture/bio_brandon",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
