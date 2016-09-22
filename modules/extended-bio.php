@@ -10,7 +10,21 @@
 <section class="contentWrapper" id="globalLeadershipWrapper" style="background:#fffff;">
 	<div class="bioContent">
 		<?php
-			$bioContent = getExtendedBio("content/templates/extended-bio.html", "extended-bios", "gordon-bowen");
+			$url = $_SERVER['REQUEST_URI'];
+			
+			if ($bioId == undefined) {
+				$urlArray = explode("/", $url);
+				$id = $urlArray[count($urlArray)-1];
+			}else{
+				// $parts = parse_url($url);
+// 				parse_str($parts['query'], $query);
+// 				$id = $query['bio'];
+				$id = $bioId;
+				
+			}
+			
+			echo 'id=' . $id;
+			$bioContent = getExtendedBio("content/templates/extended-bio.html", "extended-bios", $id);
 			echo $bioContent;
 		?>
 	</div>

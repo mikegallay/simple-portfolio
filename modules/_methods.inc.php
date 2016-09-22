@@ -168,8 +168,6 @@ function getExtendedBio($tempname, $jsonfile,$id){
 	
 	$objects = json_decode($wrapper, true); 
 	
-	echo $objects;
-	
 	$engine = new Handlebars();
 
 	$renderedHTML = $engine->render($templateStr, $objects);

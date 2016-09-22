@@ -2257,6 +2257,15 @@ var mgbMainSys = {
 		
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
 		
+		if (reqUrl.indexOf('global-leadership/') != -1){
+			//is an extended bio page
+			var bioArr = reqUrl.split('/');
+			var bio = bioArr[bioArr.length-1];
+			var bio_id = bio.replace('.php?ajax=1','');
+			reqUrl = "/extended-bio.php?ajax=1&bio="+bio_id;
+			// reqUrl = "/extended-bio.php?ajax=1";
+		}
+		
 		console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !intContent){ // if going to home page, check if content is already loaded before ajax call
@@ -2367,8 +2376,8 @@ var mgbMainSys = {
 					 //call js to init current page
 					mgbInternalContent.init();
 					
-					//if is all-culture overlay, initialize that content.
-					if (reqUrl.indexOf('global-leadership') != -1){
+					//if is global-leadership content, initialize that content.
+					if (reqUrl.indexOf('global-leadership.') != -1){
 						
 						 setTimeout(function(){
 							 mgbInternalContent.addAllCultureListeners();
@@ -3411,6 +3420,7 @@ var mgbInternalContent = {
 	},
 	
 	addAllCultureListeners : function(){
+		
 		this.allCultureFilter = [];
 		var that = this;
 
