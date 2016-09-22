@@ -10,7 +10,7 @@
 	</svg>
 </span>
 <?php //include("modules/_pinnedToTop.php"); ?>
-<header id="Home">
+<header id="header">
 	<nav id="mainNav">
 		<div class="container">
 			<a href="/" id="homeLogo" data-tracking-label="Nav|Click|Logo">

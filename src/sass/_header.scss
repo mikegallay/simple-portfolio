@@ -1,4 +1,4 @@
-#Home {
+#header {
 	height: auto;
 	width: 100%;
 	position: relative;
@@ -372,12 +372,19 @@
 					}
 				}
 			}
+			
 			//position: absolute;
 		   // top: 0;
 		}
 	}
 }
-
+.nothome{
+	#header{
+		&.settle{
+			transition:top 0s !important;
+		}
+	}
+}
 
 
 .no-autoplay{
@@ -433,6 +440,7 @@
 		width: 100%;
 		min-width: 100%;
 		height: 700px;
+		color:white;
 	
 	    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
 	    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
@@ -530,7 +538,7 @@ $pinnedPadding:10px;
 }
 /*
 .showPinned{
-	#Home{
+	#header{
 		top:$pinnedOffset + $pinnedPadding * 2;
 		nav{
 			transition:top 500ms;
@@ -579,7 +587,7 @@ $pinnedPadding:10px;
 		height:$pinnedOffset;
 		padding:$pinnedPadding;
 	}
-	#Home{
+	#header{
 		top:$pinnedOffset + $pinnedPadding * 2;
 		&:before{
 			top:$pinnedOffset + $pinnedPadding * 2;
@@ -589,7 +597,7 @@ $pinnedPadding:10px;
 //			transition:top 500ms;
 		}
 	}
-	#mainContent,#overlayContent{
+	#mainContent,#internalContent{
 		.parallaxHeader{
 			position:relative!important;
 		}
@@ -599,7 +607,7 @@ $pinnedPadding:10px;
 @media screen and (min-width: 768px) {
 	
 	
-	#Home {
+	#header {
 		nav {
 			#homeLogo {
 				#mbLogo{
@@ -623,7 +631,7 @@ $pinnedPadding:10px;
 
 
 @media screen and (min-width: 768px) {
-	#Home {
+	#header {
 		nav{
 			background: rgba(107, 109, 111, 0.0);
 			//background-image: '';
@@ -760,7 +768,7 @@ $pinnedPadding:10px;
 
 //ugly fix to align header at multiple sizes
 @media screen and (min-width: 1024px) {
-	#Home {
+	#header {
 		nav {
 			.container{
 				max-width: 86%;
@@ -770,7 +778,7 @@ $pinnedPadding:10px;
 }
 
 @media screen and (min-width: 1280px) {
-	#Home {
+	#header {
 		nav {
 			.container{
 				max-width: 84.5%;
@@ -780,7 +788,7 @@ $pinnedPadding:10px;
 }
 
 @media screen and (min-width: 1440px) {
-	#Home {
+	#header {
 		nav {
 			.container{
 				max-width: 84%;
@@ -790,7 +798,7 @@ $pinnedPadding:10px;
 }
 
 @media screen and (min-width: 1900px) {
-	#Home {
+	#header {
 		nav {
 			.container{
 				max-width: 82.7%;

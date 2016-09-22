@@ -1,14 +1,14 @@
 [
 	{
-		"name" : "Matthew Bull Original",
-		"title": "Chief Creative Officer",
-		"imgSrc": "assets/img/our_culture/bio_ned",
+		"name" : "THIS IS USED AS A SPACER",
+		"title": "IT IS NOT SHOWN ON THE PAGE",
+		"imgSrc": "YOU SHOULD NOT EDIT OR REMOVE THIS",
 		"imgType": "jpg",
 		"infoType": "card",
 		"info": "",
-		"linkedin": "michael-gallay-316a074",
-		"trackingLabel": "Home|Click|MatthewBull_Culture",
-		"office": "New York",
+		"linkedin": "",
+		"trackingLabel": "",
+		"office": "",
 		"filter": "always"
 	},
 	{
@@ -21,7 +21,8 @@
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
-		"filter": "ams"
+		"filter": "ams",
+		"moreinfo":"global-leadership/gordon-bowen"
 	},
 	{
 		"name" : "Matthew Bull",

@@ -67,25 +67,41 @@
 		?>
 	</div>
 	
-	<div id="overlayCover" class="<?php if ($base_url == "all-culture") {?> white <?php } ?>">
-	</div>
+	<!-- <div id="overlayCover" class="<?php if ($base_url == "global-leadership") {?> white <?php } ?>">
+	</div> -->
 	
-	<div id="overlayContent">
+	<div id="internalContent">
 		<?php 
 		if (!$ishome) { 
-			include_once("modules/" . $base_url . ".php");
+			$isExtendedBio = strpos($base_url , 'global-leadership/');
+			if ($isExtendedBio == 0) {
+				$extendedArr = explode("/", $base_url);
+				include_once("modules/extended-bio.php");
+			}else{
+				include_once("modules/" . $base_url . ".php");
+			}
+			
 		}
 		?>
+		<div><?php echo 'base= ' . "modules/extended-bio.php?bio=" . $extendedArr[1]; ?>
+			
+		</div>
 	</div>
 	
 	<?php include_once("modules/_footer.inc.php");?>
 	
 	<?php include_once("modules/_foot.inc.php");?>
 	
-	<?php if ($base_url == "all-culture") { ?>
+	<?php if (!$ishome) { 
+		//if ($base_url == "global-leadership") { ?>
 		<script type="text/javascript">
-			mgbOverlay.addAllCultureListeners();
-			setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
+			
+			$('#header').addClass('settle');
+			
+			//global leadership
+			if ($('#globalLeadershipWrapper').length) mgbInternalContent.addAllCultureListeners();
+			//setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
+			mgbInternalContent.resize();
 		</script>
 	<?php } ?>
 	

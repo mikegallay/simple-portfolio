@@ -7,7 +7,7 @@
 	</div>
 </div> -->
 
-<section class="contentWrapper" id="allCultureWrapper" style="background:#fffff;">
+<section class="contentWrapper" id="globalLeadershipWrapper" style="background:#fffff;">
 	<div class="container">
 		
 		<h1 class="sectionHeading">GLOBAL <span class="blueFont">LEADERSHIP</span></h1>
@@ -39,7 +39,7 @@
 		</div>	
 		<div class="cultureContent">
 			<?php
-				$cultureData = HTMLfromTemplateAndJSON("content/templates/all-culture-template.html", "culture-global-data");
+				$cultureData = HTMLfromTemplateAndJSON("content/templates/global-leadership-template.html", "culture-global-data");
 				echo $cultureData; 
 			?>
 		</div>

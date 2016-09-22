@@ -40,7 +40,7 @@ h1.sectionHeading{
 }
 
 #culture{
-	.all-culture{
+	.global-leadership{
 		float:right;
 		margin-right: 0.5%;
 		color:$skyblueColor!important;
@@ -408,6 +408,7 @@ h1 {
 
 
 .cultureTile {
+	color:white;
 	position: relative;
 	width: 49%;
 	margin: 0.5%;
@@ -491,8 +492,20 @@ h1 {
 		opacity:0;
 		cursor:pointer;
 		position:absolute;
+		bottom: 7px;
+	    right: 32px;
+		transform:scale(.85);
+		svg {
+			fill: white;
+		}
+	}
+	
+	.moreinfo{
+		opacity:0;
+		cursor:pointer;
+		position:absolute;
 		bottom: 5px;
-		right: -3px;
+		right: 4px;
 		transform:scale(.85);
 		svg {
 			fill: white;
@@ -603,7 +616,7 @@ h1 {
 			}	
 		}
 
-		.linkedin,.closeCulture{
+		.linkedin,.closeCulture,.moreinfo{
 			opacity: 1;
 			transition: opacity 500ms 750ms;
 			z-index: 20;
@@ -713,7 +726,9 @@ h1 {
 }
 
 #offices{
+	color:white;
 	#officeDetails {
+	
 	display: block;
 	opacity:0;
 	width: 100%;

@@ -144,7 +144,38 @@ function formatCulture($data,$shuffle){
 }
 
 
+function getExtendedBio($tempname, $jsonfile,$id){
+	
+	global $fullData;
 
+	$templateStr = file_get_contents($tempname);
+
+	$tempDataArray = $fullData[$jsonfile];
+	
+	$singleBio = $tempDataArray;
+	
+	foreach ($tempDataArray as &$bio) {
+		if ($bio['id'] == $id){
+			$singleBio = $bio;
+		}
+	}
+	
+	$dataArray = $singleBio;
+
+	$str = json_encode($dataArray);
+	
+	$wrapper = '{ "objects": {"bio":' . $str . ' }}';
+	
+	$objects = json_decode($wrapper, true); 
+	
+	echo $objects;
+	
+	$engine = new Handlebars();
+
+	$renderedHTML = $engine->render($templateStr, $objects);
+	echo $renderedHTML;
+	
+}
 
 
 function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
