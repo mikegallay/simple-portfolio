@@ -654,7 +654,7 @@ var mgbMainSys = {
 			
 			// $('#header').removeClass('settle')
 			
-			if (intContent){ //request page requires overlay
+			if (intContent){ //request page is an internal page
 				
 				if ($('#internalContent').hasClass('active')){
 					$('#internalContent').removeClass('active');
@@ -700,7 +700,7 @@ var mgbMainSys = {
 						}, 1000);
 						
 					}
-					
+					mgbMainSys.checkInView('.ll-all');
 					// mgbMainSys.showFooter();
 
 				},500);

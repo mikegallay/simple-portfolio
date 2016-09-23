@@ -7,7 +7,7 @@
 	</div>
 </div> -->
 
-<section class="contentWrapper" id="globalLeadershipWrapper" style="background:#fffff;">
+<section class="contentWrapper" id="globalLeadershipWrapper" style="background:#ffffff;">
 	<div class="container">
 		
 		<h1 class="sectionHeading">GLOBAL <span class="blueFont">LEADERSHIP</span></h1>

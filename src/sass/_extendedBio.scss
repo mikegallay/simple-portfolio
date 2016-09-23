@@ -1,0 +1,43 @@
+
+#extendedBioWrapper{
+	padding-top:80px;
+	
+	.picColumn{
+		width:100%;
+		float:left;
+		padding-bottom:25px;
+		.picHolder {
+		    width: 100%;
+//			margin: 0 auto;
+overflow:hidden;
+			padding-bottom:25px;
+		}
+		.in-view {
+			opacity: 1;
+			transform:scale(1);
+			transition: opacity 1s 50ms, transform 1s 50ms;
+		}
+	}
+	
+	.bioColumn{
+		width:100%;
+		float:left;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#extendedBioWrapper{
+		max-width:1440px;
+		padding-top:90px;
+		.picColumn{
+			width:40%;
+			.picHolder {
+			    width: 75%;
+				margin:0;
+			}
+		}
+		.bioColumn{
+			width:60%;
+		}
+	}
+}

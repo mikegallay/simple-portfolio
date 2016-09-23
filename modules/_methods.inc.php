@@ -8,6 +8,7 @@ $siteData = 'content/data/merged.json';
 $tempData = "";
 $fullData = "";
 $portfolio_arr = array();
+$bios_arr = array();
 
 //portfolio array control content
 
@@ -17,9 +18,7 @@ function pushToPortFolioArray($data){
 	$tempData = $data;
 	
 	for($i=0; $i < count($tempData); $i++) {
-		//echo count($portfolio_arr);
 		array_push($portfolio_arr, $tempData[$i]['header']);
-		// $portfolio_arr[] = $tempData[$i]['header'];
 	}
 }
 
@@ -40,12 +39,71 @@ function getNextPortfolio($currPort){
 
 //end portfolio control content
 
+//bio array control content
+
+function pushToBiosArray($data){
+	global $bios_arr;
+	
+	$tempData = $data;
+	
+	for($i=0; $i < count($tempData); $i++) {
+		array_push($bios_arr, $tempData[$i]);
+	}
+}
+
+function convertToLinkReady($name){
+	$lowercase = strtolower($name);
+	$linkReady = preg_replace('/\s+/', '-', $lowercase);
+	
+	echo $linkReady;
+}
+
+function getIndexFromBioId($id){
+	global $bios_arr;
+	foreach ($bios_arr as &$bio) {
+		
+		if ($bio['id'] == $id){
+			return $bio['index'];
+		}
+	}
+}
+
+function getPrevGlobalLeader($currLeader,$linkReady){
+	global $bios_arr;
+	$prevLeader = $currLeader-1;
+	if ($prevLeader < 0) $prevLeader = count($bios_arr) - 1;
+	
+	$leader = $bios_arr[$prevLeader]['name'];
+	if ($linkReady) {
+		convertToLinkReady($leader);
+	}else{
+		echo $leader;
+	}
+}
+
+function getNextGlobalLeader($currLeader,$linkReady){
+	global $bios_arr;
+	$nextLeader = $currLeader+1;
+	if ($nextLeader > count($bios_arr) - 1) $nextLeader = 0;
+	
+	$leader = $bios_arr[$nextLeader]['name'];
+	if ($linkReady) {
+		convertToLinkReady($leader);
+	}else{
+		echo $leader;
+	}
+}
+
+//end bio control content
+
 function preloadData(&$tempData, &$fullData, &$siteData){
 	$tempData = file_get_contents($siteData);
 	$fullData = json_decode($tempData, true); 
 	
-	$tempDataArray = $fullData["portfolio-data"];
-	pushToPortFolioArray($tempDataArray);
+	// $tempDataArray = $fullData["portfolio-data"];
+	
+	pushToPortFolioArray($fullData["portfolio-data"]);
+	pushToBiosArray($fullData["extended-bios"]);
 }
 
 preloadData($tempData, $fullData, $siteData);

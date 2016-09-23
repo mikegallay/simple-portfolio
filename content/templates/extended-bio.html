@@ -1,8 +1,34 @@
 {{#each objects}}
-	<div>
+	<div class="subnav left"><a href="../culture" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span>View Culture</a></div>
+	<div class="picColumn">
+		<div class="picHolder">
+			<picture>
+				<!--[if IE 9]>
+					<video style="display: none;"><![endif]-->
+						<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+				<!--[if IE 9]>
+					</video>
+				<![endif]-->
+				<!--[if !lte IE 9]> -->
+					<img src="../assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll-all">
+				<!-- <![endif]-->
+			</picture>
+		</div>
+		
+		{{#if linkedin}}
+			<a href="http://www.linkedin.com/{{{linkedin}}}" target="blank" class="button">VIEW LINKEDIN PROFILE <span class="moreArrow">
+				<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+				</svg>
+			</span></a>
+		{{/if}}
+		
+	</div>
+	<div class="bioColumn">
 		<div>{{{name}}}</div>
+		<div>{{{office}}}</div>
 		<div>{{{title}}}</div>
 		<div>{{{bio}}}</div>
-		<div>{{{office}}}</div>
+		
 	</div>
 {{/each}}

@@ -7,8 +7,8 @@
 	</div>
 </div> -->
 
-<section class="contentWrapper" id="globalLeadershipWrapper" style="background:#fffff;">
-	<div class="bioContent">
+<section class="contentWrapper" id="extendedBioWrapper" style="background:#ffffff;">
+	<div class="container">
 		<?php
 			$url = $_SERVER['REQUEST_URI'];
 			
@@ -16,17 +16,14 @@
 				$urlArray = explode("/", $url);
 				$id = $urlArray[count($urlArray)-1];
 			}else{
-				// $parts = parse_url($url);
-// 				parse_str($parts['query'], $query);
-// 				$id = $query['bio'];
 				$id = $bioId;
-				
 			}
 			
-			echo 'id=' . $id;
+			$currLeader = getIndexFromBioId($id);
+			// echo '$currLeader' . $currLeader;
 			$bioContent = getExtendedBio("content/templates/extended-bio.html", "extended-bios", $id);
-			echo $bioContent;
+			$bioId = undefined;
 		?>
 	</div>
-	<div class="subnav"><a href="<?php getPrevPortfolio(0) ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevPortfolio(0) ?></a> | <a class="all-work" href="/work">View All Work</a> | <a href="<?php getNextPortfolio(0) ?>" id="subnav-prev"><?php getNextPortfolio(0) ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
+	<div class="subnav"><a href="../global-leadership/<?php getPrevGlobalLeader($currLeader,true); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevGlobalLeader($currLeader,false); ?></a> | <a class="view-all" href="/culture">All Culture</a> | <a href="../global-leadership/<?php getNextGlobalLeader($currLeader,true); ?>" id="subnav-prev"><?php getNextGlobalLeader($currLeader,false); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
 </section>

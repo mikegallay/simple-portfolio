@@ -1,5 +1,7 @@
 <?php
-	error_reporting(E_ALL & ~E_NOTICE);
+	require_once 'modules/site-prefs.php';
+	
+	// error_reporting(E_ALL & ~E_NOTICE);
 	
 	$appRoot = dirname($_SERVER["PHP_SELF"]);
 	
@@ -34,19 +36,17 @@
 	if (isset($_GET['ajax'])) {
 		
 		if (!$ishome){ // not the homepage
-			$hasOtherQuery = strpos($base_url , '?ajax=1&');
+			$hasOtherQuery = strpos($base_url , '?ajax=1&'); //passing more than one query through page?
 			$new_urlArray = explode("?", $base_url);
 			if ($hasOtherQuery) {
 				$bioIdArray = explode("=", $new_urlArray[1]); 
-				$bioId = $bioIdArray[count($bioIdArray)-1];
-				$new_url = $new_urlArray[0];//str_replace('ajax=1&', '', $base_url);
+				$bioId = $bioIdArray[count($bioIdArray)-1]; //get last query "bio"
+				// $new_url = $new_urlArray[0]; //define new_url without queries for php include
 				
-			} else{
-				$bioId = undefined;
-// 				$new_url = str_replace('?ajax=1', '', $base_url);
 			}
 
-			$new_url = $new_urlArray[0];
+			$new_url = $new_urlArray[0];  //define new_url without queries for php include
+			
 			$new_url = "modules/" . $new_url;
 			
 		}else{
@@ -110,7 +110,7 @@
 			$('#header').addClass('settle');
 			//global leadership
 			if ($('#globalLeadershipWrapper').length) mgbInternalContent.addAllCultureListeners();
-			//setTimeout(function(){mgbMainSys.checkInView('.ll-all');$('footer').removeClass('tempHide')},2000);
+			setTimeout(function(){mgbMainSys.checkInView('.ll-all');/*$('footer').removeClass('tempHide')*/},1000);
 			mgbInternalContent.resize();
 		</script>
 	<?php } ?>
