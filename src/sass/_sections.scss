@@ -27,6 +27,19 @@
 	@media screen and (min-width: 1440px) {
 		padding-bottom: 4.5em;
 	}
+	.all-news{
+		float:right;
+		margin-right: 0.5%;
+		color:$skyblueColor!important;
+		text-decoration:none;
+		
+		.moreArrow{
+			transform: rotateZ(-90deg);
+			right: -0.5em;
+			display: inline-block;
+			position: relative;
+		}
+	}
 }
 
 h1.sectionHeading{
@@ -286,7 +299,7 @@ h1 {
 	}
 	
 	a {
-		display: inline-block;
+//		display: inline-block;
 		cursor: pointer;
 		
 		.pictureWrap {

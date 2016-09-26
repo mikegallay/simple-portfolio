@@ -1,5 +1,5 @@
 {{#each objects}}
-	<div class="newsTile {{#greaterThan id 5}}notLoaded notShowing{{/greaterThan}}">
+	<div class="newsTile">
 		<a href="{{articleLink}}" data-content="{{contentPath}}" data-header="{{{header}}}"  data-title="{{{description}}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} target="_blank">
 			<div class="pictureWrap">
 
@@ -36,11 +36,8 @@
 							</video>
 						<![endif]-->
 						<!--[if !lte IE 9]> -->
-							<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
+							<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll-all lazy">
 						<!-- <![endif]-->
-					{{/equal}}
-					{{#equal imgType 'gif'}}
-						<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
 					{{/equal}}
 				</picture>
 			</div>

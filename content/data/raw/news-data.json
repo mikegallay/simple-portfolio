@@ -71,5 +71,17 @@
 		"publishedBy": "Ad Age",
 		"articleLink": "http://adage.com/article/agency-news/mcgarrybowen-acquires-arrechedera-y-claverol/303986/",
 		"trackingLabel": "Home|Click|Article_News"
+	},
+	{	
+		"id": 6,
+		"imgSrc": "assets/img/news/mbmexico-news",
+		"imgType": "jpg",
+		"contentPath": "",
+		"header": "mcgarrybowen launches in Mexico",
+		"description": "",
+		"altText": "MB Mexico",
+		"publishedBy": "Ad Age",
+		"articleLink": "http://adage.com/article/agency-news/mcgarrybowen-acquires-arrechedera-y-claverol/303986/",
+		"trackingLabel": "Home|Click|Article_News"
 	}
 ]

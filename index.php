@@ -108,8 +108,14 @@
 		<script type="text/javascript">
 			
 			$('#header').addClass('settle');
+			
 			//global leadership
 			if ($('#globalLeadershipWrapper').length) mgbInternalContent.addAllCultureListeners();
+			
+			//global leadership
+			if ($('#allNewsWrapper').length) mgbInternalContent.addAllNewsListeners();
+			
+			
 			setTimeout(function(){mgbMainSys.checkInView('.ll-all');/*$('footer').removeClass('tempHide')*/},1000);
 			mgbInternalContent.resize();
 		</script>

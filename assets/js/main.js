@@ -1689,6 +1689,7 @@ var mgbMainSys = {
 	currPage: null,
 	mainContentLoaded: false,
 	allCultureLoaded: false,
+	allNewsLoaded: false,
 	mobileNavMaxWidth: 768 - 16,//1024,
 	
 	//load targets for tiles
@@ -2183,7 +2184,7 @@ var mgbMainSys = {
 			} 
 		});	*/
 		var el = '.ll';
-		if (mgbMainSys.allCultureLoaded) {el = '.ll-all';}
+		if (mgbMainSys.allCultureLoaded || mgbMainSys.allNewsLoaded) {el = '.ll-all';}
 		mgbMainSys.checkInView(el);
 	},
 	
@@ -2344,6 +2345,7 @@ var mgbMainSys = {
         request.done(function (response) {
 			
 			mgbMainSys.allCultureLoaded = false;
+			mgbMainSys.allNewsLoaded = false;
 			
 			// $('#header').removeClass('settle')
 			
@@ -2393,6 +2395,19 @@ var mgbMainSys = {
 						}, 1000);
 						
 					}
+					
+					//if is all-news content, initialize that content.
+					if (reqUrl.indexOf('all-news.') != -1){
+						
+						 setTimeout(function(){
+							 mgbInternalContent.addAllNewsListeners();
+							 mgbMainSys.checkInView('.ll-all');
+							 resize();
+						}, 1000);
+						
+					}
+					
+					
 					mgbMainSys.checkInView('.ll-all');
 					// mgbMainSys.showFooter();
 
@@ -3371,7 +3386,7 @@ var mgbContent = {
 		
 		$('.arrow').addClass('offTile');
 		$('.picHolder').removeAttr('style');
-		that.cultureContent.removeClass("stretchOut shrinkMe");
+		if(that.cultureContent) that.cultureContent.removeClass("stretchOut shrinkMe");
 		
 		setTimeout(function(){		
 			$('.arrow').removeClass('offTile');
@@ -3426,7 +3441,9 @@ var mgbInternalContent = {
 			that.removeVideo();
 		});
 	},
-	
+	addAllNewsListeners : function(){
+		mgbMainSys.allNewsLoaded = true;
+	},
 	addAllCultureListeners : function(){
 		
 		this.allCultureFilter = [];
@@ -3758,8 +3775,7 @@ function resize(){
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
 		
-	if (mgbMainSys.mainContentLoaded == true || mgbMainSys.allCultureLoaded == true) {
-		
+	if (mgbMainSys.mainContentLoaded == true || mgbMainSys.allCultureLoaded == true || mgbMainSys.allNewsLoaded == true) {
 		mgbMainSys.resize();
 		mgbContent.resize();
 	}

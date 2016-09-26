@@ -107,7 +107,7 @@
 		<section id="news" class="homeSection fullBleed">
 			<div class="container">
 				<h1 class="sectionHeading whiteText">LATEST NEWS</h1>
-				
+				<a class="all-news" href="all-news" data-tracking-label="Home|Click|AllNews">All News</a>
 				<div class="newsContent clearfix">
 					<?php
 						$newsData = HTMLfromTemplateAndJSON("content/templates/news-template.html", "news-data");

@@ -1,0 +1,22 @@
+#internalContent{
+	#allNewsWrapper{
+		padding-top: 50px;
+		margin:0 auto;
+			
+		.in-view {
+			opacity: 1!important;
+			transform:scale(1);
+			transition: opacity 1s 50ms, transform 1s 50ms;
+		}
+		
+		@media screen and (min-width: 768px) {
+			padding-top: 40px;
+			.newsContent{
+				.newsTile{
+					width:24%;
+				}
+				
+			}
+		}
+	}
+}
