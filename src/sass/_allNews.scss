@@ -18,5 +18,14 @@
 				
 			}
 		}
+		
+		@media screen and (min-width: 1024px) {
+			.newsContent{
+				.newsTile{
+					width:15.6%;
+				}
+				
+			}
+		}
 	}
 }

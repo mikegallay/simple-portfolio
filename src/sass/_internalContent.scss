@@ -91,7 +91,7 @@
 			
 	}
 	#heroImage{
-		max-height:500px;
+		max-height:335px;
 		height:0;
 		overflow:hidden;
 		display:block;
@@ -131,6 +131,9 @@
 			opacity:1;
 //			transition:top 300ms 300ms,opacity 500ms 1000ms,background-color 1s linear;
 			transition:top 0ms,opacity 500ms;
+			&.growing{
+				transition:top 300ms,opacity 500ms;
+			}
 		}
 	}
 	
@@ -147,8 +150,12 @@
 	width: 100%;
 	height: 0;
 	background: black;
-	transition:height 500ms;
+	transition:height 0ms;
+//	overflow:hidden;
 	//display:none;
+	&.growing{
+		transition:height 300ms;
+	}
 	&.expanded{
 		transition:height 0ms;
 	}

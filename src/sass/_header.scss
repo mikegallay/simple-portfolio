@@ -383,6 +383,9 @@
 		&.settle{
 			transition:top 0s !important;
 		}
+		&:before{
+			opacity:1;
+		}
 	}
 }
 

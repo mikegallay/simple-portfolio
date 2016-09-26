@@ -2517,7 +2517,13 @@ var mgbHeader = {
 				// mgbMainSys.getPage(appRoot, true);
 			
 				mgbContent.deactivateActiveContent();
-			}	
+			} else{
+				if ($(window).attr('scrollY') > 0) {
+					$("html, body").animate({
+							scrollTop: 0,
+						}, 500);
+				}
+			}
 		});
 		
 		
@@ -3543,6 +3549,9 @@ var mgbInternalContent = {
 	loadVideo : function(id){
 		var that = this;
 		$('.videoHolder').empty();
+		// console.log($('#heroImage').height())
+		$('.videoHolder').css('height',$('#heroImage').height() + "px");
+		
 		$('#heroImage').addClass('faded collapsed');
 		$('#header').addClass('removed');
 		$('.videoClose').addClass('revealed');
@@ -3551,23 +3560,34 @@ var mgbInternalContent = {
 		var videoHeight = (lastWindowWidth*9)/16;
 		
 		
-		$('.videoHolder').css('height',videoHeight + "px");
+		
+		
 		setTimeout(function(){
+			$('.videoHolder').addClass('growing');
+			$('.contentWrapper').addClass('growing');
+			
+			$('.videoHolder').css('height',videoHeight + "px");
+			
 			
 			$('.videoHolder').html('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=1&player_id=vimeoPlayer" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="vimeoPlayer" data-vimeoId='+id+'></iframe></div>');
 		
 			$('.videoWrapper').fitVids();
-			$('.videoHolder').addClass('expanded');
+					
 			
 			$('html,body').animate({ scrollTop: 0 }, 'fast');
-			
-			mgbInternalContent.resize();
+
 			
 			that.addVideoEvents();
 			
+			setTimeout(function(){mgbInternalContent.resize();},300);
+			
+			setTimeout(function(){
+				$('.videoHolder').addClass('expanded').removeClass('growing');
+				$('.contentWrapper').removeClass('growing');
+			},600);
 			
 			
-		},600);
+		},300);
 	},
 	
 	addVideoEvents : function(){
@@ -3628,6 +3648,7 @@ var mgbInternalContent = {
 		$('.videoHolder').empty();
 		$('.videoHolder').removeAttr('style');
 		$('.videoHolder').removeClass('expanded');
+		$('.videoHolder').css('height','0px');
 		$('#heroImage').removeClass('faded collapsed');
 		$('#header').removeClass('removed');
 		$('.videoClose').removeClass('revealed');
@@ -3647,9 +3668,12 @@ var mgbInternalContent = {
 		
 		if($("#heroImage").length > 0) {
 			var hi = $('#heroImage img').innerHeight();
+			if (hi>335) hi=335;
+			// if (hi<400) hi=400;
 			$('.subpageHeader').css('height',hi + "px");
 			$('#heroImage').css('height',hi + "px");
 			$('#internalContent .contentWrapper').css({'top':hi + "px",'margin-bottom':hi + "px"});
+			// $('.videoHolder').css('height',hi + "px");
 		}
 		
 		if($(".videoHolder").length > 0) {
