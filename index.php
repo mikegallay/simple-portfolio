@@ -53,7 +53,7 @@
 			$new_url = "modules/_home.php";
 			
 		}
-		echo $new_url;
+		// echo $new_url;
 		include($new_url);
 	  
 		return;

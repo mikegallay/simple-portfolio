@@ -1921,7 +1921,7 @@ var mgbMainSys = {
 	addListeners : function(){
 		var that = this;
 		$(document).on('click', '[data-tracking-label]', function(e) {
-			
+
 			if($(this).attr('target') != "_blank" ) { 
 				//console.log("asdfasdfasdf")
 				e.preventDefault();
@@ -1999,7 +1999,7 @@ var mgbMainSys = {
 	          //  ga('send', 'event', pieces[0], pieces[1], pieces[2], {
 	               // 'hitCallback': function() {
 	                    //don't use location href = window.location.href = $self.attr('href');
-						mgbMainSys.getPage($self.attr('href')); 
+						mgbMainSys.getPage($self.attr('href'));
 	               // }
 			   // });
 	        } else {
@@ -2222,6 +2222,13 @@ var mgbMainSys = {
     },
 	
     getPage: function (page, bool) {
+		
+		var sliced;
+		
+		if (page.slice(0,1) == "/" && page != "/") {
+			sliced = page.slice(1,page.length);
+			page = sliced;
+		}
 		
 		this.pushHistoryState(page, bool);
 		
@@ -2486,13 +2493,13 @@ var mgbHeader = {
 	
 	addListeners : function(){
 		var that = this;
-		$('#homeLogo').on('click',function(e){
+		$('#homeLogo').one('click',function(e){
 			e.preventDefault();		
 			
 			if (!$('body').hasClass('ishome')){
 				console.log('ar',appRoot);
 				mgbHeader.deactivateNavActive();
-				mgbMainSys.getPage(appRoot, true);
+				// mgbMainSys.getPage(appRoot, true);
 			
 				mgbContent.deactivateActiveContent();
 			}	
@@ -2512,17 +2519,19 @@ var mgbHeader = {
 	
 		$('nav .menu a').on('click', function(e){
 			//e.preventDefault();
+			/*
 			$('nav #menuToggleHolder').removeClass("active");
+						
+						that.hideMobileNav();
+			var currLink = $(this);*/
 			
-			that.hideMobileNav();
-
 			/*if (mgbMainSys.currPage != appRoot) {
 				mgbMainSys.getPage('/',true);
 				return;
 			}*/
 			
 			// $(this).removeClass('active');
-			var currLink = $(this);
+			
 
 			//var hashValue = $(this).attr('href');
 			
@@ -2916,7 +2925,7 @@ var mgbContent = {
 				//addPlayPause('pause');
                 //$('.vimeoVideos').append('<p class="slide-count">' + setSlideCount(this.currentSlide) + '</p>');
 
-                $('.vimeoVideos .slick-prev, .slick-next').on('click', function () {
+              //  $('.vimeoVideos .slick-prev, .slick-next').on('click', function () {
                     /*var getButton = $(event.target).data( "ga-label" );
 					
                     if(getButton == "Arrow_Right"){
@@ -2930,7 +2939,7 @@ var mgbContent = {
 					
 					//togglePlayPause('play');*/
                    
-                });
+             //   });
 
                 //for ada removing the slide count on init
                 //$('.slide-count').remove();
@@ -3397,7 +3406,6 @@ var mgbInternalContent = {
 		
 		$('.subnav a').on('click',function(e){
 			e.preventDefault();		
-
 			// mgbHeader.deactivateNavActive();
 			mgbMainSys.getPage($(this).attr('href'), true);
 		

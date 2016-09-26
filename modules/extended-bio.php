@@ -25,5 +25,5 @@
 			$bioId = undefined;
 		?>
 	</div>
-	<div class="subnav"><a href="../global-leadership/<?php getPrevGlobalLeader($currLeader,true); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevGlobalLeader($currLeader,false); ?></a> | <a class="view-all" href="/culture">All Culture</a> | <a href="../global-leadership/<?php getNextGlobalLeader($currLeader,true); ?>" id="subnav-prev"><?php getNextGlobalLeader($currLeader,false); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
+	<div class="subnav"><a href="/global-leadership/<?php getPrevGlobalLeader($currLeader,true); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevGlobalLeader($currLeader,false); ?></a> | <a class="view-all" href="/culture">All Culture</a> | <a href="/global-leadership/<?php getNextGlobalLeader($currLeader,true); ?>" id="subnav-prev"><?php getNextGlobalLeader($currLeader,false); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
 </section>

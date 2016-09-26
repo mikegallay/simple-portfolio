@@ -55,7 +55,7 @@ function convertToLinkReady($name){
 	$lowercase = strtolower($name);
 	$linkReady = preg_replace('/\s+/', '-', $lowercase);
 	
-	echo $linkReady;
+	return $linkReady;
 }
 
 function getIndexFromBioId($id){
@@ -75,7 +75,7 @@ function getPrevGlobalLeader($currLeader,$linkReady){
 	
 	$leader = $bios_arr[$prevLeader]['name'];
 	if ($linkReady) {
-		convertToLinkReady($leader);
+		echo convertToLinkReady($leader);
 	}else{
 		echo $leader;
 	}
@@ -88,7 +88,7 @@ function getNextGlobalLeader($currLeader,$linkReady){
 	
 	$leader = $bios_arr[$nextLeader]['name'];
 	if ($linkReady) {
-		convertToLinkReady($leader);
+		echo convertToLinkReady($leader);
 	}else{
 		echo $leader;
 	}
