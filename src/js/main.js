@@ -702,11 +702,11 @@ var mgbMainSys = {
 					//if is global-leadership content, initialize that content.
 					if (reqUrl.indexOf('global-leadership.') != -1){
 						
-						 setTimeout(function(){
+						// setTimeout(function(){
 							 mgbInternalContent.addAllCultureListeners();
 							 mgbMainSys.checkInView('.ll-all');
 							 resize();
-						}, 1000);
+						//}, 1000);
 						
 					}
 					
@@ -854,11 +854,11 @@ var mgbHeader = {
 	
 		$('nav .menu a').on('click', function(e){
 			//e.preventDefault();
-			/*
+			
 			$('nav #menuToggleHolder').removeClass("active");
 						
 						that.hideMobileNav();
-			var currLink = $(this);*/
+						var currLink = $(this);
 			
 			/*if (mgbMainSys.currPage != appRoot) {
 				mgbMainSys.getPage('/',true);
@@ -1582,7 +1582,8 @@ var mgbContent = {
 				mgbMainSys.scrollToSection("offices",250);
 
 				setTimeout(function() {
-					$("#officeDetails").css('height',$('.rightSide').height()+"px");
+					var rs = $('.rightSide').height() - 60;
+					$("#officeDetails").css('height',rs+"px");
 					
 					setTimeout(function() {
 						$("#officeDetails").addClass('showDetails');

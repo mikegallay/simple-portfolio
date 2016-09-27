@@ -50,16 +50,16 @@
 		"trackingLabel": "Home|Click|NewYork_Office",
 		"stat1Name": "Employees",
 		"stat1Cnt": "200+",
-		"stat1Icon": "",
+		"stat1Icon": "employees",
 		"stat2Name": "Dogs",
 		"stat2Cnt": "25",
-		"stat2Icon": "",
+		"stat2Icon": "dogs",
 		"stat3Name": "Windows",
 		"stat3Cnt": "306",
-		"stat3Icon": "",
+		"stat3Icon": "windows",
 		"stat4Name": "Grills",
 		"stat4Cnt": "6",
-		"stat4Icon": ""		
+		"stat4Icon": "grills"		
 	},
 	{	
 		"imgSrc": "assets/img/our_offices/office_sanantonio",

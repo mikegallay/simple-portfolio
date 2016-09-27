@@ -178,48 +178,48 @@
 					
 						<div class="officeStats">
 							<!-- STAT -->
+							{{#if stat1Name}}
 							<div>
-								<svg class="icon icon_employees-inline" role="img" aria-labelledby="title">
-								  <use xlink:href="#icon_employees"></use>
-								  <!--[if lt IE 9]>
-									  <img src="assets/img/svg/ie8-fallback/icon_employees.png" alt="icon_employees icon"> 								  <!--<![endif]-->
+								<svg class="icon icon_{{{stat1Icon}}}-inline" role="img" aria-labelledby="title">
+								  <use xlink:href="#icon_{{{stat1Icon}}}"></use>
 								</svg>
-								<h4>200+</h4>
-								<span>EMPLOYEES<span>
+								<h4 class="statCount">{{{stat1Cnt}}}</h4>
+								<p class="statLabel">{{{stat1Name}}}</p>
 							</div>
+							{{/if}}
 							
 							<!-- STAT -->
+							{{#if stat2Name}}
 							<div>
-								<svg class="icon icon_dogs-inline" role="img" aria-labelledby="title">
-								  <use xlink:href="#icon_dogs"></use>
-								  <!--[if lt IE 9]>
-									  <img src="assets/img/svg/ie8-fallback/icon_dogs.png" alt="icon_dogs icon"> 								  <!--<![endif]-->
+								<svg class="icon icon_{{{stat2Icon}}}-inline" role="img" aria-labelledby="title">
+								  <use xlink:href="#icon_{{{stat2Icon}}}"></use>
 								</svg>
-								<h4>25</h4>
-								<span>DOGS<span>
+								<h4 class="statCount">{{{stat2Cnt}}}</h4>
+								<p class="statLabel">{{{stat2Name}}}</p>
 							</div>
+							{{/if}}
 							
 							<!-- STAT -->
+							{{#if stat3Name}}
 							<div>
-								<svg class="icon icon_windows-inline" role="img" aria-labelledby="title">
-								  <use xlink:href="#icon_windows"></use>
-								  <!--[if lt IE 9]>
-									  <img src="assets/img/svg/ie8-fallback/icon_dogs.png" alt="icon_windows icon"> 								  <!--<![endif]-->
+								<svg class="icon icon_{{{stat3Icon}}}-inline" role="img" aria-labelledby="title">
+								  <use xlink:href="#icon_{{{stat3Icon}}}"></use>
 								</svg>
-								<h4>306</h4>
-								<span>WINDOWS<span>
+								<h4 class="statCount">{{{stat3Cnt}}}</h4>
+								<p class="statLabel">{{{stat3Name}}}</p>
 							</div>
+							{{/if}}
 							
 							<!-- STAT -->
+							{{#if stat4Name}}
 							<div>
-								<svg class="icon icon_grills-inline" role="img" aria-labelledby="title">
-								  <use xlink:href="#icon_grills"></use>
-								  <!--[if lt IE 9]>
-									  <img src="assets/img/svg/ie8-fallback/icon_grills.png" alt="icon_windows icon"> 								  <!--<![endif]-->
+								<svg class="icon icon_{{{stat4Icon}}}-inline" role="img" aria-labelledby="title">
+								  <use xlink:href="#icon_{{{stat4Icon}}}"></use>
 								</svg>
-								<h4>6</h4>
-								<span>GRILLS<span>
+								<h4 class="statCount">{{{stat4Cnt}}}</h4>
+								<p class="statLabel">{{{stat4Name}}}</p>
 							</div>
+							{{/if}}
 						</div>
 					</div>
 				

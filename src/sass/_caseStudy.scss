@@ -31,26 +31,25 @@
 		width:100%;
 		margin-bottom:0em;
 		display: inline-block;
-		.workCopy{
+		.workLeft{
 			width:90%;
 			margin:0 auto;
 		    margin-bottom: 1em;
 			p{
-				padding-bottom: 1em;
 				margin:0 0 1em; 
 			}
-			.moreArrow{
-				transform:rotateZ(-90deg);
-				//top: -0.39em;
-				right: -0.5em;
-				display: inline-block;
-				position:relative;
-			}
+			
 		}
-		.workThumbs{
+		.workRight{
 			width:100%;
 			float:left;
 			margin-top:1em;
+		    display: inline-block;
+		    padding-bottom: 3.5em;
+			.workThumbs{
+				    display: inline-block;
+				padding-bottom:1em;
+			}
 			.workThumb{
 				width:49%;
 			    margin: .5%;
@@ -121,6 +120,26 @@
 					}
 				} 
 			}
+			.websiteButton{
+				.button{
+					
+				    display: block;
+				    text-align: center;
+				    font-size: 1.2em;
+				    padding: .8em 0 .5em;
+				    margin-left: .5%;
+				    margin-right: .5%;
+					.moreArrow{
+						transform:rotateZ(-90deg);
+						//top: -0.39em;
+						right: -0.5em;
+						display: inline-block;
+						position:relative;
+						top: -2px;
+					}
+				}
+				
+			}
 		}
 	}
 }
@@ -128,9 +147,17 @@
 @media screen and (min-width: 768px) {
 	.workContainer{
 		.workDetails{
-			.workThumbs{
+			.workRight{
 				.workThumb{
 					width:32.3%;
+				}
+				.websiteButton{
+					.button{
+						font-size:1.1em;
+						display: inline-block;
+						    padding: .8em .75em .6em;
+							margin:0;
+					}
 				}
 			}			
 		}
@@ -146,20 +173,20 @@
 			margin:0 0 1em;
 		}
 		.workDetails{
-			.workCopy{
+			.workLeft{
 				width:50%;
 				float:left;
 				//margin:0;
 			}
-			.workThumbs{
+			.workRight{
 				width:45%;
 				margin-left:5%;
 				float:right;
 				margin-top:0em;
 				.workThumb{
-					float:right;
-					width:30%;
-					margin: 0 0 2.5% 2.5%;
+				    float: left;
+				    width: 30%;
+				    margin: 0 2.5% 2.5% 0;
 					a {
 						&:hover,&.active {
 							.prjDescription {
