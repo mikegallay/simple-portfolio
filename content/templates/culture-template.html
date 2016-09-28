@@ -1,5 +1,5 @@
 {{#each objects}}
-	<div class="cultureTile {{#greaterThan id 4}}notLoaded notShowing{{/greaterThan}} {{dir}} {{#if isDouble}}col-2-by-1{{/if}}" {{#if filter}}data-office-filter="{{{filter}}}"{{/if}}>
+	<div class="cultureTile {{#greaterThan index 4}}notLoaded notShowing{{/greaterThan}} {{dir}} {{#if isDouble}}col-2-by-1{{/if}}" {{#if filter}}data-office-filter="{{{filter}}}"{{/if}}>
 		{{#if info}}
 		<a href="#" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} class="cultureLink">
 		{{/if}}
@@ -14,11 +14,11 @@
 								</video>
 							<![endif]-->
 							<!--[if !lte IE 9]> -->
-								<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 4}}lazy{{/greaterThan}}">
+								<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 4}}lazy{{/greaterThan}}">
 							<!-- <![endif]-->
 						{{/equal}}
 						{{#equal imgType 'gif'}}
-							<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan id 5}}lazy{{/greaterThan}}">
+							<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
 						{{/equal}}
 					</picture>
 			

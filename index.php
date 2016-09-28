@@ -114,7 +114,6 @@
 			
 		}
 		?>
-		<!-- <div><?php echo 'base= ' . $base_url ?></div> -->
 	</div>
 	
 	<?php include_once("modules/_footer.inc.php");?>

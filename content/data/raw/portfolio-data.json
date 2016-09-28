@@ -1,10 +1,10 @@
 [
 	{
-		"id": 0,
+		"index": 0,
+		"id":"intel",
 		"imgSrc": "JimParsons",
 		"imgType": "jpg",
-		"contentPath": "work/intel",
-		"header": "Intel",
+		"clientName": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		"isShowcase": "isShowcase",
@@ -23,11 +23,11 @@
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 1,
+		"index": 1,
+		"id":"maserati",
 		"imgSrc": "Maserati",
 		"imgType": "jpg",
-		"contentPath": "work/maserati",
-		"header": "Maserati",
+		"clientName": "Maserati",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		"isShowcase": "isShowcase",
@@ -39,284 +39,272 @@
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 2,
+		"index": 2,
+		"id":"canada-dry",
 		"imgSrc": "CanadaDry",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Canada Dry",
+		"clientName": "Canada Dry",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		"isShowcaseFinal": "isShowcaseFinal",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
+		"csClient":"Canada Dry",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 3,
+		"index": 3,
+		"id":"oscar-meyer",
 		"imgSrc": "princess",
 		"imgType": "gif",
-		"contentPath": "119997282",
-		"header": "Oscar Meyer",
+		"clientName": "Oscar Meyer",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{	
-		"id": 4,
+		"index": 4,
+		"id":"aussie",
 		"imgSrc": "Aussie",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Aussie",
+		"clientName": "Aussie",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 5,
+		"index": 5,
+		"id":"marriott",
 		"imgSrc": "MrT",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Marriot",
+		"clientName": "Marriot",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 6,
+		"index": 6,
+		"id":"pure-circle",
 		"imgSrc": "Leaf",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "PureCircle",
+		"clientName": "PureCircle",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 7,
+		"index": 7,
+		"id":"marriott-nfl",
 		"imgSrc": "NFL",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "NFL",
+		"clientName": "NFL",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 8,
+		"index": 8,
+		"id":"verizon-apophis",
 		"imgSrc": "Apophis",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Verizon",
+		"clientName": "Verizon",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 
 	{
-		"id": 9,
-		"imgSrc": "Mariott",
+		"index": 9,
+		"id":"marriott",
+		"imgSrc": "Marriott",
 		"imgType": "jpg",
-		"contentPath": "124646110",
-		"header": "Mariott",
+		"clientName": "Marriott",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{	
-		"id": 10,
+		"index": 10,
+		"id":"intel-inside",
 		"imgSrc": "IntelInside",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Intel",
+		"clientName": "Intel",
 		"description": "Description goes here",
 		"altText": "Description goes here",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 11,
+		"index": 11,
+		"id":"iem",
 		"imgSrc": "IEM",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Intel",
+		"clientName": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},	
 	{	
-		"id": 12,
+		"index": 12,
+		"id":"intel-jim",
 		"imgSrc": "JimParsons",
 		"imgType": "jpg",
-		"contentPath": "144913605,147738221",
-		"header": "Intel",
+		"clientName": "Intel",
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 13,
+		"index": 13,
+		"id":"honda",
 		"imgSrc": "Honda",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Honda",
+		"clientName": "Honda",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
 	{
-		"id": 14,
+		"index": 14,
+		"id":"verizon",
 		"imgSrc": "Verizon",
 		"imgType": "jpg",
-		"contentPath": "",
-		"header": "Verizon",
+		"clientName": "Verizon",
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
 		"csHero":"intel",
-		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/work_pages/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/work_pages/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/work_pages/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	}

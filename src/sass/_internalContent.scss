@@ -47,6 +47,8 @@
 	    padding-bottom: 1em;
 	    margin-top: -1em;
 		display:inline-block;
+	    padding-top: 2em;
+		
 		&.left{
 			text-align:left;
 		}
@@ -88,6 +90,7 @@
 		top:0;
 		position:relative;
 	    padding: 0 0.5em;
+		padding-bottom:3em !important;
 			
 	}
 	#heroImage{

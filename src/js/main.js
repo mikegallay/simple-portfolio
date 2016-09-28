@@ -588,6 +588,15 @@ var mgbMainSys = {
 			// reqUrl = "/extended-bio.php?ajax=1";
 		}
 		
+		if (reqUrl.indexOf('work/') != -1){
+			//is an extended bio page
+			var portArr = reqUrl.split('/');
+			var port = portArr[portArr.length-1];
+			var port_id = port.replace('.php?ajax=1','');
+			reqUrl = "/case-study.php?ajax=1&port="+port_id;
+			// reqUrl = "/extended-bio.php?ajax=1";
+		}
+		
 		console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !intContent){ // if going to home page, check if content is already loaded before ajax call

@@ -27,7 +27,7 @@ function getPrevPortfolio($currPort,$linkReady){
 	$prevPort = $currPort-1;
 	if ($prevPort < 0) $prevPort = count($portfolio_arr) - 1;
 	
-	$port = $portfolio_arr[$prevPort]['header'];
+	$port = $portfolio_arr[$prevPort]['clientName'];
 	// echo $portfolio_arr[$prevPort];
 	if ($linkReady) {
 		echo convertToLinkReady($port);
@@ -41,7 +41,7 @@ function getNextPortfolio($currPort,$linkReady){
 	$nextPort = $currPort+1;
 	if ($nextPort > count($portfolio_arr) - 1) $nextPort = 0;
 	
-	$port = $portfolio_arr[$nextPort]['header'];
+	$port = $portfolio_arr[$nextPort]['clientName'];
 	if ($linkReady) {
 		echo convertToLinkReady($port);
 	}else{
@@ -52,8 +52,8 @@ function getNextPortfolio($currPort,$linkReady){
 function getIndexFromPortId($id){
 	global $portfolio_arr;
 	foreach ($portfolio_arr as &$port) {
-		
-		if ($port['id'] == $id){
+		$lowercase = strtolower($port['clientName']);
+		if ($lowercase == $id){
 			return $port['index'];
 		}
 	}
@@ -201,7 +201,7 @@ function formatCulture($data,$shuffle){
 	
 	for ($i = 0; $i < count($compositeArr); $i++) {
 		
-		$compositeArr[$i]['id'] = $i;
+		$compositeArr[$i]['index'] = $i;
 		
 		if ($compositeArr[$i]['info'] != ''){
 		   if ($i%2==0){

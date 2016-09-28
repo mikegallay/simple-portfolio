@@ -25,6 +25,15 @@ overflow:hidden;
 	}
 }
 
+
+#internalContent {
+	#extendedBioWrapper{
+		.cs-subnav{
+			padding-top: 4em !important;
+		}
+	}
+}
+
 @media screen and (min-width: 768px) {
 	#internalContent #extendedBioWrapper{
 		max-width:1440px;
