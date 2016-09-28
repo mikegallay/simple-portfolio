@@ -2121,7 +2121,7 @@ var mgbMainSys = {
 		
 		// var scrollBottom = $(document).height() - $("body").height();
 		
-		var stickyNavRevealY = mgbHeroVideo.maxVideoHeight - 75
+		var stickyNavRevealY = mgbHeroVideo.maxVideoHeight - 90
 		
 		//removed because overlay doesn't use this anymore
 		/*if ($('#overlayContent').hasClass('active')){
@@ -3667,9 +3667,11 @@ var mgbInternalContent = {
 		
 		//add height style to hero image to be able to collapse it using css3
 		
+		var maxHero = 350;
+		
 		if($("#heroImage").length > 0) {
 			var hi = $('#heroImage img').innerHeight();
-			if (hi>335) hi=335;
+			if (hi>maxHero) hi=maxHero;
 			// if (hi<400) hi=400;
 			$('.subpageHeader').css('height',hi + "px");
 			$('#heroImage').css('height',hi + "px");

@@ -1,9 +1,16 @@
+{{#each objects}}
 <div class="subpageHeader parallaxHeader">
 	<div id="heroImage">
-		<?php
-		pictureFillImage($appRoot.'assets/img/work_pages/intel','alt copy goes here')
-
-		?>
+		<picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="../assets/img/case_studies/{{{csHero}}}_large.jpg, ../assets/img/case_studies/{{{csHero}}}_large@2x.jpg 2x" media="(min-width: 768px)">
+			<source srcset="../assets/img/case_studies/{{{csHero}}}.jpg, ../assets/img/case_studies/{{{csHero}}}@2x.jpg 2x">
+            <!--[if IE 9]></video><![endif]-->
+            <!--[if !lte IE 9]> -->
+            <img srcset="../assets/img/case_studies/{{{csHero}}}.jpg" src="../assets/img/common/blank.png" alt="' . $alt . '">
+            <!-- <![endif]-->
+           
+        </picture>
 	</div>
 
 	<div class="videoHolder"></div>
@@ -17,18 +24,41 @@
 	
 </div>
 
-<div class="contentWrapper" style="background:white;">
+<div class="contentWrapper" id="caseStudyWrapper" style="background:white;">
 	<section class="workContainer">
-	<div class="subnav left"><a href="work" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span>View All Work</a></div>
+	<div class="subnav left"><a href="/work" id="subnav-prev"><span class="prev_arrow">
+		<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+		</svg></span>View All Work</a>
+	</div>
 	<div class="workHeadline">
-		<h1>Innovation Adventure, TV & Video</h1>
-		<p>Client: Intel</p>
-		<p>Office: Chicago</p>
+		<h1>{{{csTitle}}}</h1>
+		<p>Client: {{{csClient}}}</p>
+		<p>Office: {{{csOffice}}}</p>
 	</div>
 	<div class="workDetails">
 		<div class="workRight">
+			{{#if csVideos}}
 			<div class="workThumbs">
-				<div class="workThumb">
+				{{#each csVideos}}
+					<div class="workThumb">
+						<a data-content="144913605" data-tracking-label="{{{csTitle}}}|Click|{{{vidTitle}}}" aria-label="">
+							<img src="../assets/img/case_studies/{{{vidImgSrc}}}.jpg" alt="">
+							<div class="playButton">
+								<svg class="icon playbutton-inline" role="img" aria-labelledby="title">
+								  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playbutton"></use>
+								</svg>
+							</div>
+							<figcaption class="prjDescription">
+								<div class="prjDscrWrap">
+									<h3>{{{vidTitle}}}</h3>
+								</div>
+								<div class="cultureArrow"></div>
+							</figcaption>
+						</a>
+					</div>
+				{{/each}}
+				<!-- <div class="workThumb">
 					<a data-content="144913605" data-tracking-label="Intel|Click|Video1" aria-label="">
 						<img src="../assets/img/work_pages/intel_thumb01.jpg" alt="">
 						<div class="playButton">
@@ -52,7 +82,7 @@
 							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playbutton"></use>
 							</svg>
 						</div>
-						
+
 						<figcaption class="prjDescription">
 							<div class="prjDscrWrap">
 								<h3>Wakey wakey</h3>
@@ -76,27 +106,20 @@
 							<div class="cultureArrow"></div>
 						</figcaption>
 					</a>
-				</div>
+				</div> -->
 			</div>
+			{{/if}}
+			{{#if website}}
 			<div class="websiteButton">
-				<a href="" class="button">VIEW THE WEBSITE <span class="moreArrow">
+				<a href="{{{website}}}" class="button">VIEW THE WEBSITE <span class="moreArrow">
 					<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
 					</svg>
 				</span></a>
 			</div>
+			{{/if}}
 		</div>
-		<div class="workLeft">
-			<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
-			
-			<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
-			<p>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.</p>
-			
-					<!-- <a href="../work/maserati">jump to maserati</a> -->
-		</div>
+		<div class="workLeft">{{{csBody}}}</div>
 		
 	</div>
-	
-	<div class="subnav"><a href="<?php getPrevPortfolio(0) ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevPortfolio(0) ?></a> | <a class="all-work" href="/work">View All Work</a> | <a href="<?php getNextPortfolio(0) ?>" id="subnav-prev"><?php getNextPortfolio(0) ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
-</section>
-</div>
+{{/each}}

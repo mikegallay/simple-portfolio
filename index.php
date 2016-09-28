@@ -6,6 +6,7 @@
 	$appRoot = dirname($_SERVER["PHP_SELF"]);
 	
 	$bioId = undefined;
+	$portId = undefined;
 	
 	if($appRoot !== '/' ) $appRoot = $appRoot.'/'; //-- needs trailing slash
 	
@@ -36,11 +37,24 @@
 	if (isset($_GET['ajax'])) {
 		
 		if (!$ishome){ // not the homepage
+			
+			//check to see if there are other queries associated with the ajax url. 
+			//used for the bio and portfolio pages
+			
 			$hasOtherQuery = strpos($base_url , '?ajax=1&'); //passing more than one query through page?
 			$new_urlArray = explode("?", $base_url);
 			if ($hasOtherQuery) {
-				$bioIdArray = explode("=", $new_urlArray[1]); 
-				$bioId = $bioIdArray[count($bioIdArray)-1]; //get last query "bio"
+				$isBioLink = strpos($new_urlArray[1] , 'bio');
+				
+				if ($isBioLink){
+					$bioIdArray = explode("=", $new_urlArray[1]); 
+					$bioId = $bioIdArray[count($bioIdArray)-1]; //get last query "bio"
+				}else{
+					$portIdArray = explode("=", $new_urlArray[1]); 
+					$portId = $portIdArray[count($portIdArray)-1]; //get last query "port"
+				}
+				
+				
 				// $new_url = $new_urlArray[0]; //define new_url without queries for php include
 				
 			}
@@ -88,8 +102,12 @@
 		<?php 
 		if (!$ishome) { 
 			$isExtendedBio = strpos($base_url , 'global-leadership/');
+			$isCaseStudy = strpos($base_url , 'work/');
+			
 			if ($isExtendedBio === 0) {
 				include_once("modules/extended-bio.php");
+			}else if ($isCaseStudy === 0){
+				include_once("modules/case-study.php");
 			}else{
 				include_once("modules/" . $base_url . ".php");
 			}

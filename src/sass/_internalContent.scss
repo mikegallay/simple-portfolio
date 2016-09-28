@@ -44,7 +44,7 @@
 		width:100%;
 		text-align:center;
 		color:$textGray;
-	    padding-bottom: 1.3em;
+	    padding-bottom: 1em;
 	    margin-top: -1em;
 		display:inline-block;
 		&.left{
@@ -87,15 +87,15 @@
 		opacity:0;
 		top:0;
 		position:relative;
-	    margin: 0 0.5em;
+	    padding: 0 0.5em;
 			
 	}
 	#heroImage{
-		max-height:335px;
+		max-height:350px;
 		height:0;
 		overflow:hidden;
 		display:block;
-		height:335px;
+		height:auto;
 		/*display: flex;
 		justify-content: center; 
 		align-items: center;*/
@@ -197,7 +197,7 @@
 @media screen and (min-width: 768px) {
 	#internalContent{
 		.contentWrapper{
-			margin:0 1em;
+			padding:0 1em;
 		}
 	}
 	
@@ -206,7 +206,7 @@
 @media screen and (min-width: 1024px) {
 	#internalContent{
 		.contentWrapper{
-			margin:0;
+			padding:0;
 		}
 	}
 	

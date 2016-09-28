@@ -1,5 +1,5 @@
 
-#extendedBioWrapper{
+#internalContent #extendedBioWrapper{
 	padding-top:80px;
 	
 	.picColumn{
@@ -26,7 +26,7 @@ overflow:hidden;
 }
 
 @media screen and (min-width: 768px) {
-	#extendedBioWrapper{
+	#internalContent #extendedBioWrapper{
 		max-width:1440px;
 		padding-top:90px;
 		.picColumn{

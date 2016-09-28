@@ -18,26 +18,55 @@ function pushToPortFolioArray($data){
 	$tempData = $data;
 	
 	for($i=0; $i < count($tempData); $i++) {
-		array_push($portfolio_arr, $tempData[$i]['header']);
+		array_push($portfolio_arr, $tempData[$i]);
 	}
 }
 
-function getPrevPortfolio($currPort){
+function getPrevPortfolio($currPort,$linkReady){
 	global $portfolio_arr;
-	$prevPort = $currPort--;
-	if ($prevPort == 0) $prevPort = count($portfolio_arr) - 1;
-	echo $portfolio_arr[$prevPort];
+	$prevPort = $currPort-1;
+	if ($prevPort < 0) $prevPort = count($portfolio_arr) - 1;
 	
+	$port = $portfolio_arr[$prevPort]['header'];
+	// echo $portfolio_arr[$prevPort];
+	if ($linkReady) {
+		echo convertToLinkReady($port);
+	}else{
+		echo $port;
+	}
 }
 
-function getNextPortfolio($currPort){
+function getNextPortfolio($currPort,$linkReady){
 	global $portfolio_arr;
-	$nextPort = $currPort++;
+	$nextPort = $currPort+1;
 	if ($nextPort > count($portfolio_arr) - 1) $nextPort = 0;
-	echo $portfolio_arr[$nextPort];
+	
+	$port = $portfolio_arr[$nextPort]['header'];
+	if ($linkReady) {
+		echo convertToLinkReady($port);
+	}else{
+		echo $port;
+	}
+}
+
+function getIndexFromPortId($id){
+	global $portfolio_arr;
+	foreach ($portfolio_arr as &$port) {
+		
+		if ($port['id'] == $id){
+			return $port['index'];
+		}
+	}
 }
 
 //end portfolio control content
+
+function convertToLinkReady($link){
+	$lowercase = strtolower($link);
+	$linkReady = preg_replace('/\s+/', '-', $lowercase);
+	
+	return $linkReady;
+}
 
 //bio array control content
 
@@ -51,12 +80,7 @@ function pushToBiosArray($data){
 	}
 }
 
-function convertToLinkReady($name){
-	$lowercase = strtolower($name);
-	$linkReady = preg_replace('/\s+/', '-', $lowercase);
-	
-	return $linkReady;
-}
+
 
 function getIndexFromBioId($id){
 	global $bios_arr;
