@@ -43,6 +43,7 @@
 }
 
 h1.sectionHeading{
+	cursor: default;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	
@@ -156,6 +157,7 @@ h1 {
 	}
 	
 	&.sectionHeadingSmall {
+		cursor: default;
 		font-family: 'Din-Regular', sans-serif;
 		font-size: 2.5em;
 		font-weight: lighter;

@@ -570,9 +570,6 @@ var mgbMainSys = {
 							mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
 							return;
 						}*/
-			
-			
-			
 		}else{
 			page += '.php';
 		}
@@ -740,13 +737,9 @@ var mgbMainSys = {
 				
 				// console.log('repsonse ' ,response);
 				// 
-				
-				
-				
+
 				$('body').removeClass('nothome').addClass('ishome');
-				
-				
-				
+
 				// $('#overlayCover').removeClass('active');
 				
 				$('footer').removeAttr('style');
@@ -969,24 +962,24 @@ var mgbHeader = {
 	}
 };
 
-var mgbTimeLine = {
-	mgbtl: null,
-	timelineAnimation : new TimelineMax(),
-	init: function(){
-		mgbtl = $('#mb_timeline_path2');
-		
-		TweenMax.set(mgbtl, {drawSVG: "100% 100%"});
-		
-		this.timelineAnimation.eventCallback("onComplete", function(){
-			$(".timelineDate").addClass("active");
-		});
-	},
-	
-	drawTimeline: function(){
-		this.timelineAnimation.to(mgbtl, 2, {drawSVG: "100% 0%", ease: Cubic.easeInOut});
-		this.timelineAnimation.play();
-	}
-};
+// var mgbTimeLine = {
+// 	mgbtl: null,
+// 	timelineAnimation : new TimelineMax(),
+// 	init: function(){
+// 		mgbtl = $('#mb_timeline_path2');
+//
+// 		TweenMax.set(mgbtl, {drawSVG: "100% 100%"});
+//
+// 		this.timelineAnimation.eventCallback("onComplete", function(){
+// 			$(".timelineDate").addClass("active");
+// 		});
+// 	},
+//
+// 	drawTimeline: function(){
+// 		this.timelineAnimation.to(mgbtl, 2, {drawSVG: "100% 0%", ease: Cubic.easeInOut});
+// 		this.timelineAnimation.play();
+// 	}
+// };
 
 var mgbHeroVideo = {
 	overlayContainer : null,
@@ -994,6 +987,7 @@ var mgbHeroVideo = {
 	welcomeContainer : null,
 	videoPlayerContainer : null,
 	msgContainer: null,
+	vimeoPlayer: null,
 	wordArray: null,
 	firstWord: '',
 	videoHeight : 0,
@@ -1120,10 +1114,17 @@ var mgbHeroVideo = {
 		}*/	
 	},
 	
+	toggleHeaderElements: function() {
+		$(".headerHeroText").fadeOut();
+		$(".moreMsg").fadeOut();
+		$("#header").fadeOut();
+		$("#downArrow").fadeOut();
+	},
+	
 	initWordCycle:function(){
 		var that = this;
 		// var headerWords = new TimelineMax({onComplete: function(){that.wordCycleComplete()}});
-		var spinLength = 4;
+		var spinLength = 1;
 		var n = 0;
 		
 		for (i=0; i < spinLength*10; i++){
@@ -1137,28 +1138,33 @@ var mgbHeroVideo = {
 	},
 	
 	initHeaderCopy:function(){
-		this.wordArray = $(".headerHeroText").data("words").split(",").sort(function() { return 0.5 - Math.random() });
-		this.messageContainer.on('click', function(){
-			$(".headerHeroText").text('');
-		});
+		var that = this;
 		
-		this.messageContainer.keypress(function(e){
-			var code = e.which;
-			
-			if(e.which == 13){
-				e.preventDefault(); 
-				
-				$(".headerHeroText").text('');
-			}
-		});
+		this.wordArray = $(".headerHeroText").data("words").split(",").sort(function() { return 0.5 - Math.random() });
 		
 		$(".cta").on("click", function(){
-			$(".headerHeroText").text('').focus();
+			var vId = $(this).data('content');
+			
+			that.toggleHeaderElements();
+			
+					$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/' + vId + '?background=0 width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="176376361" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+			
+			that.vimeoPlayer = new Vimeo.Player($('#headerVideo'));
+			
+			that.vimeoPlayer.loadVideo(vId).then(function(id) {
+				that.vimeoplayer.setVolume(1);
+				that.vimeoPlayer.setLoop(false);
+				that.vimeoPlayer.play();	
+			}).catch(function(error) {
+				
+				console.log('Could not load video');
+				
+			});
 		});
 		
 		this.changeHeaderCopy();
 		
-		if((location.hash === '')) {
+		if(location.hash === '') {
 			this.initWordCycle();
 		}
 	},
@@ -1185,29 +1191,22 @@ var mgbHeroVideo = {
 	},
 	
 	loadHeaderVideo: function() {
+		var that = this;
 		this.maxVideoHeight = 700;
-		var headerVideoPath = 'assets/videos/Main_Sequence_opt';
-	
-		//$("#headerVideo").html('<source src="'+headerVideoPath+'.mp4" type="video/mp4"><source src="'+headerVideoPath+'.webm" type="video/webm">' );
+		//var headerVideoPath = 'assets/videos/Main_Sequence_opt';
 		
-		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/176376361?title=0&loop=1&byline=0&portrait=0&background=1&badge=0&api=1&autoplay=1&player_id=vimeoPlayer width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="176376361" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+		$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/176376361?background=1 width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="176376361" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+		
+		that.vimeoPlayer = new Vimeo.Player($('#headerVideo'));
+		
+		that.vimeoPlayer.ready().then(function(){
+			that.vimeoPlayer.setLoop(true);
+		});
 		
 		setTimeout(function(){
 			$("#headerVideo #vimeoPlayer").css({"width": "100%", "height":"100%" });
-			
-			var iframe = $("#vimeoPlayer")[0],
-			player = $f(iframe);
-		
-			console.log("player name: ", player);
-		
-			player.addEvent('ready', function(){
-				player.api('setVolume', 0);
-			});
 		}, 1000);
 
-		
-		// $('.videoHolder').html('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'?title=0&byline=0&portrait=0&badge=0&api=1&autoplay=0&player_id=vimeoPlayer" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="vimeoPlayer" data-vimeoId='+id+'></iframe></div>');
-		//
 		// $('.videoWrapper').fitVids();
 		
 		this.resize();
@@ -1353,9 +1352,7 @@ var mgbContent = {
 			   mgbHeader.deactivateNavActive();
 			   $("#nav-work").addClass('active');
 				var thisPage = $(this).data('content');
-				mgbMainSys.getPage(thisPage,true);
-				
-				
+				mgbMainSys.getPage(thisPage,true);	
             });
         });
 		
@@ -1765,6 +1762,7 @@ var mgbInternalContent = {
 			var vidId = $(this).attr('data-content');
 			that.loadVideo(vidId);
 		});
+		
 		$('.videoClose').on('click', function(e){
 			e.preventDefault();
 			$('.workThumb a').removeClass('active');
@@ -1882,9 +1880,6 @@ var mgbInternalContent = {
 		
 		
 		var videoHeight = (lastWindowWidth*9)/16;
-		
-		
-		
 		
 		setTimeout(function(){
 			$('.videoHolder').addClass('growing');

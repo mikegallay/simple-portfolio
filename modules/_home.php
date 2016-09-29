@@ -8,7 +8,7 @@
 			
 		<div class="video-overlay">
 			<div class="headerHeroText" data-words="#hello,mcgarrybowen,awesome,beer,cocktails,the alamo,chicago,technology,san francisco,new york,mission burritos,#content,pizza,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,creative,awesome,beer,cocktails,#agencylife,intel,hidden valley ranch,burt's bees,united,wrigley field"></div>
-			<div class="moreMsg">that's us. <span class="cta blueFont">get to know more!</span></div>
+			<div class="moreMsg">that's us. <span class="cta blueFont" data-content="183027079"><a>get to know more!</a></span></div>
 		</div>
 		
 		<div id="downArrow">
