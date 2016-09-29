@@ -52,7 +52,7 @@ function getNextPortfolio($currPort,$linkReady){
 function getIndexFromPortId($id){
 	global $portfolio_arr;
 	foreach ($portfolio_arr as &$port) {
-		$lowercase = strtolower($port['clientName']);
+		$lowercase = strtolower($port['id']);
 		if ($lowercase == $id){
 			return $port['index'];
 		}

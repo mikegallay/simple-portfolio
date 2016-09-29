@@ -1056,10 +1056,12 @@ h1 {
 			&.cityName{
 				font-size:1em;
 				font-family: 'Din-Regular', sans-serif;
+				z-index:1;
 			}
 			&.cityTime{
 				font-size:.8em;
 				font-family: 'Din-Regular', sans-serif;
+				z-index:1;
 			}
 		}
 	}		
