@@ -439,7 +439,46 @@
 			left: 0;
 			width: 100%;
 			height: auto;
+			background:black;
+			
 		}	
+		.aboutUsClose{
+			//display:none;
+			position:absolute;
+			top:30px;
+			right:30px;
+		    font-size: 16px;
+			.videoClose{
+				transform:rotate(-45deg);
+				opacity:0;
+				visibility:hidden;
+				transition:opacity 500ms 500ms;
+			    position: inherit;
+			    right: 0px;
+				cursor:pointer;
+		
+				svg {
+					fill: white;
+				}
+				&:hover{
+					svg {
+						fill: $skyblueColor;
+					}
+				}
+			}
+		}
+		&.aboutUs{
+			.responsive-video {
+				margin:0!important;
+			}
+			.aboutUsClose{
+				.videoClose{
+					visibility:visible;
+					opacity:1;
+				}
+			}
+		}
+		
 	}
 	
 	.video-overlay {
@@ -530,85 +569,68 @@
 	#welcomeImage{display:none;}
 }
 
-$pinnedOffset:60px;
+$pinnedOffset:80px;
 $pinnedPadding:10px;
 
 .pinned{
 	height:0px;
 	width:100%;
 	color:$sectionHeadingColor;
-	padding:0 $pinnedPadding;
 	margin:0;
 	background:lightblue;
 	overflow:hidden;
-	transition:height 500ms,padding 500ms;
+	transition:height 500ms;
     z-index: 99;
     position: relative;
+	.pinnedContent{
+		margin:$pinnedPadding;
+	}
 }
-/*
+.pinnedActive{
+	#header.settle{
+		transition:top 0ms!important;
+	}
+	.pinned{
+		transition:height 0ms!important;
+	}
+}
 .showPinned{
-	#header{
-		top:$pinnedOffset + $pinnedPadding * 2;
-		nav{
-			transition:top 500ms;
-		}
-	}
-	#mainContent,#overlayContent{
-		.parallaxHeader{
-			position:relative!important;
-		}
-		.pinned{
-			width:100%;
-			height:$pinnedOffset;
-			padding:$pinnedPadding;
-		}
-	}
-	
-	#overlayContent{
-		.contentWrapper{
-			//top:0px !important;
-			//transition:top 0s;
-		}
-	}
-	
-	&.ishome{
-		.overlayContent{
-			.pinned{
-				height:0px;
-			}
-		}
-	}
-	
 	&.nothome{
-		#mainContent{
-			.pinned{
-				height:0px;
-				padding:0 $pinnedPadding;
-			}
+		#header.settle{
+			transition:top 500ms!important;
 		}
 	}
-}
-*/
-
-.showPinned{
 	.pinned{
 		width:100%;
 		height:$pinnedOffset;
-		padding:$pinnedPadding;
 	}
 	#header{
-		top:$pinnedOffset + $pinnedPadding * 2;
-		&:before{
-			top:$pinnedOffset + $pinnedPadding * 2;
-		}
-		nav{
-//			top:$pinnedOffset + $pinnedPadding * 2;
-//			transition:top 500ms;
+		top:$pinnedOffset;
+		&.settle{
+			transition: top 500ms;
 		}
 	}
 	#mainContent,#internalContent{
 		.parallaxHeader{
 			position:relative!important;
+		}
+	
+	}
+	#mainContent{
+		.contentWrapper{
+			margin-top:-700px!important;
+			
+		}
+	}
+}
+
+.autoplay{
+	.showPinned{
+		#mainContent{
+			.contentWrapper{
+				margin-top:-500px!important;
+			
+			}
 		}
 	}
 }

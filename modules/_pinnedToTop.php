@@ -1,4 +1,7 @@
 <div class="pinned">
-	This content is pinned to the top.
-	<button id="removePinnedHeader">Hide Me</button>
+	<div class="pinnedContent">
+		This content is pinned to the top.
+		<button id="removePinnedHeader">Hide Me</button>
+	</div>
+	
 </div>

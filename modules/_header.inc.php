@@ -9,7 +9,7 @@
 		</defs>
 	</svg>
 </span>
-<?php //include("modules/_pinnedToTop.php"); ?>
+<?php include("modules/_pinnedToTop.php"); ?>
 <header id="header">
 	<nav id="mainNav">
 		<div class="container">

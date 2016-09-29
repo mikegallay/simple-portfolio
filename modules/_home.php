@@ -4,12 +4,21 @@
 		
 		<div id="welcomeVideo">	
 			<div class="responsive-video" id="headerVideo"></div>
+			<div class="aboutUsClose shadow">
+				<a class="videoClose" data-tracking-label="Home|AboutUsVideo|Close">
+					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
+					</svg>
+				</a>
+			</div>
 		</div>
 			
 		<div class="video-overlay">
 			<div class="headerHeroText" data-words="#hello,mcgarrybowen,awesome,beer,cocktails,the alamo,chicago,technology,san francisco,new york,mission burritos,#content,pizza,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,creative,awesome,beer,cocktails,#agencylife,intel,hidden valley ranch,burt's bees,united,wrigley field"></div>
 			<div class="moreMsg">that's us. <span class="cta blueFont" data-content="183027079"><a>get to know more!</a></span></div>
 		</div>
+		
+		
 		
 		<div id="downArrow">
 			<?php addIcon('marquee_down_arrow')?>
