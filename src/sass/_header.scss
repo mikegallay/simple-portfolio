@@ -570,7 +570,7 @@
 }
 
 $pinnedOffset:80px;
-$pinnedPadding:10px;
+//$pinnedPadding:25px;
 
 .pinned{
 	height:0px;
@@ -583,7 +583,51 @@ $pinnedPadding:10px;
     z-index: 99;
     position: relative;
 	.pinnedContent{
-		margin:$pinnedPadding;
+		margin:10px 35px 10px 10px;
+		font-size:.9em;
+		@media screen and (min-width: 768px) {
+			margin:25px;
+			font-size:1.1em;
+		}
+		.exitToOffice{
+			 font-weight: bold;
+			 text-decoration:underline;
+		}
+		.pinnedClose{
+			position:absolute;
+			top:10px;
+			right:10px;
+		    font-size: 12px;
+			span{
+			    position: relative;
+			    float: left;
+			    right: 30px;
+			    top: 4px;
+			    font-size: 1.3em;
+			    text-align: right;
+			    font-weight: bold;
+				display:none;
+				@media screen and (min-width: 768px) {
+					display:block;
+				}
+			}
+			#removePinnedHeader{
+				transform:rotate(-45deg);
+			    position: inherit;
+			    right: 0px;
+				cursor:pointer;
+	
+				svg {
+					fill: #58595b;
+				}
+				&:hover{
+					svg {
+						fill: white;
+					}
+				}
+			}
+		}
+		
 	}
 }
 .pinnedActive{
