@@ -26,9 +26,11 @@ var mgbMainSys = {
 	currLang: 'en',
 	
 	pinnedDismissed: false,
-	tempCookie: false,
+	// permHidePinned: false,
 	
 	init : function() {
+		
+		// console.log('pd',this.pinnedDismissed);
 		var that = this;
 		
 		
@@ -41,7 +43,7 @@ var mgbMainSys = {
 		
 		},2000);
 		
-		if (this.tempCookie == true){
+		if (localStorage.getItem('pinnedContent') == 'dismissed'){
 			this.pinnedDismissed = true;
 		}else{
 			setTimeout(function(){
@@ -142,7 +144,8 @@ var mgbMainSys = {
 			$('body').addClass('pinnedActive');
 		}else{
 			console.log('set global pinned to hidden');
-			this.tempCookie = true;
+			this.pinnedDismissed = true;
+			localStorage.setItem('pinnedContent', 'dismissed');
 			//var hiddenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)mgbHeaderHidden\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 			
 			//if(hiddenCookie !== "true"){
@@ -459,8 +462,8 @@ var mgbMainSys = {
 		var currScroll = $(window).attr('scrollY');
 		
 		
-		
-		if (currScroll == 0 && this.tempCookie == true){
+		console.log(currScroll,mgbMainSys.pinnedDismissed)
+		if (currScroll == 0 && mgbMainSys.pinnedDismissed == false){
 			//var hiddenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)mgbHeaderHidden\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 			
 		//	if(hiddenCookie == false) {
