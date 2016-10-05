@@ -101,11 +101,14 @@
 	<div id="internalContent">
 		<?php 
 		if (!$ishome) { 
-			$isExtendedBio = strpos($base_url , 'global-leadership/');
+			$isLeaderBio = strpos($base_url , 'global-leadership/');
+			$isPeopleBio = strpos($base_url , 'people/');
 			$isCaseStudy = strpos($base_url , 'work/');
 			
-			if ($isExtendedBio === 0) {
-				include_once("modules/extended-bio.php");
+			if ($isLeaderBio === 0) {
+				include_once("modules/leader-bio.php");
+			}else if ($isPeopleBio === 0){
+				include_once("modules/people-bio.php");
 			}else if ($isCaseStudy === 0){
 				include_once("modules/case-study.php");
 			}else{

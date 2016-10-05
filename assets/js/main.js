@@ -1816,7 +1816,11 @@ var mgbMainSys = {
 // 	},
 
 	checkLocation : function(){
-		this.showPinned();
+		// this.showPinned();
+		setTimeout(function(){
+			mgbMainSys.showPinned();
+			// $("body").addClass("showPinned");
+		},4000)
 	
 	},
 	
@@ -2145,11 +2149,7 @@ var mgbMainSys = {
 		var currScroll = $(window).attr('scrollY');
 		
 		
-		console.log(currScroll,mgbMainSys.pinnedDismissed)
 		if (currScroll == 0 && mgbMainSys.pinnedDismissed == false){
-			//var hiddenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)mgbHeaderHidden\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-			
-		//	if(hiddenCookie == false) {
 			if($('body').hasClass('ishome')) {
 				mgbMainSys.showPinned();
 			
@@ -2306,7 +2306,16 @@ var mgbMainSys = {
 			var bioArr = reqUrl.split('/');
 			var bio = bioArr[bioArr.length-1];
 			var bio_id = bio.replace('.php?ajax=1','');
-			reqUrl = "/extended-bio.php?ajax=1&bio="+bio_id;
+			reqUrl = "/leader-bio.php?ajax=1&bio="+bio_id;
+			// reqUrl = "/extended-bio.php?ajax=1";
+		}
+		
+		if (reqUrl.indexOf('people/') != -1){
+			//is an extended bio page
+			var bioArr = reqUrl.split('/');
+			var bio = bioArr[bioArr.length-1];
+			var bio_id = bio.replace('.php?ajax=1','');
+			reqUrl = "/people-bio.php?ajax=1&bio="+bio_id;
 			// reqUrl = "/extended-bio.php?ajax=1";
 		}
 		
@@ -3832,10 +3841,7 @@ if(!isMobile.any()) {
 //uncomment .flag and select in _header_inc.php
 //uncomment #header nav ul.menu:after css in _header.css
 // mgbMainSys.handleOfficeSelector();
-setTimeout(function(){
-	//mgbMainSys.showPinned();
-	// $("body").addClass("showPinned");
-},4000)
+
 
 if($("body").hasClass("ishome") && !isMobile.any()) {
 	mgbHeroVideo.loadHeaderVideo();

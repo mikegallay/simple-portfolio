@@ -39,7 +39,7 @@
 		</div>	
 		<div class="cultureContent">
 			<?php
-				$cultureData = HTMLfromTemplateAndJSON("content/templates/global-leadership-template.html", "culture-global-data");
+				$cultureData = HTMLfromTemplateAndJSON("content/templates/global-leadership-template.html", "culture-global-data",false);
 				echo $cultureData; 
 			?>
 		</div>

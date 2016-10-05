@@ -43,15 +43,15 @@
 						<!--[if IE 9]>
 							<video style="display: none;"><![endif]-->
 							
-								<source data-srcset="{{{heroImage}}}_large.jpg, {{{heroImage}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
-							<source data-srcset="{{{heroImage}}}_medium.jpg, {{{heroImage}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
-							<source data-srcset="{{{heroImage}}}.jpg, {{{heroImage}}}@2x.jpg 2x">
+								<source data-srcset="{{{interiorImage}}}_large.jpg, {{{interiorImage}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
+							<source data-srcset="{{{interiorImage}}}_medium.jpg, {{{interiorImage}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
+							<source data-srcset="{{{interiorImage}}}.jpg, {{{interiorImage}}}@2x.jpg 2x">
 							
 						<!--[if IE 9]>
 							</video>
 						<![endif]-->
 						<!--[if !lte IE 9]> -->
-							<img src="assets/img/common/blank.png" data-src="{{{heroImage}}}_medium@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
+							<img src="assets/img/common/blank.png" data-src="{{{interiorImage}}}_medium@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
 						<!-- <![endif]-->
 						</picture>
 					</div>
@@ -180,7 +180,7 @@
 							<!-- STAT -->
 							{{#if stat1Name}}
 							<div>
-								<svg class="icon icon_{{{stat1Icon}}}-inline" role="img" aria-labelledby="title">
+								<svg class="icon icon_{{{stat1Icon}}}-inline office-stat-icon" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_{{{stat1Icon}}}"></use>
 								</svg>
 								<h4 class="statCount">{{{stat1Cnt}}}</h4>
@@ -191,7 +191,7 @@
 							<!-- STAT -->
 							{{#if stat2Name}}
 							<div>
-								<svg class="icon icon_{{{stat2Icon}}}-inline" role="img" aria-labelledby="title">
+								<svg class="icon icon_{{{stat2Icon}}}-inline office-stat-icon" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_{{{stat2Icon}}}"></use>
 								</svg>
 								<h4 class="statCount">{{{stat2Cnt}}}</h4>
@@ -202,7 +202,7 @@
 							<!-- STAT -->
 							{{#if stat3Name}}
 							<div>
-								<svg class="icon icon_{{{stat3Icon}}}-inline" role="img" aria-labelledby="title">
+								<svg class="icon icon_{{{stat3Icon}}}-inline office-stat-icon" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_{{{stat3Icon}}}"></use>
 								</svg>
 								<h4 class="statCount">{{{stat3Cnt}}}</h4>
@@ -213,7 +213,7 @@
 							<!-- STAT -->
 							{{#if stat4Name}}
 							<div>
-								<svg class="icon icon_{{{stat4Icon}}}-inline" role="img" aria-labelledby="title">
+								<svg class="icon icon_{{{stat4Icon}}}-inline office-stat-icon" role="img" aria-labelledby="title">
 								  <use xlink:href="#icon_{{{stat4Icon}}}"></use>
 								</svg>
 								<h4 class="statCount">{{{stat4Cnt}}}</h4>

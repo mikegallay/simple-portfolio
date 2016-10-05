@@ -5,18 +5,18 @@
 				{{#equal imgType 'jpg'}}
 					<!--[if IE 9]>
 						<video style="display: none;"><![endif]-->
-							{{#if isShowcaseFinal }} <source data-srcset="assets/img/our_work/{{{imgSrc}}}_large.jpg, assets/img/our_work/{{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 1900px)">{{/if}}
-							{{#if isShowcase }} <source data-srcset="assets/img/our_work/{{{imgSrc}}}_large.jpg, assets/img/our_work/{{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 768px)">{{/if}}
-							<source data-srcset="assets/img/our_work/{{{imgSrc}}}.jpg, assets/img/our_work/{{{imgSrc}}}@2x.jpg 2x">
+							{{#if isShowcaseFinal }} <source data-srcset="{{{imgSrc}}}_large.jpg, {{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 1900px)">{{/if}}
+							{{#if isShowcase }} <source data-srcset="{{{imgSrc}}}_large.jpg, {{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 768px)">{{/if}}
+							<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
 					<!--[if IE 9]>
 						</video>
 					<![endif]-->
 					<!--[if !lte IE 9]> -->
-						<img src="assets/img/common/blank.png" data-src='assets/img/our_work/{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
+						<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
 					<!-- <![endif]-->
 				{{/equal}}
 				{{#equal imgType 'gif'}}
-					<img src="assets/img/common/blank.png" data-srcset='assets/img/our_work/{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
+					<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
 				{{/equal}}
 			</picture>
 			

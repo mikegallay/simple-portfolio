@@ -31,16 +31,18 @@
 		"info": "",
 		"office": "New York",
 		"filter": "ny"
+		
 	},
 	{
 		"name" : "Dogs",
 		"title": "",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
-		"infoType": "",
-		"info": "",
+		"infoType": "quote",
+		"info": "Bow wow wow!",
 		"office": "New York",
-		"filter": "ny"
+		"filter": "ny",
+		"moreinfo":"people/willy-wonka"
 	},
 	{
 		"name" : "Art",

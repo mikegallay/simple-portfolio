@@ -78,7 +78,7 @@
 				<div class="portfolioContent">
 		
 					<?php
-						$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data", false);
+						$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data");
 						echo $portfolioData; 
 					?>
 				</div>
@@ -103,7 +103,7 @@
 				</a>
 				<div class="cultureContent">
 					<?php
-						$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data",true);
+						$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data");
 						echo $cultureData; 
 					?>
 				</div>
@@ -137,7 +137,7 @@
 		
 				<div class="officeContent">
 					<?php
-						$officeData = HTMLfromTemplateAndJSON("content/templates/office-template.html", "office-data", false);
+						$officeData = HTMLfromTemplateAndJSON("content/templates/office-template.html", "office-data");
 						echo $officeData; 
 					?>
 				</div>

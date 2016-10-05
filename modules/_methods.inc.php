@@ -8,7 +8,8 @@ $siteData = 'content/data/merged.json';
 $tempData = "";
 $fullData = "";
 $portfolio_arr = array();
-$bios_arr = array();
+$leadership_arr = array();
+$people_arr = array();
 
 //portfolio array control content
 
@@ -28,7 +29,7 @@ function getPrevPortfolio($currPort,$linkReady){
 	if ($prevPort < 0) $prevPort = count($portfolio_arr) - 1;
 	
 	$port = $portfolio_arr[$prevPort]['clientName'];
-	// echo $portfolio_arr[$prevPort];
+
 	if ($linkReady) {
 		echo convertToLinkReady($port);
 	}else{
@@ -70,21 +71,19 @@ function convertToLinkReady($link){
 
 //bio array control content
 
-function pushToBiosArray($data){
-	global $bios_arr;
-	
+function pushToBiosArray($data,&$arr){
+	// global $arr;
 	$tempData = $data;
 	
 	for($i=0; $i < count($tempData); $i++) {
-		array_push($bios_arr, $tempData[$i]);
+		array_push($arr, $tempData[$i]);
 	}
 }
 
 
 
-function getIndexFromBioId($id){
-	global $bios_arr;
-	foreach ($bios_arr as &$bio) {
+function getIndexFromBioId($id,&$arr){
+	foreach ($arr as &$bio) {
 		
 		if ($bio['id'] == $id){
 			return $bio['index'];
@@ -92,12 +91,19 @@ function getIndexFromBioId($id){
 	}
 }
 
-function getPrevGlobalLeader($currLeader,$linkReady){
-	global $bios_arr;
-	$prevLeader = $currLeader-1;
-	if ($prevLeader < 0) $prevLeader = count($bios_arr) - 1;
+function getPrevBio($currBio,$linkReady,&$arr){
+	/*
+	global $leadership_arr;
+		global $people_arr;
+		
+		$arr = $leadership_arr;
+		if ($biotype == "people") $arr = $people_arr;*/
 	
-	$leader = $bios_arr[$prevLeader]['name'];
+	
+	$prevLeader = $currBio-1;
+	if ($prevLeader < 0) $prevLeader = count($arr) - 1;
+	
+	$leader = $arr[$prevLeader]['name'];
 	if ($linkReady) {
 		echo convertToLinkReady($leader);
 	}else{
@@ -105,12 +111,19 @@ function getPrevGlobalLeader($currLeader,$linkReady){
 	}
 }
 
-function getNextGlobalLeader($currLeader,$linkReady){
-	global $bios_arr;
-	$nextLeader = $currLeader+1;
-	if ($nextLeader > count($bios_arr) - 1) $nextLeader = 0;
+function getNextBio($currBio,$linkReady,&$arr){
+	/*
+	global $leadership_arr;
+		global $people_arr;
+		
+		$arr = $leadership_arr;
+		if ($biotype == "people") $arr = $people_arr;*/
 	
-	$leader = $bios_arr[$nextLeader]['name'];
+	
+	$nextLeader = $currBio+1;
+	if ($nextLeader > count($arr) - 1) $nextLeader = 0;
+	
+	$leader = $arr[$nextLeader]['name'];
 	if ($linkReady) {
 		echo convertToLinkReady($leader);
 	}else{
@@ -124,10 +137,14 @@ function preloadData(&$tempData, &$fullData, &$siteData){
 	$tempData = file_get_contents($siteData);
 	$fullData = json_decode($tempData, true); 
 	
+	global $leadership_arr;
+	global $people_arr;
+	
 	// $tempDataArray = $fullData["portfolio-data"];
 	
 	pushToPortFolioArray($fullData["portfolio-data"]);
-	pushToBiosArray($fullData["extended-bios"]);
+	pushToBiosArray($fullData["leadership-bios"],$leadership_arr);
+	pushToBiosArray($fullData["people-bios"],$people_arr);
 }
 
 preloadData($tempData, $fullData, $siteData);
@@ -267,9 +284,9 @@ function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
 	$dataArray = $tempDataArray;
 	
 	
-	if ($jsonfile == "culture-data") $dataArray = formatCulture($tempDataArray,$true);
-	if ($jsonfile == "culture-global-data") $dataArray = formatCulture($tempDataArray,$false);
-	//if ($shuffle) $dataArray = shuffleCulture($tempDataArray);
+	if ($jsonfile == "culture-data") $dataArray = formatCulture($tempDataArray,true);
+	if ($jsonfile == "culture-global-data") $dataArray = formatCulture($tempDataArray,false);
+	// if ($shuffle) $dataArray = shuffleCulture($dataArray);
 	
 	$str = json_encode($dataArray);
 	
