@@ -602,6 +602,8 @@ var mgbMainSys = {
 		
 		console.log('isHomeSection',isHomeSection)
 		
+		console.log('page',page);
+		
 		if (page == appRoot || isHomeSection){
 			page = 'index.php'; 
 			intContent = false;
