@@ -22,7 +22,7 @@
 	//temp fix
 	$onDev = strpos($base_url , 'mb-website_relaunch_2016/');
 	echo '$onDev='.$onDev.' $base_url='.$base_url;
-	if ($onDev) {
+	if ($onDev === 0) {
 		echo 'ondev ';
 		$trimmedBase = str_replace("'mb-website_relaunch_2016/","/",$base_url);
 		$base_url = $trimmedBase;
