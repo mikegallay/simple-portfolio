@@ -18,6 +18,8 @@
  
  	$actual_link = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	$base_url = getCurrentUri($appRoot);
+	
+	echo ' $base_url=' . $base_url;
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
