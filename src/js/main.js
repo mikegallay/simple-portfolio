@@ -612,6 +612,7 @@ var mgbMainSys = {
 							mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
 							return;
 						}*/
+			
 		}else{
 			page += '.php';
 		}

@@ -27,9 +27,9 @@
 		<?php } ?></script>
 	
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo $appRoot?>assets/css/main.css">
+	<link rel="stylesheet" href="<?php echo MEDIAPATH ?>css/main.css">
 
-	<script src="<?php echo $appRoot; ?>assets/js/lib/modernizr-custom.js"></script>
+	<script src="<?php echo MEDIAPATH ?>js/lib/modernizr-custom.js"></script>
 	
 	
 	<script>

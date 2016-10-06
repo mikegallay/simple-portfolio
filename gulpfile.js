@@ -28,7 +28,7 @@ var gulp = require('gulp'),
 // add all javascript files dependent here
 // append other files to the end of the list 
 var concatScripts = [
-	'src/js/lib/jquery-1.11.2.min.js',
+	// 'src/js/lib/jquery-1.11.2.min.js',
 	'src/js/plugins/plugin.base.js',
 	'src/js/plugins/player.min.js',
 	'src/js/plugins/jquery.waypoints.min.js',
