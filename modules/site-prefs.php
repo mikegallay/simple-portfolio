@@ -14,7 +14,7 @@
 			//error_reporting(E_ALL);
 			ini_set('display_errors', '1');
 			//dev and staging
-			define(MEDIAPATH, "/assets/");
+			define(MEDIAPATH, stripslashes("/assets\/"));
 			$appRoot = "/";
 			break;
 		case 'dev-mb.com':
@@ -27,7 +27,7 @@
 			//dev and staging
 
 			define(MEDIAPATH, "/mb-website_relaunch_2016/assets/");
-			$appRoot = "/mb-website_relaunch_2016/";
+			$appRoot = stripslashes("/mb-website_relaunch_2016\/");
 			
 			break;
 		case "mcgarrybowen.com":
@@ -36,17 +36,17 @@
 			//error_reporting(E_ALL);
 			ini_set('display_errors', '1');
 
-			define(MEDIAPATH, "/assets/");
+			define(MEDIAPATH, stripslashes("/assets\/"));
 			$appRoot = "/";
 			break;
 		default:
 			error_reporting(0);
-			define(MEDIAPATH, "/assets/");
+			define(MEDIAPATH, stripslashes("/assets\/"));
 			$appRoot = "/";
 			break;
 	}
 	
-	define(MEDIAPATH, "/assets/");
+	define(MEDIAPATH,stripslashes("/assets\/"));
 	$appRoot = "/";
 	
 	//define(TEMPLATESPATH, "./templates/");
