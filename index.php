@@ -20,7 +20,8 @@
 	$base_url = getCurrentUri($appRoot);
 	
 	//temp fix
-	$onDev= strpos($base_url , 'mb-website_relaunch_2016/');
+	$onDev = strpos($base_url , 'mb-website_relaunch_2016/');
+	echo '$onDev='.$onDev.' $base_url='.$base_url;
 	if ($onDev) {
 		echo 'ondev ';
 		$trimmedBase = str_replace("'mb-website_relaunch_2016/","/",$base_url);
