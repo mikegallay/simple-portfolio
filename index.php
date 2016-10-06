@@ -19,6 +19,12 @@
  	$actual_link = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	$base_url = getCurrentUri($appRoot);
 	
+	//temp fix
+	$onDev= strpos($base_url , 'mb-website_relaunch_2016/');
+	if ($onDev) {
+		str_replace("'mb-website_relaunch_2016/","/",$base_url);
+	}
+	
 	echo ' $base_url=' . $base_url;
 	$new_url = '';
 	$routes = array();
