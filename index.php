@@ -22,10 +22,13 @@
 	//temp fix
 	$onDev= strpos($base_url , 'mb-website_relaunch_2016/');
 	if ($onDev) {
-		str_replace("'mb-website_relaunch_2016/","/",$base_url);
+		echo 'ondev ';
+		$trimmedBase = str_replace("'mb-website_relaunch_2016/","/",$base_url);
+		$base_url = $trimmedBase;
 	}
 	
-	echo ' $base_url=' . $base_url;
+	echo ' $$trimmedBase=' . $trimmedBase . ' base='.$base_url;
+	
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
