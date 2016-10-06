@@ -1,7 +1,7 @@
 <?php
 	require_once 'modules/site-prefs.php';
 	
-	// error_reporting(E_ALL & ~E_NOTICE);
+	echo ' approot='.$appRoot . ' mediapath='. MEDIAPATH;
 	
 	$bioId = undefined;
 	$portId = undefined;
