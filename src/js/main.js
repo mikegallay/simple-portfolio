@@ -617,14 +617,14 @@ var mgbMainSys = {
 			page += '.php';
 		}
 		
-		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in _head.inc.php
+		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in site-pref.php
 		
 		if (reqUrl.indexOf('global-leadership/') != -1){
 			//is an extended bio page
 			var bioArr = reqUrl.split('/');
 			var bio = bioArr[bioArr.length-1];
 			var bio_id = bio.replace('.php?ajax=1','');
-			reqUrl = "/leader-bio.php?ajax=1&bio="+bio_id;
+			reqUrl = appRoot + "leader-bio.php?ajax=1&bio="+bio_id;
 			// reqUrl = "/extended-bio.php?ajax=1";
 		}
 		
@@ -633,7 +633,7 @@ var mgbMainSys = {
 			var bioArr = reqUrl.split('/');
 			var bio = bioArr[bioArr.length-1];
 			var bio_id = bio.replace('.php?ajax=1','');
-			reqUrl = "/people-bio.php?ajax=1&bio="+bio_id;
+			reqUrl = appRoot + "people-bio.php?ajax=1&bio="+bio_id;
 			// reqUrl = "/extended-bio.php?ajax=1";
 		}
 		
@@ -642,7 +642,7 @@ var mgbMainSys = {
 			var portArr = reqUrl.split('/');
 			var port = portArr[portArr.length-1];
 			var port_id = port.replace('.php?ajax=1','');
-			reqUrl = "/case-study.php?ajax=1&port="+port_id;
+			reqUrl = appRoot + "case-study.php?ajax=1&port="+port_id;
 			// reqUrl = "/extended-bio.php?ajax=1";
 		}
 		
