@@ -6,7 +6,7 @@
 	$bioId = undefined;
 	$portId = undefined;
 	
-	if($appRoot !== '/' ) $appRoot = $appRoot.'/'; //-- needs trailing slash
+	// if($appRoot !== '/' ) $appRoot = $appRoot.'/'; //-- needs trailing slash
 	
 	require_once("modules/_methods.inc.php");
 

@@ -46,8 +46,8 @@
 			break;
 	}
 	
-	define(MEDIAPATH,stripslashes("/assets\/"));
-	$appRoot = "/";
+	// define(MEDIAPATH,stripslashes("/assets\/"));
+	// $appRoot = "/";
 	
 	//define(TEMPLATESPATH, "./templates/");
 
