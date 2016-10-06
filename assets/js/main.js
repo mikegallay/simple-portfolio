@@ -3387,8 +3387,9 @@ var mgbContent = {
 				mgbMainSys.scrollToSection("offices",250);
 
 				setTimeout(function() {
-					var rs = $('.rightSide').height() - 60;
+					var rs = $('.rightSide .info').height() - 30;// + $('.rightSide .officeStats').height();//- 60;
 					$("#officeDetails").css('height',rs+"px");
+					$(".leftSide").css('height',(rs + 195)+"px");
 					
 					setTimeout(function() {
 						$("#officeDetails").addClass('showDetails');
@@ -3846,8 +3847,6 @@ if(!isMobile.any()) {
 if($("body").hasClass("ishome") && !isMobile.any()) {
 	mgbHeroVideo.loadHeaderVideo();
 	
-	
-	
 	// Check for location in header section
 	if("geolocation" in navigator) {
 		navigator.geolocation.getCurrentPosition(function(pos){
@@ -3880,8 +3879,6 @@ if($("body").hasClass("ishome")) {
 	mgbMainSys.collapseNav();
 }
 
-
-
 window.onscroll = mgbMainSys.handleScrolling;
 window.onresize = resizeChecker;
 // window.onunload = displayCurrentContent;
@@ -3912,7 +3909,9 @@ function resizeChecker() {
         //set this windows size
         lastWindowHeight = $(window).height();
         lastWindowWidth = $(window).width();
-
+		
+		
+		
 		//call resize function
         resize();
 	}
@@ -3921,6 +3920,12 @@ function resizeChecker() {
 function resize(){
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
+	
+	if (lastWindowWidth < (768 - 16)){
+		$('body').addClass('small');
+	}else{
+		$('body').removeClass('small');
+	}
 		
 	if (mgbMainSys.mainContentLoaded == true || mgbMainSys.allCultureLoaded == true || mgbMainSys.allNewsLoaded == true) {
 		mgbMainSys.resize();
