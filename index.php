@@ -3,8 +3,6 @@
 	
 	// error_reporting(E_ALL & ~E_NOTICE);
 	
-	$appRoot = dirname($_SERVER["PHP_SELF"]);
-	
 	$bioId = undefined;
 	$portId = undefined;
 	
