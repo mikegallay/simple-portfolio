@@ -2240,7 +2240,7 @@ var mgbMainSys = {
 		
 		var root = appRoot;
 		
-		if (page == appRoot || appRoot == "/mb-website_relaunch_2016/") root = '';
+		if (page == appRoot) root = '';
 		
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
