@@ -1,7 +1,7 @@
 <?php
 	require_once 'modules/site-prefs.php';
 	
-	echo ' approot='.$appRoot . ' mediapath='. MEDIAPATH;
+	// echo ' approot='.$appRoot . ' mediapath='. MEDIAPATH;
 	
 	$bioId = undefined;
 	$portId = undefined;
@@ -21,14 +21,14 @@
 	
 	//temp fix
 	$onDev = strpos($base_url , 'mb-website_relaunch_2016/');
-	echo '$onDev='.$onDev.' $base_url='.$base_url;
+	// echo '$onDev='.$onDev.' $base_url='.$base_url;
 	if ($onDev === 0) {
 		echo 'ondev ';
 		$trimmedBase = str_replace("mb-website_relaunch_2016/","/",$base_url);
 		$base_url = $trimmedBase;
 	}
 	
-	echo ' $$trimmedBase=' . $trimmedBase . ' base='.$base_url;
+	// echo ' $$trimmedBase=' . $trimmedBase . ' base='.$base_url;
 	
 	$new_url = '';
 	$routes = array();
