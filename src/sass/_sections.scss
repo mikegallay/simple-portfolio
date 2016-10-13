@@ -1,3 +1,8 @@
+.small{
+	#offices #officeDetails .leftSide {
+		height:auto!important;
+	}
+}
 
 #work, #culture, #offices {
 	min-height: 500px;
@@ -432,7 +437,7 @@ h1 {
 	float:left;
 	height:auto;
 	min-height:150px;
-	
+	a,a:visited,a:hover{color:white;}
 	&.notLoaded {
 		display:none;
 	}
@@ -452,6 +457,8 @@ h1 {
 	}
 	
 	.bio {
+		//color:white;
+		pointer-events: none;
 		opacity:0;
 		position: absolute;
 		top:20px;
@@ -612,7 +619,7 @@ h1 {
 		}
 		
 		.bio {
-			opacity: 1;
+			opacity: 1!important;
 			transition: opacity 500ms 500ms,top 500ms 500ms;
 			transform: translate3d(0,0,0);
 			
@@ -926,9 +933,9 @@ h1 {
 				transition: opacity 500ms 600ms;
 				//added
 				position:relative;
-				top: 0em;
+				top: -5px;
 				text-align:left;
-				left:0px;
+				left:5px;
 				//@media screen and (min-width: 768px){
 //					left:0px;
 //				}
@@ -986,11 +993,8 @@ h1 {
 }
 }
 
-.small{
-	.leftside{
-		height:auto!important;
-	}
-}
+
+
 
 .officeTile {
 	background-color: #ffffff;
@@ -1199,7 +1203,7 @@ h1 {
 								.office-icon {
 									display: inline-block;
 									float: left;
-									padding:4px;
+//									padding:4px;
 									border:none;
 								}
 								.office-content {

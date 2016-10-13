@@ -64,27 +64,7 @@
 					{{/equal}}
 				</div>
 			</div>
-			{{#if linkedin}}
-				<a class="linkedin" target="_blank" href="https://www.linkedin.com/in/{{{ linkedin }}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_linkedin"{{/if}}>
-					<svg class="icon linkedin-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use>
-					</svg>
-				</a>
-			{{/if}}
-			{{#if moreinfo}}
-				<a class="moreinfo" href="{{{ moreinfo }}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_moreinfo"{{/if}}>
-					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-					</svg>
-				</a>
-			{{/if}}
-			<div class="closeCulture">
-				<a href="#" aria-label="Close {{{name}}} culture section" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_close"{{/if}}>
-					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-					</svg>
-				</a>
-			</div>
+			
 			
 		{{/if}}
 	</div>

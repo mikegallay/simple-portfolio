@@ -1491,9 +1491,9 @@ var mgbContent = {
     initCultureCnt: function() {
         var that = this;
 		
-		$('.closeCulture').on('click', function(e) {
+		/*$('.closeCulture').on('click', function(e) {
 			$('.cultureTile').removeClass('shrinkMe stretchOut');
-		});
+		});*/
 		
         this.pushLeftPushRight($('.pushLeft .cultureLink'),$('.pushRight .cultureLink'));
 		
@@ -1544,51 +1544,68 @@ var mgbContent = {
 		var elR = rightEl;
 		var elL = leftEl;
 		
-        elR.on('click', function(e) {
-            e.preventDefault();
+		$(elR).each(function(index) {
+	        $(this).on('mouseenter', function(e) {
+					 // e.preventDefault();
+					e.stopPropagation();
 			
-			that.setCultureTileHeight();
+					that.setCultureTileHeight();
             
-            if (!$(this).parent().hasClass("stretchOut")) {
-                $(this).parent().siblings().removeClass("shrinkMe stretchOut");
-            }
+		            if (!$(this).parent().hasClass("stretchOut")) {
+		                $(this).parent().siblings().removeClass("shrinkMe stretchOut");
+		            }
             
-            var nextTile = that.findNext($(this));//$(this).parent().next();
-            var picHolder = nextTile.find('.picHolder');
+		            var nextTile = that.findNext($(this));//$(this).parent().next();
+		            var picHolder = nextTile.find('.picHolder');
             
-            var colW = picHolder.width();
-            //move this to a global var on resize???
+		            var colW = picHolder.width();
+		            //move this to a global var on resize???
             
-            if (!$(this).parent().hasClass('stretchOut')) {
-                picHolder.css('min-width', colW + 'px');
-            }
+		            if (!$(this).parent().hasClass('stretchOut')) {
+		                picHolder.css('min-width', colW + 'px');
+		            }
 			
-            nextTile.toggleClass("shrinkMe");
-            $(this).parent().toggleClass('stretchOut');
-        });
-        
-        elL.on('click', function(e) {
-            e.preventDefault();
-            
-			that.setCultureTileHeight();
-			
-            if (!$(this).parent().hasClass("stretchOut")) {
-                $(this).parent().siblings().removeClass("shrinkMe stretchOut");
-            }
-            
-            var prevTile =  that.findPrev($(this));//$(this).parent().prev();
-            var picHolder = prevTile.find('.picHolder');
-            
-            var colW = picHolder.width();
-            //move this to a global var on resize???
+		            nextTile.toggleClass("shrinkMe");
+		            $(this).parent().toggleClass('stretchOut');
+				});
+				
+			$(this).on('mouseleave',function(e){
+				e.stopPropagation();
+				$('.cultureTile').removeClass('shrinkMe stretchOut'); 
+			})
+		});
+		
+		$(elL).each(function(index) {
+	        $(this).on('mouseenter', function(e) {
+				// e.preventDefault();
+					e.stopPropagation();
 
-            if (!$(this).parent().hasClass('stretchOut')) {
-                picHolder.css('min-width', colW + 'px');
-            }
-			
-            prevTile.toggleClass("shrinkMe");
-            $(this).parent().toggleClass('stretchOut');
-        });
+					that.setCultureTileHeight();
+
+					if (!$(this).parent().hasClass("stretchOut")) {
+					    $(this).parent().siblings().removeClass("shrinkMe stretchOut");
+					}
+
+					var prevTile =  that.findPrev($(this));//$(this).parent().prev();
+					var picHolder = prevTile.find('.picHolder');
+
+					var colW = picHolder.width();
+					//move this to a global var on resize???
+
+					if (!$(this).parent().hasClass('stretchOut')) {
+					    picHolder.css('min-width', colW + 'px');
+					}
+
+					prevTile.toggleClass("shrinkMe");
+					$(this).parent().toggleClass('stretchOut');
+				});
+				
+			$(this).on('mouseleave',function(e){
+				e.stopPropagation();
+				$('.cultureTile').removeClass('shrinkMe stretchOut'); 
+			});
+		});
+       
 	},
 	
 	loadMoreContent:function(tar,num){
@@ -1713,7 +1730,7 @@ var mgbContent = {
 				setTimeout(function() {
 					var rs = $('.rightSide .info').height() - 30;// + $('.rightSide .officeStats').height();//- 60;
 					$("#officeDetails").css('height',rs+"px");
-					$(".leftSide").css('height',(rs + 195)+"px");
+					$(".leftSide").css('height',(rs + 185)+"px");
 					
 					setTimeout(function() {
 						$("#officeDetails").addClass('showDetails');
