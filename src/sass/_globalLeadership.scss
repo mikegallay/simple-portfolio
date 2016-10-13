@@ -79,7 +79,8 @@
 		.cultureContent{
 			width:100%;
 			.cultureTile{
-				transition:width 300ms,margin 300ms;
+//				transition:width 300ms,margin 300ms;
+				transition:margin 300ms 300ms, width 300ms 300ms;
 				&.hide{ 
 					width:0px;
 					margin:0;

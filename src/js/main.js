@@ -562,9 +562,11 @@ var mgbMainSys = {
 		
 		var root = appRoot;
 		
-		if (page == "/") {
-			page = '';
-		}
+		// if (page == "/") {
+// 			page = '';
+// 		}
+
+		if (root == page) root = '';
 		
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
@@ -586,6 +588,8 @@ var mgbMainSys = {
 			sliced = page.slice(1,page.length);
 			page = sliced;
 		}
+		
+		console.log("page", page);
 		
 		this.pushHistoryState(page, bool);
 		
@@ -652,6 +656,9 @@ var mgbMainSys = {
 			// reqUrl = "/extended-bio.php?ajax=1";
 		}
 		
+		// if (reqUrl = "/.php?ajax=1"){
+// 			reqUrl = "/index.php?ajax=1";
+// 		}
 		console.log('req',reqUrl);
 		
 		if (this.mainContentLoaded == true && !intContent){ // if going to home page, check if content is already loaded before ajax call
@@ -1343,6 +1350,8 @@ var mgbContent = {
     officeClocks: null,
 	cultureTimeout: null,
 	newsContent: null,
+	
+	cultureContentInit:false,
     
     init: function() {
         this.portfolioContent = $('.projectTile');
@@ -1491,11 +1500,13 @@ var mgbContent = {
     initCultureCnt: function() {
         var that = this;
 		
+		console.log('inicultureContentInit')
+		this.cultureContentInit = true;
 		/*$('.closeCulture').on('click', function(e) {
 			$('.cultureTile').removeClass('shrinkMe stretchOut');
 		});*/
 		
-        this.pushLeftPushRight($('.pushLeft .cultureLink'),$('.pushRight .cultureLink'));
+        this.pushLeftPushRight($('.homeSection .pushLeft .cultureLink'),$('.homeSection .pushRight .cultureLink'));
 		
 		$('#cultureTileMore').on('click',function(e){
 			e.preventDefault();
@@ -1543,19 +1554,22 @@ var mgbContent = {
 		var that = this;
 		var elR = rightEl;
 		var elL = leftEl;
-		
+
 		$(elR).each(function(index) {
+			var cleanup;
 	        $(this).on('mouseenter', function(e) {
 					 // e.preventDefault();
 					e.stopPropagation();
 			
 					that.setCultureTileHeight();
-            
+					
+				//	clearTimeout(cleanup);
+            		
 		            if (!$(this).parent().hasClass("stretchOut")) {
 		                $(this).parent().siblings().removeClass("shrinkMe stretchOut");
 		            }
             
-		            var nextTile = that.findNext($(this));//$(this).parent().next();
+		            var nextTile = that.findNext($(this));
 		            var picHolder = nextTile.find('.picHolder');
             
 		            var colW = picHolder.width();
@@ -1572,15 +1586,22 @@ var mgbContent = {
 			$(this).on('mouseleave',function(e){
 				e.stopPropagation();
 				$('.cultureTile').removeClass('shrinkMe stretchOut'); 
+				/*cleanup = setTimeout(function(){
+					$('.picHolder').removeAttr('style');
+				},1500);*/
+				
 			})
 		});
 		
 		$(elL).each(function(index) {
+			var cleanup;
 	        $(this).on('mouseenter', function(e) {
 				// e.preventDefault();
 					e.stopPropagation();
 
 					that.setCultureTileHeight();
+					
+					//clearTimeout(cleanup);
 
 					if (!$(this).parent().hasClass("stretchOut")) {
 					    $(this).parent().siblings().removeClass("shrinkMe stretchOut");
@@ -1603,6 +1624,10 @@ var mgbContent = {
 			$(this).on('mouseleave',function(e){
 				e.stopPropagation();
 				$('.cultureTile').removeClass('shrinkMe stretchOut'); 
+				/*cleanup = setTimeout(function(){
+					
+					$('.picHolder').removeAttr('style');
+				},1500);*/
 			});
 		});
        
@@ -1918,7 +1943,7 @@ var mgbInternalContent = {
 		this.allCultureFilter = [];
 		var that = this;
 
-		mgbContent.initCultureCnt();
+		if (mgbContent.cultureContentInit == false) mgbContent.initCultureCnt();
 		mgbContent.cultureContent = $('.cultureTile');
 		mgbContent.setCultureTileHeight();
 		mgbMainSys.allCultureLoaded = true;

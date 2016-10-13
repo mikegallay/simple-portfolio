@@ -1,7 +1,12 @@
 {{#each objects}}
 	<div style="min-height:400px;" class="cultureTile {{dir}} {{#if isDouble}}col-2-by-1{{/if}}" {{#if filter}}data-office-filter="{{{filter}}}"{{/if}}>
 		{{#if info}}
-		<a href="#" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} class="cultureLink">
+			{{#if moreinfo}}
+			    <a href="{{{moreinfo}}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} class="cultureLink">
+			  {{else}}
+			    <a href="https://www.linkedin.com/in/{{{linkedin}}}" target="_blank" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}} class="cultureLink">
+			  {{/if}}
+		
 		{{/if}}
 			<div class="picHolder">
 				
@@ -64,20 +69,7 @@
 					{{/equal}}
 				</div>
 			</div>
-			{{#if linkedin}}
-				<a class="linkedin" target="_blank" href="https://www.linkedin.com/in/{{{ linkedin }}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_linkedin"{{/if}}>
-					<svg class="icon linkedin-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use>
-					</svg>
-				</a>
-			{{/if}}
-			{{#if moreinfo}}
-				<a class="moreinfo" href="{{{ moreinfo }}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_moreinfo"{{/if}}>
-					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-					</svg>
-				</a>
-			{{/if}}
+			
 			<div class="closeCulture">
 				<a href="#" aria-label="Close {{{name}}} culture section" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_close"{{/if}}>
 					<svg class="icon more_button-inline" role="img" aria-labelledby="title">

@@ -100,7 +100,8 @@
 		"linkedin": "michael-gallay-316a074",
 		"trackingLabel": "Home|Click|Waving_Culture",
 		"office": "Sao Paulo",
-		"filter": "sao"
+		"filter": "sao",
+		"moreinfo":"global-leadership/gordon-bowen"
 	},
 	{
 		"name" : "Skater",
@@ -117,7 +118,7 @@
 	{
 		"name" : "Train",
 		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/chicago4",
+		"imgSrc": "assets/img/our_culture/chicago",
 		"imgType": "jpg",
 		"infoType": "",
 		"info": "",

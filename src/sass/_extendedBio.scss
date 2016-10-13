@@ -22,6 +22,16 @@ overflow:hidden;
 	.bioColumn{
 		width:100%;
 		float:left;
+		.name{
+			font-size:36px;
+			color:$skyblueColor;
+//			font-weight:700;
+			font-family:Din-Bold, sans-serif;
+		}
+		.title{padding-bottom:20px;margin-top:-10px;}
+		.body{
+			font-size:16px;
+		}
 	}
 }
 
@@ -47,6 +57,12 @@ overflow:hidden;
 		}
 		.bioColumn{
 			width:60%;
+			.name{
+				font-size:40px;
+			}
+			.body{
+				font-size:13px;
+			}
 		}
 	}
 }
