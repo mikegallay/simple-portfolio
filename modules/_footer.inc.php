@@ -1,4 +1,4 @@
-<footer class="tempHideNONONO">
+<footer class="tempHide">
 	<div class="container">
 		<div class="socialIcons">		 
 			<a href="https://www.facebook.com/mcgarrybowen" target="_blank" data-tracking-label="Footer|Click|Facebook"><?php addIcon("facebook"); ?></a>

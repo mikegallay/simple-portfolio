@@ -42,10 +42,13 @@ function getNextPortfolio($currPort,$linkReady){
 	$nextPort = $currPort+1;
 	if ($nextPort > count($portfolio_arr) - 1) $nextPort = 0;
 	
-	$port = $portfolio_arr[$nextPort]['clientName'];
+	// $port = $portfolio_arr[$nextPort]['clientName'];
 	if ($linkReady) {
-		echo convertToLinkReady($port);
+		
+		$port = $portfolio_arr[$nextPort]['id'];
+		echo $port;//convertToLinkReady($port);
 	}else{
+		$port = $portfolio_arr[$nextPort]['clientName'];
 		echo $port;
 	}
 }

@@ -126,11 +126,16 @@ var mgbMainSys = {
 		
 	},
 	
-	// showFooter : function(){
-// 		setTimeout(function(){
-// 			$('footer').removeClass('tempHide');
-// 		},1000);
-// 	},
+	showFooter : function(){
+		setTimeout(function(){
+			$('footer').removeClass('absolute');
+			if ($('footer').position().top + 63 < $(window).height()){
+				$('footer').addClass('absolute');
+				// $('footer').css('bottom', 0 + 'px');
+			}
+			$('footer').removeClass('tempHide');
+		},200);
+	},
 
 	checkLocation : function(){
 		// this.showPinned();
@@ -272,7 +277,16 @@ var mgbMainSys = {
 	addListeners : function(){
 		var that = this;
 		$(document).on('click', '[data-tracking-label]', function(e) {
-
+			
+			if ($(this).attr('id') == 'homeLogo' && $('body').hasClass('ishome')){
+				e.preventDefault();
+				$("html, body").animate({
+						scrollTop: 0,
+					}, 500);
+				return;
+				
+			}
+			
 			if($(this).attr('target') != "_blank" ) { 
 				//console.log("asdfasdfasdf")
 				e.preventDefault();
@@ -373,6 +387,7 @@ var mgbMainSys = {
 	
 	resize : function(){
 		this.checkTileLoad();
+		this.showFooter(); 
 	},
 	
 	isScrolledIntoView : function(elem) {
@@ -706,7 +721,7 @@ var mgbMainSys = {
 		// Fire immediately on getPage
 		// $('#header').removeClass('settle'); //this hides the nav instantly during page transitions
 		mgbInternalContent.kill();
-		// $('footer').addClass('tempHide');
+		$('footer').addClass('tempHide');
 		
 		// if (reqUrl.indexOf('all-culture') != -1){
 // 			$("#overlayCover").addClass("white");
@@ -794,7 +809,7 @@ var mgbMainSys = {
 					
 					
 					mgbMainSys.checkInView('.ll-all');
-					// mgbMainSys.showFooter();
+					mgbMainSys.showFooter();
 
 				},500);
 				
@@ -834,7 +849,7 @@ var mgbMainSys = {
 				$("nav").removeClass("overlayActive");
 				
 				// mgbInternalContent.kill();
-				// mgbMainSys.showFooter();
+				mgbMainSys.showFooter();
 				
 				setTimeout(function(){
 					
@@ -889,7 +904,7 @@ var mgbHeader = {
 	
 	addListeners : function(){
 		var that = this;
-		$('#homeLogo').one('click',function(e){
+		/*$('#homeLogo').one('click',function(e){
 			e.preventDefault();		
 			
 			if (!$('body').hasClass('ishome')){
@@ -905,7 +920,7 @@ var mgbHeader = {
 						}, 500);
 				}
 			}
-		});
+		});*/
 		
 		
 		$('nav #menuToggleHolder').on('click', function(){
@@ -2269,7 +2284,7 @@ window.onpopstate = function (event) {
 	// mgbMainSys.showFooter(); // show the footer once page is loaded
  // }, 750);
 
-window.onload=resize;
+window.onload = resize;
 
 var lastWindowHeight = $(window).height();
 var lastWindowWidth = $(window).width();
@@ -2290,7 +2305,7 @@ function resizeChecker() {
 
 function resize(){
 	
-	console.log('resize')
+	// console.log('resize')
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
 	

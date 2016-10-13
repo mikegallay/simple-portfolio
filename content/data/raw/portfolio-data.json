@@ -109,7 +109,7 @@
 	},
 	{
 		"index": 5,
-		"id":"marriott",
+		"id":"marriot",
 		"imgSrc": "assets/img/our_work/MrT",
 		"imgType": "jpg",
 		"clientName": "Marriot",
@@ -129,7 +129,7 @@
 	},
 	{
 		"index": 6,
-		"id":"pure-circle",
+		"id":"purecircle",
 		"imgSrc": "assets/img/our_work/Leaf",
 		"imgType": "jpg",
 		"clientName": "PureCircle",
@@ -149,7 +149,7 @@
 	},
 	{
 		"index": 7,
-		"id":"marriott-nfl",
+		"id":"nfl",
 		"imgSrc": "assets/img/our_work/NFL",
 		"imgType": "jpg",
 		"clientName": "NFL",

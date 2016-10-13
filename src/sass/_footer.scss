@@ -7,9 +7,18 @@ footer {
 	z-index: 101;
 	overflow:hidden;
 	min-height: 6em;
+	opacity:1;
+	transition:opacity 250ms;
+	
+	&.absolute{
+		position:absolute;
+		width:100%;
+		bottom:0;
+	}
 	
 	&.tempHide{
 		opacity:0;
+		transition:opacity 0;
 	}
 	
 	svg{
