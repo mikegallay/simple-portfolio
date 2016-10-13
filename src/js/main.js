@@ -1844,6 +1844,8 @@ var mgbContent = {
 		var that = this;
 			
 		clearTimeout(this.cultureTimeout);
+		
+		// console.log('setCultureTileHeight')
 				
 		this.cultureTimeout = setTimeout(function(){
 			
@@ -2261,10 +2263,13 @@ window.onpopstate = function (event) {
     }
 };
 
-setTimeout(function(){  
-	resize();
+// setTimeout(function(){
+	//console.log("init reseize")
+	// resize();
 	// mgbMainSys.showFooter(); // show the footer once page is loaded
-}, 500);
+ // }, 750);
+
+window.onload=resize;
 
 var lastWindowHeight = $(window).height();
 var lastWindowWidth = $(window).width();
@@ -2284,6 +2289,8 @@ function resizeChecker() {
 }
 
 function resize(){
+	
+	console.log('resize')
 	mgbHeader.resize();
 	mgbHeroVideo.resize();
 	
