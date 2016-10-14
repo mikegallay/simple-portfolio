@@ -5,7 +5,7 @@
 		<div id="welcomeVideo">	
 			<div class="responsive-video" id="headerVideo"></div>
 			<div class="aboutUsClose shadow">
-				<a class="videoClose" data-tracking-label="Home|AboutUsVideo|Close">
+				<a class="videoClose" data-tracking-label="Home|AboutUs_Video|Close">
 					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
 					</svg>
@@ -14,8 +14,8 @@
 		</div>
 			
 		<div class="video-overlay">
-			<div class="headerHeroText" data-words="#hello,mcgarrybowen,awesome,beer,cocktails,the alamo,chicago,technology,san francisco,new york,mission burritos,#content,pizza,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,creative,awesome,beer,cocktails,#agencylife,intel,hidden valley ranch,burt's bees,united,wrigley field"></div>
-			<div class="moreMsg">that's us. <span class="cta blueFont" data-content="183027079"><a>get to know more!</a></span></div>
+			<div class="headerHeroText" data-words="#hello,mcgarrybowen,awesome,beer,cocktails,the alamo,chicago,technology,san francisco,new york,mission burritos,#content,pizza,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,creative,awesome,beer,cocktails,#agencylife,intel,hidden valley ranch,burt's bees,united,wrigley field" contenteditable="true"></div>
+			<div class="moreMsg">that's us. <span class="cta blueFont" data-content="183027079"><a data-tracking-label="Home|AboutUs_Video|Open">get to know more!</a></span></div>
 		</div>
 		
 		
@@ -92,15 +92,15 @@
 			<div class="container">
 				<h1 class="sectionHeading">OUR <span class="blueFont">CULTURE</span></h1>
 	
-				<!--<div class="alignRight">
-					<a id="officeToggle" class="button" alt="">OUR OFFICE<?php //addIcon('menu_dropdown_arrow'); ?></a>
-				</div> --> 
-				<a class="global-leadership" href="global-leadership" data-tracking-label="Home|Click|AllCulture">Global Leadership 					<!-- <span class="moreArrow">
-						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
-						</svg>
-					</span> -->
-				</a>
+				<div class="sectionButton">
+					<a class="button global-leadership" href="global-leadership" data-tracking-label="Home|Click|AllCulture">Global Leadership<span class="moreArrow">
+							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+							</svg>
+						</span>
+					</a>
+				</div>
+					
 				<div class="cultureContent">
 					<?php
 						$cultureData = HTMLfromTemplateAndJSON("content/templates/culture-template.html", "culture-data");
@@ -115,14 +115,24 @@
 		
 		<section id="news" class="homeSection fullBleed">
 			<div class="container">
-				<h1 class="sectionHeading whiteText">LATEST NEWS</h1>
-				<a class="all-news" href="all-news" data-tracking-label="Home|Click|AllNews">All News</a>
+				<h1 class="sectionHeading">LATEST NEWS</h1>
+					
+				<div class="sectionButton">
+					<a class="button global-leadership" href="global-leadership" data-tracking-label="Home|Click|AllNews">All News<span class="moreArrow">
+							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
+							</svg>
+						</span>
+					</a>
+				</div>
+				
 				<div class="newsContent clearfix">
 					<?php
 						$newsData = HTMLfromTemplateAndJSON("content/templates/news-template.html", "news-data");
 						echo $newsData;
 					?>
 				</div>
+				
 				<!-- <div class="moreButton active">
 					<a id="newsTileMore" href="#" data-tracking-label="Home|Click|News_LoadMore"><?php //addIcon('more_button'); ?></a>
 				</div> -->
@@ -163,4 +173,5 @@
 				<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS</a>
 			</div>	
 		</section>
+		
 	</div>

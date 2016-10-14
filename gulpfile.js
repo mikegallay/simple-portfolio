@@ -32,7 +32,7 @@ var concatScripts = [
 	'src/js/plugins/plugin.base.js',
 	'src/js/plugins/player.min.js',
 	'src/js/plugins/jquery.waypoints.min.js',
-	'src/js/plugins/waypoints.inview.min.js',
+	// 'src/js/plugins/waypoints.inview.min.js',
 	//'src/js/plugins/slick.min.js',
 	'src/js/plugins/lazysizes.min.js',
 	'src/js/plugins/jquery.fitvids.js',

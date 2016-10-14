@@ -45,28 +45,16 @@
 		{{#if info}}
 			<div class="bio">
 				<div class="inner">
-					{{#equal infoType 'card'}}
-						<h2>
-							{{ info }}
-						</h2>
-						<h4>
-						 {{ name }}
-						</h4>
-						<h5>
-							{{ title }}, {{ office }}
-						</h5>
-					{{/equal}}
-					{{#equal infoType 'quote'}}
-						<p class="quote">
-							<span class="start-quote">"</span>
-							<span class="quote-info">{{ info }}</span>
-							<span class="end-quote">"</span>
-						</p>
-						<p class="byline">
-							<h4>{{ name }}</h4>
-							<h5>{{ title }}</h5>
-						</p>
-					{{/equal}}
+					<p class="quote">
+						{{ info }}
+					</p>
+					<hr>
+					<p class="name">
+					 	{{ name }}
+					</p>
+					<p class="title">
+						{{ title }}, {{ office }}
+					</p>
 				</div>
 			</div>
 			
