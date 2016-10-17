@@ -1,6 +1,6 @@
 {{#each objects}}
 	<figure class="projectTile {{#greaterThan index 5}}notLoaded notShowing{{/greaterThan}} {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
-		<a data-content="work/{{id}}" data-header="{{{clientName}}}"  data-title="{{{description}}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}}>
+		<a data-content="work/{{id}}" href="#" aria-label="{{{aria-label}}}" data-header="{{{clientName}}}" data-title="{{{description}}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}}>
 			<picture>
 				{{#equal imgType 'jpg'}}
 					<!--[if IE 9]>

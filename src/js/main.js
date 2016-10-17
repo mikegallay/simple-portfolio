@@ -91,20 +91,16 @@ var mgbMainSys = {
 		  element: $('#news')[0],
 		  enter: function(direction) {
 			  if (direction == "down") $('#news .sectionButton').addClass('show');
-		    // console.log('Enter triggered with direction ' + direction)
 		  },
 		  entered: function(direction) {
 			  if (direction == "down") $('#news .sectionButton').removeClass('show');
 		if (direction == "up") $('#news .sectionButton').addClass('show');
-		     // console.log('Entered triggered with direction ' + direction)
 		  },
 		  exit: function(direction) {
 			  if (direction == "up") $('#news .sectionButton').addClass('show');
-		    console.log('News Exit triggered with direction ' + direction)
 		  },
 		  exited: function(direction) {
 			  $('#news .sectionButton').removeClass('show');
-		    // console.log('Exited triggered with direction ' + direction)
 		  }
 		})
 	
@@ -116,8 +112,6 @@ var mgbMainSys = {
 		  },
 		  entered: function(direction) {
 			  if (direction == "down") $('#culture .sectionButton').removeClass('show');
-			  
-			  // if (direction == "up") $('#culture .sectionButton').addClass('show');
 		     // console.log('Entered triggered with direction ' + direction)
 		  },
 		  exit: function(direction) {
@@ -431,6 +425,7 @@ var mgbMainSys = {
 	resize : function(){
 		this.checkTileLoad();
 		this.showFooter(); 
+		mgbMainSys.checkInView('.ll-all');
 	},
 	
 	isScrolledIntoView : function(elem) {
@@ -966,10 +961,23 @@ var mgbHeader = {
 		});*/
 		
 		
-		$('nav #menuToggleHolder').on('click', function(){
-			$(this).toggleClass("active");
+		$('#menuToggleHolder, .hiddenNavToggle').on('click', function(e){
+			e.preventDefault();
+			var newAlt, alt = $('#menuToggleHolder').attr('aria-label');
+			 
+            if (alt.indexOf('Open') != -1) { // has 'open'
+                newAlt = alt.replace('Open', 'Close');
+            } else { // has 'close'
+                newAlt = alt.replace('Close', 'Open');
+            }
+			
+			$('#menuToggleHolder').attr('aria-label', newAlt);
+			$('.hiddenNavToggle').attr('aria-label', newAlt);
+			$('.hiddenNavToggle').html(newAlt);
+			
+			$('#menuToggleHolder').toggleClass("active");
 			$('#navWrapper').toggleClass('active');
-			if ($(this).hasClass("active")){
+			if ($('#menuToggleHolder').hasClass("active")){
 				that.showMobileNav();
 			}else{
 				that.hideMobileNav();
@@ -1550,7 +1558,8 @@ var mgbContent = {
         };
 		
         this.portfolioContent.each(function() {
-            $(this).children("a").on('click', function() {
+            $(this).children("a").on('click', function(e) {
+				e.preventDefault();
 				/*$(".vimeoVideos").empty(); // clear out carousel
 				
                 var videoID = $(this).attr("data-url").split(","); // get the id's for this video
@@ -1752,7 +1761,14 @@ var mgbContent = {
 	loadMoreContent:function(tar,num){
 		
 		//make sure the culture tiles have a height to animate against
-		if (tar == 'cultureTile') this.setCultureTileHeight();
+		if (tar == 'cultureTile') {
+			this.setCultureTileHeight();
+			$('#news .sectionButton').removeClass('show');
+		  	setTimeout(function(){
+				//contents on the page will more down, so reset waypoints.
+		    	mgbMainSys.initWaypoints();
+		    }, 500);
+		}
 		
 		//REMOVED THIS TEMPORARILY. WAS WONKY ON SAFARI!!
 		//make sure the project tiles have a height to animate against
@@ -1841,13 +1857,14 @@ var mgbContent = {
 				drawSVG: clockMinutes,
 				overwrite: false
 			});
+			
+			var btn = $(this).find('a');
+			btn.on('click', function() {
+				var currThis = $(this).parent();
+				currThis.siblings().children("a").removeClass("active");
+				currThis.children("a").addClass("active");
 
-			$(this).on('click', function() {
-				var currThis = $(this);
-				$(this).siblings().children("a").removeClass("active");
-				$(this).children("a").addClass("active");
-
-				var officeDataText = $(this).children('article').html();
+				var officeDataText = currThis.children('article').html();
 				
 				$("#officeDetails").removeClass('showDetails');
 				$("#officeDetails").html('');
@@ -1859,6 +1876,8 @@ var mgbContent = {
 				}else{
 					$(".rightSide h3").removeClass("long");
 				}
+				
+				
 				// setTimeout(function(){
 				// 					var rightHeight = $("#officeDetails").find(".rightSide").height();
 				// 					$("#officeDetails").find(".leftSide").attr("max-height", rightHeight + "px");
@@ -1875,11 +1894,13 @@ var mgbContent = {
 					
 					setTimeout(function() {
 						$("#officeDetails").addClass('showDetails');
+						$(".rightSide").attr("tabindex",-1).focus();
 					}, 750);
 					
-					$('.closeMe').on('click', function() {
+					$('.closeMe').on('click', function(e) {
+						e.preventDefault();
 						
-						$(currThis).children("a").removeClass("active");
+						$('.officeTile a').removeClass("active");
 						
 						$("#officeDetails").addClass('removed');
 						

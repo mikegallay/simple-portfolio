@@ -1,6 +1,6 @@
 {{#each objects}}
 	<div class="officeTile" data-time-offset='{{{timeDiff}}}'>
-		<a data-tracking-label="{{{trackingLabel}}}">
+		<a data-tracking-label="{{{trackingLabel}}}" href="#">
 			<picture>
 			<!--[if IE 9]>
 				<video style="display: none;"><![endif]-->
@@ -223,11 +223,11 @@
 						</div>
 					</div>
 				
-					<div class="closeMe">
+					<a href="#" class="closeMe">
 						<svg class="icon more_button-inline" role="img" aria-labelledby="title">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
 						</svg>
-					</div>
+					</a>
 			<!-- </div> -->
 
 		</article>

@@ -31,6 +31,13 @@
 				</div>
 			</a>
 			<div id="navWrapper">
+				<a id="menuToggleHolder" href="#" aria-label="Open the main navigation">
+					<div id="menuToggle">			
+						<div id="ham1"><div class="hamDot"></div></div>
+						<div id="ham2"><div class="hamDot"></div></div>
+						<div id="ham3"><div class="hamDot"></div></div>	
+					</div>
+				</a>
 				<ul class="menu">
 					<li>
 						<a id="nav-work" href="work" aria-label="" data-tracking-label="Nav|Click|Work">WORK</a>
@@ -48,6 +55,7 @@
 						<a id="nav-careers"  href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="" data-tracking-label="Nav|Click|Careers">CAREERS</a>
 					</li>
 				</ul>
+				<a class="hiddenNavToggle visuallyhidden" href="#" aria-label="Open the main navigation">close main navigation</a>
 				<!--
 				<div class="flag us"></div>
 								<select id="office-selector" dir="">
@@ -61,13 +69,7 @@
 									<option value="nl-ams-nl">Amsterdam - NL</option>
 								</select>-->
 				
-				<div id="menuToggleHolder">
-					<div id="menuToggle">			
-						<div id="ham1"><div class="hamDot"></div></div>
-						<div id="ham2"><div class="hamDot"></div></div>
-						<div id="ham3"><div class="hamDot"></div></div>	
-					</div>
-				</div>
+				
 				
 			</div>
 			
