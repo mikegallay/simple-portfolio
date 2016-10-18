@@ -963,6 +963,7 @@ var mgbHeader = {
 		
 		$('#menuToggleHolder, .hiddenNavToggle').on('click', function(e){
 			e.preventDefault();
+			
 			var newAlt, alt = $('#menuToggleHolder').attr('aria-label');
 			 
             if (alt.indexOf('Open') != -1) { // has 'open'

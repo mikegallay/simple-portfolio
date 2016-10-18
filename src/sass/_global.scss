@@ -17,9 +17,8 @@ body {
 	height: 100%;
 	background:white;
 	-webkit-font-smoothing: subpixel-antialiased;
-	/*&.overlayReady{
-		background:$overlayColor;
-	}*/
+	-webkit-text-stroke:1px transparent;
+
 }
 
 .noPadding {
