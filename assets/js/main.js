@@ -1843,14 +1843,16 @@ var mgbMainSys = {
 	},
 	
 	showFooter : function(){
+		console.log("showfooter")
 		setTimeout(function(){
+			console.log("showfooterIn");
 			$('footer').removeClass('absolute');
 			if ($('footer').position().top + 63 < $(window).height()){
 				$('footer').addClass('absolute');
 				// $('footer').css('bottom', 0 + 'px');
 			}
 			$('footer').removeClass('tempHide');
-		},200);
+		},2000);
 	},
 
 	checkLocation : function(){
@@ -2642,6 +2644,7 @@ var mgbHeader = {
 		
 		$('#menuToggleHolder, .hiddenNavToggle').on('click', function(e){
 			e.preventDefault();
+			
 			var newAlt, alt = $('#menuToggleHolder').attr('aria-label');
 			 
             if (alt.indexOf('Open') != -1) { // has 'open'

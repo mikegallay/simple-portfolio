@@ -118,7 +118,7 @@
 				<h1 class="sectionHeading">LATEST NEWS</h1>
 					
 				<div class="sectionButton">
-					<a class="button all-news" href="global-leadership" data-tracking-label="Home|Click|AllNews">All News<span class="moreArrow">
+					<a class="button all-news" href="news" data-tracking-label="Home|Click|AllNews">All News<span class="moreArrow">
 							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
 							</svg>
