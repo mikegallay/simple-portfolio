@@ -26,7 +26,7 @@
         	homeSections.push('<?php echo $val; ?>');
 		<?php } ?></script>
 	
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo MEDIAPATH ?>css/main.css">
 
 	<script src="<?php echo MEDIAPATH ?>js/lib/modernizr-custom.js"></script>

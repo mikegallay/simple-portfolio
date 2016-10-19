@@ -179,7 +179,7 @@ var mgbMainSys = {
 	checkLocation : function(){
 		// this.showPinned();
 		setTimeout(function(){
-			mgbMainSys.showPinned();
+			if ($(window).attr('scrollY') == 0 && $('body').hasClass('ishome')) mgbMainSys.showPinned();
 			// $("body").addClass("showPinned");
 		},4000)
 	
@@ -1893,7 +1893,8 @@ var mgbContent = {
 				setTimeout(function() {
 					var rs = $('.rightSide .info').height() - 30;// + $('.rightSide .officeStats').height();//- 60;
 					$("#officeDetails").css('height',rs+"px");
-					$(".leftSide").css('height',(rs + 185)+"px");
+					var statsH = $('.officeStats').height() 
+					$(".leftSide").css('height',(rs + statsH + 70)+"px");
 					
 					setTimeout(function() {
 						$("#officeDetails").addClass('showDetails');
@@ -2008,6 +2009,11 @@ var mgbContent = {
 			if (colW < 50) {
 				$('.cultureTile').removeAttr('style');
 				that.setCultureTileHeight();
+			}
+			
+			if ($('.cultureTile').length > 0 && !$('.cultureTile').hasAttr('style')){
+				that.setCultureTileHeight();
+				console.log('cultureTile does not have style attribute');
 			}
 	
 		},350);
@@ -2366,7 +2372,7 @@ if($("body").hasClass("ishome") && !isMobile.any()) {
 	mgbHeroVideo.loadHeaderVideo();
 	
 	// Check for location in header section
-	if("geolocation" in navigator) {
+	/*if("geolocation" in navigator) {
 		navigator.geolocation.getCurrentPosition(function(pos){
 
 			var lat = pos.coords.latitude;
@@ -2386,7 +2392,7 @@ if($("body").hasClass("ishome") && !isMobile.any()) {
 		}, function(){
 			console.log("Not able to get location.");
 		});
-	}
+	}*/
 }
 
 

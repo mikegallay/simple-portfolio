@@ -1,5 +1,5 @@
 .clientContent {
-	width: 95%;
+	width: 90%;
 	max-width:1280px;
 	position: relative;
 	margin: 0 auto;
@@ -9,25 +9,27 @@
     justify-content: space-around;
     align-items: center;
     align-content: space-between;
-
+	@media screen and (min-width: 412px) {
+		 justify-content: flex-start;
+	}
 	.clientLogo {
 		position: relative;
 		margin-top: 0.75em;
 		margin-bottom: 0.75em;
-		width: 30%;
+		width: 33.33333%;
 		
 		
-		@media screen and (min-width: 768px) {
-			width: 24%;
+		@media screen and (min-width: 412px) {
+			width: 25%;
 		}
 		
 		@media screen and (min-width: 1024px) {
-			width: 18%;
+			width: 16.666666%;
 		}
 		
-		@media screen and (min-width: 1440px) {
+		/*@media screen and (min-width: 1440px) {
 			width: 15%;
-		}
+		}*/
 		
 		
 		img {

@@ -161,7 +161,7 @@ h1.sectionHeading{
 		transition:top 500ms 300ms;
 		top:0;
 		position:relative;
-		
+		z-index:1000;
 		section{
 			opacity:0;transition:opacity 1s 500ms;
 		}
@@ -180,6 +180,7 @@ h1.sectionHeading{
 
 .portfolioContent, .cultureContent, .officeContent, .clientContent, .newsContent {
 	//margin-top: 1.2em;
+	
 	display:inline-block;
 	
 	.in-view {
@@ -311,7 +312,7 @@ h1 {
 				top: 10%;
 				position: relative;
 				transition: top 300ms, opacity 300ms;
-				
+				-webkit-transform: translate3d(0,0,0);
 				h2 {				
 					font-family: 'Din-Bold', sans-serif;
 					text-transform: uppercase;
@@ -355,7 +356,7 @@ h1 {
 	height:auto;
 	display: inline-block;
 	font-size: 0.8em;
-	
+	-webkit-transform: translate3d(0,0,0);
 	&.notLoaded {
 		display:none;
 	}
@@ -373,7 +374,7 @@ h1 {
 			width: 100%;
 //			height: 100%;
 			position: relative;
-
+			
 			.prjDescription {
 				position: absolute;
 				width: 100%;
@@ -389,6 +390,7 @@ h1 {
 					height: 100%;
 					width: 80%;
 					margin: 0 10%;
+					-webkit-transform: translate3d(0,0,0);
 						
 					h3 {
 						font-size: 0.8em;
@@ -431,7 +433,7 @@ h1 {
 				    top: 10%;
 				    position: relative;
 					transition: top 300ms, opacity 300ms;
-					
+					-webkit-transform: translate3d(0,0,0);
 					p {
 						margin: 0;
 					}
@@ -443,6 +445,7 @@ h1 {
 				}
 				
 				.linkOverlay {
+					
 				    position: absolute;
 				    width: 0%;
 				    height: 0%;
@@ -523,13 +526,15 @@ h1 {
 		position: absolute;
 		top:20px;
 		text-align: center;
-		
+		-webkit-transform: translate3d(0,0,0);
 		.inner{
 			.quote {
 				font-size: 1em;
-				font-family: 'Din-Light', sans-serif;
+				font-family: 'Open Sans', sans-serif;
+				font-weight:400;
 			    line-height: 1.25;
 				margin-top:0;
+				
 			}
 			
 			hr{
@@ -539,15 +544,15 @@ h1 {
 			
 			.name {
 				font-size: 1.3em;
-				font-family: 'Din-Regular', sans-serif;
+				font-family: 'Din-Bold', sans-serif;
 				text-transform:uppercase;
 				margin:0 0 -.25em;
 			}
 			
 			.title {
-				font-size: 0.7em;
+				font-size: 12px;//0.7em;
 				font-family: 'Open Sans', sans-serif;
-				font-weight: 300;
+				font-weight: 400;
 				font-style:italic;
 				text-transform:uppercase;
 				margin:0;
@@ -829,7 +834,7 @@ h1 {
 		position:relative;
 		overflow:hidden;
 		transition: height 300ms 500ms,opacity 300ms;
-		
+		margin-top:2em;
 		a{
 			color:white;
 		}
@@ -907,7 +912,7 @@ h1 {
 			    font-weight: 300;
 				font-size: 1.5em;
 				padding: 0;
-				margin: .5em 0 0em 0.5em;
+				margin: 1.5em 0 0em;
 			}
 		}
 		
@@ -1003,7 +1008,7 @@ h1 {
 			}
 			
 			.info {
-				font-size: 0.9em;
+				font-size: 13px;// 0.9em;
 				opacity: 1;
 				transition: opacity 500ms 600ms;
 				//added
@@ -1151,11 +1156,15 @@ h1 {
 				font-size:1em;
 				font-family: 'Din-Regular', sans-serif;
 				z-index:1;
+				//-webkit-font-smoothing: subpixel-antialiased;
+				//-webkit-text-stroke-width: 1px;
+				-webkit-transform: translate3d(0,0,0);
 			}
 			&.cityTime{
 				font-size:.8em;
 				font-family: 'Din-Regular', sans-serif;
 				z-index:1;
+				-webkit-transform: translate3d(0,0,0);
 			}
 		}
 	}		
@@ -1279,8 +1288,8 @@ h1 {
 						text-align:left;
 						top: -.5em;
 						h4{
-							font-size:1em;
-							margin-top: 1em;
+						    font-size: 16px;
+						    margin-top: 2em;
 							font-weight: bolder;
 						}
 						p {

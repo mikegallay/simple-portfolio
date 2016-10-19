@@ -420,6 +420,8 @@
 	overflow:hidden;
 	//margin-bottom:100%;
 	
+	z-index:999;
+	
 	&.settle{
 		//margin-bottom:0;
 		transition:height 0s;//,margin 1s .5s;

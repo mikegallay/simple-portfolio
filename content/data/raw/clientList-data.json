@@ -4,6 +4,10 @@
 		"logo": "bluecross"
 	},
 	{
+		"name": "Brand USA",
+		"logo": "brandusa"
+	},
+	{
 		"name": "Cars",
 		"logo": "cars"
 	},
@@ -75,10 +79,7 @@
 		"name": "United",
 		"logo": "united"
 	},
-	{
-		"name": "Brand USA",
-		"logo": "brandusa"
-	},
+
 	{
 		"name": "USTA",
 		"logo": "usta"
