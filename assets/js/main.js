@@ -1888,7 +1888,7 @@ var mgbMainSys = {
 	
 	scrollToSection : function(section,t){
 		$("html, body").animate({
-				scrollTop: $("#"+section).offset().top - 40,
+				scrollTop: $("#"+section).offset().top - 70,
 			}, t);
 	},
 	
@@ -3552,12 +3552,12 @@ var mgbContent = {
 				$("#officeDetails").html('');
 				$("#officeDetails").html(officeDataText);
 				
-				var titleLength = $("#officeDetails h3").text().length;
+				/*var titleLength = $("#officeDetails h3").text().length;
 				if (titleLength > 10) {
 					$(".rightSide h3").addClass("long");
 				}else{
 					$(".rightSide h3").removeClass("long");
-				}
+				}*/
 				
 				
 				// setTimeout(function(){
@@ -3570,14 +3570,27 @@ var mgbContent = {
 				mgbMainSys.scrollToSection("offices",250);
 
 				setTimeout(function() {
-					var rs = $('.rightSide .info').height() - 30;// + $('.rightSide .officeStats').height();//- 60;
+					/*var rs = $('.rightSide .info').height();
 					$("#officeDetails").css('height',rs+"px");
 					var statsH = $('.officeStats').height() 
-					$(".leftSide").css('height',(rs + statsH + 70)+"px");
+					$(".leftSide").css('height',(rs + statsH + 22)+"px");*/
+					
+					
+					
+					
 					
 					setTimeout(function() {
 						$("#officeDetails").addClass('showDetails');
 						$(".rightSide").attr("tabindex",-1).focus();
+						
+						var rs = $('.rightSide').height();
+						var pt = $('.rightSide').css('padding-top').replace("px", "");
+						var pb = $('.rightSide').css('padding-bottom').replace("px", "");
+						var total = (Number(rs) + Number(pt) /*+ Number(pb) - 6*/);
+						
+						console.log(rs,pt,pb,total);
+						$(".leftSide").css('height',total+"px");
+						
 					}, 750);
 					
 					$('.closeMe').on('click', function(e) {
@@ -3599,54 +3612,37 @@ var mgbContent = {
 		});
 
 		setInterval(function(){
-		$(".officeTile").each(function(index){
-			var timeOffset = parseInt($(this).data("timeOffset")),
-			d = new Date(),
-			utc = d.getTime() + (d.getTimezoneOffset() * 60000),
-			nd = new Date(utc + (3600000*timeOffset));
+			$(".officeTile").each(function(index){
+				var timeOffset = parseInt($(this).data("timeOffset")),
+				d = new Date(),
+				utc = d.getTime() + (d.getTimezoneOffset() * 60000),
+				nd = new Date(utc + (3600000*timeOffset));
+
+				var ndHours = nd.getHours();
+				var ndMinutes = nd.getMinutes();
+
+				var ampm = "AM";
+				if (ndHours > 12) {
+				    ndHours -= 12;
+					ampm = "PM";
+				}
+
+				var clockHours = Math.floor((ndHours / 12) * 100) + "%";
+				var clockMinutes = Math.floor(100 * (ndMinutes / 60)) + "%";
+
+				if (ndHours == 0) ndHours = 12;
+				if (ndMinutes < 10) ndMinutes = "0" + ndMinutes;
+				var displayTime = ndHours + ":" + ndMinutes + " " + ampm;
 			
-			/*var ndHours = nd.getHours();
-			if(ndHours > 12) {
-				ndHours -= 12;
-			}
+				$(this).children("a").find("time").text(displayTime);
 
-			var clockHours = Math.floor((ndHours/12) * 100) + "%";
-			var clockMinutes = Math.floor(100 * (nd.getMinutes()/60))+"%";
+				var hrEle = $(this).find(".clockHours");
+				var minEle = $(this).find(".clockMinutes");
 
-			nd = nd.toLocaleString({hour: 'numeric', minute: 'numeric'}).replace(/:\d{2}\s/,' ').split(",")[1];
-			
-			$(this).children("a").find("time").text(nd);*/
-
-			var ndHours = nd.getHours();
-			var ndMinutes = nd.getMinutes();
-
-			var ampm = "AM";
-			if (ndHours > 12) {
-			    ndHours -= 12;
-				ampm = "PM";
-			}
-
-			var clockHours = Math.floor((ndHours / 12) * 100) + "%";
-			var clockMinutes = Math.floor(100 * (ndMinutes / 60)) + "%";
-
-			/* nd = nd.toLocaleString({
-			    hour: 'numeric',
-			    minute: 'numeric'
-			}).replace(/:\d{2}\s/, ' ').split(",")[1];*/
-
-			if (ndHours == 0) ndHours = 12;
-			if (ndMinutes < 10) ndMinutes = "0" + ndMinutes;
-			var displayTime = ndHours + ":" + ndMinutes + " " + ampm;
-			
-			$(this).children("a").find("time").text(displayTime);
-
-			var hrEle = $(this).find(".clockHours");
-			var minEle = $(this).find(".clockMinutes");
-
-			TweenMax.to(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
-			TweenMax.to(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
-			});
-		}, 60000);
+				TweenMax.to(hrEle, 1, {transformOrigin:"50% 50%", drawSVG: clockHours, overwrite:true});
+				TweenMax.to(minEle, 1, {transformOrigin:"50% 50%", drawSVG: clockMinutes, overwrite:false});
+				});
+			}, 60000);
     },
 	
 	initNewsCnt : function() {
@@ -3690,9 +3686,14 @@ var mgbContent = {
 				that.setCultureTileHeight();
 			}
 			
-			if ($('.cultureTile').length > 0 && !$('.cultureTile').hasAttr('style')){
-				that.setCultureTileHeight();
-				console.log('cultureTile does not have style attribute');
+			if ($('.cultureTile').length > 0){// && !$('.cultureTile').hasAttr('style')){
+				var attr = $('.cultureTile').attr('style');
+				
+				if (typeof attr == typeof undefined && attr == false) {
+					that.setCultureTileHeight();
+					console.log('cultureTile does not have style attribute');
+				}
+				
 			}
 	
 		},350);
@@ -3719,6 +3720,19 @@ var mgbContent = {
 				},350);
 			
 		}
+		
+		if ($('#officeDetails').hasClass('showDetails')){
+			
+			var rs = $('.rightSide').height();
+			var pt = $('.rightSide').css('padding-top').replace("px", "");
+			var pb = $('.rightSide').css('padding-bottom').replace("px", "");
+			//$("#officeDetails").css('height',rs+"px");
+			//r statsH = $('.officeStats').height() 
+			var total = (Number(rs) + Number(pt) /*+ Number(pb)- 6*/ );
+			console.log('update office ',total);
+			$(".leftSide").css('height',total+"px");
+		}
+		
 	},
 };
 

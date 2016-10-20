@@ -27,7 +27,7 @@
 		<?php } ?></script>
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo MEDIAPATH ?>css/main.css">
+	<link rel="stylesheet" href="<?php echo MEDIAPATH ?>css/main.css?v1.4">
 
 	<script src="<?php echo MEDIAPATH ?>js/lib/modernizr-custom.js"></script>
 	

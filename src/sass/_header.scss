@@ -134,7 +134,7 @@
 			cursor: pointer;
 			overflow:hidden;
 			transform:rotate(0deg) scale(.85);
-			transition:right 200ms 100ms,top 200ms 0ms,transform 400ms 200ms;//right 400ms 200ms,
+			transition:right 200ms 300ms,top 200ms 300ms,transform 400ms 300ms;//right 400ms 200ms,
 			
 			
 			#menuToggle{
@@ -143,8 +143,8 @@
 				//background:blue;
 				position:relative;
 				//background:gray;
-				left:25px;
-				top:25px;
+				left:27px;
+				top:28px;
 				width:100%;
 				height:100%;
 				position: relative;
@@ -155,19 +155,19 @@
 					transform-origin:center;
 					.hamDot{
 	
-						width: 8px;
-						height: 8px;
+						width: 6px;
+						height: 6px;
 						border: 0px solid white;
 						opacity: 1;
-						top: -4px;
-					    left: -4px;
+						top: -3px;
+					    left: -3px;
 					    position: relative;
 						background:rgba(255,255,255,1);
 				
 					}
 			
 					&#ham1 {
-						top: -15px;
+						top: -13px;
 						transition:top 300ms 500ms;
 						.hamDot{
 							transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
@@ -177,15 +177,15 @@
 					&#ham2 {
 						.hamDot{
 							border:2px solid white;
-							width:4px;
-							height:4px;
-							left:-4px;
-							top:-4px;
+						    width: 2px;
+						    height: 2px;
+						    left: -3px;
+						    top: -3px;
 							transition:top 300ms 150ms,left 300ms 150ms,width 300ms 150ms,height 300ms 150ms,background 0ms 450ms;}
 						}
 
 					&#ham3 {
-						top: 15px;
+						top: 13px;
 						transition:top 300ms 500ms;
 						.hamDot{
 							transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
@@ -196,7 +196,8 @@
 			&.active{
 				transform: rotate(225deg) scale(.8);
 				right: 4px;
-				transition:right 200ms 100ms,transform 400ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
+				top:8px;
+				transition:right 200ms 100ms,top 200ms 100ms,transform 400ms 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
 				#menuToggle{
 					.hamDot{
 					}
@@ -352,7 +353,7 @@
 		//background-color:gray;
 	    position: fixed;
 		height:100%;
-	    z-index: 999;
+	    z-index: 9999;
 		transition: height 300ms;
 		#navWrapper{
 			width:100%;
@@ -492,15 +493,15 @@
 		height: 700px;
 		color:white;
 	
-	    background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
+	    /*background-image: -webkit-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
 	    background-image: -moz-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
 	    background-image: -ms-repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
 	    background-image: repeating-radial-gradient(center center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, rgba(0,0,0,0.2) 1px,transparent 100%);
 		background-repeat: repeat;
-		-webkit-background-size: 3px 3px;
-		-moz-background-size: 3px 3px;
-		background-size: 3px 3px;
-		background-position: center;	
+		background-size: 2px 2px;//3px 3px;
+		background-position: center;	*/
+		
+		background:url('../img/common/pixelgrid_pattern.png') center center;
 	    text-align: center;
 	    display: flex;
 	    flex-flow: column wrap;
@@ -515,8 +516,12 @@
 		.headerHeroText {	
 			font-family: 'Din-Bold', sans-serif;
 			position: relative;
-			font-size: 2em;
-			font-weight: bold;
+			font-size: 1.3em;
+			font-weight:100;
+			@media screen and (min-width: 768px) {
+				font-size: 2em;
+			}
+//			font-weight: bold;
 			text-transform: uppercase;
 			line-height: 1em;
 			outline: 0px solid transparent;

@@ -64,6 +64,7 @@
 	{	
 		"imgSrc": "assets/img/our_offices/office_sanantonio",
 		"city": "SAN ANTONIO",
+		"longName": true,
 		"timeDiff": "-7",
 		"address": "9901 IH 10 WEST <br> Suite 800 <br> San Antonio, TX 78230",
 		"directions": "https://www.google.com/maps/dir//9901+West+Ih+10,+San+Antonio,+TX+78230/@29.5338799,-98.5641479,17z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x865c60b79a1b3d5d:0x77e4b6fa184e90a0!2m2!1d-98.5619592!2d29.5338799",
@@ -95,6 +96,7 @@
 	{	
 		"imgSrc": "assets/img/our_offices/office_sanfransisco",
 		"city": "SAN FRANCISCO",
+		"longName": true,
 		"shortName": "SAN FRAN",
 		"timeDiff": "-7",
 		"address": "875 Howard St. 6th Floor <br> San Francisco, CA 94103",
@@ -127,6 +129,7 @@
 	{	
 		"imgSrc": "assets/img/our_offices/office_mexicocity",
 		"city": "MEXICO CITY",
+		"longName": true,
 		"timeDiff": "-1",
 		"address": "Av. Paseo de las Palmas #1930 <br> Col. Lomas de Chapultepec",
 		"directions": "https://www.google.com/maps/dir//Avenida+Paseo+de+las+Palmas+1930,+Lomas+de+Chapultepec+V+Secci%C3%B3n,+Ciudad+de+M%C3%A9xico,+D.F.,+Mexico/@19.4111408,-99.2318321,17z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x85d2019ea6e9e381:0xe84de9ac425f2365!2m2!1d-99.2296434!2d19.4111408",
@@ -189,6 +192,7 @@
 	{	
 		"imgSrc": "assets/img/our_offices/office_amsterdam",
 		"city": "AMSTERDAM",
+		"longName": true,
 		"timeDiff": "+2",
 		"address": "Prins Hendrikkade 21-2 <br/> Amsterdam, Netherlands",
 		"directions": "https://www.google.com/maps/dir//Prins+Hendrikkade+21-2,+Amsterdam,+Netherlands/@52.378559,4.8918172,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x47c609c81f3bc521:0xfbcd9a8353dbcf1b!2m2!1d4.8961946!2d52.3785591",
@@ -282,6 +286,7 @@
 	{	
 		"imgSrc": "assets/img/our_offices/office_hongkong",
 		"city": "HONG KONG",
+		"longName": true,
 		"timeDiff": "+8",
 		"address": "",
 		"directions": "",

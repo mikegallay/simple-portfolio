@@ -49,9 +49,13 @@
 
 .menu_dropdown_arrow-inline {
     fill: #ffffff;
-	width: 1em;
-    height: 1em;
+	width: .7em;
+    height: .7em;
 	vertical-align: initial;	
+	//@media screen and (min-width: 768px) {
+//		width: 1em;
+//	    height: 1em;
+//	}
 }
 
 .facebook-inline, .instagram-inline, .twitter-inline, .linkedin-inline {
@@ -71,12 +75,8 @@
 
 .office-stat-icon {
 	fill: #58595b;
-	width: 6em;
-	height: 6em;
-	@media screen and (min-width: 376px) {
-		width: 5em;
-		height: 5em;
-	}
+	width: 4em;
+	height: 4em;
 }
 
 .icon_mail-inline,.icon_phone-inline,.icon_location-inline{
@@ -101,7 +101,7 @@
 	}
 	.office-stat-icon {
 		fill: #58595b;
-		width: 4em;
-		height: 4em;
+		width: 3.5em;
+		height: 3.5em;
 	}
 }
