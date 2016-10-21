@@ -3,12 +3,12 @@
 	<div id="heroImage">
 		<picture>
             <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="{{{csHero}}}_large.jpg, {{{csHero}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
-			<source srcset="{{{csHero}}}_medium.jpg, {{{csHero}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
-			<source srcset="{{{csHero}}}.jpg, {{{csHero}}}@2x.jpg 2x">
+            <source srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
+			<source srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}_medium.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
+			<source srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}@2x.jpg 2x">
             <!--[if IE 9]></video><![endif]-->
             <!--[if !lte IE 9]> -->
-            <img srcset="{{{csHero}}}.jpg" src="../assets/img/common/blank.png" alt="' . $alt . '">
+            <img srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}.jpg" src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" alt="' . $alt . '">
             <!-- <![endif]-->
            
         </picture>
@@ -44,7 +44,7 @@
 					{{#each csVideos}}
 						<div class="workThumb">
 							<a data-content="144913605" data-tracking-label="{{{csTitle}}}|Click|{{{vidTitle}}}" aria-label="">
-								<img src="{{{vidImgSrc}}}.jpg" alt="">
+								<img src="{{#appRoot}}{{/appRoot}}{{{vidImgSrc}}}.jpg" alt="">
 								<div class="playButton">
 									<svg class="icon playbutton-inline" role="img" aria-labelledby="title">
 									  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playbutton"></use>

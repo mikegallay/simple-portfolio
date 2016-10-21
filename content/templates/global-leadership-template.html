@@ -14,16 +14,16 @@
 						{{#equal imgType 'jpg'}}
 							<!--[if IE 9]>
 								<video style="display: none;"><![endif]-->
-									<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+									<source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg 2x">
 							<!--[if IE 9]>
 								</video>
 							<![endif]-->
 							<!--[if !lte IE 9]> -->
-								<img src="assets/img/common/blank.png" data-src='{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll-all">
+								<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll-all">
 							<!-- <![endif]-->
 						{{/equal}}
 						{{#equal imgType 'gif'}}
-							<img src="assets/img/common/blank.png" data-srcset='{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll-all">
+							<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-srcset='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll-all">
 						{{/equal}}
 					</picture>
 			
