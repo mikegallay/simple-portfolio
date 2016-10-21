@@ -85,6 +85,7 @@ class Helpers
         $this->add('equal', new Helper\EqualHelper());
         $this->add('dateFormat', new Helper\DateFormatHelper());
 		$this->add('greaterThan', new Helper\GreaterThan());
+		$this->add('appRoot', new Helper\AppRoot());
 
         //Just for compatibility with ember
         $this->add('bindAttr', new Helper\BindAttrHelper());

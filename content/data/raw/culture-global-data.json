@@ -8,7 +8,8 @@
 		"linkedin": "",
 		"trackingLabel": "",
 		"office": "",
-		"filter": "always"
+		"filter": "always",
+		"moreinfo":"global-leadership/gordon-bowen"
 	},
 	{
 		"name" : "Matthew Bull Original",
@@ -16,7 +17,7 @@
 		"imgSrc": "assets/img/our_culture/bio_gordon",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ams",
@@ -28,7 +29,7 @@
 		"imgSrc": "assets/img/our_culture/bio_jen",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "par"
@@ -39,7 +40,7 @@
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "par"
@@ -50,7 +51,7 @@
 		"imgSrc": "assets/img/our_culture/bio_brandon",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"
@@ -61,7 +62,7 @@
 		"imgSrc": "assets/img/our_culture/bio_gordon",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"
@@ -72,7 +73,7 @@
 		"imgSrc": "assets/img/our_culture/bio_ned",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "chi"
@@ -83,7 +84,7 @@
 		"imgSrc": "assets/img/our_culture/bio_jen",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"
@@ -94,7 +95,7 @@
 		"imgSrc": "assets/img/our_culture/bio_ned",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"
@@ -105,7 +106,7 @@
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"
@@ -116,7 +117,7 @@
 		"imgSrc": "assets/img/our_culture/bio_gordon",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"
@@ -127,7 +128,7 @@
 		"imgSrc": "assets/img/our_culture/bio_brandon",
 		"imgType": "jpg",
 		"info": "Aenean maximus pellentesque erat, lacinia venenatis dolor vestibulum a. Aliquam rhoncus iaculis egestas. Cras vel efficitur nunc. Integer nec convallis dolor.",
-		"linkedin": "michael-gallay-316a074",
+		"linkedin": "",
 		"trackingLabel": "Home|Click|MatthewBull_Culture",
 		"office": "New York",
 		"filter": "ny"

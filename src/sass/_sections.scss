@@ -200,7 +200,8 @@ h1.sectionHeading{
 	position:relative;
 	
 	&.inactive{
-		display:none;
+//		display:none;
+		visibility:hidden;
 		position:fixed;
 	}
 	
@@ -881,14 +882,16 @@ h1 {
 	color:white;
 	#officeDetails {
 		color:white;
-		display: none;
+//		display: none;
 		opacity:0;
 		width: 100%;
-		height: 0em;
+		height: 0;
 		position:relative;
 		overflow:hidden;
-		transition: height 300ms 500ms,opacity 300ms;
-		margin-top:2em;
+		transition: height 300ms, opacity 300ms 300ms;
+		margin-top:0em;
+		margin-bottom:0;
+		transition: margin-bottom 500ms;
 		h3{
 			font-weight:100;
 		}
@@ -906,7 +909,6 @@ h1 {
 		overflow: hidden;
 		z-index:0;
 		position:relative;
-		
 		picture {
 			.lazyload {
 				opacity: 0;
@@ -1045,8 +1047,14 @@ h1 {
 	&.showDetails {
 		opacity:1;
 		overflow:visible;
-		display: block;
+//		display: block;
+//		margin-top:2em;
+//		height:400px;
 		
+		transition: margin-bottom 0ms, opacity 300ms;
+		&.mb0{
+			margin-bottom:0!important;
+		}
 		.ribbon {
 			height: 100%;
 			transition: height 300ms 300ms,top 5s;
@@ -1263,28 +1271,7 @@ h1 {
 			font-size: 2em;
 		}
 	}*/
-	.cultureTile {
-		.bio {
-			.inner{
-				.quote {
-					font-size: 1.4em;
-					margin-bottom: 0.25em;
-					display:block;
-				}
-				.hrule{
-					margin:.75em 0 .85em;
-					display:block;
-				}
-				.name {
-					font-size: 1.3em;
-					margin:0 0 -.25em;
-				}
-				.title {
-					font-size: 0.7em;
-				}
-			}
-		}
-	}
+	
 	#careers{
 		a.button{
 			font-size:1em;
@@ -1462,6 +1449,7 @@ h1 {
 			font-size: 2.5em;
 		}
 	}*/
+	
 
 	.projectTile {
 		width: 24%;
@@ -1517,9 +1505,11 @@ h1 {
 				.quote {
 					font-size: 1em;
 				    line-height: 1.25;
+					display:block;
 				}
 				.hrule{
 					margin:.75em 0 .85em;
+					display:block;
 				}
 				.name {
 					font-size: 1.3em;

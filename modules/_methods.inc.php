@@ -161,10 +161,12 @@ function formatCulture($data,$shuffle){
 	//pull the first item in the array out.
 	//this will be inserted into the shuffled array in the top 5
 	//in order to have an item to base the height on
-	$staticItem = array_splice($tempData, 0, 1);
 	
-	if ($shuffle == true) shuffle($tempData);
 	
+	if ($shuffle == true) {
+		$staticItem = array_splice($tempData, 0, 1);
+		shuffle($tempData);
+	}
 	
 	/*try {	
 		shuffle($tempData);
@@ -192,11 +194,13 @@ function formatCulture($data,$shuffle){
 	if ($shuffle == true){
 		shuffle($singleArr);
 		shuffle($doubleArr);
+		
+		//random number to insert the static array back in
+		$staticIndex = rand( 1 , 4);
+		array_splice($singleArr, $staticIndex, 0, $staticItem);
 	}
 	
-	//random number to insert the static array back in
-	$staticIndex = rand( 1 , 4);
-	array_splice($singleArr, $staticIndex, 0, $staticItem);
+	
 	
 	
 	/*try {

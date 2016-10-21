@@ -4,12 +4,12 @@
 			<picture>
 			<!--[if IE 9]>
 				<video style="display: none;"><![endif]-->
-					<source data-srcset="{{{imgSrc}}}.jpg, {{{imgSrc}}}@2x.jpg 2x">
+					<source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg 2x">
 			<!--[if IE 9]>
 				</video>
 			<![endif]-->
 			<!--[if !lte IE 9]> -->
-				<img data-src='{{{imgSrc}}}@2x.jpg' src="assets/img/common/blank.png" alt="{{{altText}}}" class="lazyload ll">
+				<img data-src='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg' src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" alt="{{{altText}}}" class="lazyload ll">
 			<!-- <![endif]-->
 			</picture>
 			
@@ -43,15 +43,15 @@
 						<!--[if IE 9]>
 							<video style="display: none;"><![endif]-->
 							
-								<source data-srcset="{{{interiorImage}}}_large.jpg, {{{interiorImage}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
-							<source data-srcset="{{{interiorImage}}}_medium.jpg, {{{interiorImage}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
-							<source data-srcset="{{{interiorImage}}}.jpg, {{{interiorImage}}}@2x.jpg 2x">
+								<source data-srcset="{{#appRoot}}{{/appRoot}}{{{interiorImage}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{interiorImage}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
+							<source data-srcset="{{#appRoot}}{{/appRoot}}{{{interiorImage}}}_medium.jpg, {{#appRoot}}{{/appRoot}}{{{interiorImage}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
+							<source data-srcset="{{#appRoot}}{{/appRoot}}{{{interiorImage}}}.jpg, {{#appRoot}}{{/appRoot}}{{{interiorImage}}}@2x.jpg 2x">
 							
 						<!--[if IE 9]>
 							</video>
 						<![endif]-->
 						<!--[if !lte IE 9]> -->
-							<img src="assets/img/common/blank.png" data-src="{{{interiorImage}}}_medium@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
+							<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src="{{#appRoot}}{{/appRoot}}{{{interiorImage}}}_medium@2x.jpg 2x" alt="{{{altText}}}" class="lazyload">
 						<!-- <![endif]-->
 						</picture>
 					</div>

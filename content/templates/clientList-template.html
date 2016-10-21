@@ -1,6 +1,6 @@
 {{#each objects}}
 	<div class="clientLogo">
-		<img src="assets/img/common/blank.png" data-src="assets/img/client_logos/clients_{{{logo}}}.svg" alt="{{{name}}}" class="lazyload ll normal active" />
-		<img src="assets/img/common/blank.png" data-src="assets/img/client_logos/clients_{{{logo}}}_color.svg" alt="{{{name}}}" class="lazyload ll fullColor" />
+		<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src="{{#appRoot}}{{/appRoot}}assets/img/client_logos/clients_{{{logo}}}.svg" alt="{{{name}}}" class="lazyload ll normal active" />
+		<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src="{{#appRoot}}{{/appRoot}}assets/img/client_logos/clients_{{{logo}}}_color.svg" alt="{{{name}}}" class="lazyload ll fullColor" />
 	</div>
 {{/each}}

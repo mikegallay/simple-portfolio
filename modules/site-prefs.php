@@ -50,6 +50,6 @@
 	// $appRoot = "/";
 	
 	//define(TEMPLATESPATH, "./templates/");
-
-
+	define(APPROOT, $appRoot);
+	
 ?>

@@ -45,38 +45,20 @@
 		{{#if info}}
 			<div class="bio">
 				<div class="inner">
-					{{#equal infoType 'card'}}
-						<h2>
-							{{ info }}
-						</h2>
-						<h4>
-						 {{ name }}
-						</h4>
-						<h5>
-							{{ title }}, {{ office }}
-						</h5>
-					{{/equal}}
-					{{#equal infoType 'quote'}}
-						<p class="quote">
-							<span class="start-quote">"</span>
-							<span class="quote-info">{{ info }}</span>
-							<span class="end-quote">"</span>
-						</p>
-						<p class="byline">
-							<span class="name">{{ name }}</span><br/>
-							<span class="title">{{ title }}</span>
-						</p>
-					{{/equal}}
+					<p class="quote">
+						{{ info }}
+					</p>
+					<hr class="hrule">
+					<p class="name">
+					 	{{ name }}
+					</p>
+					<p class="title">
+						{{ title }}, {{ office }}
+					</p>
 				</div>
 			</div>
 			
-			<div class="closeCulture">
-				<a href="#" aria-label="Close {{{name}}} culture section" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}_close"{{/if}}>
-					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
-					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-					</svg>
-				</a>
-			</div>
+			
 			
 		{{/if}}
 	</div>
