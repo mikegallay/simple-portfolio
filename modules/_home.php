@@ -115,7 +115,7 @@
 		
 		<section id="news" class="homeSection fullBleed">
 			<div class="container">
-				<h1 class="sectionHeading">LATEST NEWS</h1>
+				<h1 class="sectionHeading">LATEST <span class="blueFont">NEWS</span></h1>
 					
 				<div class="sectionButton">
 					<a class="button all-news" href="all-news" data-tracking-label="Home|Click|AllNews">All News<span class="moreArrow">
@@ -168,7 +168,7 @@
 		</section>
 		<section id="careers" class="fullBleed">	
 			<div class="container">
-				<h1 class="sectionHeadingSmall">INTERESTED IN&nbsp;JOINING THE&nbsp;TEAM?</h1>
+				<h1 class="sectionHeadingSmall">INTERESTED IN JOINING THE&nbsp;TEAM?</h1>
 	
 				<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS<span class="moreArrow">
 							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
