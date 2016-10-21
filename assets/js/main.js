@@ -3689,7 +3689,7 @@ var mgbContent = {
 			if ($('.cultureTile').length > 0){// && !$('.cultureTile').hasAttr('style')){
 				var attr = $('.cultureTile').attr('style');
 				
-				if (typeof attr == typeof undefined && attr == false) {
+				if (attr == undefined) {
 					that.setCultureTileHeight();
 					console.log('cultureTile does not have style attribute');
 				}

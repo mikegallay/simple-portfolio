@@ -212,7 +212,7 @@
 	
 	.in-view {
 		opacity: 1;
-		transform:scale(1);
+		transform:scale(1.01);
 		transition: opacity 1s 50ms, transform 1s 50ms;
 	}
 	

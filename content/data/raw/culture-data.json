@@ -1,5 +1,15 @@
 [
 	{
+		"name" : "Biking",
+		"title": "",
+		"imgSrc": "assets/img/our_culture/sf2",
+		"imgType": "jpg",
+		"info": "",
+		"office": "New York",
+		"filter": "ny"
+		
+	},
+	{
 		"name" : "Gordon Bowen",
 		"title": "Chief Creative Officer",
 		"imgSrc": "assets/img/our_culture/bio_gordon",
@@ -11,25 +21,17 @@
 		"filter": "ny",
 		"moreinfo":"global-leadership/gordon-bowen"
 	},
+	
 	{
 		"name" : "Pantone",
-		"title": "My Title",
+		"title": "Pantone",
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
 		"info": "",
 		"office": "Chicago",
 		"filter": "chi"
 	},
-	{
-		"name" : "Biking",
-		"title": "",
-		"imgSrc": "assets/img/our_culture/bio_jen",
-		"imgType": "jpg",
-		"info": "",
-		"office": "New York",
-		"filter": "ny"
-		
-	},
+
 	{
 		"name" : "Dogs",
 		"title": "",
@@ -41,9 +43,9 @@
 		"moreinfo":"people/person-one"
 	},
 	{
-		"name" : "Art",
+		"name" : "Jennifer Zimmerman",
 		"title": "",
-		"imgSrc": "assets/img/our_culture/art",
+		"imgSrc": "assets/img/our_culture/bio_jen",
 		"imgType": "jpg",
 		"info": "",
 		"office": "New York",
@@ -115,15 +117,6 @@
 		"office": "Chicago",
 		"filter": "chi"
 	},	
-	{
-		"name" : "Dog",
-		"title": "My Title",
-		"imgSrc": "assets/img/our_culture/sf2",
-		"imgType": "jpg",
-		"info": "", 
-		"office": "Paris",
-		"filter": "par"
-	},
 	{
 		"name" : "Tattoos",
 		"title": "My Title",
