@@ -1751,7 +1751,7 @@ var mgbMainSys = {
 		//not woring properly
 		var that = this;
 		
-		this.waypointsInitialized = true;
+		if (mgbMainSys.mainContentLoaded == true) this.waypointsInitialized = true;
 		
 		// this.createWaypoint('work');
 		// this.createWaypoint('culture');
@@ -3819,6 +3819,8 @@ var mgbInternalContent = {
 			if (that.allCultureFilter[0] == "all") filterOption = "all";
 			that.filterAllCulture(filterOption);
 			
+			
+			
 		});
 	   
 	   $('select').change(function() {
@@ -3876,9 +3878,11 @@ var mgbInternalContent = {
 				}
 			}
 		});
-
+		$('footer').addClass('tempHide');
+		
 		mgbContent.setCultureTileHeight();
-
+		mgbMainSys.showFooter();
+		
 		setTimeout(function(){
 			mgbMainSys.checkInView('.ll-all');
 			
