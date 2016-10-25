@@ -622,7 +622,11 @@ var mgbMainSys = {
 // 		}
 
 	console.log("root=",root," page=",page);
-		if (root == page) root = '';
+		if (root == page) {
+			root = '';
+		}else{
+			root = root.substring(0, root.length - 1);
+		}
 		
 		
 		
