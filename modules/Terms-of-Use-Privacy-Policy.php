@@ -1,4 +1,4 @@
-<div class="contentWrapper" style="background:#37383a;">
+<div class="contentWrapper">
 	<section class="no-header" id="terms">
 	<h1>Terms of Use / Privacy Policy</h1>
 
