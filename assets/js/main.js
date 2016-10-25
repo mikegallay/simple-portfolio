@@ -2303,7 +2303,7 @@ var mgbMainSys = {
 	console.log("root=",root," page=",page);
 		if (root == page) {
 			root = '';
-		}else{
+		}else if (page == "/"){
 			root = root.substring(0, root.length - 1);
 		}
 		
