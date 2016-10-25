@@ -17,7 +17,7 @@
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="<?php echo MEDIAPATH ?>js/main.js?v=1.3"></script>
+<script src="<?php echo MEDIAPATH ?>js/main.js?v=1.5"></script>
 
 
 

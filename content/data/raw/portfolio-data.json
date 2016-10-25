@@ -10,15 +10,15 @@
 		"isShowcase": "isShowcase",
 		"trackingLabel": "Home|Click|Intel_Work",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csClient":"Intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -33,15 +33,15 @@
 		"isShowcase": "isShowcase",
 		"trackingLabel": "Home|Click|Intel_Maserati",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csClient":"Maserati",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -55,15 +55,15 @@
 		"altText": "This is alt text",
 		"isShowcaseFinal": "isShowcaseFinal",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csClient":"Canada Dry",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -76,14 +76,14 @@
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -96,14 +96,14 @@
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -116,14 +116,14 @@
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -136,14 +136,14 @@
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -156,14 +156,14 @@
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -176,14 +176,14 @@
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed.<br><br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -197,14 +197,14 @@
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -217,14 +217,14 @@
 		"description": "Description goes here",
 		"altText": "Description goes here",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -237,14 +237,14 @@
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},	
@@ -257,14 +257,14 @@
 		"description": "Description goes here",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -277,14 +277,14 @@
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	},
@@ -297,14 +297,14 @@
 		"description": "Description goes here.",
 		"altText": "This is alt text",
 		
-		"csHero":"../assets/img/case_studies/intel",
+		"csHero":"assets/img/case_studies/intel",
 		"csOffice":"Chicago",
 		"csTitle":"Innovation Adventure, TV & Video",
 		"csBody":"Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis tincidunt libero vitae volutpat tempor. Ut vel venenatis libero, in pretium tellus. Morbi eu tempus quam, rhoncus sagittis.<br>Sed ultrices commodo magna, at faucibus arcu pellentesque ac. Aliquam elementum ex felis, eget finibus nibh lobortis sed. ",
 		"csVideos":[
-			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"../assets/img/case_studies/intel_thumb01"},
-			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"../assets/img/case_studies/intel_thumb02"},
-			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"../assets/img/case_studies/intel_thumb03"}
+			{"vidTitle":"video1","vimeoID":"144913605","vidImgSrc":"assets/img/case_studies/intel_thumb01"},
+			{"vidTitle":"video2","vimeoID":"144913607","vidImgSrc":"assets/img/case_studies/intel_thumb02"},
+			{"vidTitle":"video3","vimeoID":"119997282","vidImgSrc":"assets/img/case_studies/intel_thumb03"}
 		],
 		"website":"http:www.intel.com"
 	}

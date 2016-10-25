@@ -2300,7 +2300,10 @@ var mgbMainSys = {
 // 			page = '';
 // 		}
 
+	console.log("root=",root," page=",page);
 		if (root == page) root = '';
+		
+		
 		
         if (window.history.pushState) {
             if (bool !== false) { //-- do not add to history if using back button
