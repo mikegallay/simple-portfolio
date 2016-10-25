@@ -283,6 +283,11 @@
 	height: 792px;
 }
 
+.svg-menu_grid-dims {
+	width: 30px;
+	height: 30px;
+}
+
 .svg-more_button-dims {
 	width: 18px;
 	height: 18px;

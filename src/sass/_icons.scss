@@ -93,6 +93,12 @@
 	width: 1.5em;
 	height: 1.5em;
 }
+.menu_grid-inline{
+	width: 1.5em;
+	height: 1.5em;
+	top:-1px;
+	position:relative;
+}
 
 @media screen and (min-width: 768px) {
 	.icon_mail-inline,.icon_phone-inline,.icon_location-inline, .icon_web-inline {

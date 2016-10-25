@@ -14,9 +14,9 @@
 			
 			$currBio = getIndexFromBioId($id,$leadership_arr);
 // > 			echo '$$currBio' . $currBio;
-			$bioContent = getExtendedBio("content/templates/extended-bio.html", "leadership-bios", $id);
+			$bioContent = getExtendedBio("content/templates/extended-bio.html", "culture-global-data", $id);
 			$bioId = undefined;
 		?>
 	</div>
-	<div class="subnav cs-subnav"><a href="/global-leadership/<?php getPrevBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevBio($currBio,false,$leadership_arr); ?></a> | <a class="view-all" href="/culture">All Culture</a> | <a href="/global-leadership/<?php getNextBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><?php getNextBio($currBio,false,$leadership_arr); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
+	<div class="subnav cs-subnav"><a href="/global-leadership/<?php getPrevBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevBio($currBio,false,$leadership_arr); ?></a> | <a class="view-all" href="/culture"><?php addIcon('menu_grid'); ?></a> | <a href="/global-leadership/<?php getNextBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><?php getNextBio($currBio,false,$leadership_arr); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
 </section>

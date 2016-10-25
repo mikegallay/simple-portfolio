@@ -146,8 +146,10 @@ function preloadData(&$tempData, &$fullData, &$siteData){
 	// $tempDataArray = $fullData["portfolio-data"];
 	
 	pushToPortFolioArray($fullData["portfolio-data"]);
-	pushToBiosArray($fullData["leadership-bios"],$leadership_arr);
+	pushToBiosArray($fullData["culture-global-data"],$leadership_arr);
 	pushToBiosArray($fullData["people-bios"],$people_arr);
+	
+	array_shift($leadership_arr);
 }
 
 preloadData($tempData, $fullData, $siteData);
