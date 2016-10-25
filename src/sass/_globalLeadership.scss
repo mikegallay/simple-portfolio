@@ -46,14 +46,14 @@
 
 						@media screen and (min-width: 1024px) {
 							font-size: 0.9em;
-							margin-left: 0.5em;
-							margin-right: 0.5em;
+						    margin-left: 0.35em;
+						    margin-right: 0.35em;
 						}
 				
 						@media screen and (min-width: 1440px) {
 							font-size: 1em;
-							margin-left: 1em;
-							margin-right: 1em;
+							margin-left: .7em;
+							margin-right: .7em;
 						}
 				
 						font-weight: 400;
@@ -65,7 +65,7 @@
 						}
 			
 						&:first-of-type {
-							margin-left: 0;
+//							margin-left: 0;
 						}
 			
 						&:last-of-type {

@@ -25,7 +25,7 @@
 				<option value="sa">San Antonia</option>
 				<option value="sf">San Francisco</option>
 				<option value="sao">Sau Paulo</option>
-				<option value="sg">Shanghai</option>
+				<!-- <option value="sg">Shanghai</option> -->
 				<option value="sng">Singapore</option>
 			</select>
 			
@@ -40,8 +40,8 @@
 			<input class="cityFilter" id="select-sa" value="sa" name="radio-select" type="checkbox"><label id="label-select-sa" for="select-sa">San Antonio</label>
 			<input class="cityFilter" id="select-sf" value="sf" name="radio-select" type="checkbox"><label id="label-select-sf" for="select-sf">San Francisco</label>
 			<input class="cityFilter" id="select-sao" value="sao" name="radio-select" type="checkbox"><label id="label-select-sao" for="select-sao">Sau Paulo</label>
+			<!-- <input class="cityFilter" id="select-sg" value="sg" name="radio-select" type="checkbox"><label id="label-select-sg" for="select-sg">Shanghai</label> -->
 			<input class="cityFilter" id="select-sng" value="sng" name="radio-select" type="checkbox"><label id="label-select-sng" for="select-sng">Singapore</label>
-			<input class="cityFilter" id="select-sg" value="sg" name="radio-select" type="checkbox"><label id="label-select-sg" for="select-sg">Shanghai</label>
 		</div>	
 		<div class="cultureContent">
 			<?php

@@ -1751,57 +1751,49 @@ var mgbMainSys = {
 		//not woring properly
 		var that = this;
 		
-		if (mgbMainSys.mainContentLoaded == true) this.waypointsInitialized = true;
-		
-		// this.createWaypoint('work');
-		// this.createWaypoint('culture');
-		// this.createWaypoint('offices');
-		// this.createWaypoint('careers');
-		// this.createWaypoint('news');
-		
-		//create waypoint to note when clients section enters, to deactivate the other navs
-		/*var clientWaypoint = $('#clients').waypoint(function(direction) {
-			mgbHeader.deactivateNavActive();
-		}, {
-			offset: '50%'
-		});*/
+		if (mgbMainSys.mainContentLoaded == true) {
 			
-		var inviewNews = new Waypoint.Inview({
-		  element: $('#news')[0],
-		  enter: function(direction) {
-			  if (direction == "down") $('#news .sectionButton').addClass('show');
-		  },
-		  entered: function(direction) {
-			  if (direction == "down") $('#news .sectionButton').removeClass('show');
-		if (direction == "up") $('#news .sectionButton').addClass('show');
-		  },
-		  exit: function(direction) {
-			  if (direction == "up") $('#news .sectionButton').addClass('show');
-		  },
-		  exited: function(direction) {
-			  $('#news .sectionButton').removeClass('show');
-		  }
-		})
+			this.waypointsInitialized = true;
+			
+			var inviewNews = new Waypoint.Inview({
+			  element: $('#news')[0],
+			  enter: function(direction) {
+				  if (direction == "down") $('#news .sectionButton').addClass('show');
+			  },
+			  entered: function(direction) {
+				  if (direction == "down") $('#news .sectionButton').removeClass('show');
+			if (direction == "up") $('#news .sectionButton').addClass('show');
+			  },
+			  exit: function(direction) {
+				  if (direction == "up") $('#news .sectionButton').addClass('show');
+			  },
+			  exited: function(direction) {
+				  $('#news .sectionButton').removeClass('show');
+			  }
+			})
 	
-		var inviewCulture = new Waypoint.Inview({
-		  element: $('#culture')[0],
-		  enter: function(direction) {
-			  if (direction == "down") $('#culture .sectionButton').addClass('show');
-		    // console.log('Enter triggered with direction ' + direction)
-		  },
-		  entered: function(direction) {
-			  if (direction == "down") $('#culture .sectionButton').removeClass('show');
-		     // console.log('Entered triggered with direction ' + direction)
-		  },
-		  exit: function(direction) {
-			  if (direction == "up") $('#culture .sectionButton').addClass('show');
-		    // console.log('Exit triggered with direction ' + direction)
-		  },
-		  exited: function(direction) {
-			  $('#culture .sectionButton').removeClass('show');
-		    // console.log('Exited triggered with direction ' + direction)
-		  }
-		})
+			var inviewCulture = new Waypoint.Inview({
+			  element: $('#culture')[0],
+			  enter: function(direction) {
+				  if (direction == "down") $('#culture .sectionButton').addClass('show');
+			    // console.log('Enter triggered with direction ' + direction)
+			  },
+			  entered: function(direction) {
+				  if (direction == "down") $('#culture .sectionButton').removeClass('show');
+			     // console.log('Entered triggered with direction ' + direction)
+			  },
+			  exit: function(direction) {
+				  if (direction == "up") $('#culture .sectionButton').addClass('show');
+			    // console.log('Exit triggered with direction ' + direction)
+			  },
+			  exited: function(direction) {
+				  $('#culture .sectionButton').removeClass('show');
+			    // console.log('Exited triggered with direction ' + direction)
+			  }
+			})
+			
+		}
+		
 		
 		
 	},
@@ -3804,7 +3796,7 @@ var mgbInternalContent = {
 		mgbContent.setCultureTileHeight();
 		mgbMainSys.allCultureLoaded = true;
 		that.filterAllCulture('all');
-
+		
 		$('input:checkbox[name=radio-select]').change(function() {
 			
 			$('#globalLeadershipWrapper label').removeClass('active');
@@ -3818,9 +3810,6 @@ var mgbInternalContent = {
 			var filterOption = "";
 			if (that.allCultureFilter[0] == "all") filterOption = "all";
 			that.filterAllCulture(filterOption);
-			
-			
-			
 		});
 	   
 	   $('select').change(function() {
@@ -3885,13 +3874,10 @@ var mgbInternalContent = {
 		
 		setTimeout(function(){
 			mgbMainSys.checkInView('.ll-all');
-			
-			$( "#globalLeadershipWrapper .cultureLink").off( "click" );
-			
+			$( "#globalLeadershipWrapper .cultureLink").off( "mouseenter mouseleave" );
 			mgbContent.pushLeftPushRight($( "#globalLeadershipWrapper .pushLeft .cultureLink"),$( "#globalLeadershipWrapper .pushRight .cultureLink"));
-			
-			
 		},1000);
+		
 	},
 	
 	loadVideo : function(id){

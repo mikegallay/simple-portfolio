@@ -5,8 +5,7 @@
 		"imgSrc": "assets/img/our_culture/sf2",
 		"imgType": "jpg",
 		"info": "",
-		"office": "New York",
-		"filter": "ny"
+		"office": "New York"
 		
 	},
 	{
@@ -18,7 +17,6 @@
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Gordon_Culture",
 		"office": "New York",
-		"filter": "ny",
 		"moreinfo":"global-leadership/gordon-bowen"
 	},
 	
@@ -28,8 +26,7 @@
 		"imgSrc": "assets/img/our_culture/waving",
 		"imgType": "gif",
 		"info": "",
-		"office": "Chicago",
-		"filter": "chi"
+		"office": "Chicago"
 	},
 
 	{
@@ -39,7 +36,6 @@
 		"imgType": "jpg",
 		"info": "Bow wow wow!",
 		"office": "New York",
-		"filter": "ny",
 		"moreinfo":"people/person-one"
 	},
 	{
@@ -47,34 +43,34 @@
 		"title": "",
 		"imgSrc": "assets/img/our_culture/bio_jen",
 		"imgType": "jpg",
-		"info": "",
+		"info": "Placeholder comment",
 		"office": "New York",
-		"filter": "ny"
+		"moreinfo":"global-leadership/jennifer-zimmerman"
 	},
 	{
-		"name" : "Bio Colors",
+		"name" : "Ned Crowley",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_ned",
 		"imgType": "jpg",
 		"info": "This is my information",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|BioColors_Culture",
-		"office": "Amsterdam",
-		"filter": "ams"
+		"office": "Chicago",
+		"moreinfo":"global-leadership/ned-crowley"
 	},
 	{
-		"name" : "Bio Bull",
+		"name" : "Matthew Bull",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_bull",
 		"imgType": "jpg",
-		"info": "This is my information",
+		"info": "No puns! Or else!",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|BioColors_Culture",
-		"office": "Amsterdam",
-		"filter": "ams"
+		"office": "New York",
+		"moreinfo":"global-leadership/matthew-bull"
 	},
 	{
-		"name" : "Elizabeth",
+		"name" : "Brandon Cooke",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/bio_brandon",
 		"imgType": "jpg",
@@ -82,7 +78,7 @@
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Elizabeth_Culture",
 		"office": "London",
-		"filter": "ldn"
+		"moreinfo":"global-leadership/brandon-cooke"
 	},
 	{
 		"name" : "Tattoos",
@@ -93,8 +89,7 @@
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Waving_Culture",
 		"office": "Sao Paulo",
-		"filter": "sao",
-		"moreinfo":"global-leadership/gordon-bowen"
+		"moreinfo":"people/person-one"
 	},
 	{
 		"name" : "Skater",
@@ -104,8 +99,7 @@
 		"info": "This is my information",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Skater_Culture",
-		"office": "London",
-		"filter": "ldn"
+		"office": "London"
 	},
 	{
 		"name" : "Train",
@@ -114,8 +108,7 @@
 		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true",
-		"office": "Chicago",
-		"filter": "chi"
+		"office": "Chicago"
 	},	
 	{
 		"name" : "Tattoos",
@@ -125,8 +118,7 @@
 		"info": "Hello everybody!",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Waving_Culture",
-		"office": "New York",
-		"filter": "ny"
+		"office": "New York"
 	},
 	{
 		"name" : "Train",
@@ -135,8 +127,7 @@
 		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true",
-		"office": "Chicago",
-		"filter": "chi"
+		"office": "Chicago"
 	},
 	{
 		"name" : "Train",
@@ -145,8 +136,7 @@
 		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true",
-		"office": "none",
-		"filter": "none"
+		"office": "none"
 	},
 	{
 		"name" : "Train",
@@ -155,7 +145,6 @@
 		"imgType": "jpg",
 		"info": "",
 		"isDouble": "true",
-		"office": "none",
-		"filter": "none"
+		"office": "none"
 	}
 ]
