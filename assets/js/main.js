@@ -1836,15 +1836,29 @@ var mgbMainSys = {
 	
 	showFooter : function(){
 		console.log("showfooter");
-		var height = $('#mainContent .contentWrapper').height();
+		var height,pt,pb;
 		
-		if ($('body').hasClass('nothome')) height = $('#internalContent .contentWrapper').height();
-		if (height > $(window).height()) $('footer').removeClass('absolute');//.addClass("tempHide");
+		if ($('body').hasClass('ishome')) {
+			height = $('#mainContent .contentWrapper').height();
+			pt = $('#mainContent .contentWrapper').css('padding-top').replace("px", "");
+			pb = $('#mainContent .contentWrapper').css('padding-bottom').replace("px", "");
+		}
+		
+		if ($('body').hasClass('nothome')) {
+			height = $('#internalContent .contentWrapper').height();
+			pt = $('#internalContent .contentWrapper').css('padding-top').replace("px", "");
+			pb = $('#internalContent .contentWrapper').css('padding-bottom').replace("px", "");
+		}
+		
+		var totalHeight = Number(height) + Number(pt) + Number(pb);
+		
+		if (totalHeight > $(window).height()) $('footer').removeClass('absolute');//.addClass("tempHide");
+ 
 		setTimeout(function(){
 			// console.log("showfooterIn");
 			
 			console.log(height, $(window).height())
-			if (height < $(window).height()){
+			if (totalHeight < $(window).height()){
 				$('footer').addClass('absolute').removeClass('tempHide');
 				// $('footer').css('bottom', 0 + 'px');
 			}else{
