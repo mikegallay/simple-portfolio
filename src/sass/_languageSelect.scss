@@ -57,7 +57,7 @@ select {
 	background: none;
 	border: none;
 	color: white;
-	text-transform: uppercase;
+//	text-transform: uppercase;
 	font-family: 'Din-Regular', sans-serif;
 	text-align: right;
 }
@@ -254,7 +254,7 @@ select {
 	    height: 0;
 	    border-left: 15px solid transparent;
 	    border-right: 0px solid transparent;
-	    border-bottom: 15px solid #46ccc5;
+	    border-bottom: 15px solid $skyblueColor;
 	    position: absolute;
 	    top: -0.9em;
 	    padding: 0;

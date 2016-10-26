@@ -1,7 +1,7 @@
 footer {
 	position: relative;
 	background-color: $headerFooterGray;
-	color: #46ccc5;
+	color: $skyblueColor;
 	font-size: 0.95em;
 	padding: 1.7em 1em 0.5em;
 	z-index: 101;
@@ -12,8 +12,9 @@ footer {
 	
 	&.absolute{
 		position:absolute;
-		width:100%;
+		width:98%;
 		bottom:0;
+	    padding: 1.25em 1% 0em;
 	}
 	
 	&.tempHide{
@@ -22,7 +23,7 @@ footer {
 	}
 	
 	svg{
-		fill:#46ccc5;
+		fill:$skyblueColor;
 	}
 	
 	.legal {
@@ -38,7 +39,7 @@ footer {
 				text-align: right;
 				
 				a {
-					color: #46ccc5;
+					color: $skyblueColor;
 					text-decoration: none;
 				}
 			}
@@ -128,7 +129,7 @@ footer {
 	}
 	
 	#internalContent.active + footer{
-		padding: 1.25em 0em 0em;
+//		padding: 1.25em 0em 0em;
 		.container{
 			width:90%;
 			margin:0 auto;

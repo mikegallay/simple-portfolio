@@ -157,17 +157,17 @@ var mgbMainSys = {
 	
 	showFooter : function(){
 		console.log("showfooter");
-		$('footer').removeClass('absolute');
+		$('footer').removeClass('absolute').addClass("tempHide");
 		setTimeout(function(){
 			// console.log("showfooterIn");
 			
 			console.log($('footer').position().top, $(window).height())
 			if ($('footer').position().top + 63 < $(window).height()){
-				$('footer').addClass('absolute');
+				$('footer').addClass('absolute').removeClass('tempHide');
 				// $('footer').css('bottom', 0 + 'px');
 			}
 			$('footer').removeClass('tempHide');
-		},1500);
+		},1000);
 	},
 
 	checkLocation : function(){

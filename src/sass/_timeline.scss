@@ -40,20 +40,20 @@
 			&.left {
 				display: inline-block;
 				border-width: 5px 10px 5px 0;
-				border-color: transparent #46ccc5 transparent transparent;
+				border-color: transparent $skyblueColor transparent transparent;
 				margin-right: 5px;
 			}
 	
 			&.right {
 				border-width: 5px 0 5px 10px;
-				border-color: transparent transparent transparent #46ccc5;
+				border-color: transparent transparent transparent $skyblueColor;
 				display: inline-block;
 				margin-left: 5px;
 			}
 	
 			&.bottom {
 				border-width: 10px 5px 0 5px;
-				border-color: #46ccc5 transparent transparent transparent;
+				border-color: $skyblueColor transparent transparent transparent;
 				margin: 0 auto;
 				margin-bottom: 0em;
 				display: block;
@@ -61,7 +61,7 @@
 		}
 		
 		&:hover {
-			color: #46ccc5;
+			color: $skyblueColor;
 		};
 	}
 }

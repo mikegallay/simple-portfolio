@@ -141,7 +141,7 @@
 		
 		<section id="offices" class="homeSection fullBleed">
 			<div class="container">
-				<h1 class="sectionHeading">OUR OFFICES</h1>
+				<h1 class="sectionHeading">OUR <span class="blueFont">OFFICES</span></h1>
 
 				<article id="officeDetails" ></article>
 		

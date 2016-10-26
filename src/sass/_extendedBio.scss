@@ -1,6 +1,6 @@
 
 #internalContent #extendedBioWrapper{
-	padding-top:80px;
+	padding-top:60px;
 	
 	.picColumn{
 		width:100%;
@@ -27,10 +27,12 @@ overflow:hidden;
 			color:$skyblueColor;
 //			font-weight:700;
 			font-family:Din-Bold, sans-serif;
+			line-height: 1em;
+			margin: 0.2em 0 0.4em;
 		}
-		.title{padding-bottom:20px;margin-top:-10px;}
+		.title{padding-bottom: 0.6em;margin-top:-10px;font-size:20px;font-family:Din-Regular, sans-serif;}
 		.body{
-			font-size:16px;
+//			font-size:16px;
 		}
 	}
 }
@@ -39,29 +41,33 @@ overflow:hidden;
 #internalContent {
 	#extendedBioWrapper{
 		.cs-subnav{
-			padding-top: 4em !important;
+//			padding-top: 2em !important;
 		}
 	}
 }
 
 @media screen and (min-width: 768px) {
 	#internalContent #extendedBioWrapper{
-		max-width:1440px;
-		padding-top:90px;
+//		max-width:1440px;
+margin:0 auto;
+		padding-top:68px;
 		.picColumn{
 			width:40%;
 			.picHolder {
-			    width: 75%;
+			    width: 95%;
 				margin:0;
 			}
 		}
 		.bioColumn{
 			width:60%;
 			.name{
-				font-size:40px;
+			    font-size: 55px;
+			    margin-top: 0px;
+			    line-height: 0.9;
+			    margin-bottom: 0.3em;
 			}
 			.body{
-				font-size:13px;
+//				font-size:13px;
 			}
 		}
 	}

@@ -42,7 +42,7 @@
 	    position: fixed;
 	    bottom: 0;
 	    height: 50px;
-	    background: #46ccc5;
+	    background: $skyblueColor;
 	    z-index: 999;
 	    border-top: 1px solid white;
 	    text-align: center;
@@ -112,7 +112,7 @@ h1.sectionHeading{
     position: fixed;
     bottom: -50px;
     height: 45px;
-    background: #46ccc5;
+    background: $skyblueColor;
     z-index: 999;
 //    border-top: 2px solid white;
     text-align: center;
@@ -346,7 +346,7 @@ h1 {
 			    right: 0;
 			    border-left: 0 solid transparent;
 			    border-top: 0px solid transparent;
-			    border-right: 0px solid #46ccc5;
+			    border-right: 0px solid $skyblueColor;
 			    border-bottom: 0 solid transparent;
 				z-index: 1;
 
@@ -380,7 +380,7 @@ h1 {
 				
 				.cultureArrow {
 					border-top: 1500px solid transparent;
-					border-right: 1500px solid #46ccc5;
+					border-right: 1500px solid $skyblueColor;
 				}
 	
 				.prjDscrWrap {
@@ -442,7 +442,7 @@ h1 {
 					h3 {
 						font-size: 0.8em;
 						margin: 0;
-						color: #46ccc5;
+						color: $skyblueColor;
 						text-transform: uppercase;
 					}
 			
@@ -501,7 +501,7 @@ h1 {
 				    right: 0;
 				    border-left: 0 solid transparent;
 				    border-top: 0px solid transparent;
-				    border-right: 0px solid #46ccc5;
+				    border-right: 0px solid $skyblueColor;
 				    border-bottom: 0 solid transparent;
 				    z-index: 300;
 				    transition: border-top 600ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 600ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -529,7 +529,7 @@ h1 {
 					
 					.linkOverlay {
 					    border-top: 800px solid transparent;
-					    border-right: 800px solid #46ccc5;
+					    border-right: 800px solid $skyblueColor;
 					}
 				}
 			}
@@ -771,7 +771,7 @@ h1 {
 		
 		.arrow {
 	    	border-top: 2000px solid transparent !important;
-	    	border-right: 2000px solid #46ccc5 !important;
+	    	border-right: 2000px solid $skyblueColor !important;
 			transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 			
 			.moreArrow {
@@ -832,10 +832,10 @@ h1 {
 		    right: 0;
 		    border-left: 0 solid transparent;
 		    border-top: 40px solid transparent;
-		    border-right: 40px solid #46ccc5;
+		    border-right: 40px solid $skyblueColor;
 			/*@media screen and (min-width: 768px) {
 			    border-top: 50px solid transparent;
-			    border-right: 50px solid #46ccc5;
+			    border-right: 50px solid $skyblueColor;
 			}*/
 		    border-bottom: 0 solid transparent;
 			opacity: 0;
@@ -845,7 +845,7 @@ h1 {
 			
 			&.offTile{
 			    border-top: 0px solid transparent;
-			    border-right: 0px solid #46ccc5;
+			    border-right: 0px solid $skyblueColor;
 				transition: opacity 500ms 200ms, width 500ms 200ms, height 500ms 200ms, border-top 150ms, border-right 150ms;
 			}
 		
@@ -868,7 +868,7 @@ h1 {
 		&:hover,&:focus { 
 			.arrow {
 		    	border-top: 75px solid transparent;
-		    	border-right: 75px solid #46ccc5;
+		    	border-right: 75px solid $skyblueColor;
 				
 				.moreArrow {
 				    left: 3.0em;
@@ -1166,7 +1166,7 @@ h1 {
 		color:white;
 		&:hover,&.active,&:focus {
 			
-			background-color: #46ccc5;
+			background-color: $skyblueColor;
 			transition: opacity 300ms;
 			
 			.bgOverlay, picture {
@@ -1878,7 +1878,7 @@ h1 {
 			
 			.arrow {
 		    	border-top: 2000px solid transparent;
-		    	border-right: 2000px solid #46ccc5;
+		    	border-right: 2000px solid $skyblueColor;
 				transition: width 500ms, height 500ms, border-top 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55), border-right 475ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 			
 				.moreArrow {

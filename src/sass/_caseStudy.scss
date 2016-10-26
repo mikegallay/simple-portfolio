@@ -125,11 +125,12 @@ padding-top:2em;
 							right: 0;
 							border-left: 0 solid transparent;
 							border-top: 0px solid transparent;
-							border-right: 0px solid #46ccc5;
+							border-right: 0px solid $skyblueColor;
 							border-bottom: 0 solid transparent;
 							z-index: 1;
 							transition: border-top 600ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275), border-right 600ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 						}
+
 
 						.prjDscrWrap {
 							z-index: 2;
@@ -150,7 +151,7 @@ padding-top:2em;
 						.prjDescription {
 							.cultureArrow {
 								border-top: 800px solid transparent;
-								border-right: 800px solid #46ccc5;
+								border-right: 800px solid $skyblueColor;
 							}
 					
 							.prjDscrWrap {
@@ -173,7 +174,7 @@ padding-top:2em;
 	.workContainer{
 		.workDetails{
 			.subnav{
-			    padding: 2em 0 0em;
+//			    padding: 2em 0 0em;
 			}
 		}
 		
@@ -222,7 +223,7 @@ padding-top:2em;
 							.prjDescription {
 								.cultureArrow {
 									border-top: 600px solid transparent;
-									border-right: 600px solid #46ccc5;
+									border-right: 600px solid $skyblueColor;
 								}
 							}
 						}

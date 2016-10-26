@@ -5,30 +5,60 @@
 			
 		
 		@media screen and (min-width: 1024px) {
-			padding-top: 50px;
+			padding-top: 68px;
+		}
+		
+		.sectionHeading{
+			margin:1.4em 0 1.1em;
+			@media screen and (min-width: 768px) { margin: 1.5em 0 0.5em; }
+			@media screen and (min-width: 1024px) { margin: 1.1em 0 0.3em; }
 		}
 
 		#filterOptions {
 			display: block;
 			text-align: center;
-			
+			width:120px;
+			float:none;
+			margin-right: 0;
+		    margin-left: 0.5%;
+			width:100%;
+			background-color: $skyblueColor;
+			background: $skyblueColor url("../img/common/marquee_down_arrow.png") no-repeat right 9px center;
+			//&:after{
+//				content:" ";
+//				width:20px;
+//				height:20px;
+//				right:0;
+//				position:absolute;
+//				background:url('../img/svg/ie8-fallback/menu_dropdown_arrow.png') no-repeat top right;
+//			}
+			@media screen and (min-width: 768px) {
+				margin-left:0;
+				margin-right: .25em;
+				width:120px;
+				float:right;
+			}
+		    padding-bottom: .25em;
 			select {
 				display: block;
-				background-color: #58595b;
+				font-family: 'Din-Regular', sans-serif;
+//				background-color: $skyblueColor;
 				color: white;
 				width: 99%;
-				margin: 0 auto;
-				margin-left: 0.5%;
-				margin-right: 0.5%;
-				padding: 0.5em;
+				font-size: 0.8em;
+				//margin: 0 auto;
+//				margin-right:.5%;
+				padding:0.7em .75em 0.3em;
 				outline: 0px;
+				border-radius: 0;
 			}
 			
 			@media screen and (min-width: 1024px) {
 				select {
-					display: none;
+//					display: none;
 				}
 			}
+			
 		
 			input.cityFilter {
 				display: none;
@@ -39,7 +69,7 @@
 				
 				@media screen and (min-width: 1024px) {
 					&~label {
-						display: inline;
+//						display: inline;
 						margin-left: 1em;
 						margin-right: 1em;
 						margin-top: 1em;
@@ -61,7 +91,7 @@
 						cursor: pointer;
 	
 						&:hover,&.active {
-							color: #46ccc5;
+							color: $skyblueColor;
 						}
 			
 						&:first-of-type {
@@ -69,7 +99,7 @@
 						}
 			
 						&:last-of-type {
-							display: inline-block;
+//							display: inline-block;
 						}
 					}
 				}
@@ -100,7 +130,7 @@
 		}
 		.cultureHeadline{
 			h1{
-			    color: #46ccc5;
+			    color: $skyblueColor;
 			    text-transform: uppercase;
 			    font-size: 2em;
 			    font-family: 'Din-Bold', sans-serif;

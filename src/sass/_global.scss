@@ -25,9 +25,9 @@ body {
 	line-height:1.7;
 }
 
-.breadcrumb{
-	padding:3em 0 2em;
-}
+//.breadcrumb{
+//	padding:3em 0 2em;
+//}
 
 .noPadding {
 	padding: 0 !important;
@@ -65,7 +65,7 @@ a {
 
 a.button {
 	cursor: pointer;
-	background-color: #46ccc5;
+	background-color: $skyblueColor;
 	padding: 1em 1.1em 0.8em;
 	text-decoration: none;
 	font-family: 'Din-Regular', sans-serif;
@@ -73,6 +73,13 @@ a.button {
 	color:white;
 	//margin-left: 0.5%;
 	//margin-right: 0.5%;
+	.moreArrow{
+		transform: rotateZ(-90deg);
+		right: -0.3em;
+	    top: -1px;
+		display: inline-block;
+		position: relative;
+	}
 	
 	&:hover {
 		background-color: #4ee5dd;

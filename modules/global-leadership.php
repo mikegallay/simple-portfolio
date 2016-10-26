@@ -14,7 +14,7 @@
 
 		<div id="filterOptions">
 			<select>
-				<option value="all">All</option>
+				<option value="all">All Offices</option>
 				<option value="ams">Amsterdam</option>
 				<option value="chi">Chicago</option>
 				<option value="hk">Hong Kong</option>
@@ -22,9 +22,9 @@
 				<option value="mex">Mexico City</option>
 				<option value="ny">New York</option>
 				<option value="par">Paris</option>
-				<option value="sa">San Antonia</option>
+				<option value="sa">San Antonio</option>
 				<option value="sf">San Francisco</option>
-				<option value="sao">Sau Paulo</option>
+				<option value="sao">São Paulo</option>
 				<!-- <option value="sg">Shanghai</option> -->
 				<option value="sng">Singapore</option>
 			</select>
@@ -39,7 +39,7 @@
 			<input class="cityFilter" id="select-par" value="par" name="radio-select" type="checkbox"><label id="label-select-par" for="select-par">Paris</label>
 			<input class="cityFilter" id="select-sa" value="sa" name="radio-select" type="checkbox"><label id="label-select-sa" for="select-sa">San Antonio</label>
 			<input class="cityFilter" id="select-sf" value="sf" name="radio-select" type="checkbox"><label id="label-select-sf" for="select-sf">San Francisco</label>
-			<input class="cityFilter" id="select-sao" value="sao" name="radio-select" type="checkbox"><label id="label-select-sao" for="select-sao">Sau Paulo</label>
+			<input class="cityFilter" id="select-sao" value="sao" name="radio-select" type="checkbox"><label id="label-select-sao" for="select-sao">São Paulo</label>
 			<!-- <input class="cityFilter" id="select-sg" value="sg" name="radio-select" type="checkbox"><label id="label-select-sg" for="select-sg">Shanghai</label> -->
 			<input class="cityFilter" id="select-sng" value="sng" name="radio-select" type="checkbox"><label id="label-select-sng" for="select-sng">Singapore</label>
 		</div>	
