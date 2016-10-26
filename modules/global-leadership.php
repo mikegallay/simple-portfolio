@@ -29,7 +29,7 @@
 				<option value="sng">Singapore</option>
 			</select>
 			
-			<input class="cityFilter" id="select-all" value="all" name="radio-select" type="checkbox"><label class="active" id="label-select-all" for="select-all">All</label>
+			<!-- <input class="cityFilter" id="select-all" value="all" name="radio-select" type="checkbox"><label class="active" id="label-select-all" for="select-all">All</label>
 			<input class="cityFilter" id="select-ams" value="ams" name="radio-select" type="checkbox"><label id="label-select-ams" for="select-ams">Amsterdam</label>
 			<input class="cityFilter" id="select-chi" value="chi" name="radio-select" type="checkbox"><label id="label-select-chi" for="select-chi">Chicago</label>
 			<input class="cityFilter" id="select-hk" value="hk" name="radio-select" type="checkbox"><label id="label-select-hk" for="select-hk">Hong Kong</label>
@@ -40,8 +40,8 @@
 			<input class="cityFilter" id="select-sa" value="sa" name="radio-select" type="checkbox"><label id="label-select-sa" for="select-sa">San Antonio</label>
 			<input class="cityFilter" id="select-sf" value="sf" name="radio-select" type="checkbox"><label id="label-select-sf" for="select-sf">San Francisco</label>
 			<input class="cityFilter" id="select-sao" value="sao" name="radio-select" type="checkbox"><label id="label-select-sao" for="select-sao">São Paulo</label>
-			<!-- <input class="cityFilter" id="select-sg" value="sg" name="radio-select" type="checkbox"><label id="label-select-sg" for="select-sg">Shanghai</label> -->
-			<input class="cityFilter" id="select-sng" value="sng" name="radio-select" type="checkbox"><label id="label-select-sng" for="select-sng">Singapore</label>
+			<input class="cityFilter" id="select-sg" value="sg" name="radio-select" type="checkbox"><label id="label-select-sg" for="select-sg">Shanghai</label>
+			<input class="cityFilter" id="select-sng" value="sng" name="radio-select" type="checkbox"><label id="label-select-sng" for="select-sng">Singapore</label> -->
 		</div>	
 		<div class="cultureContent">
 			<?php
