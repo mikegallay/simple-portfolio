@@ -3,7 +3,7 @@
 	
 	// echo ' approot='.$appRoot . ' mediapath='. MEDIAPATH;
 	
-	$vnum = "1.8";
+	$vnum = "1.9";
 	
 	$bioId = undefined;
 	$portId = undefined;
@@ -148,7 +148,7 @@
 			if ($('#allNewsWrapper').length) mgbInternalContent.addAllNewsListeners();
 			
 			
-			setTimeout(function(){mgbMainSys.checkInView('.ll-all'); $('footer').removeClass('tempHide');},1000);
+			setTimeout(function(){mgbMainSys.checkInView('.ll-all'); /*$('footer').removeClass('tempHide');*/},1000);
 			mgbInternalContent.resize();
 		</script>
 	<?php } ?>

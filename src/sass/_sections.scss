@@ -129,7 +129,7 @@ h1.sectionHeading{
 		.moreArrow{
 			transform: rotateZ(-90deg);
 			right: -0.3em;
-		    top: -2px;
+		    top: -1px;
 			display: inline-block;
 			position: relative;
 		}
@@ -149,7 +149,7 @@ h1.sectionHeading{
 			margin-right: 0.5%;
 			    margin-bottom: 0.4%;
 			.moreArrow{
-				top:-.1em;
+				top:-1px;
 			}
 		}
 		.all-news{
@@ -1019,7 +1019,7 @@ h1 {
 				color: $skyblueColor;
 				font-family: 'Din-Bold', sans-serif;
 				font-weight: bolder;
-				font-size: 1.5em;
+				font-size: 1em;
 				margin-top: 0;
 				margin-bottom: -.1em;
 			}
@@ -1028,7 +1028,7 @@ h1 {
 				color: $skyblueColor;
 				font-family: 'Din-Regular', sans-serif;
 				font-weight: lighter;
-				font-size: 1em;
+				font-size: .8em;
 				@media screen and (min-width: 414px){
 					font-size: .8em;
 				}
@@ -1274,7 +1274,7 @@ h1 {
 	
 	#careers{
 		a.button{
-			font-size:1em;
+			font-size:.9em;
 		}
 	}
 	
@@ -1730,9 +1730,10 @@ h1 {
 				}
 			}
 			.officeStats {
+				width:100%;
 				div {
 					.statLabel {
-						font-size:1em;
+						font-size:.8em;
 					}
 				}
 			}
@@ -1773,7 +1774,9 @@ h1 {
 	}
 	
 	#offices {
-
+		.officeStats {
+			width:105%;
+		}
 		#officeDetails {
 			h1 {
 				font-size: 4.5em;
@@ -1799,6 +1802,11 @@ h1 {
 }
 
 @media screen and (min-width: 1900px) {
+	#offices {
+		.officeStats {
+			width:101%;
+		}
+	}
 	#work {
 		padding-top: 2em;
 	}

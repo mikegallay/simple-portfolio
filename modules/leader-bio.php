@@ -1,7 +1,7 @@
 <section class="contentWrapper" id="extendedBioWrapper" style="background:#ffffff;">
 	
 	<div class="container">
-		<div class="subnav left"><a href="/global-leadership" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span>View All Leadership</a></div>
+		<div class="subnav left"><a href="/global-leadership" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span>&nbsp;View All Leadership</a></div>
 		<?php
 			$url = $_SERVER['REQUEST_URI'];
 			
@@ -18,5 +18,5 @@
 			$bioId = undefined;
 		?>
 	</div>
-	<div class="subnav cs-subnav"><a href="/global-leadership/<?php getPrevBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevBio($currBio,false,$leadership_arr); ?></a> | <a class="view-all" href="/global-leadership"><?php addIcon('menu_grid'); ?></a> | <a href="/global-leadership/<?php getNextBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><?php getNextBio($currBio,false,$leadership_arr); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
+	<div class="subnav cs-subnav"><a href="/global-leadership/<?php getPrevBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?>&nbsp;</span><?php getPrevBio($currBio,false,$leadership_arr); ?></a>&nbsp;&nbsp;&nbsp;<a class="view-all" href="/global-leadership"><?php addIcon('menu_grid'); ?></a>&nbsp;&nbsp;&nbsp;<a href="/global-leadership/<?php getNextBio($currBio,true,$leadership_arr); ?>" id="subnav-prev"><?php getNextBio($currBio,false,$leadership_arr); ?><span class="next_arrow">&nbsp;<?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
 </section>

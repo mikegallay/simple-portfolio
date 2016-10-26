@@ -14,5 +14,5 @@
 	// echo "id ". $id.' - '.$currPort;
 	$portId = undefined;
 ?>
-	<div class="subnav"><a href="/work/<?php getPrevPortfolio($currPort,true); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span><?php getPrevPortfolio($currPort,false); ?></a> | <a class="view-all" href="/work">View All Work</a> | <a href="/work/<?php getNextPortfolio($currPort,true); ?>" id="subnav-prev"><?php getNextPortfolio($currPort,false); ?><span class="next_arrow"><?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
+	<div class="subnav"><a href="/work/<?php getPrevPortfolio($currPort,true); ?>" id="subnav-prev"><span class="prev_arrow"><?php addIcon('menu_dropdown_arrow'); ?>&nbsp;</span><?php getPrevPortfolio($currPort,false); ?></a>&nbsp;&nbsp;&nbsp;<a class="view-all" href="/work"><?php addIcon('menu_grid'); ?></a>&nbsp;&nbsp;&nbsp;<a href="/work/<?php getNextPortfolio($currPort,true); ?>" id="subnav-prev"><?php getNextPortfolio($currPort,false); ?><span class="next_arrow">&nbsp;<?php addIcon('menu_dropdown_arrow'); ?></span></a></div>
 </section></div>

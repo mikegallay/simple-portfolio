@@ -27,10 +27,10 @@
 
 <div class="contentWrapper" id="caseStudyWrapper" style="background:white;">
 	<section class="workContainer">
-		<div class="subnav left"><a href="/work" id="subnav-prev"><span class="prev_arrow">
+		<div class="subnav left breadcrumb"><a href="/work" id="subnav-prev"><span class="prev_arrow">
 			<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
-			</svg></span>View All Work</a>
+			</svg></span>&nbsp;View All Work</a>
 		</div>
 		<div class="workHeadline">
 			<h1>{{{csTitle}}}</h1>
@@ -61,9 +61,13 @@
 					{{/each}}
 				</div>
 				{{/if}}
+				
+			</div>
+			<div class="workLeft bodyCopy">
+				{{{csBody}}}
 				{{#if website}}
 				<div class="websiteButton">
-					<a href="{{{website}}}" class="button">VIEW THE WEBSITE <span class="moreArrow">
+					<a href="{{{website}}}" class="button">VIEW THE WEBSITE<span class="moreArrow">
 						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
 						</svg>
@@ -71,5 +75,4 @@
 				</div>
 				{{/if}}
 			</div>
-			<div class="workLeft">{{{csBody}}}</div>
 {{/each}}

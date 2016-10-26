@@ -4,7 +4,7 @@
 .workContainer{
 	width:100%;
 	margin:0em auto;
-	padding:0 0 2em;
+//	padding:0 0 2em;
 	.returnHome{
 		text-transform:uppercase;
 		font-family: 'Open Sans', sans-serif;
@@ -38,6 +38,33 @@
 			p{
 				margin:0 0 1em; 
 			}
+			.websiteButton{
+			    display: inline-block;
+			    width: 99%;
+//			    margin: 0 .5%;
+padding-top:2em;
+				.button{
+					
+				    /*display: block;
+				    text-align: center;
+				    font-size: 1.2em;
+				    padding: .8em 0 .5em;*/
+//				    margin-left: .5%;
+//				    margin-right: .5%;
+					display: block;
+					text-align: center;
+					.moreArrow{
+						transform:rotateZ(-90deg);
+						//top: -0.39em;
+						    right: -.3em;
+						    display: inline-block;
+//						display: inline-block;
+						position:relative;
+						top: -2px;
+					}
+				}
+				
+			}
 			
 		}
 		.workRight{
@@ -45,7 +72,7 @@
 			float:left;
 			margin-top:1em;
 		    display: inline-block;
-		    padding-bottom: 1em;
+//		    padding-bottom: 1em;
 			.workThumbs{
 				    display: inline-block;
 				padding-bottom:1em;
@@ -135,26 +162,7 @@
 					}
 				} 
 			}
-			.websiteButton{
-				.button{
-					
-				    display: block;
-				    text-align: center;
-				    font-size: 1.2em;
-				    padding: .8em 0 .5em;
-				    margin-left: .5%;
-				    margin-right: .5%;
-					.moreArrow{
-						transform:rotateZ(-90deg);
-						//top: -0.39em;
-						right: -0.5em;
-						display: inline-block;
-						position:relative;
-						top: -2px;
-					}
-				}
-				
-			}
+			
 		}
 	}
 	
@@ -165,7 +173,7 @@
 	.workContainer{
 		.workDetails{
 			.subnav{
-				padding-top: 4em !important;
+			    padding: 2em 0 0em;
 			}
 		}
 		
@@ -175,28 +183,7 @@
 
 @media screen and (min-width: 768px) {
 	.workContainer{
-		
-		.workDetails{
-			.workRight{
-				.workThumb{
-					width:32.3%;
-				}
-				.websiteButton{
-					.button{
-						font-size:1.1em;
-						display: inline-block;
-						    padding: .8em .75em .6em;
-							margin:0;
-					}
-				}
-			}			
-		}
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.workContainer{
-		max-width: 80%;
+		max-width: 95%;
 //		padding:2em 0;
 		.workHeadline{
 			max-width:100%;
@@ -205,18 +192,30 @@
 		}
 		.workDetails{
 			.workLeft{
-				width:49%;
+				width:61%;
 				float:left;
 				margin:0;
+				.websiteButton{
+					display:block;
+					width:auto;
+					margin:0;
+					.button{
+						text-align:left;
+						display:inline;
+					}
+				}
 			}
 			.workRight{
-				width:45%;
-				margin-left:5%;
+				
+				width:36%;
 				float:right;
 				margin-top:0em;
+				.workThumbs{
+				    padding-bottom: 0.2em;
+				}
 				.workThumb{
 				    float: left;
-				    width: 30%;
+				    width: 47%;
 				    margin: 0 2.5% 2.5% 0;
 					a {
 						&:hover,&.active {
@@ -228,6 +227,39 @@
 							}
 						}
 					}
+				}
+			}			
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.workContainer{
+		max-width: 80%;
+		.workDetails{
+			.workLeft{
+				width:60%;
+			}
+			.workRight{
+				width:37%;
+				.workThumb{
+				    width:47%;
+				}
+			}			
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.workContainer{
+		.workDetails{
+			.workLeft{
+				width:49%;
+			}
+			.workRight{
+				width:49%;
+				.workThumb{
+				    width: 30%;
 				}
 			}			
 		}

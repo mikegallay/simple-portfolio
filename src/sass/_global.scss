@@ -21,6 +21,14 @@ body {
 
 }
 
+.bodyCopy{
+	line-height:1.7;
+}
+
+.breadcrumb{
+	padding:3em 0 2em;
+}
+
 .noPadding {
 	padding: 0 !important;
 }
@@ -58,10 +66,10 @@ a {
 a.button {
 	cursor: pointer;
 	background-color: #46ccc5;
-	padding: .8em .75em .6em;
+	padding: 1em 1.1em 0.8em;
 	text-decoration: none;
 	font-family: 'Din-Regular', sans-serif;
-	font-size: 1em;
+	font-size: .9em;
 	color:white;
 	//margin-left: 0.5%;
 	//margin-right: 0.5%;
@@ -94,12 +102,12 @@ a.button {
 
 @media screen and (min-width: 320px) {
 	a.button {
-	    font-size: 1em;
+	    font-size: .9em;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	a.button {
-	    font-size: 1em;
+	    font-size: .9em;
 	}
 }
