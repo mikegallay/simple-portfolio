@@ -1058,6 +1058,7 @@ var mgbHeader = {
 		
 		setTimeout(function(){
 			$('#header').addClass('settle');
+			mgbMainSys.handleScrolling();
 		}, 1500);
 		
 		this.navHeight = $('nav').height();
