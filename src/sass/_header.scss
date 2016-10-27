@@ -134,7 +134,7 @@
 			cursor: pointer;
 			overflow:hidden;
 			transform:rotate(0deg) scale(.85);
-			transition:right 200ms 300ms,top 200ms 300ms,transform 400ms 300ms;//right 400ms 200ms,
+			transition:right 400ms,top 400ms,transform 400ms 0ms;//right 400ms 200ms,
 			
 			
 			#menuToggle{
@@ -170,7 +170,7 @@
 						top: -13px;
 						transition:top 300ms 500ms;
 						.hamDot{
-							transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
+							transition:transform 300ms 50ms,width 300ms 50ms,height 300ms 50ms,left 300ms 50ms,top 300ms 50ms;
 						}
 					}
 			
@@ -188,7 +188,7 @@
 						top: 13px;
 						transition:top 300ms 500ms;
 						.hamDot{
-							transition:transform 300ms,width 300ms,height 300ms,left 300ms,top 300ms;
+							transition:transform 300ms 50ms,width 300ms 50ms,height 300ms 50ms,left 300ms 50ms,top 300ms 50ms;
 						}
 					}
 				}
@@ -197,7 +197,7 @@
 				transform: rotate(225deg) scale(.8);
 				right: 4px;
 				top:8px;
-				transition:right 200ms 100ms,top 200ms 100ms,transform 400ms 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
+				transition:right 300ms 0ms,top 300ms 0ms,transform 400ms 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);//right 300ms 350ms,
 				#menuToggle{
 					.hamDot{
 					}

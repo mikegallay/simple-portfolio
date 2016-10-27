@@ -2562,6 +2562,7 @@ var mgbMainSys = {
 
 				// $('#overlayCover').removeClass('active');
 				
+				$('header').removeClass('settle');
 				$('footer').removeAttr('style');
 				
 				$("#mainContent").html(response);
@@ -2576,7 +2577,7 @@ var mgbMainSys = {
 				
 				mgbHeader.deactivateNavActive();
 				
-				if (!mgbMainSys.waypointsInitialized) mgbMainSys.initWaypoints();
+				
 				
 				mgbHeroVideo.loadHeaderVideo();
 				
@@ -2600,6 +2601,8 @@ var mgbMainSys = {
 				
 				setTimeout(function(){
 					if (isHomeSection) mgbMainSys.scrollToSection(homeSections[homeSectionIndex],1000);
+					if (!mgbMainSys.waypointsInitialized) mgbMainSys.initWaypoints();
+					$('header').addClass('settle');
 				},2000);
 				
 				
@@ -3063,6 +3066,8 @@ var mgbHeroVideo = {
 			
 			
 			$('.videoWrapper').fitVids();
+			
+			setTimeout(function(){mgbMainSys.checkInView('.ll');},1500);
 			
 			that.resize();
 			
