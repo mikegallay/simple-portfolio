@@ -1835,7 +1835,7 @@ var mgbMainSys = {
 	},
 	
 	showFooter : function(){
-		console.log("showfooter");
+		// console.log("showfooter");
 		var height,pt,pb;
 		
 		if ($('body').hasClass('ishome')) {
@@ -1857,7 +1857,7 @@ var mgbMainSys = {
 		setTimeout(function(){
 			// console.log("showfooterIn");
 			
-			console.log(height, $(window).height())
+			// console.log(height, $(window).height())
 			if (totalHeight < $(window).height()){
 				$('footer').addClass('absolute').removeClass('tempHide');
 				// $('footer').css('bottom', 0 + 'px');
@@ -3846,8 +3846,41 @@ var mgbInternalContent = {
 			
 			
 		});*/
+		
+		var currSelection;
+			
+		if ($('body').hasClass('autoplay')){
+			//not a mobile device/table: use dropkick
+			//fire "selection" on close to allow for keyboard control
+			console.log('init dk')
+			$("#filterOptionsSelect").dropkick({
+				change: function () {
+					//set global selection on change (fired using down arrow on keyboard)
+					currSelection = this;
+					console.log('change');
+				},
+				close: function () {
+					setTimeout(function(){
+						console.log('close',currSelection);
+						//if global is set (from keyboard control): use it; if not use mouse value
+						var v = (currSelection != null) ? currSelection.value : this.value;
+					
+						if (v) that.globalLeadershipDropdown(v);
+						currSelection = null; //reset global
+					},100);
+				
+				
+				}
+			});
+		} else{
+			//use tradition select/option
+			$('#filterOptionsSelect').change(function(){
+				that.globalLeadershipDropdown($('#filterOptionsSelect').val());
+				// that.handleOfficeChange($('#filterOptions').val());
+			});
+		}
 	   
-	  $('select').change(function() {
+	 /* $('select').change(function() {
 		   $('#globalLeadershipWrapper label').removeClass('active');
 		   
 		   	that.allCultureFilter = [];
@@ -3861,9 +3894,24 @@ var mgbInternalContent = {
 			
 			
 			
-	   });
+	   });*/
 	   
-	},	
+	},
+	
+	globalLeadershipDropdown : function(value){
+		
+		 $('#globalLeadershipWrapper label').removeClass('active');
+		 console.log('value',value)
+	   	this.allCultureFilter = [];
+	   	this.allCultureFilter.push(value);
+	  	
+		$('#label-select-'+value).addClass('active');
+		
+		var filterOption = "";
+		if (this.allCultureFilter[0] == "all") filterOption = "all";
+		this.filterAllCulture(filterOption);
+		
+	},
 	
 	filterAllCulture : function(filterList){
 		
@@ -4105,7 +4153,7 @@ if(!isMobile.any()) {
 //globalization/flags
 //uncomment .flag and select in _header_inc.php
 //uncomment #header nav ul.menu:after css in _header.css
-// mgbMainSys.handleOfficeSelector();
+mgbMainSys.handleOfficeSelector();
 
 
 if($("body").hasClass("ishome") && !isMobile.any()) {
@@ -4201,7 +4249,7 @@ function resize(){
 	}
 	
 	if (wasSmall != $('body').hasClass('small')){
-		console.log('jumped layout');
+		// console.log('jumped layout');
 		$('footer').addClass('tempHide');
 		setTimeout(function(){mgbMainSys.showFooter();},1000);
 		

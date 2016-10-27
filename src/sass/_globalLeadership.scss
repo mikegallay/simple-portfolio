@@ -1,3 +1,13 @@
+.autoplay{
+	#filterOptionsSelect{
+		display:none!important;
+	}
+}
+.no-autoplay{
+	#filterOptions{
+//		display:none!important;
+	}
+}
 #internalContent{
 	#globalLeadershipWrapper{
 		padding-top: 65px;
@@ -18,10 +28,12 @@
 			display: block;
 			text-align: center;
 			width:120px;
+			font-size:.9em;
 			float:none;
 			margin-right: 0;
 		    margin-left: 0.5%;
-			width:100%;
+			width:99%;
+			height:30px;
 			background-color: $skyblueColor;
 			background: $skyblueColor url("../img/common/marquee_down_arrow.png") no-repeat right 9px center;
 			//&:after{
@@ -34,23 +46,25 @@
 //			}
 			@media screen and (min-width: 768px) {
 				margin-left:0;
-				margin-right: .25em;
+				margin-right: .5%;
 				width:120px;
 				float:right;
 			}
 		    padding-bottom: .25em;
+			margin-bottom: .25em;
 			select {
 				display: block;
 				font-family: 'Din-Regular', sans-serif;
 //				background-color: $skyblueColor;
 				color: white;
-				width: 99%;
-				font-size: 0.8em;
-				//margin: 0 auto;
-//				margin-right:.5%;
-				padding:0.7em .75em 0.3em;
-				outline: 0px;
-				border-radius: 0;
+			    width: 99%;
+			    font-size: 0.9em;
+			    outline: 0px;
+			    border-radius: 0;
+			    padding: 0;
+			    margin: 10px 0 0px 0px;
+			    left: 0px;
+			    padding-left: 10px;
 			}
 			
 			@media screen and (min-width: 1024px) {

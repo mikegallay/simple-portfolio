@@ -13,7 +13,7 @@
 		<h1 class="sectionHeading">GLOBAL <span class="blueFont">LEADERSHIP</span></h1>
 
 		<div id="filterOptions">
-			<select>
+			<select id="filterOptionsSelect">
 				<option value="all">All Offices</option>
 				<option value="ams">Amsterdam</option>
 				<option value="chi">Chicago</option>
