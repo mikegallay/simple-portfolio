@@ -198,7 +198,8 @@ function formatCulture($data,$shuffle){
 		shuffle($doubleArr);
 		
 		//random number to insert the static array back in
-		$staticIndex = rand( 1 , 4);
+		//only four possible places 0-3;
+		$staticIndex = rand( 1 , 3);
 		array_splice($singleArr, $staticIndex, 0, $staticItem);
 	}
 	

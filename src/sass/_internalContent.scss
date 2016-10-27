@@ -176,8 +176,8 @@
 }
 .videoCloseButton{
 	position:absolute;
-	top:30px;
-	right:30px;
+    top: 7px;
+    right: 5px;
 	.videoClose{
 		transform:rotate(-45deg);
 		opacity:0;
@@ -189,6 +189,10 @@
 		
 		svg {
 			fill: white;
+		}
+		&.revealed{
+			visibility:visible;
+			opacity:1;
 		}
 		&:hover{
 			svg {
@@ -204,6 +208,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	.videoCloseButton{
+		top:30px;
+		right:30px;
+	}
 	#internalContent{
 		.contentWrapper{
 			padding:0 1em;
@@ -220,13 +228,6 @@
 	}
 	
 	//only show close button at this size
-	.videoCloseButton{
-		.videoClose{
-			&.revealed{
-				visibility:visible;
-				opacity:1;
-			}
-		}
-	}
+	
 	
 }

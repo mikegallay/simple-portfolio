@@ -165,7 +165,7 @@ $filters: (
                         $filter_css_value: $filter_css_value + ' #{$filter}(#{random(100) / 100 * ($max - $min) + $min}#{map-get($filter_props, units)})';
                     }
                 }
-                filter: unquote($filter_css_value) url("../#distortFilter");
+                filter: unquote($filter_css_value) url("#distortFilter");
                // background-color: hsl(random(360), 100%, 70%);
                 transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(10) / 100 + 1.02) skewX(#{random(20)-10 + 'deg'});
             }

@@ -4,15 +4,16 @@
 		
 		<div id="welcomeVideo">	
 			<div class="responsive-video" id="headerVideo"></div>
-			<div class="aboutUsClose shadow">
+			
+			<div class="aboutUsClose ">
 				<a class="videoClose" data-tracking-label="Home|AboutUs_Video|Close">
-					<svg class="icon more_button-inline" role="img" aria-labelledby="title">
+					<svg class="icon more_button-inline svgShadow" role="img" aria-labelledby="title">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
 					</svg>
 				</a>
 			</div>
 		</div>
-			
+		
 		<div class="video-overlay">
 			<div class="headerHeroText" data-words="#hello,mcgarrybowen,awesome,beer,cocktails,the alamo,chicago,technology,san francisco,new york,mission burritos,#content,pizza,dogs in office,thirsty thursday,frying pan,coffee,#hashtags,creative,awesome,beer,cocktails,#agencylife,intel,hidden valley ranch,burt's bees,united,wrigley field" contenteditable="true"></div>
 			<div class="moreMsg">that's us. <span class="cta blueFont" data-content="183027079"><a data-tracking-label="Home|AboutUs_Video|Open">get to know more!</a></span></div>
@@ -23,6 +24,7 @@
 		<div id="downArrow">
 			<?php addIcon('marquee_down_arrow')?>
 		</div>
+		
 	</section>
 	<div class="contentWrapper">
 		<!-- <section id="Timeline" class="fullBleed">

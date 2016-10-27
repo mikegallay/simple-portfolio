@@ -97,6 +97,11 @@ a.button {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
 }
 
+.svgShadow{
+	-webkit-filter: drop-shadow(1px 1px 0px #000);
+	filter:drop-shadow(1px 1px 0px #000);
+}
+
 
 .whiteText {
 	color: $textWhite;

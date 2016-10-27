@@ -2986,6 +2986,7 @@ var mgbHeroVideo = {
 		
 		$('#welcomeVideo').addClass('aboutUs');
 		
+		
 	},
 	
 	killAboutUsVideo:function(){
@@ -3044,9 +3045,11 @@ var mgbHeroVideo = {
 			
 			that.toggleHeaderElements();
 			
-			$("#headerVideo").html('<iframe src="https://player.vimeo.com/video/' + that.aboutUsVideoId + '?background=0 width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="'+that.aboutUsVideoId+'" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+			// $("#headerVideo").html('<iframe src="https://player.vimeo.com/video/' + that.aboutUsVideoId + '?background=0 width="400" height="225" frameborder="0" id="vimeoPlayer" data-vimeoId="'+that.aboutUsVideoId+'" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+			$("#headerVideo").empty();
+			$("#headerVideo").html('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+that.aboutUsVideoId+'?title=0&byline=0&portrait=0&badge=0&autoplay=1&player_id=vimeoPlayer" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="vimeoPlayer" data-vimeoId='+that.aboutUsVideoId+'></iframe></div>');
 			
-			that.vimeoPlayer = new Vimeo.Player($('#headerVideo'));
+			that.vimeoPlayer = new Vimeo.Player($('#vimeoPlayer'));
 			
 			that.vimeoPlayer.ready().then(function(){
 				that.vimeoPlayer.setLoop(false);
@@ -3058,7 +3061,8 @@ var mgbHeroVideo = {
 				// 
 			});
 			
-			$('#headerVideo').fitVids();
+			
+			$('.videoWrapper').fitVids();
 			
 			that.resize();
 			
