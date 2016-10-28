@@ -1848,6 +1848,7 @@ var mgbMainSys = {
 			height = $('#internalContent .contentWrapper').height();
 			pt = $('#internalContent .contentWrapper').css('padding-top').replace("px", "");
 			pb = $('#internalContent .contentWrapper').css('padding-bottom').replace("px", "");
+			if ($('#internalContent .contentWrapper').hasClass('isCaseStudy')) pt += $('#heroImage').height();
 		}
 		
 		var totalHeight = Number(height) + Number(pt) + Number(pb);
@@ -1855,9 +1856,9 @@ var mgbMainSys = {
 		if (totalHeight > $(window).height()) $('footer').removeClass('absolute');//.addClass("tempHide");
  
 		setTimeout(function(){
-			// console.log("showfooterIn");
+			console.log("showfooterIn");
 			
-			// console.log(height, $(window).height())
+			console.log(height, $(window).height())
 			if (totalHeight < $(window).height()){
 				$('footer').addClass('absolute').removeClass('tempHide');
 				// $('footer').css('bottom', 0 + 'px');
