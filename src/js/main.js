@@ -664,7 +664,7 @@ var mgbMainSys = {
 			page = sliced;
 		}
 		
-		console.log("page", page);
+		// console.log("page", page);
 		
 		this.pushHistoryState(page, bool);
 		
@@ -681,9 +681,9 @@ var mgbMainSys = {
 		
 		var intContent = true;
 		
-		console.log('isHomeSection',isHomeSection)
+		// console.log('isHomeSection',isHomeSection)
 		
-		console.log('page',page);
+		// console.log('page',page);
 		
 		if (page == "/") page = appRoot;
 		
@@ -701,6 +701,8 @@ var mgbMainSys = {
 		}else{
 			page += '.php';
 		}
+		
+		
 		
 		var reqUrl = appRoot + page + '?ajax=1'; //-- appRoot defined in site-pref.php
 		
@@ -846,6 +848,10 @@ var mgbMainSys = {
 					 //call js to init current page
 					mgbInternalContent.init();
 					
+					if ($('#welcomeVideo').hasClass('aboutUs')){
+						mgbHeroVideo.killAboutUsVideo();
+					}
+					
 					//if is global-leadership content, initialize that content.
 					if (reqUrl.indexOf('global-leadership.') != -1){
 						
@@ -860,11 +866,11 @@ var mgbMainSys = {
 					//if is all-news content, initialize that content.
 					if (reqUrl.indexOf('all-news.') != -1){
 						
-						 setTimeout(function(){
+						 // setTimeout(function(){
 							 mgbInternalContent.addAllNewsListeners();
 							 mgbMainSys.checkInView('.ll-all');
 							 resize();
-						}, 1000);
+						// }, 1000);
 						
 					}
 					
@@ -2193,6 +2199,9 @@ var mgbInternalContent = {
 				
 				}
 			});
+			
+			$('.dk-option').on('mouseleave',function(){$('.dk-option').removeClass('dk-option-highlight')});
+			
 		} else{
 			//use tradition select/option
 			$('#filterOptionsSelect').change(function(){
