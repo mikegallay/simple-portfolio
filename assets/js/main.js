@@ -3042,6 +3042,7 @@ var mgbHeroVideo = {
 		
 		this.messageContainer.keypress(function(e){
 			var code = e.which;
+			$('.headerHeroText').removeClass('long longer').addClass('long');
 			if(e.which == 13){
 				e.preventDefault();
 				mgbMainSys.gaTracking('Home|HeaderText|'+$(".headerHeroText").text());
@@ -3145,7 +3146,22 @@ var mgbHeroVideo = {
 	
 	changeHeaderCopy:function(){
 		this.firstWord = this.wordArray.shift();
-		this.messageContainer.html(this.firstWord);
+		$('.headerHeroText').removeClass('long longer');
+		// var fwl = "";
+		if (this.firstWord.length > 6) {
+			// fwl = "long";
+			$('.headerHeroText').addClass('long');
+		}
+		if (this.firstWord.length >= 10) {
+			// fwl = "longer";
+			$('.headerHeroText').removeClass('long').addClass('longer');
+		}
+		
+		if (this.firstWord.indexOf(' ') != -1) $('.headerHeroText').removeClass('long longer').addClass('long');
+		
+		var fw = this.firstWord;//'<span class="'+fwl+'">'+this.firstWord+'</span>';
+		// console.log('firstWord',fw,this.firstWord.length);
+		this.messageContainer.html(fw);
 		this.wordArray.push(this.firstWord);
 	},
 	
