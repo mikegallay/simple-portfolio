@@ -272,6 +272,8 @@
 				transition:opacity 300ms 500ms;
 				a {
 					text-decoration: none;
+					-webkit-text-stroke: .6px white;
+//					transition:text-stroke 0ms 300ms;
 				}
 			}
 	
@@ -337,6 +339,14 @@
 				#mbLogo{
 					margin-top:-12px;
 					//margin-left:4px;//8px;
+				}
+			}
+			
+			ul.menu {
+				li{
+					a{
+						-webkit-text-stroke: .1px white;
+					}
 				}
 			}
 			
@@ -753,6 +763,7 @@ $pinnedOffset:80px;
 @media screen and (min-width: 768px) {
 	#header {
 		nav{
+//			background:black;
 			background: rgba(107, 109, 111, 0.0);
 			//background-image: '';
 			//background-size: 0px 0px;

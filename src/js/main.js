@@ -1478,6 +1478,7 @@ var mgbHeroVideo = {
 			$('.headerHeroText').removeClass('long').addClass('longer');
 		}
 		
+		
 		if (this.firstWord.indexOf(' ') != -1) $('.headerHeroText').removeClass('long longer').addClass('long');
 		
 		var fw = this.firstWord;//'<span class="'+fwl+'">'+this.firstWord+'</span>';
