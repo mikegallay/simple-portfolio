@@ -40,4 +40,13 @@
 		// Picture element HTML5 shiv
 		document.createElement( "picture" );
 	</script>
+		
+	<style type="text/css" media="screen">
+		/* safari10 fix for light nav font when it is not sticky*/
+		_::-webkit-:-webkit-full-screen:host:not(:root:root), #header nav ul.menu li a { 
+		        -webkit-text-stroke: .4px white;
+				transition: -webkit-text-stroke 300ms;
+		    }
+		}}
+	</style>
 </head>

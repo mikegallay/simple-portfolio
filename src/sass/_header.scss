@@ -272,7 +272,13 @@
 				transition:opacity 300ms 500ms;
 				a {
 					text-decoration: none;
-					-webkit-text-stroke: .6px white;
+					
+					/*_::-webkit-:-webkit-full-screen:host:not(:root:root){
+
+					  -webkit-text-stroke: .6px white;
+
+					}*/
+//					-webkit-text-stroke: .6px white;
 //					transition:text-stroke 0ms 300ms;
 				}
 			}
@@ -345,7 +351,7 @@
 			ul.menu {
 				li{
 					a{
-						-webkit-text-stroke: .1px white;
+						-webkit-text-stroke: 0px transparent !important;
 					}
 				}
 			}
