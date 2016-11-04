@@ -170,9 +170,9 @@
 		</section>
 		<section id="careers" class="fullBleed">	
 			<div class="container">
-				<h1 class="sectionHeadingSmall">INTERESTED IN JOINING THE&nbsp;TEAM?</h1>
+				<h1 class="sectionHeading">INTERESTED IN<br/><span class="blueFont">JOINING&nbsp;THE&nbsp;TEAM?</span></h1>
 	
-				<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >TAKE A GANDER AT OUR JOB LISTINGS<span class="moreArrow">
+				<a class="button" href="https://mcgarrybowen-dentsuaegisnetwork.icims.com/jobs/intro?hashed=-435684868&mobile=false&width=1279&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240" target="_blank" aria-label="Take a gander at our job listings" data-tracking-label="Home|Click|JobListings" >LETS DO THIS<span class="moreArrow">
 							<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
 							</svg>

@@ -86,8 +86,6 @@ h1.sectionHeading{
 		@media screen and (min-width: 1024px) { margin:1.2em 0 0.1em; }
 		@media screen and (min-width: 1260px) { margin:1.1em 0 0.2em; }
 		@media screen and (min-width: 1900px) { margin: 1.15em 0 0.35em; }
-		
-		
 	}
 }
 
@@ -103,6 +101,15 @@ h1.sectionHeading{
 	h1.sectionHeading {
 		margin: 1.1em 0 1em;
 		@media screen and (min-width: 1024px) { margin: 1.1em 0 0.75em; }
+		
+	}
+}
+
+#careers{
+	h1.sectionHeading {
+		color:white;
+		margin: 1.1em auto .2em;
+		@media screen and (min-width: 1024px) { margin: 1.1em auto 0.15em;}
 		
 	}
 }
@@ -177,9 +184,15 @@ h1.sectionHeading{
 
 #careers {
 	width: 90%;
-	padding:0em 5% 2.6em;
-	
-	@media screen and (min-width: 412px) { padding:0em 5% 2.9em; }
+	padding:.6em 5% 2.6em;
+	background:url('../img/careers/careers_bg.jpg') center center;
+//	background-size: cover;
+    background-size: auto 103%;
+    margin-top: .5em;
+	@media screen and (min-width: 412px) { margin-top: 1.5em; padding:0.6em 5% 2.9em; }
+	@media screen and (min-width: 1024px) { margin-top: 2.5em; }
+	@media screen and (min-width: 1440px) { margin-top: 3.5em; }
+	@media screen and (min-width: 1900px) { margin-top: 4.5em;}
 	text-align:center;
 	a.button{
 		font-size:.8em;
@@ -1433,7 +1446,7 @@ h1 {
 
 
 	#careers {
-		padding:3em 5% 5em;
+		padding:2.5em 5% 5em;
 		
 		
 	}
@@ -1722,7 +1735,7 @@ h1 {
 		}
 	}
 	#careers{
-		padding:3em 5% 4.4em; 
+		padding:3em 5% 6.4em; 
 	}
 }
 
@@ -1776,7 +1789,7 @@ h1 {
 	}
 	
 	#careers {
-		padding:5em 5%;
+		padding:2em 5% 5.5em
 	}
 	
 	#offices {
