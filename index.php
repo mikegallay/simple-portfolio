@@ -3,7 +3,7 @@
 	
 	// echo ' approot='.$appRoot . ' mediapath='. MEDIAPATH;
 	
-	$vnum = "1.13";
+	$vnum = "1.14";
 	
 	$bioId = undefined;
 	$portId = undefined;
