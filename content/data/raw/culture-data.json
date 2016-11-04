@@ -34,9 +34,8 @@
 		"title": "",
 		"imgSrc": "assets/img/our_culture/dog",
 		"imgType": "jpg",
-		"info": "Bow wow wow!",
-		"office": "New York",
-		"moreinfo":"people/person-one"
+		"info": "",
+		"office": "New York"
 	},
 	{
 		"name" : "Jennifer Zimmerman",
@@ -85,18 +84,17 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/chicago2",
 		"imgType": "jpg",
-		"info": "Hello everybody!",
+		"info": "",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Waving_Culture",
-		"office": "Sao Paulo",
-		"moreinfo":"people/person-one"
+		"office": "Sao Paulo"
 	},
 	{
 		"name" : "Skater",
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/chicago3",
 		"imgType": "jpg",
-		"info": "This is my information",
+		"info": "",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Skater_Culture",
 		"office": "London"
@@ -115,7 +113,7 @@
 		"title": "My Title",
 		"imgSrc": "assets/img/our_culture/sf4",
 		"imgType": "jpg",
-		"info": "Hello everybody!",
+		"info": "",
 		"linkedin": "",
 		"trackingLabel": "Home|Click|Waving_Culture",
 		"office": "New York"
