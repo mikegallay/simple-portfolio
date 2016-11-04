@@ -1186,7 +1186,8 @@ var mgbHeroVideo = {
 			$('.aboutUsClose .videoClose').on('click',function(e){
 				that.killAboutUsVideo();
 			})
-
+			
+			this.maxVideoHeight = $(window).height();
 		}
 		
 	},
