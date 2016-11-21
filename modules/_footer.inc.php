@@ -1,15 +1,16 @@
 <footer class="tempHide">
 	<div class="container">
-		<div class="socialIcons">		 
-			<a href="https://www.facebook.com/mcgarrybowen" target="_blank" data-tracking-label="Footer|Click|Facebook"><?php addIcon("facebook"); ?></a>
-			<a href="https://www.instagram.com/mcgarrybowen/" target="_blank" data-tracking-label="Footer|Click|Instagram"><?php addIcon("instagram"); ?></a>
-			<a href="https://twitter.com/mcgarrybowen" target="_blank" data-tracking-label="Footer|Click|Twitter"><?php addIcon("twitter"); ?></a>
-			<a href="https://www.linkedin.com/company/mcgarrybowen" target="_blank" data-tracking-label="Footer|Click|LinkedIn"><?php addIcon("linkedin"); ?></a>
+		<hr>
+		<div class="social-icons">
+			<a href="https://www.instagram.com/mikegallay/" target="_blank" data-tracking-label="Footer|Click|Instagram"><?php addIcon("instagram"); ?></a>
+			<a href="https://twitter.com/mikegallay" target="_blank" data-tracking-label="Footer|Click|Twitter"><?php addIcon("twitter"); ?></a>
+			<a href="https://www.linkedin.com/in/michael-gallay-316a074" target="_blank" data-tracking-label="Footer|Click|LinkedIn"><?php addIcon("linkedin"); ?></a>
 		</div>
 		
 		<div class="legal">
+			<p>Currently Available for Freelance Projects</p>
 			<p class="copyright">
-				&copy; mcgarrybowen All Rights Reserved. <a href="Terms-of-Use-Privacy-Policy" data-tracking-label="Footer|Click|TermsPrivacy">Terms of Use&nbsp;/&nbsp;Privacy Policy</a>
+				<a href="http://www.michaelgallay.com/michaelgallay2016.pdf" target="_blank">View resume</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:mikegallay@gmail.com">mikegallay@gmail.com</a>
 			</p>
 		</div>
 	</div>

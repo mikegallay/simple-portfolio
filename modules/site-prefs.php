@@ -9,6 +9,8 @@
 	
 	switch( $location ){
 		case 'mb-website.com':
+		case 'michaelgallay.com':
+		case 'mgallay.com':
 			$DEBUG = true;
 			error_reporting(E_ALL ^ E_NOTICE);
 			//error_reporting(E_ALL);

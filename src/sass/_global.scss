@@ -1,6 +1,3 @@
-.white{background:white;}
-.gray{background:$sectionHeadingColor;}
-
 picture img{width:100%;}  
 
 html {
@@ -8,7 +5,7 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
     font-weight: 300;
 	color: $sectionHeadingColor;//#ffffff;
 	width: 100%;
@@ -25,31 +22,29 @@ body {
 	line-height:1.7;
 }
 
-//.breadcrumb{
-//	padding:3em 0 2em;
-//}
-
 .noPadding {
 	padding: 0 !important;
 }
 
 a {
-	font-size: 1.1em;
-	
+	font-size: 1em;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration:none!important;
 	&:link {
-		color: $skyblueColor;
+		color: $linkColor;
 	}
 
 	&:visited {
-		color: $skyblueColor;
+		color: $linkColor;
 	}
 
 	&:hover {
-		color: $skyblueColor;
+		color: $linkColor;
 	}
 
 	&:active {
-		color: $skyblueColor;
+		color: $linkColor;
 	}
 }
 
@@ -65,7 +60,7 @@ a {
 
 a.button {
 	cursor: pointer;
-	background-color: $skyblueColor;
+	background-color: $blue;
 	padding: 1em 1.1em 0.8em;
 	text-decoration: none;
 	font-family: 'Din-Regular', sans-serif;
@@ -97,6 +92,8 @@ a.button {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
 }
 
+header{display:none!important;}
+orear
 .svgShadow{
 	-webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.4));
 	filter:drop-shadow(0px 0px 1px rgba(0,0,0,0.4));
@@ -108,13 +105,35 @@ a.button {
 
 .parallaxHeader{
 	position:fixed!important;
+	top:0px;
+	background:$headerFooterGray;// url('../img/common/pixelgrid_pattern.png') center center;;
+	width: 100%;
+    height: 100px;
 }
 
+.heroImage{
+	width:100%;
+	height:$headerHeight;
+	img{visibility:hidden;width:100%;}
+}
+
+
+p,h2{font-size:1em;
+	@media screen and (min-width: 412px) {
+		font-size:.9em;
+	}
+}
+
+#mainContent.inactive{display:none!important;}
 
 @media screen and (min-width: 320px) {
 	a.button {
 	    font-size: .9em;
 	}
+}
+
+hr{
+	    margin-top: .25em;
 }
 
 @media screen and (min-width: 768px) {

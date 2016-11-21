@@ -1,78 +1,92 @@
 {{#each objects}}
-<div class="subpageHeader parallaxHeader">
-	<div id="heroImage">
-		<picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}_large@2x.jpg 2x" media="(min-width: 1440px)">
-			<source srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}_medium.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}_medium@2x.jpg 2x" media="(min-width: 768px)">
-			<source srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}@2x.jpg 2x">
-            <!--[if IE 9]></video><![endif]-->
-            <!--[if !lte IE 9]> -->
-            <img srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}.jpg" src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" alt="' . $alt . '">
-            <!-- <![endif]-->
-           
-        </picture>
+<section class="parallaxHeader">	
+	<div id="headerWrapper">
+		<h1>{{{clientName}}}</h1>
+		<!--<a href="/" id="backToHome"><&nbsp;Back</a>-->
 	</div>
+</section>
 
-	<div class="videoHolder"></div>
-	<div class="videoCloseButton">
-		<a class="videoClose">
-			<svg class="icon more_button-inline svgShadow" role="img" aria-labelledby="title">
-			  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more_button"></use>
-			</svg>
-		</a>
-	</div>
-	
-</div>
-
-<div class="contentWrapper isCaseStudy" id="caseStudyWrapper" style="background:white;">
-	<section class="workContainer">
-		<div class="subnav left breadcrumb"><a href="/work" id="subnav-prev"><span class="prev_arrow">
-			<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
-			</svg></span>&nbsp;View All Work</a>
-		</div>
-		<div class="workHeadline">
-			<h1>{{{csTitle}}}</h1>
-			<p>Client: {{{clientName}}}</p>
-			<p>Office: {{{csOffice}}}</p>
+<div class="contentWrapper">
+	<section class="columnWrapper">
+		<p class="topP"><strong>{{{csTitle}}}</strong></p>
+		<hr>
+		<div class="workHero {{{csHeroType}}}">
+			{{#equal csHeroType 'image'}}
+				<!--[if IE 9]>
+					<video style="display: none;"><![endif]-->
+						<source data-srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}_large@2x.jpg 2x" media="(min-width: 412px)">
+						<source data-srcset="{{#appRoot}}{{/appRoot}}{{{csHero}}}.jpg, {{#appRoot}}{{/appRoot}}{{{csHero}}}@2x.jpg 2x">
+				<!--[if IE 9]>
+					</video>
+				<![endif]-->
+				<!--[if !lte IE 9]> -->
+					<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src='{{#appRoot}}{{/appRoot}}{{{csHero}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll lalzy">
+				<!-- <![endif]-->
+			{{/equal}}
+			{{#equal csHeroType 'vimeo'}}
+				<iframe src="https://player.vimeo.com/video/{{{csHeroVideo}}}" width="640" height="360" frameborder="0" autoplay webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			{{/equal}}
+			{{#equal csHeroType 'youtube'}}
+				<iframe width="640" height="360" src="https://www.youtube.com/embed/{{{csHeroVideo}}}?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+			{{/equal}}
+			<p class="caption">{{{csHeroCaption}}}</p>
 		</div>
 		<div class="workDetails">
-			<div class="workRight">
-				{{#if csVideos}}
-				<div class="workThumbs">
-					{{#each csVideos}}
-						<div class="workThumb">
-							<a data-content="144913605" data-tracking-label="{{{csTitle}}}|Click|{{{vidTitle}}}" aria-label="">
-								<img src="{{#appRoot}}{{/appRoot}}{{{vidImgSrc}}}.jpg" alt="">
-								<div class="playButton">
-									<svg class="icon playbutton-inline" role="img" aria-labelledby="title">
-									  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playbutton"></use>
-									</svg>
-								</div>
-								<figcaption class="prjDescription">
-									<div class="prjDscrWrap">
-										<h3>{{{vidTitle}}}</h3>
-									</div>
-									<div class="cultureArrow"></div>
-								</figcaption>
-							</a>
-						</div>
-					{{/each}}
-				</div>
-				{{/if}}
-				
+			<p>{{{csOverview}}}</p>
+			<div class="portColumns">
+					{{#if csResponsibilities}}
+					<div class="column">
+						<h2>Responsibilities</h2>
+						<p>{{{csResponsibilities}}}</p>
+					</div>
+					{{/if}}
+
+					{{#if csTechnology}}
+					<div class="column">
+						<h2>Technology</h2>
+						<p>{{{csTechnology}}}</p>
+					</div>
+					{{/if}}
+
+					{{#if csChallenges}}
+					<div class="column">
+						<h2>Challenges</h2>
+						<p>{{{csChallenges}}}</p>
+					</div>
+					{{/if}}
+
+					{{#if csResults}}
+					<div class="column">
+						<h2>Results</h2>
+						<p>{{{csResults}}}</p>
+					</div>
+					{{/if}}
 			</div>
-			<div class="workLeft bodyCopy">
-				{{{csBody}}}
-				{{#if website}}
-				<div class="websiteButton">
-					<a href="{{{website}}}" class="button">VIEW THE WEBSITE<span class="moreArrow">
-						<svg class="icon menu_dropdown_arrow-inline" role="img" aria-labelledby="title">
-						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu_dropdown_arrow"></use>
-						</svg>
-					</span></a>
-				</div>
-				{{/if}}
+			
+			
+			{{#if csAdditionalPics}}
+			<div class="morePics">
+				
+				{{#each csAdditionalPics}}
+					<div class="pic">
+					<!--[if IE 9]>
+						<video style="display: none;"><![endif]-->
+							<source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 412px)">
+							<source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg 2x">
+					<!--[if IE 9]>
+						</video>
+					<![endif]-->
+					<!--[if !lte IE 9]> -->
+						<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll lazy">
+				<!-- <![endif]-->
+					{{#if caption}}
+					<p class="caption">{{{caption}}}</p>
+					{{/if}}
+						</div>
+				{{/each}}
+			
+			</div>
+			{{/if}}
+			
 			</div>
 {{/each}}

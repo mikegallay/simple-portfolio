@@ -8,8 +8,6 @@ $siteData = 'content/data/merged.json';
 $tempData = "";
 $fullData = "";
 $portfolio_arr = array();
-$leadership_arr = array();
-$people_arr = array();
 
 //portfolio array control content
 
@@ -72,84 +70,20 @@ function convertToLinkReady($link){
 	return $linkReady;
 }
 
-//bio array control content
 
-function pushToBiosArray($data,&$arr){
-	// global $arr;
-	$tempData = $data;
-	
-	for($i=0; $i < count($tempData); $i++) {
-		array_push($arr, $tempData[$i]);
-	}
-}
-
-
-
-function getIndexFromBioId($id,&$arr){
-	foreach ($arr as &$bio) {
-		
-		if ($bio['id'] == $id){
-			return $bio['index'];
-		}
-	}
-}
-
-function getPrevBio($currBio,$linkReady,&$arr){
-	/*
-	global $leadership_arr;
-		global $people_arr;
-		
-		$arr = $leadership_arr;
-		if ($biotype == "people") $arr = $people_arr;*/
-	
-	
-	$prevLeader = $currBio-1;
-	if ($prevLeader < 0) $prevLeader = count($arr) - 1;
-	
-	$leader = $arr[$prevLeader]['name'];
-	if ($linkReady) {
-		echo convertToLinkReady($leader);
-	}else{
-		echo $leader;
-	}
-}
-
-function getNextBio($currBio,$linkReady,&$arr){
-	/*
-	global $leadership_arr;
-		global $people_arr;
-		
-		$arr = $leadership_arr;
-		if ($biotype == "people") $arr = $people_arr;*/
-	
-	
-	$nextLeader = $currBio+1;
-	if ($nextLeader > count($arr) - 1) $nextLeader = 0;
-	
-	$leader = $arr[$nextLeader]['name'];
-	if ($linkReady) {
-		echo convertToLinkReady($leader);
-	}else{
-		echo $leader;
-	}
-}
-
-//end bio control content
 
 function preloadData(&$tempData, &$fullData, &$siteData){
 	$tempData = file_get_contents($siteData);
 	$fullData = json_decode($tempData, true); 
 	
-	global $leadership_arr;
+	// global $leadership_arr;
 	global $people_arr;
 	
 	// $tempDataArray = $fullData["portfolio-data"];
 	
 	pushToPortFolioArray($fullData["portfolio-data"]);
-	pushToBiosArray($fullData["culture-global-data"],$leadership_arr);
-	pushToBiosArray($fullData["people-bios"],$people_arr);
 	
-	array_shift($leadership_arr);
+	// array_shift($leadership_arr);
 }
 
 preloadData($tempData, $fullData, $siteData);
@@ -308,8 +242,8 @@ function HTMLfromTemplateAndJSON($tempname, $jsonfile) {
 	$dataArray = $tempDataArray;
 	
 	
-	if ($jsonfile == "culture-data") $dataArray = formatCulture($tempDataArray,true);
-	if ($jsonfile == "culture-global-data") $dataArray = formatCulture($tempDataArray,false);
+	// if ($jsonfile == "culture-data") $dataArray = formatCulture($tempDataArray,true);
+	// if ($jsonfile == "culture-global-data") $dataArray = formatCulture($tempDataArray,false);
 	// if ($shuffle) $dataArray = shuffleCulture($dataArray);
 	
 	$str = json_encode($dataArray);

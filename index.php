@@ -3,7 +3,7 @@
 	
 	// echo ' approot='.$appRoot . ' mediapath='. MEDIAPATH;
 	
-	$vnum = "1.14";
+	$vnum = "1.05";
 	
 	$bioId = undefined;
 	$portId = undefined;
@@ -35,13 +35,10 @@
 	$new_url = '';
 	$routes = array();
 	$routes = explode('/', $base_url);
-	$homeSections = array("work", "culture", "offices", "news"); // sections of home page that are linked in the navigation (NOT individual pages)
 	
 	$ishome = false;
 	
-	$isHomeSection = (count($routes) < 2 && (in_array($routes[0], $homeSections)));//(count($routes) < 2 && (in_array($routes[0], $homeSections)))
-	
-	if ($routes[0] == null || $routes[0] == 'index.php' || $routes[0] == 'index.php?ajax=1' || $isHomeSection){
+	if ($routes[0] == null || $routes[0] == 'index.php' || $routes[0] == 'index.php?ajax=1'){
 		$ishome = true;
 	}
 	
@@ -84,13 +81,7 @@
 	  
 		return;
 		
-	} /*else {
-		echo 'base'.$base_url;
-		if (!file_exists($appRoot . $base_url) || !file_exists($appRoot . "modules/" . $base_url)){
-			//header("Location:" . $appRoot . "404.php" );
-			//exit();
-		}
-	}*/
+	} 
 ?>
 <?php include_once("modules/_head.inc.php"); ?>
 
@@ -107,21 +98,12 @@
 		?>
 	</div>
 	
-	<!-- <div id="overlayCover" class="<?php if ($base_url == "global-leadership") {?> white <?php } ?>">
-	</div> -->
-	
 	<div id="internalContent">
 		<?php 
 		if (!$ishome) { 
-			$isLeaderBio = strpos($base_url , 'global-leadership/');
-			$isPeopleBio = strpos($base_url , 'people/');
 			$isCaseStudy = strpos($base_url , 'work/');
 			
-			if ($isLeaderBio === 0) {
-				include_once("modules/leader-bio.php");
-			}else if ($isPeopleBio === 0){
-				include_once("modules/people-bio.php");
-			}else if ($isCaseStudy === 0){
+			if ($isCaseStudy === 0){
 				include_once("modules/case-study.php");
 			}else{
 				include_once("modules/" . $base_url . ".php");
@@ -140,12 +122,6 @@
 		<script type="text/javascript">
 			
 			$('#header').addClass('settle');
-			
-			//global leadership
-			if ($('#globalLeadershipWrapper').length) mgbInternalContent.addAllCultureListeners();
-			
-			//global leadership
-			if ($('#allNewsWrapper').length) mgbInternalContent.addAllNewsListeners();
 			
 			
 			setTimeout(function(){mgbMainSys.checkInView('.ll-all'); /*$('footer').removeClass('tempHide');*/},1000);

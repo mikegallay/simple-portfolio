@@ -5,6 +5,10 @@
 // $ sudo npm install gulp-uglify gulp-concat gulp-compass gulp-minify-css gulp-concat-css gulp-cache gulp-notify gulp-livereload gulp-rename gulp-autoprefixer gulp-imagemin del gulp-util path gulp-svg-sprite gulp-svg2png gulp-plumber gulp-jsoncombine --save-dev
 // npm install to install packages below
 
+//processScripts
+//Error: spawn /usr/bin/compass ENOENT was resolved with
+//sudo gem install -n /usr/local/bin compass
+
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // minify .js files
 	concat = require('gulp-concat'), // concat .js files 
@@ -31,15 +35,15 @@ var concatScripts = [
 	// 'src/js/lib/jquery-1.11.2.min.js',
 	'src/js/plugins/plugin.base.js',
 	'src/js/plugins/player.min.js',
-	'src/js/plugins/jquery.waypoints.min.js',
+	//'src/js/plugins/jquery.waypoints.min.js',
 	// 'src/js/plugins/waypoints.inview.min.js',
 	//'src/js/plugins/slick.min.js',
 	'src/js/plugins/lazysizes.min.js',
 	'src/js/plugins/jquery.fitvids.js',
-	'src/js/lib/TweenMax.min.js',
+	//'src/js/lib/TweenMax.min.js',
 	// 'src/js/lib/EasePack.min.js',
 	// 'src/js/lib/CSSPlugin.min.js',
-	'src/js/lib/DrawSVGPlugin.min.js',
+	//'src/js/lib/DrawSVGPlugin.min.js',
 	'src/js/main.js'
 ];
 

@@ -47,10 +47,10 @@
 	height: 2em;
 }
 
-.menu_dropdown_arrow-inline {
+.menu_dropdown_arrow-inline,.menu_double_arrow-inline {
     fill: #ffffff;
-	width: .7em;
-    height: .7em;
+	width: .8em;
+    height: .8em;
 	vertical-align: initial;	
 	//@media screen and (min-width: 768px) {
 //		width: 1em;
@@ -68,7 +68,7 @@
 
 
 .mb_timeline_path-inline {
-	fill: $skyblueColor;
+	fill: $blue;
 	width: inherit;
 	height: inherit;
 }

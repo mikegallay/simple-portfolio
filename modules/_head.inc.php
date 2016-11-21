@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>mcgarrybowen</title>
+    <title>Michael Gallay / Creative Technologist</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 	
@@ -21,16 +21,12 @@
 	
 	<script>
 		var appRoot='<?php echo $appRoot; ?>';
-		var homeSections = [];
-    	<?php foreach($homeSections as $key => $val){ ?>
-        	homeSections.push('<?php echo $val; ?>');
-		<?php } ?>
 			
 		
 			
 			</script>
 	
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo MEDIAPATH ?>css/main.css?v<?php echo $vnum; ?>">
 
 	<script src="<?php echo MEDIAPATH ?>js/lib/modernizr-custom.js"></script>

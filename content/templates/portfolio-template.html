@@ -1,36 +1,30 @@
 {{#each objects}}
-	<figure class="projectTile {{#greaterThan index 5}}notLoaded notShowing{{/greaterThan}} {{#if isShowcase}}col-2-by-1{{/if}} {{{isShowcaseFinal}}}">
+	<div class="homeTile">
 		<a data-content="work/{{id}}" href="#" aria-label="{{{aria-label}}}" data-header="{{{clientName}}}" data-title="{{{description}}}" {{#if trackingLabel}}data-tracking-label="{{{trackingLabel}}}"{{/if}}>
 			<picture>
 				{{#equal imgType 'jpg'}}
 					<!--[if IE 9]>
 						<video style="display: none;"><![endif]-->
-							{{#if isShowcaseFinal }} <source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 1900px)">{{/if}}
-							{{#if isShowcase }} <source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 768px)">{{/if}}
+							<source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}_large@2x.jpg 2x" media="(min-width: 412px)">
 							<source data-srcset="{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.jpg, {{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg 2x">
 					<!--[if IE 9]>
 						</video>
 					<![endif]-->
 					<!--[if !lte IE 9]> -->
-						<img src="assets/img/common/blank.png" data-src='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
+						<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-src='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}@2x.jpg' alt="{{{altText}}}" class="lazyload ll lalzy">
 					<!-- <![endif]-->
 				{{/equal}}
 				{{#equal imgType 'gif'}}
-					<img src="assets/img/common/blank.png" data-srcset='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll {{#greaterThan index 5}}lazy{{/greaterThan}}">
+					<img src="{{#appRoot}}{{/appRoot}}assets/img/common/blank.png" data-srcset='{{#appRoot}}{{/appRoot}}{{{imgSrc}}}.gif' alt="{{{altText}}}" class="lazyload ll lalzy">
 				{{/equal}}
 			</picture>
 			
-			<figcaption class="prjDescription">
-				<div class="prjDscrWrap">
-					{{#if clientName}}
-						<h2>{{{clientName}}}</h2>
-					{{/if}}
-					{{#root}}{{body}}{{/root}}
+			<div class="homeTile-name">
+				{{#if clientName}}
+					<h2>{{{clientName}}}</h2>
 					<p>{{{description}}}</p>
-				</div>
-				
-				<div class="cultureArrow"></div>
-			</figcaption>
+				{{/if}}
+			</div>
 		</a>
-	</figure>
+	</div>
 {{/each}}
