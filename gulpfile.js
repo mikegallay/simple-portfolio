@@ -11,10 +11,10 @@
 
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // minify .js files
-	concat = require('gulp-concat'), // concat .js files 
+	concat = require('gulp-concat'), // concat .js files
 	compass = require('gulp-compass'), // require .sass compass
 	minifyCSS = require('gulp-minify-css'), // minify .css files gulp-minify-css deprecated
-	concatCSS = require('gulp-concat-css'), // concat .css files 
+	concatCSS = require('gulp-concat-css'), // concat .css files
 	cache = require('gulp-cache'),
 	notify = require('gulp-notify'),
 	livereload = require('gulp-livereload'),
@@ -30,7 +30,7 @@ var gulp = require('gulp'),
 	jsoncombine = require("gulp-jsoncombine");
 
 // add all javascript files dependent here
-// append other files to the end of the list 
+// append other files to the end of the list
 var concatScripts = [
 	// 'src/js/lib/jquery-1.11.2.min.js',
 	'src/js/plugins/plugin.base.js',
@@ -54,7 +54,7 @@ Tasks to be completed by gulp
 
 
 gulp.task('processScripts', function() {
-	
+
 	return gulp.src(concatScripts)
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('assets/js'))
@@ -66,7 +66,7 @@ gulp.task('processScripts', function() {
 
 
 gulp.task('processStyles', function() {
-	
+
 	return gulp.src('./src/sass/*.scss')
 	  .pipe(plumber())
 	  .pipe(compass({
@@ -78,7 +78,7 @@ gulp.task('processStyles', function() {
 	  .pipe(autoprefixer('last 2 versions', 'ie 8', 'ie 9', 'iOS', 'Android'))
 	  .pipe(concat('main.css'))
 	  .pipe(gulp.dest('assets/css'))
-	  .pipe(rename({ suffix: '.min' }))	  
+	  .pipe(rename({ suffix: '.min' }))
 	  .pipe(minifyCSS())
 	  .pipe(gulp.dest('assets/css'))
 	  .pipe(notify({ message: '**** CSS file processing complete! ****' }));
@@ -91,7 +91,7 @@ gulp.task('processStyles', function() {
 svg_config                  = {
     mode                : {
         view            : {         // Activate the «view» mode
-            bust        : false,            
+            bust        : false,
 			sprite		: 'icon-sprite.svg',
 			dest		: '.'
         },
@@ -121,7 +121,7 @@ gulp.task('svg-sprite', function() {
 });
 
 gulp.task('svg2png', function() {
-	
+
     return gulp.src('src/svg/*.svg')
         .pipe(svg2png())
         .pipe(gulp.dest('assets/img/svg/ie8-fallback'));
@@ -133,7 +133,7 @@ gulp.task('processSVG', ['svg-sprite','svg2png']);
 
 
 gulp.task('processImages', function() {
-	
+
 	return gulp.src(['src/img/**'])
 		.pipe(plumber())
 		//.pipe(cache(imagemin({ optimazationLevel: 3, progressive: true, interlaced: true })))
@@ -153,25 +153,25 @@ gulp.task('copyFonts', function() {
 	return gulp.src(['src/fonts/**','!src/fonts/.DS_Store'])
 	.pipe(plumber())
 	.pipe(gulp.dest('assets/fonts'));
-   
+
 });
 
 gulp.task('copyLibJS', function() {
-	
+
 	return gulp.src(['src/js/lib/*','!src/js/lib/.DS_Store'])
 	.pipe(plumber())
 	.pipe(gulp.dest('assets/js/lib'));
 });
 
 gulp.task('copyVideos', function() {
-	
+
 	return gulp.src(['src/videos/*','!src/videos/.DS_Store'])
 	.pipe(plumber())
 	.pipe(gulp.dest('assets/videos'));
 });
 
 gulp.task('clear', function(done){
-	return cache.clearAll(done);	
+	return cache.clearAll(done);
 });
 
 gulp.task('processData', function() {
@@ -183,19 +183,19 @@ gulp.task('processData', function() {
 
 // Watch
 gulp.task('watch', function() {
-	
+
 	// Watch .scss files
 	gulp.watch('src/sass/**/*.scss', ['processStyles']);
 
 	// Code hinting for script files
 	gulp.watch('src/js/**/*', ['processScripts']);
-	
-	// Specifically watch SVG image files 
+
+	// Specifically watch SVG image files
 	gulp.watch('src/svg/*.svg', ['processSVG']);
 
 	// Watch image files
 	gulp.watch('src/img/**', ['processImages']);
-	
+
 	// Watch data files
 	gulp.watch('content/data/raw/*.json', ['processData']);
 

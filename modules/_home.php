@@ -1,11 +1,11 @@
-	<!-- MAIN CONTENT GOES HERE -->	
-	<section class="parallaxHeader">	
+	<!-- MAIN CONTENT GOES HERE -->
+	<section class="parallaxHeader">
 		<div id="headerWrapper">
 			<h1>Michael Gallay</h1>
 		</div>
-		
-		
-		
+
+
+
 	</section>
 	<div class="contentWrapper">
 		<section class="homeBio">
@@ -16,18 +16,25 @@
 		</section>
 		<section id="homeTiles" class="fullBleed">
 			<div class="container">
-	
+
 				<div class="columnWrapper">
 					<p><strong>SELECT WORK</strong></p>
 					<hr>
 					<?php
 						$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "portfolio-data");
-						echo $portfolioData; 
+						echo $portfolioData;
+					?>
+					<br/>
+					<p><strong>DEVELOPMENT</strong></p>
+					<hr>
+					<?php
+						$portfolioData = HTMLfromTemplateAndJSON("content/templates/portfolio-template.html", "dev-data");
+						echo $portfolioData;
 					?>
 				</div>
-				
+
 			</div>
 		</section>
-		
-		
+
+
 	</div>
