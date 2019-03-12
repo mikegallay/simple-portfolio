@@ -2,13 +2,13 @@
 	{
 		"index": 0,
 		"id":"ikea",
-		"imgSrc": "assets/img/work/ikea/ikea-tile",
+		"imgSrc": "assets/img/work/ikea/ikea_tile",
 		"imgType": "jpg",
 		"clientName": "IKEA",
 		"description": "Interative Quiz and Photobooth",
 		"altText": "IKEA",
 		"trackingLabel": "Home|Click|IKEA_Work",
-		"csHero":"assets/img/work/ptb/ptb5",
+		"csHero":"",
 		"csHeroCaption":"",
 		"csHeroType":"vimeo",
 		"csHeroVideo":"3a2f46ea9d",
@@ -19,12 +19,11 @@
 		"csChallenges":"Prior to the activations, we coordinated with vendors to secure and install a Wi-Fi network to handle hundreds of simultaneous connections. During the activations, I interacted with, trained and assisted a 20-person team as well as assisted thousands of customers over 9 days in multiple cities.",
 		"csResults":"The onsite feedback and excitement we received from the client and the visitors was incredible. We created a fun experience that thousands of people were compelled to visit again and again. We’ve since optimized the quiz and website to be more manageable by a smaller staff. This smaller version has been used to promote multiple store openings across the country.",
 		"csAdditionalPics":[
-			{"imgSrc":"assets/img/work/ptb/ptb7a", "caption":"Will you push the button?"},
-			{"imgSrc":"assets/img/work/ptb/ptb6", "caption":"Track your teams score on the website"},
-			{"imgSrc":"assets/img/work/ptb/ptb1", "caption":"Eastside Gridlox vs. Westside Trackfires"},
-			{"imgSrc":"assets/img/work/ptb/ptb2", "caption":"Propoganda posters"},
-			{"imgSrc":"assets/img/work/ptb/ptb3", "caption":"Thousands of selfies!!"},
-			{"imgSrc":"assets/img/work/ptb/ptb4", "caption":"Which side will you stand on?"}
+			{"imgSrc":"assets/img/work/ikea/ikea1", "caption":"Screens from the interactive quiz"},
+			{"imgSrc":"assets/img/work/ikea/ikea1a", "caption":"It is totally worth the wait"},
+			{"imgSrc":"assets/img/work/ikea/ikea2", "caption":"Smile for the camera"},
+			{"imgSrc":"assets/img/work/ikea/ikea2a", "caption":"On the hunt for the questions"},
+			{"imgSrc":"assets/img/work/ikea/ikea3", "caption":"Seriously, it was this much fun"}
 		]
 	},
 	{
@@ -106,10 +105,10 @@
 	},
 	{
 		"index": 4,
-		"id":"avatar-creator",
-		"imgSrc": "assets/img/work/avatar/av-tile",
+		"id":"us-open",
+		"imgSrc": "assets/img/work/usopen/uso-tile",
 		"imgType": "jpg",
-		"clientName": "Avatar Creator",
+		"clientName": "US OPEN",
 		"description": "Custom built HTML5 animation tool",
 		"altText": "Various animated expressions",
 		"trackingLabel": "Home|Click|AV_Work",
