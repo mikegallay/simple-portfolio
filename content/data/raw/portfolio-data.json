@@ -29,13 +29,13 @@
 	{
 		"index": 1,
 		"id":"ibm-think",
-		"imgSrc": "assets/img/work/ibm/ibm-tile",
+		"imgSrc": "assets/img/work/ibm/ibm_tile",
 		"imgType": "jpg",
 		"clientName": "IBM Think",
 		"description": "Photo Studio",
 		"altText": "IBM Think",
 		"trackingLabel": "Home|Click|IBM_Work",
-		"csHero":"assets/img/work/marriott/mi_hero",
+		"csHero":"assets/img/work/ibm/think_hero",
 		"csHeroCaption":"Photo Studio",
 		"csHeroType":"image",
 		"csHeroVideo":"",
@@ -46,16 +46,14 @@
 		"csChallenges":"Keeping this tool as simple as possible proved to be a key to its success. The UX and design were intentially uncomplicated to let the basic functionality shine. Working with the display vendor had a few hiccups, but ulitmately everything fell into place.",
 		"csResults":"When the technology is working as expected, everyone has a good time. The experience was simple and lauded by everyone involved. The client was so pleased that we optimized and iterated the features of our code to do it again the following year in San Francisco.",
 		"csAdditionalPics":[
-			{"imgSrc":"assets/img/work/marriott/mi1", "caption":"Screen from <a data-tracking-label='MI|Click|RI' href='residenceinn.marriott.com'>residenceinn.marriott.com</a>"},
-			{"imgSrc":"assets/img/work/marriott/mi2", "caption":"Screen from <a data-tracking-label='MI|Click|FI' href='fairfield.marriott.com'>fairfield.marriott.com</a>"},
-			{"imgSrc":"assets/img/work/marriott/mi3", "caption":"Screen from <a data-tracking-label='MI|Click|SHS' href='springhillsuites.marriott.com'>springhillsuites.marriott.com</a>"},
-			{"imgSrc":"assets/img/work/marriott/mi4", "caption":"Screen from <a data-tracking-label='MI|Click|CY' href='courtyard.marriott.com'>courtyard.marriott.com</a>"}
+			{"imgSrc":"assets/img/work/ibm/think1", "caption":"Dynamic Ads"},
+			{"imgSrc":"assets/img/work/ibm/think2", "caption":"Harman Display Billboard"}
 		]
 	},
 	{
 		"index": 2,
 		"id":"mr-muscle",
-		"imgSrc": "assets/img/work/mrm/mrm-tile",
+		"imgSrc": "assets/img/work/mrm/mrm_tile",
 		"imgType": "jpg",
 		"clientName": "Mr Muscle",
 		"description": "A Smart Bottle for Cleaning Equality",
@@ -63,8 +61,8 @@
 		"trackingLabel": "Home|Click|MRM_Work",
 		"csHero":"",
 		"csHeroCaption":"Case Study Video",
-		"csHeroType":"vimeo",
-		"csHeroVideo":"116988638",
+		"csHeroType":"youtube",
+		"csHeroVideo":"A1mIpq2SfIg",
 		"csTitle":"A Smart Bottle for Cleaning Equality",
 		"csOverview":"How do you make sure that everybody is doing their part when it comes to cleaning up? Our team presented SC Johnson with a fun IoT product that would gamify cleanup and help to promote the idea of ‘cleaning equality’ by locking out family members who were attempting to clean more than their fair share.<br/>Overseeing the teams charged with the creation of a SmartBottle, we created a NodeJS API to support multiple Arduino based devices, an admin-driven, front-end dashboard to keep score and manage gameplay, and the coordination of 3D printing a custom model which housed the electronic components and functioning bottle.",
 		"csResponsibilities":"Development team leadership and technical oversight; Gameplay considerations; Third Party Vendor Coordination; Quality Assurance",
@@ -72,22 +70,20 @@
 		"csChallenges":"Aside from the finessing the 3D print to correctly house all the electrical components, the biggest challenge stemmed from the activation launching in Argentina. We were required to trouble shoot the technical limitations of working with and supporting a live activation in an underdeveloped country.",
 		"csResults":"It is a fun, quirky idea that people have reacted positively to. The success of the initiative has been confirmed by repeat activations in multiple global markets that SC Johnson supports.",
 		"csAdditionalPics":[
-			{"imgSrc":"assets/img/work/networkfleet/nf2", "caption":""},
-			{"imgSrc":"assets/img/work/networkfleet/nf1", "caption":""},
-			{"imgSrc":"assets/img/work/networkfleet/nf3", "caption":""}
+			{"imgSrc":"assets/img/work/mrm/mrm1", "caption":"The Smart Bottle"}
 		]
 	},
 	{
 		"index": 3,
 		"id":"amex",
-		"imgSrc": "assets/img/work/amex/amex-tile",
+		"imgSrc": "assets/img/work/amex/amex_tile",
 		"imgType": "jpg",
 		"clientName": "American Express",
 		"description": "New Development Ecosystem",
 		"altText": "American Express",
 		"trackingLabel": "Home|Click|AE_Work",
-		"csHero":"assets/img/work/amex/ng1",
-		"csHeroCaption":"",
+		"csHero":"assets/img/work/amex/amex1",
+		"csHeroCaption":"American Express Playbook",
 		"csHeroType":"image",
 		"csHeroVideo":"",
 		"csTitle":"New Development Ecosystem",
@@ -97,58 +93,8 @@
 		"csChallenges":"The biggest challenge was managing and understanding all of the content and properties we needed to reorganize. Once we knew what we were working with, creating a development and management work flow was the biggest hurdle, but was ultimately the most fun.",
 		"csResults":"Our new workflow no longer requires any tech time to update content and our global stylesheet new pushes out minor style revisions to all our different properties at the same time. We've also iterated on our framework multiple times and created a more robust boilerplate for current and future instances of our playbooks.",
 		"csAdditionalPics":[
-			{"imgSrc":"assets/img/work/ng/ng6", "caption":""},
-			{"imgSrc":"assets/img/work/ng/ng3", "caption":""},
-			{"imgSrc":"assets/img/work/ng/ng7", "caption":""},
-			{"imgSrc":"assets/img/work/ng/ng2", "caption":""}
-		]
-	},
-	{
-		"index": 4,
-		"id":"us-open",
-		"imgSrc": "assets/img/work/usopen/uso-tile",
-		"imgType": "jpg",
-		"clientName": "US OPEN",
-		"description": "Custom built HTML5 animation tool",
-		"altText": "Various animated expressions",
-		"trackingLabel": "Home|Click|AV_Work",
-		"csHero":"assets/img/work/avatar/av1",
-		"csHeroCaption":"Animation made directly in the browser!",
-		"csHeroType":"youtube",
-		"csHeroVideo":"xkeJ_gtlaIM",
-		"csTitle":"Personal Coding Experiments",
-		"csOverview":"What started out as an experiment exploring the animation and design capabilities of CSS turned into full-fledged animation tool powered solely by the browser. The end result was never intended at first, but as each feature was succesfully added, new ones were considered and completed.",
-		"csResponsibilities":"Responsible for everything.",
-		"csTechnology":"HTML5, Javascript, CSS, GreenSock Tweening Librariesm, Parse Database",
-		"csChallenges":"The entire project was challenging and full of unknowns. I wasn't sure if anything I was tryihng to acheive was even possible. Perhaps the biggest challenge was not having a clearly defined roadmap. As a result, there was a lot of recoding required to account for the lack of vision.",
-		"csResults":"The UX proved to be the achilles heal. When this proof-of-concept was complete, I ended up being the only one who was really able to animate with it, and it wasn't easy. I have always considered this project to be a success as far as exploration and experimentation into what could be done solely in the browser. Now that I know what is possible and what doesn't work, I have plans to make another attempt at this project in the future.",
-		"csAdditionalPics":[
-			{"imgSrc":"assets/img/work/avatar/av1", "caption":"Customize how your avatar looked"},
-			{"imgSrc":"assets/img/work/avatar/av-tile", "caption":"A few examples of expressions"}
-		]
-	},
-	{
-		"index": 6,
-		"id":"fetch",
-		"imgSrc": "assets/img/work/fetch/fetch-tile",
-		"imgType": "jpg",
-		"clientName": "Fetch",
-		"description": "Graduate Thesis Animation",
-		"altText": "Still from Fetch animation",
-		"trackingLabel": "Home|Click|FETCH_Work",
-		"csHero":"assets/img/work/fetch/fetch1",
-		"csHeroCaption":"",
-		"csHeroType":"youtube",
-		"csHeroVideo":"kTX79qXHCKU",
-		"csTitle":"NYU Thesis Animation",
-		"csOverview":"Fetch is a 3-minute animation about the atypical relationship between a little girl and her dog. It was the thesis project that culminated a two-year MS Degree in Computer Imaging and Design at NYU.",
-		"csResponsibilities":"Responsible for everything except <a data-tracking-label='FETCH|Click|AndyRalls' href='http://andyralls.com/' target='_blank'>the music.</a>",
-		"csTechnology":"Maya, After Effects, ProTools",
-		"csChallenges":"Character animation was the biggest challenge of this project, but communicating a simple idea through story-telling was a close second. These challenges were compounded by having to learn all the technology required to make a solo animated short.",
-		"csResults":" This <em>award-winning</em> animation has been viewed over 300,000 times online and fostered organization, documentation and communication and was the key component to earning my Master's Degree with honors.",
-		"csAdditionalPics":[
-			{"imgSrc":"assets/img/work/fetch/fetch1", "caption":""},
-			{"imgSrc":"assets/img/work/fetch/fetch2", "caption":"Various image from pre and post production"}
+			{"imgSrc":"assets/img/work/amex/amex2", "caption":"Field Directory"},
+			{"imgSrc":"assets/img/work/amex/amex3", "caption":"Global Pattern Library"}
 		]
 	}
 ]
