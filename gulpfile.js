@@ -12,11 +12,12 @@
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // minify .js files
 	concat = require('gulp-concat'), // concat .js files
-	compass = require('gulp-compass'), // require .sass compass
+	// compass = require('gulp-compass'), // require .sass compass
 	minifyCSS = require('gulp-minify-css'), // minify .css files gulp-minify-css deprecated
 	concatCSS = require('gulp-concat-css'), // concat .css files
 	cache = require('gulp-cache'),
 	notify = require('gulp-notify'),
+	connect = require('gulp-connect-php'),
 	livereload = require('gulp-livereload'),
 	rename = require('gulp-rename'),
 	autoprefixer = require('gulp-autoprefixer'),
@@ -24,6 +25,7 @@ var gulp = require('gulp'),
 	del = require('del'),
 	gutil = require('gulp-util'),
 	path = require('path'),
+	sass = require('gulp-sass'),
 	svgSprite = require('gulp-svg-sprite'),
 	svg2png = require('gulp-svg2png'),
 	plumber = require('gulp-plumber');
@@ -69,12 +71,14 @@ gulp.task('processStyles', function() {
 
 	return gulp.src('./src/sass/*.scss')
 	  .pipe(plumber())
-	  .pipe(compass({
+	  /*.pipe(compass({
 	  	style: 'expanded',
 	  	css: 'assets/css',
 	    sass: 'src/sass',
 	    sourcemap: false
-	  }))
+	  }))*/
+		.pipe(sass())
+		// .pipe(autoprefixer('last 1 version', '&gt; 1%', 'ie 8'))
 	  .pipe(autoprefixer('last 2 versions', 'ie 8', 'ie 9', 'iOS', 'Android'))
 	  .pipe(concat('main.css'))
 	  .pipe(gulp.dest('assets/css'))
@@ -130,7 +134,17 @@ gulp.task('svg2png', function() {
 gulp.task('processSVG', ['svg-sprite','svg2png']);
 
 /* -------------------------------------------------- */
+gulp.task('connect', function(){
+  connect.server({
+    root: '.',
+    livereload: true
+  });
+});
 
+gulp.task('livereload', function (){
+  gulp.src('.')
+  .pipe(connect.reload());
+});
 
 gulp.task('processImages', function() {
 
@@ -203,5 +217,8 @@ gulp.task('watch', function() {
 	livereload.listen();
 
 	// Watch any files in dist/, reload on change
-	gulp.watch(['assets/**']).on('change', livereload.changed);
+	gulp.watch('/', ['livereload']);
+	// gulp.watch(['assets/**']).on('change', livereload.changed);
 });
+
+gulp.task('start', ['connect', 'watch']);
