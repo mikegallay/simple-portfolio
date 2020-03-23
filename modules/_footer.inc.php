@@ -10,7 +10,7 @@
 		<div class="legal">
 			<p>Currently Available for Freelance Projects</p>
 			<p class="copyright">
-				<a href="http://www.michaelgallay.com/michaelgallay2019.pdf" target="_blank">View resume</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:mikegallay@gmail.com">mikegallay@gmail.com</a>
+				<a href="http://www.michaelgallay.com/michaelgallay2020.pdf" target="_blank">View resume</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:mikegallay@gmail.com">mikegallay@gmail.com</a>
 			</p>
 		</div>
 	</div>
